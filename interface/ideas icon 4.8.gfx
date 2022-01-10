@@ -1,0 +1,75 @@
+spriteTypes = {	
+### RUS
+
+
+	spriteType = {
+		name = "GFX_idea_GER_graf_zeppelin"
+		texturefile = "gfx/interface/ideas/GER_graf_zeppelin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_vivi_schweinsteiger_strasserism"
+		texturefile = "gfx/interface/ideas/GER_vivi_schweinsteiger_strasserism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_otto_von_bismark"
+		texturefile = "gfx/interface/ideas/GER_otto_von_bismark.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_rusalka_schwagerin"
+		texturefile = "gfx/interface/ideas/GER_rusalka_schwagerin.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_franz_von_hipper"
+		texturefile = "gfx/interface/ideas/GER_franz_von_hipper.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_GER_fritz_schneewind"
+		texturefile = "gfx/interface/ideas/GER_fritz_schneewind.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_gertrud_barkhorn"
+		texturefile = "gfx/interface/ideas/GER_gertrud_barkhorn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_minna_dietlinde_wilcke"
+		texturefile = "gfx/interface/ideas/GER_minna_dietlinde_wilcke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_GER_heinrike_sayn_wittgenstein"
+		texturefile = "gfx/interface/ideas/GER_heinrike_sayn_wittgenstein.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_GER_schmeisser_gewehr"
+		texturefile = "gfx/interface/ideas/GER_schmeisser_gewehr.dds"
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_idea_GER_gretel_jeckeln_strasserism"
+		texturefile = "gfx/interface/ideas/GER_gretel_jeckeln_strasserism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_peter_strasser"
+		texturefile = "gfx/interface/ideas/GER_peter_strasser.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_GER_maho_nishizumi"
+		texturefile = "gfx/interface/ideas/GER_maho_nishizumi.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_prince_eugen"
+		texturefile = "gfx/interface/ideas/GER_prince_eugen.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GER_erica_hartmann"
+		texturefile = "gfx/interface/ideas/GER_erica_hartmann.dds"
+	}
+
+}

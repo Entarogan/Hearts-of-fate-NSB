@@ -1,0 +1,1295 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+FRA_unit_production = {
+	enable = {
+		original_tag = FRA
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 5
+	}
+
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 60 
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 20 
+	}  
+
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 75 # From 70 to 75
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 10 # 15 to 10
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 5
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 20 # from 15 to 25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 40 #from 50 to 40
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 25
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 35
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 25
+	}
+  
+  ai_strategy = {
+		type = equipment_production_factor
+		id = motorized
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 20
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = artillery
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 4
+	}
+
+}
+
+FRA_halt_light_armor_production_in_transitioning = {
+	enable = {
+		original_tag = FRA
+		has_template_majority_unit = medium_armor
+		OR = {
+			has_equipment = { light_tank_equipment > 600 }
+			date > 1938.1.1
+		}		
+	}
+	abort = {
+		# once we start we never go back to light armor
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_equipment
+		value = -75
+	}
+}
+
+FRA_template_design_1 = {
+	enable = {
+		original_tag = FRA			
+	}
+	abort = { 
+		always = no
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -99
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = mechanized
+		value = -99
+	}
+}
+
+FRA_armored_production = {
+	enable = {
+		original_tag = FRA
+		ai_wants_divisions > 12 #Decreasing the amount of tanks the AI wants
+	}
+	abort = {
+		ai_wants_divisions < 13 #Decreasing the amount of tanks the AI wants
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 2
+	}
+}
+
+FRA_highered_armored_production = {
+	enable = {
+		original_tag = FRA
+		num_of_military_factories > 109
+	}
+	abort = {
+		num_of_military_factories < 110
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 20 #Removed from original production so increased from a bit to a f*** ton (in this case 10 to 20)
+	}
+}
+FRA_area_priority = {
+	enable = {
+		original_tag = FRA
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = europe
+		value = 110 #more focus here
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = north_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = south_america
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = asia
+		value = 75
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = middle_east
+		value = 10
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -50
+	}
+	ai_strategy = {
+        type = area_priority
+        id = suez
+        value = -50
+    }
+	
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 10 #less focus here
+	}
+	
+	ai_strategy = {
+		type = area_priority
+		id = oceania
+		value = 10
+	}
+}
+
+FRA_naval_role_ratios_historical = {
+	enable = {
+		has_dlc = "Man the Guns"
+		original_tag = FRA
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = 40
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = 40
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 75
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -20
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 10
+	}
+}
+
+FRA_old_glory = {
+	enable = {
+		original_tag = FRA
+    has_completed_focus = FRA_Old_Glory
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 25
+	}
+  
+  ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 15
+	}
+}
+
+FRA_new_era = {
+	enable = {
+		original_tag = FRA
+    has_completed_focus = FRA_Strategies_for_New_Era
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 15
+	}
+  
+  ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 40
+	}
+}
+
+FRA_my_RHI = {
+	enable = {
+		original_tag = FRA
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "RHI"
+		value = 100
+	}
+  
+}
+
+FRA_prepare_for_war_stah = {
+	enable = {
+		tag = FRA
+		or = { 
+      GER = { 
+        has_idea = GER_rom_non_aggression_idea
+      }
+      ITA = { 
+        has_idea = GER_rom_non_aggression_idea
+      }
+    }
+	}
+	
+	abort = {
+		has_war_with = GER
+		has_war_with = ITA
+		has_war_with = IRQ
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GER"
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ITA"
+		value = 100
+	}
+}
+
+FRA_wants_civ = {
+	enable = {
+		tag = FRA
+		NOT = { has_government = fascism }
+		date < 1936.8.15
+		has_war = no
+	}
+
+	abort = {
+
+	OR = {
+		date > 1936.8.15
+		has_war = yes
+	}
+
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = industrial_complex
+		value = 59
+	}
+}
+
+FRA_wants_arms_ger = {
+	enable = {
+		tag = FRA
+		has_war_with = GER
+	}
+
+	abort = { 
+
+		NOT = { has_war_with = GER }
+
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 59
+	}
+}
+
+FRA_wants_arms = {
+	enable = {
+		tag = FRA
+		date < 1938.12.11
+		date > 1937.1.11
+	}
+
+	abort = { 
+
+		date > 1938.12.11 
+
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 59
+	}
+}
+
+FRA_Commies_dislike_USSR = {
+  enable = {
+		tag = FRA
+    has_government = communism
+	}
+
+	abort = {
+    OR = {
+      is_in_faction_with = SOV
+      SOV = { exists = no }
+      # SOV = { NOT = { has_government = communism } }
+      SOV = { is_in_faction_with = FRA }
+    }
+    # SOV = { has_government = communism }
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SOV"			
+    value = -5000
+	}
+}
+
+FRA_Commies_hate_USSR = {
+  enable = {
+		tag = FRA
+    has_government = communism
+    OR = {
+      GER = { is_in_faction_with = FRA }
+      GER = { exists = no }
+      GER = { is_subject_of = FRA }
+    }
+    # SOV = { has_government = communism }
+	}
+
+	abort = {
+    OR = {
+      is_in_faction_with = SOV
+      SOV = { exists = no }
+      # SOV = { NOT = { has_government = communism } }
+      SOV = { is_in_faction_with = FRA }
+    }
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"			
+    value = 5000
+	}
+}
+
+FRA_accept_USA_access = {
+	allowed = {
+		tag = FRA
+	}
+	enable = {
+		tag = FRA
+		date > 1940.9.9
+		USA = {
+			is_ai = yes
+			NOT = {
+				OR = {
+					is_in_faction_with = FRA
+					has_military_access_to = FRA
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = diplo_action_acceptance
+		id = USA
+		target = military_access
+		value = 1000
+	}
+}
+
+
+FRA_protect_vichy = {
+
+	reversed = yes
+
+	enable_reverse = {
+		GER = {
+			has_government = fascism
+		}
+	}
+
+	enable = {
+		has_focus_tree = vichy_french_focus
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = protect
+		id = GER
+		value = 200
+	}
+
+	ai_strategy = {
+		type = befriend
+		id = GER
+		value = 200
+	}
+}
+
+FRA_help_germany_if_vichy = {
+
+	enable = {
+		GER = {
+			has_government = fascism
+		}
+		NOT = { has_war_with = GER }
+		has_focus_tree = vichy_french_focus
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = support
+		id = GER
+		value = 200
+	}
+}
+
+FRA_antagonize_vichy = {
+
+	reversed = yes
+
+	enable_reverse = {
+		FRA = {
+			has_government = democratic
+		}
+	}
+
+	enable = {
+		has_focus_tree = vichy_french_focus
+		OR = {
+			date > 1942.6.1
+			448 = {
+				CONTROLLER = {
+					is_in_faction_with = FRA
+				}
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = FRA
+		value = 200
+	}
+
+	ai_strategy = {
+		type = conquer
+		id = FRA
+		value = 200
+	}
+}
+
+FRA_GER_will_probably_join_ITA = {
+	# if ITA is going to war with us, consider GER as a threat as well
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		GER = {
+			has_government = fascism
+			NOT = { 
+				has_war_with = FRA
+			}
+		}
+		ITA = {
+			has_government = fascism
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = GER
+			}
+			OR = {
+				# check if we are declaring on FRA
+				OR = {
+					has_war_with = FRA
+					is_justifying_wargoal_against = FRA
+					has_wargoal_against = FRA
+				}
+				
+				# check if we are declaring on any guarantee of FRA
+				FRA = {
+					any_guaranteed_country = {
+						ITA = {
+							OR = {
+								has_war_with = PREV
+								is_justifying_wargoal_against = PREV
+								has_wargoal_against = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+}
+
+FRA_share_borders_with_GER = {
+	enable = {
+		tag = FRA
+		OR = {
+		is_in_faction_with = CZE
+		is_in_faction_with = ROM
+		is_in_faction_with = YUG
+		is_in_faction_with = POL
+		is_in_faction_with = SWI
+		is_in_faction_with = AUS
+		is_in_faction_with = MAL
+		is_in_faction_with = INS
+		is_in_faction_with = AST
+		is_in_faction_with = BUR
+		is_in_faction_with = RAJ
+		is_in_faction_with = FIC
+		}
+
+	}
+	abort = {
+		OR = {
+        GER = { has_capitulated = yes }
+		NOT = { country_exists = GER }
+        GER = { is_subject = yes }
+		}
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "CZE"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ROM"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUG"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "POL"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SWI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "AUS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MAL"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "INS"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "AST"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "BUR"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "FIC"
+		value = 100
+	}
+}
+
+FRA_prepare_for_war_ENG = {
+	enable = {
+		tag = FRA
+        has_country_flag = FRA_jingong_ENG
+	}
+	
+	abort = {
+		has_war_with = ENG
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ENG"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "EGY"
+		value = 100
+	}
+
+}
+
+FRA_prepare_for_war_GER = {
+	enable = {
+		tag = FRA
+        has_country_flag = FRA_jingong_GER
+	}
+	
+	abort = {
+		has_war_with = GER
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "GER"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "HOL"
+		value = 100
+	}
+
+}
+
+prepare_for_war_FRA = {
+	enable = {
+        has_country_flag = prepare_for_war_FRA_flag
+	}
+	
+	abort = {
+		has_war_with = FRA
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "FRA"
+		value = 100
+	}
+
+}
+
+FRA_prepare_for_war_ITA = {
+	enable = {
+		tag = FRA
+        has_country_flag = FRA_jingong_ITA
+	}
+	
+	abort = {
+		has_war_with = ITA
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "ITA"
+		value = 100
+	}
+
+}
+
+FRA_FAST_world = {
+  enable = {
+		tag = FRA
+        has_government = fascism
+    AND = {
+    OR = {
+      ENG = { has_capitulated = yes }
+      ENG = { exists = no }
+      ENG = { is_subject = yes }
+    }
+    OR = {
+      GER = { has_capitulated = yes }
+      GER = { exists = no }
+      GER = { is_subject = yes }
+    }
+    OR = {
+      ITA = { has_capitulated = yes }
+      ITA = { exists = no }
+      ITA = { is_subject = yes }
+    }
+    }
+
+	}
+
+	abort = {
+    OR = {
+      FRA = { has_capitulated = yes }
+      FRA = { exists = no }
+      FRA = { is_subject = yes }
+    }
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "ROM"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BUL"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "HUN"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "YUG"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MNT"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SLV"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SLO"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SER"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MAC"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CRO"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MOL"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SWE"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "NOR"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "DEN"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "TUR"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "PER"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "LIT"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "LAT"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "EST"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "POL"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MON"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "TAN"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "RAJ"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "BUR"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "GXC"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "YUN"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "XSM"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SIK"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "MAN"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "JAP"			
+        value = 5000
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "SIA"			
+        value = 5000
+	}
+
+}
+
+FRA_invasion_is_death_trap = {
+	enable = {
+		
+			tag = FRA
+            has_global_flag = FRA_civil_war_start_flag 
+	}
+	
+	abort = {
+                    has_civil_war = no
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "D01"			
+		value = -2000
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "D02"			
+		value = -2000
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "D03"			
+		value = -2000
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "D04"			
+		value = -2000
+	}
+
+}
+
+FRA_notice_ribbentrop_pact = {
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	enable = {
+		tag = FRA
+		has_global_flag = sov_yes_pact		
+	}
+	abort = {
+		OR ={
+			FRA = { has_war_with = SOV }
+			FRA = { is_in_faction_with = POL }
+		}
+	}
+	
+	ai_strategy = {
+		type = protect
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = support
+		id = "POL"
+		value = -200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "POL"
+		value = -200
+	}
+}
+
+FRA_Dying_german = {
+	allowed = {
+		original_tag = FRA
+	}
+
+  enable = {
+		date < 1940.1.1
+		original_tag = FRA
+		has_war_with = GER
+    NOT = { GER = { casualties > 999999 } }
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+		area = europe
+		ratio = 0
+		ordertype = front
+		priority = 999
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = consider_weak
+		id = "GER"
+		value = -999
+	}
+
+}

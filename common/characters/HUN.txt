@@ -1,0 +1,365 @@
+characters={
+	HUN_lajos_veress={
+		name="Lajos Veress"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_lajos_veress_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_lajos_veress"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=4018
+		}
+	}
+	HUN_ferenc_feketehalmyczeydner={
+		name="Ferenc Feketehalmy-Czeydner"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=4019
+		}
+	}
+	HUN_Bela_Kun={
+		name="Bela Kun"
+		portraits={
+			civilian={
+				large="gfx/leaders/HUN/Portrait_bela_kun.dds"
+			}
+		}
+		country_leader={
+			ideology=leninism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HUN_vilmos_nagy={
+		name="Vilmos Nagy"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_vilmos_nagy.png"
+			}
+		}
+		corps_commander={
+			traits={ war_hero skilled_staffer }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=4030
+		}
+	}
+	HUN_elizabeth_báthory={
+		name="Elizabeth Báthory"
+		portraits={
+			civilian={
+				large="gfx/leaders/HUN/Portrait_Elizabathe_Bathory_General.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ELIZABRTH_BATHORY_DESC"
+			ideology=stratocracy
+			traits={ sadistic }
+			expire="1965.1.1.1"
+			id=500
+		}
+	}
+	HUN_attila={
+		name="Attila"
+		portraits={
+			civilian={
+				large="gfx/leaders/HUN/Portrait_Attila.dds"
+			}
+		}
+		field_marshal={
+			traits={ brilliant_strategist war_hero cavalry_leader skilled_staffer trickster hill_fighter }
+			skill=5
+			attack_skill=6
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=4032
+		}
+		country_leader={
+			ideology=valkist
+			traits={ fascist_militia_leader Cavalry_general }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HUN_Árpád_szakasits={
+		name="Árpád Szakasits"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ARPAD_SZAKASITS_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HUN_géza_lakatos={
+		name="Géza Lakatos"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_geza_lakatos_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_geza_lakatos"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=4015
+		}
+	}
+	HUN_iván_hindy={
+		name="Iván Hindy"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_ivan_hindy_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_ivan_hindy"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=4016
+		}
+	}
+	HUN_károly_beregfy={
+		name="Károly Beregfy"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_karoly_beregfy_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_karoly_beregfy"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=4017
+		}
+	}
+	HUN_döme_sztójay={
+		name="Döme Sztójay"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_Dome_Sztojay.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=4020
+		}
+	}
+	HUN_jenő_rátz={
+		name="Jenő Rátz"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_Jeno_Ratz.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected infantry_leader }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=4021
+		}
+	}
+	HUN_alajos_béldy={
+		name="Alajos Béldy"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_alajos_beldy.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard cavalry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=4022
+		}
+	}
+	HUN_béla_miklós={
+		name="Béla Miklós"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_bela_miklos.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=4023
+		}
+	}
+	HUN_dezsö_lászló={
+		name="Dezsö László"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_Dezso_Laszlo.png"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist hill_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=4024
+		}
+	}
+	HUN_ferenc_farkas={
+		name="Ferenc Farkas"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_Ferenc_Farkas.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless trait_mountaineer }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=4025
+		}
+	}
+	HUN_gusztáv_jány={
+		name="Gusztáv Jány"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_gusztav_jany.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless armor_officer infantry_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=4026
+		}
+	}
+	HUN_zoltán_szügyi={
+		name="Zoltán Szügyi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/HUN/Portrait_HUN_Zoltan_Szugyi.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer commando }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=4031
+		}
+	}
+	HUN_miklós_horthy={
+		name="Miklós Horthy"
+		portraits={
+			army={
+				small="GFX_Portrait_hungary_miklos_horthy_admiral_small"
+			}
+			army={
+				large="GFX_Portrait_hungary_miklos_horthy_admiral"
+			}
+		}
+		navy_leader={
+			traits={ gunnery_expert navy_media_personality superior_tactician }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=556
+		}
+	}
+}

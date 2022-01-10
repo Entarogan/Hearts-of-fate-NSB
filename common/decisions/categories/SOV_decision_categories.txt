@@ -1,0 +1,58 @@
+################
+#### SOVIET ####
+################
+
+SOV_industry_relocation = {
+	
+	allowed = {
+		OR = {
+			original_tag = SOV
+			original_tag = RUS
+		}
+	}
+
+	available = {
+		OR = {
+			has_completed_focus = SOV_finish_five_year_plan
+			has_completed_focus = rus_great_patriotic_war
+		}
+		
+	}
+
+	visible = {
+		has_war = yes
+	}
+}
+
+SOV_great_patriotic_war = {
+	allowed = {
+		OR = {
+			original_tag = SOV
+			original_tag = RUS
+		}
+	}
+	visible = {
+		has_war = yes
+		if = {
+			limit = { original_tag = SOV }
+			OR = {
+				NOT = { has_war_with = RUS }
+				any_enemy_country = {
+					is_major = yes
+					NOT = { tag = RUS }
+				}
+			}
+		}
+		if = {
+			limit = { original_tag = RUS }
+			OR = {
+				NOT = { has_war_with = SOV }
+				any_enemy_country = {
+					is_major = yes
+					NOT = { tag = SOV }
+				}
+			}
+		}
+	}
+		
+}

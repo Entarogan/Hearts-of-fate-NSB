@@ -1,0 +1,23 @@
+idea_categories = {
+	special_politics = {
+		character_slot  = special_first
+		character_slot  = special_second
+		character_slot  = special_third
+		character_slot  = special_fourth
+		character_slot  = special_fifth
+		character_slot  = special_sixth
+		ledger = all
+		
+		cost = 0
+		removal_cost = -1
+	}
+}
+
+slot_ledgers = {
+	special_first = civilian
+	special_second = civilian
+	special_third = all
+	special_fourth = all
+	special_fifth = all
+	sumispecial_sixthsu_in = civilian
+}

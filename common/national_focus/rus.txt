@@ -1,0 +1,7398 @@
+focus_tree = {
+	id = rus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = RUS		
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 20 y = 1600 }
+	focus = {
+		id = rus_unite_white_movement
+		icon = GFX_focus_RUS_White_Movement
+		cost = 4.00
+		x = 20
+		y = 0
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = rus_the_royal_marriage
+		icon = GFX_focus_Royal_Marriage
+		cost = 3.00
+		x = 13
+		y = 6
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+      is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			NOT = { has_idea = RUS_rebirth_of_the_tsar_0 }
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			NOT = { has_government = fascism }
+		} 
+		completion_reward = {
+			### Royal Marriage
+			country_event = { id = russian_flavour.5  days = 1 }
+		}
+
+	}
+	focus = {
+		id = rus_expand_pacific_fleet
+		icon = GFX_goal_RUS_navy
+		cost = 7.00
+		x = 6
+		y = 3
+
+		relative_position_id = rus_New_Russian_Army
+
+		available = {
+			or = {
+				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = RUS_Japan_Research_Permit
+			}
+			has_full_control_of_state = 409
+		}
+
+		completion_reward = {
+			409 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 637
+				}
+				637 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_continue_the_civil_war
+		icon = GFX_goal_generic_major_war
+		cost = 10.00
+		x = 62
+		y = 0
+		available = {
+			always = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = RUS_civil_War_start_1937_tt
+		}
+
+	}
+	focus = {
+		id = RUS_entente_observe_committee
+		icon = GFX_goal_generic_position_armies
+		cost = 7.00
+		x = 44
+		y = 0
+		available = {
+			has_idea = RUS_entente_observe_committee
+		}
+		bypass = {
+			NOT = { has_idea = RUS_entente_observe_committee }
+		}
+		completion_reward = {
+			army_experience = 40
+		}
+
+	}
+	focus = {
+		id = rus_fight_for_russia
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5.00
+		x = 32
+		y = 0
+		available = {
+			always = no
+		}
+		bypass = {
+			has_war_with = SOV
+		}
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_forced_abdication
+		icon = GFX_focus_rom_abdicate
+		cost = 10.00
+		x = 33
+		y = 7
+		available = {
+			always = no
+		}
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_great_patriotic_war
+		icon = GFX_goal_liberty
+		cost = 5.00
+		x = 4
+		y = 8
+		available = {
+			OR = {
+				AND = {
+					any_enemy_country = {
+						is_major = yes
+					}
+					surrender_progress > 0.09
+				}
+				AND = {
+					has_defensive_war = yes
+					surrender_progress > 0.19
+				}
+			}
+			has_completed_focus = rus_fall_of_ussr
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.10
+			unlock_decision_category_tooltip = SOV_industry_relocation
+		}
+	}
+	focus = {
+		id = rus_prepare_for_protraction
+		icon = GFX_goal_generic_military_sphere
+		cost = 4.00
+		prerequisite = {
+			focus = rus_unite_white_movement
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_unite_white_movement
+		completion_reward = {
+			army_experience = 25
+			add_timed_idea = {
+				idea = rus_prepare_for_protraction
+				days = 800
+			}
+		}
+
+	}
+	focus = {
+		id = rus_organize_Oprichnik
+		icon = GFX_focus_RUS_Oprichnik
+		cost = 5.00
+		prerequisite = {
+			focus = rus_prepare_for_protraction
+		}
+		mutually_exclusive = {
+			focus = rus_reorganize_Okhrana
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_prepare_for_protraction
+		completion_reward = {
+			add_ideas = { RUS_Oprichnik }
+		}
+
+	}
+	focus = {
+		id = rus_reorganize_Okhrana
+		icon = GFX_goal_generic_political_pressure
+		cost = 5.00
+		prerequisite = {
+			focus = rus_prepare_for_protraction
+		}
+		mutually_exclusive = {
+			focus = rus_organize_Oprichnik
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 1
+		y = 1
+
+		bypass = {
+			or = {
+				is_subject = yes
+				has_country_flag = RUS_Japanese_puppet_flag
+			}
+		}
+
+		relative_position_id = rus_prepare_for_protraction
+		completion_reward = {
+			add_ideas = { RUS_Okhrana }
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_ivan_serov
+		}
+
+	}
+	focus = {
+		id = rus_internal_problem
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 3.00
+		prerequisite = {
+			focus = rus_organize_Oprichnik
+			focus = rus_reorganize_Okhrana
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 0
+		y = 2
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_prepare_for_protraction
+		completion_reward = {
+			add_political_power = 150
+			custom_effect_tooltip = rus_internal_problem_tt
+		}
+
+	}
+	focus = {
+		id = rus_no_compromise_on_united_russia
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fight_for_russia
+		}
+		mutually_exclusive = {
+			focus = rus_promise_autonomy
+		}
+		x = 2
+		y = 1
+
+		relative_position_id = rus_fight_for_russia
+		completion_reward = {
+			custom_effect_tooltip = RUS_we_will_unify_russia_independently_tt
+			custom_effect_tooltip = RUS_fascist_will_be_forced_to_this_path_tt
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = rus_redeem_glory_of_past
+		icon = GFX_focus_Russian_Imperialism
+		cost = 5.00
+		prerequisite = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		available = {
+      is_subject = no
+			has_completed_focus = rus_fall_of_ussr
+      has_army_manpower = { size > 1499999 }
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_lacking_industrialization_tt
+				NOT = { has_idea = SOV_lacking_industrialization_1 }			
+				NOT = { has_idea = SOV_lacking_industrialization_2 }			
+				NOT = { has_idea = SOV_lacking_industrialization_3 }			
+				NOT = { has_idea = SOV_lacking_industrialization_4 }			
+				NOT = { has_idea = SOV_lacking_industrialization_5 }			
+				NOT = { has_idea = SOV_lacking_industrialization_6 }			
+				NOT = { has_idea = SOV_lacking_industrialization_7 }			
+				NOT = { has_idea = SOV_lacking_industrialization_8 }				
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_has_not_officers_purged_tt
+				NOT = { has_idea = officers_purged }			
+				NOT = { has_idea = officers_purged_2 }			
+				NOT = { has_idea = officers_purged_3 }			
+				NOT = { has_idea = officers_purged_4 }			
+				NOT = { has_idea = officers_purged_5 }			
+				NOT = { has_idea = officers_purged_6 }			
+				NOT = { has_idea = officers_purged_7 }			
+				NOT = { has_idea = officers_purged_8 }			
+				NOT = { has_idea = officers_purged_9 }			
+				NOT = { has_idea = officers_purged_10 }			
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = rus_no_compromise_on_united_russia
+		completion_reward = {
+
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+        set_rule = {
+          can_create_factions = yes
+        }
+        create_faction = RUS_federal_russia
+			}
+
+			remove_ideas = SOV_Focus_on_the_inside_idea
+
+			add_ideas = SOV_Expansionism_idea
+
+			custom_effect_tooltip = rus_redeem_our_territory_tt
+			unlock_decision_tooltip = SOV_claim_Karelia_decisions
+			unlock_decision_tooltip = SOV_claim_baltic_decisions
+			unlock_decision_tooltip = SOV_claim_poland_decisions
+			unlock_decision_tooltip = SOV_claim_romannia_decisions
+		}
+
+	}
+	focus = {
+		id = rus_siberian_headquarter
+		icon = GFX_goal_RUS_army
+		cost = 5.00
+		prerequisite = {
+			focus = rus_unite_white_movement
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 0
+				date < 1936.6.10
+			}
+		}
+		x = 13
+		y = 1
+		completion_reward = {
+			add_ideas = { rus_siberian_headquarter }
+
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_berezovich_kryuger
+		}
+
+	}
+	focus = {
+		id = rus_local_militia_training
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_headquarter
+		}
+		x = 3
+		y = 1
+		relative_position_id = rus_siberian_headquarter
+		completion_reward = {
+			swap_ideas = {
+				add_idea = rus_local_militia_training
+				remove_idea = rus_siberian_headquarter
+			}
+		}
+
+
+	}
+	focus = {
+		id = rus_promise_autonomy
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fight_for_russia
+		}
+		mutually_exclusive = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		x = 4
+		y = 1
+		relative_position_id = rus_fight_for_russia
+		available = {
+      is_subject = no
+		}
+		completion_reward = {
+			custom_effect_tooltip = rus_minorities_will_help_us_tt
+			custom_effect_tooltip = rus_we_will_grant_minorities_autonomy_tt
+			if = {
+				limit = { KAZ = { exists = yes } }
+				if = {
+					limit = { KAZ = { has_war_with = ROOT } }
+					white_peace = KAZ
+				}
+				puppet = KAZ
+			}
+		}
+
+	}
+	focus = {
+		id = rus_diplomacy_turnover
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5.00
+		prerequisite = {
+			focus = RUS_entente_observe_committee
+		}
+		available = {
+      is_subject = no
+      or = {
+        RUS = { is_ai = yes }
+        GER = {
+          has_opinion = {
+            target = RUS
+            value > 0
+          }
+        }
+      }
+			NOT = { has_government = democratic }
+			date > 1936.8.1	
+		}
+		x = 5
+		y = 1
+		relative_position_id = RUS_entente_observe_committee
+		completion_reward = {
+			GER = { 
+				add_opinion_modifier = {
+					target = RUS
+    				modifier = RUS_align_GER
+				}
+			}
+			FRA = { 
+				add_opinion_modifier = {
+					target = RUS
+    				modifier = RUS_align_GER_neg
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_power_politics
+		icon = GFX_goal_demand_sudetenland
+		cost = 5.00
+		prerequisite = {
+			focus = rus_forced_abdication
+		}
+		mutually_exclusive = {
+			focus = rus_restore_the_democracy
+		}
+		available = {
+			always = no
+		}
+		x = 19
+		y = 1
+		relative_position_id = rus_forced_abdication
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_black_league_coup
+		icon = GFX_focus_Black_Hundred_Coup
+		cost = 10.00
+		prerequisite = {
+			focus = rus_power_politics
+		}
+		available = {
+			always = no
+		}
+		x = 9
+		y = 1
+		relative_position_id = rus_power_politics
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = run_realistic_foreign_policy
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 5.00
+		prerequisite = {
+			focus = rus_promise_autonomy
+		}
+		mutually_exclusive = {
+			focus = rus_resurrect_the_entente
+		}
+		available = {
+      is_subject = no
+			has_completed_focus = rus_fall_of_ussr
+			NOT = { has_idea = RUS_political_uncertainty }
+			NOT = { has_government = fascism }
+		}
+		x = 36
+		y = 3
+		completion_reward = {
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = rus_treaty_with_iran
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = run_realistic_foreign_policy
+		}
+		available = {
+      is_subject = no
+			NOT = { has_war_with = PER }
+		}
+		bypass = {
+			is_in_faction_with = PER
+			PER = { is_subject_of = ROOT }
+		}
+		x = 1
+		y = 2
+		relative_position_id = run_realistic_foreign_policy
+		completion_reward = {
+			PER = { country_event = { id = rus_diplo.25  hours = 2 } }
+		}
+
+	}
+	focus = {
+		id = rus_Kadoc_the_vozhd
+		icon = GFX_focus_Kadoc_focus
+		cost = 10.00
+		prerequisite = {
+			focus = rus_power_politics
+		}
+		available = {
+			always = no
+		}
+		x = 44
+		y = 9
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_guided_democracy
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 7.00
+		prerequisite = {
+			focus = rus_negotiation_with_democrats
+		}
+		mutually_exclusive = {
+			focus = rus_support_from_Gosudarstvennaya_duma
+		}
+		available = {
+      is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_country_leader = {
+				name = "Anastasia I"
+				ruling_only = yes
+			}
+			has_government = neutrality
+		}
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 1000
+		}
+		relative_position_id = rus_negotiation_with_democrats
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_rebirth_of_the_tsar_0 }
+				swap_ideas = {
+					remove_idea = RUS_rebirth_of_the_tsar_0
+					add_idea = RUS_rebirth_of_the_tsar_1
+				}
+			}
+			add_political_power = 50
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism 
+				popularity = -0.10
+			}
+			set_party_name = { 
+				ideology = neutrality 
+				long_name = RUS_neutrality_party_senate_long 
+				name = RUS_neutrality_party_senate 
+			}
+			hidden_effect = {
+				retire_ideology_leader = neutrality
+				create_country_leader = {
+					name = "Anastasia I"
+					desc = "POLITICS_ANASTASIA_DESC"
+					picture = "Portrait_Anastasia.dds"
+					ideology = authoritarian_democracy  
+					traits = { Shvibzik }
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_support_from_Gosudarstvennaya_duma
+		icon = GFX_focus_Imperial_Duma
+		cost = 7.00
+		prerequisite = {
+			focus = rus_negotiation_with_democrats
+		}
+		mutually_exclusive = {
+			focus = rus_guided_democracy
+		}
+		available = {
+      is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			NOT = { has_government = fascism }
+		}
+		
+		x = 7
+		y = 1
+		relative_position_id = rus_negotiation_with_democrats
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.20
+			}
+			if = {
+				limit = { has_idea = RUS_rebirth_of_the_tsar_0 }
+				swap_ideas = {
+					remove_idea = RUS_rebirth_of_the_tsar_0
+					add_idea = RUS_rebirth_of_the_tsar_1
+				}
+			}
+			create_country_leader = {
+				name = "Anastasia I"
+				desc = "POLITICS_ANASTASIA_DESC"
+				picture = "Portrait_Anastasia.dds"
+				ideology = conservatism
+				traits = {  Shvibzik }
+			}
+			
+			set_politics = {	
+				ruling_party = democratic
+				last_election = "1922.12.9"
+				election_frequency = 48
+				elections_allowed = no
+			}
+
+			set_cosmetic_tag = RUS_DEM
+
+			set_party_name = { 
+				ideology = democratic 
+				long_name = RUS_democratic_party_provisional_long 
+				name = RUS_democratic_party_provisional 
+			}
+
+			complete_national_focus = rus_restore_the_democracy
+		}
+
+	}
+	focus = {   ###重启地方自治会
+		id = rus_reinit_Zemstvo
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = rus_farm_privatization
+			focus = rus_redistribute_land
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+		}
+		mutually_exclusive = {
+			focus = rus_agricultural_recover
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_farm_privatization
+
+		completion_reward = {
+			custom_effect_tooltip = rus_reward_depends_on_choice_tt
+			if = {
+				limit = {
+					has_idea = RUS_farm_privatization_idea
+				}
+				swap_ideas = { remove_idea = RUS_farm_privatization_idea add_idea = RUS_reinit_Zemstvo_1_idea }
+			}
+
+			if = {
+				limit = {
+					has_idea = RUS_redistribute_land_idea
+				}
+
+				swap_ideas = { remove_idea = RUS_redistribute_land_idea add_idea = RUS_reinit_Zemstvo_2_idea }
+			}
+		}
+	}
+
+	focus = {  ###指导农业复兴
+		id = rus_agricultural_recover
+		icon = GFX_goal_generic_construction
+		cost = 5.00
+		prerequisite = {
+			focus = rus_keep_running_collective_farms
+			focus = rus_farm_privatization
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+		}
+		mutually_exclusive = {
+			focus = rus_reinit_Zemstvo
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_farm_privatization
+
+		completion_reward = {
+			custom_effect_tooltip = rus_reward_depends_on_choice_tt
+			if = {
+				limit = {
+					has_idea = RUS_keep_running_collective_farms_idea
+				}
+				swap_ideas = { remove_idea = RUS_keep_running_collective_farms_idea add_idea = RUS_agricultural_recover_1_idea }
+			}
+			if = {
+				limit = {
+					has_idea = RUS_farm_privatization_idea
+				}
+				swap_ideas = { remove_idea = RUS_farm_privatization_idea add_idea = RUS_agricultural_recover_2_idea }
+			}
+		}
+	}
+
+	focus = {
+		id = rus_national_investment_bank
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5.00
+		prerequisite = {
+			focus = rus_privatize_soviet_industry
+			focus = rus_inherit_soviet_industry
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_privatize_soviet_industry
+		completion_reward = {
+			SOV_increase_industrialization = yes
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = rus_national_investment_bank
+				}
+			}
+
+			add_ideas = { rus_national_investment_bank }
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_simon_kuznets
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_attract_russian_in_exile
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_orthodox_enthusiastic
+			focus = rus_secularization
+		}
+		bypass = {
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_orthodox_enthusiastic
+		completion_reward = {
+			add_ideas = { rus_attract_russian_in_exile }
+			custom_effect_tooltip = rus_attract_russian_in_exile_tt
+		}
+
+	}
+	focus = {
+		id = rus_confront_racism
+		icon = GFX_goal_generic_major_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_people_oriented
+			focus = rus_secure_peasants
+		}
+		x = 35
+		y = 11
+		completion_reward = {
+			add_political_power = -100
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.10
+			}
+		}
+
+	}
+	focus = {
+		id = rus_seek_american_support
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 5.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		available = {
+			is_subject = no
+			NOT = { has_government = fascism }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_strengthen_tie_with_the_west
+		completion_reward = {
+			custom_effect_tooltip = RUS_seek_usa_support_tt
+		}
+
+	}
+	focus = {
+		id = rus_handle_the_army
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5.00
+		prerequisite = {
+			focus = rus_restore_the_democracy
+		}
+		x = 13
+		y = 1
+		relative_position_id = rus_restore_the_democracy
+
+		available = {  
+			is_subject = no
+		}
+
+		completion_reward = {
+			army_experience = 30
+			if = {
+				limit = { has_government = democratic }
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.10
+				}
+			}
+		}
+
+	}
+	focus = {  ###自治会自主研究
+		id = rus_third_element  
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = rus_reinit_Zemstvo
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reinit_Zemstvo
+
+		completion_reward = {
+			custom_effect_tooltip = rus_reward_depends_on_choice_tt
+			if = {
+				limit = {
+					has_idea = RUS_reinit_Zemstvo_1_idea
+				}
+				swap_ideas = { remove_idea = RUS_reinit_Zemstvo_1_idea add_idea = RUS_third_element_1_idea }
+
+				add_tech_bonus = {
+					name = rus_third_element
+					bonus = 0.5
+					uses = 2
+					category = industry
+				}
+			}
+			if = {
+				limit = {
+					has_idea = RUS_reinit_Zemstvo_2_idea
+				}
+
+				swap_ideas = { remove_idea = RUS_reinit_Zemstvo_2_idea add_idea = RUS_third_element_2_idea }
+			}
+		}
+	}
+	focus = {
+		id = rus_orthodox_enthusiastic
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fight_for_russia
+		}
+
+		available = {
+			OR = { 
+				has_government = neutrality
+				has_government = fascism 
+        is_subject_of = JAP
+			}
+			has_idea = RUS_Orthodox
+			NOT = { has_completed_focus = rus_secularization }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_fight_for_russia
+		completion_reward = {
+			RUS_Orthodox_enhance = yes
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RUS_georges_florovsky
+		}
+
+	}
+	focus = {
+		id = rus_Tsarina_Batiushka
+		icon = GFX_focus_Anastasia_Romanov_with_Flags
+		cost = 5.00
+		prerequisite = {
+			focus = rus_all_russian_supreme_government
+			focus = rus_guided_democracy
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			NOT = { has_government = fascism }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_all_russian_supreme_government
+		completion_reward = {
+			add_country_leader_trait = Freezing_Charisma
+		}
+
+	}
+	focus = {
+		id = rus_Romanov_cruise
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = rus_romanov_foundation
+		}
+		available = {
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_romanov_foundation
+		completion_reward = {
+			add_political_power = -150
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+
+	}
+	focus = {
+		id = rus_strengthen_tie_with_the_west
+		icon = GFX_goal_support_democracy
+		cost = 5.00
+		prerequisite = {
+			focus = RUS_entente_observe_committee
+		}
+		available = {
+			is_subject = no
+			date > 1936.8.1	
+			NOT = { has_government = fascism }
+		}
+		x = -5
+		y = 1
+		relative_position_id = RUS_entente_observe_committee
+		completion_reward = {
+			add_ideas = { rus_strengthen_tie_with_the_west }
+		}
+
+	}
+	focus = {
+		id = rus_rekindle_old_alliance
+		icon = GFX_focus_chi_reach_out_to_france
+		cost = 5.00
+		prerequisite = {
+			focus = RUS_entente_observe_committee
+		}
+		available = {
+			is_subject = no
+			FRA = {
+				OR = {
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+
+			OR = {
+				NOT = { is_in_faction_with = ENG }
+				FRA = { is_in_faction_with = ENG }
+			}
+			has_completed_focus = rus_fall_of_ussr
+			NOT = { has_idea = RUS_political_uncertainty }
+      or = {
+        RUS = { is_ai = yes }
+        FRA = {
+          has_opinion = {
+            target = RUS
+            value > 0
+          }
+        }
+      }
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_align_japan
+		completion_reward = {
+			FRA = { country_event = { id = rus_diplo.1 days = 3 } }
+		}
+
+	}
+	focus = {
+		id = rus_free_russian_legion
+		icon = GFX_goal_generic_special_forces
+		cost = 5.00
+		prerequisite = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		available = {
+			has_idea = rus_attract_russian_in_exile
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_no_compromise_on_united_russia
+		completion_reward = {
+			swap_ideas = {
+				add_idea = rus_free_russian_legion
+				remove_idea = rus_attract_russian_in_exile
+			}
+		}
+
+	}
+	focus = {
+		id = rus_a_tough_industrialization
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 8.00
+		prerequisite = {
+			focus = rus_national_investment_bank
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_national_investment_bank
+		completion_reward = {
+			SOV_increase_industrialization = yes
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.2
+					localization = rus_a_tough_industrialization
+				}
+			}
+
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Novgorod
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Pskov
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Perm
+
+			if = {
+				limit = {
+					is_subject = no
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+		  }
+
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RUS_vladimir_zworykin
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_pray_for_matyrs
+		icon = GFX_goal_continuous_def_against_influence
+		cost = 5.00
+		prerequisite = {
+			focus = rus_orthodox_enthusiastic
+		}
+		available = {
+			NOT = { has_completed_focus = rus_secularization }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_orthodox_enthusiastic
+		completion_reward = {
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_political_power = 50
+			army_experience = 10
+		}
+
+	}
+	focus = {
+		id = rus_Cultivate_fanaticism
+		icon = GFX_goal_generic_defence
+		cost = 7.00
+		prerequisite = {
+			focus = rus_pray_for_matyrs
+		}
+		prerequisite = {
+			focus = rus_no_compromise_on_united_russia
+		}
+		available = {
+			NOT = { has_completed_focus = rus_secularization }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_pray_for_matyrs
+		completion_reward = {
+			RUS_Orthodox_enhance = yes
+		}
+
+	}
+	focus = {
+		id = rus_western_pilot_training
+		icon = GFX_focus_usa_escort_fighters
+		cost = 5.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		available = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+				is_in_faction_with = USA
+			}
+		}
+		x = 41
+		y = 6
+		completion_reward = {
+			add_ideas = { ira_british_pilot_training }
+		}
+
+	}
+	focus = {
+		id = rua_modernized_military_school
+		icon = GFX_focus_generic_military_academy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberia_logistics
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_siberia_logistics
+		completion_reward = {
+			add_ideas = { rua_modernized_military_school  }
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_anna_viktorovna
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = RUS_anti_entropy
+		}
+
+	}
+	focus = {
+		id = rus_resurrect_the_entente
+		icon = GFX_focus_chi_british_cooperation
+		cost = 5.00
+		prerequisite = {
+			focus = rus_rekindle_old_alliance
+			focus = rus_western_economy_aid
+		}
+		mutually_exclusive = {
+			focus = rus_join_jap_faction
+			focus = run_realistic_foreign_policy
+		}
+		available = {
+			is_subject = no
+			has_completed_focus = rus_fall_of_ussr
+			is_in_faction = no
+			NOT = { has_idea = RUS_political_uncertainty }
+			NOT = { has_completed_focus = rus_Euroasianism }
+			OR = {
+				FRA = { is_in_faction_with = ENG }
+				NOT = { has_idea = russian_french_alliance }
+			}
+			ENG = {
+				has_opinion = {
+					target = RUS
+					value > 0
+				}
+			}			
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_rekindle_old_alliance
+		completion_reward = {
+			ENG = { country_event = { id = rus_diplo.7 days = 3 } }
+		}
+
+	}
+	focus = {
+		id = rus_prepare_western_front
+		icon = GFX_goal_generic_fortify_city
+		cost = 5.00
+		prerequisite = {
+			focus = rus_admit_current_state_in_midasia
+		}
+		available = {
+			AND = {
+				has_full_control_of_state = 11
+				has_full_control_of_state = 12
+				has_full_control_of_state = 89
+				has_full_control_of_state = 91
+				has_full_control_of_state = 93
+				has_full_control_of_state = 94
+				has_full_control_of_state = 95
+				has_full_control_of_state = 96
+				has_full_control_of_state = 97
+				has_full_control_of_state = 189
+				has_full_control_of_state = 190
+				has_full_control_of_state = 191
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_admit_current_state_in_midasia
+		completion_reward = {
+			209 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 6
+						province = 415
+						instant_build = yes
+					}
+				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 6
+				#	province = 209
+				#	instant_build = yes
+				#}
+			}
+			210 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3333
+						instant_build = yes
+					}
+				}
+			}
+			207 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 3219
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6371
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 6220
+						instant_build = yes
+					}
+				}
+			}
+			206 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = 11370
+						instant_build = yes
+					}
+				}
+			}
+			202 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 525
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 3494
+						instant_build = yes
+					}
+				}
+
+			}
+			203 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 7
+						province = 11409
+						instant_build = yes
+					}
+				}
+			}
+			192 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 754
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 741
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 11670
+						instant_build = yes
+					}
+				}
+			}
+			11 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6407
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6296
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 11411
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6431
+					instant_build = yes
+				}
+			}
+			95 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 9359
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 3366
+					instant_build = yes
+				}
+			}
+			91 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 11479
+					instant_build = yes
+				}
+			}
+			94 = {
+				add_building_construction = {
+					type = bunker
+					level = 7
+					province = 3392
+					instant_build = yes
+				}
+			}
+			189 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 9731
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6360
+					instant_build = yes
+				}
+			}
+			97 = {
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 3393
+					instant_build = yes
+				}
+			}
+			190 = {
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 9262
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_lesson_from_the_great_war
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5.00
+		prerequisite = {
+			focus = rus_local_militia_training
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_local_militia_training
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_lesson_from_the_great_war
+				bonus = 1.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = rus_admit_current_state_in_midasia
+		icon = GFX_focus_generic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_resurrect_the_entente
+		completion_reward = {
+			AFG = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
+			PER = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
+			SIK = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_break_tie_with_jap
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 5.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_resurrect_the_entente
+		completion_reward = {
+			JAP = { country_event = { id = rus_diplo.20 hours = 4 }  }
+		}
+
+	}
+	focus = {
+		id = rus_reconcile_with_china
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		cost = 5.00
+		prerequisite = {
+			focus = rus_break_tie_with_jap
+		}
+		available = {
+			OR = {
+				NOT = { has_war_with = CHI }
+				NOT = { has_war_with = PRC }
+			}			
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_break_tie_with_jap
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_war_with = CHI } }
+				CHI = { country_event = { id = rus_diplo.21 hours = 4 }  }
+			}
+			if = {
+				limit = { NOT = { has_war_with = PRC } }
+				PRC = { country_event = { id = rus_diplo.21 hours = 4 }  }
+			}
+		}
+
+	}
+	focus = {
+		id = rus_take_over_dalian
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 4.00
+		prerequisite = {
+			focus = rus_fortify_voladyvostoc
+		}
+		available = {
+			745 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_fortify_voladyvostoc
+		completion_reward = {
+			transfer_state = 745
+			745 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 1150
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 1150
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_federal_russia
+		icon = GFX_goal_generic_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = run_realistic_foreign_policy
+		}
+		available = {
+			is_in_faction = no
+		}
+		bypass = {
+			is_faction_leader = yes
+		}
+		x = 2
+		y = 1
+		relative_position_id = run_realistic_foreign_policy
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = RUS_federal_russia
+		}
+
+	}
+	focus = {
+		id = rus_national_capitalism
+		icon = GFX_focus_mex_privatisation
+		cost = 5.00
+		prerequisite = {
+			focus = rus_encourage_entrepreneurship
+			focus = rus_tradition_and_life_style
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_encourage_entrepreneurship
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_ideas = { rus_national_capitalism }
+			if = {
+				limit = { has_completed_focus = rus_kadet_wins }
+				custom_effect_tooltip = available_political_advisor 
+				show_ideas_tooltip = RUS_alexander_ivanovich_knovalov
+			}
+		}
+
+	}
+	focus = {
+		id = rus_western_economy_aid
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		available = {
+			is_subject = no
+			OR = {
+				ENG_will_support = yes
+				FRA_will_support = yes
+				USA_will_support = yes
+			}
+			NOT = { has_government = fascism }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_strengthen_tie_with_the_west
+		completion_reward = {
+			add_timed_idea = {
+				days = 800
+				idea = rus_western_economy_aid
+			}
+			if = {
+				limit = { has_completed_focus = rus_fall_of_ussr }
+				SOV_increase_industrialization = yes
+			} 
+			
+		}
+
+	}
+	focus = {  ###集体农庄私有化
+		id = rus_farm_privatization
+		icon = GFX_goal_generic_trade
+		cost = 5.00
+		prerequisite = {
+			focus = rus_agricultural_revival
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+			NOT = { has_completed_focus = rus_PSR_comes_back }
+			NOT = { has_completed_focus = rus_Menshviks_win }
+		}
+		mutually_exclusive = {
+			focus = rus_redistribute_land
+			focus = rus_keep_running_collective_farms
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_agricultural_revival
+
+		completion_reward = {
+
+			add_ideas = RUS_farm_privatization_idea
+
+		}
+
+	}
+	focus = {
+		id = rus_country_for_intellectuals
+		icon = GFX_focus_research
+		cost = 5.00
+		prerequisite = {
+			focus = rus_thought_liberalization
+		}
+		available = {
+			amount_research_slots < 6
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_thought_liberalization
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+	}
+	focus = {
+		id = rus_fortify_voladyvostoc
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 6.00
+		prerequisite = {
+			focus = rus_expand_pacific_fleet
+		}
+		available = {
+			has_full_control_of_state = 408
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_expand_pacific_fleet
+		completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 957
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 957
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 957
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 11879
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11879
+					instant_build = yes
+				}
+			}
+
+		}
+
+	}
+	focus = {
+		id = rus_expand_siberian_railway
+		icon = GFX_focus_generic_optimize_production_progress
+		cost = 14.00
+		prerequisite = {
+			focus = rus_national_investment_bank
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_national_investment_bank
+		completion_reward = {
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.3
+					localization = rus_expand_siberian_railway
+				}
+			}
+
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Omsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Novo_Nikolayevsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Krasnoyarsk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Irkutsk
+			custom_effect_tooltip = SOV_Maintain_the_Trans_Siberian_Railway_tt
+			custom_effect_tooltip = available_political_advisor 
+            show_ideas_tooltip = RUS_leonid_ustrugov
+			hidden_effect = {
+				if = {
+					limit = {
+						has_full_control_of_state = 219
+					}
+					219 = { # Moscow
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 248
+					}
+					248 = { # Yaroslavl
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 351
+					}
+					351 = { # Vologda
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 400
+					}
+					400 = { # Kirov
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 398
+					}
+					398 = { # Perm
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 573
+					}
+					573 = { # Kirov
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 653
+					}
+					653 = { # Perm
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 403
+					}
+					403 = { # Kirov
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+							has_full_control_of_state = 571
+					}
+					571 = { # Kirov
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 570
+					}
+					570 = { # Novosibirsk
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 569
+					}
+					569 = { # Kemerovo
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 568
+					}
+					568 = { # Krasnoyarsk
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 567
+					}
+					567 = { # Bratsk
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 566
+					}
+					566 = { # Irkutsk
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 564
+					}
+					564 = { # Ulan Ude
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 563
+					}
+					563 = { # Chita
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 561
+					}
+					561 = { # Amur
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 657
+					}
+					657 = { # Biribidzhan
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 409
+					}
+					409 = { # Khabarovsk
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+	
+				if = {
+					limit = {
+						has_full_control_of_state = 408
+					}
+					408 = { # Vladivostok
+						add_building_construction = {
+							type = infrastructure
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_fortify_sevastopol
+		icon = GFX_goal_generic_occupy_states_coastal
+		cost = 6.00
+		prerequisite = {
+			focus = rus_reestablish_black_sea_fleet
+		}
+		available = {
+			137 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reestablish_black_sea_fleet
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province = 9680
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 6704
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 3686
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 9680
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 6704
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 3686
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 9680
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 6704
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_befriend_finland
+		icon = GFX_focus_befriend_finland
+		cost = 5.00
+		prerequisite = {
+			focus = rus_federal_russia
+		}
+		available = {
+			is_faction_leader = yes
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_federal_russia
+		completion_reward = {
+			FIN = { country_event = { id =  generic.5 hours = 5  } }
+		}  
+
+	}
+	focus = {
+		id = rus_not_the_same_mistake
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 5.00
+		prerequisite = {
+			focus = run_realistic_foreign_policy
+		}
+		available = {
+			NOT = { has_completed_focus = rus_rekindle_old_alliance }
+		}
+		x = 0
+		y = 1
+		relative_position_id = run_realistic_foreign_policy
+		completion_reward = {
+			GER = { country_event = { id = rus_diplo.25 hours = 5  } }
+		}  
+
+	}
+	focus = {
+		id = rus_Indian_Ocean
+		icon = GFX_goal_generic_navy_battleship
+		cost = 7.00
+		prerequisite = {
+			focus = rus_naval_doctrine
+		}
+		available = {
+			OR = {
+				413 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+				412 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+				291 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+			}
+		}
+		x = 0
+		y = 3
+		relative_position_id = rus_naval_doctrine
+		completion_reward = {
+			if = {
+				limit = {
+					413 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+				}
+				413 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						province = 5005
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 5005
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					291 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+				}
+				291 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						province = 2089
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 2089
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					412 = { CONTROLLER = { OR =  { tag = ROOT is_subject_of = ROOT } } }
+				}
+				412 = {
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 5
+						province = 7982
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 4
+						province = 7982
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_centralized_apparatus_of_power
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 5.00
+		prerequisite = {
+			focus = rus_black_league_coup
+			focus = rus_keep_military_supervision
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			NOT = { has_idea = RUS_political_uncertainty }
+		}
+		x = -4
+		y = 1
+		relative_position_id = rus_black_league_coup
+		completion_reward = {
+			#### Party Names
+			if = {
+				limit = { 
+					NOT = { has_idea = partial_economic_mobilisation } 
+					NOT = { has_idea = war_economy } 
+					NOT = { has_idea = tot_economic_mobilisation } 
+				}
+				add_ideas = { partial_economic_mobilisation }
+				else = {
+					add_political_power = 100
+				}
+			}
+
+			if = {
+				limit = { has_government = neutrality }
+				set_cosmetic_tag = RUS_JUNTA_REPUB
+			}
+
+			set_party_name = { 
+				ideology = fascism 
+				long_name = RUS_fascism_party_newstate_long 
+				name = RUS_fascism_party_newstate 
+			}
+			set_party_name = { 
+				ideology = neutrality 
+				long_name = RUS_neutrality_party_newstate_long 
+				name = RUS_neutrality_party_newstate 
+			}
+		}
+
+	}
+	focus = {
+		id = rus_join_jap_faction
+		icon = GFX_focus_usa_union_representation_act
+		cost = 5.00
+		prerequisite = {
+			focus = rus_align_japan
+		}
+		mutually_exclusive = {
+			focus = rus_join_germany
+			focus = rus_resurrect_the_entente
+		}
+		available = {
+			has_completed_focus = rus_fall_of_ussr
+			is_in_faction = no
+			NOT = { has_idea = RUS_political_uncertainty }
+			JAP = { 
+        exists = yes
+        is_subject = no 
+        is_faction_leader = yes 
+        NOT = { has_war_with = ROOT has_government = communism }  
+        NOT = { has_idea = ger_cooperate_with_japan }  
+        NOT = { has_idea = idea_jap_kodoha }
+        NOT = { has_idea = idea_jap_revolutionaries }
+      }
+			OR = {
+				NOT = { JAP = { has_government = democratic } }
+				has_government = democratic
+			}
+			OR = {
+				NOT = { has_government = democratic } 
+				NOT = { JAP = { has_government = fascism } }
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_align_japan
+		completion_reward = {
+			JAP = { country_event = { id = rus_diplo.9  days = 3 } }
+		}
+
+	}
+	focus = {
+		id = rus_japanese_equipments
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_expand_japanese_advisory_group
+		}
+		available = {
+			JAP_will_support = yes
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_expand_japanese_advisory_group
+		completion_reward = {
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+				producer = JAP
+			}
+
+      add_equipment_to_stockpile = {
+        type = support_equipment
+        amount = 200
+        producer = JAP
+      }
+
+      add_equipment_to_stockpile = {
+        type = artillery_equipment
+        amount = 400
+        producer = JAP
+      }
+
+      add_equipment_to_stockpile = {
+        type = anti_air_equipment
+        amount = 100
+        producer = JAP
+      }
+
+      add_equipment_to_stockpile = {
+        type = anti_tank_equipment
+        amount = 100
+        producer = JAP
+      }
+
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
+
+	}
+	focus = {
+		id = rus_align_japan
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		cost = 5.00
+		prerequisite = {
+			focus = RUS_entente_observe_committee
+		}
+		available = {
+      or = {
+        RUS = { is_ai = yes }
+        JAP = {
+          has_opinion = {
+            target = RUS
+            value > 0
+          }
+        }
+      }
+			date > 1936.8.1			
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_entente_observe_committee
+		completion_reward = {
+			JAP = {
+				add_opinion_modifier = {
+					target = RUS
+					modifier = RUS_align_JAP
+				}
+			}
+			ENG = {
+				add_opinion_modifier = {
+					target = RUS
+					modifier = RUS_align_JAP_neg
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_Yunarmia
+		icon = GFX_RUS_Yunarmiya
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Kadoc_the_vozhd
+			focus = rus_keep_military_supervision
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			NOT = { has_idea= RUS_political_uncertainty }
+		}
+		x = 5
+		y = 1
+		relative_position_id = rus_Kadoc_the_vozhd
+		completion_reward = {
+			add_ideas = { rus_Yunarmia }
+		}
+
+	}
+	focus = {
+		id = rus_Yaga_theory
+		icon = GFX_goal_generic_wolf_pack
+		cost = 5.00
+		prerequisite = {
+			focus = rus_peoples_russia
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_peoples_russia
+		completion_reward = {
+			add_ideas = { rus_Yaga_theory }
+		}
+
+	}
+	focus = {
+		id = rus_militarize_the_masses
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Yunarmia
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_Yunarmia
+		completion_reward = {
+			add_ideas = { rus_militarize_the_masses }
+			if = {
+				limit = { 
+					NOT = { has_idea = extensive_conscription } 
+					NOT = { has_idea = service_by_requirement } 
+					NOT = { has_idea = all_adults_serve } 
+					NOT = { has_idea = scraping_the_barrel } 
+				}
+				add_ideas = { extensive_conscription }
+				else = {
+					add_political_power = 100
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_land_for_party
+		icon = GFX_goal_generic_construction2
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Kadoc_the_vozhd
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Kadoc_the_vozhd
+		completion_reward = {
+			custom_effect_tooltip = rus_politicalized_agriculture_tt
+			add_ideas = { 
+				rus_land_for_party
+			}
+
+		}
+
+	}
+	focus = {
+		id = rus_forced_labor
+		icon = GFX_goal_GBR_fate_of_unions
+		cost = 5.00
+		prerequisite = {
+			focus = rus_land_for_party
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_government = fascism
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_land_for_party
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			if = {
+				limit = {
+					has_idea = rus_narod_economics_war
+				}
+				swap_ideas = {
+					remove_idea = rus_narod_economics_war
+					add_idea = rus_narod_economics_total
+				}
+				else = {
+					add_ideas = { rus_narod_economics_civil }
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_Natsgvardia
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = rus_handle_the_army
+			focus = rus_all_in_war_industry
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 3
+		relative_position_id = rus_handle_the_army
+		completion_reward = {
+			add_ideas = { rus_Natsgvardia }
+		}
+
+	}
+	focus = {
+		id = rus_russian_armor_corps
+		icon = GFX_goal_generic_army_tanks
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_cavalry
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_siberian_cavalry
+		completion_reward = {
+
+      add_equipment_to_stockpile = {
+        type = light_tank_equipment_1 
+        amount = 100
+        producer = GER
+      }
+
+      add_equipment_to_stockpile = {
+        type = gw_tank_equipment
+        amount = 400
+        producer = FRA
+      }
+
+      add_equipment_to_stockpile = {
+        type = motorized_equipment
+        amount = 200
+        producer = ENG
+      }
+
+      add_equipment_to_stockpile = {
+        type = motorized_equipment
+        amount = 200
+        producer = USA
+      }
+
+		}
+
+	}
+	focus = {
+		id = rus_affirm_sphere_of_influence
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_diplomacy_turnover
+		}
+		available = {
+			is_subject = no
+			NOT = { has_completed_focus = rus_European_gendarme }
+			OR = {
+				NOT = {
+					has_war_with = GER
+				}
+				NOT = {
+					has_war_with = SWE
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_diplomacy_turnover
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = GER }
+				}
+				GER = {
+					country_event = {  id = rus_diplo.28 days = 3 }
+				}
+			}
+			if = {
+				limit = {
+					NOT = { has_war_with = SWE }
+				}
+				SWE = {
+					country_event = {  id = rus_diplo.14 days = 3 }
+				}  
+			}	
+			
+		}
+
+	}
+	focus = {
+		id = rus_join_germany
+		icon = GFX_goal_generic_major_alliance
+		cost = 5.00
+		prerequisite = {
+			focus = rus_affirm_sphere_of_influence
+		}
+		mutually_exclusive = {
+			focus = rus_join_jap_faction
+		}
+		available = {
+			is_subject = no
+			has_completed_focus = rus_fall_of_ussr
+			is_in_faction = no
+			NOT = { has_idea = RUS_political_uncertainty }
+			NOT = { has_government = democratic }
+			or = {
+				GER = { has_country_flag = RUS_sphere_divided_west }
+				has_idea = RUS_sphere_invasion_not_available_GER		
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_affirm_sphere_of_influence
+		completion_reward = {
+			GER = { country_event = {  id = rus_diplo.11  hours = 14} }
+		}  
+
+	}
+	focus = {
+		id = rus_doctrine_improvement
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5.00
+		prerequisite = {
+			focus = rus_join_germany
+		}
+		available = {
+			GER_will_support = yes
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_join_germany
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doctrine
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = rus_German_economic_aid
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = rus_join_germany
+		}
+		available = {
+			is_in_faction_with = GER
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_join_germany
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 6
+			}
+		}
+
+	}
+	focus = {
+		id = rus_rise_of_russian_industry
+		icon = GFX_focus_MEL_Central_Refuse_Disposal
+		cost = 7.00
+		prerequisite = {
+			focus = rus_expand_siberian_railway
+		}
+
+		prerequisite = {
+			focus = rus_a_tough_industrialization
+		}
+
+		prerequisite = {
+			focus = rus_rubber_exploitation
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = rus_a_tough_industrialization
+		completion_reward = {
+			SOV_increase_industrialization = yes
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = rus_rise_of_russian_industry
+				}
+			}
+
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Lerev
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Ufa
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Yekaterinburg
+
+      add_ideas = RUS_rise_of_russian_industry_idea
+
+			add_tech_bonus = {
+				name = rus_rise_of_russian_industry
+				bonus = 1.0
+				uses = 3
+				category = industry
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_absorb_manchuria_russian_forces
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5.00
+		prerequisite = {
+			focus = rus_attract_russian_in_exile
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_attract_russian_in_exile
+		completion_reward = {
+			add_manpower = 5000
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = rus_all_in_war_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_land_for_party
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_government = fascism
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_land_for_party
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			if = {
+				limit = {
+					has_idea = rus_narod_economics_civil
+				}
+				swap_ideas = {
+					remove_idea = rus_narod_economics_civil
+					add_idea = rus_narod_economics_total
+				}
+				else = {
+					add_ideas = { rus_narod_economics_war }
+				}
+			}
+			
+			if = {
+				limit = { 
+					NOT = { has_idea = partial_economic_mobilisation } 
+					NOT = { has_idea = war_economy } 
+					NOT = { has_idea = tot_economic_mobilisation } 
+				}
+				add_ideas = { partial_economic_mobilisation }
+				else = {
+					add_political_power = 100
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_women_worker
+		icon = GFX_goal_generic_production
+		cost = 5.00
+		prerequisite = {
+			focus = rus_forced_labor
+		}
+		prerequisite = {
+			focus = rus_all_in_war_industry
+		}
+		mutually_exclusive = {
+			focus = rus_women_conscription
+		}
+		available = {
+			has_idea = rus_narod_economics_total
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_forced_labor
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = rus_narod_economics_total
+				add_idea = rus_narod_economics_total_2
+			}
+		}
+
+	}
+	focus = {
+		id = rus_women_conscription
+		icon = GFX_goal_demand_sudetenland
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Yunarmia
+		}
+		mutually_exclusive = {
+			focus = rus_women_worker
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_Yunarmia
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = rus_Yunarmia
+				add_idea = rus_Yunarmia_2
+			}
+		}
+
+	}
+	focus = {
+		id = rus_military_state
+		icon = GFX_focus_generic_little_entente
+		cost = 5.00
+		prerequisite = {
+			focus = rus_reestablish_authority
+		}
+		mutually_exclusive = {
+			focus = rus_Empower_Russian_Senate
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_reestablish_authority
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_all_russian_supreme_government
+		}
+		completion_reward = {
+			if = {
+				limit = { 
+					NOT = { has_idea = partial_economic_mobilisation } 
+					NOT = { has_idea = war_economy } 
+					NOT = { has_idea = tot_economic_mobilisation } 
+				}
+				add_ideas = { partial_economic_mobilisation }
+				else = {
+					add_political_power = 100
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_idea = extensive_conscription } 
+					NOT = { has_idea = service_by_requirement } 
+					NOT = { has_idea = all_adults_serve } 
+					NOT = { has_idea = scraping_the_barrel } 
+				}
+				add_ideas = { extensive_conscription }
+				else = {
+					add_political_power = 100
+				}
+			}
+			army_experience = 25
+
+		}
+
+	}
+	focus = {
+		id = rus_science_of_war
+		icon = GFX_focus_research
+		cost = 5.00
+		prerequisite = {
+			focus = rus_peoples_russia
+		}
+		available = {
+			amount_research_slots < 6
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_peoples_russia
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+	}
+	focus = {
+		id = rus_siberian_cavalry
+		icon = GFX_goal_generic_cavalry
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_headquarter
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_siberian_headquarter
+		completion_reward = {
+			add_ideas = { rus_siberian_cavalry }
+		}
+
+	}
+	focus = {
+		id = rus_russian_armor
+		icon = GFX_focus_generic_tank_production
+		cost = 5.00
+		prerequisite = {
+			focus = rus_rise_of_russian_industry
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_rise_of_russian_industry
+		completion_reward = {
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Kursk
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Yaroslavl
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Tsaritsyn
+
+      add_ideas = RUS_Ural_armor_production_idea
+
+      random_owned_controlled_state = {
+        limit = { 
+          free_building_slots = {
+            building = arms_factory
+            size > 2
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = arms_factory
+          level = 3
+          instant_build = yes
+        }							
+
+      }
+
+      random_owned_controlled_state = {
+        limit = { 
+          free_building_slots = {
+            building = arms_factory
+            size > 2
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = arms_factory
+          level = 3
+          instant_build = yes
+        }							
+
+      }
+
+		}
+
+	}
+	focus = {
+		id = rus_siberian_air_forces_headquarter
+		icon = GFX_goal_RUS_airforce
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_headquarter
+		}
+		x = -4
+		y = 1
+		relative_position_id = rus_siberian_headquarter
+		completion_reward = {
+			add_ideas = { rus_siberian_air_forces_headquarter }
+			custom_effect_tooltip = available_chief_of_airforce
+			show_ideas_tooltip = RUS_aleksandra_ivanovna_pokryshkin
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_nyto_isomer
+		}
+
+	}
+	focus = {
+		id = rus_fighter_production
+		icon = GFX_goal_generic_air_fighter2
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_air_forces_headquarter
+		}
+		available = {
+
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_siberian_air_forces_headquarter
+		completion_reward = {
+      add_equipment_to_stockpile = {
+        type = fighter_equipment_0
+        amount = 250
+        producer = JAP
+      }
+		}
+	}
+	focus = {
+		id = rus_bomber_production
+		icon = GFX_focus_generic_wind_bomb
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_air_forces_headquarter
+		}
+		available = {
+
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_siberian_air_forces_headquarter
+		completion_reward = {
+      add_equipment_to_stockpile = {
+        type = tac_bomber_equipment_0
+        amount = 150
+        producer = JAP
+      }
+		}
+	}
+	focus = {
+		id = rus_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 8.00
+		prerequisite = {
+			focus = rus_expand_pacific_fleet
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_expand_pacific_fleet
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_naval_doctrine
+				bonus = 1.5
+				uses = 3
+				category = naval_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = rus_reestablish_black_sea_fleet
+		icon = GFX_goal_generic_navy_battleship
+		cost = 7.00
+		prerequisite = {
+			focus = rus_naval_doctrine
+		}
+		available = {
+			has_full_control_of_state = 234
+			has_full_control_of_state = 218
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_naval_doctrine
+		completion_reward = {
+			234 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			218 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_reestablish_baltic_sea_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 7.00
+		prerequisite = {
+			focus = rus_naval_doctrine
+		}
+		available = {
+			has_full_control_of_state = 195
+			has_full_control_of_state = 208
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_naval_doctrine
+		completion_reward = {
+			195 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 3480
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 3480
+					instant_build = yes
+				}
+			}
+			208 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 4
+					province = 104
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 4
+					province = 104
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 4
+					province = 104
+					instant_build = yes
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_russian_submarine
+		icon = GFX_goal_generic_navy_submarine
+		cost = 6.00
+		prerequisite = {
+			focus = rus_reestablish_baltic_sea_fleet
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reestablish_baltic_sea_fleet
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_russian_submarine
+				bonus = 1.5
+				ahead_reduction = 0.75
+				uses = 2
+				category = ss_tech
+			}
+		}
+
+	}
+	focus = {
+		id = rus_continue_modernization
+		icon = GFX_goal_generic_small_arms
+		cost = 5.00
+		prerequisite = {
+			focus = rus_lesson_from_the_great_war
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_lesson_from_the_great_war
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_continue_modernization
+				bonus = 1.5
+				uses = 1
+				category = infantry_weapons
+			}
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RUS_havier_witkin
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = RUS_g_k
+		}
+
+	}
+	focus = {
+		id = rus_modern_artillery
+		icon = GFX_focus_generic_Anti_Armor_Weapons
+		cost = 5.00
+		prerequisite = {
+			focus = rus_lesson_from_the_great_war
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_lesson_from_the_great_war
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_modern_artillery
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+		}
+
+	}
+	focus = {
+		id = rus_winter_equipment
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberia_logistics
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_siberia_logistics
+		completion_reward = {
+			add_ideas = { swe_winter_equipment }
+		}
+
+	}
+	focus = {
+		id = rus_fall_of_ussr
+		icon = GFX_focus_Kremlin
+		cost = 10.00
+		prerequisite = {
+			focus = rus_continue_the_civil_war
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = rus_atuomatically_triggered_after_defeating_ussr
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_continue_the_civil_war
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_a_new_better_russia
+		icon = GFX_goal_generic_construction
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fall_of_ussr
+		}
+
+		available = {
+			has_war = no
+		}
+
+		x = 5
+		y = 1
+		relative_position_id = rus_fall_of_ussr
+		completion_reward = {
+			SOV_increase_industrialization = yes
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = rus_a_new_better_russia
+				}
+			}
+
+			add_timed_idea = {
+				days = 400
+				idea = rus_a_new_better_russia
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {   ###农业复苏
+		id = rus_agricultural_revival
+		icon = GFX_focus_generic_japanese_farm_subsidies
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fall_of_ussr
+		}
+		x = -5
+		y = 1
+		relative_position_id = rus_fall_of_ussr
+
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_readjust_educational_system
+		icon = GFX_focus_research
+		cost = 5.00
+		prerequisite = {
+			focus = rus_restore_local_government
+		}
+		available = {
+			amount_research_slots < 6
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_restore_local_government
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_inherit_soviet_industry
+		icon = GFX_goal_generic_soviet_construction
+		cost = 6.00
+		prerequisite = {
+			focus = rus_a_new_better_russia
+		}
+		mutually_exclusive = {
+			focus = rus_privatize_soviet_industry
+		}
+
+		available = {
+			is_subject = no
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = rus_a_new_better_russia
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			custom_effect_tooltip = rus_soviet_concern_will_be_available_tt
+
+
+			if = {
+				limit = {
+					is_subject = no
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_purge_diehards
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_fall_of_ussr
+		completion_reward = {
+			RUS_purge_down_communist = yes
+			add_popularity = {
+				ideology = communism
+				popularity = -0.10
+			}
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+	}
+	focus = {
+		id = rus_repress_partisan
+		icon = GFX_goal_generic_major_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_purge_diehards
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_purge_diehards
+		completion_reward = {
+			RUS_purge_down_communist = yes
+			add_timed_idea = {
+				idea = rus_repress_partisan
+				days = 420
+			}
+		} 
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+	}
+	focus = {
+		id = rus_russian_technological_progress
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_rise_of_russian_industry
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_rise_of_russian_industry
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Chelyabinsk
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+	}
+	focus = {
+		id = rus_russian_rocket
+		icon = GFX_focus_rocketry
+		cost = 5.00
+		prerequisite = {
+			focus = rus_rise_of_russian_industry
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_rise_of_russian_industry
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_russian_rocket
+				bonus = 1.5
+				uses = 2
+				category = rocketry
+			}
+		}
+
+	}
+	focus = {
+		id = rus_ultimate_weapon
+		icon = GFX_focus_wonderweapons
+		cost = 5.00
+		prerequisite = {
+			focus = rus_russian_technological_progress
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_russian_technological_progress
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_russian_armor_corps
+				bonus = 1
+				ahead_reduction = 0.75
+				uses = 2
+				category = nuclear
+			}
+		}
+
+	}
+	focus = {
+		id = rus_rubber_exploitation
+		icon = GFX_goal_generic_construction2
+		cost = 8.00
+		prerequisite = {
+			focus = rus_national_investment_bank
+		}
+		available = {
+			584 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			585 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+			404 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT is_in_faction_with = ROOT } } }
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_national_investment_bank
+		completion_reward = {
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.1
+					localization = rus_rubber_exploitation
+				}
+			}
+
+			585 = {
+				add_resource = {
+					type = rubber
+					amount = 15
+				}
+			}
+			584 = {
+				add_resource = {
+					type = rubber
+					amount = 10
+				}
+			}
+			404 = {
+				add_resource = {
+					type = rubber
+					amount = 5
+				}
+			}
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_negotiation_with_army
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		cost = 2.00
+		prerequisite = {
+			focus = rus_internal_problem
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = -1
+		y = 1
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_internal_problem
+		completion_reward = {
+			country_event = { id = russian.2  hours = 3 }
+		}
+
+	}
+	focus = {
+		id = rus_negotiation_with_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 2.00
+		prerequisite = {
+			focus = rus_internal_problem
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 1
+		y = 1
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_internal_problem
+		completion_reward = {
+			country_event = { id = russian.3  hours = 3 }
+		}
+
+	}
+	focus = {
+		id = rus_negotiation_with_democrats
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_negotiation_with_navy
+		}
+		prerequisite = {
+			focus = rus_negotiation_with_army
+		}
+		mutually_exclusive = {
+			focus = rus_prohibit_democratic_opponents
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 0
+		y = 1
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_negotiation_with_navy
+		completion_reward = {
+			custom_effect_tooltip = RUS_we_are_going_to_bare_the_consequence_tt
+			swap_ideas = {
+				add_idea = RUS_democrats_compromise
+				remove_idea = RUS_democrats_opposition
+			}
+		}
+
+	}
+	focus = {
+		id = rus_prohibit_democratic_opponents
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 5.00
+		prerequisite = {
+			focus = rus_negotiation_with_army
+		}
+		prerequisite = {
+			focus = rus_negotiation_with_navy
+		}
+		mutually_exclusive = {
+			focus = rus_negotiation_with_democrats
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		x = 0
+		y = 1
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_negotiation_with_army
+		completion_reward = {
+			custom_effect_tooltip = RUS_we_are_going_to_bare_the_consequence_tt
+			RUS_democrats_remove_all = yes
+		}
+
+	}
+	focus = {
+		id = rus_all_russian_supreme_government
+		icon = GFX_goal_RUS_flag
+		cost = 7.00
+		prerequisite = {
+			focus = rus_prohibit_democratic_opponents
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_country_leader = {
+				name = "Anastasia I"
+				ruling_only = yes
+			}
+			has_government = neutrality
+		}
+
+		x = 0
+		y = 1
+		relative_position_id = rus_prohibit_democratic_opponents
+		completion_reward = {
+			add_political_power = 100
+			if = {
+				limit = { has_idea = RUS_rebirth_of_the_tsar_0 }
+				swap_ideas = {
+					remove_idea = RUS_rebirth_of_the_tsar_0
+					add_idea = RUS_rebirth_of_the_tsar_1
+				}
+			}
+			set_party_name = { 
+				ideology = neutrality 
+				long_name = RUS_neutrality_party_romanov_long 
+				name = RUS_neutrality_party_romanov 
+			}
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_sergey_taboritsky
+			hidden_effect = {
+				retire_ideology_leader = neutrality
+				create_country_leader = {
+					name = "Anastasia I"
+					desc = "POLITICS_ANASTASIA_DESC"
+					picture = "Portrait_Anastasia.dds"
+					ideology = absolute_monarchy 
+					traits = { Shvibzik }
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_expand_japanese_advisory_group
+		icon = GFX_goal_generic_cavalry
+		cost = 5.00
+		prerequisite = {
+			focus = rus_align_japan
+		}
+		available = {
+			JAP_will_support = yes
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_align_japan
+		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = rus_japanese_advisory_group
+				add_idea = rus_japanese_advisory_group_2
+			}
+
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_tatenashi_sarashiki
+		}
+
+	}
+	focus = {
+		id = rus_repurchase_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5.00
+		prerequisite = {
+			focus = rus_join_jap_faction
+		}
+		available = {
+			is_subject = no
+			is_in_faction_with = JAP
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_join_jap_faction
+		completion_reward = {
+			JAP = { country_event = { id = rus_diplo.22  hours = 8 } }
+		}
+
+	}
+	focus = {
+		id = rus_dissolve_observe_committee
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_affirm_sphere_of_influence
+		}
+		available = {
+			is_subject = no
+			GER_will_support = yes
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_affirm_sphere_of_influence
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_entente_observe_committee   }
+				remove_ideas = RUS_entente_observe_committee 
+			}
+			else = {
+				add_political_power = 120
+			}
+		}
+
+	}
+	focus = {
+		id = rus_secularization
+		icon = GFX_goal_generic_propaganda
+		cost = 5.00
+		prerequisite = {
+			focus = rus_fight_for_russia
+		}
+
+		available = {
+			OR = {
+				has_government = democratic
+				has_government = communism
+				has_completed_focus = rus_Kadoc_the_vozhd
+				has_country_leader = { name = "Berezovich Kryuger" ruling_only = yes }
+				has_country_leader = { name = "Imran Zakhaev" ruling_only = yes }
+				has_country_leader = { name = "Ruchnoy P. Kalashnikova" ruling_only = yes }
+			}
+			NOT = { has_completed_focus = rus_orthodox_enthusiastic }
+		}
+		x = -3
+		y = 1
+		relative_position_id = rus_fight_for_russia
+		completion_reward = {
+			custom_effect_tooltip = RUS_Leftist_elected_will_force_secularization_price_tt
+			RUS_Orthodox_secularize = yes
+		}
+
+	}
+	focus = {
+		id = rus_thought_liberalization
+		icon = GFX_goal_generic_radar
+		cost = 5.00
+		prerequisite = {
+			focus = rus_secularization
+		}
+		available = {
+			has_idea = RUS_Orthodox_secularized
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_secularization
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_Orthodox_secularized_2
+				remove_idea = RUS_Orthodox_secularized
+			}
+		}
+
+	}
+	focus = {
+		id = rus_restore_the_democracy
+		icon = GFX_focus_Russian_Democracy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_support_from_Gosudarstvennaya_duma
+			focus = rus_forced_abdication
+		}
+		mutually_exclusive = {
+			focus = rus_power_politics
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_support_from_Gosudarstvennaya_duma
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = RUS_nataliya_andreyevich_rostova
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_bronya_zaychik
+			RUS_create_democratic_leaders = yes
+		}
+
+	}
+	focus = {
+		id = rus_PSR_comes_back
+		icon = GFX_focus_generic_PSR_2
+		cost = 10.00
+		prerequisite = {
+			focus = rus_restore_the_democracy
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RUS_election_will_be_hold_after_civilwar_tt
+			}
+			custom_trigger_tooltip = {
+				tooltip = RUS_PSR_boycott_election_if_not_republic_tt
+			}
+		}
+		x = 5
+		y = 1
+		relative_position_id = rus_restore_the_democracy
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_viktor_chernov
+		}
+
+	}
+	focus = {
+		id = rus_Menshviks_win
+		icon = GFX_focus_generic_Mensheviks
+		cost = 10.00
+		prerequisite = {
+			focus = rus_restore_the_democracy
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RUS_election_will_be_hold_after_civilwar_tt
+			}
+		}
+		x = 9
+		y = 1
+		relative_position_id = rus_restore_the_democracy
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_irakli_tsereteli
+		}
+
+	}
+	focus = {
+		id = rus_Octobrists_win
+		icon = GFX_focus_generic_Oktyabrya
+		cost = 10.00
+		prerequisite = {
+			focus = rus_restore_the_democracy
+		}
+		available = {
+			always = no
+			custom_trigger_tooltip = {
+				tooltip = RUS_election_will_be_hold_after_civilwar_tt
+			}
+		}
+		x = -5
+		y = 1
+		relative_position_id = rus_restore_the_democracy
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_alexander_guchkov
+		}
+
+	}
+	focus = {
+		id = rus_kadet_wins
+		icon = GFX_focus_Kadet
+		cost = 10.00
+		prerequisite = {
+			focus = rus_restore_the_democracy
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = RUS_election_will_be_hold_after_civilwar_tt
+			}
+			always = no
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_restore_the_democracy
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_reestablish_authority
+		icon = GFX_focus_russian_militarism
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Tsarina_Batiushka
+		}
+		x = 0
+		y = 1
+
+		available = {  
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+
+		relative_position_id = rus_Tsarina_Batiushka
+		completion_reward = {
+			remove_ideas = { RUS_political_uncertainty }
+		}
+
+	}
+	focus = {
+		id = rus_Empower_Russian_Senate
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_reestablish_authority
+		}
+		mutually_exclusive = {
+			focus = rus_military_state
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_guided_democracy
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_reestablish_authority
+		completion_reward = {
+			add_ideas = { rus_Empower_Russian_Senate  }
+		}
+
+	}
+	focus = {
+		id = rus_regulate_aristocrats
+		icon = GFX_goal_tripartite_pact
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Octobrists_win
+			focus = rus_Empower_Russian_Senate
+		}
+		mutually_exclusive = {
+			focus = rus_strengthen_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_Octobrists_win
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_aristocrats }
+				swap_ideas = {
+					add_idea = RUS_aristocrats_regularized
+					remove_idea = RUS_aristocrats
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_militarize_aristocrats
+		icon = GFX_focus_secret_rearmament
+		cost = 5.00
+		prerequisite = {
+			focus = rus_military_state
+		}
+		mutually_exclusive = {
+			focus = rus_strengthen_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_military_state
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_aristocrats }
+				swap_ideas = {
+					add_idea = RUS_aristocrats_militarized
+					remove_idea = RUS_aristocrats
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_strengthen_aristocrats
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5.00
+		prerequisite = {
+			focus = rus_military_state
+			focus = rus_Empower_Russian_Senate
+		}
+		mutually_exclusive = {
+			focus = rus_militarize_aristocrats
+			focus = rus_regulate_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_Empower_Russian_Senate
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_aristocrats }
+				swap_ideas = {
+					add_idea = RUS_aristocrats_strengthened
+					remove_idea = RUS_aristocrats
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_restore_trade_unions
+		icon = GFX_goal_syndicalist_workers
+		cost = 5.00
+		prerequisite = {
+			focus = rus_confront_racism
+		}
+		available = {
+			has_government = democratic
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_confront_racism
+		completion_reward = {
+			add_ideas = { rus_restore_trade_unions }
+		}
+
+	}
+	focus = {
+		id = rus_sweep_corruption
+		icon = GFX_goal_generic_political_pressure
+		cost = 5.00
+		prerequisite = {
+			focus = rus_militarize_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_militarize_aristocrats
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_political_power = 100
+		}
+
+	}
+	focus = {
+		id = rus_cultivate_good_deeds
+		icon = GFX_goal_generic_neutrality_focus
+		cost = 5.00
+		prerequisite = {
+			focus = rus_strengthen_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_strengthen_aristocrats
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = rus_social_charity
+		icon = GFX_goal_workers_rights
+		cost = 7.00
+		prerequisite = {
+			focus = rus_regulate_aristocrats
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_regulate_aristocrats
+		completion_reward = {
+			swap_ideas= {
+				add_idea = RUS_aristocrats_regularized_2
+				remove_idea = RUS_aristocrats_regularized
+			}
+			SOV_increase_industrialization = yes
+		}
+
+	}
+	focus = {
+		id = rus_reorganize_secret_police
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = rus_handle_the_army
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_handle_the_army
+		completion_reward = {
+			if = {
+				limit = { has_idea = RUS_Oprichnik }
+				swap_ideas = {
+					remove_idea = RUS_Oprichnik
+					add_idea = RUS_Oprichnik_democratized
+				}
+			}
+			if = {
+				limit = { has_idea = RUS_Okhrana }
+				swap_ideas = {
+					remove_idea = RUS_Okhrana
+					add_idea = RUS_Okhrana_democratized
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_romanov_foundation
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_Church_of_All_Saints
+		}
+		prerequisite = {
+			focus = rus_revere_the_heroes
+		}
+		prerequisite = {
+			focus = rus_fix_winter_palace
+		}
+		available = {
+			amount_research_slots < 6
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+		}
+		bypass = {
+			amount_research_slots > 5
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Church_of_All_Saints
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_the_Empire_strikes_back
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 5.00
+		prerequisite = {
+			focus = rus_the_royal_marriage
+		}
+		available = {
+			is_subject = no
+			has_idea = RUS_Death_of_red_bandits
+		}
+		bypass = {
+			NOT = { has_idea = RUS_Death_of_red_bandits }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_the_royal_marriage
+		completion_reward = {
+			swap_ideas = {
+				add_idea = RUS_Death_of_red_bandits_2
+				remove_idea = RUS_Death_of_red_bandits
+			}
+		}
+
+	}
+	focus = {
+		id = rus_revere_the_heroes
+		icon = GFX_focus_rus_revere_the_heroes
+		cost = 3.00
+		prerequisite = {
+			focus = rus_the_Empire_strikes_back
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_the_Empire_strikes_back
+		completion_reward = {
+			country_event = { id = russian_flavour.8 days = 3 }
+		}
+
+	}
+	focus = {
+		id = rus_Church_of_All_Saints
+		icon = GFX_focus_rus_Church_of_All_Saints
+		cost = 3.00
+		prerequisite = {
+			focus = rus_the_Empire_strikes_back
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_the_Empire_strikes_back
+		completion_reward = {
+			country_event = { id = russian_flavour.6  days = 3 }
+		}
+
+	}
+	focus = {
+		id = rus_fix_winter_palace
+		icon = GFX_focus_rus_fix_winter_palace
+		cost = 3.00
+		prerequisite = {
+			focus = rus_the_Empire_strikes_back
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_the_Empire_strikes_back
+		completion_reward = {
+			country_event = { id = russian_flavour.7  days = 3 }
+		}
+
+	}
+	focus = {
+		id = rus_Order_back_to_Russia
+		icon = GFX_focus_Preserve_Russia
+		cost = 5.00
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		prerequisite = {
+			focus = rus_cultivate_good_deeds
+			focus = rus_social_charity
+			focus = rus_sweep_corruption
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_cultivate_good_deeds
+		completion_reward = {
+			add_stability = 0.10
+			if = {
+				limit = { has_government = neutrality }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.10
+				}
+			}
+			if = {
+				limit = { has_government = democratic }
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.05
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = 0.05
+				}
+			}
+			RUS_purge_down_communist = yes
+			if = {
+				limit = {
+					has_government = neutrality
+					has_country_leader = { name = "Anastasia I" ruling_only = yes }
+				}
+				add_ideas = { rus_a_new_empire }
+			}
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+	}
+	focus = {
+		id = rus_voice_of_tsarina
+		icon = GFX_goal_RUS_monarchy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Romanov_cruise
+		}
+		prerequisite = {
+			focus = rus_militarize_aristocrats
+		}
+		available = {
+			is_subject = no
+			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_government = neutrality
+			784 = { CONTROLLER = { tag = ROOT } }
+			95 = { CONTROLLER = { tag = ROOT } }
+			96 = { CONTROLLER = { tag = ROOT } }
+			93 = { CONTROLLER = { tag = ROOT } }
+			94 = { CONTROLLER = { tag = ROOT } }
+			91 = { CONTROLLER = { tag = ROOT } }
+			89 = { CONTROLLER = { tag = ROOT } }
+			12 = { CONTROLLER = { tag = ROOT } }
+			190 = { CONTROLLER = { tag = ROOT } }
+			11 = { CONTROLLER = { tag = ROOT } }
+			189 = { CONTROLLER = { tag = ROOT }}
+			188 = { CONTROLLER = { tag = ROOT } }
+			13 = { CONTROLLER = { tag = ROOT }}
+			191 = { CONTROLLER = { tag = ROOT } }
+			146 = { CONTROLLER = { tag = ROOT } }
+			147 = { CONTROLLER = { tag = ROOT } }
+			722 = { CONTROLLER = { tag = ROOT } }
+			78 = { CONTROLLER = { tag = ROOT } }
+			766 = { CONTROLLER = { tag = ROOT } }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Romanov_cruise
+		completion_reward = {
+			remove_country_leader_trait = Freezing_Charisma
+			add_country_leader_trait = Modern_Catherine
+		}
+
+	}
+	focus = {
+		id = rus_siberia_logistics
+		icon = GFX_goal_generic_army_motorized
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_cavalry
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_siberian_cavalry
+		completion_reward = {
+			add_ideas = { JAP_logistic_innovation_idea }
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = RUS_kalina
+		}
+
+	}
+	focus = {
+		id = rus_people_oriented
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Menshviks_win
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Menshviks_win
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 75
+			add_tech_bonus = {
+				name = rus_people_oriented
+				ahead_reduction = 1.0
+				bonus = 1.5
+				uses = 1
+				category = construction_tech
+			}
+		}
+
+	}
+	focus = {
+		id = rus_public_education
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_confront_racism
+		}
+		prerequisite = {
+			focus = rus_free_hospital
+		}
+		prerequisite = {
+			focus = rus_restore_trade_unions
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_confront_racism
+		completion_reward = {	
+			SOV_increase_industrialization = yes
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_free_hospital
+		icon = GFX_focus_generic_concessions
+		cost = 5.00
+		prerequisite = {
+			focus = rus_confront_racism
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_confront_racism
+		completion_reward = {
+			add_stability = 0.075
+			add_political_power = -100
+			add_tech_bonus = {
+				name = rus_free_hospital
+				ahead_reduction = 1.0
+				bonus = 1.5
+				uses = 1
+				category = hospital_tech
+			}
+		}
+
+	}
+	focus = {
+		id = rus_secure_peasants
+		icon = GFX_focus_NUE_support_from_grassroot_youkais
+		cost = 5.00
+		prerequisite = {
+			focus = rus_PSR_comes_back
+		}
+		available = {
+
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_PSR_comes_back
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+			add_political_power = 75
+		}
+
+	}
+	focus = {
+		id = rus_agriculture_modernization
+		icon = GFX_goal_generic_position_armies
+		cost = 5.00
+		prerequisite = {
+			focus = rus_secure_peasants
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_secure_peasants
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_agriculture_modernization
+				ahead_reduction = 0.5
+				bonus = 1.0
+				uses = 2
+				category = construction_tech
+			}
+			RUS_aristocrats_decline = yes
+		}
+
+	}
+	focus = {
+		id = rus_rich_taxation
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = rus_people_oriented
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_people_oriented
+		completion_reward = {
+			add_political_power = 200
+			SOV_increase_industrialization = yes
+		}
+
+	}
+	focus = {
+		id = rus_reform_bureaucrats
+		icon = GFX_focus_generic_interest_exchange
+		cost = 5.00
+		prerequisite = {
+			focus = rus_kadet_wins
+			focus = rus_PSR_comes_back
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_kadet_wins
+		completion_reward = {
+			add_timed_idea = {
+				idea = rus_reform_bureaucrats
+				days = 400
+			}
+		}
+
+	}
+	focus = {
+		id = rus_protect_civil_liberty
+		icon = GFX_focus_KYK_true_equality_between_Youkai_and_Human
+		cost = 5.00
+		prerequisite = {
+			focus = rus_kadet_wins
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_kadet_wins
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.10
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.10
+			}
+			add_political_power = 75
+		}
+
+	}
+	focus = {
+		id = rus_crumble_aristocrats
+		icon = GFX_focus_rom_parties_end
+		cost = 5.00
+		prerequisite = {
+			focus = rus_rich_taxation
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_rich_taxation
+		completion_reward = {
+			RUS_aristocrats_remove_all = yes
+		}
+
+	}
+	focus = {
+		id = rus_economic_departments
+		icon = GFX_goal_generic_construct_civilian
+		cost = 5.00
+		prerequisite = {
+			focus = rus_reform_bureaucrats
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_reform_bureaucrats
+		completion_reward = {
+			add_ideas = { rus_economic_departments }
+			SOV_increase_industrialization = yes
+		}
+
+	}
+	focus = {
+		id = rus_internal_agricultural_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 5.00
+		prerequisite = {
+			focus = rus_agriculture_modernization
+		}
+		prerequisite = {
+			focus = rus_economic_departments
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_agriculture_modernization
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = rus_economic_departments
+				add_idea = rus_economic_departments_2
+			}
+		}
+
+	}
+	focus = {
+		id = rus_encourage_entrepreneurship
+		icon = GFX_VIN_Rights_of_Corporation
+		cost = 5.00
+		prerequisite = {
+			focus = rus_protect_civil_liberty
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_protect_civil_liberty
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_encourage_entrepreneurship
+				ahead_reduction = 0.5
+				bonus = 1.0
+				uses = 2
+				category = industry
+				category = electronics
+			}
+			SOV_increase_industrialization = yes
+			RUS_aristocrats_decline = yes
+		}
+
+	}
+	focus = {
+		id = rus_mixed_economy
+		icon = GFX_focus_spa_the_spanish_miracle
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Octobrists_win
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_Octobrists_win
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_encourage_entrepreneurship
+				ahead_reduction = 1.0
+				bonus = 2.0
+				uses = 1
+				category = industry
+			}
+			SOV_increase_industrialization = yes
+		}
+
+	}
+	focus = {
+		id = rus_tradition_and_life_style
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = rus_mixed_economy
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_mixed_economy
+		completion_reward = {
+			add_political_power = 100
+			add_popularity = {
+				popularity = 0.05
+				ideology = democratic
+			}
+			add_popularity = {
+				popularity = 0.05
+				ideology = neutrality
+			}
+		}
+
+	}
+	focus = {
+		id = rus_europe_political_refugee
+		icon = GFX_goal_generic_microphone_diplomacy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_kadet_wins
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_kadet_wins
+		completion_reward = {
+			add_political_power = 200
+			if = {
+				limit = { GER = { has_government = fascism } }
+				GER = {
+					add_popularity = {
+						popularity = -0.10
+						ideology = democratic
+					}
+				}
+			}
+			if = {
+				limit = { ITA = { has_government = fascism } }
+				ITA = {
+					add_popularity = {
+						popularity = -0.05
+						ideology = democratic
+					}
+				}
+			}
+			if = {
+				limit = { SWE = { has_government = fascism } }
+				SWE = {
+					add_popularity = {
+						popularity = -0.05
+						ideology = democratic
+					}
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_shelter_for_great_brains
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_europe_political_refugee
+		}
+		available = {
+			amount_research_slots < 6
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_europe_political_refugee
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+	}
+	focus = {
+		id = rus_imperial_science_association
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_Order_back_to_Russia
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Order_back_to_Russia
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+	}
+	focus = {   ###继续运行集体农庄
+		id = rus_keep_running_collective_farms
+		icon = GFX_goal_generic_construction2
+		cost = 5.00
+		prerequisite = {
+			focus = rus_agricultural_revival
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+			NOT = { has_completed_focus = rus_PSR_comes_back }
+			NOT = { has_completed_focus = rus_kadet_wins }
+		}
+		mutually_exclusive = {
+			focus = rus_farm_privatization
+		}
+		mutually_exclusive = {
+			focus = rus_redistribute_land
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_agricultural_revival
+
+		completion_reward = {
+			add_ideas = RUS_keep_running_collective_farms_idea
+		}
+
+	}
+
+	
+focus = {   ###土地分给农民
+		id = rus_redistribute_land
+		icon = GFX_focus_generic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_agricultural_revival
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+			NOT = { has_completed_focus = rus_Menshviks_win }
+		}
+		mutually_exclusive = {
+			focus = rus_farm_privatization
+		}
+		mutually_exclusive = {
+			focus = rus_keep_running_collective_farms
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_agricultural_revival
+
+		completion_reward = {
+			add_ideas = RUS_redistribute_land_idea 
+		}
+
+	}
+	focus = {  ###全国农民联合会
+		id = rus_national_peasant_association
+		icon = GFX_goal_generic_production
+		cost = 5.00
+		prerequisite = {
+			focus = rus_agricultural_recover
+		}
+		available = {
+			NOT = { has_completed_focus = rus_land_for_party }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_agricultural_recover
+
+		completion_reward = {
+			custom_effect_tooltip = rus_reward_depends_on_choice_tt
+			if = {
+				limit = {
+				has_idea = RUS_agricultural_recover_1_idea
+				}
+
+					swap_ideas = { remove_idea = RUS_agricultural_recover_1_idea add_idea = RUS_national_peasant_association_1_idea }
+			}
+			if = {
+				limit = {
+				has_idea = RUS_agricultural_recover_2_idea
+				}
+
+					swap_ideas = { remove_idea = RUS_agricultural_recover_2_idea add_idea = RUS_national_peasant_association_2_idea }
+			}
+		}
+	}
+	focus = {
+		id = rus_privatize_soviet_industry
+		icon = GFX_focus_generic_open_up
+		cost = 6.00
+		prerequisite = {
+			focus = rus_a_new_better_russia
+		}
+		mutually_exclusive = {
+			focus = rus_inherit_soviet_industry
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_a_new_better_russia
+		completion_reward = {
+			SOV_increase_industrialization = yes
+
+			if = {
+				limit = { 
+					RUS = { is_subject_of = JAP }
+				}
+				add_autonomy_ratio = {
+					value = 0.2
+					localization = rus_privatize_soviet_industry
+				}
+			}
+
+
+			custom_effect_tooltip = rus_privatization_bring_efficiency_but_also_corruption_tt
+
+			if = {
+				limit = {
+					is_subject = no
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}							
+
+				}
+
+		  }
+
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+	}
+	focus = {
+		id = rus_restore_local_government
+		icon = GFX_focus_generic_self_management
+		cost = 5.00
+		prerequisite = {
+			focus = rus_repress_partisan
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_repress_partisan
+		completion_reward = {
+			RUS_purge_down_communist = yes
+			add_political_power = 100
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RUS_boris_vasilchikov
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+	}
+	focus = {
+		id = rus_keep_military_supervision
+		icon = GFX_goal_generic_territory_or_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_power_politics
+		}
+		available = {
+			always = no
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_power_politics
+		completion_reward = {
+			
+		}
+
+	}
+	focus = {
+		id = rus_Euroasianism
+		icon = GFX_focus_euroasianism
+		cost = 5.00
+		prerequisite = {
+			focus = rus_redeem_glory_of_past
+		}
+
+		available = {
+			# NOT = { is_in_faction_with = ENG }
+			OR = {
+				NOT = { is_in_faction_with = JAP }
+				JAP = { is_subject_of = ROOT }
+			}
+			OR = {
+				NOT = { is_in_faction_with = CHI }
+				CHI = { is_subject_of = ROOT }
+			}
+			OR = {
+				NOT = { is_in_faction_with = PRC }
+				PRC = { is_subject_of = ROOT }
+			}
+			OR = {
+				NOT = { has_completed_focus = rus_European_gendarme }
+				date > 1941.1.1
+				threat > 0.74
+			}
+			OR = {
+				NOT = { has_government = democratic }
+				threat > 0.79
+			}
+			threat > 0.49
+			# NOT = { has_government = democratic }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_redeem_glory_of_past
+		completion_reward = {
+			custom_effect_tooltip = rus_claim_on_east_tt
+			add_state_core = 329
+			unlock_decision_tooltip = SOV_southern_thrust_decisions
+			unlock_decision_tooltip = SOV_claim_sikang_decisions
+			unlock_decision_tooltip = SOV_demand_sikang_decisions
+			unlock_decision_tooltip = SOV_claim_Manchuria_decisions
+			unlock_decision_tooltip = RUS_Greater_Mongolia_plan
+			unlock_decision_tooltip = RUS_Annex_Mongolia
+			unlock_decision_tooltip = SOV_Operation_Sun_fall_decisions
+			
+			ENG = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+			CHI = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+			PRC = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+			AFG = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+			PER = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+			JAP = {
+				add_opinion_modifier = {
+					modifier = rus_Euroasianism
+					target = ROOT
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_European_gendarme
+		icon = GFX_focus_to_the_west
+		cost = 5.00
+		prerequisite = {
+			focus = rus_redeem_glory_of_past
+		}
+
+		available = {
+			NOT = { has_country_flag = rus_ger_sphere_divided }
+			OR = {
+				NOT = { has_completed_focus = rus_Euroasianism }
+				date > 1940.1.1
+				threat > 0.74
+			}
+			OR = {
+				NOT = { has_government = democratic }
+				threat > 0.69
+			}
+			threat > 0.49
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_redeem_glory_of_past
+		completion_reward = {
+			custom_effect_tooltip = rus_claim_on_west_tt
+			unlock_decision_tooltip = SOV_Operation_Thunderstorm_decisions
+			unlock_decision_tooltip = RUS_Save_Serbia_decisions
+			unlock_decision_tooltip = SOV_claim_straits_decisions
+			unlock_decision_tooltip = RUS_Operation_Peter_the_Great_decisions
+		}
+
+	}
+	focus = {
+		id = rus_peoples_russia
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_all_in_war_industry
+		}
+		prerequisite = {
+			focus = rus_forced_labor
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_land_for_party
+		completion_reward = {
+			add_stability = 0.15
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.20
+			}
+			RUS_aristocrats_remove_all = yes
+		}
+
+	}
+	focus = {
+		id = rus_arms_complex
+		icon = GFX_focus_BUL_support_macedonian_organizations
+		cost = 5.00
+		prerequisite = {
+			focus = rus_centralized_apparatus_of_power
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_centralized_apparatus_of_power
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_ideas = {
+				rus_arms_complex
+			}
+		}
+	}
+	focus = {
+		id = rus_militarize_the_schools
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 5.00
+		prerequisite = {
+			focus = rus_centralized_apparatus_of_power
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_centralized_apparatus_of_power
+		completion_reward = {
+			add_ideas = { rus_militarize_the_schools }
+		}
+
+	}
+	focus = {
+		id = rus_national_defense_research_center
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = rus_church_camp_of_surveillance
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			amount_research_slots < 6
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_church_camp_of_surveillance
+		completion_reward = {
+			custom_effect_tooltip = rus_max_six_research_slot_tt
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+		}
+
+	}
+	focus = {
+		id = rus_church_camp_of_surveillance
+		icon = GFX_focus_BUL_restore_the_bulgarian_patriarchate
+		cost = 5.00
+		prerequisite = {
+			focus = rus_arms_complex
+		}
+		prerequisite = {
+			focus = rus_militarize_the_schools
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_centralized_apparatus_of_power
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = rus_militarize_the_schools
+				add_idea = rus_militarize_the_schools_2
+			}
+		}
+
+	}
+	focus = {
+		id = rus_legacy_of_the_whites
+		icon = GFX_goal_RUS_white_legacy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_keep_military_supervision
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+			NOT = { has_idea= RUS_political_uncertainty }
+			has_government = neutrality
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_keep_military_supervision
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+			set_cosmetic_tag = RUS_JUNTA_REPUB
+			army_experience = 25
+			if = {
+				limit = { has_idea = RUS_aristocrats }
+				swap_ideas = {
+					add_idea = RUS_aristocrats_militarized
+					remove_idea = RUS_aristocrats
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_purge_republicans
+		icon = GFX_goal_generic_secret_weapon
+		cost = 5.00
+		prerequisite = {
+			focus = rus_black_league_coup
+		}
+		available = {
+			NOT = { has_idea = RUS_political_uncertainty }
+			has_government = fascism
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_black_league_coup
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.25
+			}
+			hidden_effect = {
+				add_popularity = {
+					ideology = communism
+					popularity = -0.08
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_militarize_judicature
+		icon = GFX_goal_generic_small_arms
+		cost = 5.00
+		prerequisite = {
+			focus = rus_legacy_of_the_whites
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_legacy_of_the_whites
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = rus_militarize_the_country_1 }
+				}
+				add_ideas = { rus_militarize_the_country_0 }
+				else = {
+					swap_ideas = {
+						remove_idea = rus_militarize_the_country_1
+						add_idea = rus_militarize_the_country_2
+					}
+				}
+			}
+			
+		}
+	}
+
+	focus = {
+		id = rus_army_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5.00
+		prerequisite = {
+			focus = rus_militarize_judicature
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_militarize_judicature
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_ideas = { rus_army_infrastructure }
+		}
+
+	}
+	focus = {
+		id = rus_national_martial_law
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		cost = 5.00
+		prerequisite = {
+			focus = rus_legacy_of_the_whites
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = 0
+		y = 2
+		relative_position_id = rus_legacy_of_the_whites
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = rus_militarize_the_country_0 }
+				}
+				add_ideas = { rus_militarize_the_country_1 }
+				else = {
+					swap_ideas = {
+						remove_idea = rus_militarize_the_country_0
+						add_idea = rus_militarize_the_country_2
+					}
+				}
+			}
+			
+		}
+
+	}
+	focus = {
+		id = rus_militarize_the_country
+		icon = GFX_goal_generic_political_pressure
+		cost = 5.00
+		prerequisite = {
+			focus = rus_army_infrastructure
+		}
+		prerequisite = {
+			focus = rus_national_martial_law
+		}
+		available = {
+			is_subject = no
+			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_army_infrastructure
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = rus_militarize_the_country_2
+				add_idea = rus_militarize_the_country_3
+			}
+		}
+
+	}
+	focus = {
+		id = rus_nationalize_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_all_russian_economic_committee
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_all_russian_economic_committee
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = rus_all_russian_economic_committee_2 } }
+				swap_ideas = {
+					remove_idea = rus_all_russian_economic_committee
+					add_idea = rus_all_russian_economic_committee_1
+				}
+			}
+			if = {
+				limit = { has_idea = rus_all_russian_economic_committee_2 }
+				swap_ideas = {
+					remove_idea = rus_all_russian_economic_committee_2
+					add_idea = rus_all_russian_economic_committee_3
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_all_russian_economic_committee
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_purge_republicans
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_purge_republicans
+		completion_reward = {
+			SOV_increase_industrialization = yes
+			add_ideas = { rus_all_russian_economic_committee }
+		}
+
+	}
+	focus = {
+		id = rus_inner_circle
+		icon = GFX_focus_inner_circle
+		cost = 5.00
+		prerequisite = {
+			focus = rus_black_league_coup
+		}
+		available = {
+			NOT = { has_idea = RUS_political_uncertainty }
+			has_government = fascism
+		}
+		x = 4
+		y = 1
+		relative_position_id = rus_black_league_coup
+		completion_reward = {
+			RUS_aristocrats_decline = yes
+			custom_effect_tooltip = available_political_advisor 
+			show_ideas_tooltip = RUS_nikita_dragovich
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = RUS_vladimir_makarov
+		}
+
+	}
+	focus = {
+		id = rus_country_moblization
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5.00
+		prerequisite = {
+			focus = rus_inner_circle
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_inner_circle
+		completion_reward = {
+			add_ideas = { rus_country_moblization }
+		}
+
+	}
+	focus = {
+		id = rus_purify_the_state
+		icon = GFX_goal_generic_CAS
+		cost = 5.00
+		prerequisite = {
+			focus = rus_inner_circle
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_inner_circle
+		completion_reward = {
+			add_popularity = {
+				popularity = 0.15
+				ideology = fascism
+			}
+			add_stability = 0.05
+			add_political_power = 150
+		}
+
+	}
+	focus = {
+		id = rus_pravoslavie_samoderzhavie_narodnost
+		icon = GFX_focus_russian_trinity
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Cultivate_fanaticism
+		}
+		prerequisite = {
+			focus = rus_absorb_manchuria_russian_forces
+		}
+		available = {
+			has_government = neutrality
+			has_completed_focus = rus_fall_of_ussr
+			has_completed_focus = rus_military_state
+			NOT = { has_completed_focus = rus_secularization }
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_absorb_manchuria_russian_forces
+		completion_reward = {
+			RUS_Orthodox_enhance = yes
+		}
+
+	}
+	focus = {
+		id = rus_freeze_the_employment
+		icon = GFX_goal_generic_demand_territory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_all_russian_economic_committee
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_all_russian_economic_committee
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = rus_all_russian_economic_committee_1 } }
+				swap_ideas = {
+					remove_idea = rus_all_russian_economic_committee
+					add_idea = rus_all_russian_economic_committee_2
+				}
+			}
+			if = {
+				limit = { has_idea = rus_all_russian_economic_committee_1 }
+				swap_ideas = {
+					remove_idea = rus_all_russian_economic_committee_1
+					add_idea = rus_all_russian_economic_committee_3
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_spirit_of_kazan
+		icon = GFX_focus_Spirit_of_Kazan
+		cost = 5.00
+		prerequisite = {
+			focus = rus_siberian_headquarter
+		}
+		available = {
+			has_completed_focus = rus_fall_of_ussr
+			249 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		}
+		x = -2
+		y = 4
+		relative_position_id = rus_siberian_headquarter
+		completion_reward = {
+			add_ideas = { rus_spirit_of_kazan }  
+			unlock_decision_tooltip = RUS_Develop_Industry_In_Kazan
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = RUS_nikolai_chebotaryov
+			249 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 20
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = rus_partisan
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 5.00
+		prerequisite = {
+			focus = rus_great_patriotic_war
+		}
+		x = -2
+		y = 1
+		relative_position_id = rus_great_patriotic_war
+		completion_reward = {
+			add_ideas = { rus_partisan }
+		}
+
+	}
+	focus = {
+		id = rus_battle_on_the_ice
+		icon = GFX_focus_Battle_on_the_ice
+		cost = 5.00
+		prerequisite = {
+			focus = rus_great_patriotic_war
+		}
+		available = {
+			has_war_with = GER
+			surrender_progress > 0.14
+		}
+		x = 2
+		y = 1
+		relative_position_id = rus_great_patriotic_war
+		completion_reward = {
+      add_timed_idea = { idea = rus_battle_on_the_ice days = 365 }
+		}
+
+	}
+	focus = {
+		id = rus_organize_black_youth
+		icon = GFX_focus_Black_League
+		cost = 5.00
+		prerequisite = {
+			focus = rus_great_patriotic_war
+		}
+		available = {
+			OR = {
+				has_government = fascism
+				AND = {
+					any_enemy_country = {
+						is_major = yes
+					}
+					surrender_progress > 0.09
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_great_patriotic_war
+		completion_reward = {
+			add_ideas = { rus_organize_black_youth }
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.075
+			}
+		}
+
+	}
+
+	focus = {
+		id = rus_New_Russian_Army
+		icon = GFX_goal_RUS_army
+		cost = 5.00
+
+		x = 6
+		y = -2
+		relative_position_id = rus_a_new_better_russia
+
+		available = {
+			or = {
+				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = RUS_Japan_Research_Permit
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_New_Russian_Army
+				bonus = 1.00
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = rus_Summing_up_the_world_war
+		icon = GFX_goal_generic_defence
+		cost = 5.00
+		prerequisite = {
+			focus = rus_New_Russian_Army
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_New_Russian_Army
+		completion_reward = {
+
+			army_experience = 25
+
+			custom_effect_tooltip = GER_Combat_Engineer_tooltip
+
+			set_technology = { GER_Combat_Engineer_tech = 1 }
+
+			add_tech_bonus = {
+				name = rus_Summing_up_the_world_war
+				bonus = 1.0
+				uses = 1
+				category = engineers_tech	
+			}
+
+			add_tech_bonus = {
+				name = rus_Summing_up_the_world_war
+				bonus = 1.0
+				uses = 1
+				category = support_tech	
+			}
+
+			add_ideas = { RUS_Trench_warfare_idea }
+		}
+
+	}
+
+	focus = {
+		id = rus_Summary_of_the_Russian_Civil_War
+		icon = GFX_focus_prc_infiltration
+		cost = 5.00
+		prerequisite = {
+			focus = rus_New_Russian_Army
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_New_Russian_Army
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = rus_Summary_of_the_Russian_Civil_War
+				bonus = 1.0
+				uses = 1
+				category = recon_tech
+			}
+
+			add_tech_bonus = {
+				bonus = 1.0
+			  ahead_reduction = 1
+				uses = 1
+				name = rus_Summary_of_the_Russian_Civil_War
+				technology = armored_car2
+				technology = armored_car3
+			}
+
+			add_ideas = { RUS_Mobile_warfare_idea }
+		}
+
+	}
+
+	focus = {
+		id = rus_In_the_trenches
+		icon = GFX_goal_generic_army_artillery
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Summing_up_the_world_war
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_Summing_up_the_world_war
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = rus_In_the_trenches
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				name = rus_In_the_trenches
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}		
+			add_tech_bonus = {
+				name = rus_In_the_trenches
+				bonus = 1.0
+				uses = 1
+				category = cat_anti_tank
+			}	
+			add_tech_bonus = {
+				name = rus_In_the_trenches
+				bonus = 1.0
+				uses = 1
+				category = anti_air
+			}	
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Support_team
+		icon = GFX_goal_generic_army_motorized
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Summing_up_the_world_war
+		}
+
+		prerequisite = {
+			focus = rus_Summary_of_the_Russian_Civil_War
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = rus_Summing_up_the_world_war
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = rus_Support_team 
+				bonus = 1.0
+				uses = 2
+				category = support_tech	
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Armor_breakthrough
+		icon = GFX_goal_generic_army_tanks
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Summary_of_the_Russian_Civil_War
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_Summary_of_the_Russian_Civil_War
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = SOV_Ural_armor_production
+        bonus = 1.0
+        uses = 1
+				category = cat_heavy_armor
+			}
+
+			add_tech_bonus = {
+				name = SOV_Ural_armor_production
+        bonus = 1.0
+        uses = 1
+				category = cat_medium_armor
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Brusilov_legacy
+		icon = GFX_rus_brushilov_legacy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_In_the_trenches
+		}
+
+		prerequisite = {
+			focus = rus_Support_team
+		}
+
+		mutually_exclusive = {
+			focus = rus_Tukhachevski_legacy
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = rus_In_the_trenches
+		completion_reward = {
+
+      remove_ideas = RUS_Trench_warfare_idea
+      remove_ideas = RUS_Mobile_warfare_idea
+
+      add_tech_bonus = {
+        name = GER_Brandenburger
+        bonus = 1
+        uses = 2
+				category = mountaineers_tech
+        category = para_tech
+				category = marine_tech
+      }	
+
+      add_ideas = RUS_Brusilov_legacy_idea
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Tukhachevski_legacy
+		icon = GFX_rus_tukhachevsky_legacy
+		cost = 5.00
+		prerequisite = {
+			focus = rus_Support_team
+		}
+
+		prerequisite = {
+			focus = rus_Armor_breakthrough
+		}
+
+		mutually_exclusive = {
+			focus = rus_Brusilov_legacy
+		}
+
+		available = {
+			has_completed_focus = rus_fall_of_ussr
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = rus_Support_team
+		completion_reward = {
+
+      remove_ideas = RUS_Trench_warfare_idea
+      remove_ideas = RUS_Mobile_warfare_idea
+
+			add_tech_bonus = {
+				name = rus_Tukhachevski_legacy
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+      add_ideas = RUS_Tukhachevski_legacy_idea
+
+		}
+
+	}
+
+	focus = {
+		id = rus_Lessons_from_War
+		icon = GFX_focus_generic_combined_arms
+
+		prerequisite = { focus = rus_Brusilov_legacy focus = rus_Tukhachevski_legacy }
+
+		x = 1
+		y = 1
+		relative_position_id = rus_Brusilov_legacy
+		cost = 8
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+        NOT = { TAG = SOV }
+				is_major = yes
+			}
+      or = {
+        date > 1942.1.1
+        casualties > 500000
+        surrender_progress > 0.20
+      }
+		}
+
+    bypass = {
+
+    }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			army_experience = 100
+
+			add_tech_bonus = {
+				name = rus_Lessons_from_War
+				bonus = 1.0
+				uses = 4
+				category = land_doctrine
+			}
+
+			if = {
+				limit = {
+					has_idea = RUS_Brusilov_legacy_idea
+				}
+
+        swap_ideas = {
+          remove_idea = RUS_Brusilov_legacy_idea
+          add_idea = RUS_Brusilov_legacy_1_idea
+        }
+
+        add_tech_bonus = {
+          name = SOV_Lessons_from_War_Infantry_Tactics
+          bonus = 1.0
+          uses = 1
+          category = infantry_weapons
+        }
+
+        add_tech_bonus = {
+          name = SOV_Lessons_from_War_Infantry_Tactics
+          bonus = 1.0
+          uses = 1
+          category = artillery
+          category = cat_anti_tank
+          category = anti_air
+        }	
+			}
+
+			if = {
+				limit = {
+					has_idea = RUS_Tukhachevski_legacy_idea
+				}
+
+        swap_ideas = {
+          remove_idea = RUS_Tukhachevski_legacy_idea
+          add_idea = RUS_Tukhachevski_legacy_1_idea
+        }
+
+        add_tech_bonus = {
+          name = rus_Tukhachevski_legacy
+					bonus = 3.0
+					ahead_reduction = 1.0
+          uses = 1
+          category = armor
+        }
+			}
+
+
+		}
+	}
+
+	focus = {
+		id = rus_Formally_established_the_Air_Force
+		icon = GFX_goal_RUS_airforce
+
+		x = 0
+		y = 1
+		relative_position_id = rus_Lessons_from_War
+
+		cost = 5
+
+		available = {
+			or = {
+				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = RUS_Japan_Research_Permit
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			add_tech_bonus = {
+				name = SOV_transpolar_flights
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+	}
+
+	focus = {
+		id = RUS_indigenous_designs
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = rus_Formally_established_the_Air_Force }
+
+		mutually_exclusive = { focus = RUS_license_foreign_designs }
+
+		x = -1
+		y = 1
+		relative_position_id = rus_Formally_established_the_Air_Force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_ideas = HUN_indigenous_designs
+		}
+	}
+
+	focus = {
+		id = RUS_license_foreign_designs
+		icon = GFX_focus_generic_license_production
+		prerequisite = { focus = rus_Formally_established_the_Air_Force }
+
+		mutually_exclusive = { focus = RUS_indigenous_designs }
+		x = 1
+		y = 1
+		relative_position_id = rus_Formally_established_the_Air_Force
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		
+
+		completion_reward = {
+			add_ideas = HUN_license_foreign
+		}
+	}
+
+	focus = {
+		id = rus_Take_over_the_fighter_drawing
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = RUS_indigenous_designs }
+
+		x = -1
+		y = 1
+		relative_position_id = RUS_indigenous_designs
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_Take_over_the_fighter_drawing
+				bonus = 1.0
+				uses = 1
+				category = light_fighter		
+			}
+			add_tech_bonus = {
+				name = rus_Take_over_the_fighter_drawing
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber			
+			}
+		}
+	}
+
+	focus = {
+		id = rus_Expand_flight_school
+		icon = GFX_goal_DOM_Air_Fuel
+
+		prerequisite = { focus = RUS_indigenous_designs focus = RUS_license_foreign_designs }
+
+		x = 1
+		y = 1
+		relative_position_id = RUS_indigenous_designs
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+    available = {
+
+    }
+    bypass = {
+
+    }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+		  add_ideas = RUS_Expand_flight_school_idea
+
+		}
+	}
+
+	focus = {
+		id = RUS_fighter_competition
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = RUS_license_foreign_designs }
+		x = 1
+		y = 1
+		relative_position_id = RUS_license_foreign_designs
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_tech = fighter3
+				has_tech = heavy_fighter3
+			}
+			OR = {
+				GER = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_RUS = yes
+							is_available_heavy_fighter_RUS = yes
+						}
+					}
+				}
+				FRA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_RUS = yes
+							is_available_heavy_fighter_RUS = yes
+						}
+					}
+				}
+				ITA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_RUS = yes
+							is_available_heavy_fighter_RUS = yes
+						}
+					}
+				}
+				ENG = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_RUS = yes
+							is_available_heavy_fighter_RUS = yes
+						}
+					}
+				}
+				USA = {
+					custom_trigger_tooltip = {
+						tooltip = fighter_tt
+						OR = {
+							is_available_fighter_RUS = yes
+							is_available_heavy_fighter_RUS = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			country_event = russian.150 
+		}
+	}
+
+	focus = {
+		id = rus_Design_large_aircraft
+		icon = GFX_GER_strategic_bombing_doctrine
+
+		prerequisite = { focus = rus_Take_over_the_fighter_drawing }
+
+		prerequisite = { focus = rus_Expand_flight_school }
+		x = 1
+		y = 1
+		relative_position_id = rus_Take_over_the_fighter_drawing
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+    available = {
+
+    }
+    bypass = {
+
+    }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 3
+				uses = 1
+				category = tactical_bomber	
+				category = cat_strategic_bomber	
+			}
+
+		}
+	}
+
+	focus = {
+		id = RUS_bomber_competition
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = rus_Expand_flight_school }
+
+		prerequisite = { focus = RUS_fighter_competition }
+		x = 1
+		y = 1
+		relative_position_id = rus_Expand_flight_school
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				has_tech = CAS3
+				has_tech = tactical_bomber3
+			}
+			OR = {
+				GER = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_RUS = yes
+							is_available_tac_RUS = yes
+						}
+					}
+				}
+				FRA = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_RUS = yes
+							is_available_tac_RUS = yes
+						}
+					}
+				}
+				ITA = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_RUS = yes
+							is_available_tac_RUS = yes
+						}
+					}
+				}
+				ENG = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_RUS = yes
+							is_available_tac_RUS = yes
+						}
+					}
+				}
+				USA = {
+					custom_trigger_tooltip = {
+						tooltip = bomber_tt
+						OR = {
+							is_available_cas_RUS = yes
+							is_available_tac_RUS = yes
+						}
+					}
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		
+		
+		
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			country_event = russian.160
+		}
+	}
+
+	focus = {
+		id = RUS_Lessons_from_War_air_Tactics
+		icon = GFX_focus_usa_escort_fighters
+
+		prerequisite = { focus = rus_Design_large_aircraft focus = RUS_bomber_competition }
+
+		x = 1
+		y = 1
+		relative_position_id = rus_Design_large_aircraft
+		cost = 8
+		ai_will_do = {
+			factor = 1000
+		}
+
+		available = {
+			has_war = yes
+			any_enemy_country = {
+        NOT = { TAG = RUS }
+				is_major = yes
+			}
+      or = {
+        date > 1942.1.1
+        casualties > 500000
+        surrender_progress > 0.20
+      }
+		}
+
+    bypass = {
+
+    }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			air_experience = 100
+
+      if = {
+        limit = {
+          has_idea = SOV_Tactical_Air_Force_idea
+        }
+        swap_ideas = {
+          remove_idea = SOV_Tactical_Air_Force_idea
+          add_idea = SOV_Tactical_Air_Force_lesson_idea
+        }
+      }	
+
+      if = {
+        limit = {
+          has_idea = SOV_Tend_to_Strategic_Air_Force_idea
+        }
+        swap_ideas = {
+          remove_idea = SOV_Tend_to_Strategic_Air_Force_idea
+          add_idea = SOV_Tend_to_Strategic_Air_Force_lesson_idea
+        }
+      }
+
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter		
+			}
+
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1	
+				category = cat_heavy_fighter
+			}
+
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = cas_bomber			
+			}
+
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber	
+			}
+
+			add_tech_bonus = {
+				name = GER_Joint_air_to_ground_operations
+				bonus = 1.0
+				uses = 2
+				category = radar_tech
+			}
+
+			add_tech_bonus = {
+				name = GER_Joint_air_to_ground_operations
+				bonus = 1.0
+				uses = 4
+				category = air_doctrine
+			}	
+
+		}
+	}
+
+	focus = {
+		id = RUS_Toward_Japan
+		icon = GFX_focus_jap_spiritual_mobilization
+		cost = 5
+		available = {
+      is_subject_of = JAP
+		}
+
+		x = 1
+		y = 2
+		relative_position_id = rus_join_jap_faction
+		ai_will_do = {
+			factor = 2500
+		}
+
+    select_effect = {
+
+      if = {
+        limit = {
+          country_exists = JAP
+			    JAP = { is_subject = no }
+        }
+				country_event = russian.205
+      }
+
+    }
+
+		completion_reward = {
+
+			JAP = {
+				add_ai_strategy = {
+					type = befriend
+					id = "RUS"			
+					value = 200
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "RUS"			
+					value = 200
+				}	
+				add_ai_strategy = {
+					type = support
+					id = "RUS"
+					value = 20
+				}
+			}
+
+			ai_strategy = {
+				type = befriend
+				id = "JAP"			
+				value = 200
+			}
+			ai_strategy = {
+				type = alliance
+				id = "JAP"			
+				value = 200
+			}
+
+		  complete_national_focus = rus_no_compromise_on_united_russia
+
+			remove_ideas = RUS_Death_of_red_bandits
+
+			remove_ideas = RUS_Death_of_red_bandits_2
+
+			if = {
+				limit = { has_idea = RUS_entente_observe_committee   }
+				remove_ideas = RUS_entente_observe_committee 
+			}
+
+			if = {
+				limit = { has_idea = RUS_political_uncertainty }
+				remove_ideas = { RUS_political_uncertainty }
+			}
+
+			if = {
+				limit = { 
+				  has_country_flag = RUS_empire_continues_flag 
+				}
+				if = {
+					limit = { 
+					  NOT = { has_government = neutrality }
+					}
+					set_politics = {	
+						ruling_party = neutrality
+						last_election = "1922.12.9"
+						election_frequency = 48
+						elections_allowed = no
+					}
+
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.50
+					}
+
+				}
+				if = {
+					limit = { 
+					  NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } } 
+					}
+					create_country_leader = {
+						name = "Anastasia I"
+						desc = "POLITICS_ANASTASIA_DESC"
+						picture = "Portrait_Anastasia.dds"
+						ideology = stratocracy
+						traits = { Shvibzik }
+					}
+          drop_cosmetic_tag = yes
+
+					set_party_name = {
+						ideology = neutrality
+						long_name = RUS_neutrality_party_long
+						name = RUS_neutrality_party
+					}
+
+				}
+
+				add_ideas = { JAP_Appointment_of_delegation_1_idea }
+
+				if = {
+					limit = { 
+					  has_idea = RUS_rebirth_of_the_tsar_0
+					}
+					remove_ideas = { RUS_rebirth_of_the_tsar_0 }
+				}
+				if = {
+					limit = { 
+					  NOT = { has_idea = RUS_rebirth_of_the_tsar_1 } 
+					}
+					add_ideas = { RUS_rebirth_of_the_tsar_1 }
+				}
+			}
+
+			if = {
+				limit = { 
+				  has_country_flag = RUS_Ambassador_rule_flag 
+				}
+				if = {
+					limit = { 
+					  NOT = { has_government = neutrality }
+					}
+					set_politics = {	
+						ruling_party = neutrality
+						last_election = "1922.12.9"
+						election_frequency = 48
+						elections_allowed = no
+					}
+
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.50
+					}
+
+				}
+
+				create_country_leader = {
+					name = "Makiri Sigisrenko"
+					desc = "POLITICS_MATOU_SHINJI_DESC"
+					picture = "Portrait_Matou_Shinji.dds"
+					ideology = conservatism
+					traits = { ambitious_activator }
+				}
+
+				create_country_leader = {
+					name = "Makiri Sigisrenko"
+					desc = "POLITICS_MATOU_SHINJI_DESC"
+					picture = "Portrait_Matou_Shinji.dds"
+					ideology = stratocracy
+					traits = { ambitious_activator }
+				}
+
+				create_country_leader = {
+					name = "Makiri Sigisrenko"
+					desc = "POLITICS_MATOU_SHINJI_DESC"
+					picture = "Portrait_Matou_Shinji.dds"
+					ideology = fascism_ideology
+					traits = { ambitious_activator }
+				}
+
+				if = {
+					limit = { 
+						or = { 
+							NOT = { has_country_flag = RUS_Anti_Tsarina_Coup_flag } 
+							has_completed_focus = rus_black_league_coup
+						}
+					}
+					hidden_effect = {
+						set_cosmetic_tag = RUS_JUNTA
+					}
+				}
+
+				set_party_name = {
+					ideology = democratic
+					long_name = RUS_JAP_puppet_democratic_party_long
+					name = RUS_JAP_puppet_democratic_party
+				}
+
+				set_party_name = {
+					ideology = neutrality
+					long_name = RUS_JAP_puppet_neutrality_party_long
+					name = RUS_JAP_puppet_neutrality_party
+				}
+
+				set_party_name = {
+					ideology = fascism
+					long_name = RUS_JAP_puppet_fascism_party_long
+					name = RUS_JAP_puppet_fascism_party
+				}
+
+				add_ideas = { JAP_Appointment_of_delegation_2_idea }
+
+        set_country_flag = RUS_Some_generals_left_flag
+
+			  remove_unit_leader = 461
+			  remove_unit_leader = 8700
+			  remove_unit_leader = 8810
+			  remove_unit_leader = 8811
+			  remove_unit_leader = 8812
+			  remove_unit_leader = 8813
+			  remove_unit_leader = 8814
+			  remove_unit_leader = 421
+			  remove_unit_leader = 8802
+			  remove_unit_leader = 8804
+
+				add_political_power = -200
+				add_stability = -0.20
+				add_war_support = -0.20
+
+			}
+
+			if = {
+				limit = { 
+				  has_country_flag = RUS_Advisory_rule_flag 
+				}
+				if = {
+					limit = { 
+					  NOT = { has_government = neutrality }
+					}
+					set_politics = {	
+						ruling_party = neutrality
+						last_election = "1922.12.9"
+						election_frequency = 48
+						elections_allowed = no
+					}
+
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.50
+					}
+
+				}
+
+				create_country_leader = {
+					name = "Tatenashi Sarashiki"
+					desc = "POLITICS_SARASHIKI_DESC"
+					picture = "Portrait_Tatenashi_Sarashiki.dds"
+					ideology = conservatism
+					traits = { Head_of_Advisor_to_Japan }
+				}
+
+				create_country_leader = {
+					name = "Tatenashi Sarashiki"
+					desc = "POLITICS_SARASHIKI_DESC"
+					picture = "Portrait_Tatenashi_Sarashiki.dds"
+					ideology = stratocracy
+					traits = { Head_of_Advisor_to_Japan }
+				}
+
+				create_country_leader = {
+					name = "Tatenashi Sarashiki"
+					desc = "POLITICS_SARASHIKI_DESC"
+					picture = "Portrait_Tatenashi_Sarashiki.dds"
+					ideology = fascism_ideology
+					traits = { Head_of_Advisor_to_Japan }
+				}
+
+				if = {
+					limit = { 
+						or = { 
+							NOT = { has_country_flag = RUS_Anti_Tsarina_Coup_flag } 
+							has_completed_focus = rus_black_league_coup
+						}
+					}
+					hidden_effect = {
+						set_cosmetic_tag = RUS_JUNTA
+					}
+				}
+
+				set_party_name = {
+					ideology = democratic
+					long_name = RUS_JAP_puppet_democratic_party_long
+					name = RUS_JAP_puppet_democratic_party
+				}
+
+				set_party_name = {
+					ideology = neutrality
+					long_name = RUS_JAP_puppet_neutrality_party_long
+					name = RUS_JAP_puppet_neutrality_party
+				}
+
+				set_party_name = {
+					ideology = fascism
+					long_name = RUS_JAP_puppet_fascism_party_long
+					name = RUS_JAP_puppet_fascism_party
+				}
+
+				add_ideas = { JAP_Appointment_of_delegation_2_idea }
+
+        set_country_flag = RUS_Some_generals_left_flag
+
+			  remove_unit_leader = 461
+			  remove_unit_leader = 8700
+			  remove_unit_leader = 8810
+			  remove_unit_leader = 8811
+			  remove_unit_leader = 8812
+			  remove_unit_leader = 8813
+			  remove_unit_leader = 8814
+			  remove_unit_leader = 421
+			  remove_unit_leader = 8802
+			  remove_unit_leader = 8804
+
+				add_political_power = -100
+				add_stability = -0.1
+				add_war_support = -0.1
+
+			}
+
+
+			if = {
+				limit = { 
+				  has_country_flag = RUS_who_is_that_flag 
+				}
+				if = {
+					limit = { 
+					  NOT = { has_government = neutrality }
+					}
+					set_politics = {	
+						ruling_party = neutrality
+						last_election = "1922.12.9"
+						election_frequency = 48
+						elections_allowed = no
+					}
+
+					add_popularity = {
+						ideology = neutrality
+						popularity = 0.50
+					}
+
+				}
+
+				create_country_leader = {
+					name = "Victoria Romanovna"
+					desc = "POLITICS_JIANZI_DESC"
+					picture = "Portrait_RUS_Victoria_Romanovna.png"
+					ideology = conservatism
+					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+				}
+
+				create_country_leader = {
+					name = "Victoria Romanovna"
+					desc = "POLITICS_JIANZI_DESC"
+					picture = "Portrait_RUS_Victoria_Romanovna.png"
+					ideology = stratocracy
+					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+				}
+
+				create_country_leader = {
+					name = "Victoria Romanovna"
+					desc = "POLITICS_JIANZI_DESC"
+					picture = "Portrait_RUS_Victoria_Romanovna.png"
+					ideology = fascism_ideology
+					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+				}
+
+				drop_cosmetic_tag = yes
+
+				set_party_name = {
+					ideology = neutrality
+					long_name = RUS_neutrality_party_long
+					name = RUS_neutrality_party
+				}
+
+				add_ideas = { JAP_Appointment_of_delegation_1_idea }
+
+        set_country_flag = RUS_Some_generals_left_flag
+
+			  remove_unit_leader = 461
+			  remove_unit_leader = 8700
+			  remove_unit_leader = 8810
+			  remove_unit_leader = 8811
+			  remove_unit_leader = 8812
+			  remove_unit_leader = 8813
+			  remove_unit_leader = 8814
+			  remove_unit_leader = 421
+			  remove_unit_leader = 8804
+
+				add_political_power = -100
+				add_stability = -0.1
+				add_war_support = -0.1
+
+			}
+
+
+		}
+
+	}
+
+	focus = {
+		id = RUS_New_command_level 
+		icon = GFX_goal_japanese_officer
+		cost = 5
+		available = {
+      is_subject_of = JAP
+		}
+		prerequisite = {
+			focus = RUS_Toward_Japan
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = RUS_Toward_Japan
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+
+			if = {
+				limit = { has_country_flag = RUS_Advisory_rule_flag }
+				add_tech_bonus = {
+					name = RUS_New_command_level 
+					bonus = 1.0
+					uses = 1
+					category = land_doctrine
+				}
+				JAP = {
+					add_tech_bonus = {
+						name = RUS_New_command_level 
+						bonus = 0.5
+						uses = 1
+						category = land_doctrine
+					}
+				}
+			}
+
+			if = {
+				limit = { has_idea = rus_japanese_advisory_group }
+				swap_ideas = {
+					remove_idea = rus_japanese_advisory_group
+					add_idea = rus_japanese_advisory_group_3
+				}
+			}
+			if = {
+				limit = { has_idea = rus_japanese_advisory_group_2 }
+				swap_ideas = {
+					remove_idea = rus_japanese_advisory_group_2
+					add_idea = rus_japanese_advisory_group_3
+				}
+			}
+
+			JAP = {
+				add_ideas = rus_japanese_advisory_group_for_jap
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = RUS_Japan_economic_development
+		icon = GFX_goal_JAP_yen
+		cost = 15
+		available = {
+      is_subject_of = JAP
+		}
+		prerequisite = {
+			focus = RUS_Toward_Japan
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = RUS_Toward_Japan
+		ai_will_do = {
+			factor = 1000
+		}
+
+    select_effect = {
+
+      if = {
+        limit = {
+          country_exists = JAP
+			    JAP = { is_subject = no }
+        }
+        JAP = {
+				  country_event = russian.209
+        }
+      }
+
+    }
+
+		completion_reward = {
+
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+			SOV_increase_industrialization = yes
+
+      random_owned_controlled_state = {
+        limit = { 
+          free_building_slots = {
+            building = arms_factory
+            size > 2
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = arms_factory
+          level = 3
+          instant_build = yes
+        }							
+
+      }
+
+      random_owned_controlled_state = {
+        limit = { 
+          free_building_slots = {
+            building = arms_factory
+            size > 2
+            include_locked = yes
+          }
+        }
+        add_extra_state_shared_building_slots = 3
+        add_building_construction = {
+          type = arms_factory
+          level = 3
+          instant_build = yes
+        }							
+
+      }
+
+			if = {
+				limit = { has_country_flag = RUS_Japanese_investment_flag }
+
+
+        if = {
+          limit = {
+            has_idea = RUS_sour_loser
+            has_idea = RUS_Japanese_economic_control_3_idea
+          }
+          swap_ideas = {
+            remove_idea = RUS_Japanese_economic_control_3_idea
+            add_idea = RUS_Japanese_economic_control_4_idea
+          }
+        }
+        if = {
+          limit = {
+            has_idea = RUS_sour_loser
+            has_idea = RUS_Japanese_economic_control_2_idea
+          }
+          swap_ideas = {
+            remove_idea = RUS_Japanese_economic_control_2_idea
+            add_idea = RUS_Japanese_economic_control_3_idea
+          }
+        }
+        if = {
+          limit = {
+            has_idea = RUS_sour_loser
+            has_idea = RUS_Japanese_economic_control_1_idea
+          }
+          swap_ideas = {
+            remove_idea = RUS_Japanese_economic_control_1_idea
+            add_idea = RUS_Japanese_economic_control_2_idea
+          }
+        }
+
+				add_tech_bonus = {
+					name = RUS_Japan_economic_development
+					bonus = 1.0
+					uses = 2
+					category = industry
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}							
+
+				}
+
+				random_owned_controlled_state = {
+					limit = { 
+						free_building_slots = {
+							building = industrial_complex
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 3
+						instant_build = yes
+					}							
+
+				}
+			}
+
+
+		}
+
+	}
+
+	focus = {
+		id = RUS_Japan_Research_Permit
+		icon = GFX_focus_research
+		cost = 10
+		available = {
+      is_subject_of = JAP
+		}
+		prerequisite = {
+			focus = RUS_New_command_level
+		}
+
+		prerequisite = {
+			focus = RUS_Japan_economic_development
+		}
+
+		x = 1
+		y = 1
+		relative_position_id = RUS_New_command_level
+		ai_will_do = {
+			factor = 1000
+		}
+		completion_reward = {
+
+			JAP = {
+				add_to_tech_sharing_group = RUS_JAP_technological_exchange
+			}
+			RUS = {
+				add_to_tech_sharing_group = RUS_JAP_technological_exchange
+			}
+
+			if = {
+				limit = { amount_research_slots < 6 }
+				add_research_slot = 1
+			}
+		}
+
+	}
+
+}

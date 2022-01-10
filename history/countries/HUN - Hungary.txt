@@ -1,0 +1,274 @@
+﻿capital = 43
+
+oob = "HUN_1936"
+
+set_research_slots = 3
+set_stability = 0.5
+set_war_support = 0.5
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+  basic_light_tank = 1
+  interwar_artillery = 1
+  interwar_antitank = 1
+  interwar_antiair = 1
+	early_fighter = 1
+  early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+
+	mobile_warfare = 1
+
+  armored_car1 = 1
+
+}
+
+1939.1.1 = {
+	remove_ideas = HUN_treaty_of_triannon
+
+	add_political_power = 1198
+
+	if = {
+		limit = {
+			has_dlc = "Death or Dishonor"
+		}
+		complete_national_focus = HUN_economic_intervention
+		complete_national_focus = HUN_secret_rearmament
+		complete_national_focus = HUN_war_games
+		complete_national_focus = HUN_theoretical_air_efforts
+		complete_national_focus = HUN_trade_deal_with_germany
+		complete_national_focus = HUN_joint_aluminum_mining_company
+		complete_national_focus = HUN_reaffirm_territorial_claims
+		complete_national_focus = HUN_announce_the_gyor_program
+		complete_national_focus = HUN_civilian_industry
+		complete_national_focus = HUN_reintegrate_the_railroads
+		complete_national_focus = HUN_invite_foreign_investors
+		complete_national_focus = HUN_bled_agreement
+		complete_national_focus = HUN_army_maneuvers
+		complete_national_focus = HUN_establish_the_air_force
+		complete_national_focus = HUN_demand_southern_slovakia
+		complete_national_focus = HUN_mobile_focus
+		complete_national_focus = HUN_license_foreign_designs
+		
+		#Handle this manually
+		unlock_national_focus = HUN_renounce_the_treaty_of_trianon
+		add_ideas = {
+			limited_conscription
+			HUN_treaty_of_triannon_3
+		}
+
+		unlock_national_focus = HUN_strengthen_fascists #To avoid leader ID clash
+		add_ideas = HUN_strengthen_fascists
+
+		else = {
+			#generic focuses
+			complete_national_focus = army_effort
+			complete_national_focus = equipment_effort
+			complete_national_focus = motorization_effort
+			complete_national_focus = aviation_effort
+			complete_national_focus = construction_effort_2
+			complete_national_focus = production_effort_2
+			complete_national_focus = infrastructure_effort
+			complete_national_focus = industrial_effort
+			complete_national_focus = construction_effort
+			complete_national_focus = production_effort		
+		}
+	}
+	
+	
+	oob = "HUN_1939"
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		gwtank = 1
+		basic_light_tank = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		tech_engineers = 1
+		tech_mountaineers = 1
+		motorised_infantry = 1
+		infantry_weapons2 = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		fuel_refining = 1
+	}
+}
+
+ENG = {
+  add_opinion_modifier = {
+    target = HUN
+    modifier = embargo
+  }
+  add_opinion_modifier = {
+    target = HUN
+    modifier = sanctions_relations
+  }
+}
+
+add_opinion_modifier = {
+  target = ENG
+  modifier = embargo
+}
+add_opinion_modifier = {
+  target = ENG
+  modifier = sanctions_relations
+}
+
+FRA = {
+  add_opinion_modifier = {
+    target = HUN
+    modifier = embargo
+  }
+  add_opinion_modifier = {
+    target = HUN
+    modifier = sanctions_relations
+  }
+}
+
+add_opinion_modifier = {
+  target = FRA
+  modifier = embargo
+}
+add_opinion_modifier = {
+  target = FRA
+  modifier = sanctions_relations
+}
+
+USA = {
+  add_opinion_modifier = {
+    target = HUN
+    modifier = embargo
+  }
+  add_opinion_modifier = {
+    target = HUN
+    modifier = sanctions_relations
+  }
+}
+
+add_opinion_modifier = {
+  target = USA
+  modifier = embargo
+}
+add_opinion_modifier = {
+  target = USA
+  modifier = sanctions_relations
+}
+
+set_country_flag = HUN_GREATER_flag
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 35
+	neutrality = 40
+  communism = 5
+}
+
+puppet = SLO
+
+add_ideas = {
+  Powerful_influence_idea 
+  HUN_disjointed_government_idea
+  HUN_influence_of_the_government_idea_4
+  HUN_influence_of_the_right_wing_group_idea_3
+  HUN_influence_of_the_left_wing_group_idea_1
+  HUN_Ethnic_resistance_idea
+  HUN_1936_economy_decline_idea
+  HUN_GER_economic_control_idea
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+country_event = { id = more_hun.1 days = 7 }
+
+country_event = { id = more_hun.2 days = 14 }
+
+country_event = { id = more_hun.3 days = 21 }
+
+country_event = { id = more_hun.4 days = 28 }
+
+country_event = { id = more_hun.5 days = 35 }
+
+country_event = { id = more_hun.8 days = 74 }
+
+country_event = { id = more_hun.14 days = 58 }
+
+country_event = { id = more_hun.18 days = 106 }
+
+recruit_character = HUN_lajos_veress
+recruit_character = HUN_ferenc_feketehalmyczeydner
+recruit_character = HUN_Bela_Kun
+recruit_character = HUN_vilmos_nagy
+recruit_character = HUN_elizabeth_báthory
+recruit_character = HUN_attila
+recruit_character = HUN_Árpád_szakasits
+recruit_character = HUN_géza_lakatos
+recruit_character = HUN_iván_hindy
+recruit_character = HUN_károly_beregfy
+recruit_character = HUN_döme_sztójay
+recruit_character = HUN_jenő_rátz
+recruit_character = HUN_alajos_béldy
+recruit_character = HUN_béla_miklós
+recruit_character = HUN_dezsö_lászló
+recruit_character = HUN_ferenc_farkas
+recruit_character = HUN_gusztáv_jány
+recruit_character = HUN_zoltán_szügyi
+recruit_character = HUN_miklós_horthy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

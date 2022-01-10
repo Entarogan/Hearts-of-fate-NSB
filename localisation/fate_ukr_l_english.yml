@@ -1,0 +1,215 @@
+﻿l_english:
+ 
+ UKR_SOV_subject_communism:0 "Ukrainian Soviet Socialist Republic"
+ UKR_SOV_subject_communism_DEF:0 "Ukrainian Soviet Socialist Republic"
+
+ UKR_democratic_rebel_party:0 "Ukrainian Social Democratic Labour Party"
+ UKR_democratic_rebel_party_long:0 "Ukrainian Social Democratic Labor Party"
+
+ UKR_neutrality_rebel_party:0 "Ruling Cabinet"
+ UKR_neutrality_rebel_party_long:0 "Ruling Cabinet"
+
+ UKR_fascism_rebel_party:0 "Ukrainian Nationalist Organization"
+ UKR_fascism_rebel_party_long:0 "Ukrainian Nationalist Organization"
+
+ UKR_communism_rebel_party:0 "Brezhnev bandits"
+ ukr_communism_rebel_party_long:0 "Brezhnev bandits"
+ 
+ ukr.1.t:0 "Khrushchev's trip to Moscow"
+ ukr.1.d:0 "The General Secretary plans to hold a meeting in a month's time to discuss the "Second Civil War", and there is no doubt that Ukraine will have to bear part of the supply of Soviet troops going to the East, even if it cannot afford it now. \n\n Hope Khrushchev will stick to his guns and try to get the General Secretary to relax the amount of food levies, in the meantime Ukraine will be under the acting jurisdiction of Dnepr Secretary Brezhnev."
+ ukr.1.a:0 ""Good luck, Nikita!""
+ 
+ UKR_Khrushchev_goes_to_Moscow:0 "Khrushchev is on a business trip" 
+ UKR_Khrushchev_goes_to_Moscow_desc:0 "Khrushchev went to Moscow..." 
+ 
+ UKR_Khrushchev_goes_to_Moscow_tt:0 "§Y Brezhnev will act in Khrushchev's place §! \n" 
+ 
+ UKR_Great_stick:0 "Great stick"
+ UKR_Great_stick_desc:0 "Khrushchev is trying to shape a Soviet that is close to the Ukrainians, but we will still use force if necessary, and now to clean up the "three forces" specifically."
+ 
+ UKR_Legacy_of_the_Great_Famine:0 "§YSituation is further stabilized§! \n" 
+ 
+ UKR_Legacy_of_the_Great_Famine_idea_1:0 "The legacy of the Great Famine"
+ UKR_Legacy_of_the_Great_Famine_idea_1_desc:0 "§R The Five-Year Plan destroyed the prestige of Dzhugashvili and even more so the foundations of Ukrainian communism, and the people began to miss the "good old days" in the pangs of hunger that had The gangs that had disappeared from the scene resurfaced and had to be stopped! §The gangs that had disappeared must be stopped! \Â "n"
+ UKR_Legacy_of_the_Great_Famine_idea_2:0 "The Legacy of the Great Famine"
+ UKR_Legacy_of_the_Great_Famine_idea_2_desc:0 "§R Five-Year Plan destroyed the prestige of Dzhugashvili more than the foundations of Ukrainian communism, the people began to miss the "good old days" in the pangs of hunger, and the originally The gangs that had disappeared from the scene resurfaced and had to be stopped! §The gangs that had disappeared must be stopped! \Â "n"
+ UKR_Legacy_of_the_Great_Famine_idea_3:0 "The Legacy of the Great Famine"
+ UKR_Legacy_of_the_Great_Famine_idea_3_desc:0 "§R Five-Year Plan destroyed the prestige of Dzhugashvili more than the foundations of Ukrainian communism, the people began to miss the "good old days" in the pangs of hunger, and the originally The gangs that had disappeared from the scene resurfaced and had to be stopped! §The gangs that had disappeared must be stopped! \Â "n"
+ UKR_Legacy_of_the_Great_Famine_idea_4:0 "The Legacy of the Great Famine"
+ UKR_Legacy_of_the_Great_Famine_idea_4_desc:0 "§R Five-Year Plan destroyed the prestige of Dzhugashvili more than the foundations of Ukrainian communism, the people began to miss the "good old days" in the pangs of hunger, and the originally The gangs that had disappeared from the scene resurfaced and had to be stopped! §The gangs that had disappeared must be stopped! \Â "n"
+ UKR_Legacy_of_the_Great_Famine_idea_5:0 "The Legacy of the Great Famine"
+ UKR_Legacy_of_the_Great_Famine_idea_5_desc:0 "§R Five-Year Plan destroyed the prestige of Dzhugashvili more than the foundations of Ukrainian communism, the people began to miss the "good old days" in the pangs of hunger, the originally The gangs that had disappeared from the scene resurfaced and had to be stopped! §The gangs that had disappeared must be stopped! \Â"
+ 
+ UKR_Garrison_West_Ukraine:0 "Garrison West Ukraine"
+ UKR_Garrison_West_Ukraine_desc:0 "West Ukraine has been fiercely resisting the Soviet regime, but of course they are not simply anti-communist, the Poles are equally disturbed by it. But the Polish bastards' solution is to acquiesce to the notorious terrorist group OUN (Organization of Ukrainian Nationalists) coming across the border to pick on us... We'd better tighten up the Polish-Ukrainian border a bit more and not spare a single infiltrator!"
+ 
+ UKR_Suppresses_Bandits:0 "Eliminate bandit gangs"
+ UKR_Suppresses_Bandits_desc:0 "The separatist leader Petliura has been inciting Ukrainians against the Soviets outside the country for a long time, perhaps the best solution to this problem is to send an agent to kill him, but before that we have to kill a few of the incited fools to make an example of them, and for that we need more men and weapons."
+ 
+ UKR_Landlord_re_education:0 "Landlord re-education" 
+ UKR_Landlord_re_education_desc:0 "It is rumored that Skoropatsky, the representative of the big landowners of Ukraine, has also recently come together with Petliura, and this guy is inciting them through his residual influence in the Ukrainian Cossack community, naturally we will not let the Cossacks fall to his side again, and the reformation of this group should be taken seriously." 
+ 
+ UKR_Labor_reform_camp:0 "Labor reform camp" 
+ UKR_Labor_reform_camp_desc:0 "To deal with the members of terrorist organizations represented by fanatical Western Ukrainian nationalist lunatics, it is necessary to try to "reform" them in addition to physical elimination, they will understand their crimes in endless labor."
+
+ UKR_Loyalty_test:0 "Loyalty test" 
+ UKR_Loyalty_test_desc:0 "Some groups of people who have no interest in the Soviets should be subjected to regular "loyalty tests", the adults may be disobedient, but what about the children?" 
+ 
+ UKR_Loyalty_test_idea:0 "loyalty test" 
+ 
+ UKR_carrot:0 "carrot"
+ UKR_carrot_desc:0 "Of course we can't keep smashing iron fists, we should break a couple of carrots now and then."
+ 
+ UKR_Resume_agricultural_production:0 "Resume agricultural production"
+ UKR_Resume_agricultural_production_desc:0 "Hey, no matter what, the Great Famine must be brought to a perfect end, and temporarily giving farmers more autonomy is the most effective way to do so."
+ 
+ UKR_Developed_agriculture_idea:0 "Developed agriculture"
+ UKR_Developed_agriculture_idea_desc:0 "Ukraine has a well-developed land and is known as the "breadbasket of Europe", but the local industry is another story." 
+
+ UKR_Resume_agricultural_production_idea:0 "Resume agricultural production"
+ 
+ UKR_Prepare_for_the_plan:0 "Prepare for the "Plan""
+ UKR_Prepare_for_the_plan_desc:0 "Khrushchev once told Brezhnev that Moscow intended to experiment with a "grand plan" in Ukraine, which, if successful, would make our planned economic system 200% more super-efficient. However, he did not know the details, and Brezhnev could only start building power stations according to the schedule for the future."
+ 
+ UKR_caviar:0 "Caviar"
+ UKR_caviar_desc:0 "Time for a break, how about some vodka with caviar bread?"
+ 
+ UKR_caviar_idea:0 "Caviar"
+ 
+ UKR_Consolidate_the_Dnieper_Gang:0 "Consolidate the Dnieper Gang"
+ UKR_Consolidate_the_Dnieper_Gang_desc:0 "Brezhnev and his men have amassed a great deal of wealth during their rule of Ukraine, which I believe has helped to unite the Dnieper Gang."
+ 
+ UKR_Return_to_the_alliance:0 "Return to the alliance"
+ UKR_Return_to_the_alliance_desc:0 "The situation in Ukraine has been initially stabilized and it is time to bring this land back under central control."
+ 
+ ukr.2.t:0 "Run!"
+ ukr.2.d:0 ""What's happening?! It's the middle of the night!" \n\n "Run! Leonid! They're coming back!" \n\n "You're out of your mind! The white bandits are at least far away from us!" Brezhnev rubbed his drowsy eyelids rather unconcerned until the sound of gunfire outside the window drifted into the room."
+ ukr.2.a:0 ""Wait! They're back?!""
+ 
+ UKR_Work_for_ukraine:0 "Work for Ukraine"
+ UKR_Work_for_ukraine_desc:0 "Everyone who can work should do their best for the independence of Ukraine."
+ 
+ UKR_Work_for_ukraine_idea:0 "Work for Ukraine"
+ 
+ UKR_Expansion_of_the_underground_factory:0 "Expansion of the underground factory"
+ UKR_Expansion_of_the_underground_factory_desc:0 "In the chaos of wartime some important facilities are easily taken by the enemy and should be built in concealment before camouflaging them as much as possible."
+ 
+ UKR_Open_the_granary:0 "Open the granary"
+ UKR_Open_the_granary_desc:0 "There is a fundamental difference between us and the Red bandits! Open the granary and release the grain! Let everyone understand this!"
+ 
+ UKR_Emergency_munitions_production:0 "Emergency military production"
+ UKR_Emergency_munitions_production_desc:0 "Weapons are the cornerstone of independence! More weapons!"
+
+ UKR_Emergency_munitions_production_idea:0 "Emergency military production"
+
+ UKR_War_tax:0 "War tax"
+ UKR_War_tax_desc:0 "Extraordinary treatment in extraordinary times, just like the wartime communism of the Red Bandits, we the people cannot demand any living treatment at this moment."
+ 
+ UKR_War_tax_idea:0 "War tax"
+ 
+ UKR_Rescue_the_industrial_zone:0 "Rescue the industrial zone"
+ UKR_Rescue_the_industrial_zone_desc:0 "Many Soviet-built industrial zones have been severely damaged during the war, organize a quick rescue!"
+ 
+ UKR_Rescue_the_industrial_zone_idea:0 "Industrial rescue and repair"
+ 
+ UKR_Forced_labor:0 "Forced labor"
+ UKR_Forced_labor_desc:0 "Every Ukrainian should maximize his maximum value, can't kill the enemy on the battlefield then work in the factory, all of them!"
+
+ UKR_Forced_labor_idea:0 "Forced labor"
+ 
+ UKR_Fight_for_Ukraine:0 "Fight for Ukraine"
+ UKR_Fight_for_Ukraine_desc:0 "Anyone who can go to war and kill the enemy should do their best for the independence of Ukraine."
+ 
+ UKR_Call_for_civilians:0 "Calling for civilians"
+ UKR_Call_for_civilians_desc:0 "Urban militias will make up for the huge numerical disadvantage of our army."
+ 
+ UKR_Call_for_civilians_tt:0 "§R Several militia formations will emerge in the urban areas of Western Ukraine under our control §! \n"
+ 
+ UKR_Extremist_forces:0 "Extremist forces"
+ UKR_Extremist_forces_desc:0 "The nationalists with high morale are able to carry the burden of the battlefield."
+ 
+ UKR_Extremist_forces_tt:0 "§R West Ukrainian nationalist forces will come from the PoC to support §! \n"
+ 
+ UKR_Assemble_the_Cossacks:0 "Assemble the Cossacks"
+ UKR_Assemble_the_Cossacks_desc:0 "The Cossack community of Ukraine will fight for independence and freedom."
+ 
+ UKR_Assemble_the_Cossacks_tt:0 "Several Cossack cavalry formations will appear near §R Cherkasy §! \n"
+ 
+ UKR_Unite_anarchists:0 "Unite the anarchists"
+ UKR_Unite_anarchists_desc:0 "Uh... Anyway they'll come in handy."
+ 
+ UKR_Unite_anarchists_tt:0 "§R Machno's old warrior will show up near his old home §! \n"
+ 
+ UKR_Request_German_assistance:0 "Request for German assistance"
+ UKR_Request_German_assistance_desc:0 "The Germans have taken in the vast majority of Ukrainian exiles, and it was their support that allowed the restoration plan to be carried out, so they should continue to support it now, right?"
+ 
+ UKR_GER_cooperation_op:0 "German-Ukrainian friendship"
+ 
+ UKR_Loot_the_arsenal:0 "Ransacking the armory"
+ UKR_Loot_the_arsenal_desc:0 "A lot of Bolshevik armories were left intact, which should top off the immediate need for the time being."
+ 
+ UKR_Destruction_behind_enemy_lines:0 "Destruction behind enemy lines"
+ UKR_Destruction_behind_enemy_lines_desc:0 "Cossack riders and anarcho-"terrorists" will make stiff-headed Bolsheviks comfortable."
+ 
+ UKR_Destruction_behind_enemy_lines_idea:0 "Destruction behind enemy lines"
+ 
+ UKR_Final_blow:0 "Final blow"
+ UKR_Final_blow_desc:0 "For Ukraine!"
+ 
+ UKR_Final_blow_idea:0 "Final blow"
+ 
+ ukr.3.t:0 "War has finished"
+ ukr.3.d:0 "Is Ukraine free ...now?"
+ ukr.3.a:0 "At least for now." 
+ 
+ UKR_Promote_industrialization_idea:0 "Promoting industrialization"
+ UKR_Promote_industrialization_idea_desc:0 "With proper planning, a world-leading agricultural base can certainly breed an industrial power."
+
+ UKR_German_consultant_idea:0 "German military advisor"
+ UKR_German_consultant_idea_desc:0 "German military advisors are coordinating the scattered Ukrainian army."
+
+ UKR_independent_Army_idea:0 "Ukrainian Independent Army"
+ UKR_independent_Army_idea_desc:0 "The Ukrainian Independent Armed Forces have a wide range of factions, united by a common desire to escape Bolshevik rule."
+
+ UKR_independent_Army_1_idea:0 "Ukrainian Independent Army"
+ UKR_independent_Army_1_idea_desc:0 "The Petliura faction took control of the army."
+
+ UKR_Hetman_Army_idea:0 "Hetman's army"
+ UKR_Hetman_Army_idea_desc:0 "The United Hetman Association is in control of the Ukrainian army."
+
+ UKR_National_Army_idea:0 "Ukrainian National Army"
+ UKR_National_Army_idea_desc:0 "Ukrainian nationalist organizations are in control of the army."
+
+ UKR_Cossack_tradition_idea:0 "Cossack tradition"
+ UKR_Cossack_tradition_idea_desc:0 "The martial virtues are abundant."
+ 
+ UKR_neutrality_hetman:0 "Ukrainian state"
+ UKR_neutrality_hetman_DEF:0 "State of Ukraine"
+
+ UKR_neutrality_hetman_party:0 "United Hetman Association"
+ UKR_neutrality_hetman_party_long:0 "United Hetman Association"
+
+ ukr.5.t:0 "power struggle"
+ ukr.5.d:0 "Can Petliura remain in his position as the tentative "president" elected by the various armed factions in Ukraine, who are not convinced by anyone?"
+ ukr.5.a:0 "Unanimously."
+ ukr.5.b:0 "The nationalists staged a coup." 
+ ukr.5.c:0 "The pro-Russian faction staged a coup."
+
+ ukr.6.t:0 "News from Ukraine"
+ ukr.6.d:0 "Former Russian Army Lieutenant General Skoropatsky has conveyed to us his willingness to submit, if only His Majesty would pardon his treasonous act as a puppet of the German Reich, Geitman, which perhaps would have been only a stopgap measure for him."
+ ukr.6.a:0 "Welcome back, General."
+ ukr.6.b:0 "Unforgivable!"
+
+ ukr.7.t:0 "The Princess and the Squire"
+ ukr.7.d:0 ""Anna! ... Oh, no! Your Majesty!" It was not until he saw it with his own eyes that the old Skoropatsky truly believed that this was the little princess of the past at the court of Petrograd. \n\n "It's been a long time, Uncle Pavel." Anastasia crossed the armored car escorting her in front of her, and with a steady pace went up to help the old Cossack who had stumbled and dismounted and trotted over. \n\nA long time ago, before the Great War broke out, as a loyal defender of the Russian Empire, Pavel Skoropatsky had served as an attendant to Tsar Nicholas II. He was highly appreciated and was quickly promoted during the Great War, commanding troops from a regiment to a division to a lieutenant general commanding the Ukrainian Cavalry Army until the disastrous year 1917. After that the German army moved in, the Central Rada was disbanded, the Ukrainian state was formed, and the Great War ended with the collapse of the earth... It has been a full twenty years so far. \n\n "Uncle Pavel? How are you?" \n\n "Ah!" Skoropatsky came back to his senses, something he should say later, and he made a strong effort to clear his muddy throat. \n\n "Welcome to loyal Kiev, Your Majesty.""
+ ukr.7.a:0 ""Welcome back, too, General.""
+
+ ukr.8.t:0 "Join the German side"
+ ukr.8.d:0 "The Ukrainian resistance was mostly trained in Germany, and now we can continue to strengthen this bond, and Kiev and Berlin will join forces to defend against the threat from the East and West!"
+ ukr.8.a:0 "An expression of our goodwill."
+ ukr.8.b:0 "There is no need to give them a gun." 
+ 
+ ukr.9.t:0 "Ukraine is willing to join us."
+ ukr.9.d:0 "The Ukrainians have come back to repay us with a formal proposal from Kiev to deepen relations between the two countries and conclude a real military alliance treaty."
+ ukr.9.a:0 "They are welcome."
+ ukr.9.b:0 "They have no value anymore." 

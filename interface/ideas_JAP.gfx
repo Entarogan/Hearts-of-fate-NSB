@@ -1,0 +1,23 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_JAP_Akizuki"
+		texturefile = "gfx/interface/ideas/Akizuki.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_JAP_Kitakami"
+		texturefile = "gfx/interface/ideas/Kitakami.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_JAP_Akashi"
+		texturefile = "gfx/interface/ideas/Akashi.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_JAP_Kaga"
+		texturefile = "gfx/interface/ideas/Kaga.png"
+	}
+
+}

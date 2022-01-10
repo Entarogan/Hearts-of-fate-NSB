@@ -1,0 +1,216 @@
+characters={
+	UKR_symon_petlura={
+		name="Symon Petlura"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Symon_Petlura.dds"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits={ popular_figurehead }
+			expire="1953.3.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=stratocracy
+			traits={ popular_figurehead }
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	UKR_nikita_khrushchev={
+		name="Nikita Khrushchev"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Nikita_Khrushchev.dds"
+			}
+		}
+		country_leader={
+			ideology=marxism
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	UKR_yevhen_konovalets={
+		name="Yevhen Konovalets"
+		portraits={
+			civilian={
+				large="yevhen_konovalets.png"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected winter_specialist hill_fighter }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=5006
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits={ fascist_militia_leader }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_pavlo_skoropadskyi={
+		name="Pavlo Skoropadskyi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Skoropadsky.png"
+			}
+		}
+		field_marshal={
+			traits={ old_guard cavalry_officer organizer thorough_planner }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=5004
+		}
+	}
+	UKR_konstantin_prisovsky={
+		name="Konstantin Prisovsky"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Konstantin_Prisovsky.tga"
+			}
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=3
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_symon_petliura={
+		name="Symon Petliura"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Symon_Petlura.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected trickster }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=5005
+		}
+	}
+	UKR_hnat_stefaniv={
+		name="Hnat Stefaniv"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Hnat_Stefaniv.tga"
+			}
+		}
+		corps_commander={
+			traits={ organizer commando }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_andriy_melnyk={
+		name="Andriy Melnyk"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Andriy_Melnyk.tga"
+			}
+		}
+		corps_commander={
+			traits={ organizer trait_engineer thorough_planner }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=5007
+		}
+	}
+	UKR_mykhailo_omelianovychpavlenko={
+		name="Mykhailo Omelianovych-Pavlenko"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.tga"
+			}
+		}
+		corps_commander={
+			traits={ fortress_buster }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_mykola_kapustyanskyi={
+		name="Mykola Kapustyanskyi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Mykola_Kapustyanskyi.tga"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	UKR_ivan_poltavetsostrianytsia={
+		name="Ivan Poltavets-Ostrianytsia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Ivan_Poltavets_Ostrianytsia.tga"
+			}
+		}
+		corps_commander={
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+}

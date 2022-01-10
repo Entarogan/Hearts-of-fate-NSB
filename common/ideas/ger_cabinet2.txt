@@ -1,0 +1,259 @@
+ideas = {
+	political_advisor = {
+		GER_graf_zeppelin = {
+			#格拉夫·齐柏林#
+			picture = GER_graf_zeppelin
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 NOT = {
+					 has_country_flag = GER_Continue_the_purge_flag 
+				 }
+				 has_completed_focus = GER_Test_carrier_aircraft
+			}
+			traits = { naval_aircraft_amrs_organizer }
+		}
+		GER_vivi_schweinsteiger_strasserism = {
+			#维薇·施魏因施泰格尔#
+			picture = GER_vivi_schweinsteiger_strasserism
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism		
+					has_government = communism		
+				}
+				NOT = {
+					has_country_flag = GER_Heydrich_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Start_the_wartime_economy	
+			}
+			traits = { people_industry_committee }
+
+			ai_will_do = {
+				factor = 100
+			}
+
+		}
+		GER_otto_von_bismark = {
+			#奥托·冯·俾斯麦
+			picture = GER_otto_von_bismark
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 NOT = {
+					 has_country_flag = GER_Continue_the_purge_flag 
+				 }
+				 has_completed_focus = GER_Plan_Z
+			}
+			research_bonus  = {
+				naval_doctrine = 0.1
+				construction_tech = 0.1
+				#海军学说10%，建造10%
+			}
+			traits = { iron_and_blood }
+		}
+		GER_rusalka_schwagerin = {
+			#罗塞卡·施瓦格林
+			picture = GER_rusalka_schwagerin
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_government = fascism
+				is_puppet = no
+				NOT = {
+					has_country_flag = GER_Strasser_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Complete_integration_of_intelligence_services	
+			}
+			traits = { mystic_officer }
+		}
+	}		
+	navy_chief = {
+		GER_franz_von_hipper = {
+			#弗朗兹·冯·希佩尔
+			picture = GER_franz_von_hipper
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 NOT = {
+					 has_country_flag = GER_Continue_the_purge_flag 
+				 }
+				 has_completed_focus = GER_Expanding_the_cruiser_formation
+			}
+			traits = {navy_chief_decisive_battle_3 }
+		}
+		GER_fritz_schneewind = {
+			#弗里茨·施尼温德
+			picture = GER_fritz_schneewind
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_completed_focus = GER_Ocean_submarine	
+			}
+			traits = { submarine_innovator }
+		}
+	}
+	air_chief = {
+		GER_gertrud_barkhorn = {
+			#歌尔特露特·巴克霍隆 
+			picture = GER_gertrud_barkhorn
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_completed_focus = GER_Ensure_air_superiority
+			}
+			traits = { calm_ace }
+
+			ai_will_do = {
+				factor = 25
+			}
+
+		}
+		GER_minna_dietlinde_wilcke = {
+			#明娜-迪特林德·威尔克
+			picture = GER_minna_dietlinde_wilcke
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_completed_focus = GER_CAS_doctrine	
+			}
+			traits = { comprehensive_arranger }
+
+			ai_will_do = {
+				factor = 25
+			}
+
+		}		
+		GER_heinrike_sayn_wittgenstein = {
+			#海因里克-萨伊·维特根斯坦因
+			picture = GER_heinrike_sayn_wittgenstein
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 NOT = {
+					 has_country_flag = GER_Continue_the_purge_flag 
+				 }				
+				 has_completed_focus = GER_Joint_air_to_ground_operations	
+			}
+			traits = { aristocracy_in_the_air }
+
+			ai_will_do = {
+				factor = 25
+			}
+
+		}		
+	}
+	army_chief = {
+		GER_prince_eugen = {
+			#欧根亲王
+			picture = GER_prince_eugen
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_flag = GER_ostreich_return	
+			}
+			traits = { fight_in_land_and_sea }
+
+			ai_will_do = {
+				factor = 35
+			}
+
+		}	
+	}
+	high_command = {
+
+		GER_schmeisser_gewehr = {
+			#施迈瑟·戈维尔
+			picture = GER_schmeisser_gewehr
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_government = fascism				
+				 has_completed_focus = GER_Modernization_of_light_weapons	
+				 NOT = { has_idea = ferdinand_schorner }	
+			}
+			traits = { infantry_strike }
+
+			ai_will_do = {
+				factor = 40
+			}
+
+		}	
+
+		GER_gretel_jeckeln_strasserism = {
+			#格勒特尔·杰克琳
+			picture = GER_gretel_jeckeln_strasserism
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism		
+					has_government = communism		
+				}
+				NOT = {
+					has_country_flag = GER_Heydrich_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Strasser_Project
+			}
+			traits = { people_war_committee }
+
+			ai_will_do = {
+				factor = 1
+			}
+
+		}
+		GER_peter_strasser = {
+			#彼得·斯特拉瑟
+			picture = GER_peter_strasser
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_completed_focus = GER_Building_Zeppelin_Class	
+			}
+			traits = { navy_chief_naval_aviation_2 }
+		}		
+		GER_maho_nishizumi = {
+			#西住真穗
+			picture = GER_maho_nishizumi
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_flag = GER_Continue_the_purge_flag
+				has_completed_focus = GER_blitzkrieg
+			}
+			traits = { Nishizumi_style }
+		}
+		
+		GER_erica_hartmann = {
+			#艾丽卡·哈特曼
+			picture = GER_erica_hartmann
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_air_innovation	
+			}
+			traits = { disobedient_talent }
+
+			ai_will_do = {
+				factor = 25
+			}
+
+		}		
+	}
+}

@@ -1,0 +1,46 @@
+characters={
+    CAN_Karin={
+		name="Karin"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Karin.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAN_Elizard_I={
+		name="Elizard I"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Elizard_I.dds"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAN_Earthspirit={
+		name="Earthspirit"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAN/Portrait_Earthspirit.dds"
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

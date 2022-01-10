@@ -1,0 +1,849 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+RUS_unit_production = {
+	enable = {
+		original_tag = RUS
+	}
+	abort = {
+		always = no
+	}
+	
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = paratroopers
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mountaineers
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = marines
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = cavalry
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 0
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 50
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = heavy
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 25 #because doctrine 70
+	}
+	
+	#Air unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 40
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = 2 #because doctrine this = 15
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = 5
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -50 # we can add a strategy later to increase this once Germany is beaten
+	}
+	
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = 4
+	}
+	
+	
+	# Naval unit factors
+	ai_strategy = {
+		type = unit_ratio
+		id = capital_ship
+		value = 1
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = carrier
+		value = 1
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = submarine
+		value = 30 
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = screen_ship
+		value = 20
+	}
+
+	ai_strategy = {
+		type = unit_ratio
+		id = convoy
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = fighter
+		value = 20
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = 30
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = 36
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 40
+	}
+}	
+
+RUS_halt_light_armor_production_in_transitioning = {
+	enable = {
+		original_tag = RUS
+		has_template_majority_unit = medium_armor
+		OR = {
+			has_equipment = { light_tank_equipment > 600 }
+			date > 1939.1.1
+		}		
+	}
+	abort = {
+		# once we start we never go back to light armor
+	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = light_tank_equipment
+		value = -75
+	}
+}
+
+southern_thrust = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_prepare_for_war_middle_east_flag
+		OR = {
+			country_exists = IRQ
+			country_exists = PER
+			country_exists = AFG
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = IRQ
+			country_exists = PER
+			country_exists = AFG
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "PER"			
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "AFG"			
+		value = 150
+	}	
+	ai_strategy = {
+		type = antagonize
+		id = "IRQ"			
+		value = 100
+	}	
+}
+
+ENG_southern_thrust = {
+	enable = {
+		OR = {
+		tag = ENG
+		tag = ITA
+		tag = GER
+		tag = JAP
+		tag = USA
+		}
+       has_war = yes
+	   NOT = { has_war_with = RUS }
+	   RUS = {
+		OR = {
+			has_war_with = IRQ
+			has_war_with = PER
+			has_war_with = AFG
+		}
+		}
+	}
+	abort = {
+		OR = {
+			has_war_with = RUS
+			has_war = no
+		}
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = "PER"			
+		value = -500
+	}
+	ai_strategy = {
+		type = alliance
+		id = "AFG"			
+		value = -500
+	}	
+	ai_strategy = {
+		type = alliance
+		id = "IRQ"			
+		value = -500
+	}	
+}
+
+claims_on_poland = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_claim_poland_flag
+		country_exists = POL
+	}
+	abort = {
+		NOT = {
+			country_exists = POL
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "POL"			
+		value = 200
+	}	
+}
+
+claims_on_baltic = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_claim_baltic_flag
+		OR = {
+			country_exists = LAT
+			country_exists = LIT
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = LAT
+			country_exists = LIT
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "LAT"			
+		value = 200
+	}	
+	ai_strategy = {
+		type = antagonize
+		id = "LIT"			
+		value = 200
+	}
+}
+
+claims_on_finland = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_claim_finland_flag
+		country_exists = FIN
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = FIN
+			}
+			FIN = {
+				has_government = ROOT
+			}
+			controls_state = 146 #Karelija
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "FIN"			
+		value = 200
+	}	
+}
+
+claims_on_turkey = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_claim_straits_flag
+		country_exists = TUR
+	}
+	abort = {
+		NOT = {
+			country_exists = TUR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "TUR"			
+		value = 200
+	}	
+}
+
+claims_on_romania = {
+	enable = {
+		tag = RUS
+		has_country_flag = SOV_claim_romannia_flag
+		country_exists = ROM
+	}
+	abort = {
+		NOT = {
+			country_exists = ROM
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ROM"			
+		value = 200
+	}	
+}
+
+claims_on_sinkiang = {
+	enable = {
+		tag = RUS
+		has_completed_focus = SOV_claim_on_sinkiang
+		country_exists = CHI
+	}
+	abort = {
+		NOT = {
+			country_exists = CHI
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "CHI"			
+		value = 200
+	}	
+}
+
+japan_ally = {
+	enable = {
+		tag = RUS
+		has_completed_focus = SOV_reconcile_japan
+		country_exists = JAP
+	}
+	abort = {
+		NOT = { country_exists = JAP }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "JAP"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "JAP"			
+		value = 200
+	}	
+}
+
+germany_ally = {
+	enable = {
+		tag = RUS
+		OR = { 
+			has_completed_focus = SOV_anti_capitalist_diplomacy
+			GER = { has_completed_focus = GER_soviet_ally }
+		}
+		country_exists = GER
+	}
+	abort = {
+		NOT = { country_exists = GER }
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GER"			
+		value = 200
+	}
+	ai_strategy = {
+		type = alliance
+		id = "GER"			
+		value = 200
+	}	
+}
+
+germany_enemy = {
+	enable = {
+		tag = SOV
+		has_completed_focus = SOV_anti_fascist_diplomacy
+		country_exists = GER
+		OR = {
+			date > 1942.1.1
+			has_war_with = GER 
+		}
+	}
+	abort = {
+		NOT = { country_exists = GER }
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "GER"			
+		value = 200
+	}	
+}
+
+RUS_template_design_1 = {
+	enable = {
+		original_tag = RUS			
+	}
+	abort = { 
+		always = no
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = motorized
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = cavalry
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = light_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = heavy_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = modern_armor
+		value = -99
+	}
+
+	ai_strategy = {
+		type = template_prio
+		id = paratroopers
+		value = -99
+	}
+	
+	ai_strategy = {
+		type = template_prio
+		id = infantry
+		value = -99
+	}
+}
+
+RUS_pp_spending = {
+	enable = {
+		original_tag = RUS
+		has_manpower < 100000
+		has_political_power < 200
+	}
+	abort = {
+		OR = {
+			has_manpower > 100000
+			has_political_power > 200
+			date > 1944.1.1
+		}
+	}
+
+	ai_strategy = { # dont burn PP on admirals if you need manpower laws
+		type = pp_spend_priority
+		id = admiral
+		value = -100
+	}
+}
+
+RUS_naval_role_ratios_historical = {
+	enable = {
+		has_dlc = "Man the Guns"
+		original_tag = RUS
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bb
+		value = -25
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_capital_bc
+		value = -100
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_carrier
+		value = -5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_submarine
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_screen
+		value = 150
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_light
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_cruiser_heavy
+		value = -15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_sweeper
+		value = 15
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = naval_mine_layer
+		value = 80
+	}
+}
+
+RUS_home_land_is_safe = {
+	enable = {
+		original_tag = RUS
+	}
+	
+	ai_strategy = {
+		type = garrison
+		value = -25
+	}
+}
+
+RUS_dont_like_asia = { # :O
+	enable = {
+		tag = RUS
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "PRC"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "CHI"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SIK"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "XSM"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "GXC"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "SHX"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "YUN"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PRC"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "CHI"
+		value = -1000
+	}
+
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SIK"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "XSM"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GXC"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SHX"
+		value = -500
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "YUN"
+		value = -500
+	}
+
+}
+
+dont_take_claims_on_ROM_we_got_focus = {
+	enable = {
+		tag = RUS
+		country_exists = ROM
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = ROM }
+			date > 1940.1.1
+			has_war = yes
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "ROM"			
+		value = 1
+	}		
+}
+
+dont_take_claims_on_LIT_we_got_focus = {
+	enable = {
+		tag = RUS
+		country_exists = LIT
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = LIT }
+			date > 1940.1.1
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "LIT"			
+		value = 1
+	}		
+}
+
+dont_take_claims_on_LAT_we_got_focus = {
+	enable = {
+		tag = RUS
+		country_exists = LAT
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = LAT }
+			date > 1940.1.1
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "LAT"			
+		value = 1
+	}		
+}
+
+dont_take_claims_on_EST_we_got_focus = {
+	enable = {
+		tag = RUS
+		country_exists = EST
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = EST }
+			date > 1940.1.1
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "EST"			
+		value = 1
+	}		
+}
+
+dont_take_claims_on_FIN_we_got_focus = {
+	enable = {
+		tag = RUS
+		country_exists = FIN
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+			NOT = { country_exists = FIN }
+			date > 1940.1.1
+		}
+	}
+	
+	ai_strategy = {
+		type = ignore_claim
+		id = "FIN"			
+		value = 1
+	}		
+}
+
+RUS_300_million_marks = {
+	enable = {
+		NOT = { tag = RUS }
+    NOT = { RUS = { is_faction_leader = yes } }
+		is_in_faction_with = RUS
+	}
+	abort = {
+    RUS = {
+      any_home_area_neighbor_country = {
+        NOT = { has_war_with = RUS }
+      }
+    }
+	}
+	
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RUS"
+		value = 100
+	}
+}
+
+RUS_wants_arms = {
+	enable = {
+		tag = RUS
+		date < 1937.6.1
+		has_war = no
+	}
+
+	abort = { 
+    OR = {
+      date > 1937.6.1 
+      has_war = yes
+    }
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 59
+	}
+}

@@ -1,0 +1,33 @@
+ITA_army_reform = {
+	icon = army_reform
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+	}
+}
+
+ITA_balkan_problem = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		original_tag = ITA
+	}
+}
+
+ITA_integrate_countries = {
+
+	icon = border_conflicts
+
+	priority = 95
+
+	allowed = {
+		original_tag = ITA
+	}
+}
+
+

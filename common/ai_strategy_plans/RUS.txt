@@ -1,0 +1,48 @@
+RUS_historical_plan = {
+	name = "RUS historical plan"
+	desc = "Historical behavior for RUS"
+
+	enable = {
+		original_tag = RUS
+	}
+	abort = {
+    date > 1938.1.1
+	}
+
+	ai_national_focuses = {
+    rus_unite_white_movement
+    rus_prepare_for_protraction
+    rus_siberian_headquarter
+    rus_siberian_cavalry
+    rus_russian_armor_corps
+    rus_local_militia_training
+    rus_lesson_from_the_great_war
+
+    RUS_entente_observe_committee
+    rus_align_japan
+    rus_expand_japanese_advisory_group
+    rus_japanese_equipments
+
+    rus_siberian_air_forces_headquarter
+    rus_bomber_production
+    rus_fighter_production
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

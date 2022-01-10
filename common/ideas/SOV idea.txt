@@ -1,0 +1,379 @@
+ideas = {
+	country = {
+
+	}
+
+	political_advisor = {
+
+		SOV_anna_morozov = {
+			#安娜·莫洛佐夫（真理）
+			picture = SOV_anna_morozov
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_country_leader = { name = "Anna Morozova"  ruling_only = yes } }
+			}
+			traits = { trait_pravda }
+
+      ai_will_do = {
+        factor = 100
+      }
+
+		}
+		SOV_sonia = {
+			#索尼娅（凛冬）
+			picture = SOV_sonia
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_country_leader = { name = "Sonia Zima"  ruling_only = yes } }
+			}
+
+			traits = { trait_Komsomol_leader }
+
+      ai_will_do = {
+        factor = 2
+      }
+
+		}
+		
+		SOV_Alexander_Shliapnikov = {
+			#什利亚普尼科夫
+			picture = SOV_Alexander_Shliapnikov
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_Alexei_Rykov }
+				OR = {
+					has_completed_focus = SOV_Return_power_to_the_union
+					AND = {
+						has_completed_focus = SOV_Return_of_exile
+						has_country_flag = SOV_Support_compulsory_collectivization_flag
+					}
+					
+				}
+			}
+
+			traits = { SOV_worker_opposition }
+
+      ai_will_do = {
+        factor = 3
+				modifier = {
+					factor = 5
+					has_war = no
+				}
+      }
+
+		}
+		
+		
+		SOV_Nikolay_Krestinsky = {
+			#克拉斯京斯基
+			picture = SOV_Nikolay_Krestinsky
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_Continue_military_control
+			}
+
+			traits = { SOV_Responsible_Secretary }
+		}
+		
+		SOV_Alexei_Rykov = {
+			#李可夫
+			picture = SOV_Alexei_Rykov
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_Alexander_Shliapnikov }
+				has_completed_focus = SOV_Ensure_the_worker_peasant_alliance
+			}
+
+			traits = { SOV_loyal_ally }
+
+      ai_will_do = {
+        factor = 2
+				modifier = {
+					factor = 5
+					has_war = no
+				}
+      }
+
+		}
+		
+		SOV_Alexandra_Kollontai = {
+			#柯伦泰
+			picture = SOV_Alexandra_Kollontai
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_Return_power_to_the_union
+			}
+
+			traits = { SOV_glass_of_water }
+
+      ai_will_do = {
+        factor = 2
+      }
+
+		}
+		
+		SOV_Yevgeni_Preobrazhensky = {
+			#普列奥布拉任斯基
+			picture = SOV_Yevgeni_Preobrazhensky
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_completed_focus = SOV_Return_of_exile
+				has_country_flag = SOV_Support_compulsory_collectivization_flag
+			}
+
+			traits = { SOV_socialist_primitive_accumulation }
+
+      ai_will_do = {
+        factor = 5
+				modifier = {
+					factor = 5
+					has_war = no
+				}
+      }
+
+		}
+		
+		SOV_sovetskaya_rossiya_political = {
+			#苏维埃·罗西亚
+			name = SOV_sovetskaya_rossiya
+			picture = SOV_sovetskaya_rossiya
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_sovetskaya_rossiya }
+				has_completed_focus = SOV_Military_collectivization
+				NOT = { 
+					has_country_leader = {
+						name = "Sovetskaya Rossiya"
+						ruling_only = yes
+					} 
+				}
+			}
+			
+			traits = { Navy_commissar }
+
+		}
+		
+		SOV_nonna_political = {
+			#诺娜
+			name = SOV_nonna
+			picture = SOV_nonna
+
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_nonna }
+				has_completed_focus = SOV_Soldier_worship
+				NOT = { 
+					has_country_leader = {
+						name = "Nonna"
+						ruling_only = yes
+					} 
+				}
+			}
+			traits = { army_political_commissar }
+
+      ai_will_do = {
+        factor = 5
+      }
+
+		}
+	}	
+	army_chief = {
+		SOV_nonna = {
+			#诺娜
+
+			picture = SOV_nonna
+
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_nonna_political }
+			}
+			traits = { SOV_nonna_1 }
+
+      ai_will_do = {
+        factor = 3
+      }
+
+		}
+
+		SOV_trista_sestina = {
+			#崔斯塔·谢斯切娜
+
+
+			picture = SOV_trista_sestina
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+	
+			}
+			traits = { SOV_trista_sestina_T }
+		}	
+		SOV_alina = {
+			#阿丽娜
+
+
+			picture = SOV_alina
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+	
+			}
+			traits = { SOV_alina_T }
+		}	
+		SOV_klara = {
+			#库拉拉
+
+
+			picture = SOV_klara
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				has_idea = SOV_nonna_political			
+			}
+
+			traits = { SOV_klara_T }
+
+      ai_will_do = {
+        factor = 2
+      }
+
+		}
+	}
+	air_chief = {
+		SOV_sanya_litvyak = {
+			#桑妮亚·V·利特维亚克
+			picture = SOV_sanya_litvyak
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+
+			}
+			traits = { SOV_sanya_litvyak_T }
+		
+      ai_will_do = {
+        factor = 2
+      }
+    
+		}		
+	}
+	navy_chief = {
+		SOV_vasily_chapayev = {
+			#瓦西里·恰巴耶夫
+
+			picture = SOV_vasily_chapayev
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				 	
+			}
+			traits = { SOV_vasily_chapayev_T }
+		}
+
+	}
+	high_command = {
+
+		SOV_inia_sestina = {
+			#伊妮亚·谢斯切娜
+			picture = SOV_inia_sestina
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = ivan_konev }
+				NOT = { has_idea = aleksandr_vasilevsky }
+			}
+			traits = { SOV_inia_sestina_T }
+		}	
+
+		SOV_katyusha = {
+			#喀秋莎
+			picture = SOV_katyusha
+			
+			allowed = {
+				original_tag = SOV
+			}
+			visible = {
+				
+			}
+			available = {
+				
+			}
+			traits = { SOV_katyusha_T }
+
+      ai_will_do = {
+        factor = 2
+      }
+
+		}	
+		SOV_sovetskaya_rossiya = {
+			#苏维埃·罗西亚
+
+			picture = SOV_sovetskaya_rossiya
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+				NOT = { has_idea = SOV_sovetskaya_rossiya_political }
+			}
+			traits = { SOV_sovetskaya_rossiya_T }
+
+		}
+		SOV_cryska_barchenowa = {
+			#克丽斯嘉·巴切诺娃
+
+			picture = SOV_cryska_barchenowa
+			
+			allowed = {
+				original_tag = SOV
+			}
+			available = {
+	
+
+			}
+			traits = { SOV_cryska_barchenowa_T }
+
+		}
+
+
+	}
+
+}

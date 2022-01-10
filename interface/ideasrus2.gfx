@@ -1,0 +1,130 @@
+spriteTypes = {	
+### RUS
+	spriteType = {
+		name = "GFX_idea_RUS_vladimir_zworykin"
+		texturefile = "gfx/interface/ideas/RUS_vladimir_zworykin.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_RUS_georges_florovsky"
+		texturefile = "gfx/interface/ideas/RUS_georges_florovsky.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_leonid_ustrugov"
+		texturefile = "gfx/interface/ideas/RUS_leonid_ustrugov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RUS_simon_kuznets"
+		texturefile = "gfx/interface/ideas/RUS_simon_kuznets.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RUS_nikolai_chebotaryov"
+		texturefile = "gfx/interface/ideas/RUS_nikolai_chebotaryov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RUS_boris_vasilchikov"
+		texturefile = "gfx/interface/ideas/RUS_boris_vasilchikov.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_russian_french_alliance"
+		texturefile = "gfx/interface/ideas/russian_french_alliance.dds"
+	}
+    spriteType = {
+		name = "GFX_idea_RUS_sphere_invasion_not_available_GER"
+		texturefile = "gfx/interface/ideas/RUS_sphere_invasion_not_available_GER.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_RUS_sphere_invasion_not_available_SWE"
+		texturefile = "gfx/interface/ideas/RUS_sphere_invasion_not_available_SWE.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rus_battle_on_the_ice"
+		texturefile = "gfx/interface/ideas/rus_battle_on_the_ice.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rus_organize_black_youth"
+		texturefile = "gfx/interface/ideas/rus_organize_black_youth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_rus_siberian_cavalry"
+		texturefile = "gfx/interface/ideas/rus_siberian_cavalry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rus_japanese_advisory_group"
+		texturefile = "gfx/interface/ideas/rus_japanese_advisory_group.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_rus_siberian_air_forces_headquarter"
+		texturefile = "gfx/interface/ideas/rus_siberian_air_forces_headquarter.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rua_modernized_military_school"
+		texturefile = "gfx/interface/ideas/rua_modernized_military_school.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rus_land_for_party"
+		texturefile = "gfx/interface/ideas/rus_land_for_party.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_narod_economics_civil"
+		texturefile = "gfx/interface/ideas/rus_narod_economics_civil.dds"
+	}
+###################
+	spriteType = {
+		name = "GFX_idea_rus_narod_economics_war"
+		texturefile = "gfx/interface/ideas/rus_narod_economics_war.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_narod_economics_total"
+		texturefile = "gfx/interface/ideas/rus_narod_economics_total.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_rus_militarize_the_country"
+		texturefile = "gfx/interface/ideas/rus_militarize_the_country.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_Yunarmia"
+		texturefile = "gfx/interface/ideas/rus_Yunarmia.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_rus_militarize_the_masses"
+		texturefile = "gfx/interface/ideas/rus_militarize_the_masses.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_army_infrastructure"
+		texturefile = "gfx/interface/ideas/army_infrastructure.dds"
+	}		
+	spriteType = {
+		name = "GFX_idea_rus_militarize_the_schools"
+		texturefile = "gfx/interface/ideas/rus_militarize_the_schools.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_all_russian_economic_committee"
+		texturefile = "gfx/interface/ideas/rus_all_russian_economic_committee.dds"
+	}		
+	spriteType = {
+		name = "GFX_idea_rus_country_moblization"
+		texturefile = "gfx/interface/ideas/rus_country_moblization.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rus_a_new_empire"
+		texturefile = "gfx/interface/ideas/rus_a_new_empire.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_idea_rus_Natsgvardia"
+		texturefile = "gfx/interface/ideas/rus_Natsgvardia.dds"
+	}		
+	
+	
+}

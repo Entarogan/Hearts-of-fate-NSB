@@ -1,0 +1,32 @@
+﻿units = {
+	division = {
+		name = "14. Knight of Empire"
+		location = 351
+		division_template = "Knight of Empire"
+        start_experience_factor = 0.5
+	}
+	division = {
+		name = "14. Marines of Empire"
+		location = 351
+		division_template = "Marines of Empire"
+        start_experience_factor = 0.5
+	}
+	division = {
+		name = "32. Knight"
+		location = 351
+		division_template = "Knight"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "33. Knight"
+		location = 351
+		division_template = "Knight"
+        start_experience_factor = 0.3
+	}	
+	division = {
+		name = "34. Knight"
+		location = 351
+		division_template = "Knight"
+        start_experience_factor = 0.3
+	}		
+}

@@ -1,0 +1,51 @@
+ideas = {
+
+	country = {
+
+		RHI_Valkist = {
+			
+			available = {
+				NOT = {has_government = fascism	}			
+			}
+
+			picture = generic_fascism_drift_2
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				conscription_factor = -0.50
+				fascism_drift = 0.1
+			}
+		}
+
+		RHI_Military_occupation = {
+			
+			available = {
+				NOT = {has_government = fascism	}			
+			}
+
+			picture = general_staff
+			
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_Factor = 0.10
+				stability_factor = 0.15
+				neutrality_drift = 0.15
+        surrender_limit = 0.15
+			}
+		}
+	
+		}
+		
+}		

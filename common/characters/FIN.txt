@@ -1,0 +1,139 @@
+characters={
+	FIN_aimo_aaltonen={
+		name="Aimo Aaltonen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_AIMO_AALTONEN_DESC"
+			ideology=marxism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_vilho_annala={
+		name="Vilho Annala"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_VILHO_ANNALA_DESC"
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_erik_heinrichs={
+		name="Erik Heinrichs"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FIN_vilho_petter_nenonen={
+		name="Vilho Petter Nenonen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ commando winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FIN_luviagelita_edefelt={
+		name="Luviagelita Edefelt"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Luviagelita_Edefelt.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LIVIAGELITE_DESC"
+			ideology=conservatism
+			traits={ Lady_Forklift Despise_Japan }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_carl_gustaf_emil_mannerheim={
+		name="Carl Gustaf Emil Mannerheim"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FIN_carl_mannerheim.dds"
+			}
+			army={
+				large="gfx/leaders/FIN/portrait_fin_carl_mannerheim.dds"
+			}
+		}
+		field_marshal={
+			traits={ inflexible_strategist trait_cautious war_hero trickster winter_specialist defensive_doctrine }
+			skill=5
+			attack_skill=3
+			defense_skill=5
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=58
+		}
+	}
+	FIN_sitonai={
+		name="Sitonai"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/FIN/Portrait_Sitonai.dds"
+			}
+		}
+		field_marshal={
+			traits={ cavalry_leader commando winter_specialist hill_fighter logistics_wizard offensive_doctrine inspirational_leader combined_arms_expert adaptable winter_expert }
+			skill=6
+			attack_skill=5
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	FIN_viljo_törni={
+		name="Viljo Törni"
+		portraits={
+			civilian={
+				large="GFX_portrait_europe_generic_8"
+			}
+		}
+		country_leader={
+			ideology=authoritarian_democracy
+			traits={ financial_expert }
+			expire="1943.1.1.12"
+			id=-1
+		}
+	}
+}

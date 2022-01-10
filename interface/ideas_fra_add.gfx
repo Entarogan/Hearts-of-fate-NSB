@@ -1,0 +1,33 @@
+spriteTypes = {
+#法国	
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Eugene_Deloncle"
+		texturefile = "gfx/interface/ideas/FRA_Eugene_Deloncle.dds"		
+	}	
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Jacques_Correze"
+		texturefile = "gfx/interface/ideas/FRA_Jacques_Correze.dds"		
+	}	
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Jacques_Barnaud"
+		texturefile = "gfx/interface/ideas/FRA_Jacques_Barnaud.dds"		
+	}
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Robert_Brasillach"
+		texturefile = "gfx/interface/ideas/FRA_Robert_Brasillach.dds"		
+	}	
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Francois_Lehideux"
+		texturefile = "gfx/interface/ideas/FRA_Francois_Lehideux.dds"		
+	}	
+
+	SpriteType = {
+		name = "GFX_idea_FRA_Francois_Spirito"
+		texturefile = "gfx/interface/ideas/FRA_Francois_Spirito.dds"		
+	}
+}

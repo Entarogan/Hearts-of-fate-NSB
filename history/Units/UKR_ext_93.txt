@@ -1,0 +1,16 @@
+﻿units = {
+	division = {
+		name = "OUN-militia"
+		location = 6557  
+		division_template = "OUN"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "OUN-militia"
+		location = 6557  
+		division_template = "OUN"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+}

@@ -1,0 +1,504 @@
+﻿capital = 608
+
+oob = "BEY_1936"
+
+set_stability = 0.7
+set_war_support = 0.6
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	trench_warfare = 1
+}
+
+add_opinion_modifier = {
+	target = CHI modifier = hostile_status
+}
+
+
+set_popularities = {
+	democratic = 35
+	fascism = 16
+	communism = 6
+	neutrality = 43
+
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+add_ideas = {
+	export_focus
+	extensive_conscription
+	partial_economic_mobilisation
+CHI_tiger_idea
+	CHI_army_corruption_1
+  CHI_incompetent_officers
+  idea_man_railway
+}
+
+give_military_access = JAP
+give_military_access = RUS
+give_military_access = MAN
+
+
+
+create_country_leader = {
+	name = "Li Shuwen"
+	desc = "POLITICS_LI_SHUWEN_DESC"
+	picture = "Portrait_Li_Shuwen.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy
+	traits = {
+  
+	}
+}
+
+
+create_country_leader = {
+	name = "Gao Changgong"
+	desc = ""
+	picture = "Portrait_Gao_Changgong.dds"
+	expire = "1965.1.1"
+	ideology = classical_liberalism
+	traits = {
+  
+	}
+}
+
+create_country_leader = {
+	name = "Huo Qing'e"
+	desc = ""
+	picture = "Portrait_Huo_Qinge.dds"
+	expire = "1965.1.1"
+	ideology = totalist
+	traits = {
+  
+	}
+}
+
+create_country_leader = {
+	name = "Huo Qing'e"
+	desc = ""
+	picture = "Portrait_Huo_Qinge.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+  
+	}
+}
+
+
+create_field_marshal = {
+	name = "Li Shuwen"
+	picture = "Portrait_Li_Shuwen.dds"
+	traits = {  thorough_planner aggressive_assaulter offensive_doctrine  organisational_leader  politically_connected }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Hong Meiling"
+	picture = "Portrait_Hong_Meiling.dds"
+	traits = {
+
+
+	}
+	skill = 4
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 3
+
+}
+
+create_corps_commander = {
+	name = "Huo Qing'e"
+	picture = "Portrait_Huo_Qinge.dds"
+	traits = {
+		trickster
+    commando
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+}
+create_corps_commander = {
+	name = "Gao Changgong"
+	picture = "Portrait_Gao_Changgong.dds"
+	traits = {
+		trickster
+    commando
+    organizer
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
+}
+
+create_corps_commander = { 
+	name = "Chen Tiaoyuan"
+	picture = "Portrait_BEY_Chen_Tiaoyuan.png"
+	traits = {
+		politically_connected
+		career_officer
+		substance_abuser
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+
+	id = 3511
+}
+
+create_corps_commander = {
+	name = "Jiang Baili"
+	picture = "Portrait_BEY_Jiang_Baili.png"
+	traits = {
+		old_guard
+		politically_connected
+		inflexible_strategist
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 1
+	id = 3512
+}
+
+create_corps_commander = {
+	name = "Li Jinglin"
+	picture = "Portrait_BEY_Li_Jinglin.png"
+	traits = {
+    organizer
+		trait_cautious
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+	id = 3513
+
+}
+
+create_corps_commander = {
+	name = "Liu Menggeng"
+	picture = "Portrait_BEY_Li_Liu_Menggeng.png"
+	traits = {
+		career_officer
+		trait_cautious
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+	id = 3514
+}
+
+create_corps_commander = {
+	name = "Ma Zhanshan"
+	picture = "Portrait_BEY_Ma_Zhanshan.png"
+	traits = {
+		trickster
+		trait_reckless
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 3515
+}
+
+create_corps_commander = { # Nanjing
+	name = "Qi Xieyuan"
+	picture = "Portrait_BEY_Qi_Xieyuan.png"
+	traits = {
+		old_guard
+		politically_connected
+		substance_abuser
+		trait_cautious
+		organizer
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+
+	id = 3516
+}
+
+create_corps_commander = {
+	name = "Shi Yousan"
+	picture = "Portrait_BEY_Shi_Yousan.png"
+	traits = {
+		politically_connected
+		substance_abuser
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3517
+
+}
+
+create_corps_commander = {
+	name = "Sun Chuanfang"
+	picture = "Portrait_BEY_Sun_Chuanfang.png"
+	traits = {
+		old_guard
+		politically_connected
+		substance_abuser
+		trait_cautious
+		organizer
+    trickster
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+
+	id = 3518
+}
+
+create_corps_commander = {
+	name = "Sun Dianying"
+	picture = "Portrait_BEY_Sun_Dianying.png"
+	traits = {
+		trickster
+		trait_reckless
+		substance_abuser
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+
+	id = 3519
+}
+
+create_field_marshal = {
+	name = "Wu Peifu"
+	picture = "Portrait_BEY_Wu_Peifu.png"
+	traits = {
+		old_guard
+		politically_connected
+		brilliant_strategist
+		war_hero
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 3520
+}
+
+create_field_marshal = {
+	name = "Yan Xishan"
+	picture = "Portrait_BEY_Yan_Xishan.png"
+	traits = {
+		brilliant_strategist
+		organizer
+		fast_planner
+	}
+
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3521
+
+}
+
+create_corps_commander = {
+	name = "Yang Yuting"
+	picture = "Portrait_BEY_Yang_Yuting.png"
+	traits = {
+		career_officer
+		politically_connected
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+
+	id = 3522
+}
+
+create_corps_commander = {
+	name = "Zhang Jinghui"
+	picture = "Portrait_BEY_Zhang_Jinghui.png"
+	traits = {
+		old_guard
+		politically_connected
+		career_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+
+	id = 3523
+
+}
+
+create_corps_commander = {
+	name = "Zhang Xueliang"
+	picture = "Portrait_BEY_Zhang_Xueliang_abuser.png"
+	traits = {
+		politically_connected
+		substance_abuser
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+
+	id = 3524
+}
+
+create_corps_commander = {
+	name = "Zhang Zizhong"
+	picture = "Portrait_BEY_Zhang_Zizhong.png"
+	traits = {
+		career_officer
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3525
+
+}
+
+create_corps_commander = {
+	name = "Zhang Zongchang"
+	picture = "Portrait_BEY_Zhang_Zongchang.png"
+	traits = {
+		politically_connected
+		substance_abuser
+	}
+	skill = 3
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+
+	id = 3526
+}
+
+create_corps_commander = {
+	name = "Zhang Zuoxiang"
+	picture = "Portrait_BEY_Zhang_Zuoxiang.png"
+	traits = {
+		old_guard
+		career_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+
+	id = 3527
+}
+
+create_corps_commander = {
+	name = "Wan Fulin"
+	picture = "Portrait_BEY_Wan_Fulin.png"
+	traits = {
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3528
+}
+
+create_corps_commander = {
+	name = "Wang Lingyun"
+	picture = "Portrait_BEY_Wang_Lingyun.png"
+	traits = {
+		organizer
+		trait_engineer
+		infantry_officer
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3529
+}
+
+create_corps_commander = {
+	name = "Wu Junsheng"
+	picture = "Portrait_BEY_Wu_Junsheng.png"
+	traits = {
+		old_guard
+		cavalry_officer
+		substance_abuser
+	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+
+	id = 3530
+}
+
+create_corps_commander = {
+	name = "Shangguan Yunxiang"
+	picture = "Portrait_BEY_Shangguan_Yunxiang.png"
+	traits = {
+		politically_connected
+		substance_abuser
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+
+	id = 3531
+}

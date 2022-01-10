@@ -1,0 +1,158 @@
+ENG_historical_plan = {
+	name = "Kingdom of Britain historical plan"
+	desc = "Historical behavior for Kingdom of Britain"
+
+	enable = {
+		original_tag = ENG
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = ENG_ai_behavior 
+					option = DEFAULT
+				}
+			}
+			has_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+			has_game_rule = {
+				rule = ENG_ai_behavior 
+				option = DEMOCRATIC_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		GER = {
+			has_completed_focus = GER_oppose_hitler
+		}
+	}
+
+	ai_national_focuses = {
+		limited_rearmament_focus
+		uk_round_table_focus
+    uk_reinforce_the_king_focus 	
+    uk_industrial_focus        
+		shadow_scheme_focus
+		uk_arturia_production_focus 
+    royal_ordinance_focus
+    uk_CBI
+    uk_new_design_standard
+    uk_extra_tech_slot
+    uk_ideal_king_focus
+    uk_hard_econ_focus
+    uk_nationalization_focus
+		uk_ensure_the_common_wealth
+    ENG_home_defence
+		air_defense_focus
+		uk_empire_focus
+		uk_workshop_of_the_empire
+		uk_colonial_focus
+    uk_imperial_engineering_school
+    uk_defend_cities
+    ENG_motorized_focus
+		uk_service_focus
+    uk_mediterranean_focus
+    uk_malta_focus
+    uk_defend_channel
+    uk_defend_cyprus
+    uk_cooperation_with_atlas
+    uk_camelot_hq_focus
+    uk_northern_ireland
+    uk_appease_ireland
+    uk_lord_camelot
+    uk_modern_knight
+		general_rearmament_focus
+		naval_rearmament_focus
+    uk_exploit_welsh
+    uk_canada_construction
+    uk_garden_of_avalon_protection
+		arturia_war_time_energy
+		uk_neo_celtic_myth
+		uk_radiant_path_focus
+    uk_local_airport
+    UK_triple_hermes
+    uk_small_arms_focus
+		arturia_exchange_rate_control
+		arturia_oil_exploitation
+    uk_defend_eastern_shore
+    ENG_tank_focus
+		uk_royal_mobile_regiment
+		uk_royal_naval_insititute
+		air_rearmament_focus
+		ENG_ensure_french_alliance
+        uk_landing_preparation
+        uk_operation_wilfred
+		uk_defend_against_communism_focus
+		
+		arturia_synthetic_sharing
+		uk_asia_focus
+		uk_burma_focus
+        uk_liberation
+		uk_mediterranean_focus
+		uk_protect_suez
+        uk_doesnot_understand_focus
+		uk_defend_cyprus
+        uk_plan_r4
+		uk_cooperation_with_atlas
+		uk_fortify_palestine
+		uk_build_the_holy_city
+		radar_focus
+        uk_befriend_finland
+	    uk_king_for_once_and_future_focus 
+		ENG_motorized_focus
+		ENG_home_defence
+		ENG_tank_focus
+    uk_Expand_english_shipbuilding
+    uk_expand_Scotland_shipbuilding
+    uk_coal_export_docks
+		crypto_bomb_focus
+		ENG_issue_gasmasks
+		ENG_military_training_act
+		fighter_command_focus
+		bomber_command_focus
+		coastal_command_focus
+		aircraft_production_focus
+		tizard_mission_focus
+		uk_destroyer_focus
+		uk_waves_focus
+		UK_triple_hermes
+		uk_convoy_focus
+		maud_focus
+		uk_briton_ultimate_defence
+		uk_carrier_focus
+		hongkong_focus
+		uk_iraq_focus
+		uk_rock_focus
+		singapore_focus
+		peninsular_focus
+		uk_small_arms_focus
+		uk_amphibious_focus
+		uk_protect_suez
+		uk_unsinkable_air_craft_carrier
+		uk_commonwealth_focus
+		uk_canada_focus
+		uk_australia_focus
+        arturia_move_capitals
+		uk_new_zealand_focus
+		uk_south_africa_focus
+		
+		UK_secret_focus
+		uk_jet_focus
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

@@ -1,0 +1,105 @@
+﻿capital = 291
+
+oob = "IRQ_1936"
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+  support_weapons = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+  tech_mountaineers = 1
+	CAS1 = 1
+  early_bomber = 1
+	fuel_silos = 1
+  motorised_infantry = 1
+  gwtank = 1
+  basic_light_tank = 1
+  fuel_refining = 1
+	early_fighter = 1
+	tech_support = 1
+	tech_recon = 1
+  tech_engineers = 1
+  tech_maintenance_company = 1
+  tech_field_hospital = 1
+  tech_logistics_company = 1
+	infantry_weapons2 = 1
+  
+  electronic_mechanical_engineering = 1
+  radio = 1
+  radio_detection = 1
+  mechanical_computing = 1
+  
+  construction1 = 1
+  construction2 = 1
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		mtg_transport = 1
+	}
+}
+set_convoys = 150
+
+add_ideas = {
+  irq_mesopotamia_civilization
+  irq_kurds_opposite_1
+  irq_marshes
+}
+
+set_popularities = {
+	neutrality = 75
+	fascism = 20
+	communism = 0
+	democratic = 5
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+recruit_character = IRQ_yusuf_salman_yusuf
+recruit_character = irq_siduri
+recruit_character = IRQ_Enkidu
+recruit_character = IRQ_Ishtar
+recruit_character = IRQ_Gilgamesh
+recruit_character = IRQ_Semiramis
+recruit_character = IRQ_Ereshkigal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

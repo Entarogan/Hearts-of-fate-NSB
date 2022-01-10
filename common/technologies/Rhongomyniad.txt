@@ -1,0 +1,117 @@
+technologies = {
+	rhongomyniad = {
+		enable_equipment_modules = { 
+			fate_ship_missle_battery
+			
+		}
+		research_cost = 1000
+		start_year = 3000
+		allow = {
+			always = no
+		}
+		categories = {
+			naval_equipment
+		}
+	}
+	
+	rhongomyniad_cruiser = {
+		enable_equipments = {
+			rhongomyniad_ship_equipment
+		}
+		
+		research_cost = 1000
+		start_year = 3000
+		allow = {
+			always = no
+		}
+		categories = {
+			naval_equipment
+		}
+	}
+  
+  concentrated_fire = {	
+		research_cost = 1000
+    start_year = 3000
+		allow = {
+			always = no
+		}
+    doctrine = yes	
+		mot_artillery_brigade = {
+			breakthrough = 0.10
+		}
+    category_artillery = { 
+			breakthrough = 0.30
+		}
+		categories = {
+			land_doctrine
+		}
+	}
+  
+  Nightingale_act = {	
+		research_cost = 1000
+    start_year = 3000
+		allow = {
+			always = no
+		}
+    doctrine = yes	
+		category_army = {
+			casualty_trickleback = 0.015
+			experience_loss_factor = -0.012
+		}
+		categories = {
+			land_doctrine
+		}
+	}
+  
+  ira_desert_tank = {	
+		research_cost = 1000
+    start_year = 3000
+    doctrine = yes	
+    
+    category_all_armor = { 
+			marsh = {
+        attack = 0.2
+        movement = 0.15
+      }
+      desert = {
+        attack = 0.2
+        movement = 0.15
+      }
+		}
+   } 
+   
+   fra_desert_warfare = {	
+		research_cost = 1000
+    start_year = 3000	
+    
+    category_all_armor = { 
+      desert = {
+        attack = 0.10
+        movement = 0.20
+      }
+		}
+    category_artillery = {
+      desert = {
+        attack = 0.10
+        movement = 0.20
+      }
+    }
+   } 
+    
+   ira_assyrian_siege_tanks = {	
+		research_cost = 1000
+    start_year = 3000
+    doctrine = yes	
+    
+    super_heavy_armor = { 
+			urban = {
+        attack = 0.5
+        defence = 0.20
+        movement = 0.15
+      }
+      max_organisation = 0.4
+		}
+
+	}
+  
+}

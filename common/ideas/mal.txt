@@ -1,0 +1,28 @@
+ideas = {
+
+	country = {
+
+		MAL_Colonization = {
+			
+			available = {
+				is_subject = yes		
+			}
+
+			picture = ast_classify_aliens
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = -0.25
+				conscription_factor = -0.50
+			}
+
+		}
+	
+		}
+		
+}		

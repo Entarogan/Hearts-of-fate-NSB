@@ -1,0 +1,171 @@
+
+units = {
+	division = {
+		name = "1.Républicains Français"
+		location = 3646
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.Républicains Français"
+		location = 9642
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "3.Républicains Français"
+		location = 9658
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "4.Républicains Français"
+		location = 9505
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "5.Républicains Français"
+		location = 6531
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "6.Républicains Français"
+		location = 3533
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "7.Républicains Français"
+		location = 9490
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "8.Républicains Français"
+		location = 9490
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "9.Républicains Français"
+		location = 551
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "10.Républicains Français"
+		location = 6949
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "11.Républicains Français"
+		location = 11491
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "12.Républicains Français"
+		location = 9725
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "13.Républicains Français"
+		location = 9507
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "14.Républicains Français"
+		location = 6547
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "15.Républicains Français"
+		location = 11463
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "16.Républicains Français"
+		location = 9478
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "17.Républicains Français"
+		location = 11613
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "18.Républicains Français"
+		location = 11596
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "19.Républicains Français"
+		location = 3659
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "20.Républicains Français"
+		location = 629
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "21.Républicains Français"
+		location = 11582
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "22.Républicains Français"
+		location = 595
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "23.Républicains Français"
+		location = 11565
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "24.Républicains Français"
+		location = 9737
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "25.Républicains Français"
+		location = 9737
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "26.Républicains Français"
+		location = 6762
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "27.Républicains Français"
+		location = 9710
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+	division = {
+		name = "28.Républicains Français"
+		location = 743
+		division_template = "Républicains Français"
+        start_experience_factor = 0.3
+	}
+}

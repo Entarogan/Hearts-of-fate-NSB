@@ -1,0 +1,30 @@
+﻿l_english:
+ 第一个槽位代码:0 "[Root.GetFirstSlot]"
+ GER_FIRSTSLOT:0 "德国第一个槽位"
+ JAP_FIRSTSLOT:0 "日本第一个槽位"
+ G_FIRSTSLOT:0 "通用第一个槽位"
+
+ 第二个槽位代码:0 "[Root.GetSecondSlot]"
+ GER_SECONDSLOT:0 "德国第二个槽位"
+ JAP_SECONDSLOT:0 "日本第二个槽位"
+ G_SECONDSLOT:0 "通用第二个槽位"
+ 
+ 第三个槽位代码:0 "[Root.GetThirdSlot]"
+ GER_THIRDSLOT:0 "德国第三个槽位"
+ JAP_THIRDSLOT:0 "日本第三个槽位"
+ G_THIRDSLOT:0 "通用第三个槽位"
+ 
+ 第四个槽位代码:0 "[Root.GetFourthSlot]"
+ GER_FOURTHSLOT:0 "德国第四个槽位"
+ JAP_FOURTHSLOT:0 "日本第四个槽位"
+ G_FOURTHSLOT:0 "通用第四个槽位"
+
+ 第五个槽位代码:0 "[Root.GetFifthSlot]"
+ GER_FIFTHSLOT:0 "德国第五个槽位"
+ JAP_FIFTHSLOT:0 "日本第五个槽位"
+ G_FIFTHSLOT:0 "通用第五个槽位"
+ 
+ 第六个槽位代码:0 "[Root.GetSixthSlot]"
+ GER_SIXTHSLOT:0 "德国第六个槽位"
+ JAP_SIXTHSLOT:0 "日本第六个槽位"
+ G_SIXTHSLOT:0 "通用第六个槽位"

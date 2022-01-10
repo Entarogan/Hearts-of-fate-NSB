@@ -1,0 +1,161 @@
+ideas = {
+
+	# POLITICAL
+	political_advisor = {		
+		
+		FRA_Eugene_Deloncle = {
+			picture = FRA_Eugene_Deloncle
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				OR = {
+					has_completed_focus = FRA_Catastrophe_and_rebirth
+					has_completed_focus = FRA_Introduce_the_German_police
+				}
+			}
+			
+			available = {
+				OR = {
+					has_completed_focus = FRA_Catastrophe_and_rebirth
+					has_completed_focus = FRA_Introduce_the_German_police
+				}
+			}
+			
+			traits = { La_Cagoule }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		FRA_Jacques_Correze = {
+			picture = FRA_Jacques_Correze
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				OR = {
+					has_completed_focus = FRA_Catastrophe_and_rebirth
+					has_completed_focus = FRA_Introduce_German_capital
+				}
+			}
+			
+			available = {
+				OR = {
+					has_completed_focus = FRA_Catastrophe_and_rebirth
+					has_completed_focus = FRA_Introduce_German_capital
+				}
+			}	
+			traits = { fascist_entrepreneur }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		FRA_Jacques_Barnaud = {
+			picture = FRA_Jacques_Barnaud
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				has_completed_focus = FRA_Introduce_German_capital
+			}
+			
+			available = {
+				has_completed_focus = FRA_Introduce_German_capital
+			}
+			
+			traits = { supplier }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		FRA_Robert_Brasillach = {
+			picture = FRA_Robert_Brasillach
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				has_completed_focus = FRA_revenge
+			}
+			
+			available = {
+				has_completed_focus = FRA_revenge
+			}
+			
+			traits = { press_agitator }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		FRA_Francois_Lehideux = {
+			picture = FRA_Francois_Lehideux
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				OR = {
+					has_completed_focus = FRA_Four_year_plan 
+					has_completed_focus = FRA_faster
+				}
+			}
+			
+			available = {
+				OR = {
+					has_completed_focus = FRA_Four_year_plan 
+					has_completed_focus = FRA_faster
+				}
+			}
+			
+			traits = { technocrats_fra }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		FRA_Francois_Spirito = {
+			picture = FRA_Francois_Spirito
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			visible = {
+				has_completed_focus = FRA_Hedonic
+			}
+			
+			available = {
+				has_completed_focus = FRA_Hedonic
+			}
+			
+			traits = { drug_gangster }
+
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+
+
+	}
+		
+	# MILITARY
+
+}

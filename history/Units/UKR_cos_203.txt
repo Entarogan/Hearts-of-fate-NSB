@@ -1,0 +1,16 @@
+﻿units = {
+	division = {
+		name = "Cossacks"
+		location = 458 
+		division_template = "Cossacks"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "Cossacks"
+		location = 3452  
+		division_template = "Cossacks"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+}

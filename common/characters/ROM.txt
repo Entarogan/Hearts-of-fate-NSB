@@ -1,0 +1,516 @@
+characters={
+	ROM_petre_dumitrescu={
+		name="Petre Dumitrescu"
+		portraits={
+			army={
+				small="GFX_Portrait_romania_petre_dumitrescu_small"
+			}
+			army={
+				large="GFX_Portrait_romania_petre_dumitrescu"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer trickster }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=884
+		}
+	}
+	ROM_ioan_mihail_racovita={
+		name="Ioan Mihail Racovita"
+		portraits={
+			army={
+				small="GFX_Portrait_romania_ioan_mihail_racovita_small"
+			}
+			army={
+				large="GFX_Portrait_romania_ioan_mihail_racovita"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=885
+		}
+	}
+	ROM_constantin_sanatescu={
+		name="Constantin Sanatescu"
+		portraits={
+			army={
+				small="GFX_Portrait_romania_constantin_sanatescu_small"
+			}
+			army={
+				large="GFX_Portrait_romania_constantin_sanatescu"
+			}
+		}
+		corps_commander={
+			traits={ infantry_expert }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=5607
+		}
+	}
+	ROM_ion_antonescu={
+		name="Ion Antonescu"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_ROM_ion_antonescu.dds"
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Romania_Ion_Antonescu.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard harsh_leader cavalry_officer }
+			skill=4
+			attack_skill=5
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=5604
+		}
+	}
+	ROM_horia_macellariu={
+		name="Horia Macellariu"
+		portraits={
+			army={
+				small="GFX_Portrait_romania_horia_macellariu_small"
+			}
+			army={
+				large="GFX_Portrait_romania_horia_macellariu"
+			}
+		}
+		navy_leader={
+			traits={ gentlemanly spotter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=887
+		}
+	}
+	ROM_gheorghe_avramescu={
+		name="Gheorghe Avramescu"
+		portraits={
+			army={
+				small="GFX_Portrait_romania_gheorghe_avramescu_small"
+			}
+			army={
+				large="GFX_Portrait_romania_gheorghe_avramescu"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer infantry_expert }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ROM_vlad_iii={
+		name="Vlad III"
+		portraits={
+			civilian={
+				large="gfx/leaders/ROM/Portrait_Vlad_III_Neutrality.dds"
+			}
+		}
+		field_marshal={
+			traits={ harsh_leader war_hero infantry_leader offensive_doctrine aggressive_assaulter inspirational_leader }
+			skill=5
+			attack_skill=5
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=3
+			legacy_id=5600
+		}
+		country_leader={
+			desc="POLITICS_VLAD_DESC"
+			ideology=absolute_monarchy
+			traits={ Demonic_Defender_of_the_State }
+			expire="1965.1.1.1"
+			id=5660
+		}
+	}
+	ROM_yuri={
+		name="Yuri"
+		portraits={
+			civilian={
+				large="gfx/leaders/ROM/Portrait_Yuri.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_YURI_DESC"
+			ideology=yezhovism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ROM_darnic_prestone_yggdmillennia={
+		name="Darnic Prestone Yggdmillennia"
+		portraits={
+			civilian={
+				large="gfx/leaders/ROM/Portrait_Darnic_Prestone_Yggdmillennia.dds"
+			}
+		}
+		field_marshal={
+			traits={ career_officer trait_cautious politically_connected organizer skilled_staffer trickster }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=3
+			legacy_id=5610
+		}
+		country_leader={
+			desc="POLITICS_DARNIC_DESC"
+			ideology=conservatism
+			traits={ Realpolitik }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ROM_corneliu_zelea_codreanu={
+		name="Corneliu Zelea Codreanu"
+		portraits={
+			civilian={
+				large="gfx/leaders/ROM/portrait_corneliu_zelea_codreanu.dds"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ROM_ion_mota={
+		name="Ion Mota"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Ion_Mota.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader politically_connected }
+			skill=2
+			attack_skill=5
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=5605
+		}
+	}
+	ROM_vasile_marin={
+		name="Vasile Marin"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Vasile_Marin.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader politically_connected }
+			skill=2
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=5606
+		}
+	}
+	ROM_constantin_constantinescuclaps={
+		name="Constantin Constantinescu-Claps"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Constantin_Constantinescu_Claps.png"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	ROM_nicolae_macici={
+		name="Nicolae Macici"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Nicolae_Macici.png"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ROM_constantin_pantazi={
+		name="Constantin Pantazi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Constantin_Pantazi.png"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ROM_nicolae_ciuperca={
+		name="Nicolae Ciuperca"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Nicolae_Ciuperca.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard career_officer infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ROM_ion_glogojanu={
+		name="Ion Glogojanu"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Ion_Glogojanu.png"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ROM_leonard_mociulschi={
+		name="Leonard Mociulschi"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Leonard_Mociulschi.png"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_mountaineer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ROM_dumitru_popescu={
+		name="Dumitru Popescu"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Dumitru_Popescu.png"
+			}
+		}
+		corps_commander={
+			traits={ old_guard }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ROM_corneliu_dragalina={
+		name="Corneliu Dragalina"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Corneliu_Dragalina.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ROM_florea_tenescu={
+		name="Florea Tenescu"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_ROM_Florea_Tenescu.png"
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	ROM_fiore_forvedge_yggdmillennia={
+		name="Fiore Forvedge Yggdmillennia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Fiore_Forvedge_Yggdmillennia.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer trait_cautious politically_connected war_hero organizer trait_engineer panzer_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=5611
+		}
+	}
+	ROM_celenike_icecolle_yggdmillennia={
+		name="Celenike Icecolle Yggdmillennia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Celenike_Icecolle_Yggdmillennia.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer harsh_leader infantry_officer politically_connected cavalry_leader panzer_leader }
+			skill=3
+			attack_skill=5
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=5612
+		}
+	}
+	ROM_gordes_musik_yggdmillennia={
+		name="Gordes Musik Yggdmillennia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Gordes_Musik_Yggdmillennia.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer politically_connected war_hero }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=5613
+		}
+	}
+	ROM_caules_forvedge_yggdmillennia={
+		name="Caules Forvedge Yggdmillennia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Caules_Forvedge_Yggdmillennia.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_leader trait_engineer commando }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=5614
+		}
+	}
+	ROM_roche_frain_yggdmillennia={
+		name="Roche Frain Yggdmillennia"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/ROM/Portrait_Roche_Frain_Yggdmillennia.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_engineer commando }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=5615
+		}
+	}
+}

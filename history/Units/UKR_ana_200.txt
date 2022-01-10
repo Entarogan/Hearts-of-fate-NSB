@@ -1,0 +1,30 @@
+﻿units = {
+	division = {
+		name = "anarchists"
+		location = 11405  
+		division_template = "anarchists"
+		start_equipment_factor = 1
+		start_experience_factor = 0.8
+	}
+	division = {
+		name = "anarchists"
+		location = 6596  
+		division_template = "anarchists"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "anarchists"
+		location = 3767 
+		division_template = "anarchists"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+	division = {
+		name = "anarchists"
+		location = 588  
+		division_template = "anarchists"
+		start_equipment_factor = 1
+		start_experience_factor = 1
+	}
+}
