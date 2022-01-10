@@ -34,8 +34,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_gre_charalambos_katsimitros_small"
-			}
-			army={
 				large="GFX_portrait_gre_charalambos_katsimitros"
 			}
 		}
@@ -54,8 +52,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_gre_markos_drakos_small"
-			}
-			army={
 				large="GFX_portrait_gre_markos_drakos"
 			}
 		}
@@ -74,8 +70,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_navy_4.dds"
-			}
-			army={
 				large="gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
 			}
 		}
@@ -94,8 +88,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_gre_alexandros_papagos_small"
-			}
-			army={
 				large="GFX_portrait_gre_alexandros_papagos"
 			}
 		}
@@ -128,9 +120,7 @@ characters={
 		name="Leonidas"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Leonidas.dds"
 			}
 		}
@@ -147,10 +137,9 @@ characters={
 	GRE_achilles={
 		name="Achilles"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Achilles.dds"
 			}
 		}
@@ -167,10 +156,9 @@ characters={
 	GRE_stheno={
 		name="Stheno"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Stheno.dds"
 			}
 		}
@@ -187,10 +175,9 @@ characters={
 	GRE_euryale={
 		name="Euryale"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Euryale.dds"
 			}
 		}
@@ -208,9 +195,7 @@ characters={
 		name="Medusa"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Medusa.dds"
 			}
 		}
@@ -228,9 +213,7 @@ characters={
 		name="Medea"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Medea.dds"
 			}
 		}
@@ -248,9 +231,7 @@ characters={
 		name="Atalanta"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GRE/Portrait_Atalanta.dds"
 			}
 		}

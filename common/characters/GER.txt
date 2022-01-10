@@ -4,8 +4,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gerd_von_rundstedt.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
 			}
 		}
@@ -24,8 +22,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_paulus.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Paulus.dds"
 			}
 		}
@@ -44,8 +40,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
 			}
 		}
@@ -64,8 +58,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_von_manstein.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_von_Manstein.dds"
 			}
 		}
@@ -82,10 +74,9 @@ characters={
 	GER_heinz_guderian={
 		name="Heinz Guderian"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_heinz_guderian.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Heinz_Guderian.dds"
 			}
 		}
@@ -102,10 +93,9 @@ characters={
 	GER_wilhelm_list={
 		name="Wilhelm List"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_list.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_List.dds"
 			}
 		}
@@ -122,10 +112,9 @@ characters={
 	GER_ewald_von_kleist={
 		name="Ewald von Kleist"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_ewald_von_kleist.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ewald_von_Kleist.dds"
 			}
 		}
@@ -144,8 +133,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_fedor_von_bock.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Fedor_von_Bock.dds"
 			}
 		}
@@ -164,8 +151,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_model.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Model.dds"
 			}
 		}
@@ -182,10 +167,9 @@ characters={
 	GER_maximilian_von_weichs={
 		name="Maximilian von Weichs"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_maximilian_von_weichs.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Maximilian_von_Weichs.dds"
 			}
 		}
@@ -204,8 +188,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_leeb.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Ritter_von_Leeb.dds"
 			}
 		}
@@ -224,8 +206,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_georg_von_reinhardt.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_von_Reinhardt.dds"
 			}
 		}
@@ -244,8 +224,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_kurt_student.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
 			}
 		}
@@ -264,8 +242,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_von_witzleben.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_von_Witzleben.dds"
 			}
 		}
@@ -284,8 +260,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_herman_hoth.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Herman_Hoth.dds"
 			}
 		}
@@ -304,8 +278,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_johannes_blaskowitz.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Johannes_Blaskowitz.dds"
 			}
 		}
@@ -324,8 +296,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_paul_hausser.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Paul_Hausser.dds"
 			}
 		}
@@ -344,8 +314,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_schulz.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Friedrich_Schulz.dds"
 			}
 		}
@@ -364,8 +332,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_jodl.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Jodl.dds"
 			}
 		}
@@ -384,8 +350,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_josef_dietrich.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"
 			}
 		}
@@ -404,8 +368,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hasso_von_manteuffel.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hasso_von_Manteuffel.dds"
 			}
 		}
@@ -422,10 +384,9 @@ characters={
 	GER_albert_kesselring={
 		name="Albert Kesselring"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_albert_kesselring.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Albert_Kesselring.dds"
 			}
 		}
@@ -444,8 +405,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gotthard_heinrici.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gotthard_Heinrici.dds"
 			}
 		}
@@ -462,10 +421,9 @@ characters={
 	GER_ernsteberhard_hell={
 		name="Ernst-Eberhard Hell"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_ernst-eberhard_hell.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ernst-Eberhard_Hell.dds"
 			}
 		}
@@ -484,8 +442,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_ger_felix_steiner_small"
-			}
-			army={
 				large="GFX_portrait_ger_felix_steiner"
 			}
 		}
@@ -504,8 +460,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_raeder.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Raeder.dds"
 			}
 		}
@@ -522,10 +476,9 @@ characters={
 	GER_hermann_boehm={
 		name="Hermann Boehm"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_hermann_boehm.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
 			}
 		}
@@ -544,8 +497,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_marschall.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
 			}
 		}
@@ -562,10 +513,9 @@ characters={
 	GER_franz_halder={
 		name="Franz Halder"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Franz_Halder.dds"
 			}
 		}
@@ -584,8 +534,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hans_von_luck.dds"
-			}
-			army={
 				large="gfx/leaders/GER/portrait_ger_hans_von_luck.dds"
 			}
 		}
@@ -604,8 +552,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_thoma.dds"
-			}
-			army={
 				large="gfx/leaders/GER/portrait_ger_wilhelm_ritter_von_thoma.dds"
 			}
 		}
@@ -623,9 +569,7 @@ characters={
 		name="Herbert Gille"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_GER_Herbert_Gille_TST.dds"
 			}
 		}
@@ -643,9 +587,7 @@ characters={
 		name="Franz von Hipper"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Franz_von_Hipper.dds"
 			}
 		}
@@ -662,10 +604,9 @@ characters={
 	GER_fritz_schneewind={
 		name="Fritz Schneewind"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Fritz_Schneewind.dds"
 			}
 		}
@@ -740,8 +681,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gunther_von_kluge.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gunther_von_Kluge.dds"
 			}
 		}
@@ -760,8 +699,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_kruger.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Kruger.dds"
 			}
 		}
@@ -778,10 +715,9 @@ characters={
 	GER_georg_von_küchler={
 		name="Georg von Küchler"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_georg_von_kuchler.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Georg_von_Kuchler.dds"
 			}
 		}
@@ -800,8 +736,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_karl_donitz.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Donitz.dds"
 			}
 		}
@@ -820,8 +754,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_saalwachter.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Saalwachter.dds"
 			}
 		}
@@ -838,10 +770,9 @@ characters={
 	GER_günther_lütjens={
 		name="Günther Lütjens"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_GER_gunter_lutjens.dds"
-			}
-			army={
 				large="gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
 			}
 		}
@@ -858,10 +789,9 @@ characters={
 	GER_werner_von_blomberg={
 		name="Werner von Blomberg"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Werner_Eduard_Fritz_von_Blomberg.dds"
 			}
 		}
@@ -879,9 +809,7 @@ characters={
 		name="Ferdinand Schörner"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Ferdinand_Scherner.dds"
 			}
 		}
@@ -899,9 +827,7 @@ characters={
 		name="Walter Wenck"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Wenck.dds"
 			}
 		}
@@ -919,9 +845,7 @@ characters={
 		name="Kurt von Schleicher"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Kurt_von_Schleicher.dds"
 			}
 		}
@@ -938,10 +862,9 @@ characters={
 	GER_hans_speidel={
 		name="Hans Speidel"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Hans_Speidel.dds"
 			}
 		}
@@ -958,10 +881,9 @@ characters={
 	GER_erich_von_ludendorff={
 		name="Erich Von Ludendorff"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Von_Ludendorff.dds"
 			}
 		}
@@ -978,10 +900,9 @@ characters={
 	GER_hermann_ehrhardt={
 		name="Hermann Ehrhardt"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/GER/Portrait_Germany_Hermann_Ehrhardt.dds"
 			}
 		}

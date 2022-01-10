@@ -589,21 +589,21 @@ country_event = {
 
 		add_political_power = -100
 
-    add_stability = -0.05
+    	add_stability = -0.05
 
-    kill_country_leader = yes
+    	kill_country_leader = yes
 
-    create_country_leader = {
-      name = "Nikolai Yezhov"
-      desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
-      picture = "Portrait_Soviet_Nikolai_Yezhov_2.dds"
-      expire = "1953.3.1"
-      ideology = yezhovism
-      traits = {
 
-      }
-    }
-
+		add_country_leader_role = {
+			character = "SOV_nikolay_yezhov"
+			country_leader = {
+				ideology = yezhovism
+				desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
+				traits = {  }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = SOV_lavrentiy_beria
 		set_country_flag = Beria_is_dead
@@ -715,17 +715,25 @@ country_event = {     #
 
     kill_country_leader = yes
 
-    create_country_leader = {
-      name = "Mikhail Tukhachevsky"
-      desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-      picture = "Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
-      expire = "1953.3.1"
-      ideology = leninism
-      traits = {
-
-      }
-    }
-
+  #  create_country_leader = {
+  #    name = "Mikhail Tukhachevsky"
+  #    desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
+  #    picture = "Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
+    #  expire = "1953.3.1"
+    #  ideology = leninism
+    #  traits = {
+#
+   #   }
+   # }
+	add_country_leader_role = {
+		character = "SOV_mikhail_tukhachevsky"
+		country_leader = {
+			ideology = leninism
+			traits = {  }
+			expire = "1965.3.1.1"
+		}
+		promote_leader = yes 
+	}
 	hidden_effect = {
 		news_event = { id = more_News.41  hours = 3 }
 	}
@@ -1325,15 +1333,15 @@ country_event = {     #选举
 		}
 		retire_country_leader = yes
 
-		create_country_leader = {
-			name = "Anna Morozova"
-			desc = "POLITICS_ANNA_MOROZOVA_DESC"
-			picture = "Portrait_Anna_Morozova.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				trait_pravda
+		add_country_leader_role = {
+			character = "SOV_anna_morozova"
+			country_leader = {
+				desc = "POLITICS_ANNA_MOROZOVA_DESC"
+				ideology = leninism
+				traits = { trait_pravda }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 		
 	}
@@ -1345,15 +1353,15 @@ country_event = {     #选举
 		}
 		retire_country_leader = yes
 		
-		create_country_leader = {
-			name = "Sonia Zima"
-			desc = "POLITICS_SONIA_ZIMA_DESC"
-			picture = "Portrait_Sonia.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				impulsive_activist
+		add_country_leader_role = {
+			character = "SOV_sonia_zima"
+			country_leader = {
+				desc = "POLITICS_SONIA_ZIMA_DESC"
+				ideology = leninism
+				traits = { impulsive_activist }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 	}
 
@@ -1413,15 +1421,16 @@ country_event = {     #图哈切夫斯基飞机失事
 		}
 		kill_country_leader = yes
 		remove_unit_leader = 401 #mikhail_tukhachevsky, field marshal
-		create_country_leader = {
-			name = "Nonna"
-			desc = "POLITICS_NONNA_DESC"
-			picture = "Portrait_Nonna.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				army_political_commissar
+
+		add_country_leader_role = {
+			character = "SOV_nonna"
+			country_leader = {
+				desc = "POLITICS_NONNA_DESC"
+				ideology = leninism
+				traits = { army_political_commissar }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 		hidden_effect = {
 			remove_ideas = mikhail_tukhachevsky
@@ -1435,15 +1444,16 @@ country_event = {     #图哈切夫斯基飞机失事
 		}
 		kill_country_leader = yes
 		remove_unit_leader = 401 #mikhail_tukhachevsky, field marshal
-		create_country_leader = {
-			name = "Sovetskaya Rossiya"
-			desc = "POLITICS_SONIA_ZIMA_DESC"
-			picture = "Portrait_Sovetskaya_Rossiya.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Navy_commissar
+
+		add_country_leader_role = {
+			character = "SOV_sovetskaya_rossiya"
+			country_leader = {
+				desc = "POLITICS_SOVETSKAYA_ROSSIYA_DESC"
+				ideology = leninism
+				traits = { Navy_commissar }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 		hidden_effect = {
 			remove_ideas = mikhail_tukhachevsky
@@ -1504,7 +1514,9 @@ country_event = {     #朱加什维利之影
 			RUS = { exists = no }
 			RUS = { is_subject = yes }
 		}
-		has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }		
+		SOV_nikolay_yezhov = {
+			is_country_leader = yes
+		}
 	}
 
 	fire_only_once = yes
@@ -1652,15 +1664,16 @@ country_event = {     #苏多普拉托夫的反击
 
 		kill_country_leader = yes
 
-		create_country_leader = {
-			name = "Pavel Sudoplatov"
-			desc = ""
-			picture = "Portraits_Soviet_pavel_anatolevich_sudoplatov.png"
-			expire = "1953.3.1"
-			ideology = yezhovism
-			traits = {
-				Blood_Dwarf_1
+
+		add_country_leader_role = {
+			character = "SOV_pavel_sudoplatov"
+			country_leader = {
+				
+				ideology = yezhovism
+				traits = { Blood_Dwarf_1 }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 
     clr_country_flag = SOV_Enable_Sudoplatov_flag
@@ -1677,18 +1690,16 @@ country_event = {     #苏多普拉托夫的反击
 		add_political_power = -50
 
 		kill_country_leader = yes
-
-		create_country_leader = {
-			name = "Pistolet Makarova"
-			desc = ""
-			picture = "Portrait_Pistolet_Makarova.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Blood_Dwarf_1
+		add_country_leader_role = {
+			character = "SOV_pistolet_makarova"
+			country_leader = {
+				
+				ideology = leninism
+				traits = { Blood_Dwarf_1 }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
 	}
 
 	option = {
@@ -1725,19 +1736,19 @@ country_event = {     #激情杀人？
 
 		kill_country_leader = yes
 
-		create_country_leader = {
-			name = "Pistolet Makarova"
-			desc = ""
-			picture = "Portrait_Pistolet_Makarova.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Combat_agent
+		add_country_leader_role = {
+			character = "SOV_pistolet_makarova"
+			country_leader = {
+				
+				ideology = leninism
+				traits = { Combat_agent }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 
-    set_country_flag = SOV_Enable_Sudoplatov_flag
-    clr_country_flag = SOV_Enable_Makarova_flag
+		set_country_flag = SOV_Enable_Sudoplatov_flag
+		clr_country_flag = SOV_Enable_Makarova_flag
 
 		country_event = more_soviet.25
 
@@ -1761,17 +1772,16 @@ country_event = {     #回归
 
 		kill_country_leader = yes
 
-		create_country_leader = {
-			name = "Andrei Zhdanov"
-			desc = ""
-			picture = "Portraits_Soviet_Andrei_Zhdanov.png"
-			expire = "1953.3.1"
-			ideology = stalinism
-			traits = {
-				marxist_philosopher
+		add_country_leader_role = {
+			character = "SOV_andrei_zhdanov"
+			country_leader = {
+				
+				ideology = stalinism
+				traits = { marxist_philosopher }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
 	}
 
 	option = {
@@ -1782,17 +1792,16 @@ country_event = {     #回归
 
 		kill_country_leader = yes
 
-		create_country_leader = {
-			name = "Lazar Kaganovich"
-			desc = ""
-			picture = "Portraits_Soviet_Lazar_Kaganovich.png"
-			expire = "1953.3.1"
-			ideology = stalinism
-			traits = {
-				servant_of_Dzhugashvili
+		add_country_leader_role = {
+			character = "SOV_lazar_kaganovich"
+			country_leader = {
+				
+				ideology = stalinism
+				traits = { servant_of_Dzhugashvili }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
 	}
 
 	option = {
@@ -1802,18 +1811,16 @@ country_event = {     #回归
 		}
 
 		kill_country_leader = yes
-
-		create_country_leader = {
-			name = "Yakov Dzhugashvili"
-			desc = ""
-			picture = "Portraits_Soviet_yakov_Dzhugashvili.png"
-			expire = "1953.3.1"
-			ideology = stalinism
-			traits = {
-				sins_of_the_father
+		add_country_leader_role = {
+			character = "SOV_yakov_dzhugashvili"
+			country_leader = {
+				
+				ideology = stalinism
+				traits = { sins_of_the_father }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
 	}
 	
 }
@@ -1858,17 +1865,16 @@ country_event = {     #谁来领导？
 
 		retire_country_leader = yes
 
-		create_country_leader = {
-			name = "Anna Morozova"
-			desc = "POLITICS_ANNA_MOROZOVA_DESC"
-			picture = "Portrait_Anna_Morozova.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				trait_pravda
+		add_country_leader_role = {
+			character = "SOV_anna_morozova"
+			country_leader = {
+				desc = "POLITICS_ANNA_MOROZOVA_DESC"
+				ideology = leninism
+				traits = { trait_pravda }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
 	}
 
 	option = {
@@ -1881,17 +1887,16 @@ country_event = {     #谁来领导？
 
 		retire_country_leader = yes
 
-		create_country_leader = {
-			name = "Makiri Zolgen"
-			desc = ""
-			picture = "Portrait_Makiri_Zolgen.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Agronomist
+		add_country_leader_role = {
+			character = "SOV_makiri_zolgen"
+			country_leader = {
+				
+				ideology = leninism
+				traits = { Agronomist }
+				expire = "1965.3.1.1"
 			}
-		}
-		
+			promote_leader = yes 
+		}		
 	}
 
 	
@@ -1912,19 +1917,23 @@ country_event = {     #选举
 			base = 50
 		}
 		retire_country_leader = yes
-
-		create_country_leader = {
-			name = "Nikita Khrushchev"
-			desc = ""
-			picture = "Portrait_Nikita_Khrushchev.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Cunning_politician
-        economic_reformer
+		
+		add_country_leader_role = {
+			character = "UKR_nikita_khrushchev"
+			country_leader = {
+				ideology = leninism
+				traits = { Cunning_politician  economic_reformer }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
+		UKR_nikita_khrushchev = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/SOV/Portrait_Nikita_Khrushchev.dds"
+				}
 			}
 		}
-
 	}
 	
 	option = {
@@ -1934,16 +1943,17 @@ country_event = {     #选举
 		}
 		retire_country_leader = yes
 
-		create_country_leader = {
-			name = "Makiri Zolgen"
-			desc = ""
-			picture = "Portrait_Makiri_Zolgen.dds"
-			expire = "1953.3.1"
-			ideology = leninism
-			traits = {
-				Agronomist
+
+		add_country_leader_role = {
+			character = "SOV_makiri_zolgen"
+			country_leader = {
+				
+				ideology = leninism
+				traits = { Agronomist }
+				expire = "1965.3.1.1"
 			}
-		}
+			promote_leader = yes 
+		}	
 		
 	}
 	
@@ -2065,19 +2075,18 @@ country_event = {     #亲自执行
 
 		kill_country_leader = yes
 
-		create_country_leader = {
-			name = "Boris Dzerzhinsky"
-			desc = ""
-			picture = "Portraits_Soviet_Savinkov_NKVD.png"
-			expire = "1953.3.1"
-			ideology = totalist
-			traits = {
-        Crimson_Warhorse
+		add_country_leader_role = {
+			character = "SOV_boris_savinkov"
+			country_leader = {
+				ideology = totalist
+				#desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
+				traits = { Crimson_Warhorse }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
-
-    clr_country_flag = SOV_Enable_Savinkov_flag
-    set_country_flag = SOV_Enable_Makarova_flag
+		clr_country_flag = SOV_Enable_Savinkov_flag
+		set_country_flag = SOV_Enable_Makarova_flag
 
 		country_event = { id = more_soviet.33 days = 180 }
 
@@ -2111,18 +2120,17 @@ country_event = {     #萨文科夫还是捷尔任斯基
 
 		add_political_power = -50
 
-		retire_country_leader = yes
-
-		create_country_leader = {
-			name = "Boris Savinkov"
-			desc = ""
-			picture = "Portraits_Soviet_Savinkov_marshal.png"
-			expire = "1953.3.1"
-			ideology = totalist
-			traits = {
-				Crimson_Warhorse
+		#retire_country_leader = yes
+		SOV_boris_savinkov = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/SOV/Portraits_Soviet_Savinkov_marshal.png"
+				}
 			}
+			set_character_name = SOV_Boris_Savinkov_Real
+
 		}
+		
 		hidden_effect = {
 			country_event = { id = more_soviet.34  days = 100 }
 		}

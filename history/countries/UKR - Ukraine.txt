@@ -92,3 +92,5 @@ recruit_character = UKR_andriy_melnyk
 recruit_character = UKR_mykhailo_omelianovychpavlenko
 recruit_character = UKR_mykola_kapustyanskyi
 recruit_character = UKR_ivan_poltavetsostrianytsia
+
+recruit_character = SOV_leonid_brezhnev

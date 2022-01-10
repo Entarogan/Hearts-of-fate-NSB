@@ -32,8 +32,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
 			}
 		}
@@ -87,8 +85,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FIN_carl_mannerheim.dds"
-			}
-			army={
 				large="gfx/leaders/FIN/portrait_fin_carl_mannerheim.dds"
 			}
 		}
@@ -106,9 +102,7 @@ characters={
 		name="Sitonai"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FIN/Portrait_Sitonai.dds"
 			}
 		}

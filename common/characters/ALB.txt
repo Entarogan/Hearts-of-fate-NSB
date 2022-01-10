@@ -98,8 +98,6 @@ characters={
 	}
 	ALB_ismael_ghaxa={
 		advisor={
-			
-			
 			slot = navy_chief
 			idea_token = ALB_ismael_ghaxa
 			allowed = {
@@ -467,11 +465,11 @@ characters={
 			slot = political_advisor
 			idea_token = ALB_midhat_frasheri
 			allowed  = {
-					original_tag  = ALB
-				}
-				traits  = {
-					popular_figurehead 
-				}
+				original_tag  = ALB
+			}
+			traits  = {
+				popular_figurehead 
+			}
 		}
 # TODO[ PORTRAIT LARGE ]: Missing large portrait please check!
 		name="Midhat Frashëri"

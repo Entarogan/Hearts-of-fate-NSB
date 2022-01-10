@@ -24,9 +24,9 @@ ideas = {
 
 		SOV_Simplify_production_idea = {
 
-		available = {
-			SOV = { has_war = yes }
-		}
+			available = {
+				SOV = { has_war = yes }
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -48,30 +48,30 @@ ideas = {
 					build_cost_ic = -0.30 
 				}
 
-			motorized_equipment = {
+				motorized_equipment = {
+						reliability = -0.15 instant = yes
+						build_cost_ic = -0.30
+				}
+
+				fighter_equipment = {				
 					reliability = -0.15 instant = yes
 					build_cost_ic = -0.30
-			}
+				}
 
-			fighter_equipment = {				
-				reliability = -0.15 instant = yes
-				build_cost_ic = -0.30
-			}
+				CAS_equipment = {
+					reliability = -0.15 instant = yes
+					build_cost_ic = -0.30 
+				}
 
-			CAS_equipment = {
-				reliability = -0.15 instant = yes
-				build_cost_ic = -0.30 
-			}
+				infantry_equipment = {
+					reliability = -0.15 instant = yes
+					build_cost_ic = -0.30 
+				}
 
-			infantry_equipment = {
-				reliability = -0.15 instant = yes
-				build_cost_ic = -0.30 
-			}
-
-			artillery_equipment = {
-				reliability = -0.15 instant = yes
-				build_cost_ic = -0.30 
-			}
+				artillery_equipment = {
+					reliability = -0.15 instant = yes
+					build_cost_ic = -0.30 
+				}
 
 		    }
 
@@ -1246,9 +1246,9 @@ ideas = {
 			
 			traits = { Practical_spy_chief }
 
-      ai_will_do = {
-        factor = 3
-      }
+			ai_will_do = {
+			factor = 3
+			}
 
 		}
 
@@ -1284,13 +1284,13 @@ ideas = {
   
 			traits = { Economic_planner }
 
-      ai_will_do = {
-        factor = 4
+			ai_will_do = {
+				factor = 4
 				modifier = {
 					factor = 5
 					has_war = no
 				}
-      }
+			}
 
 		}
 
@@ -1301,12 +1301,7 @@ ideas = {
 			allowed = {
 				always = no
 				original_tag = SOV
-        has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
-			}
-
-			available = 
-			{
-
+      			has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
 			}
 			
 			traits = { Practical_spy_chief_1 }
@@ -1321,7 +1316,7 @@ ideas = {
 			}
 
 			available = {
-        has_country_flag = SOV_Enable_Sudoplatov_flag
+        		has_country_flag = SOV_Enable_Sudoplatov_flag
 			}
 			
 			traits = { Ace_Undercover }
@@ -2418,7 +2413,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-			cat_mass_assault = 0.1
+				cat_mass_assault = 0.1
 				armor = 0.1
 			}
 			

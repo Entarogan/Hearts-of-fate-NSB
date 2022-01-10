@@ -6,17 +6,17 @@ characters={
 			idea_token = RUS_sergey_taboritsky
 			allowed  = {
 					original_tag  = RUS
-				}
-				available  = {
-					is_puppet  = no 
-					has_completed_focus  = rus_all_russian_supreme_government 
-				}
-				traits  = {
-					fanatic_monarchist 
-				}
-				ai_will_do  = {
-					factor  = 4.000
-				}
+			}
+			available  = {
+				is_puppet  = no 
+				has_completed_focus  = rus_all_russian_supreme_government 
+			}
+			traits  = {
+				fanatic_monarchist 
+			}
+			ai_will_do  = {
+				factor  = 4.000
+			}
 		}
 		portraits={
 			army={
@@ -192,7 +192,7 @@ characters={
 		name="Nikolay Krylov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Nikolay_Krylov.dds"
@@ -224,7 +224,7 @@ characters={
 		}
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			navy={
 				small="GFX_idea_RUS_mikhail_berens"
@@ -258,7 +258,7 @@ characters={
 		}
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			navy={
 				small="GFX_idea_RUS_nestor_monastyrev"
@@ -455,7 +455,7 @@ characters={
 		name="Pyotr Wrangel"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/portrait_Pyotr_Wrangel.png"
@@ -475,7 +475,7 @@ characters={
 		name="Anatoly Pepelyaev"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Russia_Anatoly_Pepelyayev.png"
@@ -495,7 +495,7 @@ characters={
 		name="Grigory Semyonov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/portrait_Grigory_Semyenov.png"
@@ -515,7 +515,7 @@ characters={
 		name="Imran Zakhaev"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Imran_Zakhaev.dds"
@@ -535,7 +535,7 @@ characters={
 		name="Boris Annenkov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Russia_Boris_Annenkov.tga"
@@ -555,7 +555,7 @@ characters={
 		name="Pavel Batov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_pavel_ivanovich_batov.dds"
@@ -575,7 +575,7 @@ characters={
 		name="Michael Alexandrovich"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Michael_Alexandrovich.dds"
@@ -595,7 +595,7 @@ characters={
 		name="Mikhail Matkovsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_mikhail_matkovsky.dds"
@@ -615,7 +615,7 @@ characters={
 		name="Pistolet Bizon"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Pistolet_Pulemyot_Bizon.dds"
@@ -635,7 +635,7 @@ characters={
 		name="Helianthus"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Helianthus.dds"
@@ -655,7 +655,7 @@ characters={
 		name="Alexandra Nikonova"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Alexandra_Nikonova.dds"
@@ -675,7 +675,7 @@ characters={
 		name="Avtomat Kalashnikova"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Avtomat_Kalashnikova.dds"
@@ -695,7 +695,7 @@ characters={
 		name="Antona Kalashnikova"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Antona_Kalashnikova.dds"
@@ -715,7 +715,7 @@ characters={
 		name="Ruchnoy Kalashnikova"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Ruchnoy_Pulemyot_Kalashnikova.dds"
@@ -735,7 +735,7 @@ characters={
 		name="Sergey Baranovsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_TRM_Baranovsky.tga"
@@ -754,7 +754,7 @@ characters={
 		name="Dmitry Semenov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_TRM_Semenov.tga"
@@ -774,7 +774,7 @@ characters={
 		name="Vladimir Tolstov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_TRM_Tolstov.tga"
@@ -793,7 +793,7 @@ characters={
 		name="Vasiliy Boldyrev"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_TRM_Boldyrev.tga"
@@ -812,7 +812,7 @@ characters={
 		name="Vladimir Kappel"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_RUS_Vladimir_Kappel.png"
@@ -832,7 +832,7 @@ characters={
 		name="Mikhaïl Drozdovsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_RUS_Mikhail_Drozdovsky.png"
@@ -852,7 +852,7 @@ characters={
 		name="Mikhaïl Diterikhs"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Diterikhs.png"
@@ -872,7 +872,7 @@ characters={
 		name="Anton Turkul"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_RUS_Anton_Turkul.tga"
@@ -892,7 +892,7 @@ characters={
 		name="Mitrofan Nezhentsev"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Soviet_Mitrofan_Nezhentsev.tga"
@@ -912,7 +912,7 @@ characters={
 		name="Ivan Romanovsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_RUS_Ivan_Romanovsky.tga"
@@ -932,7 +932,7 @@ characters={
 		name="Vladimir Manshteyn"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_RUS_Vladimir_Manshteyn.png"
@@ -990,7 +990,7 @@ characters={
 		name="Vasili Chernetsov"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Soviet_Vasili_Chernetsov.tga"
@@ -1010,7 +1010,7 @@ characters={
 		name="Roman von Ungern-Sternberg"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Ungern_Sternberg.dds"
@@ -1030,7 +1030,7 @@ characters={
 		name="Aleksandr Kolchak"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/portrait_Alexander_Kolchak.png"
@@ -1050,7 +1050,7 @@ characters={
 		name="Boris Vilkitsky"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Boris_Andreyevich_Vilkitsky.dds"

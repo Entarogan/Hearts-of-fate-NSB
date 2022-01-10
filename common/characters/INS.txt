@@ -55,10 +55,8 @@ characters={
 		name="Hein ter Poorten"
 		portraits={
 			army={
-				small="GFX_portrait_hol_hein_ter_poorten_small"
-			}
-			army={
 				large="GFX_portrait_hol_hein_ter_poorten"
+				small="GFX_portrait_hol_hein_ter_poorten_small"
 			}
 		}
 		field_marshal={

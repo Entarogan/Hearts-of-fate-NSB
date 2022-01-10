@@ -1,42 +1,148 @@
 characters={
-	AUS_kurt_schuschnigg={
-		name=AUS_kurt_schuschnigg
+	AUS_Steyr_Mannlicher={
+		name="Steyr Mannlicher"
 		portraits={
-			civilian={
-				large="gfx/leaders/AUS/Portrait_Austria_Kurt_Schuschnigg.dds"
+			civilian ={
+				large="gfx/leaders/AUS/Portrait_Steyr_Mannlicher.dds"
+			}
+			army={
+				large="gfx/leaders/AUS/Portrait_Steyr_Mannlicher.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
 			}
 		}
 		country_leader={
-			ideology=centrism
+			traits = {
+				Wachter_des_Vaterlandes
+			}
+			ideology = authoritarian_democracy
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ trickster trait_mountaineer infantry_officer }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id=1940
+		}
 	}
-	AUS_karl_renner={
-		name=AUS_karl_renner
+
+	AUS_Prince_Eugen={
+		name="Prince Eugen"
 		portraits={
-			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			civilian ={
+				large="gfx/leaders/AUS/Portrait_Prince_Eugen.dds"
+			}
+			army={
+				large="gfx/leaders/AUS/Portrait_Prince_Eugen.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
 			}
 		}
 		country_leader={
-			ideology=socialism
+			traits = {
+				Eugen_of_Savoy
+			}
+			ideology = nazism
 			expire="1965.1.1.1"
 			id=-1
 		}
+		corps_commander={
+			traits={ war_hero trickster organizer infantry_officer	career_officer	trait_mountaineer	brilliant_strategist naval_invader }
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 1939
+		}
 	}
+	AUS_karl_eglseer={
+		name=AUS_karl_eglseer
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster trait_mountaineer commando }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=1936
+		}
+	}
+	AUS_Erhard_Raus={
+		name=AUS_Erhard_Raus
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster armor_officer }
+			skill=3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id=1937
+		}
+	}
+	AUS_lothar_rendulic={
+		name=AUS_lothar_rendulic
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_mountaineer  }
+			skill=3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id=1938
+		}
+	}
+
+	AUS_Adolf_Hitler={
+		name=AUS_Adolf_Hitler
+		portraits={
+			army={
+				large="gfx/leaders/AUS/Portrait_Austria_Adolf_Hitler.dds"
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected	old_guard trait_reckless harsh_leader trickster }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id=2051
+		}
+	}
+
+
+
+
+
 	AUS_arthur_seyss-inquart={
 		name=AUS_arthur_seyss-inquart
 		portraits={
-			civilian={
+			army={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
-		}
-		country_leader={
-			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
 		}
 		advisor={
 			slot = political_advisor
@@ -49,37 +155,7 @@ characters={
 				}
 		}
 	}
-	AUS_alfred_klahr={
-		name=AUS_alfred_klahr
-		portraits={
-			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-			}
-		}
-		country_leader={
-			ideology=marxism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	AUS_karl_eglseer={
-		name=AUS_karl_eglseer
-		portraits={
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits={ trickster trait_mountaineer }
-			skill=3
-			attack_skill=2
-			defense_skill=3
-			planning_skill=3
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
+
 	AUS_odilo_globocnik={
 		advisor={
 			slot = army_chief
@@ -107,15 +183,15 @@ characters={
 			slot = air_chief
 			idea_token = AUS_alexander_lohr
 			allowed = {
-					original_tag = AUS
-				}
-				traits = {
-					air_chief_reform_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = AUS
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		name=AUS_alexander_lohr
 		portraits={
@@ -129,15 +205,15 @@ characters={
 			slot = navy_chief
 			idea_token = AUS_paul_von_hegedus
 			allowed = {
-					original_tag = AUS
-				}
-				traits = {
-					navy_chief_decisive_battle_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
+				original_tag = AUS
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 		name=AUS_paul_von_hegedus
 		portraits={
@@ -152,13 +228,13 @@ characters={
 			slot = theorist
 			idea_token = AUS_julius_yllam
 			ledger = air
-				allowed = {
-					original_tag = AUS
-				}
-				
-				traits = {
-					air_warfare_theorist
-				}
+			allowed = {
+				original_tag = AUS
+			}
+			
+			traits = {
+				air_warfare_theorist
+			}
 		}
 		name=AUS_julius_yllam
 		portraits={
@@ -173,13 +249,13 @@ characters={
 			slot = theorist
 			idea_token = AUS_otto_meixner_von_zweienstamm
 			ledger = army
-				allowed = {
-					original_tag = AUS
-				}
+			allowed = {
+				original_tag = AUS
+			}
 
-				traits = {
-					military_theorist
-				}
+			traits = {
+				military_theorist
+			}
 		}
 		name=AUS_otto_meixner_von_zweienstamm
 		portraits={

@@ -138,7 +138,7 @@ characters={
 		name="Edward Rydz-Śmigły"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Poland_Edward_Rydz_Smigly.tga"
@@ -218,7 +218,7 @@ characters={
 		name="Margaret Nearl"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Margaret_Nearl.dds"
@@ -238,7 +238,7 @@ characters={
 		name="Meteorite"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Meteorite.dds"
@@ -258,7 +258,7 @@ characters={
 		name="Grani"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Grani.dds"
@@ -278,7 +278,7 @@ characters={
 		name="Meteor"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Meteor.dds"
@@ -298,7 +298,7 @@ characters={
 		name="Platinum"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Platinum.dds"
@@ -318,7 +318,7 @@ characters={
 		name="Senomy"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/POL/Portrait_Senomy.dds"

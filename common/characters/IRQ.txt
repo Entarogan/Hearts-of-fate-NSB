@@ -28,11 +28,10 @@ characters={
 	IRQ_Enkidu={
 		name="Enkidu"
 		portraits={
-			army={
-				small=""
-			}
+
 			army={
 				large="gfx/leaders/IRQ/Portrait_Enkidu.dds"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -49,10 +48,8 @@ characters={
 		name="Ishtar"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/IRQ/Portrait_Ishtar.dds"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -93,10 +90,8 @@ characters={
 		name="Semiramis"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/IRQ/Portrait_Semiramis.dds"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		field_marshal={

@@ -36,9 +36,11 @@ focus_tree = {
 			set_country_flag = SOV_purge_started
 		}
 
-    bypass = {
-        has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
-    }
+		bypass = {
+			SOV_mikhail_tukhachevsky = {
+				is_country_leader = yes
+			}
+		}
 
 		available_if_capitulated = yes
 
@@ -89,7 +91,9 @@ focus_tree = {
 			always = no
 		}
 		bypass = {
-			has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		available_if_capitulated = yes
@@ -113,7 +117,9 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -142,7 +148,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -206,7 +214,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -261,7 +271,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -299,7 +311,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -342,7 +356,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -353,20 +369,20 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_manpower = -3627
+			add_manpower = -3627
 
-      add_stability = 0.05
+			add_stability = 0.05
 
-      if = {
-        limit = {
-            has_idea = nkvd_2
-            has_completed_focus = SOV_No_population_movement
-          }
-        swap_ideas = {
-            remove_idea = nkvd_2
-            add_idea = nkvd_3
-          }
-        }
+			if = {
+				limit = {
+					has_idea = nkvd_2
+					has_completed_focus = SOV_No_population_movement
+				}
+				swap_ideas = {
+					remove_idea = nkvd_2
+					add_idea = nkvd_3
+				}
+			}
 		
 		}
 	}
@@ -384,9 +400,10 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
-
 		bypass = {
 
 		}
@@ -428,7 +445,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -462,7 +481,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -492,7 +513,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -523,7 +546,9 @@ focus_tree = {
 		}
 
 		available = {
-      has_country_leader = { name = "Nikolai Yezhov"  ruling_only = yes }
+			SOV_nikolay_yezhov = {
+				is_country_leader = yes
+			}
 		}
 
 		bypass = {
@@ -558,7 +583,9 @@ focus_tree = {
       always = no
     }
     bypass = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
 
 		available_if_capitulated = yes
@@ -581,7 +608,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -627,7 +656,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -655,7 +686,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -685,7 +718,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -713,32 +748,30 @@ focus_tree = {
 			factor = 100
 		}
 
-    available = {
-      has_country_flag = Bukharin_becomes_general_secretary_flag
-    }
-    bypass = {
+		available = {
+		has_country_flag = Bukharin_becomes_general_secretary_flag
+		}
+		bypass = {
 
-    }
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-
-      add_ideas = SOV_Humane_communism_idea_1
-
-      create_country_leader = {
-        name = "Nikolay Bukharin"
-        desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-        picture = "Portrait_Soviet_Nikolai_Bukharin_2.dds"
-        expire = "1953.3.1"
-        ideology = leninism
-        traits = {
-          Advocate_of_New_Economic_Policy
-        }
-      }
-		hidden_effect = {
-			news_event = { id = more_News.44  hours = 3 }
-		}
+			add_ideas = SOV_Humane_communism_idea_1
+			add_country_leader_role = {
+				character = "SOV_nikola_bukharin"
+				country_leader = {
+					desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
+					ideology = leninism
+					traits = { Advocate_of_New_Economic_Policy }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}
+			hidden_effect = {
+				news_event = { id = more_News.44  hours = 3 }
+			}
 
 		}
 	}
@@ -757,7 +790,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+		SOV_nikola_bukharin = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -791,7 +826,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+		SOV_nikola_bukharin = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -829,7 +866,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+		SOV_nikola_bukharin = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -858,7 +897,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+		SOV_nikola_bukharin = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -887,7 +928,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+		SOV_nikola_bukharin = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -924,7 +967,9 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "Nikolay Bukharin"  ruling_only = yes }
+			SOV_nikola_bukharin = {
+				is_country_leader = yes
+			}
 		}
 		bypass = {
 
@@ -991,7 +1036,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1033,7 +1080,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1063,7 +1112,9 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+			SOV_mikhail_tukhachevsky = {
+				is_country_leader = yes
+			}
 		}
 		bypass = {
 
@@ -1102,7 +1153,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1138,7 +1191,9 @@ focus_tree = {
 		}
 
     available = {
-		has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+		SOV_mikhail_tukhachevsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1168,7 +1223,9 @@ focus_tree = {
 		}
 
 		available = {
-			has_country_leader = { name = "Mikhail Tukhachevsky"  ruling_only = yes }
+			SOV_mikhail_tukhachevsky = {
+				is_country_leader = yes
+			}
 		}
 		bypass = {
 
@@ -1209,16 +1266,15 @@ focus_tree = {
 
       add_ideas = SOV_Revolutionary_vanguard_idea_1
 
-      create_country_leader = {
-        name = "Leon Trotsky"
-        desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-        picture = "Portrait_Soviet_Leon_Thotsky_2.png"
-        expire = "1953.3.1"
-        ideology = leninism
-        traits = {
-
-        }
-      }
+	  add_country_leader_role = {
+		character = "SOV_lev_trotsky"
+		country_leader = {
+			ideology = leninism
+			traits = {  }
+			expire = "1965.1.1"
+		}
+		promote_leader = yes 
+	}
 
 			hidden_effect = {
 				news_event = { id = more_News.42  hours = 3 }
@@ -1240,12 +1296,14 @@ focus_tree = {
 			factor = 100
 		}
 
-    available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
-    }
-    bypass = {
+		available = {
+			SOV_lev_trotsky = {
+				is_country_leader = yes
+			}
+		}
+		bypass = {
 
-    }
+		}
 
 		available_if_capitulated = yes
 
@@ -1272,7 +1330,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1314,7 +1374,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1343,7 +1405,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1377,7 +1441,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -1413,7 +1479,9 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
     }
     bypass = {
 
@@ -4362,7 +4430,9 @@ focus_tree = {
 
 			if = {
 				limit = {
-					has_country_leader = { name = "Makiri Zolgen"  ruling_only = yes }
+					SOV_makiri_zolgen = {
+						is_country_leader = yes
+					}
 				}
 				add_tech_bonus = {
 					name = SOV_Support_the_zorgen_Institute
@@ -5692,8 +5762,10 @@ focus_tree = {
 		}
 
     available = {
-      has_country_leader = { ruling_only = yes name = "Leon Trotsky" } 
-      has_army_manpower = { size > 1499999 }
+		SOV_lev_trotsky = {
+			is_country_leader = yes
+		}
+     	has_army_manpower = { size > 1499999 }
 			custom_trigger_tooltip = {
 				tooltip = SOV_has_not_lacking_industrialization_tt
 				NOT = { has_idea = SOV_lacking_industrialization_1 }			
@@ -5801,7 +5873,9 @@ focus_tree = {
 		}
 
     available = {
-      NOT = { has_country_leader = { ruling_only = yes name = "Leon Trotsky" } }
+		SOV_lev_trotsky = {
+			is_country_leader = no
+		}
       has_army_manpower = { size > 1499999 }
 			custom_trigger_tooltip = {
 				tooltip = SOV_has_not_lacking_industrialization_tt
@@ -6742,5 +6816,4 @@ focus_tree = {
 			}
 		}
 	}
-
 }

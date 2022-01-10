@@ -116,7 +116,7 @@ characters={
 		name="Beowulf"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Beowulf.dds"
@@ -285,7 +285,7 @@ characters={
 		name="Tryka"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Tyrka.dds"
@@ -305,7 +305,7 @@ characters={
 		name="Brynhildr"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Brynhildr.dds"

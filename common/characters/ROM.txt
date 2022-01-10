@@ -198,7 +198,7 @@ characters={
 		name="Ion Mota"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Ion_Mota.png"
@@ -218,7 +218,7 @@ characters={
 		name="Vasile Marin"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Vasile_Marin.png"
@@ -238,7 +238,7 @@ characters={
 		name="Constantin Constantinescu-Claps"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Constantin_Constantinescu_Claps.png"
@@ -258,7 +258,7 @@ characters={
 		name="Nicolae Macici"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Nicolae_Macici.png"
@@ -278,7 +278,7 @@ characters={
 		name="Constantin Pantazi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Constantin_Pantazi.png"
@@ -297,7 +297,7 @@ characters={
 		name="Nicolae Ciuperca"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Nicolae_Ciuperca.png"
@@ -317,7 +317,7 @@ characters={
 		name="Ion Glogojanu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Ion_Glogojanu.png"
@@ -337,7 +337,7 @@ characters={
 		name="Leonard Mociulschi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Leonard_Mociulschi.png"
@@ -357,7 +357,7 @@ characters={
 		name="Dumitru Popescu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Dumitru_Popescu.png"
@@ -377,7 +377,7 @@ characters={
 		name="Corneliu Dragalina"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Corneliu_Dragalina.png"
@@ -397,7 +397,7 @@ characters={
 		name="Florea Tenescu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_ROM_Florea_Tenescu.png"
@@ -417,7 +417,7 @@ characters={
 		name="Fiore Forvedge Yggdmillennia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Fiore_Forvedge_Yggdmillennia.dds"
@@ -437,7 +437,7 @@ characters={
 		name="Celenike Icecolle Yggdmillennia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Celenike_Icecolle_Yggdmillennia.dds"
@@ -457,7 +457,7 @@ characters={
 		name="Gordes Musik Yggdmillennia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Gordes_Musik_Yggdmillennia.dds"
@@ -477,7 +477,7 @@ characters={
 		name="Caules Forvedge Yggdmillennia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Caules_Forvedge_Yggdmillennia.dds"
@@ -497,7 +497,7 @@ characters={
 		name="Roche Frain Yggdmillennia"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/ROM/Portrait_Roche_Frain_Yggdmillennia.dds"

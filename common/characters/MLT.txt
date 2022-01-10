@@ -40,7 +40,7 @@ characters={
 		name="Enrico Mizzi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MLT/Portrait_MLT_Enrico_Mizzi.tga"
@@ -60,7 +60,7 @@ characters={
 		name="Gerald Strickland"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MLT/Portrait_MLT_Gerald_Strickland.tga"
@@ -80,7 +80,7 @@ characters={
 		name="Paul Boffa"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MLT/Portrait_MLT_Paul_Boffa.tga"
