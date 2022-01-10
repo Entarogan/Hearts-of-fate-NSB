@@ -1817,7 +1817,7 @@ characters={
 		name="Miyamoto Musashi"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_miyamoto"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_miyamoto_musashi.dds"
