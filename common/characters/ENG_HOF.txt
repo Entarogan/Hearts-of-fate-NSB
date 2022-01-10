@@ -102,7 +102,7 @@ characters={
 	ENG_Waver={
 		name = "Lord El Melloi II"
 		portraits={
-			civilian={
+			army={
 				large="gfx/leaders/ENG/Portrait_Waver.dds"
 				small = "GFX_idea_advisor_elmelloi"
 			}

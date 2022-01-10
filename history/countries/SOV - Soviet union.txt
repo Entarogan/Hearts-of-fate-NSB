@@ -176,6 +176,56 @@ recruit_character = SOV_arseniy_golovko
 recruit_character = SOV_vasily_chapayeva
 recruit_character = SOV_nikolay_aliyarbekov
 
+##
+recruit_character = SOV_alexander_shliapnikov
+recruit_character = SOV_nikolay_krestinsky
+recruit_character = SOV_alexei_rykov
+recruit_character = SOV_alexandra_kollontai
+recruit_character = SOV_yevgeni_preobrazhensky
+recruit_character = SOV_sanya_litvyak
+recruit_character = SOV_makiri_zolgen
+recruit_character = SOV_mikhail_kalinin
+recruit_character = SOV_lavrenty_beriya
+recruit_character = SOV_vyacheslav_molotov
+recruit_character = SOV_nikolai_voznesensky
+recruit_character = SOV_pavel_sudoplatov
+recruit_character = SOV_pistolet_makarova
+recruit_character = SOV_boris_savinkov
+recruit_character = SOV_grigory_zinovyev
+recruit_character = SOV_karl_radek
+recruit_character = SOV_lev_kamenev
+recruit_character = SOV_nikola_bukharin
+recruit_character = SOV_aleksandr_yegorov
+recruit_character = SOV_vasily_blyukher
+recruit_character = SOV_pyotr_smirnov
+recruit_character = SOV_mikhail_frinovsky
+recruit_character = SOV_nikolay_kuznetsov
+recruit_character = SOV_ivan_yumashev
+recruit_character = SOV_aleksandr_novikov
+recruit_character = SOV_konstantin_vershinin
+recruit_character = SOV_yakov_smushkevich
+recruit_character = SOV_pavel_rychagov
+recruit_character = SOV_pavel_zhigarev
+recruit_character = SOV_sergey_khudyakov
+recruit_character = SOV_stepan_krasovsky
+recruit_character = SOV_vladimir_tributs
+recruit_character = SOV_sergey_rudenko
+recruit_character = SOV_aleksandr_golovanov
+recruit_character = SOV_igor_kurchatov
+recruit_character = SOV_nikolay_yezhov
+recruit_character = SOV_lev_trotsky
+
+recruit_character = SOV_andrei_zhdanov
+recruit_character = SOV_lazar_kaganovich
+recruit_character = SOV_yakov_dzhugashvili
+
+
+
+
+
+
+
+
 
 ### VARIANTS ###
 # 1936 Start #

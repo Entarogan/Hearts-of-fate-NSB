@@ -23,7 +23,7 @@ characters={
 		name="Yoshiko Kawashima"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/portrait_man_yoshiko_kawashima_army.dds"
@@ -72,7 +72,7 @@ characters={
 		name="Yamashita Tomoyuki"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_MAN_Tomoyuki_Yamashita.png"
@@ -92,7 +92,7 @@ characters={
 		name="Tanaka Shizuichi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_MAN_Shizuichi_Tanaka.png"
@@ -112,7 +112,7 @@ characters={
 		name="Okamura Yasuji"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_MAN_Yasuji_Okamura.png"
@@ -132,7 +132,7 @@ characters={
 		name="Mutaguchi Renya"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_MAN_Renya_Mutaguchi.png"
@@ -152,7 +152,7 @@ characters={
 		name="Nishio Toshizo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_MAN_Toshizo_Nishio.png"
@@ -172,7 +172,7 @@ characters={
 		name="Akasaka Saburo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_JAP_Akasaka_Saburo.png"
@@ -192,7 +192,7 @@ characters={
 		name="Itagaki Seishiro"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_JAP_Seishiro_Itagaki.png"
@@ -212,7 +212,7 @@ characters={
 		name="Ishiwara Kanji"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MAN/Portrait_JAP_Kanji_Ishiwara.png"

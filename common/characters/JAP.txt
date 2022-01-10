@@ -1817,7 +1817,7 @@ characters={
 		name="Miyamoto Musashi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_miyamoto_musashi.dds"
@@ -1977,7 +1977,7 @@ characters={
 		name="Sasaki Kojiro"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_sasaki_kojiro.dds"
@@ -1997,7 +1997,7 @@ characters={
 		name="Suzuka Gozen"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_suzuka_gozen.dds"
@@ -2017,7 +2017,7 @@ characters={
 		name="Fuma Kotaro"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_fuma_kotaro.dds"
@@ -2037,7 +2037,7 @@ characters={
 		name="Kiyohime"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_kiyohime.dds"
@@ -2099,7 +2099,7 @@ characters={
 		name="Kato Danzo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_kato_danzo.dds"
@@ -2119,7 +2119,7 @@ characters={
 		name="Mochizuki Chiyome"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_mochizuki_chiyome.dds"
@@ -2139,7 +2139,7 @@ characters={
 		name="Okada Izo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_okada_izo.dds"
@@ -2159,7 +2159,7 @@ characters={
 		name="Masashibo Benkei"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_masahibo_benkei.dds"
@@ -2179,7 +2179,7 @@ characters={
 		name="Hozoin Inshun"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Hozoin_inshun.dds"
@@ -2199,7 +2199,7 @@ characters={
 		name="Cha Cha"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_chacha.dds"
@@ -2219,7 +2219,7 @@ characters={
 		name="Sei Shonagon"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Seishonagon.dds"
@@ -2239,7 +2239,7 @@ characters={
 		name="Beni-enma"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_beni_enma.dds"
@@ -2259,7 +2259,7 @@ characters={
 		name="Konpaku Youmu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Konpaku_Youmu.dds"
@@ -2356,7 +2356,7 @@ characters={
 		name="Moriya Suwako"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Moriya_Suwako.dds"
@@ -2376,7 +2376,7 @@ characters={
 		name="Katsushika Hokusai"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Katsushika_Hokusai.dds"
@@ -2432,7 +2432,7 @@ characters={
 		name="Akagi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Akagi.png"
@@ -2452,7 +2452,7 @@ characters={
 		name="Kirishima"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Kirishima.png"
@@ -2472,7 +2472,7 @@ characters={
 		name="Haruna"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Haruna.png"
@@ -2492,7 +2492,7 @@ characters={
 		name="Mutsu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Mutsu.dds"
@@ -2512,7 +2512,7 @@ characters={
 		name="Kongo"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Kongou.png"
@@ -2568,7 +2568,7 @@ characters={
 		name="Abukuma"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Abukuma.png"
@@ -2588,7 +2588,7 @@ characters={
 		name="Choukai"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Choukai.png"
@@ -2608,7 +2608,7 @@ characters={
 		name="Jintsuu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Jintsuu.png"
@@ -2628,7 +2628,7 @@ characters={
 		name="Kawakaze"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Kawakaze.png"
@@ -2648,7 +2648,7 @@ characters={
 		name="Kawashiro Nitori"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Kawashiro_Nitori.png"
@@ -2668,7 +2668,7 @@ characters={
 		name="Maya"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Maya.png"
@@ -2688,7 +2688,7 @@ characters={
 		name="Murasa Minamitsu"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Murasa_Minamitsu.png"
@@ -2708,7 +2708,7 @@ characters={
 		name="Shigure"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Shigure.png"
@@ -2728,7 +2728,7 @@ characters={
 		name="Yukikaze"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Yukikaze.png"
@@ -2748,7 +2748,7 @@ characters={
 		name="Yuudachi"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Yuudachi.png"
@@ -2768,7 +2768,7 @@ characters={
 		name="Hiei"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_Hiei.png"

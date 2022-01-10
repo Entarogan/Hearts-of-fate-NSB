@@ -885,18 +885,15 @@ country_event = {
 
         kill_country_leader = yes
 
-create_country_leader = {
-	name = "Nikolai Yezhov"
-	desc = "POLITICS_NIKOLAI_YEZHOV_DESC"
-	picture = "Portrait_Soviet_Nikolai_Yezhov.TGA"
-	expire = "1953.3.1"
-	ideology = yezhovism
-	traits = {
-	 Blood_Dwarf
-     mysterious
-	}
-}
-
+		add_country_leader_role = {
+			character = "SOV_nikolay_yezhov"
+			country_leader = {
+				ideology = yezhovism
+				traits = { Blood_Dwarf mysterious}
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
 	}
 }
 
@@ -1034,15 +1031,15 @@ country_event = {
 			remove_ideas = trotskyite_plot
 		}
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Leon Trotsky"
-			desc = "POLITICS_LEON_TROTSKY_DESC"
-			picture = "Portrait_Leon_Trotsky.dds"
-			expire = "1965.1.1"
-			ideology = leninism
-			traits = {
-				permanent_revolutionary
+		add_country_leader_role = {
+			character = "SOV_lev_trotsky"
+			country_leader = {
+				ideology = leninism
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				traits = { permanent_revolutionary }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		remove_ideas = mikhail_kalinin
 		remove_ideas = ivan_konev
@@ -1077,14 +1074,15 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Ivan Konev"
-					desc = "POLITICS_IVAN_KONEV_DESC"
-					picture = "Portrait_Soviet_Ivan_Konev.dds"
-					expire = "1965.1.1"
-					ideology = oligarchism
-					traits = {
+				add_country_leader_role = {
+					character = "SOV_ivan_konev"
+					country_leader = {
+						desc = "POLITICS_IVAN_KONEV_DESC"
+						ideology = oligarchism
+						traits = { permanent_revolutionary }
+						expire = "1965.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 6 id = news.221 }
@@ -1861,14 +1859,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1889,7 +1896,9 @@ country_event = {
     always = no
 		tag = SOV
 		has_country_flag = SOV_purged_1
-		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
+		SOV_nikolay_yezhov = {
+			is_country_leader = no
+		}
 	}
 
 	mean_time_to_happen = { days = 90 }
@@ -1909,14 +1918,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1937,7 +1955,10 @@ country_event = {
     always = no
 		tag = SOV
 		has_country_flag = SOV_purged_2
-		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
+		SOV_nikolay_yezhov = {
+			is_country_leader = no
+		}
+		
 	}
 
 	mean_time_to_happen = { days = 90 }
@@ -1957,14 +1978,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }
@@ -1985,7 +2015,9 @@ country_event = {
     always = no
 		tag = SOV
 		has_country_flag = SOV_purged_3
-		NOT = { has_country_leader = { ruling_only = yes name = "Nikolai Yezhov" } }
+		SOV_nikolay_yezhov = {
+			is_country_leader = no
+		}
 	}
 
 	mean_time_to_happen = { days = 90 }
@@ -2005,14 +2037,23 @@ country_event = {
 					has_government = neutrality
 				}
 				kill_country_leader = yes
-				create_country_leader = {
-					name = "Andrey Vlasov"
-					desc = "POLITICS_ANDREY_VLASOV_DESC"
-					picture = "Portrait_Soviet_Andrey_Vlasov.dds"
-					expire = "1965.1.1"
-					ideology = moderatism
-					traits = {
+		#		create_country_leader = {
+		#			name = "Andrey Vlasov"
+			#		desc = "POLITICS_ANDREY_VLASOV_DESC"
+			#		picture = "Portrait_Soviet_Andrey_Vlasov.dds"
+		#			expire = "1965.1.1"
+		#			ideology = moderatism
+		#			traits = {
+		#			}
+		#		}
+				add_country_leader_role = {
+					character = "SOV_andrey_vlasov"
+					country_leader = {
+						ideology = moderatism
+						traits = {  }
+						expire = "1965.3.1.1"
 					}
+					promote_leader = yes 
 				}
 			}
 			news_event = { hours = 3 id = news.220 }

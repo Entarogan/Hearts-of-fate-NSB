@@ -18,8 +18,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FRA_maurice_gamelin.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Maurice_Gamelin.dds"
 			}
 		}
@@ -36,10 +34,8 @@ characters={
 		name="Maxime Weygand"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_FRA_maxime_weygand.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Maxime_Weygand.dds"
+				small="gfx/interface/ideas/idea_FRA_maxime_weygand.dds"
 			}
 		}
 		corps_commander={
@@ -55,11 +51,10 @@ characters={
 	FRA_alphonse_georges={
 		name="Alphonse Georges"
 		portraits={
-			army={
-				small="gfx/interface/ideas/idea_FRA_alphonse_joseph_georges.dds"
-			}
+
 			army={
 				large="gfx/leaders/FRA/Portrait_France_Alphonse_Joseph_Georges.dds"
+				small="gfx/interface/ideas/idea_FRA_alphonse_joseph_georges.dds"
 			}
 		}
 		corps_commander={
@@ -75,10 +70,9 @@ characters={
 	FRA_philippe_leclerc={
 		name="Philippe Leclerc"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_FRA_philippe_leclerc.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Philippe_Leclerc.dds"
 			}
 		}
@@ -95,10 +89,9 @@ characters={
 	FRA_jeanmarie_charles_abrial={
 		name="Jean-Marie Charles Abrial"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_FRA_jean-marie_charles_abrial.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Jean-Marie_Charles_Abrial.dds"
 			}
 		}
@@ -115,10 +108,9 @@ characters={
 	FRA_jeanpierre_esteva={
 		name="Jean-Pierre Esteva"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_FRA_jean-pierre_esteva.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Jean-Pierre_Esteva.dds"
 			}
 		}
@@ -135,10 +127,9 @@ characters={
 	FRA_gilles_de_rais={
 		name="Gilles de Rais"
 		portraits={
+
 			army={
 				small="GFX_idea_chief_gilles"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_Giless.dds"
 			}
 		}
@@ -248,13 +239,11 @@ characters={
 	FRA_Jeanne_Darc={
 		name="Jeanne D'Arc"
 		portraits={
-			army={
-				small="GFX_idea_advisor_jeanne"
-			}
 			navy={
 				small="GFX_idea_jeanne_admiral"
 			}
 			army={
+				small="GFX_idea_advisor_jeanne"
 				large="gfx/leaders/FRA/Portrait_Jeanne.dds"
 			}
 		}
@@ -316,8 +305,6 @@ characters={
 		portraits={
 			army = {
 				small="GFX_idea_harvey"
-			}
-			civilian={
 				large="gfx/leaders/FRA/Portrait_Leo_B_Harvey.dds"
 			}
 		}
@@ -380,10 +367,9 @@ characters={
 	FRA_charlemagne={
 		name="Charlemagne"
 		portraits={
+
 			army={
 				small="GFX_idea_command_charlemagne"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_Charlemagne.dds"
 			}
 		}
@@ -416,10 +402,9 @@ characters={
 	FRA_napoléon_bonaparte={
 		name=Napoleon
 		portraits={
+
 			army={
 				small="GFX_idea_command_nepoleon"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_Napoleon.dds"
 			}
 		}
@@ -601,9 +586,7 @@ characters={
 		name=FRA_dEon
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_Chevalier.dds"
 			}
 		}
@@ -633,8 +616,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_chief_edmond"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_Edmond.dds"
 			}
 		}
@@ -667,10 +648,9 @@ characters={
 	FRA_jeanne_darc_alter_lily={
 		name="Jeanne D'Arc (Alter Lily)"
 		portraits={
+
 			army={
 				small="GFX_idea_command_alter_lily"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_Jeanne_Darc_lily.dds"
 			}
 		}
@@ -717,9 +697,7 @@ characters={
 		name="Charles-Henri Sanson"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_Sanson.dds"
 			}
 		}
@@ -736,10 +714,9 @@ characters={
 	FRA_paul_le_gentilhomme={
 		name="Paul Le Gentilhomme"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_France_Paul_Legentilhomme.tga"
 			}
 		}
@@ -757,9 +734,7 @@ characters={
 		name="Jean Touzet du Vigier"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_NFA_Jean_Touzet_du_Vigier.tga"
 			}
 		}
@@ -777,9 +752,7 @@ characters={
 		name="Louis Franchet D'Espèrey"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_NFA_Louis_Franchet_Esperey.tga"
 			}
 		}
@@ -797,9 +770,7 @@ characters={
 		name="Henri Lebocq"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_NFA_Henri_Lebocq.tga"
 			}
 		}
@@ -817,9 +788,7 @@ characters={
 		name="Jean Bart"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FRA/Portrait_Jean_Bart.dds"
 			}
 		}
@@ -838,8 +807,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_FRA_francois_darlan.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Francois_Darlan.dds"
 			}
 		}
@@ -856,10 +823,9 @@ characters={
 	FRA_renéÉmile_godfroy={
 		name="René-Émile Godfroy"
 		portraits={
+
 			army={
 				small="gfx/interface/ideas/idea_FRA_rene-emile_godfroy.dds"
-			}
-			army={
 				large="gfx/leaders/FRA/Portrait_France_Rene-Emile_Godfroy.dds"
 			}
 		}
@@ -1163,8 +1129,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_henri_giraud"
-			}
-			army={
 				large="gfx/leaders/FRA/portrait_france_henri_giraud.dds"
 			}
 		}

@@ -48,8 +48,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_izaak_reijnders_small"
-			}
-			army={
 				large="GFX_portrait_hol_izaak_reijnders"
 			}
 		}
@@ -68,8 +66,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_petrus_wilhelmus_best_small"
-			}
-			army={
 				large="GFX_portrait_hol_petrus_wilhelmus_best"
 			}
 		}
@@ -88,8 +84,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_godfried_van_voorst_tot_voorst_small"
-			}
-			army={
 				large="GFX_portrait_hol_godfried_van_voorst_tot_voorst"
 			}
 		}
@@ -108,8 +102,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_johannes_theodorus_furstner_small"
-			}
-			army={
 				large="GFX_portrait_hol_johannes_theodorus_furstner"
 			}
 		}
@@ -128,8 +120,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_conrad_helfrich_small"
-			}
-			army={
 				large="GFX_portrait_hol_conrad_helfrich"
 			}
 		}
@@ -148,8 +138,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_portrait_hol_karel_doorman_small"
-			}
-			army={
 				large="GFX_portrait_hol_karel_doorman"
 			}
 		}
@@ -182,9 +170,7 @@ characters={
 		name="Bernhard of the Netherlands"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/HOL/bernhard.tga"
 			}
 		}

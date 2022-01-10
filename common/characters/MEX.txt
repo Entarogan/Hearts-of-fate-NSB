@@ -146,7 +146,7 @@ characters={
 		name="Jaguar man"
 		portraits={
 			army={
-				small=""
+				small="GFX_idea_advisor_unknown"
 			}
 			army={
 				large="gfx/leaders/MEX/Portrait_Jaguarman.dds"

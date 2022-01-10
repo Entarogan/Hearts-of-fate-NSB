@@ -97,10 +97,9 @@ characters={
 	FIC_alphonse_juin={
 		name="Alphonse Juin"
 		portraits={
+
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FIC/Portrait_France_Alphonse_Juin.png"
 			}
 		}
@@ -117,9 +116,7 @@ characters={
 		name="Maurice Janin"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FIC/Portrait_France_Maurice_Janin.dds"
 			}
 		}
@@ -156,10 +153,9 @@ characters={
 				}
 		}
 		portraits={
+
 			army={
 				small="GFX_idea_charles_de_gaulle"
-			}
-			army={
 				large="gfx/leaders/FIC/Portrait_France_Charles_De_Gaulle.dds"
 			}
 		}
@@ -177,9 +173,7 @@ characters={
 		name="Jean de Lattre de Tassigny"
 		portraits={
 			army={
-				small=""
-			}
-			army={
+				small="GFX_idea_advisor_unknown"
 				large="gfx/leaders/FIC/Portrait_France_Jean_de_Lattre_de_Tassigny.png"
 			}
 		}

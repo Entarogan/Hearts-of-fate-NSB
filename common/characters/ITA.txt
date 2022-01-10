@@ -2,11 +2,10 @@ characters={
 	ITA_pietro_badoglio={
 		name="Pietro Badoglio"
 		portraits={
-			army={
-				small="gfx/interface/ideas/idea_ITA_pietro_badoglio.dds"
-			}
+
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Pietro_Badoglio.dds"
+				small="gfx/interface/ideas/idea_ITA_pietro_badoglio.dds"
 			}
 		}
 		corps_commander={
@@ -23,10 +22,8 @@ characters={
 		name="Emilio De Bono"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_emilio_de_bono.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/portrait_italy_emilio_de_bono.dds"
+				small="gfx/interface/ideas/idea_ITA_emilio_de_bono.dds"
 			}
 		}
 		corps_commander={
@@ -57,10 +54,8 @@ characters={
 		name="Ugo Cavallero"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_ugo_cavallero.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Ugo_Cavallero.dds"
+				small="gfx/interface/ideas/idea_ITA_ugo_cavallero.dds"
 			}
 		}
 		corps_commander={
@@ -76,11 +71,10 @@ characters={
 	ITA_giovanni_messe={
 		name="Giovanni Messe"
 		portraits={
-			army={
-				small="gfx/interface/ideas/idea_ITA_giovanni_messe.dds"
-			}
+
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+				small="gfx/interface/ideas/idea_ITA_giovanni_messe.dds"
 			}
 		}
 		corps_commander={
@@ -109,10 +103,8 @@ characters={
 		name="Sebastiano Visconti Prasca"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_sebastiano_visconti_prasca.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Sebastiano_Visconti_Prasca.dds"
+				small="gfx/interface/ideas/idea_ITA_sebastiano_visconti_prasca.dds"
 			}
 		}
 		corps_commander={
@@ -129,10 +121,8 @@ characters={
 		name="Ubaldo Soddu"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_ubaldo_soddu.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Ubaldo_Soddu.dds"
+				small="gfx/interface/ideas/idea_ITA_ubaldo_soddu.dds"
 			}
 		}
 		corps_commander={
@@ -148,11 +138,10 @@ characters={
 	ITA_italo_balbo={
 		name="Italo Balbo"
 		portraits={
-			army={
-				small="gfx/interface/ideas/idea_ITA_italo_balbo.dds"
-			}
+
 			army={
 				large="gfx/leaders/ITA/portrait_italy_italo_balbo.dds"
+				small="gfx/interface/ideas/idea_ITA_italo_balbo.dds"
 			}
 		}
 		corps_commander={
@@ -187,10 +176,8 @@ characters={
 		name="Rodolfo Graziani"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_radolfo_graziani.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/portrait_italy_radolfo_graziani.dds"
+				small="gfx/interface/ideas/idea_ITA_radolfo_graziani.dds"
 			}
 		}
 		corps_commander={
@@ -221,11 +208,11 @@ characters={
 	ITA_inigo_campioni={
 		name="Inigo Campioni"
 		portraits={
-			army={
-				small="gfx/interface/ideas/idea_ITA_inigo_campioni.dds"
-			}
+
+				
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Inigo_Campioni.dds"
+				small="gfx/interface/ideas/idea_ITA_inigo_campioni.dds"
 			}
 		}
 		navy_leader={
@@ -256,10 +243,8 @@ characters={
 		name="Alberto Da Zara"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_alberto_da_zara.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Alberto_Da_Zara.dds"
+				small="gfx/interface/ideas/idea_ITA_alberto_da_zara.dds"
 			}
 		}
 		navy_leader={
@@ -276,10 +261,8 @@ characters={
 		name="Giuseppe Fioravanzo"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_giuseppe_fioravanzo.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Giuseppe_Fioravanzo.dds"
+				small="gfx/interface/ideas/idea_ITA_giuseppe_fioravanzo.dds"
 			}
 		}
 		navy_leader={
@@ -296,10 +279,8 @@ characters={
 		name="Carlo Bergamini"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_carlo_bergamini.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Carlo_Bergamini.dds"
+				small="gfx/interface/ideas/idea_ITA_carlo_bergamini.dds"
 			}
 		}
 		navy_leader={
@@ -316,10 +297,8 @@ characters={
 		name="Angelo Iachino"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_ITA_angelo_iachino.dds"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Angelo_Iachino.dds"
+				small="gfx/interface/ideas/idea_ITA_angelo_iachino.dds"
 			}
 		}
 		navy_leader={
@@ -346,10 +325,8 @@ characters={
 		name=ITA_caligula
 		portraits={
 			army={
-				small="GFX_idea_caligula"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Caligula.dds"
+				small="GFX_idea_caligula"
 			}
 		}
 		corps_commander={
@@ -514,10 +491,11 @@ characters={
 		name="Romulus"
 		portraits={
 			army={
-				small="GFX_idea_romulus"
+				
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_Romulus_Commander.dds"
+				small="GFX_idea_romulus"
 			}
 		}
 		field_marshal={
@@ -550,10 +528,11 @@ characters={
 		name="Julius Caesar"
 		portraits={
 			army={
-				small="GFX_idea_caesar"
+				
 			}
 			army={
 				large="gfx/leaders/ITA/Portrait_Caesar.dds"
+				small="GFX_idea_caesar"
 			}
 		}
 		corps_commander={
@@ -595,10 +574,8 @@ characters={
 		name="Antonio Salieri"
 		portraits={
 			army={
-				small="GFX_idea_salieri"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_Salieri.dds"
+				small="GFX_idea_salieri"
 			}
 		}
 		corps_commander={
@@ -632,10 +609,8 @@ characters={
 		name="Alberto Pariani"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Alberto_Pariani.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -652,10 +627,8 @@ characters={
 		name="Amedeo di Savoia-Aosta"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Amedeo.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -672,10 +645,8 @@ characters={
 		name="Annibale Bergonzoli"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Annibale_Bergonzoli.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -692,10 +663,8 @@ characters={
 		name="Arnaldo Azzi "
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Arnaldo_Azzi.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -712,10 +681,8 @@ characters={
 		name="Filiberto Duca di Pistoia"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Duca_Pistoia.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -732,10 +699,8 @@ characters={
 		name="Ettore Bastico"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Ettore_Bastico.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -752,10 +717,8 @@ characters={
 		name="Gabriele Nasci"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Gabriele_Nasci.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -772,10 +735,8 @@ characters={
 		name="Giuseppe Cordero Lanza di Montezemolo"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Giuseppe_Cordero_Lanza_di_Montezemolo.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -792,10 +753,8 @@ characters={
 		name="Giuseppe Izzo"
 		portraits={
 			army={
-				small=""
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Giuseppe_Izzo.png"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -812,10 +771,8 @@ characters={
 		name="Prince Umberto"
 		portraits={
 			army={
-				small="GFX_idea_umberto_ii"
-			}
-			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Prince_Umberto.png"
+				small="GFX_idea_umberto_ii"
 			}
 		}
 		corps_commander={

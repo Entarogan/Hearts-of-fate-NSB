@@ -18,8 +18,6 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_africa_generic_land_3.dds"
-			}
-			army={
 				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
 			}
 		}

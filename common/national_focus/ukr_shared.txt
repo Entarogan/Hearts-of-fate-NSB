@@ -11,9 +11,8 @@ shared_focus = {
 		always = no
 	}
 	bypass = {
-		has_country_leader = {
-			name = "Leonid Brezhnev"
-			ruling_only = yes
+		SOV_leonid_brezhnev = {
+			is_country_leader = yes
 		}
 	}
 	available_if_capitulated = yes
