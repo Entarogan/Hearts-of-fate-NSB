@@ -1,4 +1,4 @@
-name="Hearts of Fate: dev"
+name="Hearts of Fate: Patrie"
 version="1.8"
 tags={
 	"Alternative History"
@@ -6,4 +6,5 @@ tags={
 	"Map"
 	"National Focuses"
 }
-supported_version="1.11.*"
+supported_version="1.10.*"
+remote_file_id="1533160035"
