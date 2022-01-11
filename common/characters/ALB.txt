@@ -16,7 +16,7 @@ characters={
 		name="Enver Hoxha"
 		portraits={
 			civilian={
-				large="gfx/leaders/ALB/Hoxha.tga"
+				large="gfx/leaders/ALB/Portrait_Albania_Enver_Hoxha.tga"
 			}
 		}
 		country_leader={
