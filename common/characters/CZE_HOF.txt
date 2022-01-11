@@ -3,7 +3,7 @@ characters={
 		name="Západoslovanská Brno"
 		portraits={
 			civilian={
-				large="gfx/leaders/CZE/Portrait_Zapadoslavia_Brno.dds"
+				large="gfx/leaders/CZE/Portrait_Zapadoslavia_Brno.png"
 			}
 		}
 		country_leader={
@@ -16,7 +16,7 @@ characters={
 		name="Samopal Škorpion"
 		portraits={
 			civilian={
-				large="gfx/leaders/CZE/Portrait_Czech_Edvard_Benes.dds"
+				large="gfx/leaders/CZE/Portrait_Samopal_Skorpion.dds"
 			}
 		}
 		country_leader={
