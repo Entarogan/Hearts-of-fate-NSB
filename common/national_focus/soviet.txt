@@ -1266,15 +1266,15 @@ focus_tree = {
 
       add_ideas = SOV_Revolutionary_vanguard_idea_1
 
-	  add_country_leader_role = {
-		character = "SOV_lev_trotsky"
-		country_leader = {
-			ideology = leninism
-			traits = {  }
-			expire = "1965.1.1"
+	  	add_country_leader_role = {
+			character = "SOV_lev_trotsky"
+			country_leader = {
+				ideology = leninism
+				traits = {  }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
 		}
-		promote_leader = yes 
-	}
 
 			hidden_effect = {
 				news_event = { id = more_News.42  hours = 3 }

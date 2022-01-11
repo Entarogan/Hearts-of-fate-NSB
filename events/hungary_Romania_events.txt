@@ -825,18 +825,15 @@ country_event = {     # Romania： Iron Guard Protests
         add_idea = ROM_iron_guard_purged
         remove_idea = ROM_iron_guard_beginning
     }
-
-create_country_leader = {
-	name = "Horia Sima"
-	desc = ""
-	picture = "Portrait_Romania_Horia_Sima.tga"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-  
-	traits = {
-		#
+	add_country_leader_role = {
+		character = "ROM_horia_sima"
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {  }
+			expire = "1965.1.1"
+		}
+		promote_leader = yes 
 	}
-}
 
     hidden_effect = {
         news_event = { id = bd_news.7 hours = 16 }
@@ -859,34 +856,30 @@ create_country_leader = {
     }
 
         start_civil_war = {
-			 		ruling_party = neutrality
-			 		ideology = fascism
-			 		size = 0.2
-			 		only_own_territory = no
-				keep_unit_leaders = {
-					882 883 884 885 886 887 888
-				}
-			 	}
-
-create_country_leader = {
-	name = "Horia Sima"
-	desc = ""
-	picture = "Portrait_Romania_Horia_Sima.tga"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-  
-	traits = {
-		#
-	}
-}
-
-    ai_chance = {
-        factor = 1
+			ruling_party = neutrality
+			ideology = fascism
+			size = 0.2
+			only_own_territory = no
+			keep_unit_leaders = {
+				882 883 884 885 886 887 888
+			}
+		}
+		add_country_leader_role = {
+			character = "ROM_horia_sima"
+			country_leader = {
+				ideology = fascism_ideology
+				traits = {  }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		ai_chance = {
+			factor = 1
 			modifier = {
 				factor = 0
 				is_historical_focus_on = yes
 			}
-    }
+		}
     
 	}
 
@@ -907,7 +900,9 @@ country_event = {     # Romania： Fiore Resigns
 		date > 1942.5.1
 		has_civil_war = no
 		has_government = democratic
-    has_country_leader = {  name = "Fiore Forvedge Yggdmillennia" ruling_only = yes }
+		ROM_fiore_forvedge_yggdmillennia = {
+			is_country_leader = yes
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -919,20 +914,19 @@ country_event = {     # Romania： Fiore Resigns
 	# She could have a rest
 	option = {
 		name = bd_hun.31.a
-    add_stability = 0.05
-    ai_chance = {
-        factor = 3
-    }
-    create_country_leader = {
-      name = "Caules Forvedge Yggdmillennia"
-      desc = "POLITICS_FIORE_DESC"
-      picture = "gfx/leaders/ROM/Portrait_Caules_Forvedge_Yggdmillennia.dds"
-      expire = "1965.1.1"
-      ideology = liberalism
-      traits = {
-          new_blood
-      }
-    }
+		add_stability = 0.05
+		ai_chance = {
+			factor = 3
+		}
+		add_country_leader_role = {
+			character = "ROM_caules_forvedge_yggdmillennia"
+			country_leader = {
+				ideology = liberalism
+				traits = { new_blood }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
 	}
   
   # The country needs her!
