@@ -213,11 +213,12 @@ set_popularities = {
   neutrality = 8
 }
 
-recruit_character = AST_john_curtin
 
-recruit_character = AST_richard_dixon
-
-recruit_character = AST_rod_hull
+recruit_character = AST_George_V
+recruit_character = AST_Koharu_F_Riedenflaus
+recruit_character = AST_George_VI
+recruit_character = AST_Edward_VIII
+recruit_character = AST_Arc_Royal
 
 set_convoys = 100
 
