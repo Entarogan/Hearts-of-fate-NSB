@@ -85,7 +85,17 @@ recruit_character = ETH_seyoum_mengesha
 recruit_character = ETH_amare_makonnen
 recruit_character = ETH_queen_of_sheba
 recruit_character = ETH_geteye_seged
-
+add_country_leader_role = {
+	character = ETH_queen_of_sheba
+	country_leader = {
+		desc="POLITICS_HAILE_SELASSIE_DESC"
+		expire="1965.1.1.1"
+		ideology = despotism
+		traits = {
+		}
+	}
+	promote_leader = yes
+}
 
 
 

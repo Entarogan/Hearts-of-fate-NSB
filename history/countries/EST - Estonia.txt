@@ -135,6 +135,17 @@ set_popularities = {
 
 
 recruit_character = EST_theresa_apocalypse
+add_country_leader_role = {
+	character = EST_theresa_apocalypse
+	country_leader = {
+		desc="POLITICS_KONSTANTIN_PATS_DESC"
+		expire="1965.1.1.1"
+		ideology = socialism
+		traits = {
+		}
+	}
+	promote_leader = yes
+}
 recruit_character = EST_paavo_vaga
 recruit_character = EST_konstantin_veske
 
