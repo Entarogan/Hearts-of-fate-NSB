@@ -323,7 +323,6 @@ focus_tree = {
 			ROM_flandre_scarlet = {
 				is_country_leader = yes
 			}
-   
 			has_country_leader_with_trait = And_then_there_are_none
 			has_country_flag = ROM_Iron_Guard_Revolution_available
 		}
@@ -1831,7 +1830,7 @@ focus_tree = {
 			has_government = neutrality
 			has_idea = ROM_the_sentinel_of_the_motherland
 			OR = {
-				ROM_alice_margatroid = {
+				ROM_Remilia_scarlet = {
 					is_country_leader = yes
 				}
 				ROM_alice_margatroid = {
@@ -4977,6 +4976,7 @@ focus_tree = {
 						is_country_leader = yes
 					}
 					has_country_leader_with_trait = Laevatein
+				}
 			}
 		}
 		x = 0
@@ -5114,6 +5114,7 @@ focus_tree = {
 						is_country_leader = yes
 					}
 					has_country_leader_with_trait = Laevatein
+				}
 			}
 		}
 		completion_reward = {
