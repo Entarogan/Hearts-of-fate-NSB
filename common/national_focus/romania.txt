@@ -205,8 +205,11 @@ focus_tree = {
 				ROM_vlad_iii = {
 					is_country_leader = yes
 				}
-				ROM_flandre_scarlet = {
-					is_country_leader = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 			has_country_flag = ROM_Legionary_Kingdom_available
@@ -320,6 +323,8 @@ focus_tree = {
 			ROM_flandre_scarlet = {
 				is_country_leader = yes
 			}
+   
+			has_country_leader_with_trait = And_then_there_are_none
 			has_country_flag = ROM_Iron_Guard_Revolution_available
 		}
 		x = -2
@@ -4967,9 +4972,11 @@ focus_tree = {
 				ROM_vlad_iii = {
 					is_country_leader = yes
 				}
-				ROM_flandre_scarlet = {
-					is_country_leader = yes
-				}
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 			}
 		}
 		x = 0
@@ -5002,6 +5009,7 @@ focus_tree = {
 					ROM_flandre_scarlet = {
 						is_country_leader = yes
 					}
+					has_country_leader_with_trait = Laevatein
 				}
 				add_country_leader_role = {
 					character = "ROM_flandre_scarlet"
@@ -5101,9 +5109,11 @@ focus_tree = {
 				ROM_vlad_iii = {
 					is_country_leader = yes
 				}
-				ROM_flandre_scarlet = {
-					is_country_leader = yes
-				}
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 			}
 		}
 		completion_reward = {
@@ -5414,8 +5424,11 @@ focus_tree = {
 				ROM_vlad_iii = {
 					is_country_leader = yes
 				}
-				ROM_flandre_scarlet = {
-					is_country_leader = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 			has_idea = ROM_echipa_mortii
