@@ -1,10 +1,28 @@
 characters={
 	GER_gerd_von_rundstedt={
-		name="Gerd von Rundstedt"
+		name=GER_gerd_von_rundstedt
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gerd_von_rundstedt.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = gerd_von_rundstedt
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        NOT = { has_country_flag = GER_Continue_the_purge_flag }
+			}
+			traits = {
+				GER_rundstedt_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25
 			}
 		}
 		corps_commander={
@@ -18,7 +36,7 @@ characters={
 		}
 	}
 	GER_friedrich_paulus={
-		name="Friedrich Paulus"
+		name=GER_friedrich_paulus
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_paulus.dds"
@@ -36,11 +54,44 @@ characters={
 		}
 	}
 	GER_erwin_rommel={
-		name="Erwin Rommel"
+		name=GER_erwin_rommel
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_rommel.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = GER_erwin_rommel
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Active_minded_general }			
+		}	
+		advisor={
+			slot = high_command
+			idea_token = erwin_rommel
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        NOT = { has_country_flag = arrest_rommel }
+			}
+			traits = {
+				GER_rommel_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 50
 			}
 		}
 		corps_commander={
@@ -54,11 +105,46 @@ characters={
 		}
 	}
 	GER_erich_von_manstein={
-		name="Erich von Manstein"
+		name=GER_erich_von_manstein
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_von_manstein.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Erich_von_Manstein.dds"
+			}
+		}
+		advisor={
+			slot = special_third
+			idea_token = GER_manstein
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Master_of_Strategy }
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = manstein
+			allowed = {
+				original_tag = GER
+			}
+
+			cost = 100
+			research_bonus = {
+				cat_mobile_warfare = 0.15
+				armor = 0.1
+			}
+
+			traits = { GER_manstein_T }
+
+			ai_will_do = {
+				factor = 35
 			}
 		}
 		corps_commander={
@@ -72,12 +158,31 @@ characters={
 		}
 	}
 	GER_heinz_guderian={
-		name="Heinz Guderian"
+		name=GER_heinz_guderian
 		portraits={
 
 			army={
 				small="gfx/interface/ideas/idea_GER_heinz_guderian.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Heinz_Guderian.dds"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = heinz_guderian
+			allowed = {
+				original_tag = GER
+			}
+
+			cost = 100
+			research_bonus = {
+				land_doctrine = 0.10
+				armor = 0.1
+			}
+
+			traits = { GER_guderian_T }
+
+			ai_will_do = {
+				factor = 15
 			}
 		}
 		corps_commander={
@@ -91,7 +196,7 @@ characters={
 		}
 	}
 	GER_wilhelm_list={
-		name="Wilhelm List"
+		name=GER_wilhelm_list
 		portraits={
 
 			army={
@@ -110,7 +215,7 @@ characters={
 		}
 	}
 	GER_ewald_von_kleist={
-		name="Ewald von Kleist"
+		name=GER_ewald_von_kleist
 		portraits={
 
 			army={
@@ -129,7 +234,7 @@ characters={
 		}
 	}
 	GER_fedor_von_bock={
-		name="Fedor von Bock"
+		name=GER_fedor_von_bock
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_fedor_von_bock.dds"
@@ -147,11 +252,27 @@ characters={
 		}
 	}
 	GER_walter_model={
-		name="Walter Model"
+		name=GER_walter_model
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_model.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Model.dds"
+			}
+		}
+		advisor={
+			slot = special_third
+			idea_token = GER_Walter_Model
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Firefighter }
+
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		corps_commander={
@@ -165,7 +286,7 @@ characters={
 		}
 	}
 	GER_maximilian_von_weichs={
-		name="Maximilian von Weichs"
+		name=GER_maximilian_von_weichs
 		portraits={
 
 			army={
@@ -184,7 +305,7 @@ characters={
 		}
 	}
 	GER_wilhelm_ritter_von_leeb={
-		name="Wilhelm Ritter von Leeb"
+		name=GER_wilhelm_ritter_von_leeb
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_leeb.dds"
@@ -202,7 +323,7 @@ characters={
 		}
 	}
 	GER_georghans_reinhardt={
-		name="Georg-Hans Reinhardt"
+		name=GER_georghans_reinhardt
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_georg_von_reinhardt.dds"
@@ -220,11 +341,29 @@ characters={
 		}
 	}
 	GER_kurt_student={
-		name="Kurt Student"
+		name=GER_kurt_student
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_kurt_student.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = kurt_student
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+      available = {
+        has_completed_focus = GER_Fallschirmjager
+      }
+			traits = {
+				GER_student_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
 			}
 		}
 		corps_commander={
@@ -238,7 +377,7 @@ characters={
 		}
 	}
 	GER_erwin_von_witzleben={
-		name="Erwin von Witzleben"
+		name=GER_erwin_von_witzleben
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erwin_von_witzleben.dds"
@@ -256,7 +395,7 @@ characters={
 		}
 	}
 	GER_hermann_hoth={
-		name="Hermann Hoth"
+		name=GER_hermann_hoth
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_herman_hoth.dds"
@@ -274,7 +413,7 @@ characters={
 		}
 	}
 	GER_johannes_blaskowitz={
-		name="Johannes Blaskowitz"
+		name=GER_johannes_blaskowitz
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_johannes_blaskowitz.dds"
@@ -292,7 +431,7 @@ characters={
 		}
 	}
 	GER_paul_hausser={
-		name="Paul Hausser"
+		name=GER_paul_hausser
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_paul_hausser.dds"
@@ -310,7 +449,7 @@ characters={
 		}
 	}
 	GER_friedrich_schulz={
-		name="Friedrich Schulz"
+		name=GER_friedrich_schulz
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_friedrich_schulz.dds"
@@ -328,7 +467,7 @@ characters={
 		}
 	}
 	GER_alfred_jodl={
-		name="Alfred Jodl"
+		name=GER_alfred_jodl
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_jodl.dds"
@@ -346,7 +485,7 @@ characters={
 		}
 	}
 	GER_sepp_dietrich={
-		name="Sepp Dietrich"
+		name=GER_sepp_dietrich
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_josef_dietrich.dds"
@@ -364,7 +503,7 @@ characters={
 		}
 	}
 	GER_hasso_von_manteuffel={
-		name="Hasso von Manteuffel"
+		name=GER_hasso_von_manteuffel
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hasso_von_manteuffel.dds"
@@ -382,12 +521,29 @@ characters={
 		}
 	}
 	GER_albert_kesselring={
-		name="Albert Kesselring"
+		name=GER_albert_kesselring
 		portraits={
 
 			army={
 				small="gfx/interface/ideas/idea_GER_albert_kesselring.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Albert_Kesselring.dds"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Germany_Albert_Kesselring.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = albert_kesselring
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_kesselring_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 20
 			}
 		}
 		corps_commander={
@@ -401,7 +557,7 @@ characters={
 		}
 	}
 	GER_gotthard_heinrici={
-		name="Gotthard Heinrici"
+		name=GER_gotthard_heinrici
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gotthard_heinrici.dds"
@@ -419,7 +575,7 @@ characters={
 		}
 	}
 	GER_ernsteberhard_hell={
-		name="Ernst-Eberhard Hell"
+		name=GER_ernsteberhard_hell
 		portraits={
 
 			army={
@@ -438,7 +594,7 @@ characters={
 		}
 	}
 	GER_felix_steiner={
-		name="Felix Steiner"
+		name=GER_felix_steiner
 		portraits={
 			army={
 				small="GFX_portrait_ger_felix_steiner_small"
@@ -456,11 +612,25 @@ characters={
 		}
 	}
 	GER_erich_raeder={
-		name="Erich Raeder"
+		name=GER_erich_raeder
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_erich_raeder.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Erich_Raeder.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = raeder
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_reader_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
 			}
 		}
 		navy_leader={
@@ -474,7 +644,7 @@ characters={
 		}
 	}
 	GER_hermann_boehm={
-		name="Hermann Boehm"
+		name=GER_hermann_boehm
 		portraits={
 
 			army={
@@ -493,7 +663,7 @@ characters={
 		}
 	}
 	GER_wilhelm_marschall={
-		name="Wilhelm Marschall"
+		name=GER_wilhelm_marschall
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_marschall.dds"
@@ -511,12 +681,31 @@ characters={
 		}
 	}
 	GER_franz_halder={
-		name="Franz Halder"
+		name=GER_franz_halder
 		portraits={
 
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_franz_halder"
+			}
+			army={
 				large="gfx/leaders/GER/Portrait_Germany_Franz_Halder.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = franz_halder
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				date > 1942.1.1
+			}
+			traits = {
+				GER_halder_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		corps_commander={
@@ -530,7 +719,7 @@ characters={
 		}
 	}
 	GER_hans_von_luck={
-		name="Hans von Luck"
+		name=GER_hans_von_luck
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_hans_von_luck.dds"
@@ -548,7 +737,7 @@ characters={
 		}
 	}
 	GER_wilhelm_ritter_von_thoma={
-		name="Wilhelm Ritter von Thoma"
+		name=GER_wilhelm_ritter_von_thoma
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_wilhelm_ritter_von_thoma.dds"
@@ -566,13 +755,28 @@ characters={
 		}
 	}
 	GER_Herbert_Gille={
-		name="Herbert Gille"
+		name=GER_Herbert_Gille
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_Herbert_Gille"
+			}
+			army={
 				large="gfx/leaders/GER/Portrait_GER_Herbert_Gille_TST.dds"
 			}
 		}
+		advisor={
+			slot = special_fourth
+			idea_token = GER_Herbert_Gille
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Field_commander
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
 		corps_commander={
 			traits={ bearer_of_artillery brilliant_strategist cavalry_officer armor_officer politically_connected }
 			skill=4
@@ -584,11 +788,34 @@ characters={
 		}
 	}
 	GER_franz_von_hipper={
-		name="Franz von Hipper"
+		name=GER_franz_von_hipper
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_GER_franz_von_hipper"
+			}
+			army={
 				large="gfx/leaders/GER/Portrait_Franz_von_Hipper.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_fritz_schneewind
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 NOT = {
+					 has_country_flag = GER_Continue_the_purge_flag 
+				 }
+				 has_completed_focus = GER_Expanding_the_cruiser_formation
+			}
+			traits = {
+				navy_chief_decisive_battle_3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		navy_leader={
@@ -602,12 +829,32 @@ characters={
 		}
 	}
 	GER_fritz_schneewind={
-		name="Fritz Schneewind"
+		name=GER_fritz_schneewind
 		portraits={
 
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_GER_fritz_schneewind"
+			}
+			army={
 				large="gfx/leaders/GER/Portrait_Fritz_Schneewind.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_fritz_schneewind
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				 has_completed_focus = GER_Ocean_submarine	
+			}
+			traits = {
+				submarine_innovator
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		navy_leader={
@@ -621,7 +868,7 @@ characters={
 		}
 	}
 	GER_siegfried={
-		name="Siegfried"
+		name=GER_siegfried
 		portraits={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Siegfried.dds"
@@ -636,7 +883,7 @@ characters={
 		}
 	}
 	GER_arcueid_brunestud={
-		name="Arcueid Brunestud"
+		name=GER_arcueid_brunestud
 		portraits={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Arcueid_Brunestud.dds"
@@ -650,7 +897,7 @@ characters={
 		}
 	}
 	GER_dreiundneunzig_von_borchardt={
-		name="Dreiundneunzig von Borchardt"
+		name=GER_dreiundneunzig_von_borchardt
 		portraits={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Dreiundneunzig_von_Borchardt.dds"
@@ -664,7 +911,7 @@ characters={
 		}
 	}
 	GER_beatrix_brehmek={
-		name="Beatrix Brehmek"
+		name=GER_beatrix_brehmek
 		portraits={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Beatrix_Brehme.dds"
@@ -677,7 +924,7 @@ characters={
 		}
 	}
 	GER_günther_von_kluge={
-		name="Günther von Kluge"
+		name=GER_günther_von_kluge
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_gunther_von_kluge.dds"
@@ -694,8 +941,8 @@ characters={
 			legacy_id=2
 		}
 	}
-	GER_walter_krüger={
-		name="Walter Krüger"
+	GER_walter_kruger={
+		name=GER_walter_kruger
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_kruger.dds"
@@ -712,8 +959,8 @@ characters={
 			legacy_id=15
 		}
 	}
-	GER_georg_von_küchler={
-		name="Georg von Küchler"
+	GER_georg_von_kuchler={
+		name=GER_georg_von_kuchler
 		portraits={
 
 			army={
@@ -731,12 +978,29 @@ characters={
 			legacy_id=22
 		}
 	}
-	GER_karl_dönitz={
-		name="Karl Dönitz"
+	GER_karl_donitz={
+		name=GER_karl_donitz
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_karl_donitz.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Karl_Donitz.dds"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = donitz
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        has_government = fascism
+			}
+			traits = {
+				GER_donitz_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 20
 			}
 		}
 		navy_leader={
@@ -749,12 +1013,24 @@ characters={
 			legacy_id=26
 		}
 	}
-	GER_alfred_saalwächter={
-		name="Alfred Saalwächter"
+	GER_alfred_saalwachter={
+		name=GER_alfred_saalwachter
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_GER_alfred_saalwachter.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Alfred_Saalwachter.dds"
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = alfred_saalwachter
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_saalwachter_T
 			}
 		}
 		navy_leader={
@@ -767,13 +1043,28 @@ characters={
 			legacy_id=28
 		}
 	}
-	GER_günther_lütjens={
-		name="Günther Lütjens"
+	GER_gunther_lutjens={
+		name=GER_gunther_lutjens
 		portraits={
 
 			army={
 				small="gfx/interface/ideas/idea_GER_gunter_lutjens.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Gunter_Lutjens.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = gunther_lutjens
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_lutjens_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
 			}
 		}
 		navy_leader={
@@ -787,7 +1078,7 @@ characters={
 		}
 	}
 	GER_werner_von_blomberg={
-		name="Werner von Blomberg"
+		name=GER_werner_von_blomberg
 		portraits={
 
 			army={
@@ -805,12 +1096,36 @@ characters={
 			legacy_id=131
 		}
 	}
-	GER_ferdinand_schörner={
-		name="Ferdinand Schörner"
+	GER_ferdinand_schorner={
+		name=GER_ferdinand_schorner
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_ferdinand_schorner"
+			}
+			army={
 				large="gfx/leaders/GER/Portrait_Germany_Ferdinand_Scherner.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ferdinand_schorner
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_idea = GER_schmeisser_gewehr }	
+			}	
+	    traits = {
+				GER_schorner_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 0
+					NOT = { has_completed_focus = GER_Modernization_of_light_weapons }
+				}
 			}
 		}
 		corps_commander={
@@ -824,7 +1139,7 @@ characters={
 		}
 	}
 	GER_walter_wenck={
-		name="Walter Wenck"
+		name=GER_walter_wenck
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -842,7 +1157,7 @@ characters={
 		}
 	}
 	GER_kurt_von_schleicher={
-		name="Kurt von Schleicher"
+		name=GER_kurt_von_schleicher
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -860,7 +1175,7 @@ characters={
 		}
 	}
 	GER_hans_speidel={
-		name="Hans Speidel"
+		name=GER_hans_speidel
 		portraits={
 
 			army={
@@ -879,7 +1194,7 @@ characters={
 		}
 	}
 	GER_erich_von_ludendorff={
-		name="Erich Von Ludendorff"
+		name=GER_erich_von_ludendorff
 		portraits={
 
 			army={
@@ -898,7 +1213,7 @@ characters={
 		}
 	}
 	GER_hermann_ehrhardt={
-		name="Hermann Ehrhardt"
+		name=GER_hermann_ehrhardt
 		portraits={
 
 			army={
@@ -916,4 +1231,1788 @@ characters={
 			legacy_id=2027
 		}
 	}
+
+	GER_rudolf_hess={
+		name=GER_rudolf_hess
+		portraits={
+			army={
+				small="GFX_idea_rudolf_hess"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = rudolf_hess
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_idea = Ferdinand_von_Bredow_advisor }	
+				NOT = { has_country_flag = flight_of_hess }
+        has_government = fascism
+        NOT = { has_completed_focus = GER_Strasser_Project }
+			}
+			traits = {
+				GER_hess_T
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
+		}
+	}
+
+	GER_hjalmar_schacht={
+		name=GER_hjalmar_schacht
+		portraits={
+			army={
+				small="GFX_idea_hjalmar_schacht"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = hjalmar_schacht
+			cost = 75.000
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        has_war = no
+        NOT = { has_added_tension_amount > 15 }
+        NOT = { has_completed_focus = GER_Strasser_Project }
+			}
+			traits = {
+				GER_schacht_T
+			}
+			ai_will_do = {
+				factor = 150
+			}
+		}		
+	}
+
+	GER_fritz_todt={
+		name=GER_fritz_todt
+		portraits={
+			army={
+				small="GFX_idea_todt"
+			}
+			
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = todt
+			allowed = {
+				original_tag = GER
+			}
+
+			traits = {
+				GER_todt_T
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	GER_walther_funk={
+		name=GER_walther_funk
+		portraits={
+			army={
+				small="GFX_idea_walther_funk"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = walther_funk
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        or = {
+          has_completed_focus = GER_Goring_Project
+          has_country_flag = arrest_Strasser
+        }
+        custom_trigger_tooltip = {
+          tooltip = GER_Bring_in_foreign_workers_tt
+          any_state = {
+            NOT = { is_core_of = ROOT }
+            or = {
+              is_controlled_by = ROOT
+              any_country = {
+                is_subject_of = ROOT
+                controls_state = PREV
+              }
+            }
+          }
+        }
+			}
+			traits = {
+				GER_funk_T
+			}
+			ai_will_do = {
+				factor = 25
+			}
+		}		
+	}
+
+	GER_albert_speer={ 
+		name=GER_albert_speer
+		portraits={
+			army={
+				small="GFX_idea_speer"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = speer
+			cost = 75
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        or = {
+          has_completed_focus = GER_Authorize_the_new_armaments_minister
+          has_country_flag = arrest_Strasser
+        }
+			}
+			traits = {
+				GER_speer_T 
+			}
+			ai_will_do = {
+				factor = 75
+			}
+		}		
+	}
+
+	GER_joseph_goebbels={
+		name=GER_joseph_goebbels
+		portraits={
+			army={
+				small="GFX_idea_joseph_goebbels"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = joseph_goebbels
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_government = fascism
+        or = {
+          has_completed_focus = GER_General_Mobilization_Act
+          has_completed_focus = GER_Start_the_wartime_economy
+        }
+			}
+			traits = {
+				GER_goebbels_T
+			}
+			do_effect = {
+				NOT = {
+					has_government = fascism 
+				}
+			}
+			ai_will_do = {
+				factor = 70
+			}
+		}
+	}
+
+	GER_joachim_von_ribbentrop={
+		name=GER_joachim_von_ribbentrop
+		portraits={
+			army={
+				small="GFX_idea_joachim_von_ribbentrop"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = joachim_von_ribbentrop
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        has_government = fascism
+			}
+			traits = {
+				GER_ribbentrop_T
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	GER_konstantin_von_neurath={
+		name=GER_konstantin_von_neurath
+		portraits={
+			army={
+				small="GFX_idea_konstantin_von_neurath"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = konstantin_von_neurath
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_neurath_T
+			}
+			ai_will_do = {
+				factor = 3
+			}
+		}
+	}
+
+	GER_ludwig_beck={
+		name=GER_ludwig_beck
+		portraits={
+			army={
+				small="GFX_idea_ludwig_beck"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ludwig_beck
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_country_flag = arrest_beck }
+			}
+			traits = {
+				GER_beck_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 15
+			}
+		}
+	}
+
+	GER_walther_von_brauchitsch={
+		name=GER_walther_von_brauchitsch
+		portraits={
+			army={
+				small="GFX_idea_walther_von_brauchitsch"
+			}
+		}
+		advisor={	
+			slot = army_chief
+			idea_token = walther_von_brauchitsch
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_New_tactics
+			}
+			traits = {
+				GER_brauchitsch_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 15
+			}
+		}
+	}
+
+	GER_hermann_goring={
+		name=GER_hermann_goring
+		portraits={
+			army={
+				small="GFX_idea_goering"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Germany_Hermann_Goring.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = herman_Goring_advisor
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_idea = goering }	
+        NOT = { has_country_flag = arrest_goering }
+				has_completed_focus = GER_Goring_Project
+				NOT = { has_completed_focus = GER_Authorize_the_new_armaments_minister }
+			}
+			traits = {
+				Corrupt_bureaucracy Military_builders
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = goering
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_idea = herman_Goring_advisor }	
+        NOT = { has_country_flag = arrest_goering }
+        has_government = fascism
+			}
+			traits = {
+				GER_goring_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 30
+			}
+		}
+	}
+
+	GER_ritter_von_greim={
+		name=GER_ritter_von_greim
+		portraits={
+			army={
+				small="GFX_idea_ritter_von_greim"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ritter_von_greim
+			allowed = {
+				original_tag = GER
+			}
+      available = {
+        has_completed_focus = GER_air_innovation
+      }
+			traits = {
+				GER_greim_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25
+			}
+		}
+	}
+
+	GER_werner_von_fritsch={
+		name=GER_werner_von_fritsch
+		portraits={
+			army={
+				small="GFX_idea_werner_von_fritsch"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = werner_von_fritsch
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        NOT = { has_country_flag = GER_Continue_the_purge_flag }
+			}
+			traits = {
+				GER_fritsh_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+        modifier = {
+          factor = 3
+          has_country_leader = { ruling_only = yes name = "Erwin Rommel" }
+        }
+			}
+		}
+	}
+
+	GER_erhard_milch={
+		name=GER_erhard_milch
+		portraits={
+			army={
+				small="GFX_idea_erhard_milch"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = erhard_milch
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_milch_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+        modifier = {
+          factor = 3
+          has_country_leader = { ruling_only = yes name = "Erwin Rommel" }
+        }
+			}
+		}
+	}
+
+	GER_hugo_sperrle={
+		name=GER_hugo_sperrle
+		portraits={
+			army={
+				small="GFX_idea_hugo_sperrle"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = hugo_sperrle
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_air_innovation
+			}
+			traits = {
+				GER_sperrle_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 3
+        modifier = {
+          factor = 3
+          has_country_leader = { ruling_only = yes name = "Erwin Rommel" }
+        }
+			}
+		}
+	}
+
+	GER_erich_bey={
+		name=GER_erich_bey
+		portraits={
+			army={
+				small="GFX_idea_erich_bey"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = erich_bey
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_bey_T
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	GER_viktor_schutze={
+		name=GER_viktor_schutze
+		portraits={
+			army={
+				small="GFX_idea_viktor_schutze"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = viktor_schutze
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_shutze_T
+			}
+			cost =  50
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	GER_von_braun={
+		name=GER_von_braun
+		portraits={
+			army={
+				small="GFX_idea_von_braun"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = von_braun
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			research_bonus = {
+				rocketry = 0.150
+			}
+			traits = {
+				GER_braun_T
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	GER_heisenberg={
+		name=GER_heisenberg
+		portraits={
+			army={
+				small="GFX_idea_heisenberg"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = heisenberg
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			research_bonus = {
+				nuclear = 0.150
+			}
+			traits = {
+				GER_heisenberg_T
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	GER_wolfram_von_richthofen={
+		name=GER_wolfram_von_richthofen
+		portraits={
+			army={
+				small="GFX_idea_wolfram_von_richthofen"
+			}
+		}
+		advisor={
+			cost = 150
+			slot = theorist
+			idea_token = wolfram_von_richthofen
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_richthofen_T
+			}
+		}
+	}
+
+	GER_walther_wever={
+		name=GER_walther_wever
+		portraits={
+			army={
+				small="GFX_idea_walther_wever"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = walther_wever
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			traits = { GER_wever_T }
+		}
+	}
+
+	GER_ernst_udet={
+		name=GER_ernst_udet
+		portraits={
+			army={
+				small="GFX_idea_ernst_udet"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = ernst_udet
+			ledger = air
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_udet_T
+			}
+		}
+	}
+
+	GER_otto_ciliax={
+		name=GER_otto_ciliax
+		portraits={
+			army={
+				small="GFX_idea_otto_ciliax"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = otto_ciliax
+			ledger = navy
+			allowed = {
+				original_tag = GER
+			}
+			traits = { GER_ciliax_T }
+		}
+	}
+
+	GER_Anton_Drexler={ 
+		name=GER_Anton_Drexler
+		portraits={
+			army={
+				small="GFX_idea_Anton_Drexler"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = GER_Anton_Drexler
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Happy_amateur_politician }			
+		}	
+	}
+
+	GER_otto_strasser={ 
+		name=GER_Anton_Drexler
+		portraits={
+			army={
+				small="GFX_idea_otto_strasser"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Germany_Otto_Strasser.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = otto_Strasser_advisor
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+        NOT = { has_country_flag = arrest_Strasser }
+				has_completed_focus = GER_Strasser_Project
+			}
+			traits = {
+				Radical_reformer
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = GER_otto_strasser
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { dream_come_true_careerist }			
+		}	
+	}
+
+	GER_Reinhard_Heydrich={ 
+		name=GER_Reinhard_Heydrich
+		portraits={
+			army={
+				small="GFX_idea_Reinhard_Heydrich"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Reinhard_Heydrich.dds"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Germany_Reinhard_Heydrich.dds"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = GER_Reinhard_Heydrich_leader
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Silent_workaholic }			
+		}	
+		advisor={
+			slot = special_fifth
+			idea_token = GER_Reinhard_Heydrich
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { heart_of_iron }
+		}
+	}
+
+	GER_Hohenheim_Paracelsus={
+		name=GER_Hohenheim_Paracelsus
+		portraits={
+			army={
+				small="GFX_idea_Hohenheim_Paracelsus"
+			}
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = GER_Hohenheim_Paracelsus
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Pharmaceutical_experts }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_ubstacheit_von_Einzbern={
+		name=GER_ubstacheit_von_Einzbern
+		portraits={
+			army={
+				small="GFX_idea_ubstacheit_von_Einzbern"
+			}
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = GER_ubstacheit_von_Einzbern
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Quirky_nobleman }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_Darnic_Prestone={ 
+		name=GER_Darnic_Prestone
+		portraits={
+			army={
+				small="GFX_idea_Darnic_Prestone"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.dds"
+			}
+			civilian={
+				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.dds"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = GER_Darnic_Prestone_2
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Real_politics
+			}
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = GER_Darnic_Prestone
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Nuclear_fanatic }			
+		}	
+		corps_commander={
+      traits = { politically_connected career_officer armor_officer trait_cautious organizer trickster skilled_staffer }
+      skill = 4
+      attack_skill = 3
+      defense_skill = 3
+      planning_skill = 5
+      logistics_skill = 3
+		}
+	}
+
+	GER_ernst_thalmann={
+		name=GER_ernst_thalmann
+		portraits={
+			army={
+				small="GFX_idea_ernst_thalmann"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = GER_ernst_thalmann
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_thalmann_T
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_Alfred_Rosenberg={
+		name=GER_Alfred_Rosenberg
+		portraits={
+			army={
+				small="GFX_idea_Alfred_Rosenberg"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = GER_Alfred_Rosenberg
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Liberator_rosenberg
+			}
+
+      targeted_modifier = {
+        tag = SOV
+        attack_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = SOV
+        defense_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = RUS
+        attack_bonus_against = 0.05
+      }
+      targeted_modifier = {
+        tag = RUS
+        defense_bonus_against = 0.05
+      }
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_Martin_Heidegger={
+		name=GER_Martin_Heidegger
+		portraits={
+			army={
+				small="GFX_idea_Martin_Heidegger"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = GER_Martin_Heidegger
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				National_Socialist_Philosophy
+			}
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+  GER_Ernst_Junger={
+		name=GER_Ernst_Junger
+		portraits={
+			army={
+				small="GFX_idea_Ernst_Junger"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = GER_Ernst_Junger
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Steel_storm
+			}
+
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_wilhelm_keitel={
+		name=GER_wilhelm_keitel
+		portraits={
+			army={
+				small="GFX_idea_wilhelm_keitel"
+			}
+		}
+		advisor={
+			slot = special_third
+			idea_token = wilhelm_keitel
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				GER_keitel_T
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_Heinrich_Himmler={
+		name=GER_Heinrich_Himmler
+		portraits={
+			army={
+				small="GFX_idea_heinrich_himmler"
+			}
+			civilian = {
+				large="gfx/leaders/GER/Portrait_Germany_Heinrich_Himmler.dds"
+			}
+		}
+		advisor={
+			slot = special_fourth
+			idea_token = GER_Heinrich_Himmler
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Reichsfuhrer_SS Mystic
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_Ernst_Rohm={
+		name=GER_Ernst_Rohm
+		portraits={
+			army={
+				small="GFX_idea_Ernst_Rohm"
+			}
+		}
+		advisor={
+			slot = special_fourth
+			idea_token = GER_Ernst_Rohm
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Radical_militia_organizer
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_rudolf_von_sebottendorf={
+		name=GER_rudolf_von_sebottendorf
+		portraits={
+			army={
+				small="GFX_idea_rudolf_von_sebottendorf"
+			}
+		}
+		advisor={
+			slot = special_fourth
+			idea_token = GER_rudolf_von_sebottendorf
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				Elitist_advocate
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_wilhelm_canaris={
+		name=GER_wilhelm_canaris
+		portraits={
+			army={
+				small="GFX_idea_ger_wilhelm_canaris"
+			}
+		}
+		advisor={
+			slot = special_fifth
+			idea_token = GER_wilhelm_canaris
+			allowed_to_remove = {
+				always = no
+			}
+			allowed = {
+				original_tag = GER
+			}
+			removal_cost = -1
+			traits = { Gloomy_mystery }
+			
+			ai_will_do = {
+				factor = 5
+			}
+		}
+	}
+
+	GER_graf_zeppelin={
+		name=GER_graf_zeppelin
+		portraits={
+			army={
+				small="GFX_idea_GER_graf_zeppelin"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GER_graf_zeppelin
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+			 NOT = {
+				 has_country_flag = GER_Continue_the_purge_flag 
+			 }
+			 has_completed_focus = GER_Test_carrier_aircraft
+			}
+			traits = {
+				naval_aircraft_amrs_organizer 
+			}
+		}		
+	}
+
+	GER_vivi_schweinsteiger_strasserism={
+		name=GER_vivi_schweinsteiger_strasserism
+		portraits={
+			army={
+				small="GFX_idea_GER_vivi_schweinsteiger_strasserism"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GER_vivi_schweinsteiger_strasserism
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism		
+					has_government = communism		
+				}
+				NOT = {
+					has_country_flag = GER_Heydrich_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Start_the_wartime_economy	
+			}
+			traits = {
+				people_industry_committee 
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}		
+		corps_commander={
+      traits = { career_officer politically_connected }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 4
+      logistics_skill = 5
+			legacy_id = 2043
+		}
+	}
+
+	GER_otto_von_bismark={
+		name=GER_otto_von_bismark
+		portraits={
+			army={
+				small="GFX_idea_GER_otto_von_bismark"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GER_otto_von_bismark
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = {
+					has_country_flag = GER_Continue_the_purge_flag 
+				}
+				has_completed_focus = GER_Plan_Z
+			}
+			research_bonus  = {
+				construction_tech = 0.1
+				#建造10%
+			}
+			traits = {
+				iron_and_blood 
+			}
+		}		
+	}
+
+	GER_rusalka_schwagerin={
+		name=GER_rusalka_schwagerin
+		portraits={
+			army={
+				small="GFX_idea_GER_rusalka_schwagerin"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Rusalka_Schwagerin.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = GER_rusalka_schwagerin
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_government = fascism
+				is_puppet = no
+				NOT = {
+					has_country_flag = GER_Strasser_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Complete_integration_of_intelligence_services	
+			}
+			traits = {
+				mystic_officer 
+			}
+		}		
+		corps_commander={
+			traits = { trickster commando hill_fighter career_officer politically_connected harsh_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 2044
+		}
+	}
+	
+	GER_gertrud_barkhorn={
+		name=GER_gertrud_barkhorn
+		portraits={
+			army={
+				small="GFX_idea_GER_gertrud_barkhorn"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Gertrud_Barkhorn.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_gertrud_barkhorn
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_Ensure_air_superiority
+			}
+			traits = {
+				calm_ace
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25
+			}
+		}
+		corps_commander={
+			traits = { hill_fighter career_officer armor_officer commando }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 4
+      logistics_skill = 3
+			legacy_id = 2037
+		}
+	}	
+
+	GER_minna_dietlinde_wilcke={
+		name=GER_minna_dietlinde_wilcke
+		portraits={
+			army={
+				small="GFX_idea_GER_minna_dietlinde_wilcke"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Minna_Dietlinde_Wilcke.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_minna_dietlinde_wilcke
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_CAS_doctrine
+			}
+			traits = {
+				comprehensive_arranger
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25
+			}
+		}
+		corps_commander={
+      traits = { organizer cautious career_officer skilled_staffer }
+      skill = 3
+      attack_skill = 3
+      defense_skill = 2
+      planning_skill = 3
+      logistics_skill = 3
+			legacy_id = 2038
+		}
+	}
+
+	GER_heinrike_sayn_wittgenstein={
+		name=GER_heinrike_sayn_wittgenstein
+		portraits={
+			army={
+				small="GFX_idea_GER_heinrike_sayn_wittgenstein"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Heinrike_Prinzessin_zu_Sayn_Wittgenstein.dds"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = GER_heinrike_sayn_wittgenstein
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = {
+					has_country_flag = GER_Continue_the_purge_flag 
+				}				
+				has_completed_focus = GER_Joint_air_to_ground_operations	
+			}
+			traits = {
+				aristocracy_in_the_air
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 25
+			}
+		}
+		corps_commander={
+      traits = { organizer cautious career_officer skilled_staffer }
+      skill = 4
+      attack_skill = 4
+      defense_skill = 3
+      planning_skill = 4
+      logistics_skill = 4
+			legacy_id = 2039
+		}
+	}
+
+	GER_Ilfriede_von_Feulner={
+		name=GER_Ilfriede_von_Feulner
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Ilfriede_von_Feulner.dds"
+			}
+		}
+		corps_commander={
+      traits = { trickster urban_assault_specialist career_officer }
+      skill = 3
+      attack_skill = 3
+      defense_skill = 3
+      planning_skill = 3
+      logistics_skill = 2
+			legacy_id = 2035
+		}
+	}
+
+	GER_Lunateresia_von_Witzleben={
+		name=GER_Lunateresia_von_Witzleben
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Lunateresia_von_Witzleben.dds"
+			}
+		}
+		corps_commander={
+      traits = { organizer cautious career_officer }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 4
+      logistics_skill = 3
+			legacy_id = 2036
+		}
+	}
+
+	GER_Dreiundvierzig_Gewehr={
+		name=GER_Dreiundvierzig_Gewehr
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Dreiundvierzig_Gewehr.dds"
+			}
+		}
+		corps_commander={
+      traits = { infantry_officer urban_assault_specialist commando }
+      skill = 3
+      attack_skill = 3
+      defense_skill = 3
+      planning_skill = 2
+      logistics_skill = 3
+			legacy_id = 2040
+		}
+	}
+
+
+	GER_Inghild_Bronikowski={
+		name=GER_Inghild_Bronikowski
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Inghild_Bronikowski.dds"
+			}
+		}
+		corps_commander={
+      traits = { infantry_officer cautious organizer politically_connected }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 3
+      planning_skill = 3
+      logistics_skill = 2
+			legacy_id = 2042
+		}
+	}
+
+	GER_schmeisser_gewehr={
+		name=GER_schmeisser_gewehr
+		portraits={
+			army={
+				small="GFX_idea_GER_schmeisser_gewehr"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Schmeisser_Gewehr.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_schmeisser_gewehr
+			ledger = army
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_government = fascism				
+				has_completed_focus = GER_Modernization_of_light_weapons	
+				NOT = { has_idea = ferdinand_schorner }	
+			}
+			traits = {
+				infantry_strike
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 40
+			}
+		}
+		corps_commander={
+			traits = { trickster commando infantry_officer urban_assault_specialist }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 2045
+		}
+	}
+
+	GER_gretel_jeckeln_strasserism={
+		name=GER_gretel_jeckeln_strasserism
+		portraits={
+			army={
+				small="GFX_idea_GER_gretel_jeckeln_strasserism"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Gretel_Jeckeln.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_gretel_jeckeln_strasserism
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				OR = {
+					has_government = fascism		
+					has_government = communism		
+				}
+				NOT = {
+					has_country_flag = GER_Heydrich_becomes_the_leader_flag 
+				}
+				has_completed_focus = GER_Strasser_Project
+			}
+			traits = {
+				people_war_committee 
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+		corps_commander={
+      traits = { infantry_officer career_officer politically_connected skilled_staffer }
+      skill = 3
+      attack_skill = 2
+      defense_skill = 2
+      planning_skill = 4
+      logistics_skill = 4
+			legacy_id = 2041
+		}
+	}
+
+	GER_peter_strasser={
+		name=GER_peter_strasser
+		portraits={
+			army={
+				small="GFX_idea_GER_peter_strasser"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_peter_strasser
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_Building_Zeppelin_Class
+			}
+			traits = {
+				navy_chief_naval_aviation_2 
+			}
+		}		
+	}
+
+	GER_maho_nishizumi={
+		name=GER_maho_nishizumi
+		portraits={
+			army={
+				small="GFX_idea_GER_maho_nishizumi"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_maho_nishizumi
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_flag = GER_Continue_the_purge_flag
+				has_completed_focus = GER_blitzkrieg
+			}
+			traits = {
+				Nishizumi_style 
+			}
+		}		
+	}
+
+	GER_erica_hartmann={
+		name=GER_erica_hartmann
+		portraits={
+			army={
+				small="GFX_idea_GER_erica_hartmann"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = GER_erica_hartmann
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_completed_focus = GER_air_innovation
+			}
+			traits = {
+				disobedient_talent
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	Ferdinand_von_Bredow_advisor={
+		name=Ferdinand_von_Bredow_advisor
+		portraits={
+			army={
+				small="GFX_idea_bredow"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Ferdinand_von_Bredow_advisor
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				NOT = { has_idea = rudolf_hess }	
+				NOT = { has_completed_focus = GER_Clean_up_Juncker }
+			}
+			traits = {
+				Representative_of_the_Wehrmacht
+			}
+		}		
+	}
+
+	Illyasviel_von_Einzbern_advisor={
+		name=Illyasviel_von_Einzbern_advisor
+		portraits={
+			army={
+				small="GFX_idea_Illyasviel_von_Einzbern"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = Illyasviel_von_Einzbern_advisor
+			allowed = {
+				original_tag = GER
+			}
+			available = {
+				has_country_flag = GER_Illyasviel_von_Einzbern_flag
+			}
+			traits = {
+				feminist_ultranationalist
+			}
+			cost = 75
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 5
+					has_country_flag = GER_Strasser_leads_economic_policy_flag
+				}
+			}
+		}		
+	}
+
+	GER_Joachim_Peiper={
+		name=GER_Joachim_Peiper
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Joachim_Peiper.dds"
+			}
+		}
+		corps_commander={
+			traits = { politically_connected trickster trait_reckless armor_officer cavalry_officer trait_engineer }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 2049
+		}
+	}
+
+	GER_Otto_Skorzeny={
+		name=GER_Otto_Skorzeny
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Otto_Skorzeny.dds"
+			}
+		}
+		corps_commander={
+			traits = { politically_connected trickster media_personality commando trait_mountaineer }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 2031
+		}
+	}
+
+	GER_Fritz_Klingenberg={
+		name=GER_Fritz_Klingenberg
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Germany_Fritz_Klingenberg.dds"
+			}
+		}
+		corps_commander={
+			traits = { politically_connected trickster media_personality infantry_officer cavalry_officer trait_reckless urban_assault_specialist }
+			skill = 3
+			attack_skill = 5
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 2030
+		}
+	}
+
+	GER_Hadwigis_Odin={
+		name=GER_Hadwigis_Odin
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Odin.dds"
+			}
+		}
+		corps_commander={
+			traits = { trickster commando invader_ii career_officer politically_connected winter_specialist brilliant_strategist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 2047
+		}
+	}
+
+	GER_Biank_Ataegina={
+		name=GER_Biank_Ataegina
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Biank_Ataegina.dds"
+			}
+		}
+		corps_commander={
+			traits = { trickster career_officer politically_connected winter_specialist hill_fighter armor_officer }
+			skill = 4
+        attack_skill = 3
+        defense_skill = 3
+        planning_skill = 4
+        logistics_skill = 4
+			legacy_id = 2048
+		}
+	}
+
+	GER_Otto_Kumm={
+		name=GER_Otto_Kumm
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Otto_Kumm.dds"
+			}
+		}
+		corps_commander={
+			traits = { politically_connected trickster infantry_officer cavalry_officer trait_mountaineer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 2050
+		}
+	}
+
+	GER_Beatrice_Waltrud_von_Kircheisen={
+		name=GER_Beatrice_Waltrud_von_Kircheisen
+		portraits={
+			army={
+				large="gfx/leaders/GER/Portrait_Beatrice_Waltrud_von_Kircheisen.dds"
+			}
+		}
+		corps_commander={
+			traits = { trickster commando trait_engineer scavenger }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 2046
+		}
+	}
+
+	GER_special_third_nein={
+		name=GER_special_third_nein
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = special_third
+			idea_token = GER_special_third_nein
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_special_second_nein={
+		name=GER_special_second_nein
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = GER_special_second_nein
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
+	GER_special_sixth_nein={
+		name=GER_special_sixth_nein
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = GER_special_sixth_nein
+			allowed = {
+				original_tag = GER
+			}
+			traits = {
+				
+			}
+			ai_will_do = {
+				factor = 5
+			}
+		}		
+	}
+
 }

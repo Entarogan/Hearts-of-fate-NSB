@@ -1892,6 +1892,8 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = GER_gretel_jeckeln_strasserism
 
+			recruit_character = GER_gretel_jeckeln_strasserism
+
 		}
 	}
 
@@ -2528,6 +2530,8 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_vivi_schweinsteiger_strasserism
 
+			recruit_character = GER_vivi_schweinsteiger_strasserism
+
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = joseph_goebbels
 
@@ -3016,6 +3020,8 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_heinrike_sayn_wittgenstein
 
+      recruit_character = GER_heinrike_sayn_wittgenstein
+
       remove_ideas = GER_Mobile_Warfare_idea_3
       remove_ideas = GER_CAS_doctrine_idea
       add_ideas = GER_Joint_air_to_ground_operations_idea
@@ -3130,6 +3136,8 @@ focus_tree = {
 
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_gertrud_barkhorn
+
+		  recruit_character = GER_gertrud_barkhorn
 
       swap_ideas = { remove_idea = GER_air_innovations_2_idea add_idea = GER_Ace_idea }
       GER_increase_propaganda = yes
@@ -3933,6 +3941,8 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_minna_dietlinde_wilcke
 
+		  recruit_character = GER_minna_dietlinde_wilcke
+
 			air_experience = 25
 
       add_ideas = GER_CAS_doctrine_idea
@@ -4040,6 +4050,8 @@ focus_tree = {
 
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = GER_schmeisser_gewehr
+
+      recruit_character = GER_schmeisser_gewehr
 
 			if = {
 				limit = {
@@ -5476,6 +5488,8 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_rusalka_schwagerin
 
+      recruit_character = GER_rusalka_schwagerin
+
 			if = {
 				limit = {
 					has_idea = GER_Intricate_intelligence_agency
@@ -5496,17 +5510,16 @@ focus_tree = {
         }
 			}
 
-      create_field_marshal = {
-        name = "Reinhard Heydrich"
-        picture = "Portrait_Germany_Reinhard_Heydrich.dds"
+			add_field_marshal_role = {
+				character = "GER_Reinhard_Heydrich"
         traits = { politically_connected cavalry_officer harsh_leader commando }
         skill = 1
-        id = 132
         attack_skill = 1
         defense_skill = 1
         planning_skill = 2
         logistics_skill = 2
-      }
+				legacy_id=132
+			}
 
 		}
 	}  
@@ -5618,113 +5631,13 @@ focus_tree = {
 
 		  custom_effect_tooltip = GER_Established_the_Supreme_Command_tt
 
-      create_corps_commander = {		
-        name = "Rusalka Schwägerin"
-        picture = "Portrait_Rusalka_Schwagerin.dds"
-        traits = { trickster commando hill_fighter career_officer politically_connected harsh_leader }
-        skill = 3
-        id = 2044
-        attack_skill = 4
-        defense_skill = 2
-        planning_skill = 3
-        logistics_skill = 2
-      }
-
-      create_corps_commander = {		
-        name = "Joachim Peiper"
-        picture = "Portrait_Joachim_Peiper.dds"
-        traits = { politically_connected trickster trait_reckless armor_officer cavalry_officer trait_engineer }
-        skill = 3
-        id = 2049
-        attack_skill = 5
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 1
-      }
-
-      create_corps_commander = {		
-        name = "Otto Skorzeny"
-        picture = "Portrait_Germany_Otto_Skorzeny.dds"
-        traits = { politically_connected trickster media_personality commando trait_mountaineer }
-        skill = 3
-        id = 2031
-        attack_skill = 4
-        defense_skill = 2
-        planning_skill = 3
-        logistics_skill = 2
-      }
-
-      create_corps_commander = {		
-        name = "Fritz Klingenberg"
-        picture = "Portrait_Germany_Fritz_Klingenberg.dds"
-        traits = { politically_connected trickster media_personality infantry_officer cavalry_officer trait_reckless urban_assault_specialist }
-        skill = 3
-        id = 2030
-        attack_skill = 5
-        defense_skill = 2
-        planning_skill = 3
-        logistics_skill = 1
-      }
-
-      create_corps_commander = {		
-        name = "Hadwigis Odin"
-        picture = "Portrait_Odin.dds"
-        traits = { trickster commando invader_ii career_officer politically_connected winter_specialist brilliant_strategist }
-        skill = 4
-        id = 2047
-        attack_skill = 4
-        defense_skill = 3
-        planning_skill = 3
-        logistics_skill = 3
-      }
-
-      create_corps_commander = {		
-        name = "Biank Ataegina"
-        picture = "Portrait_Biank_Ataegina.dds"
-        traits = { trickster career_officer politically_connected winter_specialist hill_fighter armor_officer }
-        skill = 4
-        id = 2048
-        attack_skill = 3
-        defense_skill = 3
-        planning_skill = 4
-        logistics_skill = 4
-      }
-
-      create_corps_commander = {		
-        name = "Otto Kumm"
-        picture = "Portrait_Otto_Kumm.dds"
-        traits = { politically_connected trickster infantry_officer cavalry_officer trait_mountaineer }
-        skill = 3
-        id = 2050
-        attack_skill = 3
-        defense_skill = 3
-        planning_skill = 2
-        logistics_skill = 2
-      }
-
-      create_corps_commander = {		
-        name = "Schmeisser Gewehr"
-        picture = "Portrait_Schmeisser_Gewehr.dds"
-        traits = { trickster commando infantry_officer urban_assault_specialist }
-        skill = 3
-        id = 2045
-        attack_skill = 4
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 3
-      }
-      
-      create_corps_commander = {		
-        name = "Beatrice Waltrud von Kircheisen"
-        picture = "Portrait_Beatrice_Waltrud_von_Kircheisen.dds"
-        traits = { trickster commando trait_engineer scavenger }
-        skill = 3
-        id = 2046
-        attack_skill = 3
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 4
-      }
+			recruit_character = GER_Joachim_Peiper
+			recruit_character = GER_Otto_Skorzeny
+			recruit_character = GER_Fritz_Klingenberg
+			recruit_character = GER_Hadwigis_Odin      
+			recruit_character = GER_Biank_Ataegina
+			recruit_character = GER_Otto_Kumm
+			recruit_character = GER_Beatrice_Waltrud_von_Kircheisen
 
       add_ideas = { GER_Wilhelm_Keitel }
 

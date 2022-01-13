@@ -2073,6 +2073,8 @@ country_event = {     # 大清洗继续
 			remove_ideas = erwin_rommel
 		}
 
+    recruit_character = GER_maho_nishizumi
+
 		custom_effect_tooltip = remove_military_high_command
 		show_ideas_tooltip = gerd_von_rundstedt
 		set_country_flag = arrest_rundstedt
@@ -5080,113 +5082,10 @@ country_event = {     # 少女联盟
     custom_effect_tooltip = available_political_advisor
     show_ideas_tooltip = Illyasviel_von_Einzbern_advisor
 
-    create_corps_commander = {		
-      name = "Ilfriede von Feulner"
-      picture = "Portrait_Ilfriede_von_Feulner.dds"
-      traits = { trickster urban_assault_specialist career_officer }
-      skill = 3
-      id = 2035
-      attack_skill = 3
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 2
-    }
-
-    create_corps_commander = {		
-      name = "Lunateresia von Witzleben"
-      picture = "Portrait_Lunateresia_von_Witzleben.dds"
-      traits = { organizer cautious career_officer }
-      skill = 3
-      id = 2036
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 3
-    }
-
-    create_corps_commander = {		
-      name = "Gertrud Barkhorn"
-      picture = "Portrait_Gertrud_Barkhorn.dds"
-      traits = { hill_fighter career_officer armor_officer commando }
-      skill = 3
-      id = 2037
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 3
-    }
-
-    create_corps_commander = {		
-      name = "Minna-Dietlinde Wilcke"
-      picture = "Portrait_Minna_Dietlinde_Wilcke.dds"
-      traits = { organizer cautious career_officer skilled_staffer }
-      skill = 3
-      id = 2038
-      attack_skill = 3
-      defense_skill = 2
-      planning_skill = 3
-      logistics_skill = 3
-    }
-
-    create_corps_commander = {		
-      name = "Heinrike Prinzessin zu Sayn Wittgenstein"
-      picture = "Portrait_Heinrike_Prinzessin_zu_Sayn_Wittgenstein.dds"
-      traits = { organizer cautious career_officer skilled_staffer }
-      skill = 4
-      id = 2039
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 4
-      logistics_skill = 4
-    }
-
-    create_corps_commander = {		
-      name = "Dreiundvierzig Gewehr"
-      picture = "Portrait_Dreiundvierzig_Gewehr.dds"
-      traits = { infantry_officer urban_assault_specialist commando }
-      skill = 3
-      id = 2040
-      attack_skill = 3
-      defense_skill = 3
-      planning_skill = 2
-      logistics_skill = 3
-    }
-
-    create_corps_commander = {		
-      name = "Gretel Jeckeln"
-      picture = "Portrait_Gretel_Jeckeln.dds"
-      traits = { infantry_officer career_officer politically_connected skilled_staffer }
-      skill = 3
-      id = 2041
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 4
-    }
-
-    create_corps_commander = {		
-      name = "Inghild Bronikowski"
-      picture = "Portrait_Inghild_Bronikowski.dds"
-      traits = { infantry_officer cautious organizer politically_connected }
-      skill = 3
-      id = 2042
-      attack_skill = 2
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 2
-    }
-
-    create_corps_commander = {		
-      name = "Vivi Schweinsteiger"
-      picture = "Portrait_Vivi_Schweinsteiger.dds"
-      traits = { career_officer politically_connected }
-      skill = 3
-      id = 2043
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 5
-    }
+		recruit_character = GER_Ilfriede_von_Feulner
+		recruit_character = GER_Lunateresia_von_Witzleben
+		recruit_character = GER_Dreiundvierzig_Gewehr
+		recruit_character = GER_Inghild_Bronikowski
 		
 	}
 

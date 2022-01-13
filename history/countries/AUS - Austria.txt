@@ -35,17 +35,7 @@ add_ideas = {
 }
 
 recruit_character = AUS_Steyr_Mannlicher
-add_country_leader_role = {
-	character = AUS_Steyr_Mannlicher
-	country_leader = {
-		expire="1965.1.1.1"
-		ideology = socialism
-		traits = {
-			Wachter_des_Vaterlandes
-		}
-	}
-	promote_leader = yes
-}
+
 
 recruit_character = AUS_Prince_Eugen
 add_country_leader_role = {
