@@ -3180,7 +3180,9 @@
           is_faction_leader = yes
         }
       }
-      has_country_leader = {  name = "Elizabeth Báthory" ruling_only = yes } 
+	  HUN_elizabeth_báthory = {
+		is_country_leader = yes
+	}
       is_subject = no
       is_in_faction = no
       NOT = { has_war_with = ITA }
@@ -5890,45 +5892,41 @@
 		y = 1
 		relative_position_id = HUN_International_triumph
 		cost = 5
-    ai_will_do = {
-      factor = 100
-    }
-    available = {
+		ai_will_do = {
+		factor = 100
+		}
+		available = {
 
-    }
+		}
 
 
-    bypass = {
-    }
+		bypass = {
+		}
     
     
     
-    completion_reward = {
+		completion_reward = {
 
-      add_political_power = 150
+			add_political_power = 150
 
-      swap_ideas = {
-        remove_idea = HUN_Socialist_constitution_International_idea
-        add_idea = HUN_Socialist_constitution_International_ex_idea
-      }
+			swap_ideas = {
+				remove_idea = HUN_Socialist_constitution_International_idea
+				add_idea = HUN_Socialist_constitution_International_ex_idea
+			}
+			add_corps_commander_role = {
+				Character = HUN_Matyas_Rakosi
 
-      create_corps_commander = {
-        name = "Mátyás Rákosi"
-        picture = "Portrait_HUN_matyas_rakosi_army.png"
+				traits = { harsh_leader }
 
-        traits = { harsh_leader }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+				legacy_id = 4028
+			}
 
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-
-        id = 4028
-
-      }
-
-    }
+		}
 
 	}
 
@@ -6554,7 +6552,9 @@
       factor = 75
     }
     available = {
-		  has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" }
+		HUN_elizabeth_báthory = {
+			is_country_leader = yes
+		}
     }
 
 
@@ -6581,7 +6581,9 @@
       factor = 200
     }
     available = {
-		  has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" }
+		HUN_elizabeth_báthory = {
+			is_country_leader = yes
+		}
     }
 
 
@@ -6626,7 +6628,9 @@
       factor = 75
     }
     available = {
-		  has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" }
+		HUN_elizabeth_báthory = {
+			is_country_leader = yes
+		}
     }
 
 
@@ -6655,7 +6659,9 @@
       factor = 300
     }
     available = {
-		  has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" }
+		HUN_elizabeth_báthory = {
+			is_country_leader = yes
+		}
     }
 
 
@@ -6711,37 +6717,28 @@
         limit = {
           NOT = { has_country_flag = HUN_pal_Restore_rank_flag }  
         }
-        create_corps_commander = {
-          name = "Pál Prónay"
-          picture = "Portrait_HUN_pal_pronay.png"
-
-          traits = { harsh_leader war_hero }
-
-          skill = 3
-          attack_skill = 4
-          defense_skill = 3
-          planning_skill = 2
-          logistics_skill = 1
-
-          id = 4029
-
-        }
-
-        create_corps_commander = {
-          name = "Imre Kémeri Nagy"
-          picture = "Portrait_HUN_imre_kemeri_nagy.png"
-
-          traits = { winter_specialist infantry_officer }
-
-          skill = 3
-          attack_skill = 3
-          defense_skill = 4
-          planning_skill = 1
-          logistics_skill = 2
-
-          id = 4027
-
-        }
+		add_corps_commander_role = {
+			Character = HUN_pal_pronay
+			traits = { harsh_leader war_hero }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 4029
+		}
+		add_corps_commander_role = {
+			Character = HUN_imre_kemeri_nagy
+	
+			traits = { winter_specialist infantry_officer }
+	
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 4027
+		}
       }
 
     }
@@ -6761,28 +6758,26 @@
 		y = 1
 		relative_position_id = HUN_Awaken_Hungarian
 		cost = 5
-    ai_will_do = {
-      factor = 250
-    }
-    available = {
+		ai_will_do = {
+			factor = 250
+		}
+		available = {
 			has_global_flag = HUN_wins_the_war_flag
-			has_country_leader = { ruling_only = yes name = "Attila" }
-      NOT = { has_country_flag = HUN_Operation_Iron_Fist_flag }
-    }
+			HUN_attila = {
+				is_country_leader = yes
+			}
+			NOT = { has_country_flag = HUN_Operation_Iron_Fist_flag }
+		}
+		bypass = {
+		}
+		    
+		completion_reward = {
+			add_political_power = 200
 
-
-    bypass = {
-    }
-    
-    
-    
-    completion_reward = {
-      add_political_power = 200
-
-      remove_country_leader_trait = fascist_militia_leader
+			remove_country_leader_trait = fascist_militia_leader
 			remove_country_leader_trait = Cavalry_general
-		  add_country_leader_trait = Whip_of_god
-    }
+			add_country_leader_trait = Whip_of_god
+		}
 
 	}
 
@@ -6967,7 +6962,9 @@
       factor = 100
     }
     available = {
-		  has_country_leader = { ruling_only = yes name = "Attila" }
+		HUN_attila = {
+			is_country_leader = yes
+		}
       or = {
         num_of_factories > 70
         has_army_size = {
@@ -7224,17 +7221,15 @@
       add_timed_idea = { idea = HUN_Ethnic_purity_idea days = 720 }
 
       hidden_effect = {
-        create_country_leader = {
-          name = "Attila"
-          desc = ""
-          picture = "Portrait_Attila.dds"
-          expire = "1965.1.1"
-          ideology = nazism
-          traits = {
-            fascist_militia_leader
-            Cavalry_general
-          }
-        }
+		add_country_leader_role = {
+			character = "HUN_attila"
+			country_leader = {
+				ideology = nazism
+				traits = { fascist_militia_leader Cavalry_general }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
       }
 
 			set_country_flag = HUN_Unlock_military_policy_flag

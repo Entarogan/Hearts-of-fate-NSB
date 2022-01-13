@@ -298,37 +298,29 @@ country_event = {     # 61岁老同志
 
     HUN_decrease_left_wing = yes
 
-    create_corps_commander = {
-      name = "Pál Prónay"
-      picture = "Portrait_HUN_pal_pronay.png"
+	add_corps_commander_role = {
+		Character = HUN_pal_pronay
+		traits = { harsh_leader war_hero }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 1
+		legacy_id = 4029
+	}
 
-      traits = { harsh_leader war_hero }
+	add_corps_commander_role = {
+		Character = HUN_imre_kemeri_nagy
 
-      skill = 3
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 2
-      logistics_skill = 1
+		traits = { winter_specialist infantry_officer }
 
-      id = 4029
-
-    }
-
-    create_corps_commander = {
-      name = "Imre Kémeri Nagy"
-      picture = "Portrait_HUN_imre_kemeri_nagy.png"
-
-      traits = { winter_specialist infantry_officer }
-
-      skill = 3
-      attack_skill = 3
-      defense_skill = 4
-      planning_skill = 1
-      logistics_skill = 2
-
-      id = 4027
-
-    }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 1
+		logistics_skill = 2
+		legacy_id = 4027
+	}
 
     hidden_effect = {
       country_event = { id = more_hun.7 days = 15 }
@@ -1491,16 +1483,22 @@ country_event = {     # 共产主义的胜利
 
 		hidden_effect = {
 
-      create_country_leader = {
-        name = "Elizabeth Báthory"
-        desc = "POLITICS_ELIZABRTH_BATHORY_DESC"
-        picture = "Portrait_Elizabathe_Bathory_Revolutionary.dds"
-        expire = "1965.1.1"
-        ideology = leninism
-        traits = {
-          sadistic
-        }
-      }
+			add_country_leader_role = {
+				character = "HUN_elizabeth_báthory"
+				country_leader = {
+					ideology = leninism
+					traits = { sadistic }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			}
+			HUN_elizabeth_báthory = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/HUN/Portrait_Elizabathe_Bathory_Revolutionary.dds"
+					}
+				}
+			}
 
 			news_event = { id = more_News.55 days = 3 }
 
@@ -2458,20 +2456,28 @@ country_event = {     # 肉眼可见的分歧
 
     if = {
       limit = {
-        NOT = { has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" } }
+		HUN_elizabeth_báthory = {
+			is_country_leader = no
+		}
       }
       clr_country_flag = HUN_Bartoli_Arrested_flag
       hidden_effect = {
-        create_country_leader = {
-          name = "Elizabeth Báthory"
-          desc = "POLITICS_ELIZABRTH_BATHORY_DESC"
-          picture = "Portrait_Elizabathe_Bathory_Revolutionary.dds"
-          expire = "1965.1.1"
-          ideology = leninism
-          traits = {
-            sadistic
-          }
-        }
+		add_country_leader_role = {
+			character = "HUN_elizabeth_báthory"
+			country_leader = {
+				ideology = leninism
+				traits = { sadistic }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+		HUN_elizabeth_báthory = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/HUN/Portrait_Elizabathe_Bathory_Revolutionary.dds"
+				}
+			}
+		}
       }
     }
 
@@ -2489,20 +2495,28 @@ country_event = {     # 肉眼可见的分歧
 
     if = {
       limit = {
-        NOT = { has_country_leader = { ruling_only = yes name = "Elizabeth Báthory" } }
+		HUN_elizabeth_báthory = {
+			is_country_leader = no
+		}
       }
       clr_country_flag = HUN_Bartoli_Arrested_flag
       hidden_effect = {
-        create_country_leader = {
-          name = "Elizabeth Báthory"
-          desc = "POLITICS_ELIZABRTH_BATHORY_DESC"
-          picture = "Portrait_Elizabathe_Bathory_Revolutionary.dds"
-          expire = "1965.1.1"
-          ideology = leninism
-          traits = {
-            sadistic
-          }
-        }
+		add_country_leader_role = {
+			character = "HUN_elizabeth_báthory"
+			country_leader = {
+				ideology = leninism
+				traits = { sadistic }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+		HUN_elizabeth_báthory = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/HUN/Portrait_Elizabathe_Bathory_Revolutionary.dds"
+				}
+			}
+		}
       }
     }
 
@@ -2832,85 +2846,64 @@ country_event = {
 			
 		}
 
-    clr_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+  		clr_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
 
 		add_stability = -0.10
+		add_corps_commander_role = {
+			Character = HUN_karoly_beregfy
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 4017
+		}
+		add_corps_commander_role = {
+			Character = HUN_döme_sztójay
+			traits = { politically_connected }
 
-    create_corps_commander = {
-      name = "Károly Beregfy"
-      gfx = GFX_Portrait_hungary_karoly_beregfy
-      traits = { }
-      skill = 1
-      attack_skill = 1
-      defense_skill = 1
-      planning_skill = 1
-      logistics_skill = 1
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+	  
+			legacy_id = 4020
+		}
 
-      id = 4017
+		add_field_marshal_role = {
+			Character = HUN_attila
+			traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
+			skill = 5
+			attack_skill = 6
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 4032
+		}
 
-    }
-
-    create_corps_commander = {
-      name = "Döme Sztójay"
-      picture = "Portrait_Dome_Sztojay.dds"
-
-      traits = { politically_connected }
-
-      skill = 1
-      attack_skill = 1
-      defense_skill = 1
-      planning_skill = 1
-      logistics_skill = 1
-
-      id = 4020
-
-    }
-
-    create_field_marshal = {
-      name = "Attila"
-      picture = "Portrait_Attila.dds"
-      traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
-      skill = 5
-      attack_skill = 6
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 4
-
-      id = 4032
-
-    }
-
-    create_corps_commander = {
-      name = "Pál Prónay"
-      picture = "Portrait_HUN_pal_pronay.png"
-
-      traits = { harsh_leader war_hero }
-
-      skill = 3
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 2
-      logistics_skill = 1
-
-      id = 4029
-
-    }
-
-    create_corps_commander = {
-      name = "Imre Kémeri Nagy"
-      picture = "Portrait_HUN_imre_kemeri_nagy.png"
-
-      traits = { winter_specialist infantry_officer }
-
-      skill = 3
-      attack_skill = 3
-      defense_skill = 4
-      planning_skill = 1
-      logistics_skill = 2
-
-      id = 4027
-
-    }
+		add_corps_commander_role = {
+			Character = HUN_pal_pronay
+			traits = { harsh_leader war_hero }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 4029
+		}
+		add_corps_commander_role = {
+			Character = HUN_imre_kemeri_nagy
+	
+			traits = { winter_specialist infantry_officer }
+	
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 4027
+		}
 
 	}
 	option = { 
@@ -3947,63 +3940,52 @@ country_event = {     # 处置巴托里
 			base = 99
 		}
 
-    clr_country_flag = HUN_Bartoli_Arrested_flag
+		clr_country_flag = HUN_Bartoli_Arrested_flag
 
 		add_political_power = -50
 
-    add_popularity = {
-      ideology = neutrality
-      popularity = 0.05
-    }
+		add_popularity = {
+		ideology = neutrality
+		popularity = 0.05
+		}
 
-    create_corps_commander = {
-      name = "Elizabeth Báthory"
-      picture = "Portrait_Elizabathe_Bathory_General.dds"
-      traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist }
-      skill = 4
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 3
-      id = 888
-    }
+		add_corps_commander_role = {
+			Character = HUN_elizabeth_báthory
+			traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 888
+		}
+		if = {
+			limit = { 
+				has_country_flag = HUN_Lakatos_Arrested_flag
+			}			
+			clr_country_flag = HUN_Lakatos_Arrested_flag
+			add_corps_commander_role = {
+				Character = HUN_géza_lakatos
+				traits = { brilliant_strategist }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = 4015
+			}
+		}
+		add_corps_commander_role = {
+			Character = HUN_vilmos_nagy
+			traits = { war_hero skilled_staffer  }
 
-    if = {
-      limit = { 
-        has_country_flag = HUN_Lakatos_Arrested_flag
-      }			
-      clr_country_flag = HUN_Lakatos_Arrested_flag
-      create_corps_commander = {
-        name = "Géza Lakatos"
-        gfx = GFX_Portrait_hungary_geza_lakatos
-        traits = { brilliant_strategist }
-        skill = 3
-        attack_skill = 3
-        defense_skill = 2
-        planning_skill = 3
-        logistics_skill = 2
-
-        id = 4015
-
-      }
-    }
-
-    create_corps_commander = {
-      name = "Vilmos Nagy"
-      picture = "Portrait_HUN_vilmos_nagy.png"
-
-      traits = { war_hero skilled_staffer  }
-
-      skill = 4
-      attack_skill = 3
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 4
-
-      id = 4030
-
-    }
-		
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+			legacy_id = 4030
+		}
 	}
 
 	option = {
@@ -4031,21 +4013,20 @@ country_event = {     # 处置霍尔蒂
 			base = 99
 		}
 
-    clr_country_flag = HUN_Horty_Arrested_flag
+  	  clr_country_flag = HUN_Horty_Arrested_flag
 
 		add_political_power = -25
 
-    create_navy_leader = {
-      name = "Miklós Horthy"
-      gfx = GFX_Portrait_hungary_miklos_horthy_admiral
-      traits = { gunnery_expert  navy_media_personality  superior_tactician }
-      skill = 4
-      id = 556
-      attack_skill = 5
-      defense_skill = 2
-      maneuvering_skill = 2
-      coordination_skill = 4
-    }
+		add_naval_commander_role = {
+			Character = HUN_miklós_horthy
+			traits = { gunnery_expert  navy_media_personality  superior_tactician }
+			skill = 4
+			attack_skill = 5
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 4
+			legacy_id = 556
+		}
 		
 	}
 
@@ -4123,20 +4104,16 @@ country_event = {     # 处置反革命
 
 		add_political_power = -50
 
-    create_corps_commander = {
-      name = "Géza Lakatos"
-      gfx = GFX_Portrait_hungary_geza_lakatos
-      traits = { brilliant_strategist }
-      skill = 3
-      attack_skill = 3
-      defense_skill = 2
-      planning_skill = 3
-      logistics_skill = 2
-
-      id = 4015
-
-    }
-
+	add_corps_commander_role = {
+		Character = HUN_géza_lakatos
+		traits = { brilliant_strategist }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 4015
+	}
     create_navy_leader = {
       name = "Miklós Horthy"
       gfx = GFX_Portrait_hungary_miklos_horthy_admiral
@@ -4179,108 +4156,81 @@ country_event = {     # 处置反革命
       ideology = neutrality
       popularity = 0.05
     }
+	add_corps_commander_role = {
+		Character = HUN_géza_lakatos
+		traits = { brilliant_strategist }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+		legacy_id = 4015
+	}
+	add_naval_commander_role = {
+		Character = HUN_miklós_horthy
+		traits = { gunnery_expert  navy_media_personality  superior_tactician }
+		skill = 4
+		attack_skill = 5
+		defense_skill = 2
+		maneuvering_skill = 2
+		coordination_skill = 4
+		legacy_id = 556
+	}
 
-    create_corps_commander = {
-      name = "Géza Lakatos"
-      gfx = GFX_Portrait_hungary_geza_lakatos
-      traits = { brilliant_strategist }
-      skill = 3
-      attack_skill = 3
-      defense_skill = 2
-      planning_skill = 3
-      logistics_skill = 2
+	add_field_marshal_role = {
+		Character = HUN_attila
+		traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
+		skill = 5
+		attack_skill = 6
+		defense_skill = 2
+		planning_skill = 4
+		logistics_skill = 4
+		legacy_id = 4032
+	}
+	add_corps_commander_role = {
+		Character = HUN_karoly_beregfy
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+		legacy_id = 4017
+	}
 
-      id = 4015
+	add_corps_commander_role = {
+		Character = HUN_döme_sztójay
+		traits = { politically_connected }
 
-    }
+		skill = 1
+		attack_skill = 1
+		defense_skill = 1
+		planning_skill = 1
+		logistics_skill = 1
+  
+		legacy_id = 4020
+	}
+	add_corps_commander_role = {
+		Character = HUN_pal_pronay
+		traits = { harsh_leader war_hero }
+		skill = 3
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 1
+		legacy_id = 4029
+	}
+	add_corps_commander_role = {
+		Character = HUN_imre_kemeri_nagy
 
-    create_navy_leader = {
-      name = "Miklós Horthy"
-      gfx = GFX_Portrait_hungary_miklos_horthy_admiral
-      traits = { gunnery_expert  navy_media_personality  superior_tactician }
-      skill = 4
-      id = 556
-      attack_skill = 5
-      defense_skill = 2
-      maneuvering_skill = 2
-      coordination_skill = 4
-    }
+		traits = { winter_specialist infantry_officer }
 
-    create_field_marshal = {
-      name = "Attila"
-      picture = "Portrait_Attila.dds"
-      traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
-      skill = 5
-      attack_skill = 6
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 4
-
-      id = 4032
-
-    }
-
-    create_corps_commander = {
-      name = "Károly Beregfy"
-      gfx = GFX_Portrait_hungary_karoly_beregfy
-      traits = { }
-      skill = 1
-      attack_skill = 1
-      defense_skill = 1
-      planning_skill = 1
-      logistics_skill = 1
-
-      id = 4017
-
-    }
-
-    create_corps_commander = {
-      name = "Döme Sztójay"
-      picture = "Portrait_Dome_Sztojay.dds"
-
-      traits = { politically_connected }
-
-      skill = 1
-      attack_skill = 1
-      defense_skill = 1
-      planning_skill = 1
-      logistics_skill = 1
-
-      id = 4020
-
-    }
-
-    create_corps_commander = {
-      name = "Pál Prónay"
-      picture = "Portrait_HUN_pal_pronay.png"
-
-      traits = { harsh_leader war_hero }
-
-      skill = 3
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 2
-      logistics_skill = 1
-
-      id = 4029
-
-    }
-
-    create_corps_commander = {
-      name = "Imre Kémeri Nagy"
-      picture = "Portrait_HUN_imre_kemeri_nagy.png"
-
-      traits = { winter_specialist infantry_officer }
-
-      skill = 3
-      attack_skill = 3
-      defense_skill = 4
-      planning_skill = 1
-      logistics_skill = 2
-
-      id = 4027
-
-    }
+		skill = 3
+		attack_skill = 3
+		defense_skill = 4
+		planning_skill = 1
+		logistics_skill = 2
+		legacy_id = 4027
+	}
 	
 	}
 
@@ -4334,34 +4284,26 @@ country_event = {     # 制造机械伊丽莎白
 		ai_chance = {
 			base = 100
 		}
-
-    create_corps_commander = {
-      name = "Mecha Eli chan"
-      picture = "Portrait_Mecha_Eli_chan.dds"
-      traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist panzer_leader panzer_expert }
-      skill = 4
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 3
-
-      id = 4013
-
-    }
-
-    create_corps_commander = {
-      name = "Mecha Eli chan MK-II"
-      picture = "Portrait_Mecha_Eli_chan_mk2.dds"
-      traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist panzer_leader panzer_expert }
-      skill = 4
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 3
-
-      id = 4014
-
-    }
+		add_corps_commander_role = {
+			Character = hun_mecha_eli
+			traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist panzer_leader panzer_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 4013
+		}
+		add_corps_commander_role = {
+			Character = hun_mecha_eli_mk2
+			traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist panzer_leader panzer_expert }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = 4014
+		}
 		
 	}
 	
