@@ -586,7 +586,7 @@ characters={
 		name=FRA_dEon
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_advisor_deon"
 				large="gfx/leaders/FRA/Portrait_Chevalier.dds"
 			}
 		}

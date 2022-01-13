@@ -266,15 +266,15 @@ country_event = {     # Romania: Darnic's Bomb
 		set_country_flag = ROM_Remilia_fled_flag
 		remove_unit_leader = 5600
 		kill_ideology_leader = neutrality
-		create_country_leader = {
-			name = "Darnic Prestone Yggdmillennia"
-			desc = "POLITICS_DARNIC_DESC"
-			picture = "gfx/leaders/ROM/Portrait_Darnic_Prestone_Yggdmillennia.dds"
-			expire = "1965.1.1"
-			ideology = stratocracy
-			traits = {
-				Realpolitik
+		add_country_leader_role = {
+			character = "ROM_darnic_prestone_yggdmillennia"
+			country_leader = {
+				ideology = stratocracy
+				desc = "POLITIVAL_DESC_DARNIC"
+				traits = {Realpolitik }
+				expire = "1965.1.1.1"
 			}
+			promote_leader = yes 
 		}
 		
 		hidden_effect = {
@@ -301,15 +301,14 @@ country_event = {     # Romania: Darnic's Bomb
 		country_event = { id = RomaniaCore.20  days = 5 }
 		remove_unit_leader = 5600
 		kill_ideology_leader = neutrality
-		create_country_leader = {
-			name = "Gheorghe Tatarescu"
-			desc = "POLITICS_DARNIC_DESC"
-			picture = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Tatarescu.dds"
-			expire = "1965.1.1"
-			ideology = authoritarian_democracy 
-			traits = {
-				
+		add_country_leader_role = {
+			character = "rom_gheorghe_tatarescu"
+			country_leader = {
+				ideology = authoritarian_democracy
+				traits = {  }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		hidden_effect = {
 			news_event = { id = more_News.79  hours = 20 }
@@ -369,14 +368,15 @@ country_event = {     # Romania: Assissinate Codreanu
 			base = 35
 		}
 		kill_ideology_leader = fascism
-		create_country_leader = {
-			name = "Horia Sima"
-			desc = "POLITICS_HORIA_SIMA_DESC"
-			picture = "Portrait_Romania_Horia_Sima.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {
+		add_country_leader_role = {
+			character = "ROM_horia_sima"
+			country_leader = {
+				desc = "POLITICS_HORIA_SIMA_DESC"
+				ideology = nazism
+				traits = {  }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		hidden_effect = {
 			country_event = { id = RomaniaCore.11 days = 15 }
@@ -552,22 +552,21 @@ country_event = {     # Romania: Darnic Holds
 		}
 		if = {
 			limit = {
-				NOT = { has_country_leader = {
-					name = "Darnic Prestone Yggdmillennia" ruling_only = yes
-				}  }				
+				ROM_darnic_prestone_yggdmillennia = {
+					is_country_leader = no
+				}			
 			}
-			create_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				desc = "POLITICS_DARNIC_DESC"
-				picture = "gfx/leaders/ROM/Portrait_Darnic_Prestone_Yggdmillennia.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
-				traits = {
-					Realpolitik
+			add_country_leader_role = {
+				character = "ROM_darnic_prestone_yggdmillennia"
+				country_leader = {
+					desc = "POLITICS_DARNIC_DESC"
+					ideology = stratocracy
+					traits = { Realpolitik }
+					expire = "1965.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
-		
 		custom_effect_tooltip = ROM_Darnic_will_bring_this_country_to_his_orbit_tt
 		hidden_effect = {
 			#TODO:  Some Country flag should be here to unlock Legionary State
@@ -629,15 +628,15 @@ country_event = {     # Romania: Democracy Triumph
 			election_frequency = 48
 			elections_allowed = no
 		}
-		create_country_leader = {
-			name = "Fiore Forvedge Yggdmillennia"
-			desc = "POLITICS_DARNIC_DESC"
-			picture = "gfx/leaders/ROM/Portrait_Fiore_Forvedge_Yggdmillennia.dds"
-			expire = "1965.1.1"
-			ideology = socialism
-			traits = {
-				moderate
+		add_country_leader_role = {
+			character = "ROM_fiore_forvedge_yggdmillennia"
+			country_leader = {
+				desc = "POLITICS_DARNIC_DESC"
+				ideology = socialism
+				traits = { moderate }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		set_party_name = {
 			ideology = democratic
@@ -683,17 +682,18 @@ country_event = {     # Romania: Codreanu Triumph
 		}
 		if = {
 			limit = {
-				NOT = { has_country_leader = { name = "Corneliu Zelea Codreanu" ruling_only = yes } }
-			}
-			create_country_leader = {
-				name = "Corneliu Zelea Codreanu"
-				desc = ""
-				picture = "portrait_corneliu_zelea_codreanu.dds"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {
-					#
+				ROM_corneliu_zelea_codreanu = {
+					is_country_leader = no
 				}
+			}
+			add_country_leader_role = {
+				character = "ROM_corneliu_zelea_codreanu"
+				country_leader = {
+					ideology = fascism_ideology
+					traits = {  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
 			}
 		}
 		hidden_effect = {
@@ -729,15 +729,15 @@ country_event = {     # Romania: Coronation of Flandre
 				elections_allowed = no
 			}
 		}
-		create_country_leader = {
-			name = "Flandre I"
-			desc = "POLITICS_FLANDRE_MONARCH_DESC"
-			picture = "Portrait_flandre_scarlet_monarch.dds"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				Laevatein
+		add_country_leader_role = {
+			character = "ROM_flandre_scarlet"
+			country_leader = {
+				desc = "POLITICS_FLANDRE_MONARCH_DESC"
+				ideology = fascism_ideology
+				traits = { Laevatein }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		### Coronation of Flandre
 		custom_effect_tooltip = ROM_Legionary_Kingdom_will_be_unlocked_tt
@@ -777,16 +777,27 @@ country_event = {     # Romania: Capitanul Flandre
 				elections_allowed = no
 			}
 		}
-		create_country_leader = {
-			name = "Flandre Scarlet"
-			desc = "POLITICS_FLANDRE_CAPITANUL_DESC"
-			picture = "Portrait_flander_scarlet_capitanul.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {
-				And_then_there_are_none
+		add_country_leader_role = {
+			character = "ROM_flandre_scarlet"
+			country_leader = {
+				desc = "POLITICS_FLANDRE_MONARCH_DESC"
+				ideology = nazism
+				traits = { And_then_there_are_none }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
+		ROM_flandre_scarlet = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/ROM/Portrait_flander_scarlet_capitanul.dds"
+				}
+			}
+			set_character_name = ROM_flandre_scarlet_capitanul
+		}
+		#reset portrait and name
+		##name = "Flandre Scarlet"
+		#picture = "Portrait_flander_scarlet_capitanul.dds"
 		custom_effect_tooltip = ROM_Flandre_Iron_Guard_Revolution_tt
 		hidden_effect = {
 			#TODO:  Some Country flag should be here to unlock Legionary State
@@ -821,16 +832,20 @@ country_event = {     # Romania: Sakuya takes control, the conflict begans
 			elections_allowed = no
 		}
 		if = {
-			limit = { NOT = { has_country_leader = { name = "Izaypo Sakuya" ruling_only = yes } } }
-			create_country_leader = {
-				name = "Izayoi Sakuya"
-				desc = "POLITICS_SAKUYA_DESC"
-				picture = "gfx/leaders/ROM/Portrait_Izayoi_Sakuya_Agent.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
-				traits = {
-					
+			limit = { 
+				ROM_izayoi_sakuya = {
+					is_country_leader = no
 				}
+			}
+			add_country_leader_role = {
+				character = "ROM_izayoi_sakuya"
+				country_leader = {
+					desc = "POLITICS_SAKUYA_DESC"
+					ideology = stratocracy
+					traits = {  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
 			}
 		}
 		
@@ -874,14 +889,14 @@ country_event = {     # Romania: Sakuya Assassinate Codreanu
 		}
 		add_stability = -0.025
 		kill_ideology_leader = fascism
-		create_country_leader = {
-			name = "Alexandru Cantacuzino"
-			desc = "POLITICS_CANTACUZINO_DESC"
-			picture = "Portrait_Alexandru_Cantacuzino.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {
+		add_country_leader_role = {
+			character = "ROM_Alexandru_Cantacuzino"
+			country_leader = {
+				ideology = nazism
+				traits = {  }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		set_country_flag = ROM_Codreanu_dead_flag
 		hidden_effect = {
@@ -1059,18 +1074,19 @@ country_event = {     # Romania: Remilia's Speech
 		add_stability = 0.025
 		if = {
 			limit = {
-				NOT = { has_country_leader = {  name = "Remilia I"  ruling_only = yes } }
+				ROM_Remilia_scarlet = {
+					is_country_leader = no
+				}
 			}
 			retire_ideology_leader = neutrality
-			create_country_leader = {
-				name = "Remilia I"
-				desc = "POLITICS_REMILIA_DESC"
-				picture = "Portrait_remilia_scarlet_monarch.dds"
-				expire = "1965.1.1"
-				ideology = absolute_monarchy
-				traits = {
-
+			add_country_leader_role = {
+				character = "ROM_Remilia_scarlet"
+				country_leader = {
+					ideology = absolute_monarchy
+					traits = {  }
+					expire = "1965.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 		set_country_flag = ROM_Scarlet_flag_available_flag
@@ -1106,15 +1122,15 @@ country_event = {     # Romania: Patchouli's Redemption
 			}
 		}
 		add_stability = 0.025
-		create_country_leader = {
-			name = "Patchouli Knowledge"
-			desc = "POLITICS_PATCHOULI_KNOWLEDGE_DESC"
-			picture = "Portrait_Patchouli_Knowledge.dds"
-			expire = "1965.1.1"
-			ideology = conservatism
-			traits = {
-				unmovable_library
+		add_country_leader_role = {
+			character = "rom_patchouli_knowledge"
+			country_leader = {
+				desc = "POLITICS_PATCHOULI_KNOWLEDGE_DESC"
+				ideology = conservatism
+				traits = { unmovable_library }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		set_party_name = {
 			ideology = democratic
@@ -1315,15 +1331,15 @@ country_event = {     # Romania: Murder Codreanu
 			popularity = -0.05
 		}
 		kill_ideology_leader = fascism
-		create_country_leader = {
-			name = "Alexandru Cantacuzino"
-			desc = "POLITICS_CANTACUZINO_DESC"
-			picture = "Portrait_Alexandru_Cantacuzino.dds"
-			expire = "1965.1.1"
-			ideology = nazism
-			traits = {
-
+		add_country_leader_role = {
+			character = "ROM_Alexandru_Cantacuzino"
+			country_leader = {
+				desc = "POLITICS_CANTACUZINO_DESC"
+				ideology = nazism
+				traits = {  }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		set_country_flag = ROM_Codreanu_dead_flag
 		hidden_effect = {
@@ -1371,15 +1387,15 @@ country_event = {     # Romania: Assissnate Vlad
 			popularity = -0.05
 		}
 		kill_ideology_leader = neutrality
-		create_country_leader = {
-			name = "Izayoi Sakuya"
-			desc = "POLITICS_SAKUYA_DESC"
-			picture = "gfx/leaders/ROM/Portrait_Izayoi_Sakuya_Agent.dds"
-			expire = "1965.1.1"
-			ideology = stratocracy
-			traits = {
-				
+		add_country_leader_role = {
+			character = "ROM_izayoi_sakuya"
+			country_leader = {
+				desc = "POLITICS_SAKUYA_DESC"
+				ideology = stratocracy
+				traits = {  }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes 
 		}
 		remove_unit_leader = 5600
 		hidden_effect = {

@@ -106,7 +106,7 @@ set_convoys = 0
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1935.1.1"
 	election_frequency = 36
 	elections_allowed = yes
 }
@@ -129,114 +129,22 @@ set_stability = 0.6
 
 set_cosmetic_tag = SER_Chetnik
 
-create_country_leader = {
-	name = "Draža Mihailović"
-	desc = ""
-	picture = "Portrait_Draza_Mihailovic.dds"
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-		#
+recruit_character = SER_draža_mihailović
+add_country_leader_role = {
+	character = SER_draža_mihailović
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = conservatism
+		traits = {
+		}
 	}
+	promote_leader = yes
 }
-
-create_country_leader = {
-	name = "Milan Nedic"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Peter Karadordevic"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = Despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Zivorad Jovanovic"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Draža Mihailović"
-	desc = ""
-	picture = "Portrait_Draza_Mihailovic.dds"
-	expire = "1965.1.1"
-	ideology = stratocracy
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "Vladimir Čukavac"
-	gfx = GFX_Portrait_yugoslavia_vladimir_cukavac
-	traits = { trickster  }
-	skill = 3
-
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_field_marshal = {
-	name = "Danilo Kalafatović"
-	picture = "Portrait_danilo_kalafatovic.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
-}
-
-create_field_marshal = {
-	name = "Milutin Nedić"
-	picture = "Portrait_milutin_nedic.dds"
-	traits = { thorough_planner }
-	skill = 3	
-	attack_skill = 3
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Petar Kosić"
-	picture = "Portrait_petar_kosic.dds"
-	traits = {  }
-	skill = 2
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
-}
-
-create_navy_leader = {
-	name = "Marijan Polić"
-	picture = "Portrait_marijan_polic.dds"
-	traits = { old_guard_navy navy_career_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	maneuvering_skill = 1
-	coordination_skill = 2
-}
+recruit_character = SER_milan_nedic
+recruit_character = SER_peter_karadordevic
+recruit_character = SER_zivorad_jovanovic
+recruit_character = SER_vladimir_Čukavac
+recruit_character = SER_danilo_kalafatović
+recruit_character = SER_milutin_nedić
+recruit_character = SER_petar_kosić
+recruit_character = SER_marijan_polić

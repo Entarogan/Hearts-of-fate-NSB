@@ -3,16 +3,11 @@ characters={
 		name="Západoslovanská Brno"
 		portraits={
 			civilian={
-				large="gfx/leaders/CZE/Portrait_Zapadoslavia_Brno.dds"
+				large="gfx/leaders/CZE/Portrait_Zapadoslavia_Brno.png"
 			}
 		}
 		country_leader={
 			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=stratocracy
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -21,16 +16,11 @@ characters={
 		name="Samopal Škorpion"
 		portraits={
 			civilian={
-				large="gfx/leaders/CZE/Portrait_Czech_Edvard_Benes.dds"
+				large="gfx/leaders/CZE/Portrait_Samopal_Skorpion.dds"
 			}
 		}
 		country_leader={
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=totalist
 			expire="1965.1.1.1"
 			id=-1
 		}

@@ -11,16 +11,6 @@ characters = {
 			expire="1965.1.1.1"
 			id=-1
 		}
-		country_leader={
-			ideology=stratocracy
-			expire="1965.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=democratic_socialist
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	BTY_Dahut={
 		name = "Dahut"

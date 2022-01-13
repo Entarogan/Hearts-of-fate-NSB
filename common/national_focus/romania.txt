@@ -202,13 +202,14 @@ focus_tree = {
 				has_government = neutrality
 			}
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 			has_country_flag = ROM_Legionary_Kingdom_available
@@ -238,9 +239,8 @@ focus_tree = {
 		y = 10
 		available = {
 			has_government = neutrality
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 			has_country_flag = ROM_Darnic_path_available
 		}
@@ -266,9 +266,8 @@ focus_tree = {
 		x = 19
 		y = 10
 		available = {
-			has_country_leader = {
-				name = "Remilia I"
-				ruling_only = yes
+			ROM_Remilia_scarlet = {
+				is_country_leader = yes
 			}
 			has_country_flag = ROM_Scarlet_flag_available_flag
 		}
@@ -321,10 +320,10 @@ focus_tree = {
 			focus = ROM_fuse_the_parties
 		}
 		available = {
-			has_country_leader = {
-				name = "Flandre Scarlet"
-				ruling_only = yes
+			ROM_flandre_scarlet = {
+				is_country_leader = yes
 			}
+			has_country_leader_with_trait = And_then_there_are_none
 			has_country_flag = ROM_Iron_Guard_Revolution_available
 		}
 		x = -2
@@ -400,9 +399,8 @@ focus_tree = {
 		}
 		bypass = {
 			has_country_flag = ROM_Alice_Margatroid_Coup_happened
-			has_country_leader = {
-				name = "Alice Margatroid"
-				ruling_only = yes
+			ROM_alice_margatroid = {
+				is_country_leader = yes
 			}
 		}
 		relative_position_id = ROM_New_Order_Triumph
@@ -700,15 +698,12 @@ focus_tree = {
 		}
 		available = {
 			NOT = {
-				has_country_leader = {
-					name = "Remilia I"
-					ruling_only = yes
+				ROM_Remilia_scarlet = {
+					is_country_leader = yes
 				}
 			}
-			NOT = {
-				has_country_leader = {
-					name = "Darnic Prestone Yggdmillennia"
-				}
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = no
 			}
 			is_in_faction = no
 			is_subject = no
@@ -937,10 +932,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_invite_foreign_motor_companies
 		available = {
-			NOT = {
-				has_country_leader = {
-					name = "Darnic Prestone Yggdmillennia"
-				}
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = no
 			}
 			POL = {
 				exists = yes
@@ -1837,13 +1830,11 @@ focus_tree = {
 			has_government = neutrality
 			has_idea = ROM_the_sentinel_of_the_motherland
 			OR = {
-				has_country_leader = {
-					name = "Remilia I"
-					ruling_only = yes
+				ROM_Remilia_scarlet = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Alice Margatroid"
-					ruling_only = yes
+				ROM_alice_margatroid = {
+					is_country_leader = yes
 				}
 			}
 		}
@@ -1868,15 +1859,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_Partidul_Natiunii
 		available = {
-			has_country_leader = {
-				name = "Remilia I"
-				ruling_only = yes
+			ROM_Remilia_scarlet = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
-			has_country_leader = {
-				name = "Alice Margatroid"
-				ruling_only = yes
+			ROM_alice_margatroid = {
+				is_country_leader = yes
 			}
 		}
 		available_if_capitulated = yes
@@ -2196,18 +2185,7 @@ focus_tree = {
 			add_ideas = ROM_army_war_college
 			custom_effect_tooltip = ROM_war_college_tt
 			hidden_effect = {
-				create_corps_commander = {
-					name = "Barbu Paraianu"
-					gfx = GFX_Portrait_romania_barbu_paraianu
-					traits = {
-						infantry_officer
-					}
-					skill = 2
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 3
-					logistics_skill = 2
-				}
+
 			}
 		}
 	}
@@ -2982,17 +2960,11 @@ focus_tree = {
 			}
 			has_idea = ROM_boyars_idea
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Flandre Scarlet"
-					ruling_only = yes
+				ROM_flandre_scarlet = {
+					is_country_leader = yes
 				}
 			}
 		}
@@ -3085,10 +3057,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_French_advisor
 		available = {
-			NOT = {
-				has_country_leader = {
-					name = "Darnic Prestone Yggdmillennia"
-				}
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = no
 			}
 			is_subject = no
 			OR = {
@@ -3246,9 +3216,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_state_of_iron
 		available = {
-			has_country_leader = {
-				name = "Vlad III"
-				ruling_only = yes
+			ROM_vlad_iii = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
@@ -3801,16 +3770,14 @@ focus_tree = {
 					has_government = fascism
 				}
 			}
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 			has_government = neutrality
 		}
 		bypass = {
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 			has_government = fascism
 		}
@@ -3829,15 +3796,15 @@ focus_tree = {
 				election_frequency = 48
 				elections_allowed = no
 			}
-			create_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				desc = "POLITIVAL_DESC_DARNIC"
-				picture = "Portrait_Darnic_Prestone_Yggdmillennia.dds"
-				expire = "1965.1.1"
-				ideology = valkist
-				traits = {
-					Realpolitik
+			add_country_leader_role = {
+				character = "ROM_darnic_prestone_yggdmillennia"
+				country_leader = {
+					ideology = valkist
+					desc = "POLITIVAL_DESC_DARNIC"
+					traits = {Realpolitik }
+					expire = "1965.1.1.1"
 				}
+				promote_leader = yes 
 			}
 			set_cosmetic_tag = ROM_darnic
 		}
@@ -3856,9 +3823,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = ROM_New_Order_Triumph
 		available = {
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
@@ -3895,9 +3861,8 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_New_Order_Triumph
 		available = {
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
@@ -3935,9 +3900,8 @@ focus_tree = {
 		y = 2
 		relative_position_id = ROM_New_Order_Triumph
 		available = {
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
@@ -3970,9 +3934,8 @@ focus_tree = {
 		available = {
 			or = {
 				has_government = fascism
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
 			}
 		}
@@ -5005,13 +4968,14 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 		}
@@ -5021,20 +4985,19 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_country_leader = {
-						name = "Vlad III"
-						ruling_only = yes
+					ROM_vlad_iii = {
+						is_country_leader = yes
 					}
 				}
-				create_country_leader = {
-					name = "Vlad III"
-					desc = "POLITICS_VLAD_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Vlad_III_Neutrality.dds"
-					expire = "1965.1.1"
-					ideology = fascism_ideology
-					traits = {
-						Demonic_Defender_of_the_State
+				add_country_leader_role = {
+					character = "ROM_vlad_iii"
+					country_leader = {
+						desc = "POLITICS_VLAD_DESC"
+						ideology = fascism_ideology
+						traits = { Demonic_Defender_of_the_State }
+						expire = "1965.1.1.1"
 					}
+					promote_leader = yes 
 				}
 				add_popularity = {
 					ideology = neutrality
@@ -5043,21 +5006,23 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_country_leader = {
-						name = "Flandre I"
-						ruling_only = yes
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
 					}
+					has_country_leader_with_trait = Laevatein
 				}
-				create_country_leader = {
-					name = "Flandre I"
-					desc = "POLITICS_VLAD_DESC"
-					picture = "gfx/leaders/ROM/Portrait_Vlad_III_Neutrality.dds"
-					expire = "1965.1.1"
-					ideology = absolute_monarchy
-					traits = {
-						Laevatein
+				add_country_leader_role = {
+					character = "ROM_flandre_scarlet"
+					country_leader = {
+						desc = "POLITICS_VLAD_DESC"
+						ideology = absolute_monarchy
+						traits = { Laevatein }
+						expire = "1965.1.1.1"
 					}
+					promote_leader = yes 
 				}
+
+
 				add_popularity = {
 					ideology = fascism
 					popularity = 0.15
@@ -5111,9 +5076,8 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = ROM_gheorghe_argeseanu
 
-			create_corps_commander = {
-				name = "Gheorghe Argeseanu"
-				portrait_path = "gfx/leaders/ROM/Portrait_ROM_Gheorghe_Argeseanu.png"
+			add_corps_commander_role = {
+				Character = ROM_gheorghe_argeseanu
 				traits = {
 					politically_connected
 					old_guard
@@ -5123,6 +5087,7 @@ focus_tree = {
 				defense_skill = 3
 				planning_skill = 2
 				logistics_skill = 3
+				legacy_id=-1
 			}
 
 			add_political_power = 150
@@ -5141,13 +5106,14 @@ focus_tree = {
 		relative_position_id = ROM_fuse_the_parties
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 		}
@@ -5264,9 +5230,8 @@ focus_tree = {
 		}
 		available = {
 			has_government = neutrality
-			has_country_leader = {
-				name = "Alice Margatroid"
-				ruling_only = yes
+			ROM_alice_margatroid = {
+				is_country_leader = yes
 			}
 		}
 		x = -1
@@ -5283,16 +5248,16 @@ focus_tree = {
 				ideology = democratic
 				popularity = 0.1
 			}
-			create_country_leader = {
-				name = "Alice Margatroid"
-				desc = "POLITICS_VLAD_DESC"
-				picture = "gfx/leaders/ROM/Portrait_Alice_Margatroid.dds"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					Puppeteer_of_Bucharest
+			add_country_leader_role = {
+				character = "ROM_alice_margatroid"
+				country_leader = {
+					desc = "POLITICS_VLAD_DESC"
+					ideology = liberalism
+					traits = { Puppeteer_of_Bucharest }
+					expire = "1965.1.1"
+					id = 5666
 				}
-				id = 5666
+				promote_leader = yes 
 			}
 			set_party_name = {
 				ideology = democratic
@@ -5320,9 +5285,8 @@ focus_tree = {
 		}
 		available = {
 			has_government = neutrality
-			has_country_leader = {
-				name = "Alice Margatroid"
-				ruling_only = yes
+			ROM_alice_margatroid = {
+				is_country_leader = yes
 			}
 		}
 		x = 1
@@ -5347,9 +5311,8 @@ focus_tree = {
 			focus = ROM_our_own_party
 		}
 		available = {
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 			has_idea = Yggdmillennia_idea
 		}
@@ -5372,9 +5335,8 @@ focus_tree = {
 		}
 		available = {
 			has_idea = ROM_Zugzwang
-			has_country_leader = {
-				name = "Darnic Prestone Yggdmillennia"
-				ruling_only = yes
+			ROM_darnic_prestone_yggdmillennia = {
+				is_country_leader = yes
 			}
 		}
 		x = 1
@@ -5460,13 +5422,14 @@ focus_tree = {
 			}
 			has_completed_focus = ROM_fuse_the_parties
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
+				AND = {
+					ROM_flandre_scarlet = {
+						is_country_leader = yes
+					}
+					has_country_leader_with_trait = Laevatein
 				}
 			}
 			has_idea = ROM_echipa_mortii
@@ -5557,17 +5520,11 @@ focus_tree = {
 				has_completed_focus = ROM_Iron_guard_revolution
 			}
 			OR = {
-				has_country_leader = {
-					name = "Vlad III"
-					ruling_only = yes
+				ROM_vlad_iii = {
+					is_country_leader = yes
 				}
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Flandre Scarlet"
-					ruling_only = yes
+				ROM_flandre_scarlet = {
+					is_country_leader = yes
 				}
 			}
 		}
@@ -5782,15 +5739,8 @@ focus_tree = {
 			focus = ROM_kazikli_bey
 		}
 		available = {
-			OR = {
-				has_country_leader = {
-					name = "Flandre I"
-					ruling_only = yes
-				}
-				has_country_leader = {
-					name = "Flandre Scarlet"
-					ruling_only = yes
-				}
+			ROM_flandre_scarlet = {
+				is_country_leader = yes
 			}
 			# has_completed_focus = ROM_fuse_the_parties
 		}
@@ -5882,9 +5832,8 @@ focus_tree = {
 			focus = ROM_the_royal_foundation
 		}
 		available = {
-			has_country_leader = {
-				name = "Remilia I"
-				ruling_only = yes
+			ROM_Remilia_scarlet = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
@@ -5916,16 +5865,14 @@ focus_tree = {
 			focus = ROM_the_royal_foundation
 		}
 		available = {
-			has_country_leader = {
-				name = "Remilia I"
-				ruling_only = yes
+			ROM_Remilia_scarlet = {
+				is_country_leader = yes
 			}
 		}
 		bypass = {
 			NOT = {
-				has_country_leader = {
-					name = "Remilia I"
-					ruling_only = yes
+				ROM_Remilia_scarlet = {
+					is_country_leader = yes
 				}
 			}
 		}
@@ -5967,9 +5914,8 @@ focus_tree = {
 			focus = ROM_Lunar_Dial
 		}
 		available = {
-			has_country_leader = {
-				name = "Remilia I"
-				ruling_only = yes
+			ROM_Remilia_scarlet = {
+				is_country_leader = yes
 			}
 			num_of_factories > 30
 			is_subject = no

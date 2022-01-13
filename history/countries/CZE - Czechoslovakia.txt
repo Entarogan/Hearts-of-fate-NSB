@@ -50,8 +50,30 @@ add_ideas = {
 }
 
 recruit_character = CZE_Zapadoslavia_Brno
-recruit_character = CZE_Samopal_Skorpion
+add_country_leader_role = {
+	character = CZE_Zapadoslavia_Brno
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = stratocracy
+		traits = {
+			
+		}
+	}
+	promote_leader = yes
+}
 
+recruit_character = CZE_Samopal_Skorpion
+add_country_leader_role = {
+	character = CZE_Samopal_Skorpion
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = totalist
+		traits = {
+			
+		}
+	}
+	promote_leader = yes
+}
 recruit_character = CZE_vojtyech_luzha
 
 recruit_character = CZE_josef_shnejdarek

@@ -37,7 +37,7 @@ characters={
 		}	
 	}
 	SOV_konstantin_rokossovsky={
-		name=konstantin_rokossovsky
+		name = SOV_konstantin_rokossovsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_konstantin_rokossovsky.dds"
@@ -75,7 +75,7 @@ characters={
 		}
 	}
 	SOV_aleksandr_vasilevsky={
-		name=aleksandr_vasilevsky
+		name = SOV_aleksandr_vasilevsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_aleksandr_vasilevsky.dds"
@@ -96,6 +96,7 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = aleksandr_vasilevsky
+			ledger = army
 			available = {
 				NOT = { has_idea = SOV_inia_sestina }
 			}
@@ -143,7 +144,7 @@ characters={
 		}
 	}
 	SOV_ivan_konev={
-		name=ivan_konev
+		name = SOV_ivan_konev
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_ivan_konev.dds"
@@ -164,6 +165,7 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = ivan_konev
+			ledger = army
 			available = {
 				NOT = { has_country_flag = purged_stalinist }
 				NOT = { has_idea = SOV_inia_sestina }
@@ -179,7 +181,7 @@ characters={
 		}
 	}
 	SOV_semyon_timoshenko={
-		name=semyon_timoshenko
+		name = SOV_semyon_timoshenko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_semyon_timoshenko.dds"
@@ -214,7 +216,7 @@ characters={
 		}
 	}
 	SOV_kliment_voroshilov={
-		name=kliment_voroshilov
+		name = SOV_kliment_voroshilov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_kliment_voroshilov.dds"
@@ -290,7 +292,7 @@ characters={
 		}
 	}
 	SOV_semyon_budyonny={
-		name="Semyon Budyonny"
+		name=SOV_semyon_budyonny
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_semyon_budyonny.dds"
@@ -310,7 +312,7 @@ characters={
 		}
 	}
 	SOV_ivan_chernyakhovsky={
-		name="Ivan Chernyakhovsky"
+		name=SOV_ivan_chernyakhovsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_ivan_chernyakhovsky.dds"
@@ -330,7 +332,7 @@ characters={
 		}
 	}
 	SOV_issa_pliyev={
-		name="Issa Pliyev"
+		name=SOV_issa_pliyev
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
@@ -350,7 +352,7 @@ characters={
 		}
 	}
 	SOV_leonid_govorov={
-		name="Leonid Govorov"
+		name=SOV_leonid_govorov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
@@ -369,7 +371,7 @@ characters={
 		}
 	}
 	SOV_grigory_kulik={
-		name="Grigory Kulik"
+		name=SOV_grigory_kulik
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
@@ -389,7 +391,7 @@ characters={
 		}
 	}
 	SOV_kirill_meretskov={
-		name="Kirill Meretskov"
+		name=SOV_kirill_meretskov
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -409,7 +411,7 @@ characters={
 		}
 	}
 	SOV_filipp_golikov={
-		name="Filipp Golikov"
+		name=SOV_filipp_golikov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_filipp_golikov.dds"
@@ -429,7 +431,7 @@ characters={
 		}
 	}
 	SOV_andrey_yeryomenko={
-		name="Andrey Yeryomenko"
+		name=SOV_andrey_yeryomenko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_andrey_yeryomenko.dds"
@@ -449,7 +451,7 @@ characters={
 		}
 	}
 	SOV_yakov_cherevichenko={
-		name="Yakov Cherevichenko"
+		name=SOV_yakov_cherevichenko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_yakov_cherevichenko.dds"
@@ -469,7 +471,7 @@ characters={
 		}
 	}
 	SOV_vasily_kuznetsov={
-		name="Vasily Kuznetsov"
+		name=SOV_vasily_kuznetsov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_vasily_kuznetsov.dds"
@@ -489,7 +491,7 @@ characters={
 		}
 	}
 	SOV_andrey_vlasov={
-		name="Andrey Vlasov"
+		name=SOV_andrey_vlasov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_andrey_vlasov.dds"
@@ -509,7 +511,7 @@ characters={
 		}
 	}
 	SOV_ivan_fedyuninsky={
-		name="Ivan Fedyuninsky"
+		name=SOV_ivan_fedyuninsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_ivan_fedyuninsky.dds"
@@ -529,7 +531,7 @@ characters={
 		}
 	}
 	SOV_maksim_purkayev={
-		name="Maksim Purkayev"
+		name=SOV_maksim_purkayev
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_maksim_purkayev.dds"
@@ -549,7 +551,7 @@ characters={
 		}
 	}
 	SOV_kuzma_galitsky={
-		name="Kuzma Galitsky"
+		name=SOV_kuzma_galitsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_kuzma_galitsky.dds"
@@ -569,7 +571,7 @@ characters={
 		}
 	}
 	SOV_markian_popov={
-		name="Markian Popov"
+		name=SOV_markian_popov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_matkian_popov.dds"
@@ -589,7 +591,7 @@ characters={
 		}
 	}
 	SOV_kirill_moskalenko={
-		name="Kirill Moskalenko"
+		name=SOV_kirill_moskalenko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_kirill_moskalenko.dds"
@@ -608,7 +610,7 @@ characters={
 		}
 	}
 	SOV_dmitry_lelyushenko={
-		name="Dmitry Lelyushenko"
+		name=SOV_dmitry_lelyushenko
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_dmitri_danilovich_lelyushenko.dds"
@@ -628,7 +630,7 @@ characters={
 		}
 	}
 	SOV_rodion_malinovsky={
-		name="Rodion Malinovsky"
+		name=SOV_rodion_malinovsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_rodion_malinovsky.dds"
@@ -1060,7 +1062,7 @@ characters={
 		}
 	}
 	SOV_joseph_dzhugashvili={
-		name="Joseph Dzhugashvili"
+		name=SOV_joseph_dzhugashvili
 		portraits={
 			civilian={
 				large="gfx/leaders/SOV/Portrait_Soviet_Joseph_Dzhugashvili.dds"
@@ -1074,22 +1076,8 @@ characters={
 			id=-1
 		}
 	}
-	SOV_konstantin_rodzaevsky={
-		name="Konstantin Rodzaevsky"
-		portraits={
-			civilian={
-				large="gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rodzaevsky.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_KONSTANTIN_RODZAEVSKY_DESC"
-			ideology=fascism_ideology
-			expire="1953.3.1.1"
-			id=-1
-		}
-	}
 	SOV_alexander_fyodorovich_kerensky={
-		name="Alexander Fyodorovich Kerensky"
+		name=SOV_aleksandr_kerensky
 		portraits={
 			civilian={
 				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
@@ -1103,7 +1091,7 @@ characters={
 		}
 	}
 	SOV_iona_yakir={
-		name="Iona Yakir"
+		name=SOV_iona_yakir
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -1123,7 +1111,7 @@ characters={
 		}
 	}
 	SOV_ma_zhongying={
-		name="Ma ZhongYing"
+		name=SOV_ma_zhongying
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -1143,7 +1131,7 @@ characters={
 		}
 	}
 	SOV_nikolai_vatutin={
-		name="Nikolai Vatutin"
+		name=SOV_nikolay_vatutin
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_nikolai_fyodorovich_vatutin.dds"
@@ -1218,10 +1206,10 @@ characters={
 		}
 	}
 	SOV_georgiy_zakharov={
-		name="Georgiy Zakharov"
+		name=SOV_georgy_zakharov
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="gfx/interface/ideas/idea_SOV_georgiy_zakharov.dds"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Georgiy_Zakharov_1.png"
@@ -1238,10 +1226,10 @@ characters={
 		}
 	}
 	SOV_max_reyter={
-		name="Max Reyter"
+		name=SOV_maks_reyter
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_max_andreyevich.dds"
+				small="gfx/interface/ideas/idea_SOV_maks_reyter.dds"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Max_Andreyevich.dds"
@@ -1293,10 +1281,10 @@ characters={
 		}
 	}
 	SOV_nikolai_berzarin={
-		name="Nikolai Berzarin"
+		name=SOV_nikolay_berzarin
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="gfx/interface/ideas/idea_SOV_nikolai_berzarin.dds"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Nikolai_Berzarin_1.png"
@@ -1313,7 +1301,7 @@ characters={
 		}
 	}
 	SOV_alexander_gorbatov={
-		name="Alexander Gorbatov"
+		name=SOV_aleksandr_gorbatov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_alexander_gorbatov.dds"
@@ -1333,10 +1321,10 @@ characters={
 		}
 	}
 	SOV_andrei_grechko={
-		name="Andrei Grechko"
+		name=SOV_andrey_grechko
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_andrei_antonovich_grechko.dds"
+				small= "GFX_idea_SOV_andrey_grechko"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Soviet_Andrei_Antonovich_Grechko.dds"
@@ -1353,7 +1341,7 @@ characters={
 		}
 	}
 	SOV_vasily_chuikov={
-		name="Vasily Chuikov"
+		name=SOV_vasily_chuykov
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_vasily_chuikov.dds"
@@ -1373,7 +1361,7 @@ characters={
 		}
 	}
 	SOV_filipp_oktyabrskiy={
-		name="Filipp Oktyabrskiy"
+		name=SOV_filipp_oktyabrsky
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_SOV_filipp_oktyabrsky.dds"
@@ -1463,20 +1451,7 @@ characters={
 			
 		}
 	}
-	SOV_nikolay_aliyarbekov={
-		name="Nikolay Aliyarbekov"
-		portraits={
-			civilian={
-				large="GFX_portrait_europe_generic_6"
-			}
-		}
-		country_leader={
-			ideology=centrism
-			traits={ fortification_engineer smooth_talking_charmer }
-			expire="1943.1.1.12"
-			id=-1
-		}
-	}
+
 	
 	####advisor
 	SOV_alexander_shliapnikov={

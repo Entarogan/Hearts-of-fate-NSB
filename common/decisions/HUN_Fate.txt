@@ -1,43 +1,43 @@
 
 operations = {
-  ROM_Start_ROM_HUN_War = {
-    allowed = { tag = ROM }
-    available = {
-      always = no
-    }
-    is_good = no
+	ROM_Start_ROM_HUN_War = {
+		allowed = { tag = ROM }
+		available = {
+		always = no
+		}
+		is_good = no
 		days_mission_timeout = 180
-    activation = {
+		activation = {
 			date < 1936.1.10
-      tag = ROM
+			tag = ROM
 		}
-    cancel_trigger = {
-      OR = {
-        has_war_with = HUN 
-        is_subject = yes
-        exists = no
-      }
+		cancel_trigger = {
+			OR = {
+				has_war_with = HUN 
+				is_subject = yes
+				exists = no
+			}
 		}
-    timeout_effect = { #Attack 
-      hidden_effect = {
-        set_global_flag = ROM_HUN_war_begins
-      }
-      unlock_national_focus = ROM_kindle_the_flames_of_war
+		timeout_effect = { #Attack 
+			hidden_effect = {
+				set_global_flag = ROM_HUN_war_begins
+			}
+			unlock_national_focus = ROM_kindle_the_flames_of_war
 			add_timed_idea = {
 				idea = HUN_Passion_for_fighting
 				days = 150
 			}
-      declare_war_on = {
-        target = HUN
-        type = take_core_state
-        generator = {
-          76 82 93 664
-        }
-      }
-      if = {
-        limit = {
-          ROM = { has_completed_focus = ROM_contact_czechs }
-        }
+			declare_war_on = {
+				target = HUN
+				type = take_core_state
+				generator = {
+					76 82 93 664
+				}
+			}
+			if = {
+				limit = {
+					ROM = { has_completed_focus = ROM_contact_czechs }
+				}
 				CZE = {
 					add_timed_idea = {
 						idea = HUN_Passion_for_fighting
@@ -48,25 +48,25 @@ operations = {
 						type = puppet_wargoal_focus
 					}
 				}
-      }
-      add_political_power = -50
-      add_stability = -0.05
-      activate_mission = ROMHUN_ROM_occupy_transylvania
-      HUN = { activate_mission = ROMHUN_HUN_fight_off_romania }
-      HUN = { activate_mission = Forcing_the_Czech_Republic_to_withdraw_from_the_war }
-      HUN = {
+			}
+			add_political_power = -50
+			add_stability = -0.05
+			activate_mission = ROMHUN_ROM_occupy_transylvania
+			HUN = { activate_mission = ROMHUN_HUN_fight_off_romania }
+			HUN = { activate_mission = Forcing_the_Czech_Republic_to_withdraw_from_the_war }
+			HUN = {
 				add_timed_idea = {
 					idea = HUN_Passion_for_fighting
 					days = 150
 				}
-      }
+			}
 
 			hidden_effect = {
 				news_event = { id = more_News.35 days = 1}
 			}
 
-		}
-  }
+		}	
+	}
 
 
 	ROMHUN_ROM_occupy_transylvania = {

@@ -271,6 +271,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_lancelot.dds"
+				small="gfx/interface/ideas/GFX_idea_command_lancelot.dds"
 			}
 		}
 		corps_commander = {
