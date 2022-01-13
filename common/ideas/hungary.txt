@@ -6,11 +6,11 @@ ideas = {
 
 			available = {
 				has_war = no
-        NOT = { is_in_faction_with = SOV }
-        NOT = { is_in_faction_with = ENG }
-        NOT = { is_in_faction_with = GER }
-        NOT = { is_in_faction_with = FRA }
-        NOT = { is_in_faction_with = USA }
+				NOT = { is_in_faction_with = SOV }
+				NOT = { is_in_faction_with = ENG }
+				NOT = { is_in_faction_with = GER }
+				NOT = { is_in_faction_with = FRA }
+				NOT = { is_in_faction_with = USA }
 			}
 
 			modifier = {
@@ -634,9 +634,9 @@ ideas = {
 			}
 			
 			available = {
-        has_government = fascism
-        is_in_faction_with = GER
-        has_completed_focus = HUN_Banat_TST
+				has_government = fascism
+				is_in_faction_with = GER
+				has_completed_focus = HUN_Banat_TST
 			}
 			
 			traits = { German_leader }
