@@ -2250,10 +2250,37 @@ ideas = {
 			modifier = {
 			}
 
-      ai_will_do = {
-        factor = 3
-      }
+			ai_will_do = {
+				factor = 3
+			}
 
+		}
+
+		SOV_soviet_railways_improved = { #NSB
+			name = SOV_soviet_railways
+
+			picture = SOV_soviet_railways
+
+			allowed = {
+				original_TAG = SOV
+				
+			}
+			
+			available = {
+				has_completed_focus = SOV_Maintain_the_Trans_Siberian_Railway
+			}
+			
+			cost = 75
+
+			research_bonus = {
+				train_tech = 0.2
+			}
+			
+			traits = { railway_company }
+			
+			modifier = {
+				mobilization_speed = 0.02
+			}
 		}
 	}
 	

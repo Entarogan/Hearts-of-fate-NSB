@@ -462,7 +462,7 @@ add_ideas = {
 	GER_Alfred_Rosenberg
 	GER_special_third_nein
 	GER_Heinrich_Himmler
-	GER_Wilhelm_Canaris
+	GER_wilhelm_canaris
 	GER_Hohenheim_Paracelsus
 }
 
