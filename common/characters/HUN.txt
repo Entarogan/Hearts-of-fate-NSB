@@ -116,6 +116,7 @@ characters={
 				large="gfx/leaders/HUN/Portrait_Elizabathe_Bathory_General.dds"
 			}
 			army = {
+				large="gfx/leaders/HUN/Portrait_Elizabathe_Bathory_General.dds"
 				small="GFX_idea_hun_bathory"
 			}
 		}
@@ -127,7 +128,7 @@ characters={
 			id=500
 		}
 		advisor={
-			slot = navy_chief
+			slot = high_command
 			idea_token = hun_bathory
 			ledger = army
 			allowed = {
@@ -154,6 +155,7 @@ characters={
 			}
 			army={
 				small="GFX_idea_Attila"
+				large="gfx/leaders/HUN/Portrait_Attila.dds"
 			}
 		}
 		field_marshal={
@@ -704,6 +706,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_Matyas_Rakosi"
+				large="gfx/leaders/HUN/Portrait_HUN_matyas_rakosi_army.png"
 			}
 		}
 		advisor={
@@ -990,6 +993,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hun_mecha_eli_mk2"
+				large="gfx/leaders/HUN/Portrait_Mecha_Eli_chan_mk2.dds"
 			}
 		}
 		advisor={
@@ -1014,6 +1018,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_hun_mecha_eli"
+				large="gfx/leaders/HUN/Portrait_Mecha_Eli_chan.dds"
 			}
 		}
 		advisor={
@@ -1080,7 +1085,7 @@ characters={
 		}
 	}
 	HUN_gyorgy_jendrassik={
-		name=HUN_gyorgy_jendrassik
+		name= HUN_gyorgy_jendrassik
 		portraits={
 			army={
 				small="GFX_idea_HUN_gyorgy_jendrassik"
