@@ -3,35 +3,35 @@ ideas = {
   country = {
   
     EGY_purple_shirt = {
-      allowed = {
-				original_tag = IRQ
-				always = no
-			}
+		allowed = {
+			original_tag = IRQ
+			always = no
+		}
 
-			allowed_civil_war = {
-				always = no
-			}
-      
-      modifier = {
-				conscription = 0.05
-        army_core_attack_factor = 0.15
-        army_core_defence_factor = 0.15
-        army_org_factor = 0.15
-        democratic_drift = 0.03
+		allowed_civil_war = {
+			always = no
+		}
 
-				special_forces_attack_factor = 0.10
-				special_forces_defence_factor = 0.10
+		modifier = {
+			conscription = 0.05
+			army_core_attack_factor = 0.15
+			army_core_defence_factor = 0.15
+			army_org_factor = 0.15
+			democratic_drift = 0.03
 
-				no_supply_grace = 48
-				out_of_supply_factor = -0.10
-				land_night_attack = 0.10
-				recon_factor = 0.10
+			special_forces_attack_factor = 0.10
+			special_forces_defence_factor = 0.10
 
-        special_forces_min = 30
-        ai_focus_defense_factor = 1.00
-			}
-      
-      picture = HUN_secret_rearmament
+			no_supply_grace = 48
+			out_of_supply_factor = -0.10
+			land_night_attack = 0.10
+			recon_factor = 0.10
+
+			special_forces_min = 30
+			ai_focus_defense_factor = 1.00
+		}
+
+		picture = HUN_secret_rearmament
     
     }
   
@@ -1101,26 +1101,26 @@ ideas = {
     
     
     ira_legion_of_dead = {
-      allowed = {
-        original_tag = IRQ
-				always = no
-      }
-      allowed_civil_war = {
-				always = no
-			}
-      available = {
-        is_subject = no
-        has_country_leader = { name = "Ereshkigal" ruling_only = yes }
-      }
+		allowed = {
+			original_tag = IRQ
+					always = no
+		}
+      	allowed_civil_war = {
+			always = no
+		}
+		available = {
+			is_subject = no
+			has_country_leader = { name = "Ereshkigal" ruling_only = yes }
+		}
       
-      removal_cost = -1
+		removal_cost = -1
 
-			picture = death_men
-      
-      traits = {
-        ira_legion_of_dead
-      }
-      
+		picture = death_men
+		
+		traits = {
+			ira_legion_of_dead
+		}
+		
     
     }
     
@@ -1180,39 +1180,39 @@ ideas = {
   
   political_advisor = { 
     irq_siduri = {
-      allowed = {
-        original_tag = IRQ
-      }
-      
-      traits = {
-        government_head_siduri
-      }
-      
-      picture = siduri
-      
-      ai_will_do = {
-				factor = 20
-			}
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		traits = {
+			government_head_siduri
+		}
+		
+		picture = siduri
+		
+		ai_will_do = {
+			factor = 20
+		}
     }
     
     irq_barzan = {
-      allowed = {
-        original_tag = IRQ
-      }
+		allowed = {
+			original_tag = IRQ
+		}
+			
+		traits = {
+			bandit_barzan
+		}
       
-      traits = {
-        bandit_barzan
-      }
-      
-      available = {
-        has_completed_focus = ira_ally_the_militias
-      }
-      
-      picture = barzan
-      
-      ai_will_do = {
-				factor = 3
-			}
+		available = {
+			has_completed_focus = ira_ally_the_militias
+		}
+		
+		picture = barzan
+		
+		ai_will_do = {
+			factor = 3
+		}
     }
     
     irq_flueger = {

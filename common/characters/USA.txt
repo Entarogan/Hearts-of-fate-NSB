@@ -138,13 +138,14 @@ characters={
 			slot = theorist
 			idea_token = george_patton
 			ledger = army
-				allowed = {
-					original_tag = USA
-				}
-				
-				traits = {
-					mobile_warfare_expert
-				}
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = {
+				army_armored_3
+				army_cavalry_1
+			}
 		}
 
 		corps_commander={
@@ -286,6 +287,7 @@ characters={
 				}
 				traits = {
 					army_infantry_2
+					army_artillery_1
 				}
 				cost = 100
 				ai_will_do = {

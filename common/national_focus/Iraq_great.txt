@@ -139,10 +139,9 @@ focus_tree = {
 		x = 39
 		y = 0
     available = {
-      has_country_leader = {
-        name = "Ishtar"
-        ruling_only = yes
-      }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 100
@@ -160,10 +159,9 @@ focus_tree = {
 		x = 43
 		y = 0
     available = {
-      has_country_leader = {
-        name = "Ereshkigal"
-        ruling_only = yes
-      }
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 100
@@ -267,22 +265,21 @@ focus_tree = {
 		x = -4
 		y = 1
 		relative_position_id = ira_assyrian_nationalism
-    completion_reward = {
-      add_ideas = { ira_assyrian_national_congress }
-      set_party_name = { ideology = fascism name = IRQ_Assyrian_national_congress_short long_name = IRQ_Assyrian_national_congress }
-      hidden_effect = {
-        create_country_leader = {
-          name = "Semiramis"
-          desc = "POLITIVAL_DESC_SEMIRAMIS"
-          picture = "Portrait_Semiramis.dds"
-          expire = "1965.1.1"
-          ideology = fascism_ideology
-          traits = {
-            #
-          }
-        }
-      }
-    }
+		completion_reward = {
+			add_ideas = { ira_assyrian_national_congress }
+			set_party_name = { ideology = fascism name = IRQ_Assyrian_national_congress_short long_name = IRQ_Assyrian_national_congress }
+			hidden_effect = {
+				add_country_leader_role = {
+					character = "IRQ_Semiramis"
+					country_leader = {
+						ideology = fascism_ideology
+						traits = {   }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes
+				}
+			}
+		}
 	}
   
 	focus = {
@@ -321,7 +318,9 @@ focus_tree = {
 		relative_position_id = ira_sumerian_revival
     available = {
       threat > 0.09
-      has_country_leader = { name = "Gilgamesh" ruling_only = yes }
+	  IRQ_Gilgamesh = {
+		is_country_leader = yes
+	}
     }
     completion_reward = {
       add_ideas = {  ira_stronghold_metropolis }
@@ -382,8 +381,12 @@ focus_tree = {
     available = {
       threat > 0.39
       OR = {
-        has_country_leader = { name = "Ishtar" ruling_only = yes }
-        has_country_leader = { name = "Ereshkigal" ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
       }
     }
     completion_reward = {
@@ -497,16 +500,16 @@ focus_tree = {
       add_ideas = { ira_ally_the_militias  }
       custom_effect_tooltip = available_political_advisor
       show_ideas_tooltip = irq_barzan
-      create_corps_commander = {
-        name = "Barzan"
-        picture = "Portrait_Barzan.dds"
-        traits = { organizer urban_assault_specialist career_officer trait_reckless }
-        skill = 4
+	  add_corps_commander_role = {
+		character = irq_barzan
+		skill = 4
         attack_skill = 4
         defense_skill = 2
         planning_skill = 4
         logistics_skill = 3
-      }
+		traits = { organizer urban_assault_specialist career_officer trait_reckless }
+	  }
+
     }  
 
 	}
@@ -561,16 +564,17 @@ focus_tree = {
       set_cosmetic_tag = IRQ_ASSYRIA
       set_capital = 676
       effect_tooltip = {
-        create_country_leader = {
-          name = "Semiramis"
-          desc = "POLITIVAL_DESC_SEMIRAMIS"
-          picture = "Portrait_Semiramis.dds"
-          expire = "1965.1.1"
-          ideology = fascism_ideology
-          traits = {
-            #
-          }
-        }
+		hidden_effect = {
+			add_country_leader_role = {
+				character = "IRQ_Semiramis"
+				country_leader = {
+					ideology = fascism_ideology
+					traits = {   }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
+			}
+		}
       }
       
                
@@ -808,15 +812,17 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = ira_national_coup
-    ai_will_do = {
-      factor = 4
-    }
-    available = {
-      has_country_leader = { name = "Semiramis" ruling_only = yes }
-    }
-    completion_reward = {
-      add_country_leader_trait = Wise_Queen_of_Assyria
-    }
+		ai_will_do = {
+		factor = 4
+		}
+		available = {
+			IRQ_Semiramis = {
+				is_country_leader = yes
+			}
+		}
+		completion_reward = {
+		add_country_leader_trait = Wise_Queen_of_Assyria
+		}
 
 	}
   
@@ -834,7 +840,9 @@ focus_tree = {
       factor = 100
     }
     available = {
-      has_country_leader = { name = "Semiramis" ruling_only = yes }
+		IRQ_Semiramis = {
+			is_country_leader = yes
+		}
     }
     completion_reward = {
       add_state_claim = 455
@@ -973,7 +981,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ira_Wise_Queen_of_Assyria
     available = {
-      has_country_leader = { name = "Semiramis" ruling_only = yes }
+		IRQ_Semiramis = {
+			is_country_leader = yes
+		}
     }
     completion_reward = {
       add_country_leader_trait = Sikera_Usum
@@ -1351,7 +1361,9 @@ focus_tree = {
 		y = 4
 		relative_position_id = ira_Sikera_Usum
     available = {
-      has_country_leader = { name = "Semiramis" ruling_only = yes }
+		IRQ_Semiramis = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 6.5
@@ -1387,7 +1399,9 @@ focus_tree = {
 		}
     available = {
       date > 1940.1.1
-      has_country_leader = { name = "Semiramis" ruling_only = yes }
+	  IRQ_Semiramis = {
+		is_country_leader = yes
+	}
     }
     ai_will_do = {
       factor = 6
@@ -1716,12 +1730,12 @@ focus_tree = {
 		prerequisite = {
 			focus = ira_multiculturalism
 		}
-    available = {
-      
-    }
-    ai_will_do = {
-      factor = 6
-    }
+		available = {
+		
+		}
+		ai_will_do = {
+		factor = 6
+		}
 		x = 0
 		y = 3
 		relative_position_id = ira_multiculturalism
@@ -1825,17 +1839,15 @@ focus_tree = {
         }
        custom_effect_tooltip = available_high_command
        show_ideas_tooltip = IRQ_Tiamat
-      
-        create_navy_leader = {
-          name = "Tiamat"
-          picture = "Portrait_Tiamat.dds"
-          traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert green_water_expert  dive_bomber torpedo_bomber flight_deck_manager fighter_director }
-          skill = 7
-          attack_skill = 8
-          defense_skill = 8
-          maneuvering_skill = 4
-          coordination_skill = 6
-        }
+	   add_naval_commander_role = {
+		character = IRQ_Tiamat
+		traits = { superior_tactician ironside blockade_runner bold spotter naval_lineage blue_water_expert green_water_expert  dive_bomber torpedo_bomber flight_deck_manager fighter_director }
+		skill = 7
+		attack_skill = 8
+		defense_skill = 8
+		maneuvering_skill = 4
+		coordination_skill = 6
+	  }
     }
 
 	}
@@ -2333,7 +2345,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ira_star_of_shamash
     available = {
-      has_country_leader = { name = "Gilgamesh" ruling_only = yes }
+		IRQ_Gilgamesh = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 10
@@ -2354,7 +2368,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ira_gate_of_babylon
     available = {
-      has_country_leader = { name = "Gilgamesh" ruling_only = yes }
+		IRQ_Gilgamesh = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 5
@@ -2448,7 +2464,9 @@ focus_tree = {
 			focus = ira_his_majestys_arsenal
 		}
     available = {
-      has_country_leader = { name = "Gilgamesh" ruling_only = yes }
+		IRQ_Gilgamesh = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 5
@@ -2469,13 +2487,17 @@ focus_tree = {
 			focus = ire_tablet_of_destiny
 		}
     available = {
-      has_country_leader = { name = "Gilgamesh" ruling_only = yes }
+		IRQ_Gilgamesh = {
+			is_country_leader = yes
+		}
     }
     ai_will_do = {
       factor = 5
     }
     bypass = {
-      NOT = { has_country_leader = { name = "Gilgamesh" ruling_only = yes } }
+		IRQ_Gilgamesh = {
+			is_country_leader = no
+		}
     }
 		x = -1
 		y = 1
@@ -3187,22 +3209,21 @@ focus_tree = {
 		y = 1
 		relative_position_id = ira_logistic_staff
     completion_reward = {
-      hidden_effect = {
-        load_oob = "IRQ_mercenary"
-      } 
-      unlock_decision_category_tooltip = ira_mercenary
-      custom_effect_tooltip = available_political_advisor
-      show_ideas_tooltip = irq_flueger
-      create_corps_commander = {
-        name = "Flueger"
-        picture = "Portrait_Flueger.dds"
-        traits = { organizer politically_connected  urban_assault_specialist trickster }
-        skill = 4
-        attack_skill = 4
-        defense_skill = 3
-        planning_skill = 3
-        logistics_skill = 3
-      }
+		hidden_effect = {
+			load_oob = "IRQ_mercenary"
+		} 
+		unlock_decision_category_tooltip = ira_mercenary
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = irq_flueger
+		add_corps_commander_role = {
+			character = irq_flueger
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			traits = { organizer politically_connected  urban_assault_specialist trickster }
+		}
     }
 
 	}
@@ -3346,7 +3367,9 @@ focus_tree = {
       factor = 100
     }
     available = {
-      has_country_leader = { name = "Ishtar"  ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
     }
 		x = 0
 		y = 1
@@ -3370,7 +3393,9 @@ focus_tree = {
       factor = 20
     }
     available = {
-      has_country_leader = { name = "Ereshkigal"  ruling_only = yes }
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
     }
 		x = 0
 		y = 1
@@ -3391,7 +3416,9 @@ focus_tree = {
       factor = 20
     }
     available = {
-      has_country_leader = { name = "Ereshkigal"  ruling_only = yes }
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
       is_subject = no
     }
 		x = 0
@@ -3413,7 +3440,9 @@ focus_tree = {
       factor = 20
     }
     available = {
-      has_country_leader = { name = "Ishtar"  ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
       is_subject = no
     }
 		x = 0
@@ -3441,8 +3470,12 @@ focus_tree = {
     }
     available = {
       OR = {
-        has_country_leader = { name = "Ishtar"  ruling_only = yes }
-        has_country_leader = { name = "Ereshkigal"  ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
       }
       is_subject = no
       MEX = { is_in_faction = no }
@@ -3471,8 +3504,12 @@ focus_tree = {
     }
     available = {
       OR = {
-        has_country_leader = { name = "Ishtar"  ruling_only = yes }
-        has_country_leader = { name = "Ereshkigal"  ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
       }
       is_subject = no
       PER = { is_in_faction = no }
@@ -3498,8 +3535,12 @@ focus_tree = {
     }
     available = {
       OR = {
-        has_country_leader = { name = "Ishtar"  ruling_only = yes }
-        has_country_leader = { name = "Ereshkigal"  ruling_only = yes }
+		IRQ_Ishtar = {
+			is_country_leader = yes
+		}
+		IRQ_Ereshkigal = {
+			is_country_leader = yes
+		}
       }
       is_subject = no
       VEN = { is_in_faction = no }
