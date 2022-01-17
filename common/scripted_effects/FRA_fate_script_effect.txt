@@ -271,6 +271,7 @@ FRA_civil_war_north = {
         }
         set_nationality = FRA
       }
+      save_event_target_as = napoleon_civil_war
       FRA = {
           remove_country_leader_role = {
             character = FRA_leo_b_harwey
@@ -297,7 +298,7 @@ FRA_civil_war_north = {
                 is_character = FRA_astolfo
               }
             }
-            set_nationality = event_target:napoleon_civil_war
+            set_nationality = PREV
         }
       }
       FRA_add_template_nationalists = yes
@@ -334,9 +335,6 @@ FRA_civil_war_north = {
       set_country_flag = jeanne_oppose
       set_country_flag = gilles_oppose
       set_country_flag = martha_oppose
-      save_event_target_as = napoleon_civil_war
-      
-      
     }
   } 
 }
