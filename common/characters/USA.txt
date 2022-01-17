@@ -138,14 +138,14 @@ characters={
 			slot = theorist
 			idea_token = george_patton
 			ledger = army
-				allowed = {
-					original_tag = USA
-				}
-				
-				traits = {
-					army_armored_3
-					army_cavalry_1
-				}
+			allowed = {
+				original_tag = USA
+			}
+			
+			traits = {
+				army_armored_3
+				army_cavalry_1
+			}
 		}
 
 		corps_commander={
