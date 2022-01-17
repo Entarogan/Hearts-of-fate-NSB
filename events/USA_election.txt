@@ -132,41 +132,47 @@ country_event = {     # USA 1936 General Election
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
 		if = {
 			limit = { has_country_flag = USA_1936_Democrats_Saria }
-			create_country_leader = {
-				name = "Saria"
-				desc = "POLITICS_SARIA_DESC"
-				picture = "Portrait_Saria.png"
-				expire = "1965.1.1"
-				ideology = socialism
-				traits = {
-					Shield_of_the_people Anti_nuclear
+			add_country_leader_role = {
+				character = "usa_saria"
+				country_leader = {
+					ideology = socialism
+					desc = "POLITICS_SARIA_DESC"
+					traits = {
+						Shield_of_the_people Anti_nuclear
+					}
+					expire = "1965.3.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 		if = {
 			limit = { has_country_flag = USA_1936_Democrats_Valentine }
-			create_country_leader = {
-				name = "Funny Valentine"
-				desc = "POLITICS_VALENTINE_DESC"
-				picture = "Portrait_Funny_Valentine.png"
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
-					Staunch_patriot
+			add_country_leader_role = {
+				character = "usa_funny_valentine"
+				country_leader = {
+					ideology = conservatism
+					desc = "POLITICS_VALENTINE_DESC"
+					traits = {
+						Staunch_patriot
+					}
+					expire = "1965.3.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 		if = {
 			limit = { has_country_flag = USA_1936_Democrats_Texas }
-			create_country_leader = {
-				name = "Texas"
-				desc = "POLITICS_TEXAS_DESC"
-				picture = "Portrait_Texas.png"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					Wolf_of_lone_star
+			add_country_leader_role = {
+				character = "usa_texas"
+				country_leader = {
+					ideology = liberalism
+					desc = "POLITICS_TEXAS_DESC"
+					traits = {
+						Wolf_of_lone_star
+					}
+					expire = "1965.3.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 		
@@ -185,28 +191,32 @@ country_event = {     # USA 1936 General Election
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
 		if = {
 			limit = { has_country_flag = USA_1936_Republicians_Clownpiece }
-			create_country_leader = {
-				name = "Clownpiece"
-				desc = "POLITICS_CLOWNPIECE_DESC"
-				picture = "Portrait_Clownpiece.png"
-				expire = "1965.1.1"
-				ideology = classical_liberalism
-				traits = {
-					Clown_of_star_spangled_banner
+			add_country_leader_role = {
+				character = "usa_clownpiece"
+				country_leader = {
+					ideology = classical_liberalism
+					desc = "POLITICS_CLOWNPIECE_DESC"
+					traits = {
+						Clown_of_star_spangled_banner
+					}
+					expire = "1965.3.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 		if = {
 			limit = { has_country_flag = USA_1936_Republicians_Williams }
-			create_country_leader = {
-				name = "Abigail Williams"
-				desc = "POLITICS_ABIGAIL_WILLIAMS_DESC"
-				picture = "Portrait_Abigail_Williams.png"
-				expire = "1965.1.1"
-				ideology = conservatism
-				traits = {
-					Witch_hunter
+			add_country_leader_role = {
+				character = "usa_abigail_williams"
+				country_leader = {
+					ideology = conservatism
+					desc = "POLITICS_ABIGAIL_WILLIAMS_DESC"
+					traits = {
+						Witch_hunter
+					}
+					expire = "1965.3.1.1"
 				}
+				promote_leader = yes 
 			}
 		}
 	}
@@ -241,17 +251,23 @@ country_event = {     # USA 1940 General Election
 			base = 100
 			modifier = {
 				OR = {
-					has_country_leader = {  name = "Saria"  ruling_only = yes }
-					has_country_leader = {  name = "Clownpiece"  ruling_only = yes }
+					usa_saria = {
+						is_country_leader = yes
+					}
+					usa_clownpiece = {
+						is_country_leader = yes
+					}
 				}
 				factor = 2.0
 			}
 			modifier = {
-				has_country_leader = {  name = "Abigail Williams"  ruling_only = yes }
+				usa_abigail_williams = {
+					is_country_leader = yes
+				}
 				factor = 0.75
 			}
 		}
-		stability = 0.05
+		add_stability = 0.05
 	}
 	option = {   
 		## Astesia
@@ -260,16 +276,18 @@ country_event = {     # USA 1940 General Election
 			base = 100
 		}
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
-		create_country_leader = {
-				name = "Astesia"
-				desc = "POLITICS_ASTESIA_DESC"
-				picture = "Portrait_Astesia.png"
-				expire = "1965.1.1"
+		add_country_leader_role = {
+			character = "usa_astesia"
+			country_leader = {
 				ideology = liberalism
+				desc = "POLITICS_ASTESIA_DESC"
 				traits = {
 					Stellar_scholar
 				}
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
+		}
 		
 	}
 	option = {   
@@ -279,16 +297,18 @@ country_event = {     # USA 1940 General Election
 			base = 75
 		}
 		set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
-		create_country_leader = {
-				name = "Caroal Kiring"
-				desc = "POLITICS_KIRING_DESC"
-				picture = "Portrait_Carol_Kiring.png"
-				expire = "1965.1.1"
+		add_country_leader_role = {
+			character = "usa_carol_kiring"
+			country_leader = {
 				ideology = conservatism
+				desc = "POLITICS_KIRING_DESC"
 				traits = {
-					Military_Industry_Complex_tie Neoconservatist
+					Military_Industry_Complex_tie
 				}
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
+		}
 		
 	}
 	
@@ -299,15 +319,17 @@ country_event = {     # USA 1940 General Election
 			base = 100
 		}
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-		create_country_leader = {
-			name = "Muesys"
-			desc = "POLITICS_MUESYS_DESC"
-			picture = "Portrait_Muesys.png"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {
-				Green_New_Deal
+		add_country_leader_role = {
+			character = "usa_muesys"
+			country_leader = {
+				ideology = liberalism
+				desc = "POLITICS_MUESYS_DESC"
+				traits = {
+					Green_New_Deal
+				}
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 	}
 	
@@ -317,15 +339,17 @@ country_event = {     # USA 1940 General Election
 			base = 100
 		}
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
-		create_country_leader = {
-			name = "Enterprise"
-			desc = "POLITICS_ENTERPRISE_DESC"
-			picture = "Portrait_Enterprise.png"
-			expire = "1965.1.1"
-			ideology = classical_liberalism
-			traits = {
-				Popular_leader Free_Enterprise
+		add_country_leader_role = {
+			character = "usa_enterprise"
+			country_leader = {
+				ideology = classical_liberalism
+				desc = "POLITICS_ENTERPRISE_DESC"
+				traits = {
+					Popular_leader Free_Enterprise
+				}
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 	}
 }

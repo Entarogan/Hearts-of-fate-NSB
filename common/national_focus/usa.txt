@@ -77,9 +77,15 @@ focus_tree = {
 		available = {
 			has_government = democratic
 			OR = {
-				has_country_leader = { name = "Saria"  ruling_only = yes }
-				has_country_leader = { name = "Texas"  ruling_only = yes }
-				has_country_leader = { name = "Funny Valentine"  ruling_only = yes }
+				usa_saria = {
+					is_country_leader = yes
+				}
+				usa_texas = {
+					is_country_leader = yes
+				}
+				usa_funny_valentine = {
+					is_country_leader = yes
+				}
 			}
 		}
 		
@@ -2462,10 +2468,17 @@ focus_tree = {
 		y = 0
 		available = {
 			OR = {
-				has_country_leader = { name = "Clownpiece"  ruling_only = yes }
-				has_country_leader = { name = "Abigail Williams"  ruling_only = yes }
-				has_country_leader = { name = "Funny Valentine"  ruling_only = yes }
+				usa_clownpiece = {
+					is_country_leader = yes
+				}
+				usa_abigail_williams = {
+					is_country_leader = yes
+				}
+				usa_funny_valentine = {
+					is_country_leader = yes
+				}
 			}
+
 		}
 		cost = 10
 
@@ -2473,12 +2486,7 @@ focus_tree = {
 			factor = 10
 		}
 		mutually_exclusive = { focus = USA_continue_the_new_deal }
-		available = {
-			has_government = democratic
-			NOT = {
-				has_country_leader = { ruling_only = yes name = "Franklin Delano Roosevelt" }
-			}
-		}
+
 		
 		bypass = {
 
@@ -4451,9 +4459,8 @@ focus_tree = {
 		
 
 		completion_reward = {
-			create_corps_commander = {
-				name = "Alexander Vandegrift"
-				gfx = GFX_portrait_usa_alexander_vandegrift
+			add_corps_commander_role = {
+				character = usa_alexander_vandegrift
 				skill = 3
 				attack_skill = 3
 				defense_skill = 1
@@ -4761,9 +4768,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			army_experience = 20
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_louisiana_maneuvers
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 3
 				category = land_doctrine
 			}
@@ -5050,9 +5057,9 @@ focus_tree = {
 
 		completion_reward = {
 
-      every_army_leader = {
-				add_planning = 1
-			}
+      	every_army_leader = {
+			add_planning = 1
+		}
 
 			add_ideas = USA_the_pentagon
 		}
@@ -5114,9 +5121,9 @@ focus_tree = {
 	
 		completion_reward = {
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_air_war_plans_division
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
 			} # REVISIT May use modifier?
@@ -5318,10 +5325,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_us_army_airforce
 				uses = 4
-				bonus = 1.0
+				cost_reduction = 0.5
 				category = air_doctrine
 			}
 		}
@@ -5565,9 +5572,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_advanced_mahanian_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_base_strike
 			}
@@ -5753,9 +5760,9 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			navy_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_convoy_tactics
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = convoy_defense_tree
 			}
@@ -5849,10 +5856,10 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 				completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = USA_fund_the_navy
 				uses = 4
-				bonus = 1.0
+				cost_reduction = 0.5
 				category = naval_doctrine
 			}
 		}
