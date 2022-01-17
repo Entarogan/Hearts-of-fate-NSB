@@ -164,7 +164,7 @@ country_event = {     # Meeting at Versailles
         picture = "gfx//leaders//FRA//Portrait_Jeanne0.dds"
         ideology = socialism
         expire = "1965.1.1"
-        traits = { La_Pucelle  illiterate }
+        traits = { La_Pucelle  illiterate nationalism_symbol }
       }
     set_party_name = {
         ideology = democratic
@@ -379,26 +379,34 @@ country_event = {     # Referendum
         puppet = SEN
       }
     }
-    create_country_leader = {
-        id = 912
-        name = "Jeanne D'Arc"
-        desc = "POLITICS_JEANNE_DARC_DESC"
-        picture = "gfx//leaders//FRA//Portrait_Jeanne.dds"
-        ideology = libertarian_socialist
-        expire = "1965.1.1"
-        traits = { La_Pucelle  illiterate nationalism_symbol }
-      }
+	FRA_Jeanne_Darc = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+			ideology = libertarian_socialist
+				expire = “1965.1.1.1”
+				traits = {
+					La_Pucelle  illiterate nationalism_symbol
+				}
+			}
+		}
+		set_portraits = {
+			civilian = {
+				large = "gfx//leaders//FRA//Portrait_Jeanne.dds"
+			}
+		}
+	}
     set_party_name = {
         ideology = communism
         long_name = FRA_communism_party_lapucelle_long
         name = FRA_communism_party_lapucelle
-      }
-     set_country_flag = Republic_Settled
-     custom_effect_tooltip = fra_civil_war_tooltip
-	 hidden_effect = {
+    }
+    set_country_flag = Republic_Settled
+    custom_effect_tooltip = fra_civil_war_tooltip
+	hidden_effect = {
 		news_event = { id = lr_france_news.5 hours = 3 }
 	}
-     hidden_effect = {
+    hidden_effect = {
         country_event = { id = lr_france.6 days = 5 }
         add_ai_strategy = {
           type = alliance
@@ -454,15 +462,23 @@ country_event = {     # Referendum
         ruling_party = democratic
         elections_allowed = no
       }
-    create_country_leader = {
-        id = 912
-        name = "Jeanne D'Arc"
-        desc = "POLITICS_JEANNE_DARC_DESC"
-        picture = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
-        ideology = socialism
-        expire = "1965.1.1"
-        traits = { La_Pucelle  illiterate nationalism_symbol }
-      }
+	FRA_Jeanne_Darc = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+			ideology = socialism
+				expire = “1965.1.1.1”
+				traits = {
+					La_Pucelle  illiterate nationalism_symbol
+				}
+			}
+		}
+		set_portraits = {
+			civilian = {
+				large = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
+			}
+		}
+	}
     add_popularity = {
       ideology = democratic
       popularity = 25
@@ -515,16 +531,20 @@ country_event = {     # Referendum
         ruling_party = democratic
         elections_allowed = no
       }
-    create_country_leader = {
-				name = "Leo B. Harwey"
-				desc = "POLITICS_HARVEY_DESC"
-				picture = "gfx//leaders//FRA//Portrait_Leo_B_Harvey.dds"
-				expire = "1965.1.1"
-				ideology = classical_liberalism
-				traits = {
-					ideal_holy_king
+	effect_tooltip = {
+		FRA_leo_b_harwey = {
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = conservatism
+					expire = “1965.1.1.1”
+					traits = {
+						ideal_holy_king
+					}
 				}
 			}
+		}
+	}
     add_popularity = {
       ideology = democratic
       popularity = 25
@@ -583,16 +603,18 @@ country_event = {     # Referendum
       ideology = neutrality
       popularity = 0.10
     }  
-    create_country_leader = {
-				name = "Napoléon Bonaparte"
-				desc = "POLITICS_NAPOLEON_DESC"
-				picture = "gfx//leaders//FRA//Portrait_Napoleon.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
+	FRA_napoléon_bonaparte = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+			ideology = stratocracy
+				expire = “1965.1.1.1”
 				traits = {
-				emperor				
+					emperor
 				}
 			}
+		}
+	}
     set_cosmetic_tag = FRA_THIRD_EMPIRE  
     set_party_name = {
             ideology = neutrality
@@ -613,30 +635,30 @@ country_event = {     # Referendum
   
   # Rederendum was interrupted...
 
-  option = {
+	option = {
 		name = lr_france.2.f
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = FRA_ai_behavior
-          option = BONAPARTIST_NAPOLEON
-        }
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = BONAPARTIST_NAPOLEON
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = FRA_ai_behavior
-          option = DEMOCRATIC_SOCIAL_DEMOCRACY
-        }
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = DEMOCRATIC_SOCIAL_DEMOCRACY
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = FRA_ai_behavior
-          option = DEMOCRATIC_CONSERVATISM
-        }
+				has_game_rule = {
+					rule = FRA_ai_behavior
+					option = DEMOCRATIC_CONSERVATISM
+				}
 			}
 			modifier = {
 				factor = 0
@@ -646,16 +668,16 @@ country_event = {     # Referendum
         }
 			}
 		}
-    add_popularity = {
-      ideology = democratic
-      popularity = -0.20
-    }
-    add_stability = -0.10 
-    custom_effect_tooltip = fra_civil_war_tooltip
-    set_country_flag = Autocracy_Settled 
-    hidden_effect = {
-      country_event = { id = lr_france.3  days = 5 }
-    }
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.20
+		}
+		add_stability = -0.10 
+		custom_effect_tooltip = fra_civil_war_tooltip
+		set_country_flag = Autocracy_Settled 
+		hidden_effect = {
+			country_event = { id = lr_france.3  days = 5 }
+		}
 	}
 } 
   
@@ -666,14 +688,11 @@ country_event = {     # Military Coup
 	picture = GFX_report_event_napoleon
 
 	is_triggered_only = yes
-	
-  immediate = {
+	immediate = {
 		hidden_effect = {
 			country_event = { id = lr_france.9  days = 25  }
 		}
 	}
-  
-  
 	# Napoleon gets support
 	option = {
 		name = lr_france.3.a
@@ -704,17 +723,18 @@ country_event = {     # Military Coup
       long_name = FRA_bonepartist_party_long
       name = FRA_bonepartist_party
     }
-    
-    create_country_leader = {
-				name = "Napoléon Bonaparte"
-				desc = "POLITICS_NAPOLEON_DESC"
-				picture = "gfx//leaders//FRA//Portrait_Napoleon.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
+    FRA_napoléon_bonaparte = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+			ideology = stratocracy
+				expire = “1965.1.1.1”
 				traits = {
-				emperor					
+					emperor
 				}
 			}
+		}
+	}
     FRA_civil_war_south = yes   
 	hidden_effect = {
 		news_event = { id = lr_france_news.9 hours = 3 }
@@ -744,16 +764,17 @@ country_event = {     # Military Coup
       long_name = FRA_charlemagne_party_long
       name = FRA_charlemagne_party
     }  
-    create_country_leader = {
-				name = "Charlemagne"
-				desc = "POLITICS_CHARLEMAGNE_DESC"
-				picture = "gfx//leaders//FRA//Portrait_Charlemagne.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
+	FRA_charlemagne = {
+		add_country_leader_role = {
+			promote_leader = yes
+			country_leader = {
+			ideology = stratocracy
+				expire = “1965.1.1.1”
 				traits = {
-					
 				}
 			}
+		}
+	}
     FRA_civil_war_south = yes
     hidden_effect = {
       BEL = {  country_event = { id = lr_france.4  days = 10 } }
@@ -976,15 +997,12 @@ create_corps_commander = {
 	planning_skill = 3
 	logistics_skill = 3
 }
-
-    remove_unit_leader = 4004
-
-    remove_unit_leader = 4005
-    remove_unit_leader = 4007
-
-    remove_unit_leader = 4009
-    remove_unit_leader = 4010
-    remove_unit_leader = 4011
+	retire_character = FRA_maxime_weygand
+	retire_character = FRA_philippe_leclerc
+	retire_character = FRA_alphonse_georges
+	retire_character = FRA_jean_touzet_du_vigier
+	retire_character = FRA_louis_franchet_despèrey
+	retire_character = FRA_henri_lebocq
 
     hidden_effect = {
       country_event = { id = lr_france.7  days = 20 }
@@ -1061,18 +1079,18 @@ country_event = {     # France: Status of the Church
 		name = lr_france.8.a
 		ai_chance = {
 			base = 30
-      modifier = {
-        NOT = { has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes } }
-        factor = 2
-      }
-      modifier = {
-        NOT = { has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes } }
-        factor = 0
-      }
-      modifier = {      
-        has_country_flag = Monarchy_Settled
-        factor = 5
-      }
+			modifier = {
+				NOT = { FRA_Jeanne_Darc = { is_country_leader = yes } } 
+				factor = 2
+			}
+			modifier = {
+				NOT = { FRA_napoléon_bonaparte = { is_country_leader = yes } } 
+				factor = 0
+			}
+			modifier = {      
+				has_country_flag = Monarchy_Settled
+				factor = 5
+			}
 		}
     add_stability = 0.05
     set_country_flag = FRA_Catholic
@@ -1084,10 +1102,10 @@ country_event = {     # France: Status of the Church
 		name = lr_france.8.b
 		ai_chance = {
 			base = 70
-      modifier = {
-        has_country_leader = {  id = 911 ruling_only = yes }
-        factor = 0
-      }
+			modifier = {
+				FRA_Marie_Antoinette = { is_country_leader = yes }
+				factor = 0
+			}
 		}
     add_political_power = 50
     set_country_flag = FRA_Secular

@@ -237,13 +237,16 @@ characters={
 		}
 	}
 	FRA_Jeanne_Darc={
-		name="Jeanne D'Arc"
+		name=advisor_jeanne
 		portraits={
 			navy={
 				small="GFX_idea_jeanne_admiral"
 			}
 			army={
 				small="GFX_idea_advisor_jeanne"
+				large="gfx/leaders/FRA/Portrait_Jeanne.dds"
+			}
+			civilian={
 				large="gfx/leaders/FRA/Portrait_Jeanne.dds"
 			}
 		}
@@ -274,7 +277,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = advisor_jeanne
+			idea_token = political_advisor
 			allowed = {
 				original_tag = FRA
 				NOT = {
@@ -300,11 +303,14 @@ characters={
 			}
 		}
 	}
-	FRA_leo_b._harwey={
-		name="Leo B. Harwey"
+	FRA_leo_b_harwey={
+		name=FRA_harvey
 		portraits={
 			army = {
 				small="GFX_idea_harvey"
+				large="gfx/leaders/FRA/Portrait_Leo_B_Harvey.dds"
+			}
+			civilian = {
 				large="gfx/leaders/FRA/Portrait_Leo_B_Harvey.dds"
 			}
 		}
@@ -367,9 +373,11 @@ characters={
 	FRA_charlemagne={
 		name="Charlemagne"
 		portraits={
-
 			army={
 				small="GFX_idea_command_charlemagne"
+				large="gfx/leaders/FRA/Portrait_Charlemagne.dds"
+			}
+			civilian = {
 				large="gfx/leaders/FRA/Portrait_Charlemagne.dds"
 			}
 		}
@@ -402,9 +410,11 @@ characters={
 	FRA_napoléon_bonaparte={
 		name=Napoleon
 		portraits={
-
 			army={
 				small="GFX_idea_command_nepoleon"
+				large="gfx/leaders/FRA/Portrait_Napoleon.dds"
+			}
+			civilian= {
 				large="gfx/leaders/FRA/Portrait_Napoleon.dds"
 			}
 		}

@@ -147,13 +147,24 @@ FRA_civil_war_south = {
         original_tag = FRA
         has_government = democratic
       }
+      every_character = {
+        limit = {
+          OR = {
+            is_character = FRA_napoléon_bonaparte
+            is_character = FRA_bradamante
+            is_character = FRA_charlemagne
+            is_character = FRA_astolfo
+          }
+        }
+        set_nationality = FRA
+      }
       FRA = {
-        every_unit_leader = {
+        every_character = {
           limit = {
             OR = {
-              has_id = 812
-              has_id = 814
-              has_id = 815
+              is_character = FRA_Jeanne_Darc
+              is_character = FRA_gilles_de_rais
+              is_character = FRA_st._martha
             }
           }
           set_nationality = PREV
@@ -161,14 +172,22 @@ FRA_civil_war_south = {
       }
       FRA_add_template_republicans = yes
       load_oob = "LR_FR_Civilwar_north"
-      create_country_leader = {
-        id = 912
-        name = "Jeanne D'Arc"
-        desc = "POLITICS_JEANNE_DARC_DESC"
-        picture = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
-        ideology = socialism
-        expire = "1965.1.1"
-        traits = { La_Pucelle  illiterate nationalism_symbol }
+      FRA_Jeanne_Darc = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
+          ideology = socialism
+            expire = “1965.1.1.1”
+            traits = {
+              La_Pucelle  illiterate nationalism_symbol
+            }
+          }
+        }
+        set_portraits = {
+          civilian = {
+            large = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
+          }
+        }
       }
       set_popularities = {
         neutrality = 10
@@ -242,7 +261,45 @@ FRA_civil_war_north = {
         original_tag = FRA
         has_government = neutrality
       }
-      
+      every_character = {
+        limit = {
+          OR = {
+            is_character = FRA_Jeanne_Darc
+            is_character = FRA_gilles_de_rais
+            is_character = FRA_st._martha
+          }
+        }
+        set_nationality = FRA
+      }
+      FRA = {
+          remove_country_leader_role = {
+            character = FRA_leo_b_harwey
+            ideology = conservatism
+          }
+          add_country_leader_role = {
+            character = FRA_Jeanne_Darc
+            promote_leader = yes
+            country_leader = {
+            ideology = socialism
+            expire = “1965.1.1.1”
+            traits = {
+                La_Pucelle  illiterate
+            }
+            }
+          }
+          every_character = {
+            limit = {
+              OR = {
+                is_character = FRA_charlemagne
+                is_character = FRA_leo_b_harwey
+                is_character = FRA_napoléon_bonaparte
+                is_character = FRA_bradamante
+                is_character = FRA_astolfo
+              }
+            }
+            set_nationality = event_target:napoleon_civil_war
+        }
+      }
       FRA_add_template_nationalists = yes
       load_oob = "LR_FR_Civilwar_south"
       set_party_name = {
@@ -251,16 +308,20 @@ FRA_civil_war_north = {
         name = FRA_bonepartist_party
       }
       set_cosmetic_tag = FRA_junta
-      create_country_leader = {
-          name = "Napoléon Bonaparte"
-          desc = "POLITICS_NAPOLEON_DESC"
-          picture = "gfx//leaders//FRA//Portrait_Napoleon.dds"
-          expire = "1965.1.1"
+
+      FRA_napoléon_bonaparte = {
+        add_country_leader_role = {
+          promote_leader = yes
+          country_leader = {
           ideology = stratocracy
-          traits = {
-            
+            expire = “1965.1.1.1”
+            traits = {
+
+            }
           }
         }
+      }
+      
       set_popularities = {
         neutrality = 60
         fascism = 5
@@ -275,19 +336,7 @@ FRA_civil_war_north = {
       set_country_flag = martha_oppose
       save_event_target_as = napoleon_civil_war
       
-      FRA = {
-        every_unit_leader = {
-          limit = {
-            OR = {
-              has_id = 813
-              has_id = 816
-              has_id = 817
-              has_id = 820
-            }
-          }
-          set_nationality = event_target:napoleon_civil_war
-        }
-      }
+      
     }
   } 
 }
