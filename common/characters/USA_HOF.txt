@@ -3,7 +3,7 @@ characters={
 		name="Thomas Alva Edison"
 		portraits={
 			civilian={
-				large="gfx/leaders/USA/Portrait_USA_William_Dudley_Pelley.dds"
+				large="gfx/leaders/USA/Portrait_Thomas_Edison.png"
 			}
 		}
 		country_leader={
