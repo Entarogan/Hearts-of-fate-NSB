@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-  continuous_focus_position = { x = 20 y = 2400 }
+ 	continuous_focus_position = { x = 20 y = 2400 }
 	focus = {
 		id = FRA_Emergency_allocation
 		icon = GFX_goal_generic_forceful_treaty
@@ -31,14 +31,15 @@ focus_tree = {
           }
 					or = {
 							has_country_leader = {
-									id = 911
-								}
+								character = FRA_Marie_Antoinette
+								ruling_only = yes
+							}
 							has_country_leader = {
-									name = "Jeanne D'Arc"
+								character = FRA_Jeanne_Darc
 									ruling_only = yes
 								}
               has_country_leader = {
-									name = "Napoléon Bonaparte"
+				character = FRA_napoléon_bonaparte
 									ruling_only = yes
 								}  
 						}
@@ -154,7 +155,7 @@ focus_tree = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -192,10 +193,11 @@ focus_tree = {
 					has_global_flag = FRA_army_out_of_control_flag
 					or = {
 							has_country_leader = {
-									id = 911
-								}
+								character = FRA_Marie_Antoinette
+								ruling_only = yes
+							}
 							has_country_leader = {
-									name = "Jeanne D'Arc"
+								character = FRA_Jeanne_Darc
 									ruling_only = yes
 								}
 						}
@@ -299,34 +301,34 @@ focus_tree = {
     ai_will_do = {
 					factor = 3000
 				}
-			available = {
-					has_global_flag = FRA_Economic_crisis_flag
-          or = {
-            has_country_flag = Autocracy_Settled
-            has_country_flag = Republic_Settled
-          }
-					or = {
-							has_country_leader = {
-									name = "Leo B. Harwey"
-									ruling_only = yes
-								}  
-              has_country_leader = {
-									name = "Napoléon Bonaparte"
-									ruling_only = yes
-								}  
-              has_country_leader = {
-									name = "Charlemagne"
-									ruling_only = yes
-								}  
-						}
-				}
+	available = {
+		has_global_flag = FRA_Economic_crisis_flag
+		or = {
+		has_country_flag = Autocracy_Settled
+		has_country_flag = Republic_Settled
+		}
+		or = {
+			has_country_leader = {
+				character = FRA_leo_b_harwey
+				ruling_only = yes
+			}  
+			has_country_leader = {
+				character = FRA_napoléon_bonaparte
+				ruling_only = yes
+			}  
+			has_country_leader = {
+				character = FRA_charlemagne
+				ruling_only = yes
+			}  
+		}
+	}
 
-			bypass = {
-			  has_government = neutrality
-              has_civil_war = yes
-				}
+	bypass = {
+		has_government = neutrality
+		has_civil_war = yes
+	}
 
-			completion_reward = {
+	completion_reward = {
         add_stability = -0.05
         add_political_power = -100
       }
@@ -455,8 +457,8 @@ focus_tree = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -502,8 +504,8 @@ focus_tree = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -607,9 +609,9 @@ focus_tree = {
 			available = {
 					has_government = neutrality
 					has_country_leader = {
-							id = 911
-							ruling_only = yes
-						}
+						character = FRA_Marie_Antoinette
+						ruling_only = yes
+					}
 				}
 			ai_will_do = {
 					factor = 1000
@@ -639,7 +641,7 @@ focus_tree = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -1257,7 +1259,7 @@ focus_tree = {
 		}
     available = {
       has_country_leader = {
-          name = "Jeanne D'Arc"
+		character = FRA_Jeanne_Darc
           ruling_only = yes
         }
     }
@@ -1327,7 +1329,7 @@ focus_tree = {
     bypass = {
       NOT = {
         has_country_leader = {
-          id = 911
+			character = FRA_Marie_Antoinette
           ruling_only = yes
         }
       }
@@ -1337,7 +1339,7 @@ focus_tree = {
         has_country_flag = FRA_Catholic
         has_government = neutrality
         has_country_leader = {
-            id = 911
+            character = FRA_Marie_Antoinette
             ruling_only = yes
           }
       }
@@ -1361,7 +1363,7 @@ focus_tree = {
 		y = 3
 			available = {
 					is_puppet = no
-          has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes }
+          has_country_leader = { character = FRA_Jeanne_Darc  ruling_only = yes }
 				}
 			available_if_capitulated = yes
 			ai_will_do = {
@@ -1417,13 +1419,13 @@ focus_tree = {
 		x = 23
 		y = 3
 			available = {
-					has_country_leader = {
-							name = "Jeanne D'Arc"
-              ruling_only = yes
-						}
-					# has_government = democratic
-					is_puppet = no
+				has_country_leader = {
+					character = FRA_Jeanne_Darc
+					ruling_only = yes
 				}
+					# has_government = democratic
+				is_puppet = no
+			}
 			ai_will_do = {
 					factor = 10
 			        modifier = {
@@ -2102,9 +2104,9 @@ country_event = {
 			available = {
 					has_government = neutrality
 					has_country_leader = {
-							id = 911
-							ruling_only = yes
-						}
+						character = FRA_Marie_Antoinette
+						ruling_only = yes
+					}
 				}
 			
 			ai_will_do = {
@@ -2599,9 +2601,9 @@ country_event = {
 			available = {
 					has_government = neutrality
 					has_country_leader = {
-							id = 911
-							ruling_only = yes
-						}
+						character = FRA_Marie_Antoinette
+						ruling_only = yes
+					}
 				}
 			
 			ai_will_do = {
@@ -2633,7 +2635,7 @@ country_event = {
           }
 					has_government = neutrality
 					has_country_leader = {
-							id = 911
+						character = FRA_Marie_Antoinette
 							ruling_only = yes
 						}
 					16 = {
@@ -2678,7 +2680,7 @@ country_event = {
 					has_government = neutrality
 					is_puppet = no
 					has_country_leader = {
-							id = 911
+						character = FRA_Marie_Antoinette
 							ruling_only = yes
 						}
 				}
@@ -2842,7 +2844,7 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_France_Idealism
 			available = {
-          has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes }
+          has_country_leader = { character = FRA_Jeanne_Darc  ruling_only = yes }
 					is_puppet = no
 				}
 			available_if_capitulated = yes
@@ -2933,7 +2935,7 @@ country_event = {
 		relative_position_id = FRA_France_Idealism
 			available = {
 					# has_government = democratic
-          has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes }
+          has_country_leader = { character = FRA_Jeanne_Darc  ruling_only = yes }
 				}
 			ai_will_do = {
 				factor = 500
@@ -4657,37 +4659,43 @@ country_event = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = FRA_gilles_de_rais
 			show_ideas_tooltip = FRA_Francois_Spirito
-
-      create_corps_commander = {
-        name = "Francois Spirito"
-        portrait_path = "gfx/leaders/FRA/portrait_fra_francois_spirito.dds"
-        traits = {
-          organizer
-          urban_assault_specialist
-        }
-        skill = 2
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 3
-        logistics_skill = 3
-      }
-
-      create_corps_commander = {
-        name = "Paul Carbone"
-        portrait_path = "gfx/leaders/FRA/portrait_fra_paul_carbone.dds"
-        traits = {
-          organizer
-          urban_assault_specialist
-        }
-        skill = 2
-        attack_skill = 2
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 2
-      }
-
+			add_corps_commander_role = {
+				Character = FRA_Francois_Spirito
+				traits = {
+					organizer
+					urban_assault_specialist
 				}
-
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				Character = FRA_Francois_Spirito
+				traits = {
+					organizer
+					urban_assault_specialist
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			add_corps_commander_role = {
+				Character = FRA_paul_carbone
+				traits = {
+					organizer
+					urban_assault_specialist
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+		}
 	}
 	focus = {
 		id = FRA_fireside_talk
@@ -4705,25 +4713,27 @@ country_event = {
       bypass = {
           NOT = {
             has_country_leader = {
-									id = 911
-								}
+				character = FRA_Marie_Antoinette
+				ruling_only = yes
+			}
           }
-          NOT = {
-							has_country_leader = {
-									name = "Jeanne D'Arc"
-									ruling_only = yes
-								}
-          }
+		NOT = {
+			has_country_leader = {
+				character = FRA_Jeanne_Darc
+				ruling_only = yes
+			}
+		}
       }  
 			available = {
 					or = {
 							has_country_leader = {
-									id = 911
+								character = FRA_Marie_Antoinette
+								ruling_only = yes
 								}
 							has_country_leader = {
-									name = "Jeanne D'Arc"
-									ruling_only = yes
-								}
+								character = FRA_Jeanne_Darc
+								ruling_only = yes
+							}
 						}
 				}
 			completion_reward = {
@@ -5340,7 +5350,7 @@ country_event = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -5382,7 +5392,7 @@ country_event = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -5466,7 +5476,7 @@ country_event = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -5560,7 +5570,7 @@ country_event = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -5757,7 +5767,7 @@ country_event = {
         if = {
             limit = {
                 has_country_leader = {
-                  name = "Leo B. Harwey"
+					character = FRA_leo_b_harwey
                   ruling_only = yes
                 }
               }
@@ -5903,7 +5913,7 @@ country_event = {
 							if = {
 									limit = {
                       has_country_leader = {
-                        name = "Leo B. Harwey"
+                        character = FRA_leo_b_harwey
                         ruling_only = yes
                       }
 										}
@@ -6098,7 +6108,8 @@ country_event = {
 			focus = FRA_Old_Glory
 		}
     available = {
-      NOT = { has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes  } }
+		
+      NOT = { has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes  } }
     }
 
     ai_will_do = {
@@ -6117,8 +6128,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6161,8 +6172,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6277,8 +6288,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6334,8 +6345,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6361,10 +6372,11 @@ country_event = {
 			available = {
 					or = {
 							has_country_leader = {
-									id = 911
-								}
+								character = FRA_Marie_Antoinette
+								ruling_only = yes
+							}
 							has_country_leader = {
-									name = "Jeanne D'Arc"
+								character = FRA_Jeanne_Darc
 									ruling_only = yes
 								}
               FRA = {
@@ -6514,8 +6526,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6572,8 +6584,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6633,8 +6645,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6676,8 +6688,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6742,8 +6754,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6782,8 +6794,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6827,8 +6839,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -6870,8 +6882,8 @@ country_event = {
 							if = {
 									limit = {
 									   or = {
-											 has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
-											 has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
 										}
 										}
 									add_political_power = 50
@@ -8483,18 +8495,19 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_puppet_austria
     completion_reward = {
-      AUS = {
-        create_country_leader = {
-          name = "Otto von Habsburg"
-          desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
-          picture = GFX_Portrait_hungary_otto_von_hapsburg
-          expire = "1965.1.1"
-          ideology = authoritarian_democracy
-          traits = {
-            
-          }
-        }
-      }
+
+		AUS = {
+			add_country_leader_role = {
+				character = "AUS_otto_von_habsburg"
+				country_leader = {
+					desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
+					ideology = authoritarian_democracy
+					traits = {  }
+					expire = "1965.3.1.1"
+				}
+				promote_leader = yes 
+			}
+		}
       ## add state claims
     }
 
@@ -8736,7 +8749,7 @@ country_event = {
 		relative_position_id = FRA_Royal_Charity
     available = {
 	  has_stability > 0.5
-      has_country_leader = { id = 911 ruling_only = yes }
+      has_country_leader = { character = FRA_Marie_Antoinette ruling_only = yes }
     }
 
     ai_will_do = {
@@ -8764,7 +8777,8 @@ country_event = {
 		relative_position_id = FRA_Mediterranean_Naval_Academy
     available = {
       has_stability > 0.5
-      has_country_leader = { id = 911 ruling_only = yes }
+
+      has_country_leader = { character = FRA_Marie_Antoinette ruling_only = yes }
     }
 
     ai_will_do = {
@@ -8938,7 +8952,7 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_military_coup
     available = {
-      has_country_leader = { name = "Charlemagne"  ruling_only = yes }
+      has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
     }
 
     ai_will_do = {
@@ -9988,30 +10002,29 @@ country_event = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_invite_Czech
-			available = {
-					is_subject = no
-					is_faction_leader = yes
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+		}
+		bypass = {
+			ROM = {
+				OR = {
+					exists = no
+					has_country_leader = { character = ROM_darnic_prestone_yggdmillennia ruling_only = yes }
+					is_puppet = yes
+					has_war_with = ROOT
+					is_in_faction = yes
 				}
-			bypass = {
-					ROM = {
-							OR = {
-									exists = no
-                                    has_country_leader = { name = "Darnic Prestone Yggdmillennia" ruling_only = yes }
-									is_puppet = yes
-									has_war_with = ROOT
-									is_in_faction = yes
-								}
-						}
-				}
-			ai_will_do = {
-					factor = 500
-				}
-			completion_reward = {
-					ROM = {
-							country_event = france.17
-						}
-				}
-
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		completion_reward = {
+			ROM = {
+				country_event = france.17
+			}
+		}
 	}
 	focus = {
 		id = FRA_coordinate_rearmament
@@ -10154,7 +10167,7 @@ country_event = {
 				}
 			available = {
           has_country_flag = Autocracy_Settled
-          has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes }
+          has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
 					is_subject = no
           has_civil_war = no
 				}
@@ -10223,7 +10236,8 @@ country_event = {
     available = { 
       is_faction_leader = yes
       NOT = { has_war_with = CZE }
-      NOT = { has_country_leader = { name = "Charlemagne"  ruling_only = yes } }
+	  
+      NOT = { has_country_leader = { character = FRA_charlemagne  ruling_only = yes } }
     }
 			bypass = {
 					CZE = {

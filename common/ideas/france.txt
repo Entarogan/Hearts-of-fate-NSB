@@ -1,7 +1,7 @@
 ideas = {
 
 	country = {
-    FRA_full_employment = {
+    	FRA_full_employment = {
 			picture = generic_production_bonus
 			allowed = {
 				original_tag = FRA
@@ -1625,7 +1625,7 @@ ideas = {
 			}
 			
 			available = {
-        has_completed_focus = FRA_economic_devolution
+        		has_completed_focus = FRA_economic_devolution
 				NOT = { has_government = fascism }
 				NOT = { has_government = communism }
 			}
@@ -2079,7 +2079,7 @@ ideas = {
 			ai_will_do = {
 				factor = 0
 			}
-		}	
+		}
 		
 		jeanne_ocean = {
 			allowed = {

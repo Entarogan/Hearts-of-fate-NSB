@@ -125,7 +125,7 @@ characters={
 		}
 	}
 	FRA_gilles_de_rais={
-		name="Gilles de Rais"
+		name=Gilles
 		portraits={
 
 			army={
@@ -168,6 +168,7 @@ characters={
 		name=gilles_de_rais
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Portrait_DeRaisCaster.dds"
 				small="GFX_idea_gilles_de_rais"
 			}
 		}
@@ -196,7 +197,7 @@ characters={
 		}
 	}
 	FRA_Marie_Antoinette={
-		name="Marie Antoinette"
+		name=fra_marie_admiral
 		portraits={
 			navy={
 				small="GFX_idea_marie_admiral"
@@ -223,6 +224,7 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = fra_marie_admiral
+			ledger = navy
 			allowed = {
 				original_tag = FRA
 			}
@@ -237,17 +239,17 @@ characters={
 		}
 	}
 	FRA_Jeanne_Darc={
-		name=advisor_jeanne
+		name=FRA_Jeanne_Darc
 		portraits={
 			navy={
 				small="GFX_idea_jeanne_admiral"
 			}
 			army={
 				small="GFX_idea_advisor_jeanne"
-				large="gfx/leaders/FRA/Portrait_Jeanne.dds"
+				large="gfx/leaders/FRA/Portrait_Jeanne0.dds"
 			}
 			civilian={
-				large="gfx/leaders/FRA/Portrait_Jeanne.dds"
+				large="gfx/leaders/FRA/Portrait_Jeanne0.dds"
 			}
 		}
 		field_marshal={
@@ -262,6 +264,7 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = jeanne_ocean
+			ledger = navy
 			allowed = {
 				original_tag = FRA
 			}
@@ -276,8 +279,8 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
-			idea_token = political_advisor
+			slot = political_advisor
+			idea_token = FRA_Jeanne_Darc
 			allowed = {
 				original_tag = FRA
 				NOT = {
@@ -339,10 +342,13 @@ characters={
 		}
 	}
 	FRA_jeanne_darc_alter={
-		name="Jeanne D'Arc (Alter)"
+		name=FRA_jeanne_darc_alter
 		portraits={
 			civilian={
 				large="gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
+			}
+			army = {
+				small="GFX_idea_jeanne_darc_alter"
 			}
 		}
 		country_leader={
@@ -371,7 +377,7 @@ characters={
 		}
 	}
 	FRA_charlemagne={
-		name="Charlemagne"
+		name=charlemagne
 		portraits={
 			army={
 				small="GFX_idea_command_charlemagne"
@@ -561,7 +567,7 @@ characters={
 		}
 	}
 	FRA_astolfo={
-		name="Astolfo"
+		name=astolfo
 		portraits={
 			army={
 				small="GFX_idea_air_chief_astolfo"
@@ -622,7 +628,7 @@ characters={
 		}
 	}
 	FRA_edmond_dantès={
-		name="Edmond Dantès"
+		name=Edmond
 		portraits={
 			army={
 				small="GFX_idea_chief_edmond"
@@ -656,7 +662,7 @@ characters={
 		}
 	}
 	FRA_jeanne_darc_alter_lily={
-		name="Jeanne D'Arc (Alter Lily)"
+		name=Jeanne_Darc_lily
 		portraits={
 
 			army={
@@ -906,6 +912,7 @@ characters={
 		name=FRA_ernst_kaltenbrunner
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Portrait_Germany_Ernst_Kaltenbrunner.dds"
 				small="GFX_idea_ernst_kaltenbrunner"
 			}
 		}
@@ -966,6 +973,7 @@ characters={
 		name=FRA_jacques_doriot_adv
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Portrait_France_Jacques_Doriot.dds"
 				small="GFX_idea_jacques_doriot"
 			}
 		}
@@ -1011,6 +1019,7 @@ characters={
 		name=FRA_francesca_prelati
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Portrait_Francesca_Prelati.dds"
 				small="GFX_idea_francesca_prelati"
 			}
 		}
@@ -1039,6 +1048,7 @@ characters={
 		name=FRA_nestor_makhno
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Portrait_France_Missak_Manouchian.tga"
 				small="GFX_idea_nestor_makhno"
 			}
 		}
@@ -1428,6 +1438,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_Andre_Marty"
+				large="gfx/leaders/FRA/André_Marty.dds"
 			}
 		}
 		advisor={
@@ -1459,6 +1470,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_FRA_Arthur_Dallidet"
+				large="gfx/leaders/FRA/Arthur_Dallidet.dds"
 			}
 		}
 		advisor={
@@ -1486,6 +1498,7 @@ characters={
 		name=FRA_Jean_Pierre_Timbaud
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Jean_Pierre_Timbaud.dds"
 				small="GFX_idea_FRA_Jean_Pierre_Timbaud"
 			}
 		}
@@ -1518,6 +1531,7 @@ characters={
 		name=FRA_Danielle_Casanova
 		portraits={
 			army={
+				large="gfx/leaders/FRA/Danielle_Casanova.dds"
 				small="GFX_idea_FRA_Danielle_Casanova"
 			}
 		}
@@ -1648,6 +1662,7 @@ characters={
 		name=FRA_Eugene_Deloncle
 		portraits={
 			army={
+				large="gfx/leaders/FRA/portrait_fra_Eugene_Deloncle.dds"
 				small="GFX_idea_FRA_Eugene_Deloncle"
 			}
 		}
@@ -1684,6 +1699,7 @@ characters={
 		name=FRA_Jacques_Correze
 		portraits={
 			army={
+				large="gfx/leaders/FRA/portrait_fra_jacques_correze.dds"
 				small="GFX_idea_FRA_Jacques_Correze"
 			}
 		}
@@ -1749,6 +1765,7 @@ characters={
 		name=FRA_Robert_Brasillach
 		portraits={
 			army={
+				large="gfx/leaders/FRA/portrait_fra_robert_brasillach.dds"
 				small="GFX_idea_FRA_Robert_Brasillach"
 			}
 		}
@@ -1815,6 +1832,7 @@ characters={
 		name=FRA_Francois_Spirito
 		portraits={
 			army={
+				large="gfx/leaders/FRA/portrait_fra_francois_spirito.dds"
 				small="GFX_idea_FRA_Francois_Spirito"
 			}
 		}

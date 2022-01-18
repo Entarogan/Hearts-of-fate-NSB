@@ -31,7 +31,7 @@ set_technology = {
 	gwtank = 1
 	basic_light_tank = 1
 	improved_light_tank = 1
-  basic_heavy_tank = 1
+  	basic_heavy_tank = 1
 	early_fighter = 1
 	naval_bomber1 = 1
 	cv_early_fighter = 1
@@ -135,10 +135,10 @@ add_ideas = {
 	FRA_dragon_witch_activity_idea
 	FRA_semi_restoration_idea
 	FRA_protected_by_the_maginot_line
-  FRA_shadow_of_World_War_I_idea_I
-  FRA_Versailles_Young_idea
-  Powerful_influence_idea
-  FIC_Colonial_gains
+	FRA_shadow_of_World_War_I_idea_I
+	FRA_Versailles_Young_idea
+	Powerful_influence_idea
+	FIC_Colonial_gains
 }
 
 
@@ -213,6 +213,27 @@ recruit_character = FRA_martial_valin
 recruit_character = FRA_jean_francois_jannekeyn
 recruit_character = FRA_emile_muselier
 recruit_character = FRA_alfred_heurtaux
+
+
+
+#
+
+recruit_character = FRA_Andre_Marty
+recruit_character = FRA_Arthur_Dallidet
+recruit_character = FRA_Jean_Pierre_Timbaud
+recruit_character = FRA_Danielle_Casanova
+recruit_character = FRA_Tristan_Tzara
+recruit_character = FRA_Albert_Camus
+recruit_character = FRA_Jean_Paul_Sartre
+recruit_character = FRA_Eugene_Deloncle
+
+
+recruit_character = FRA_Jacques_Correze
+recruit_character = FRA_Jacques_Barnaud
+recruit_character = FRA_Robert_Brasillach
+recruit_character = FRA_Francois_Lehideux
+recruit_character = FRA_Francois_Spirito
+
 ### VARIANTS ###
 # 1936 Start #
 if = {
