@@ -2652,10 +2652,10 @@ ideas = {
 			traits = { La_Pucelle_advisor }
 			available = {
 				has_country_flag = Monarchy_Settled
-        has_government = neutrality
+        		has_government = neutrality
 				NOT = { has_completed_focus = FRA_the_path_of_avenger }
 				NOT = { has_idea = jeanne_ocean }
-        NOT = { has_country_flag = jeanne_oppose }
+      			NOT = { has_country_flag = jeanne_oppose }
 			}
 
 			ai_will_do = {

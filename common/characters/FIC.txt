@@ -19,6 +19,9 @@ characters={
 			civilian={
 				large="gfx/leaders/FIC/Portrait_Duc_de_Richelieu.dds"
 			}
+			army = {
+				small="GFX_idea_advisor_unknown"
+			}
 		}
 		navy_leader={
 			traits={ fleet_protector superior_tactician spotter }

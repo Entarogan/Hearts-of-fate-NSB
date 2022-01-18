@@ -618,15 +618,15 @@ country_event = {
 	option = {
 		name = france.38.a
 		remove_ideas = FRA_dragon_witch_activity_idea
-		create_country_leader = {
-			name = "Pierre Cauchon"
-			desc = "POLITICS_CAUCHON_DESC"
-			picture = "Portrait_Pierre_Cauchon.dds"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-		
+		add_country_leader_role = {
+			character = "FRA_Pierre_Cauchon"
+			country_leader = {
+				ideology = fascism_ideology
+				desc = "POLITICS_CAUCHON_DESC"
+				traits = {    }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 	}
 }
@@ -642,26 +642,25 @@ country_event = {
 	option = {
 		name = france.39.a
 		remove_ideas = FRA_dragon_witch_activity_idea
-    create_corps_commander = {
-      name = "Jeanne D'Arc (Alter)"
-      picture = "Portrait_Jeanne_Darc_Alter.dds"
-      traits = { trait_reckless harsh_leader career_officer brilliant_strategist }
-      skill = 4
-      attack_skill = 7
-      defense_skill = 1
-      planning_skill = 3
-      logistics_skill = 2
-    }
+		add_corps_commander_role = {
+			character = FRA_jeanne_darc_alter
+			traits = { trait_reckless harsh_leader career_officer brilliant_strategist }
+			skill = 4
+			attack_skill = 7
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
 		add_stability = -0.10
-		create_country_leader = {
-			name = "Pierre Cauchon"
-			desc = "POLITICS_CAUCHON_DESC"
-			picture = "Portrait_Pierre_Cauchon.dds"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-		
+		add_country_leader_role = {
+			character = "FRA_Pierre_Cauchon"
+			country_leader = {
+				ideology = fascism_ideology
+				desc = "POLITICS_CAUCHON_DESC"
+				traits = {    }
+				expire = "1965.3.1.1"
 			}
+			promote_leader = yes 
 		}
 	
 	}
@@ -915,6 +914,7 @@ country_event = {
 				knight_king
 			}
 		}
+		
 		create_country_leader = {
 			name = "Olga Marie Animusphere"
 			desc = "POLITICS_OLGA_MARIE_DESC"

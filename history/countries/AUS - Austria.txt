@@ -57,7 +57,7 @@ recruit_character = AUS_Erhard_Raus
 recruit_character = AUS_lothar_rendulic
 
 recruit_character = AUS_Adolf_Hitler
-
+recruit_character = AUS_otto_von_habsburg
 #这四个是原版领导人
 #recruit_character = AUS_kurt_schuschnigg
 #recruit_character = AUS_karl_renner
