@@ -2910,15 +2910,23 @@ focus_tree = {
 						}
 
             set_cosmetic_tag = ITA_Repubblica_Sociale
-
-			create_country_leader = {
-				name = "Nero Claudius"
-				desc = "POLITICS_NERO_DESC"
-				picture = "gfx//leaders//ITA//Portrait_Nero_Fascism.dds"
-				expire = "1965.1.1"
-				ideology = valkist
-				traits = { Tyrant_of_rose  }
-				id = 931
+			add_country_leader_role = {
+				character = "ITA_nero_claudius"
+				country_leader = {
+					ideology = valkist
+					desc = "POLITICS_NERO_DESC"
+					traits = { Tyrant_of_rose  }
+					expire = "1965.3.1.1"
+					id = 931
+				}
+				promote_leader = yes 
+			}
+			ITA_nero_claudius = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/ITA/Portrait_Nero_Fascism.dds"
+					}
+				}				
 			}
 					}
 
@@ -2926,16 +2934,25 @@ focus_tree = {
 						limit = { 
 					    NOT = { has_country_flag = ita_Repubblica_Sociale_flag }
 						}
-			create_country_leader = {
-				name = "Nero Claudius"
-				desc = "POLITICS_NERO_DESC"
-				picture = "gfx//leaders//ITA//Portrait_Nero_Fascism.dds"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = { Tyrant_of_rose  }
-				id = 931
+			add_country_leader_role = {
+				character = "ITA_nero_claudius"
+				country_leader = {
+					ideology = fascism_ideology
+					desc = "POLITICS_NERO_DESC"
+					traits = { Tyrant_of_rose  }
+					expire = "1965.3.1.1"
+					id = 931
+				}
+				promote_leader = yes 
 			}
+			ITA_nero_claudius = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/ITA/Portrait_Nero_Fascism.dds"
 					}
+				}				
+			}
+			}
 
 			hidden_effect = {
 				news_event = { id = more_news.10   hours = 12  }
@@ -7380,26 +7397,35 @@ focus_tree = {
       remove_unit_leader = 3507
       remove_unit_leader = 3508
       remove_unit_leader = 3509
-
-      create_country_leader = {
-        name = "Giovanni Messe"
-        desc = ""
-        picture = "Portrait_Italy_Giovanni_Messe.dds"
-        expire = "1965.1.1"
-        ideology = authoritarian_democracy
-        traits = {  }
-      }
+	 	add_country_leader_role = {
+			character = "ITA_giovanni_messe"
+			country_leader = {
+				ideology = authoritarian_democracy
+				traits = {  }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
+		}
 
 			random_other_country = {
 				limit = { has_government = fascism  original_tag = ITA }
-				create_country_leader = {
-					name = "Nero Claudius"
-					desc = "POLITICS_NERO_DESC"
-					picture = "gfx//leaders//ITA//Portrait_Nero_Fascism.dds"
-					expire = "1965.1.1"
-					ideology = fascism_ideology
-					traits = { Tyrant_of_rose }
-					id = 931
+				add_country_leader_role = {
+					character = "ITA_nero_claudius"
+					country_leader = {
+						desc = "POLITICS_NERO_DESC"
+						ideology = fascism_ideology
+						traits = { Tyrant_of_rose }
+						id = 931
+						expire = "1965.3.1.1"
+					}
+					promote_leader = yes 
+				}
+				ITA_nero_claudius = {
+					set_portraits = {
+						civilian = {
+							large = "gfx/leaders/ITA/Portrait_Nero_Fascism.dds"
+						}
+					}
 				}
 
         ITA = { 
@@ -7697,7 +7723,8 @@ focus_tree = {
 			SOV = { 
 				has_government = communism
 				is_faction_leader = yes
-        has_country_leader = { name = "Leon Trotsky"  ruling_only = yes }
+
+        		has_country_leader = { character = SOV_lev_trotsky  ruling_only = yes }
 			}
 			or = {
         RUS = { exists = no	}
@@ -9190,14 +9217,22 @@ focus_tree = {
 		y = 1
 		relative_position_id = ita_humanism
 		completion_reward = {
-			create_country_leader = {
-				name = "Nero Claudius"
-				desc = "POLITICS_SABER_ALTER_DESC"
-				picture = "Portrait_Nero_Democratic.dds"
-				expire = "1965.1.1"
-				ideology = socialism
-				traits = {  }
-				id = 931
+			add_country_leader_role = {
+				character = "ITA_nero_claudius"
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {  }
+					id = 931
+				}
+				promote_leader = yes 
+			}
+			ITA_nero_claudius = {
+				set_portraits = {
+					civilian = {
+						large = "gfx/leaders/ITA/Portrait_Nero_Democratic.dds"
+					}
+				}
 			}
 			ITA_tyrant_level_clear_all = yes
 			set_politics = {									

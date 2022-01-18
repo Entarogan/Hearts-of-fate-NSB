@@ -38,7 +38,7 @@ country_event = {
 
       create_corps_commander = {
         name = "Achille Starace"
-					picture = "Portrait_Achille_Starace.png"
+			picture = "Portrait_Achille_Starace.png"
         traits = {
           politically_connected
           harsh_leader

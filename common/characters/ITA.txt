@@ -1,6 +1,6 @@
 characters={
 	ITA_pietro_badoglio={
-		name="Pietro Badoglio"
+		name=ITA_pietro_badoglio
 		portraits={
 
 			army={
@@ -19,7 +19,7 @@ characters={
 		}
 	}
 	ITA_emilio_de_bono={
-		name="Emilio De Bono"
+		name=emilio_de_bono
 		portraits={
 			army={
 				large="gfx/leaders/ITA/portrait_italy_emilio_de_bono.dds"
@@ -51,7 +51,7 @@ characters={
 		}
 	}
 	ITA_ugo_cavallero={
-		name="Ugo Cavallero"
+		name=ITA_ugo_cavallero
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Ugo_Cavallero.dds"
@@ -69,7 +69,7 @@ characters={
 		}
 	}
 	ITA_giovanni_messe={
-		name="Giovanni Messe"
+		name=giovanni_messe
 		portraits={
 
 			army={
@@ -100,7 +100,7 @@ characters={
 		}
 	}
 	ITA_sebastiano_visconti_prasca={
-		name="Sebastiano Visconti Prasca"
+		name=ITA_sebastiano_visconti_prasca
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Sebastiano_Visconti_Prasca.dds"
@@ -118,7 +118,7 @@ characters={
 		}
 	}
 	ITA_ubaldo_soddu={
-		name="Ubaldo Soddu"
+		name=ITA_ubaldo_soddu
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Ubaldo_Soddu.dds"
@@ -136,7 +136,7 @@ characters={
 		}
 	}
 	ITA_italo_balbo={
-		name="Italo Balbo"
+		name=italo_balbo
 		portraits={
 
 			army={
@@ -173,7 +173,7 @@ characters={
 		}
 	}
 	ITA_rodolfo_graziani={
-		name="Rodolfo Graziani"
+		name=ITA_rodolfo_graziani
 		portraits={
 			army={
 				large="gfx/leaders/ITA/portrait_italy_radolfo_graziani.dds"
@@ -206,7 +206,7 @@ characters={
 		}
 	}
 	ITA_inigo_campioni={
-		name="Inigo Campioni"
+		name=ITA_inigo_campioni
 		portraits={
 
 				
@@ -240,7 +240,7 @@ characters={
 		}
 	}
 	ITA_alberto_da_zara={
-		name="Alberto Da Zara"
+		name=ITA_alberto_da_zara
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Alberto_Da_Zara.dds"
@@ -276,7 +276,7 @@ characters={
 		}
 	}
 	ITA_carlo_bergamini={
-		name="Carlo Bergamini"
+		name=ITA_carlo_bergamini
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Carlo_Bergamini.dds"
@@ -294,7 +294,7 @@ characters={
 		}
 	}
 	ITA_angelo_iachino={
-		name="Angelo Iachino"
+		name=ITA_angelo_iachino
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Italy_Angelo_Iachino.dds"
@@ -378,10 +378,13 @@ characters={
 		}
 	}
 	ITA_gabriele_dannunzio={
-		name="Gabriele D'Annunzio"
+		name=gabriele_anunnzio
 		portraits={
 			civilian={
 				large="Portrait_ITA_Gabriele_Anunnzio.tga"
+			}
+			army = {
+				small = "GFX_idea_gabriele_anunnzio"
 			}
 		}
 		country_leader={
@@ -389,6 +392,33 @@ characters={
 			ideology=valkist
 			expire="1965.1.1.1"
 			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = gabriele_anunnzio
+			allowed = {
+				original_tag = ITA
+			}
+			
+			traits = { Fascist_pioneer }
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				has_completed_focus = ita_regoup_fascist
+			}
+
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+				
+			ai_will_do = {
+				factor = 5
+			}
 		}
 	}
 	ITA_nero_claudius={
@@ -440,7 +470,7 @@ characters={
 		}
 	}
 	ITA_leonardo_da_vinci={
-		name="Leonardo Da Vinci"
+		name=ITA_da_vinci
 		portraits={
 			army = {
 				small="GFX_idea_da_vinci"
@@ -488,7 +518,7 @@ characters={
 		}
 	}
 	ITA_romulus={
-		name="Romulus"
+		name=romulus
 		portraits={
 			army={
 				
@@ -525,11 +555,9 @@ characters={
 		}
 	}
 	ITA_julius_caesar={
-		name="Julius Caesar"
+		name=julius_caesar
 		portraits={
-			army={
-				
-			}
+
 			army={
 				large="gfx/leaders/ITA/Portrait_Caesar.dds"
 				small="GFX_idea_caesar"
@@ -571,7 +599,7 @@ characters={
 		}
 	}
 	ITA_antonio_salieri={
-		name="Antonio Salieri"
+		name=ITA_Salieri
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_Salieri.dds"
@@ -768,7 +796,7 @@ characters={
 		}
 	}
 	ITA_prince_umberto={
-		name="Prince Umberto"
+		name=umberto_ii
 		portraits={
 			army={
 				large="gfx/leaders/ITA/Portrait_ITA_Prince_Umberto.png"
@@ -790,8 +818,6 @@ characters={
 			allowed = {
 				original_tag = "ITA"
 			}
-
-			picture = umberto_ii
 						
 			traits = { princeps_senatus }
 			
