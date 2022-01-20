@@ -1199,7 +1199,7 @@ country_event = {
 	option = {
 		name = france.51.a
 		set_autonomy = { target = SOV autonomy_state = autonomy_free }
-		SOV = { set_capital = 195 }
+		SOV = { set_capital = { state = 195 } }
 		set_province_name = { id = 3529 name = Volgograd}
 		set_province_name = { id = 3151 name = Stpeterburg}
 		set_global_flag = SOV_cities_renamed

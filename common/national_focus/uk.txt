@@ -219,7 +219,7 @@ focus_tree = {
 				ruling_party = democratic
 				elections_allowed = yes
 			}
-			set_capital = 126
+			set_capital = { state = 126 }
 			hidden_effect = {
 				if = {
 					limit = {
@@ -7906,7 +7906,7 @@ focus_tree = {
 		complete_tooltip = {
 		}
 		completion_reward = {
-			set_capital = 454
+			set_capital = { state = 454 }
 			add_stability = 0.15
 			add_ideas = ARTURIA_new_capital_idea
 		}

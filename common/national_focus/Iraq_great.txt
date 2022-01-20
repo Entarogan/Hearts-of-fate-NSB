@@ -562,7 +562,7 @@ focus_tree = {
     }
     completion_reward = {
       set_cosmetic_tag = IRQ_ASSYRIA
-      set_capital = 676
+      set_capital = { state = 676 }
       effect_tooltip = {
 		hidden_effect = {
 			add_country_leader_role = {

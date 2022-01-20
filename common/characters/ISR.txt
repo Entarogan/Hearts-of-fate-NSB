@@ -8,7 +8,7 @@ characters={
 		}
 		country_leader={
 			ideology=liberalism
-			expire="1.1.1.1"
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}
@@ -21,7 +21,7 @@ characters={
 		}
 		country_leader={
 			ideology=fascism_ideology
-			expire="1.1.1.1"
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}
@@ -34,7 +34,7 @@ characters={
 		}
 		country_leader={
 			ideology=despotism
-			expire="1.1.1.1"
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}
@@ -47,7 +47,7 @@ characters={
 		}
 		country_leader={
 			ideology=leninism
-			expire="1.1.1.1"
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}
@@ -60,12 +60,7 @@ characters={
 		}
 		country_leader={
 			ideology=socialism
-			expire="1.1.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=leninism
-			expire="1.1.1.1"
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}

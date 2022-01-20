@@ -2815,7 +2815,7 @@ form_byzantine_empire_category = {
 
 		complete_effect = {
 			set_cosmetic_tag = BYZ_UNIFIED
-			set_capital = 341
+			set_capital = { state = 341 }
 			341 = { add_core_of = ROOT }
 			hidden_effect = { 341 = { set_state_name = "Constantinople" } }
 			set_province_name = { id = 9833 name = "Constantinople" }
@@ -2963,7 +2963,7 @@ form_byzantine_empire_category = {
 		complete_effect = {
 			set_country_flag = GRE_byz_unified_flag
 			GRE_set_appropriate_cosmetic_tag = yes
-			set_capital = 797
+			set_capital = { state = 797 }
 			797 = { add_core_of = ROOT }
 			hidden_effect = { 797 = { set_state_name = "Constantinople" } }
 			set_province_name = { id = 9833 name = "Constantinople" }
@@ -3878,7 +3878,7 @@ form_andalusia_category = {
 				698 = { add_core_of = ROOT }
 				795 = { add_core_of = ROOT }
 				118 = { add_core_of = ROOT }
-				set_capital = 789
+				set_capital = { state = 789 }
 			}
 			hidden_effect = {
 				news_event = { id = lar_news.281 hours = 6 }
@@ -4859,7 +4859,7 @@ form_greater_greece_category = {
 
 		complete_effect = {
 			add_war_support = 0.05
-			set_capital = 797
+			set_capital = { state = 797 }
 			hidden_effect = {
 				set_country_flag = GRE_chose_a_new_capital_city
 			}
@@ -4902,7 +4902,7 @@ form_greater_greece_category = {
 
 		complete_effect = {
 			add_stability = 0.1
-			set_capital = 731
+			set_capital = { state = 731 }
 			hidden_effect = {
 				set_country_flag = GRE_chose_a_new_capital_city
 			}

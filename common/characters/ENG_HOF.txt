@@ -5,6 +5,7 @@ characters={
 		portraits={
 			army = {
 				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.dds"
+				small="GFX_idea_inorai"
 			}
 			civilian={
 				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.dds"
@@ -271,7 +272,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_lancelot.dds"
-				small="gfx/interface/ideas/GFX_idea_command_lancelot.dds"
+				small="gfx/interface/ideas/eng_high_command_lancelot.dds"
 			}
 		}
 		corps_commander = {
@@ -289,8 +290,6 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
-			
-            picture = command_lancelot
 			
 			traits = { Fierce_general }
 			
@@ -361,7 +360,7 @@ characters={
 				original_tag = ENG
 			}
 			
-            picture = chief_tristan
+    
 			
 			traits = { Joint_operations }
 			
@@ -393,8 +392,6 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
-			
-            picture = chief_mash
 			
 			traits = { lord_camelot }
 			
@@ -456,7 +453,6 @@ characters={
 				NOT = { has_idea = admiral_mordred }
 			}
 			
-            picture = chief_mordred
 			
 			traits = { charge_1 }
 			

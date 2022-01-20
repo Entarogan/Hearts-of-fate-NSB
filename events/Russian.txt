@@ -1673,18 +1673,18 @@ country_event = {   ### Choose Capital
 		name = russian.25.a    
 		ai_chance = { base = 50 }
 		hidden_effect = {
-			set_capital = 219
+			set_capital = { state = 219 }
 		}
-		set_capital = 195
+		set_capital = { state = 195 }
     }
 
 	option = {	  ### Moscow
 		name = russian.25.b
 		ai_chance = { base = 50 }
 		hidden_effect = {
-			set_capital = 195
+			set_capital = { state = 195 }
 		}
-		set_capital = 219
+		set_capital = { state = 219 }
     }
 }
 
@@ -4436,7 +4436,7 @@ country_event = {   ### JAP傀儡RUS
 
     RUS = {
       set_country_flag = RUS_Japanese_puppet_flag
-		  set_capital = 408
+		  set_capital = { state = 408 }
 
 			give_resource_rights = { receiver = JAP state = 560 }
 			give_resource_rights = { receiver = JAP state = 657 }

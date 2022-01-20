@@ -838,6 +838,7 @@ characters={
 		name = rom_patchouli_knowledge
 		portraits = {
 			army = {
+				large="gfx/leaders/ROM/Portrait_Patchouli_Knowledge.dds"
 				small = "GFX_idea_rom_patchouli_knowledge"
 			}
 		}

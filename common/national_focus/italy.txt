@@ -7147,7 +7147,7 @@ focus_tree = {
 			remove_ideas = ITA_tyrant_1
 			remove_ideas = ita_unaccepted_rome
       remove_ideas = { Questione_romana }
-			set_capital = 115
+			set_capital = { state = 115 }
 			
 			start_civil_war = {
 				ruling_party = communism
