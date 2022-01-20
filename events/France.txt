@@ -1401,6 +1401,16 @@ country_event = { #军队失控
 	option = {
 		name = france.912.a
 		FRA = { add_ideas = FRA_army_out_of_control_idea }
+		if = {
+			limit = {
+				has_idea = FRA_Anti_royal_family_idea
+				always = no
+			}
+			country_event = {
+				id = lr_france.1
+				days = 3
+			}
+		}
 		hidden_effect = { set_global_flag = FRA_army_out_of_control_flag }
 	}
 }
@@ -1458,6 +1468,16 @@ country_event = { #反王室运动
 	option = {
 		name = france.913.a
 		FRA = { add_ideas = FRA_Anti_royal_family_idea }
+		if = {
+			limit = {
+				has_idea = FRA_army_out_of_control_idea
+				always = no
+			}
+			country_event = {
+				id = lr_france.1
+				days = 3
+			}
+		}
 		hidden_effect = { set_global_flag = FRA_Anti_royal_family_flag }
 	}
 }
