@@ -212,7 +212,7 @@ bookmarks = {
 			ideology = democratic
 			ideas = {
 				POL_cud_nad_wisla
-        POL_militarism_focus
+       			POL_militarism_focus
 			}
 			focuses = {
 				POL_Ask_for_Madagascar
@@ -226,7 +226,7 @@ bookmarks = {
 			history = "FIC_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-        FIC_Difficulty_in_conscription
+        		FIC_Difficulty_in_conscription
 				FIC_salt_opium_alcohol_idea
 				FIC_Agricultural_colonies_idea
 			}

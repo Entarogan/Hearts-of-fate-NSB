@@ -1857,7 +1857,7 @@ characters={
 		name=okita_souji
 		portraits={
 			army={
-				small="GFX_idea_okita_souji"
+				small="GFX_idea_okita"
 			}
 			army={
 				large="gfx/leaders/JAP/Portrait_okita_souji.dds"

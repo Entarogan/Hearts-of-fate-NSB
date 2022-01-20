@@ -112,7 +112,7 @@ FRA_civil_war_south = {
     }
   }
   remove_ideas = { FRA_army_restore_order }
-  set_capital = 33
+  set_capital = { state = 33 }
   start_civil_war = {
     ruling_party = neutrality
     ideology = democratic

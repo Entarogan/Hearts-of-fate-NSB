@@ -142,11 +142,24 @@ set_cosmetic_tag = ISR_Isratin
 add_research_slot = 3
 add_manpower = 70000
 
+
+recruit_character = ISR_theresia
 recruit_character = ISR_david_bengurion
 recruit_character = ISR_itzhak_gaster
 recruit_character = ISR_rudolf_szabó
 recruit_character = ISR_shmuel_mikunis
-recruit_character = ISR_theresia
+
+add_country_leader_role = {
+	character = ISR_theresia
+	country_leader = {
+		expire="1965.1.1.1"
+		ideology = leninism
+		traits = {
+
+		}
+	}
+	promote_leader = yes
+}
 
 
 

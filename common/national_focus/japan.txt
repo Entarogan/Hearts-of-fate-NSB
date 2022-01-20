@@ -10618,7 +10618,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_Colonize_Manchuria
 		completion_reward = {
-			set_capital = 328
+			set_capital = { state = 328 }
 			add_political_power = 200
 			add_stability = 0.1
 			add_war_support = 0.1

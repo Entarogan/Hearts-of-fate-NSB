@@ -15,12 +15,10 @@ country_event = {     # Meeting at Versailles
 
 	trigger = {
 		original_tag = FRA
-		#has_country_leader = {  id = 911 ruling_only = yes }
-		has_country_leader = {  character = FRA_Marie_Antoinette ruling_only = yes }
-		
+		has_country_leader = {  id = 911 ruling_only = yes }
 		has_government = neutrality
-		has_idea = FRA_Anti_royal_family_idea
-		has_idea = FRA_army_out_of_control_idea
+    has_idea = FRA_Anti_royal_family_idea
+    has_idea = FRA_army_out_of_control_idea
 	}	
   
   fire_only_once = yes
@@ -159,17 +157,15 @@ country_event = {     # Meeting at Versailles
         ruling_party = democratic
         elections_allowed = no
       }
-	  add_country_leader_role = {
-		character = "FRA_Jeanne_Darc"
-		country_leader = {
-			ideology = socialism
-			desc = "POLITICS_JEANNE_DARC_DESC"
-			traits = { La_Pucelle  illiterate nationalism_symbol }
-			expire = "1965.3.1.1"
-			id = 912
-		}
-		promote_leader = yes 
-	}
+    create_country_leader = {
+        id = 912
+        name = "Jeanne D'Arc"
+        desc = "POLITICS_JEANNE_DARC_DESC"
+        picture = "gfx//leaders//FRA//Portrait_Jeanne0.dds"
+        ideology = socialism
+        expire = "1965.1.1"
+        traits = { La_Pucelle  illiterate }
+      }
     set_party_name = {
         ideology = democratic
         long_name = FRA_democratic_party_lapucelle_long
@@ -230,16 +226,14 @@ country_event = {     # Meeting at Versailles
         long_name = FRA_provisional_government
         name = FRA_provisional_government
       }  
-	  add_country_leader_role = {
-		character = "FRA_Provisional_Government"
-		country_leader = {
-			desc = "POLITICS_PG_DESC"
-			ideology = conservatism
-			traits = {  }
-			expire = "1965.3.1.1"
-		}
-		promote_leader = yes 
-	}
+    create_country_leader = {
+        name = "Provisional Government"
+        desc = "POLITICS_PG_DESC"
+        picture = "gfx//leaders//FRA//Portrait_French_Provisional_Government.dds"
+        ideology = conservatism
+        expire = "1965.1.1"
+        traits = {  }
+      }
 	  hidden_effect = {
 		  news_event = { id = lr_france_news.4 hours = 3 }
 	  }
@@ -385,34 +379,26 @@ country_event = {     # Referendum
         puppet = SEN
       }
     }
-	FRA_Jeanne_Darc = {
-		add_country_leader_role = {
-			promote_leader = yes
-			country_leader = {
-			ideology = libertarian_socialist
-				expire = “1965.1.1.1”
-				traits = {
-					La_Pucelle  illiterate nationalism_symbol
-				}
-			}
-		}
-		set_portraits = {
-			civilian = {
-				large = "gfx//leaders//FRA//Portrait_Jeanne.dds"
-			}
-		}
-	}
+    create_country_leader = {
+        id = 912
+        name = "Jeanne D'Arc"
+        desc = "POLITICS_JEANNE_DARC_DESC"
+        picture = "gfx//leaders//FRA//Portrait_Jeanne.dds"
+        ideology = libertarian_socialist
+        expire = "1965.1.1"
+        traits = { La_Pucelle  illiterate nationalism_symbol }
+      }
     set_party_name = {
         ideology = communism
         long_name = FRA_communism_party_lapucelle_long
         name = FRA_communism_party_lapucelle
-    }
-    set_country_flag = Republic_Settled
-    custom_effect_tooltip = fra_civil_war_tooltip
-	hidden_effect = {
+      }
+     set_country_flag = Republic_Settled
+     custom_effect_tooltip = fra_civil_war_tooltip
+	 hidden_effect = {
 		news_event = { id = lr_france_news.5 hours = 3 }
 	}
-    hidden_effect = {
+     hidden_effect = {
         country_event = { id = lr_france.6 days = 5 }
         add_ai_strategy = {
           type = alliance
@@ -468,23 +454,15 @@ country_event = {     # Referendum
         ruling_party = democratic
         elections_allowed = no
       }
-	FRA_Jeanne_Darc = {
-		add_country_leader_role = {
-			promote_leader = yes
-			country_leader = {
-			ideology = socialism
-				expire = “1965.1.1.1”
-				traits = {
-					La_Pucelle  illiterate nationalism_symbol
-				}
-			}
-		}
-		set_portraits = {
-			civilian = {
-				large = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
-			}
-		}
-	}
+    create_country_leader = {
+        id = 912
+        name = "Jeanne D'Arc"
+        desc = "POLITICS_JEANNE_DARC_DESC"
+        picture = "gfx//leaders//FRA//Portrait_Jeanne1.dds"
+        ideology = socialism
+        expire = "1965.1.1"
+        traits = { La_Pucelle  illiterate nationalism_symbol }
+      }
     add_popularity = {
       ideology = democratic
       popularity = 25
@@ -537,20 +515,16 @@ country_event = {     # Referendum
         ruling_party = democratic
         elections_allowed = no
       }
-	effect_tooltip = {
-		FRA_leo_b_harwey = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = conservatism
-					expire = “1965.1.1.1”
-					traits = {
-						ideal_holy_king
-					}
+    create_country_leader = {
+				name = "Leo B. Harwey"
+				desc = "POLITICS_HARVEY_DESC"
+				picture = "gfx//leaders//FRA//Portrait_Leo_B_Harvey.dds"
+				expire = "1965.1.1"
+				ideology = classical_liberalism
+				traits = {
+					ideal_holy_king
 				}
 			}
-		}
-	}
     add_popularity = {
       ideology = democratic
       popularity = 25
@@ -609,18 +583,16 @@ country_event = {     # Referendum
       ideology = neutrality
       popularity = 0.10
     }  
-	FRA_napoléon_bonaparte = {
-		add_country_leader_role = {
-			promote_leader = yes
-			country_leader = {
-			ideology = stratocracy
-				expire = “1965.1.1.1”
+    create_country_leader = {
+				name = "Napoléon Bonaparte"
+				desc = "POLITICS_NAPOLEON_DESC"
+				picture = "gfx//leaders//FRA//Portrait_Napoleon.dds"
+				expire = "1965.1.1"
+				ideology = stratocracy
 				traits = {
-					emperor
+				emperor				
 				}
 			}
-		}
-	}
     set_cosmetic_tag = FRA_THIRD_EMPIRE  
     set_party_name = {
             ideology = neutrality
@@ -641,30 +613,30 @@ country_event = {     # Referendum
   
   # Rederendum was interrupted...
 
-	option = {
+  option = {
 		name = lr_france.2.f
 		ai_chance = {
 			base = 25
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = FRA_ai_behavior
-					option = BONAPARTIST_NAPOLEON
-				}
+        has_game_rule = {
+          rule = FRA_ai_behavior
+          option = BONAPARTIST_NAPOLEON
+        }
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = FRA_ai_behavior
-					option = DEMOCRATIC_SOCIAL_DEMOCRACY
-				}
+        has_game_rule = {
+          rule = FRA_ai_behavior
+          option = DEMOCRATIC_SOCIAL_DEMOCRACY
+        }
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = FRA_ai_behavior
-					option = DEMOCRATIC_CONSERVATISM
-				}
+        has_game_rule = {
+          rule = FRA_ai_behavior
+          option = DEMOCRATIC_CONSERVATISM
+        }
 			}
 			modifier = {
 				factor = 0
@@ -674,16 +646,16 @@ country_event = {     # Referendum
         }
 			}
 		}
-		add_popularity = {
-			ideology = democratic
-			popularity = -0.20
-		}
-		add_stability = -0.10 
-		custom_effect_tooltip = fra_civil_war_tooltip
-		set_country_flag = Autocracy_Settled 
-		hidden_effect = {
-			country_event = { id = lr_france.3  days = 5 }
-		}
+    add_popularity = {
+      ideology = democratic
+      popularity = -0.20
+    }
+    add_stability = -0.10 
+    custom_effect_tooltip = fra_civil_war_tooltip
+    set_country_flag = Autocracy_Settled 
+    hidden_effect = {
+      country_event = { id = lr_france.3  days = 5 }
+    }
 	}
 } 
   
@@ -694,11 +666,14 @@ country_event = {     # Military Coup
 	picture = GFX_report_event_napoleon
 
 	is_triggered_only = yes
-	immediate = {
+	
+  immediate = {
 		hidden_effect = {
 			country_event = { id = lr_france.9  days = 25  }
 		}
 	}
+  
+  
 	# Napoleon gets support
 	option = {
 		name = lr_france.3.a
@@ -729,18 +704,17 @@ country_event = {     # Military Coup
       long_name = FRA_bonepartist_party_long
       name = FRA_bonepartist_party
     }
-    FRA_napoléon_bonaparte = {
-		add_country_leader_role = {
-			promote_leader = yes
-			country_leader = {
-			ideology = stratocracy
-				expire = “1965.1.1.1”
+    
+    create_country_leader = {
+				name = "Napoléon Bonaparte"
+				desc = "POLITICS_NAPOLEON_DESC"
+				picture = "gfx//leaders//FRA//Portrait_Napoleon.dds"
+				expire = "1965.1.1"
+				ideology = stratocracy
 				traits = {
-					emperor
+				emperor					
 				}
 			}
-		}
-	}
     FRA_civil_war_south = yes   
 	hidden_effect = {
 		news_event = { id = lr_france_news.9 hours = 3 }
@@ -770,17 +744,16 @@ country_event = {     # Military Coup
       long_name = FRA_charlemagne_party_long
       name = FRA_charlemagne_party
     }  
-	FRA_charlemagne = {
-		add_country_leader_role = {
-			promote_leader = yes
-			country_leader = {
-			ideology = stratocracy
-				expire = “1965.1.1.1”
+    create_country_leader = {
+				name = "Charlemagne"
+				desc = "POLITICS_CHARLEMAGNE_DESC"
+				picture = "gfx//leaders//FRA//Portrait_Charlemagne.dds"
+				expire = "1965.1.1"
+				ideology = stratocracy
 				traits = {
+					
 				}
 			}
-		}
-	}
     FRA_civil_war_south = yes
     hidden_effect = {
       BEL = {  country_event = { id = lr_france.4  days = 10 } }
@@ -871,141 +844,147 @@ country_event = {     # France: Military unrest for Communists
     set_global_flag = FRA_civil_war_start_flag 
     add_war_support = 0.1
     FRA_civil_war_north = yes
-	add_corps_commander_role = {
-		Character = FRA_jacques_doriot
-		traits = {
-			politically_connected
-			trait_reckless
-			trait_engineer
-			fortress_buster
-		}
-		skill = 2
-		attack_skill = 2
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 2
-	}
 
-	add_corps_commander_role = {
-		Character = FRA_Henri_Rol_Tanguy
-		traits = {
-			infantry_officer
-			commando
-			organizer
-			urban_assault_specialist
-		}
-		skill = 3
-		attack_skill = 3
-		defense_skill = 2
-		planning_skill = 2
-		logistics_skill = 3
+create_corps_commander = {
+	name = "Jacques Doriot"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Jacques_Doriot.dds"
+	traits = {
+		politically_connected
+		trait_reckless
+		trait_engineer
+		fortress_buster
 	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
 
-	add_corps_commander_role = {
-		Character = FRA_Andre_Marty
-		traits = {
-			harsh_leader
-			naval_invader
-		}
-		skill = 3
-		attack_skill = 4
-		defense_skill = 1
-		planning_skill = 3
-		logistics_skill = 2
+create_corps_commander = {
+	name = "Henri Tanguy"
+	portrait_path = "gfx/leaders/FRA/Henri_Rol_Tanguy.dds"
+	traits = {
+		infantry_officer
+    commando
+		organizer
+		urban_assault_specialist
 	}
-	add_corps_commander_role = {
-		Character = FRA_Arthur_Dallidet
-		traits = {
-			commando
-			organizer
-		}
-		skill = 2
-		attack_skill = 1
-		defense_skill = 3
-		planning_skill = 1
-		logistics_skill = 2
-	}
-	add_corps_commander_role = {
-		Character = FRA_Danielle_Casanova
-		traits = {
-			armor_officer
-			trickster
-		}
-		skill = 2
-		attack_skill = 4
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Jean_Pierre_Timbaud
-		traits = {
-			infantry_officer
-			armor_officer
-		}
-		skill = 2
-		attack_skill = 3
-		defense_skill = 1
-		planning_skill = 2
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Jean_Pierre_Timbaud
-		traits = {
-			infantry_officer
-			armor_officer
-		}
-		skill = 2
-		attack_skill = 3
-		defense_skill = 1
-		planning_skill = 2
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Roger_Belbeoch
-		traits = {
-			commando
-		}
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Missak_Manouchian
-		traits = {
-			infantry_officer
-			trickster
-			commando
-		}
-		skill = 2
-		attack_skill = 2
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 3
-	}
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 3
+}
 
-	add_corps_commander_role = {
-		Character = FRA_nestor_makhno
-		traits = {
-			war_hero
-			media_personality
-			winter_specialist
-			cavalry_leader
-		}
-		skill = 4
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 3
-		logistics_skill = 3
+create_corps_commander = {
+	name = "André Marty"
+	portrait_path = "gfx/leaders/FRA/André_Marty.dds"
+	traits = {
+    harsh_leader
+    naval_invader
 	}
-	retire_character = FRA_maxime_weygand
-	retire_character = FRA_philippe_leclerc
-	retire_character = FRA_alphonse_georges
-	retire_character = FRA_jean_touzet_du_vigier
-	retire_character = FRA_louis_franchet_despèrey
-	retire_character = FRA_henri_lebocq
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Arthur Dallidet"
+	portrait_path = "gfx/leaders/FRA/Arthur_Dallidet.dds"
+	traits = {
+    commando
+		organizer
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Danielle Casanova"
+	portrait_path = "gfx/leaders/FRA/Danielle_Casanova.dds"
+	traits = {
+    armor_officer
+    trickster
+	}
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Jean Pierre Timbaud"
+	portrait_path = "gfx/leaders/FRA/Jean_Pierre_Timbaud.dds"
+	traits = {
+    infantry_officer
+    armor_officer
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Roger Belbéoch"
+	portrait_path = "gfx/leaders/FRA/Roger_Belbéoch.dds"
+	traits = {
+    commando
+	}
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Missak Manouchian"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Missak_Manouchian.tga"
+	traits = {
+		infantry_officer
+		trickster
+		commando
+	}
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Nestor Makhno"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Nestor_Makhno.tga"
+	traits = {
+		war_hero
+		media_personality
+		winter_specialist
+		cavalry_leader
+	}
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+    remove_unit_leader = 4004
+
+    remove_unit_leader = 4005
+    remove_unit_leader = 4007
+
+    remove_unit_leader = 4009
+    remove_unit_leader = 4010
+    remove_unit_leader = 4011
 
     hidden_effect = {
       country_event = { id = lr_france.7  days = 20 }
@@ -1082,18 +1061,18 @@ country_event = {     # France: Status of the Church
 		name = lr_france.8.a
 		ai_chance = {
 			base = 30
-			modifier = {
-				NOT = { FRA_Jeanne_Darc = { is_country_leader = yes } } 
-				factor = 2
-			}
-			modifier = {
-				NOT = { FRA_napoléon_bonaparte = { is_country_leader = yes } } 
-				factor = 0
-			}
-			modifier = {      
-				has_country_flag = Monarchy_Settled
-				factor = 5
-			}
+      modifier = {
+        NOT = { has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes } }
+        factor = 2
+      }
+      modifier = {
+        NOT = { has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes } }
+        factor = 0
+      }
+      modifier = {      
+        has_country_flag = Monarchy_Settled
+        factor = 5
+      }
 		}
     add_stability = 0.05
     set_country_flag = FRA_Catholic
@@ -1105,10 +1084,10 @@ country_event = {     # France: Status of the Church
 		name = lr_france.8.b
 		ai_chance = {
 			base = 70
-			modifier = {
-				FRA_Marie_Antoinette = { is_country_leader = yes }
-				factor = 0
-			}
+      modifier = {
+        has_country_leader = {  id = 911 ruling_only = yes }
+        factor = 0
+      }
 		}
     add_political_power = 50
     set_country_flag = FRA_Secular
@@ -1501,7 +1480,7 @@ country_event = {
 		tag = FRA
 		FRA = { has_war = no }
         NOT = { has_global_flag = FRA_angry_Vatican_flag }
-        FRA = { has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes } }
+        FRA = { has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes } }
         FRA = { is_faction_leader = yes }
         FRA = { is_subject = no }
         ITA = { is_subject = no }
@@ -2000,9 +1979,10 @@ country_event = {
 							remove_idea = FRA_dragon_witch_activity_idea
 							add_idea = FRA_Sanguang_Policy_idea
 						}
-						add_corps_commander_role = {
-							Character = FRA_jeanne_darc_alter
-			
+
+					create_corps_commander = {
+							name = "Jeanne D'Arc (Alter)"
+							picture = "Portrait_Jeanne_Darc_Alter.dds"
 							traits = { trait_reckless harsh_leader career_officer brilliant_strategist }
 							skill = 4
 							attack_skill = 7
@@ -2012,77 +1992,88 @@ country_event = {
 						}
 					hidden_effect = {
 							news_event = {
-								hours = 6
-								id = jd_news.17
-							}
-							add_field_marshal_role = {
-								Character = FRA_gilles_de_rais_alter
-								traits = { career_officer cavalry_leader combined_arms_expert infantry_leader infantry_expert }
-								skill = 4
-								attack_skill = 5
-								defense_skill = 4
-								planning_skill = 2
-								logistics_skill = 3
-							}
-							add_corps_commander_role = {
-								Character = FRA_Eugene_Deloncle
-								traits = {
-									politically_connected
-									naval_invader
+									hours = 6
+									id = jd_news.17
 								}
-								skill = 1
-								attack_skill = 1
-								defense_skill = 1
-								planning_skill = 1
-								logistics_skill = 1
-							}
-							add_corps_commander_role = {
-								Character = FRA_Jacques_Correze
-								traits = {
-									politically_connected
+							create_field_marshal = {
+									name = "Gilles de Rais"
+									picture = "Portrait_DeRaisCaster.dds"
+									traits = { career_officer cavalry_leader combined_arms_expert infantry_leader infantry_expert }
+									skill = 4
+									attack_skill = 5
+									defense_skill = 4
+									planning_skill = 2
+									logistics_skill = 3
 								}
-								skill = 2
-								attack_skill = 4
-								defense_skill = 1
-								planning_skill = 1
-								logistics_skill = 1
-							}
-							add_corps_commander_role = {
-								Character = FRA_jean_fontenoy
-								traits = {
-									substance_abuser
-								}
-								skill = 2
-								attack_skill = 4
-								defense_skill = 1
-								planning_skill = 3
-								logistics_skill = 1
-							}
-							add_corps_commander_role = {
-								Character = FRA_marcel_petiot
-								traits = {
-									trait_reckless
-									organizer
-									trickster
-								}
-								skill = 3
-								attack_skill = 4
-								defense_skill = 2
-								planning_skill = 4
-								logistics_skill = 2
-							}
-							add_corps_commander_role = {
-								Character = FRA_Robert_Brasillach
-								traits = {
 
-									trickster
-								}
-								skill = 1
-								attack_skill = 1
-								defense_skill = 1
-								planning_skill = 1
-								logistics_skill = 1
-							}
+              create_corps_commander = {
+                name = "Eugene Deloncle"
+                portrait_path = "gfx/leaders/FRA/portrait_fra_Eugene_Deloncle.dds"
+                traits = {
+                  politically_connected
+                  naval_invader
+                }
+                skill = 1
+                attack_skill = 1
+                defense_skill = 1
+                planning_skill = 1
+                logistics_skill = 1
+              }
+
+              create_corps_commander = {
+                name = "Jacques Correze"
+                portrait_path = "gfx/leaders/FRA/portrait_fra_jacques_correze.dds"
+                traits = {
+                  politically_connected
+                }
+                skill = 2
+                attack_skill = 4
+                defense_skill = 1
+                planning_skill = 1
+                logistics_skill = 1
+              }
+
+              create_corps_commander = {
+                name = "Jean Fontenoy"
+                portrait_path = "gfx/leaders/FRA/portrait_fra_jean_fontenoy.dds"
+                traits = {
+                  substance_abuser
+                }
+                skill = 2
+                attack_skill = 4
+                defense_skill = 1
+                planning_skill = 3
+                logistics_skill = 1
+              }
+
+              create_corps_commander = {
+                name = "Marcel Petiot"
+                portrait_path = "gfx/leaders/FRA/portrait_fra_marcel_petiot.dds"
+                traits = {
+                  trait_reckless
+                  organizer
+                  trickster
+                }
+                skill = 3
+                attack_skill = 4
+                defense_skill = 2
+                planning_skill = 4
+                logistics_skill = 2
+              }
+
+              create_corps_commander = {
+                name = "Robert Brasillach"
+                portrait_path = "gfx/leaders/FRA/portrait_fra_robert_brasillach.dds"
+                traits = {
+                  trickster
+                }
+                skill = 1
+                attack_skill = 1
+                defense_skill = 1
+                planning_skill = 1
+                logistics_skill = 1
+              }
+
 							random_other_country = {
 									limit = {
 											original_tag = FRA
@@ -2584,16 +2575,17 @@ country_event = {
 
 		add_political_power = 50
 
-		add_corps_commander_role = {
-			Character = FRA_francesca_prelati
-			legacy_id= 900
-			traits = { politically_connected media_personality trickster brilliant_strategist armor_officer }
-			skill = 5
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 6
-			logistics_skill = 3
-		}
+    create_corps_commander = {
+      name = "Francesca Prelati"
+      id = 900
+      picture = "Portrait_Francesca_Prelati.dds"
+      traits = { politically_connected media_personality trickster brilliant_strategist armor_officer }
+      skill = 5
+      attack_skill = 5
+      defense_skill = 2
+      planning_skill = 6
+      logistics_skill = 3
+    }
 
 		add_equipment_to_stockpile = { 
 			type = infantry_equipment
@@ -2702,35 +2694,38 @@ country_event = {
 			factor = 100
 		}
 
-		hidden_effect = {
-			country_event = { id = lr_france.48 days = 30 }
-		}
+		    hidden_effect = {
+            country_event = { id = lr_france.48 days = 30 }
+		   }
 
-		set_global_flag = GER_Kaltenbrunner_in_france_flag
+				set_global_flag = GER_Kaltenbrunner_in_france_flag
 
-		custom_effect_tooltip = available_political_advisor
-		show_ideas_tooltip = FRA_ernst_kaltenbrunner
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = FRA_ernst_kaltenbrunner
 
-		add_corps_commander_role = {
-			Character = FRA_ernst_kaltenbrunner
-			traits = { politically_connected harsh_leader }
-			skill = 1
-			legacy_id = 2054
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
-		add_corps_commander_role = {
-			Character = FRA_kurt_daluege
-			traits = { politically_connected harsh_leader }
-			skill = 1
-			legacy_id = 2055
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-		}
+			create_corps_commander = {
+				name = "Ernst Kaltenbrunner"
+				picture = "Portrait_Germany_Ernst_Kaltenbrunner.dds"
+				traits = { politically_connected harsh_leader }
+        skill = 1
+        id = 2054
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+
+			create_corps_commander = {
+				name = "Kurt Daluege"
+				picture = "Portrait_Kurt_Daluege.dds"
+				traits = { politically_connected harsh_leader }
+        skill = 1
+        id = 2055
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
 
 	}
 
@@ -3008,19 +3003,17 @@ country_event = {
         custom_effect_tooltip = FRA_acce_Jeanne
 
 		    hidden_effect = {
-				add_country_leader_role = {
-					character = "FRA_jeanne_darc_alter"
-					country_leader = {
-						desc = "POLITICS_JEANNE_DARC_DESC"
-						ideology = accelerationism
-						traits = {
-							Ephemeral_Dream illiterate
-						}
-						expire = "1965.3.1.1"
-					}
-					promote_leader = yes 
-				}
-			}
+create_country_leader = {
+	name = "Jeanne D'Arc (Alter)"
+	desc = "POLITICS_JEANNE_DARC_DESC"
+	picture = "gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
+	expire = "1965.1.1"
+	ideology = accelerationism
+	traits = {
+		Ephemeral_Dream illiterate
+	}
+}
+		   }
 
 		add_political_power = -100
 
@@ -3042,18 +3035,16 @@ country_event = {
         custom_effect_tooltip = FRA_acce_Jeanne
 
 		    hidden_effect = {
-				add_country_leader_role = {
-					character = "FRA_jeanne_darc_alter"
-					country_leader = {
-						desc = "POLITICS_JEANNE_DARC_DESC"
-						ideology = accelerationism
-						traits = {
-							Ephemeral_Dream illiterate
-						}
-						expire = "1965.3.1.1"
-					}
-					promote_leader = yes 
-				}
+create_country_leader = {
+	name = "Jeanne D'Arc (Alter)"
+	desc = "POLITICS_JEANNE_DARC_DESC"
+	picture = "gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
+	expire = "1965.1.1"
+	ideology = accelerationism
+	traits = {
+		Ephemeral_Dream illiterate
+	}
+}
 		   }
 
 		add_political_power = 100
@@ -3174,19 +3165,17 @@ country_event = {
         custom_effect_tooltip = FRA_valk_Jeanne
 
 		    hidden_effect = {
-				add_country_leader_role = {
-					character = "FRA_jeanne_darc_alter"
-					country_leader = {
-						desc = "POLITICS_JEANNE_DARC_DESC"
-						ideology = valkist
-						traits = {
-							Ephemeral_Dream illiterate
-						}
-						expire = "1965.3.1.1"
-					}
-					promote_leader = yes 
-				}
-		  	}
+create_country_leader = {
+	name = "Jeanne D'Arc (Alter)"
+	desc = "POLITICS_JEANNE_DARC_DESC"
+	picture = "gfx//leaders//FRA//Portrait_Jeanne_Darc_Alter.dds"
+	expire = "1965.1.1"
+	ideology = valkist
+	traits = {
+		Ephemeral_Dream illiterate
+	}
+}
+		   }
 
 		add_political_power = -100
 
@@ -3462,9 +3451,9 @@ country_event = {
 			factor = 49
 		}
 
-		ENG = {
-			country_event = { id = lr_france.57 days = 1 }
-		}
+		    ENG = {
+            country_event = { id = lr_france.57 days = 1 }
+		   }
 
 
 	}
@@ -3491,47 +3480,47 @@ country_event = {
 			factor = 50
 		}
 
-		FRA = {
-			annex_country = { target = SEN }
-			annex_country = { target = MAD }
-		}
-		add_country_leader_role = {
-			character = "FRA_Marie_Antoinette"
-			country_leader = {
-				id = 911
-				desc = "POLITICS_JEANNE_DARC_DESC"
-				ideology = authoritarian_democracy
-				traits = {
-					Ephemeral_Dream illiterate
-				}
-				expire = "1965.3.1.1"
-			}
-			promote_leader = yes 
-		}
-		add_field_marshal_role = {
-			Character = FRA_Marie_Antoinette
-			legacy_id=811
-			traits = { defensive_doctrine inflexible_strategist inspirational_leader politically_connected cavalry_officer}
-			skill = 5
-			attack_skill = 4
-			defense_skill = 5
-			planning_skill = 3
-			logistics_skill = 4
-		}
-		add_field_marshal_role = {
-			Character = FRA_Jeanne_Darc
-			legacy_id=812
-			traits = { defensive_doctrine war_hero inflexible_strategist career_officer fast_planner inspirational_leader unyielding_defender organisational_leader politically_connected}
-			skill = 6
-			attack_skill = 4
-			defense_skill = 6
-			planning_skill = 4
-			logistics_skill = 4
-		}
+		    FRA = {
+            annex_country = { target = SEN }
+            annex_country = { target = MAD }
+		   }
 
-######
-##question:这里是干啥用的，
-######
+create_country_leader = {
+	name = "Marie Antoinette"
+	id = 911
+	desc = "POLITICS_MARIE_ANTOINETTE_DESC"
+	picture = "gfx//leaders//FRA//Portrait_Marie.dds"
+	expire = "1965.1.1"
+	ideology = authoritarian_democracy
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "Marie Antoinette"
+	id = 811
+	picture = "Portrait_Marie.dds"
+	traits = { defensive_doctrine inflexible_strategist inspirational_leader politically_connected cavalry_officer}
+	skill = 5
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_field_marshal = {
+	name = "Jeanne D'Arc"
+	id = 812
+	picture = "Portrait_Jeanne.dds"
+	traits = { defensive_doctrine war_hero inflexible_strategist career_officer fast_planner inspirational_leader unyielding_defender organisational_leader politically_connected}
+	skill = 6
+	attack_skill = 4
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 4
+}
+
 create_field_marshal = {
 	name = "Charlemagne"
 	id = 813
@@ -4018,66 +4007,71 @@ country_event = {
 
 		global_every_army_leader = { limit = { has_id = 290 } set_nationality = FIC }
 
-		FIC = {
-			add_offsite_building = { type = industrial_complex level = 2 }
-		}
-		random_owned_state = {
-			limit = {
-				is_core_of = FRA
-				industrial_complex > 1
-			}
-
-			remove_building = {
-				type = industrial_complex
-				level = 2
-			}
-		}
-
-
-		if = {
-			limit = {
-				FRA = { has_government = communism }
-			}
-
-			FIC = {
-
-				set_politics = {
-					ruling_party = communism
-					elections_allowed = no
-				}  
-				add_popularity = {
-				ideology = communism
-				popularity = 0.35
-				}  
-				####question 玛尔达国籍问题
-				create_country_leader = {
-					name = "St. Martha"
-					desc = ""
-					picture = "Portrait_St_Martha_admiral.dds"
-					expire = "1936.9.15"
-					ideology = libertarian_socialist
+				FIC = {
+					add_offsite_building = { type = industrial_complex level = 2 }
 				}
-		   	}
-    	}  
+				random_owned_state = {
+					limit = {
+						is_core_of = FRA
+						industrial_complex > 1
+					}
 
-		if = {
-			limit = {
-				NOT = { FRA = { has_government = communism } }
-			}
-
-			FIC = {
-
-				create_country_leader = {
-					name = "St. Martha"
-					desc = ""
-					picture = "Portrait_St_Martha_admiral.dds"
-					expire = "1936.9.15"
-					ideology = authoritarian_democracy
+					remove_building = {
+						type = industrial_complex
+						level = 2
+					}
 				}
 
-			}
 
-		}  
+    if = {
+      limit = {
+        FRA = { has_government = communism }
+      }
+
+		    FIC = {
+
+		set_politics = {
+        ruling_party = communism
+        elections_allowed = no
+      }  
+
+    add_popularity = {
+      ideology = communism
+      popularity = 0.35
+    }  
+
+            create_country_leader = {
+            	name = "St. Martha"
+            	desc = ""
+            	picture = "Portrait_St_Martha_admiral.dds"
+             	expire = "1936.9.15"
+            	ideology = libertarian_socialist
+}
+
+		   }
+
+    }  
+
+    if = {
+      limit = {
+        NOT = { FRA = { has_government = communism } }
+      }
+
+		    FIC = {
+
+            create_country_leader = {
+            	name = "St. Martha"
+            	desc = ""
+            	picture = "Portrait_St_Martha_admiral.dds"
+             	expire = "1936.9.15"
+            	ideology = authoritarian_democracy
+}
+
+		   }
+
+    }  
+
+
 	}
 
 	option = {
@@ -4092,32 +4086,32 @@ country_event = {
 			factor = 25
 		}
 
-		FIC = {
-			add_offsite_building = { type = arms_factory level = 2 }
-		}
-		random_owned_state = {
-			limit = {
-				is_core_of = FRA
-				arms_factory > 1
-			}
-
-			remove_building = {
-				type = arms_factory
-				level = 2
-			}
-		}
-
-		FIC = {
-			add_country_leader_role = {
-				character = "FIC_duc_de_richelieu"
-				country_leader = {
-					ideology = authoritarian_democracy
-					traits = {    }
-					expire = "1965.3.1.1"
+				FIC = {
+					add_offsite_building = { type = arms_factory level = 2 }
 				}
-				promote_leader = yes 
-			}
-		}
+				random_owned_state = {
+					limit = {
+						is_core_of = FRA
+						arms_factory > 1
+					}
+
+					remove_building = {
+						type = arms_factory
+						level = 2
+					}
+				}
+
+		    FIC = {
+
+            create_country_leader = {
+            	name = "Duc de Richelieu"
+            	desc = ""
+             	picture = "Portrait_Duc_de_Richelieu.dds"
+            	expire = "1953.3.1"
+            	ideology = authoritarian_democracy
+}
+
+		   }
 
 	}
 
@@ -4235,14 +4229,8 @@ country_event = {
 			modifier = {
 				factor = 0
 				or = {
-					has_country_leader = {
-						ruling_only = yes
-						character = FRA_Jeanne_Darc
-					}
-					has_country_leader = {
-						ruling_only = yes
-						character = FRA_napoléon_bonaparte
-					}
+					has_country_leader = { name = "Jeanne D'Arc"  ruling_only = yes }
+					has_country_leader = { name = "Napoléon Bonaparte"  ruling_only = yes  }
 				}
 			}
 			modifier = {

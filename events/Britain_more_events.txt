@@ -798,7 +798,7 @@ country_event = {     # Avalon
             }
             add_core_of = ENG
         }
-        set_capital = 331
+        set_capital = { state = 331 }
         hidden_effect = {
             news_event = {  id = more_news.32  hours = 12 }
         }
