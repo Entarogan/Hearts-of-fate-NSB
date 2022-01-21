@@ -12,15 +12,16 @@ country_event = {     # Meeting at Versailles
 	title = lr_france.1.t
 	desc = lr_france.1.d
 	picture = GFX_report_event_generic_black_Pluviose
-
+	#is_triggered_only = yes
 	trigger = {
 		original_tag = FRA
 		#has_country_leader = {  id = 911 ruling_only = yes }
 		has_country_leader = {  character = FRA_Marie_Antoinette ruling_only = yes }
-		
+		has_global_flag = FRA_army_out_of_control_flag
+		has_global_flag = FRA_Anti_royal_family_flag
 		has_government = neutrality
-		has_idea = FRA_Anti_royal_family_idea
-		has_idea = FRA_army_out_of_control_idea
+		#has_idea = FRA_Anti_royal_family_idea
+		#has_idea = FRA_army_out_of_control_idea
 	}	
   
   fire_only_once = yes
