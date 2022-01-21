@@ -164,7 +164,7 @@ FRA_civil_war_south = {
             OR = {
               is_character = FRA_Jeanne_Darc
               is_character = FRA_gilles_de_rais
-              is_character = FRA_st._martha
+              is_character = FRA_st_martha
             }
           }
           set_nationality = PREV
@@ -266,7 +266,7 @@ FRA_civil_war_north = {
           OR = {
             is_character = FRA_Jeanne_Darc
             is_character = FRA_gilles_de_rais
-            is_character = FRA_st._martha
+            is_character = FRA_st_martha
           }
         }
         set_nationality = FRA

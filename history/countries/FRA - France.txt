@@ -10,6 +10,7 @@ if = {
 }
 
 set_research_slots = 3
+starting_train_buffer = 3
 set_stability = 0.75
 set_war_support = 0.60
 
@@ -47,6 +48,7 @@ set_technology = {
 	Jean_light_secondary_battery = 1
 	basic_cruiser_armor_scheme = 1
 	basic_ship_hull_cruiser = 1
+	basic_train = 1
   
   electronic_mechanical_engineering = 1
   mechanical_computing = 1
@@ -113,6 +115,11 @@ puppet = MAD
 puppet = SEN
 puppet = FIC
 
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 80
+    producer = FRA
+}
 
 set_convoys = 700
 set_popularities = {
@@ -176,7 +183,7 @@ recruit_character = FRA_leo_b_harwey
 recruit_character = FRA_jeanne_darc_alter
 recruit_character = FRA_charlemagne
 recruit_character = FRA_napoléon_bonaparte
-recruit_character = FRA_st._martha
+recruit_character = FRA_st_martha
 recruit_character = FRA_bradamante
 recruit_character = FRA_astolfo
 recruit_character = FRA_chevalier_deon

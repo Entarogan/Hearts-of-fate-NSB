@@ -4855,11 +4855,6 @@ CHI_integrate_the_warlords = {
 						logistics_skill = 2
 					}
 				}
-				FROM = {
-					every_unit_leader = {
-						set_nationality = ROOT
-					}
-				}
 			}
 			else_if = {
 				limit = { FROM = { tag = YUN } }
@@ -4879,11 +4874,6 @@ CHI_integrate_the_warlords = {
 						defense_skill = 3
 						planning_skill = 3
 						logistics_skill = 2
-					}
-				}
-				FROM = {
-					every_unit_leader = {
-						set_nationality = ROOT
 					}
 				}
 			}
@@ -4907,11 +4897,6 @@ CHI_integrate_the_warlords = {
 						logistics_skill = 2
 					}
 				}
-				FROM = {
-					every_unit_leader = {
-						set_nationality = ROOT
-					}
-				}
 			}
 			else_if = {
 				limit = { FROM = { tag = XSM } }
@@ -4933,11 +4918,6 @@ CHI_integrate_the_warlords = {
 						logistics_skill = 2
 					}
 				}
-				FROM = {
-					every_unit_leader = {
-						set_nationality = ROOT
-					}
-				}
 			}
 			else_if = {
 				limit = { FROM = { tag = SIK } }
@@ -4957,11 +4937,6 @@ CHI_integrate_the_warlords = {
 						defense_skill = 4
 						planning_skill = 2
 						logistics_skill = 2
-					}
-				}
-				FROM = {
-					every_unit_leader = {
-						set_nationality = ROOT
 					}
 				}
 			}

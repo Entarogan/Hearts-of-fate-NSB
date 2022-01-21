@@ -2760,7 +2760,7 @@ country_event = {
 	
 	trigger = {
 		tag = GER
-		has_country_leader = { ruling_only = yes name = "Siegfried" }
+		has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no 
     has_war = yes
     or = {
@@ -2801,7 +2801,7 @@ country_event = {
 	
 	trigger = {
 		tag = GER
-		has_country_leader = { ruling_only = yes name = "Siegfried" }
+		has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no 
     has_war = yes
     or = {
@@ -3127,7 +3127,7 @@ country_event = {     # 蹊跷的死亡
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     has_country_flag = GER_Dismissal_Himmler_flag
     has_country_flag = GER_Dismissal_Rosenberg_flag
@@ -3160,7 +3160,7 @@ country_event = {     # 分歧加剧
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     has_country_flag = GER_Dismissal_Himmler_flag
     has_country_flag = GER_Dismissal_Rosenberg_flag
@@ -3193,7 +3193,7 @@ country_event = {     # 飞哥死了
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
 	  has_idea = GER_Siegfried_spirit_idea
     NOT = { has_country_flag = GER_No_longer_oppose_flag }
@@ -4999,7 +4999,7 @@ country_event = {     # 不在反对
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     has_country_flag = GER_No_longer_oppose_flag
   }
@@ -5053,7 +5053,7 @@ country_event = {     # 少女联盟
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     has_completed_focus = GER_Obligations_of_Youth_League
   }
@@ -5123,7 +5123,7 @@ country_event = {     # 弗萨克文字
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     NOT = { has_country_flag = GER_Dismissal_Rosenberg_flag }
     has_idea = GER_Thule_Teaching_idea
@@ -5176,7 +5176,7 @@ country_event = {     # 伪史考
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes name = "Siegfried" }
+    has_country_leader = { ruling_only = yes character = GER_siegfried }
     is_subject = no
     NOT = { has_country_flag = GER_Dismissal_Rosenberg_flag }
     has_idea = GER_Thule_Teaching_2_idea

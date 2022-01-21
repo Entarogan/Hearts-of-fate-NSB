@@ -587,7 +587,7 @@ ideas = {
 			picture = RUS_rebirth_of_the_tsar_0    
 			available = {
 				has_country_leader = {
-					name = "Anastasia I"
+					character = RUS_anastasia_i
 					ruling_only = yes
 				}
 			}  
@@ -609,7 +609,7 @@ ideas = {
 			}
 			available = {
 				has_country_leader = {
-					name = "Anastasia I"
+					character = RUS_anastasia_i
 					ruling_only = yes
 				}
 			}  

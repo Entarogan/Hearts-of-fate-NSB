@@ -613,7 +613,7 @@ ideas = {
         
         available = {
           is_subject = no
-          has_country_leader = { ruling_only = yes name = "Siegfried" }
+          has_country_leader = { ruling_only = yes character = GER_siegfried }
         }
 
         allowed_civil_war = {
@@ -2656,7 +2656,7 @@ ideas = {
 			}
 	
 			available = {
-				has_country_leader = { ruling_only = yes name = "Siegfried" }
+				has_country_leader = { ruling_only = yes character = GER_siegfried }
 			}
   
 			removal_cost = -1

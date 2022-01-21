@@ -1114,7 +1114,7 @@ characters={
 					}
 					not  = {
 						has_country_leader  = {
-							name  = Makiri Sigisrenko
+							character  = RUS_matou_shinji
 							ruling_only  = yes 
 						}
 					}
@@ -1145,7 +1145,7 @@ characters={
 					not  = {
 						has_country_leader  = {
 							ruling_only  = yes 
-							name  = Ruchnoy P. Kalashnikova
+							character = RUS_anna_viktorovna
 						}
 					}
 					not  = {
@@ -1208,7 +1208,7 @@ characters={
 						has_war_with  = JAP
 						has_completed_focus  = rus_break_tie_with_jap 
 						has_country_leader  = {
-							name  = Tatenashi Sarashiki
+							character = RUS_tatenashi_sarashiki
 							ruling_only  = yes 
 						}
 					}

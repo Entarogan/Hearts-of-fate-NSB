@@ -10,6 +10,17 @@ if = {
 }
 
 set_research_slots = 3
+starting_train_buffer = 2
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 25
+    producer = SWE
+}
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 15
+    producer = GER
+}
 
 add_ideas = {
 	en_svensk_tiger
@@ -51,7 +62,7 @@ set_technology = {
     interwar_artillery = 1
     infantry_weapons2 = 1
     support_weapons = 1
-
+	basic_train = 1
     #doctrines
     # air_superiority = 1
     force_rotation = 1

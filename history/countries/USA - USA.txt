@@ -10,6 +10,7 @@ if = {
 }
 
 set_research_slots = 4
+starting_train_buffer = 4
 set_stability = 0.75
 set_war_support = 0
 set_variable = { var = senators_support value = 48 }
@@ -55,6 +56,7 @@ set_technology = {
 	fuel_refining = 1
 	marines = 1
     armored_car1 = 1
+	basic_train = 1
 }
 
 if = {
@@ -262,7 +264,11 @@ give_guarantee = URG
 
 
 
-
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 120
+    producer = USA
+}
 set_convoys = 600
 
 

@@ -282,7 +282,7 @@ characters={
 			available = {
         		has_completed_focus = ira_mercenary
 			}
-			traits = { GFX_idea_flueger }
+			traits = { mercenary_head }
 			ai_will_do = {
 				factor = 5
 			}
