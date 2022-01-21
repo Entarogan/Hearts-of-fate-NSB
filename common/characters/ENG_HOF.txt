@@ -101,7 +101,7 @@ characters={
 		}
 	}
 	ENG_Waver={
-		name = "Lord El Melloi II"
+		name = ENG_elmelloi
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Waver.dds"
@@ -116,8 +116,11 @@ characters={
 			slot = political_advisor
 			idea_token = ENG_elmelloi
 			available = {
-				ENG_Waver = {
-					is_country_leader = no
+				NOT = {
+					has_country_leader = {
+						character = ENG_Waver
+						ruling_only = yes
+					}
 				}
 				NOT = { has_completed_focus = uk_london_incident_focus }
 			}
@@ -210,15 +213,35 @@ characters={
 		}
 	}
 	ENG_Inorai_Valualeta_Atroholm={
-		name = "Inorai Valualeta Atroholm"
+		name =eng_inorai
 		portraits={
 			army={
 				small="GFX_idea_inorai"
+				large="gfx/leaders/ENG/Portrait_agravain.dds"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1938.1.1.1"
+	#	country_leader={
+	#		ideology=conservatism
+	#		expire="1938.1.1.1"
+	#	}
+		advisor={
+			slot = political_advisor
+			idea_token = eng_inorai
+			allowed = {
+				original_tag = ENG
+			}
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+				NOT = { has_completed_focus = uk_round_table_focus }
+			}
+			traits = { democratic_reformer }
+			
+			ai_will_do = {
+				factor = 0
+			}
 		}
 	}
 	ENG_Barthomeloi_Lorelei={
@@ -542,7 +565,7 @@ characters={
 		}
 	}
 	ENG_Gray={
-		name = "Gray"
+		name = eng_gray
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Gray.dds"
@@ -608,10 +631,11 @@ characters={
 		}
 	}
 	ENG_Frankenstein={
-		name = "Frankenstein"
+		name = frankstein
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Frankenstein.dds"
+				small="GFX_idea_frankenstein"
 			}
 		}
 		navy_leader = {
@@ -621,6 +645,18 @@ characters={
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 2
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = frankstein
+
+			allowed = {
+				original_tag = ENG
+			}
+			traits = { navy_chief_decisive_battle_3 }
+			ai_will_do = {
+				factor = 1
+			}
 		}
 	}
 	ENG_Bartholomew_Roberts={
@@ -671,6 +707,7 @@ characters={
 		advisor={
 			slot = high_command
 			idea_token = drake
+			ledger = navy
 			allowed = {
 				original_tag = ENG
 			}

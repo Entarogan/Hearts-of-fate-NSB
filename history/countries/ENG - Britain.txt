@@ -271,6 +271,12 @@ recruit_character = ENG_charles_forbes
 recruit_character = ENG_algernon_willis
 recruit_character = ENG_arthur_power
 
+
+recruit_character = ENG_cyril_newall
+recruit_character = ENG_charles_portal
+recruit_character = ENG_edward_ellington
+recruit_character = ENG_david_stirling
+
 ### Ship Variants ###
 
 #create_equipment_variant = {
