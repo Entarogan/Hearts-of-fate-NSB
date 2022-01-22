@@ -18,6 +18,7 @@ leader_traits = {
 		surrender_limit = 0.15
 
 		stability_weekly = -0.005
+		command_cap = 20
 	}
 
 	Air_defense_cover = {
@@ -27,6 +28,8 @@ leader_traits = {
 		sprite = 3
 		navy_anti_air_attack_factor = 0.25
 		navy_capital_ship_defence_factor = 0.15
+		experience_gain_navy = 0.10
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -39,6 +42,8 @@ leader_traits = {
 
 		sprite = 4
 			naval_torpedo_screen_penetration_factor = 0.2
+			experience_gain_navy = 0.10
+			command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -57,22 +62,8 @@ leader_traits = {
 		repair_speed_factor = 0.15
 
 		navy_max_range_factor = 0.15
-		
-		ai_will_do = {
-			factor = 3
-		}
-	}
-
-	Naval_Logistics_Officer = {
-
-		random = no
-
-		sprite = 6
-
-		refit_ic_cost = -0.15
-		refit_speed = 0.15
-
-		navy_max_range_factor = 0.15
+		experience_gain_navy = 0.10
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -88,6 +79,8 @@ leader_traits = {
 		navy_capital_ship_defence_factor = 0.20
 		navy_screen_attack_factor = 0.20
 		navy_screen_defence_factor = 0.15
+		experience_gain_navy = 0.10
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -102,12 +95,14 @@ leader_traits = {
 
     political_power_gain = 0.15
 
-		experience_gain_navy_factor = 0.15
+		experience_gain_navy_factor = 0.12
 
 		targeted_modifier = {
 			tag = RUS
 			attack_bonus_against = 0.10
 		}
+
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -123,6 +118,9 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.15
 		navy_carrier_air_targetting_factor = 0.15
 		navy_carrier_air_agility_factor = 0.15
+		command_cap = 20
+		experience_gain_navy = 0.075
+		experience_gain_air = 0.075
 		
 		ai_will_do = {
 			factor = 3

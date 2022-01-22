@@ -1533,12 +1533,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_local_militia_training
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = rus_lesson_from_the_great_war
-				bonus = 1.50
+				cost_reduction = 0.33
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 		}
 
 	}
@@ -2792,12 +2792,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_join_germany
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
-			}
+			} 
+
 		}
 
 	}
@@ -5904,12 +5905,12 @@ focus = {   ###土地分给农民
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = rus_New_Russian_Army
-				bonus = 1.00
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
-			}
+			} 
 		}
 	}
 
@@ -6199,13 +6200,12 @@ focus = {   ###土地分给农民
 		completion_reward = {
 
 			army_experience = 100
-
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = rus_Lessons_from_War
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 4
 				category = land_doctrine
-			}
+			} 
 
 			if = {
 				limit = {
@@ -6277,9 +6277,9 @@ focus = {   ###土地分给农民
 		completion_reward = {
 			air_experience = 25
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_transpolar_flights
-				bonus = 1.0
+				bonus = 0.5
 				uses = 2
 				category = air_doctrine
 			}
@@ -6722,9 +6722,9 @@ focus = {   ###土地分给农民
 				category = radar_tech
 			}
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Joint_air_to_ground_operations
-				bonus = 1.0
+				bonus = 0.5
 				uses = 4
 				category = air_doctrine
 			}	
@@ -7159,19 +7159,19 @@ focus = {   ###土地分给农民
 
 			if = {
 				limit = { has_country_flag = RUS_Advisory_rule_flag }
-				add_tech_bonus = {
-					name = RUS_New_command_level 
-					bonus = 1.0
+				add_doctrine_cost_reduction = {
+					name = RUS_New_command_level
+					cost_reduction = 0.5
 					uses = 1
 					category = land_doctrine
-				}
+				} 
 				JAP = {
-					add_tech_bonus = {
-						name = RUS_New_command_level 
-						bonus = 0.5
+					add_doctrine_cost_reduction = {
+						name = RUS_New_command_level
+						cost_reduction = 0.5
 						uses = 1
 						category = land_doctrine
-					}
+					} 
 				}
 			}
 

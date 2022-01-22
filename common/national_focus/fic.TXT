@@ -2522,13 +2522,12 @@ focus_tree = {
 
 		completion_reward = {
 			air_experience = 50
-
-			add_tech_bonus = {
+      add_doctrine_cost_reduction = {
 				name = FRA_air_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			}
+			} 
 		}
 	}
 

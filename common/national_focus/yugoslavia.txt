@@ -1972,9 +1972,9 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doc_bonus
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3110,12 +3110,12 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = YUG_army_maneuvers
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 		}
 	}
 

@@ -403,12 +403,12 @@ focus_tree = {
 				technology = armored_car3
 			}
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ITA_fund_military_excercises
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
-			}
+			}   
 		}
 	}
 
@@ -491,13 +491,12 @@ focus_tree = {
 			custom_effect_tooltip = ITA_New_Roman_Legion_effect
 
 			add_ideas = ITA_New_Roman_Legion_idea
-
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ITA_New_Roman_Legion
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			}   
 
 		}
 	}
@@ -2034,13 +2033,12 @@ focus_tree = {
 			air_experience = 40
 
       add_ideas = ITA_CAS_doctrine_idea
-
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ITA_The_experience_of_the_colonial_war
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			}
+			} 	
 
       unlock_decision_tooltip = ITA_air_reform
 
@@ -5009,12 +5007,12 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			hidden_effect = { news_event = { id = more_news.22 hours = 3 } }
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ita_face_orient
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = land_doctrine
-			}
+			}   
 			49 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
@@ -5352,12 +5350,12 @@ focus_tree = {
 				target = RAJ
 				expire = 0
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ita_eastern_proceed
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			}   
 		}
 	}
 	focus = {
@@ -6965,12 +6963,12 @@ focus_tree = {
 		available = {  ENG_will_support = yes }
 		completion_reward = {
 			army_experience = 50
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ita_land_joint_training
-				bonus = 0.75
+				cost_reduction = 0.4
 				uses = 2
 				category = land_doctrine
-			}
+			}   
 		}
 
 	}

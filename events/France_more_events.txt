@@ -538,19 +538,8 @@ country_event = {     # Referendum
         ruling_party = democratic
         elections_allowed = no
       }
-	effect_tooltip = {
-		FRA_leo_b_harwey = {
-			add_country_leader_role = {
-				promote_leader = yes
-				country_leader = {
-					ideology = conservatism
-					expire = “1965.1.1.1”
-					traits = {
-						ideal_holy_king
-					}
-				}
-			}
-		}
+	FRA_leo_b_harwey = {
+		promote_character = yes
 	}
     add_popularity = {
       ideology = democratic

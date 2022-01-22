@@ -60,12 +60,12 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
-							name = POL_prepare_for_the_next_war
-							bonus = 1.0
-							uses = 1
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = POL_prepare_for_the_next_war
+						cost_reduction = 0.5
+						uses = 1
+						category = land_doctrine
+					} 
 				}
 
 	}
@@ -543,12 +543,12 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
-							name = POL_the_defence_of_poland
-							bonus = 1.0
-							uses = 2
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = POL_smigly_conservative_plan
+						cost_reduction = 0.5
+						uses = 2
+						category = land_doctrine
+					} 
 				}
 
 	}
@@ -1037,12 +1037,12 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
-							name = POL_the_defence_of_poland
-							bonus = 1.5
-							uses = 1
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = POL_the_defence_of_poland
+						cost_reduction = 0.6
+						uses = 1
+						category = land_doctrine
+					} 
 				}
 
 	}
@@ -1187,12 +1187,12 @@ focus_tree = {
 							remove_idea = POL_cud_nad_wisla
 							add_idea = POL_cud_nad_wisla_1
 						}
-					add_tech_bonus = {
-							name = POL_standardisation_of_equipment
-							bonus = 1.0
-							uses = 1
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = POL_standardisation_of_equipment
+						cost_reduction = 0.5
+						uses = 1
+						category = land_doctrine
+					} 
 				}
 
 	}
@@ -1425,12 +1425,12 @@ focus_tree = {
 							remove_idea = POL_cud_nad_wisla
 							add_idea = POL_cud_nad_wisla_1
 						}
-					add_tech_bonus = {
-							name = POL_standardisation_of_equipment
-							bonus = 1.0
-							uses = 1
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = POL_standardisation_of_equipment
+						cost_reduction = 0.5
+						uses = 1
+						category = land_doctrine
+					} 
 				}
 
 	}
@@ -1473,9 +1473,9 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
+					add_doctrine_cost_reduction = {
 							name = POL_air_innovations
-							bonus = 1.0
+							bonus = 0.5
 							uses = 1
 							category = air_doctrine
 						}
@@ -1603,9 +1603,9 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
+					add_doctrine_cost_reduction = {
 							name = POL_air_modernisations_programme
-							bonus = 1.0
+							bonus = 0.5
 							uses = 1
 							category = air_doctrine
 						}

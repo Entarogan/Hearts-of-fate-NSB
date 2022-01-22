@@ -4045,12 +4045,12 @@ country_event = {
 
 			army_experience = 25
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 
 				if = {
 					limit = {
@@ -4065,13 +4065,13 @@ country_event = {
 				}
 
 			army_experience = 25
-			
-			add_tech_bonus = {
+
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				bonus = 1.0
 				uses = 1
 				category = land_doctrine
-			}
+			} # REVISIT May use modifier?
 
 					add_to_tech_sharing_group = GER_stah_technological_exchange
 
@@ -4423,12 +4423,12 @@ country_event = {
 }
 			completion_reward = {
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 0.5
+				cost_reduction = 0.33
 				uses = 2
 				category = land_doctrine
-			}
+			} # REVISIT May use modifier?
 
 			add_tech_bonus = {
 				bonus = 1.0
@@ -6134,13 +6134,12 @@ country_event = {
 										}
 									add_political_power = 50
 								}
-
-					add_tech_bonus = {
-							name = land_doc_bonus
-							bonus = 1.0
-							uses = 2
-							category = cat_mobile_warfare
-						}
+					add_doctrine_cost_reduction = {
+						name = land_doc_bonus
+						cost_reduction = 0.5
+						uses = 2
+						category = cat_mobile_warfare
+					} 
 					custom_effect_tooltip = available_theorist
 					show_ideas_tooltip = Jeanne_Darc_lily_2
 				}
@@ -6179,12 +6178,12 @@ country_event = {
 									add_political_power = 50
 								}
 
-					add_tech_bonus = {
-							name = land_doc_bonus
-							bonus = 1.0
-							uses = 2
-							category = cat_superior_firepower
-						}
+					add_doctrine_cost_reduction = {
+						name = land_doc_bonus
+						cost_reduction = 0.5
+						uses = 2
+						category = cat_superior_firepower
+					} 
 					custom_effect_tooltip = available_theorist
 					show_ideas_tooltip = Napoleon_2
 				}
@@ -6542,20 +6541,20 @@ country_event = {
                 has_government = fascism
               }
             }
-            add_tech_bonus = {
-              name = land_doc_bonus
-              bonus = 1.0
-              uses = 1
-              category = land_doctrine
-            }
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			} # REVISIT May use modifier?
           }
 
-					add_tech_bonus = {
-							name = land_doc_bonus
-							bonus = 1.0
-							uses = 2
-							category = land_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = land_doc_bonus
+						cost_reduction = 0.5
+						uses = 2
+						category = land_doctrine
+					} # REVISIT May use modifier?
 				}
 
 	}
@@ -6890,14 +6889,12 @@ country_event = {
 								}
 
 					add_ideas = FRA_Three-dimensional_war_idea
-
-					add_tech_bonus = {
-							name = FRA_Three_dimensional_war
-							bonus = 1
-							uses = 2
-							category = air_doctrine
-						}
-
+					add_doctrine_cost_reduction = {
+						name = FRA_Three_dimensional_war
+						cost_reduction = 1
+						uses = 2
+						category = air_doctrine
+					} 
 				}
 
 	}
@@ -7917,12 +7914,12 @@ country_event = {
 
 			completion_reward = {
 					air_experience = 25
-					add_tech_bonus = {
-							name = FRA_air_doctrine_effort
-							bonus = 1
-							uses = 2
-							category = air_doctrine
-						}
+					add_doctrine_cost_reduction = {
+						name = FRA_air_doctrine_effort
+						cost_reduction = 1
+						uses = 2
+						category = air_doctrine
+					} 
 					add_ideas = FRA_European_Air_Force_Command_idea
 				}
 

@@ -382,9 +382,6 @@ characters={
 			allowed = {
 				original_tag = ENG
 			}
-			
-    
-			
 			traits = { Joint_operations }
 			
 			ai_will_do = {

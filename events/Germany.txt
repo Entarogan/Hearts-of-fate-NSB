@@ -1211,12 +1211,12 @@ country_event = {
 
         add_ideas = GER_friend
 		
-		add_tech_bonus = {
+		add_doctrine_cost_reduction = {
 			name = GER_CHI_continue_military_cooperation_with_china
-			bonus = 1
+			cost_reduction = 0.5
 			uses = 1
 			category = land_doctrine
-		}
+		} 
 		
 		add_opinion_modifier = {
 			target = GER
@@ -2277,13 +2277,12 @@ country_event = {
       uses = 1
       category = support_tech	
     }
-
-    add_tech_bonus = {
-      name = land_doc_bonus
-      bonus = 0.5
-      uses = 1
-      category = land_doctrine
-    }
+	add_doctrine_cost_reduction = {
+		name = land_doc_bonus
+		cost_reduction = 0.33
+		uses = 1
+		category = land_doctrine
+	} 
 
     create_corps_commander = {
       name = "Rudol von Stroheim"

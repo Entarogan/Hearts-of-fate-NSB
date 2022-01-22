@@ -113,7 +113,10 @@ leader_traits = {
 		out_of_supply_factor = -0.25
 		no_supply_grace = 48
 
-    acclimatization_cold_climate_gain_factor = 0.10
+		acclimatization_cold_climate_gain_factor = 0.10
+		command_cap = 20
+		experience_gain_army = 0.08
+		experience_gain_air = 0.06
 		
 		ai_will_do = {
 			factor = 1
@@ -146,8 +149,10 @@ leader_traits = {
 		motorized_attack_factor = 0.15
 		mechanized_attack_factor = 0.15
 
-    resistance_damage_to_garrison = 0.10
-    occupation_cost = 0.010
+		resistance_damage_to_garrison = 0.10
+		occupation_cost = 0.010
+		command_cap = 20
+		experience_gain_army = 0.12
 		
 		ai_will_do = {
 			factor = 1
@@ -160,7 +165,9 @@ leader_traits = {
 		
 		army_attack_factor = 0.05
 		army_speed_factor = 0.10
-    org_loss_when_moving = -0.05
+		org_loss_when_moving = -0.05
+		command_cap = 20
+		experience_gain_army = 0.12
 
 		ai_will_do = {
 			factor = 2

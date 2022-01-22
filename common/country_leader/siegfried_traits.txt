@@ -644,7 +644,8 @@ leader_traits = {
 		army_org_factor = 0.10
 		army_morale_factor = 0.05
 		land_reinforce_rate = 0.01
-		
+		command_cap = 20
+		experience_gain_army = 0.09
 		max_planning = 0.05
 
 		ai_will_do = {
@@ -663,6 +664,8 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		supply_consumption_factor = -0.05
+		command_cap = 20
+		experience_gain_army = 0.09
 
 		max_planning = 0.05
 
@@ -681,6 +684,8 @@ leader_traits = {
 		
 		planning_speed = -0.10
 		training_time_army_factor = -0.20
+		command_cap = 20
+		experience_gain_army = 0.09
 	}
 	GER_brauchitsch_T = { 
 		random = no
@@ -688,6 +693,8 @@ leader_traits = {
 		
 		max_planning = 0.05
 		planning_speed = 0.10
+		command_cap = 20
+		experience_gain_army = 0.09
 		
 		army_speed_factor = 0.10
 
@@ -720,6 +727,8 @@ leader_traits = {
 		convoy_raiding_efficiency_factor = 0.1
 		
 		navy_max_range_factor = 0.10
+		command_cap = 20
+		experience_gain_navy = 0.09
 
 		ai_will_do = {
 			factor = 3
@@ -745,6 +754,8 @@ leader_traits = {
 		navy_max_range_factor = 0.10
 
         ai_focus_naval_factor = 0.1
+		command_cap = 20
+		experience_gain_navy = 0.09
 
 		ai_will_do = {
 			factor = 5
@@ -771,6 +782,8 @@ leader_traits = {
 		air_cas_present_factor = 0.05
 		
 		consumer_goods_factor = 0.02
+		command_cap = 20
+		experience_gain_air = 0.09
 
 		ai_will_do = {
 			factor = 5
@@ -787,6 +800,8 @@ leader_traits = {
 		
 		air_weather_penalty = -0.15
 		air_night_penalty = -0.15
+		command_cap = 20
+		experience_gain_air = 0.09
 
 		ai_will_do = {
 			factor = 5
@@ -805,6 +820,8 @@ leader_traits = {
 	
 		air_ace_generation_chance_factor = 0.05
 		air_accidents_factor = -0.05
+		command_cap = 20
+		experience_gain_air = 0.09
 		
 		air_equipment_upgrade_xp_cost = -0.15
 	}
@@ -820,9 +837,12 @@ leader_traits = {
 		
 		experience_gain_army_factor = -0.05
 		
-    max_planning = 0.10
+		max_planning = 0.10
 
-    army_org_Factor = 0.10
+		army_org_Factor = 0.10
+		command_cap = 20
+		experience_gain_army = 0.09
+
 
 		ai_will_do = {
 			factor = 5
@@ -847,6 +867,8 @@ leader_traits = {
 		mechanized_defence_factor = 0.10
 		motorized_attack_factor = 0.15
 		motorized_defence_factor = 0.10
+		command_cap = 25
+		experience_gain_army = 0.12
 
 		ai_will_do = {
 			factor = 10
@@ -867,9 +889,11 @@ leader_traits = {
 		army_infantry_attack_factor = 0.15
 		army_infantry_defence_factor = 0.15
 		army_morale_factor = 0.05
-    winter_attrition_factor = -0.05
+		winter_attrition_factor = -0.05
 
-    attrition = 0.01
+		attrition = 0.01
+		command_cap = 20
+		experience_gain_army = 0.10
 
 		ai_will_do = {
 			factor = 5
@@ -891,6 +915,9 @@ leader_traits = {
 		
 		supply_consumption_factor = -0.10
 		attrition = -0.10
+		command_cap = 20
+		experience_gain_army = 0.10
+
 
 		ai_will_do = {
 			factor = 2
@@ -918,6 +945,9 @@ leader_traits = {
 		
 		out_of_supply_factor = -0.25
 		no_supply_grace = 48
+		command_cap = 20
+		experience_gain_army = 0.10
+
 
 		ai_will_do = {
 			factor = 5
@@ -937,6 +967,9 @@ leader_traits = {
 		air_paradrop_attack_factor = 0.1
 		air_paradrop_defence_factor = 0.1
 		air_paradrop_agility_factor = 0.1
+		command_cap = 20
+		experience_gain_army = 0.06
+		experience_gain_air = 0.06
 	}
 	GER_milch_T = { 
 		random = no
@@ -948,6 +981,8 @@ leader_traits = {
 		air_interception_defence_factor = 0.05
 		air_interception_agility_factor = 0.05
 		air_ace_generation_chance_factor = 0.05
+		command_cap = 20
+		experience_gain_air = 0.10
 
 		ai_will_do = {
 			factor = 1
@@ -968,6 +1003,8 @@ leader_traits = {
 		air_close_air_support_defence_factor = 0.05
 		air_close_air_support_agility_factor = 0.05
 		air_cas_present_factor = 0.05
+		command_cap = 20
+		experience_gain_air = 0.10
 
 		ai_will_do = {
 			factor = 1
@@ -987,6 +1024,8 @@ leader_traits = {
 		ships_at_battle_start = 0.10
 		naval_hit_chance = 0.10
 		navy_max_range_factor = 0.10
+		command_cap = 20
+		experience_gain_navy = 0.10
 	}
 	GER_bey_T = {
 		random = no
@@ -997,6 +1036,8 @@ leader_traits = {
 		spotting_chance = 0.10
 		naval_retreat_speed = 0.10
 		navy_anti_air_attack_factor = 0.10
+		command_cap = 20
+		experience_gain_navy = 0.10
 	}
 	GER_shutze_T = {
 		random = no
@@ -1006,6 +1047,8 @@ leader_traits = {
 		
 		spotting_chance = 0.10
 		navy_submarine_detection_factor = 0.1
+		command_cap = 20
+		experience_gain_navy = 0.10
 	}
 	
 	

@@ -6,6 +6,8 @@ leader_traits = {
 
 		army_armor_speed_factor = 0.10
 		army_speed_factor = 0.15
+    experience_gain_army = 0.10
+    command_cap = 20
 		
 		ai_will_do = {
 			factor = 4
@@ -20,6 +22,8 @@ leader_traits = {
 		training_time_army_factor = -0.20
 		experience_gain_factor = 0.10
 		operative_slot = 1
+    experience_gain_army = 0.10
+    command_cap = 15
 	
 		ai_will_do = {
 			factor = 4
@@ -33,6 +37,8 @@ leader_traits = {
 
 		army_infantry_attack_factor = 0.20
 		army_infantry_defence_factor = 0.15
+    experience_gain_army = 0.10
+    command_cap = 15
 
 		equipment_bonus = {
 
@@ -58,10 +64,12 @@ leader_traits = {
 	Cunning_samurai = { 
 		random = no
 		sprite = 5
-
+    command_cap = 15
 
 		land_night_attack = 0.20
     dig_in_speed_factor = 0.15
+    experience_gain_army = 0.12
+    command_cap = 15
 	
 		ai_will_do = {
 			factor = 4
@@ -76,6 +84,8 @@ leader_traits = {
 		army_morale_factor = 0.10
 		org_loss_when_moving = -0.05
 		amphibious_invasion = 0.15
+    experience_gain_army = 0.12
+    command_cap = 20
 		
 		ai_will_do = {
 			factor = 4
@@ -91,6 +101,8 @@ leader_traits = {
 		army_org_factor = 0.10	
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
+    experience_gain_army = 0.12
+    command_cap = 20
 	
 		ai_will_do = {
 			factor = 4
@@ -105,6 +117,8 @@ leader_traits = {
 		army_attack_factor = 0.20
 		experience_loss_factor = 0.07
 		attrition = 0.07
+    experience_gain_army = 0.09
+    command_cap = 15
 		
 		ai_will_do = {
 			factor = 4
@@ -145,7 +159,7 @@ leader_traits = {
   
   veteran = {
     random = no
-    stability_factor = 0.05
+    stability_factor = 0.03
   }
   
   theo_technocrat = {
@@ -634,7 +648,8 @@ leader_traits = {
         instant = yes
 
 			}
-		}		
+		}
+    command_cap = 20		
 	}
 	army_hygene = {
 		random = no
@@ -642,7 +657,7 @@ leader_traits = {
 		#experience_loss_factor -0.20， army_morale_factor +0.10
 		experience_loss_factor = -0.2
 		army_morale_factor = 0.1
-		
+		command_cap = 20
 	}
 	army_armor_strike = {
 		random = no
@@ -658,7 +673,8 @@ leader_traits = {
         instant = yes
 
 			}
-		}		
+		}	
+    command_cap = 20	
 	}
 	
 	army_armor_agility = {
@@ -676,6 +692,7 @@ leader_traits = {
 				instant = yes
 			}
 		}
+    command_cap = 20
 	}
 	air_cooridination = {
 		random = no
@@ -699,7 +716,8 @@ leader_traits = {
 				air_attack = 0.15
 				instant = yes
 			}
-		}		
+		}	
+    command_cap = 25	
 	}
 	theorist_technolgy_cultist = {
 		random = no
@@ -716,12 +734,14 @@ leader_traits = {
 		#army_bonus_air_superiority_factor 10%
 		army_bonus_air_superiority_factor = 0.1
 		air_cas_present_factor = 0.1
+    command_cap = 15
 	}
 	air_naval_support = {
 		random = no
 		sprite = 2	
     naval_strike_targetting_factor = 0.20
     naval_strike_agility_factor = 0.20    
+    command_cap = 15
 	}
   
 }

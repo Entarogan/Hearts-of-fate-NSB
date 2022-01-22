@@ -3765,12 +3765,12 @@
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAN_rcaf_station_borden
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
+			} 
 		}
 
 		completion_reward = {
@@ -3789,12 +3789,12 @@
 				}
 				set_state_flag = CAN_rcaf_station_borden_AB
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CAN_rcaf_station_borden
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
+			} 
 		}
 	}
 
@@ -4072,12 +4072,12 @@
 					instant_build = yes
 				}
 			}
-			add_tech_bonus = {
-				name = CAN_commonwealth_air_training_plan
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = CAN_rcaf_station_borden
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
+			} 
 		}
 
 		completion_reward = {
@@ -4096,12 +4096,12 @@
 				}
 				set_state_flag = CAN_commonwealth_air_training_plan_AB
 			}
-			add_tech_bonus = {
-				name = CAN_commonwealth_air_training_plan
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = CAN_rcaf_station_borden
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
-			}
+			} 
 		}
 	}
 

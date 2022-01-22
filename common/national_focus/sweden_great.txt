@@ -4747,9 +4747,9 @@ focus_tree = {
             factor = 2
         }
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
 				name = swe_Walkurenritt
-				bonus = 1.0
+				bonus = 0.5
 				uses = 3
 				category = air_doctrine
 			}

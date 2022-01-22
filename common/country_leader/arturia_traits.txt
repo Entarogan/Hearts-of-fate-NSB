@@ -11,6 +11,8 @@ leader_traits = {
 		pocket_penalty = -0.1
 
 		attrition = -0.05
+		experience_gain_army = 0.12
+		command_cap = 20
 	
 		ai_will_do = {
 			factor = 1
@@ -23,9 +25,11 @@ leader_traits = {
 
 		max_planning = 0.10
 		conscription_factor = 0.1
-    mobilization_speed = 0.1
+    	mobilization_speed = 0.1
 		training_time_army_factor = -0.15
 		land_reinforce_rate = 0.03
+		experience_gain_army = 0.12
+		command_cap = 20
 	
 		ai_will_do = {
 			factor = 4
@@ -38,6 +42,8 @@ leader_traits = {
 
 		army_attack_factor = 0.15
 		army_defence_factor = 0.10
+		experience_gain_army = 0.12
+		command_cap = 15
 	
 		ai_will_do = {
 			factor = 4
@@ -50,7 +56,9 @@ leader_traits = {
 
 		army_org_factor = 0.10
 		army_morale_factor = 0.10
-		org_loss_when_moving = -0.05
+		org_loss_when_moving = -0.
+		experience_gain_army = 0.12
+		command_cap = 15
 	
 		ai_will_do = {
 			factor = 4
@@ -67,6 +75,8 @@ leader_traits = {
 		army_attack_factor = 0.1
 		experience_loss_factor = 0.05
 		attrition = 0.05
+		experience_gain_army = 0.12
+		command_cap = 20
 	
 		ai_will_do = {
 			factor = 4
@@ -84,6 +94,9 @@ leader_traits = {
 		army_bonus_air_superiority_factor = 0.05
 		air_cas_present_factor = 0.05
 		amphibious_invasion = 0.10
+		experience_gain_army = 0.08
+		experience_gain_navy = 0.06
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 4
@@ -98,6 +111,8 @@ leader_traits = {
 		army_defence_factor = 0.10
         dig_in_speed_factor = 0.25
 		max_dig_in = 5
+		command_cap = 20
+		experience_gain_army = 0.10
 		
 		ai_will_do = {
 			factor = 4
@@ -138,6 +153,7 @@ leader_traits = {
 		random = no
 		motorized_attack_factor = 0.15
 		motorized_defence_factor = 0.15
+		experience_gain_army = 0.06
 		ai_will_do = {
 			factor = 1
 		}
@@ -149,6 +165,7 @@ leader_traits = {
 		generate_wargoal_tension = -0.50
 	    join_faction_tension = -0.50
 		army_attack_factor = 0.10
+		command_cap = 20
 		ai_will_do = {
 			factor = 1
 		}
@@ -158,6 +175,8 @@ leader_traits = {
 		random = no
 		army_artillery_attack_factor = 0.20
 		army_artillery_defence_factor = 0.20
+		experience_gain_army = 0.12
+		command_cap = 15
 		ai_will_do = {
 			factor = 1
 		}
@@ -210,6 +229,8 @@ leader_traits = {
 		generate_wargoal_tension = -0.50
 	    join_faction_tension = -0.50
 		drift_defence_factor = -0.20
+		experience_gain_army = 0.08
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 1
@@ -219,9 +240,9 @@ leader_traits = {
 	strategy_educator = {
 		random = no
 		sprite = 13
-		experience_gain_army = 0.10
-        experience_gain_air = 0.10
-		experience_gain_navy = 0.10
+		experience_gain_army = 0.075
+        experience_gain_air = 0.075
+		experience_gain_navy = 0.075
 		ai_will_do = {
 			factor = 1
 		}
@@ -332,6 +353,7 @@ leader_traits = {
 	army_chief_defensive_mash = { # +20 Defensive efficiency
 		sprite = 9
 		army_defence_factor = 0.20
+		experience_gain_army = 0.09
 		
 		ai_will_do = {
 			factor = 3
@@ -343,6 +365,7 @@ leader_traits = {
 		convoy_raiding_efficiency_factor = 0.25
 		navy_capital_ship_attack_factor = 0.15
 		navy_capital_ship_defence_factor = 0.15
+		experience_gain_navy = 0.14
 		
 		ai_will_do = {
 			factor = 3

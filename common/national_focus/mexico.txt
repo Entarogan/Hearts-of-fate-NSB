@@ -2112,15 +2112,15 @@ focus_tree = {
 
 		completion_reward = {
 			set_rule = { can_send_volunteers = yes }
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_equipment
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_equipment
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doctrine
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3598,12 +3598,12 @@ focus_tree = {
 
 		completion_reward = {
 			remove_ideas = MEX_politicised_army_2
-			add_tech_bonus = {
-				name = land_doctrine
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = MEX_focus_depoliticised_army
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 			MEX_decrease_cedillo_tension = yes
 		}
 	}
@@ -4154,13 +4154,13 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.1
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = tooltip_falangist_veterans_doctrine_knowledge
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 				category = air_doctrine
-			}
+			} 
 			every_other_country = {
 				limit = {
 					original_tag = SPR
@@ -6610,9 +6610,9 @@ focus_tree = {
 				uses = 1
 				category = air_equipment
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doctrine
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -6659,9 +6659,9 @@ focus_tree = {
 				uses = 1
 				category = air_equipment
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_doctrine
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}

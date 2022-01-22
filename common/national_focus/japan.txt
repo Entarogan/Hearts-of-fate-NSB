@@ -4778,12 +4778,12 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_prepare_for_war_with_the_soviet_union
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
-			}
+			}   
 			if = {
 				limit = {
 					SOV = {
@@ -4974,9 +4974,9 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_air_training_plan
-				bonus = 1
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -10793,9 +10793,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_Nagae_Electronic
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = JAP_japanese_air_power_theory
-				bonus = 1
+				bonus = 0.5
 				uses = 4
 				category = air_doctrine
 			}

@@ -2164,12 +2164,12 @@ focus_tree = {
 		relative_position_id = ira_army_training
     completion_reward = {
       army_experience = 80
-      add_tech_bonus = {
-        name = ira_star_of_shamash
-        bonus = 1.25
-        uses = 3
-        category = land_doctrine
-      }  
+      add_doctrine_cost_reduction = {
+				name = ira_star_of_shamash
+				cost_reduction = 0.6
+				uses = 3
+				category = land_doctrine
+			}   
     }
 
 	}
@@ -2192,12 +2192,12 @@ focus_tree = {
 		relative_position_id = ira_army_training
     completion_reward = {
       air_experience = 80
-      add_tech_bonus = {
+      add_doctrine_cost_reduction = {
         name = ira_star_of_ishtar
-        bonus = 1.25
+        cost_reduction = 0.7
         uses = 3
         category = air_doctrine
-      }  
+      } 	
     }
 
 	}

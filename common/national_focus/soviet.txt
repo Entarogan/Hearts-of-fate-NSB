@@ -1538,12 +1538,12 @@ focus_tree = {
 
 			army_experience = 30
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_Reorganizing_the_Red_Army
-				bonus = 3.0
+				cost_reduction = 0.75
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 
 		}
 	}
@@ -2427,12 +2427,12 @@ focus_tree = {
 				category = artillery
 			}	
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_Lessons_from_War_Infantry_Tactics
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 4
 				category = land_doctrine
-			}
+			} 
 
       swap_ideas = {
         remove_idea = SOV_Training_grassroots_non_commissioned_officers_idea
@@ -2558,13 +2558,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_Mass_Breakthroughs
-				bonus = 1.0
+				cost_reduction = 1.0
 				uses = 1
 				category = land_doctrine
-			}
+			} 
 
 			add_tech_bonus = {
 				bonus = 1.0
@@ -2682,13 +2681,12 @@ focus_tree = {
         uses = 1
         category = armor
       }
-
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_Lessons_from_War_tank_Tactics
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 4
 				category = land_doctrine
-			}
+			} 
 
       if = {
         limit = {
@@ -2738,9 +2736,9 @@ focus_tree = {
 
 			air_experience = 25
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SOV_transpolar_flights
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3195,9 +3193,9 @@ focus_tree = {
 				category = radar_tech
 			}
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Joint_air_to_ground_operations
-				bonus = 1.0
+				bonus = 0.5
 				uses = 4
 				category = air_doctrine
 			}	

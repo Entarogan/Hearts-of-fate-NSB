@@ -7,6 +7,8 @@ leader_traits = {
 
 		army_org_factor = 0.10
 		army_morale_factor = 0.10	
+		command_cap = 20
+		experience_gain_army = 0.10
 
 		ai_will_do = {
 			factor = 3
@@ -22,6 +24,8 @@ leader_traits = {
 		naval_speed_factor = 0.1
 
 		experience_gain_navy_factor = 0.1
+		command_cap = 20
+		experience_gain_navy = 0.12
 
 		ai_will_do = {
 			factor = 3
@@ -34,6 +38,8 @@ leader_traits = {
 		sprite = 5
 	
 		army_speed_factor = 0.15
+		command_cap = 25
+		experience_gain_army = 0.12
 
 		equipment_bonus = {
 			armor = {
@@ -75,6 +81,8 @@ leader_traits = {
 		opinion_gain_monthly_same_ideology_factor = 0.05
 
 		conscription = 0.005
+		experience_gain_army = 0.05
+
 		
 		ai_will_do = {
 			factor = 1
@@ -152,6 +160,9 @@ leader_traits = {
 		cavalry_attack_factor = 0.05
 		motorized_attack_factor = 0.05
 		mechanized_attack_factor = 0.05
+		command_cap = 15
+		experience_gain_army = 0.10
+
   }
 
   Great_leader = {
@@ -279,6 +290,7 @@ leader_traits = {
       army_core_defence_factor = 0.10
       war_support_factor = 0.05
 	  neutrality_drift = 0.075
+	  experience_gain_army = 0.05
       
       operative_slot = 1
   }
@@ -302,10 +314,11 @@ leader_traits = {
       operative_slot = 1
   }
 
-  army_armored_epic = { # +15 armor efficiency
+  army_armored_epic = { # +20 armor efficiency
 		sprite = 8
 		army_armor_attack_factor = 0.20
 	    army_armor_defence_factor = 0.20
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3

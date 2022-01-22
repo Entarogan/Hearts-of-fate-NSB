@@ -10,6 +10,8 @@ leader_traits = {
     mechanized_attack_factor = 0.1
     mechanized_defence_factor = 0.15
     army_armor_speed_factor = 0.05
+	experience_gain_army = 0.10
+	command_cap = 20
 
 		
 		ai_will_do = {
@@ -49,6 +51,8 @@ leader_traits = {
 				instant = yes
 			}
 		}
+		experience_gain_army = 0.12
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 4
@@ -71,6 +75,8 @@ leader_traits = {
 		attrition = -0.05
 		supply_consumption_factor = -0.05
 		army_speed_factor = 0.05
+		experience_gain_army = 0.12
+		command_cap = 25
 
 		ai_will_do = {
 			factor = 4
@@ -83,6 +89,8 @@ leader_traits = {
 
 		army_artillery_attack_factor = 0.25
 		army_artillery_defence_factor = 0.20
+		experience_gain_army = 0.12
+		command_cap = 25
 		
 		ai_will_do = {
 			factor = 4
@@ -99,6 +107,8 @@ leader_traits = {
 		training_time_army_factor = -0.10
 		land_reinforce_rate = 0.03
 		conscription = 0.01
+		experience_gain_army = 0.12
+		command_cap = 20
 
 		ai_will_do = {
 			factor = 5
@@ -113,6 +123,8 @@ leader_traits = {
 		army_speed_factor = 0.15
 		army_attack_factor = 0.05
 		org_loss_when_moving = -0.05
+		experience_gain_army = 0.10
+		command_cap = 20
 
 		ai_will_do = {
 			factor = 5
@@ -130,6 +142,8 @@ leader_traits = {
 
 		experience_loss_factor = 0.05
 		attrition = 0.05
+		experience_gain_army = 0.10
+		command_cap = 20
 
 		ai_will_do = {
 			factor = 5
@@ -569,6 +583,7 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.15
 		navy_carrier_air_targetting_factor = 0.1
 		navy_anti_air_attack_factor = -0.10
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 3
@@ -605,6 +620,7 @@ leader_traits = {
 		army_armor_speed_factor = 0.1
 		army_armor_attack_factor = 0.05
 		mechanized_attack_factor = 0.05
+		command_cap = 20
 		
 		ai_will_do = {
 			factor = 150
@@ -616,6 +632,7 @@ leader_traits = {
 		sprite = 13
 		
 		experience_gain_army = 0.10
+		command_cap = 20
 
     equipment_bonus = {
 			artillery = {

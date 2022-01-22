@@ -60,18 +60,18 @@
     completion_reward = {
       army_experience = 25
 			air_experience = 15
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = HUN_Military_exercises
-				bonus = 1.5
+				cost_reduction = 0.6
 				uses = 1
 				category = land_doctrine
-			}
-      add_tech_bonus = {
-        name = HUN_Military_exercises
-        bonus = 1.0
-        uses = 1
-        category = air_doctrine
-      }
+			} 
+      	add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+		} 	
     }
 	}
 
@@ -2693,22 +2693,23 @@
 
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = HUN_Balkan_Allied_Forces
-			    bonus = 1.0
-			    uses = 1
+				cost_reduction = 0.5
+				uses = 1
 				category = land_doctrine
-			}
+			} 
 			every_other_country = {
 				limit = {
 					is_in_faction_with = ROOT
 				}
-        add_tech_bonus = {
-          name = HUN_Balkan_Allied_Forces
-            bonus = 1.0
-            uses = 1
-          category = land_doctrine
-        }
+
+				add_doctrine_cost_reduction = {
+					name = HUN_Balkan_Allied_Forces
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				} 
 			}
 		}
 	}
@@ -3505,12 +3506,12 @@
 
 			    add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
-          add_tech_bonus = {
-            name = HUN_Joint_air_command
-            bonus = 0.5
-            uses = 1
-            category = air_doctrine
-          }
+          add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = air_doctrine
+		} 	
         }
       }
 
@@ -3523,12 +3524,12 @@
 
 			    add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
-          add_tech_bonus = {
-            name = HUN_Joint_air_command
-            bonus = 0.5
-            uses = 1
-            category = air_doctrine
-          }
+          add_doctrine_cost_reduction = {
+			name = air_doc_bonus
+			cost_reduction = 0.33
+			uses = 1
+			category = air_doctrine
+		} 	
         }
       }
 
@@ -3610,23 +3611,23 @@
 		completion_reward = {
 
 			add_to_tech_sharing_group = HUN_Joint_Army_Staff_exchange
-
-      add_tech_bonus = {
-        name = HUN_United_Naval_Academy
-        bonus = 1.5
-        uses = 1
-        category = land_doctrine
-      }
+	  		add_doctrine_cost_reduction = {
+				name = HUN_Joint_Army_Staff
+				cost_reduction = 0.6
+				uses = 1
+				category = land_doctrine
+			} 
       GER = { 
 
 			  add_to_tech_sharing_group = HUN_Joint_Army_Staff_exchange
 
-        add_tech_bonus = {
-          name = HUN_United_Naval_Academy
-          bonus = 0.5
-          uses = 1
-          category = land_doctrine
-        }
+			add_doctrine_cost_reduction = {
+				name = HUN_Joint_Army_Staff
+				cost_reduction = 0.33
+				uses = 1
+				category = land_doctrine
+			} 
+		
       }
 		}
 	}
@@ -9332,12 +9333,12 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 
-			add_tech_bonus = {
-				name = HUN_establish_the_air_force
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			}
+			} 	
 
 			if = {
 				limit = {
@@ -9552,12 +9553,12 @@
 		completion_reward = {
 			country_event = more_hun.92
 
-			add_tech_bonus = {
-				name = HUN_Air_Force_Development_Direction
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			}
+			} 	
 
 		}
 

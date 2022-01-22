@@ -48,7 +48,8 @@ leader_traits = {
         justify_war_goal_time = -0.25
         max_planning = 0.20
         planning_speed = 0.15
-        
+        command_cap = 20
+		experience_gain_army = 0.15
     }
     
     CPU0 = {
@@ -62,6 +63,8 @@ leader_traits = {
         air_strategic_bomber_bombing_factor = 0.15
         naval_strike_attack_factor = 0.15
         army_artillery_attack_factor = 0.10
+        command_cap = 20
+		experience_gain_army = 0.15
     }
     
     agricultural_management = {
