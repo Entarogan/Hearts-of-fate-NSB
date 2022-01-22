@@ -2741,8 +2741,9 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = industrial_complex
-				level = 5
+				level = 2
 			}
+			#### ADD THREE FACTORY TOYKO
 			if = {
 				limit = {
 					is_in_faction_with = CHI
@@ -7051,8 +7052,9 @@ focus_tree = {
 		completion_reward = {
 			add_offsite_building = {
 				type = synthetic_refinery
-				level = 10
+				level = 2
 			}
+			### ADD EIGHT FACTORY INSIDE
 		}
 		ai_will_do = {
 			factor = 100

@@ -34,7 +34,7 @@ focus_tree = {
       is_subject = no
 			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
 			NOT = { has_idea = RUS_rebirth_of_the_tsar_0 }
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 			NOT = { has_government = fascism }
 		} 
 		completion_reward = {
@@ -587,7 +587,7 @@ focus_tree = {
       is_subject = no
 			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
 			has_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				ruling_only = yes
 			}
 			has_government = neutrality
@@ -627,7 +627,7 @@ focus_tree = {
 			hidden_effect = {
 				retire_ideology_leader = neutrality
 				create_country_leader = {
-					name = "Anastasia I"
+					character = RUS_anastasia_i
 					desc = "POLITICS_ANASTASIA_DESC"
 					picture = "Portrait_Anastasia.dds"
 					ideology = authoritarian_democracy  
@@ -650,7 +650,7 @@ focus_tree = {
 		available = {
       is_subject = no
 			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 			NOT = { has_government = fascism }
 		}
 		
@@ -671,7 +671,7 @@ focus_tree = {
 				}
 			}
 			create_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				desc = "POLITICS_ANASTASIA_DESC"
 				picture = "Portrait_Anastasia.dds"
 				ideology = conservatism
@@ -965,7 +965,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 			NOT = { has_government = fascism }
 		}
 		x = 1
@@ -984,7 +984,7 @@ focus_tree = {
 			focus = rus_romanov_foundation
 		}
 		available = {
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 		}
 		x = 0
 		y = 1
@@ -3868,7 +3868,7 @@ focus_tree = {
 			is_subject = no
 			NOT = { has_country_flag = RUS_Japanese_puppet_flag }
 			has_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				ruling_only = yes
 			}
 			has_government = neutrality
@@ -3896,7 +3896,7 @@ focus_tree = {
 			hidden_effect = {
 				retire_ideology_leader = neutrality
 				create_country_leader = {
-					name = "Anastasia I"
+					character = RUS_anastasia_i
 					desc = "POLITICS_ANASTASIA_DESC"
 					picture = "Portrait_Anastasia.dds"
 					ideology = absolute_monarchy 
@@ -4398,7 +4398,7 @@ focus_tree = {
 		}
 		available = {
 			amount_research_slots < 6
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 		}
 		bypass = {
 			amount_research_slots > 5
@@ -4544,7 +4544,7 @@ focus_tree = {
 			if = {
 				limit = {
 					has_government = neutrality
-					has_country_leader = { name = "Anastasia I" ruling_only = yes }
+					has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 				}
 				add_ideas = { rus_a_new_empire }
 			}
@@ -4567,7 +4567,7 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_country_leader = { name = "Anastasia I" ruling_only = yes }
+			has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 			has_government = neutrality
 			784 = { CONTROLLER = { tag = ROOT } }
 			95 = { CONTROLLER = { tag = ROOT } }
@@ -6829,10 +6829,10 @@ focus = {   ###土地分给农民
 				}
 				if = {
 					limit = { 
-					  NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } } 
+					  NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } 
 					}
 					create_country_leader = {
-						name = "Anastasia I"
+						character = RUS_anastasia_i
 						desc = "POLITICS_ANASTASIA_DESC"
 						picture = "Portrait_Anastasia.dds"
 						ideology = stratocracy

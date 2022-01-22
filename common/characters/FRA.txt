@@ -473,7 +473,7 @@ characters={
 			}
 		}
 	}
-	FRA_st._martha={
+	FRA_st_martha={
 		name=FRA_martha
 		portraits={
 			navy={

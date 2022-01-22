@@ -14,6 +14,7 @@ if = {
 load_oob = "ENG_Motorized"
 
 set_research_slots = 4
+starting_train_buffer = 4
 
 set_stability = 0.6
 set_war_support = 0.1
@@ -49,6 +50,7 @@ set_technology = {
   convoy_sailing_ti = 1
 	interwar_antitank = 1
 	trench_warfare = 1
+	basic_train = 1
 
 	
 	# fleet_in_being = 1
@@ -117,6 +119,12 @@ add_ideas = {
     FRA_Versailles_Young_idea
     uk_separatism
     Powerful_influence_idea 
+}
+
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 100
+    producer = ENG
 }
 
 set_convoys = 1500

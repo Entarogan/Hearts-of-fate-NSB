@@ -5,10 +5,17 @@ oob = "FTC_1936"
 set_stability = 0.7
 set_war_support = 0.6
 set_research_slots = 2
+starting_train_buffer = 2
 
 set_technology = {
 	infantry_weapons = 1
+	basic_train = 1
+}
 
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 60
+    producer = JAP
 }
 
 add_opinion_modifier = {

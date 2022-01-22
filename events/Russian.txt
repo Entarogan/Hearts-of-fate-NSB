@@ -157,7 +157,7 @@ country_event = {   ### Talk with Navy
 		}
 	}
   
-  option = {	
+	option = {	
 		name = russian.3.b
 		ai_chance = { base = 100 }
 
@@ -289,7 +289,7 @@ country_event = {   ### Anti-Tsarina Coup
 		ai_chance = { base = 30 }
 
 		create_country_leader = {
-			name = "Anastasia I"
+			character = RUS_anastasia_i
 			desc = "POLITICS_ANASTASIA_PUPPET_DESC"
 			picture = "Portrait_Anastasia.dds"
 			ideology = fascism_ideology
@@ -341,7 +341,7 @@ country_event = {   ### Select a leader for junta
 		ai_chance = { base = 25 }
 
     create_country_leader = {
-		name = "Kadoc Zemiupus"
+		character = RUS_kadoc_zemiupus
 		desc = "POLITICS_KADOC_JUNTA_DESC"
 		picture = "Portrait_kadoc_zemiupus.dds"
 		ideology = stratocracy
@@ -518,7 +518,7 @@ country_event = {   ### Kadoc's Promise
 		tag = RUS
 		is_subject = no
 		NOT = { has_country_flag = RUS_Japanese_puppet_flag }
-		has_country_leader = { name = "Kadoc Zemiupus" ruling_only = yes }
+		has_country_leader = { character = RUS_kadoc_zemiupus ruling_only = yes }
 		has_government = neutrality
 		has_country_flag = RUS_Kadoc_SR_deal_set
 		OR = {
@@ -581,7 +581,7 @@ country_event = {   ### Kadoc's Plan
 		is_subject = no
 		NOT = { has_country_flag = RUS_Japanese_puppet_flag }
 		has_country_flag = RUS_Kadoc_SR_deal_refused
-		has_country_leader = { name = "Kadoc Zemiupus" ruling_only = yes }
+		has_country_leader = { character = RUS_kadoc_zemiupus ruling_only = yes }
 		has_government = neutrality 
 		OR = {
 			SOV = { exists = no }
@@ -683,7 +683,7 @@ country_event = {   ### Kornilov's Death
 		
 		hidden_effect = {
 			create_country_leader = {
-				name = "Kadoc Zemiupus"
+				character = RUS_kadoc_zemiupus
 				desc = ""
 				picture = "Portrait_kadoc_zemiupus.dds"
 				expire = "1965.1.1"
@@ -888,7 +888,7 @@ country_event = {   ### Kolchak's Death
 		
 		hidden_effect = {
 			create_country_leader = {
-				name = "Kadoc Zemiupus"
+				character = RUS_kadoc_zemiupus
 				desc = ""
 				picture = "Portrait_kadoc_zemiupus.dds"
 				expire = "1965.1.1"
@@ -1058,7 +1058,7 @@ country_event = {   ### Tsarina's Suicide
 	trigger = {
 		has_government = fascism
 		has_completed_focus = rus_fall_of_ussr
-		has_country_leader = { name = "Anastasia I" ruling_only = yes }
+		has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
 	}
 	mean_time_to_happen = { days = 15 }
 	
@@ -1328,9 +1328,9 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } }
+			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
 			create_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				desc = "POLITICS_ANASTASIA_DESC"
 				picture = "Portrait_Anastasia.dds"
 				ideology = conservatism
@@ -1339,7 +1339,7 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } } }
+			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
 			create_country_leader = {
 				name = "Nataliya Andreyevich Rostova"
@@ -1382,9 +1382,9 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } }
+			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
 			create_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				desc = "POLITICS_ANASTASIA_DESC"
 				picture = "Portrait_Anastasia.dds"
 				ideology = liberalism
@@ -1393,7 +1393,7 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } } }
+			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
 			create_country_leader = {
 				name = "Katya Uranova"
@@ -1421,7 +1421,7 @@ country_event = {   ### Election
 		name = russian.20.c    ### PSR
 		ai_chance = { base = 50 }
 		trigger = {
-			NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } }
+			NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
 		}
 
 		if = {
@@ -1482,9 +1482,9 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } }
+			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
 			create_country_leader = {
-				name = "Anastasia I"
+				character = RUS_anastasia_i
 				desc = "POLITICS_ANASTASIA_DESC"
 				picture = "Portrait_Anastasia.dds"
 				ideology = socialism
@@ -1493,7 +1493,7 @@ country_event = {   ### Election
 		}
 
 		if = {
-			limit = { NOT = { has_country_leader = { name = "Anastasia I"  ruling_only = yes } } }
+			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
 			create_country_leader = {
 				name = "Seele"
@@ -4065,7 +4065,7 @@ country_event = {   ###  Alexie in my dream
 		original_tag = RUS
 		date > 1936.7.15
 		has_country_leader = {
-			name = "Anastasia I"
+			character = RUS_anastasia_i
 			ruling_only = yes
 		}
 	}
@@ -4721,9 +4721,6 @@ country_event = {   ### 大使的统治
 		ai_chance = {
 			base = 100
 		}
-
-
-
   }
 
 }
@@ -4882,7 +4879,7 @@ country_event = {   ### 日本统治的终结
 		}
 
 		create_country_leader = {
-			name = "Anastasia I"
+			character = RUS_anastasia_i
 			desc = "POLITICS_ANASTASIA_DESC"
 			picture = "Portrait_Anastasia.dds"
 			ideology = stratocracy
@@ -4890,7 +4887,7 @@ country_event = {   ### 日本统治的终结
 		}
 
 		create_country_leader = {
-			name = "Kadoc Zemiupus"
+			character = RUS_kadoc_zemiupus
 			desc = ""
 			picture = "Portrait_kadoc_zemiupus.dds"
 			expire = "1965.1.1"

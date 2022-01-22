@@ -5,6 +5,7 @@ oob = "ITA_1936"
 set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.7
+starting_train_buffer = 33
 
 add_ideas = {
   ita_Colonial_war
@@ -19,6 +20,11 @@ add_ideas = {
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
+}
+add_equipment_to_stockpile = {
+    type = train_equipment_1
+    amount = 50
+    producer = ITA
 }
 
 
@@ -48,6 +54,7 @@ set_technology = {
 	fuel_silos = 1
 	fuel_refining = 1
     armored_car1 = 1
+	basic_train = 1
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }

@@ -2010,13 +2010,13 @@ GER_Internal_politics = {
 			}
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		modifier = {
@@ -2056,13 +2056,13 @@ GER_Internal_politics = {
 			}
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		modifier = {
@@ -2109,13 +2109,13 @@ GER_Internal_politics = {
 			}
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		modifier = {
@@ -2177,13 +2177,13 @@ GER_Internal_politics = {
 			}
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 			27 = {
 				CONTROLLER = {
@@ -2229,13 +2229,13 @@ GER_Internal_politics = {
 			}
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 			188 = {
 				CONTROLLER = {
@@ -2465,7 +2465,7 @@ GER_Internal_politics = {
 		remove_effect = {
 			set_country_flag = GER_a_new_Siegfried_flag
 			create_country_leader = {
-				name = "Siegfried"
+				character = GER_siegfried
 				desc = ""
 				picture = "portrait_sieg_Fuhrer.dds"
 				expire = "1965.1.1"
@@ -2494,7 +2494,7 @@ GER_Internal_politics = {
 			has_country_flag = GER_a_new_Siegfried_flag
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 			NOT = {
 				has_country_flag = GER_Shaping_Conqueror_flag
@@ -2531,7 +2531,7 @@ GER_Internal_politics = {
 			has_country_flag = GER_Shaping_Warrior_flag
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 			NOT = {
 				has_country_flag = GER_Shaping_Conqueror_flag
@@ -2568,7 +2568,7 @@ GER_Internal_politics = {
 			has_country_flag = GER_Shaping_Conqueror_flag
 			has_country_leader = {
 				ruling_only = yes
-				name = "Siegfried"
+				character = GER_siegfried
 			}
 		}
 		available = {
@@ -3945,7 +3945,7 @@ GER_Internal_politics = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
-						name = "Siegfried"
+						character = GER_siegfried
 					}
 				}
 				is_subject = yes
@@ -3988,7 +3988,7 @@ GER_Internal_politics = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
-						name = "Siegfried"
+						character = GER_siegfried
 					}
 				}
 				is_subject = yes
@@ -4031,7 +4031,7 @@ GER_Internal_politics = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
-						name = "Siegfried"
+						character = GER_siegfried
 					}
 				}
 				is_subject = yes
@@ -4074,7 +4074,7 @@ GER_Internal_politics = {
 				NOT = {
 					has_country_leader = {
 						ruling_only = yes
-						name = "Siegfried"
+						character = GER_siegfried
 					}
 				}
 				is_subject = yes

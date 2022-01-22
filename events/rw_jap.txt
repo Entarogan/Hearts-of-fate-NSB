@@ -1501,6 +1501,7 @@ country_event = {##鬼人正邪用炸弹袭击天皇
 		name = rw_jap.16.c
     add_political_power = -20
 		trigger = {
+			always = no
       any_other_country = {
         OR = {
           has_completed_focus = FRA_strengthen_the_unions
