@@ -43,6 +43,10 @@ characters={
 		portraits={
 			civilian={
 				large="gfx/leaders/MAL/Portrait_Samuel_Hood.dds"
+				
+			}
+			army={
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
@@ -56,18 +60,6 @@ characters={
 		}
 		country_leader={
 			ideology=conservatism
-			traits={ grand_fleet_proponent navy_capital_ship_2 popular_figurehead }
-			expire="1953.3.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=rexism
-			traits={ grand_fleet_proponent navy_capital_ship_2 popular_figurehead }
-			expire="1953.3.1.1"
-			id=-1
-		}
-		country_leader={
-			ideology=stratocracy
 			traits={ grand_fleet_proponent navy_capital_ship_2 popular_figurehead }
 			expire="1953.3.1.1"
 			id=-1
