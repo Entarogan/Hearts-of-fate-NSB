@@ -241,6 +241,15 @@ recruit_character = FRA_Robert_Brasillach
 recruit_character = FRA_Francois_Lehideux
 recruit_character = FRA_Francois_Spirito
 
+recruit_character = FRA_Pierre_Cauchon
+recruit_character = FRA_Provisional_Government
+recruit_character = FRA_Henri_Rol_Tanguy
+recruit_character = FRA_Roger_Belbeoch
+recruit_character = FRA_jean_fontenoy
+recruit_character = FRA_marcel_petiot
+recruit_character = FRA_kurt_daluege
+recruit_character = FRA_paul_carbone
+
 ### VARIANTS ###
 # 1936 Start #
 if = {
