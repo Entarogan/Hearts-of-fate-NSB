@@ -867,153 +867,154 @@ country_event = {     # France: Military unrest for Communists
 			factor = 85
 		}
 
-    unlock_national_focus = FRA_Emergency_allocation
+		unlock_national_focus = FRA_Emergency_allocation
 
-    set_global_flag = FRA_civil_war_start_flag 
-    add_war_support = 0.1
-    FRA_civil_war_north = yes
-	add_corps_commander_role = {
-		Character = FRA_jacques_doriot
-		traits = {
-			politically_connected
-			trait_reckless
-			trait_engineer
-			fortress_buster
+		set_global_flag = FRA_civil_war_start_flag 
+		retire_character = FRA_maxime_weygand
+		retire_character = FRA_philippe_leclerc
+		retire_character = FRA_alphonse_georges
+		retire_character = FRA_jean_touzet_du_vigier
+		retire_character = FRA_louis_franchet_despèrey
+		retire_character = FRA_henri_lebocq
+		add_war_support = 0.1
+		FRA_civil_war_north = yes
+		add_corps_commander_role = {
+			Character = FRA_jacques_doriot
+			traits = {
+				politically_connected
+				trait_reckless
+				trait_engineer
+				fortress_buster
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
 		}
-		skill = 2
-		attack_skill = 2
-		defense_skill = 2
-		planning_skill = 1
-		logistics_skill = 2
-	}
 
-	add_corps_commander_role = {
-		Character = FRA_Henri_Rol_Tanguy
-		traits = {
-			infantry_officer
-			commando
-			organizer
-			urban_assault_specialist
+		add_corps_commander_role = {
+			Character = FRA_Henri_Rol_Tanguy
+			traits = {
+				infantry_officer
+				commando
+				organizer
+				urban_assault_specialist
+			}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
-		skill = 3
-		attack_skill = 3
-		defense_skill = 2
-		planning_skill = 2
-		logistics_skill = 3
-	}
 
-	add_corps_commander_role = {
-		Character = FRA_Andre_Marty
-		traits = {
-			harsh_leader
-			naval_invader
+		add_corps_commander_role = {
+			Character = FRA_Andre_Marty
+			traits = {
+				harsh_leader
+				naval_invader
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
 		}
-		skill = 3
-		attack_skill = 4
-		defense_skill = 1
-		planning_skill = 3
-		logistics_skill = 2
-	}
-	add_corps_commander_role = {
-		Character = FRA_Arthur_Dallidet
-		traits = {
-			commando
-			organizer
+		add_corps_commander_role = {
+			Character = FRA_Arthur_Dallidet
+			traits = {
+				commando
+				organizer
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 2
 		}
-		skill = 2
-		attack_skill = 1
-		defense_skill = 3
-		planning_skill = 1
-		logistics_skill = 2
-	}
-	add_corps_commander_role = {
-		Character = FRA_Danielle_Casanova
-		traits = {
-			armor_officer
-			trickster
+		add_corps_commander_role = {
+			Character = FRA_Danielle_Casanova
+			traits = {
+				armor_officer
+				trickster
+			}
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
-		skill = 2
-		attack_skill = 4
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Jean_Pierre_Timbaud
-		traits = {
-			infantry_officer
-			armor_officer
+		add_corps_commander_role = {
+			Character = FRA_Jean_Pierre_Timbaud
+			traits = {
+				infantry_officer
+				armor_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
 		}
-		skill = 2
-		attack_skill = 3
-		defense_skill = 1
-		planning_skill = 2
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Jean_Pierre_Timbaud
-		traits = {
-			infantry_officer
-			armor_officer
+		add_corps_commander_role = {
+			Character = FRA_Jean_Pierre_Timbaud
+			traits = {
+				infantry_officer
+				armor_officer
+			}
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
 		}
-		skill = 2
-		attack_skill = 3
-		defense_skill = 1
-		planning_skill = 2
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Roger_Belbeoch
-		traits = {
-			commando
+		add_corps_commander_role = {
+			Character = FRA_Roger_Belbeoch
+			traits = {
+				commando
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 		}
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-	}
-	add_corps_commander_role = {
-		Character = FRA_Missak_Manouchian
-		traits = {
-			infantry_officer
-			trickster
-			commando
+		add_corps_commander_role = {
+			Character = FRA_Missak_Manouchian
+			traits = {
+				infantry_officer
+				trickster
+				commando
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
 		}
-		skill = 2
-		attack_skill = 2
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 3
-	}
 
-	add_corps_commander_role = {
-		Character = FRA_nestor_makhno
-		traits = {
-			war_hero
-			media_personality
-			winter_specialist
-			cavalry_leader
+		add_corps_commander_role = {
+			Character = FRA_nestor_makhno
+			traits = {
+				war_hero
+				media_personality
+				winter_specialist
+				cavalry_leader
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
 		}
-		skill = 4
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 3
-		logistics_skill = 3
-	}
-	retire_character = FRA_maxime_weygand
-	retire_character = FRA_philippe_leclerc
-	retire_character = FRA_alphonse_georges
-	retire_character = FRA_jean_touzet_du_vigier
-	retire_character = FRA_louis_franchet_despèrey
-	retire_character = FRA_henri_lebocq
 
-    hidden_effect = {
-      country_event = { id = lr_france.7  days = 20 }
-    }
-	hidden_effect = {
-		news_event = { id = lr_france_news.9 hours = 3 }
-	}
+
+		hidden_effect = {
+			country_event = { id = lr_france.7  days = 20 }
+		}
+		hidden_effect = {
+			news_event = { id = lr_france_news.9 hours = 3 }
+		}
 	}
 
 }
