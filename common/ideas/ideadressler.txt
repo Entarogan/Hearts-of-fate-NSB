@@ -331,11 +331,12 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				land_doctrine = 0.05
+				#land_doctrine = 0.05
 				armor = 0.05
 			}
 			
 			modifier = {
+				land_doctrine_cost_factor = -0.05
 				political_power_gain = -0.20
 				resistance_damage_to_garrison = -0.15
 				occupation_cost = -0.025
@@ -362,11 +363,12 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				land_doctrine = 0.05
+				#land_doctrine = 0.05
 				armor = 0.05
 			}
 			
 			modifier = {
+				land_doctrine_cost_factor = -0.05
 				resistance_damage_to_garrison = -0.10
 				occupation_cost = -0.015
 				subversive_activites_upkeep = -0.2
@@ -443,12 +445,15 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				land_doctrine = 0.05
-				air_doctrine = 0.05
-        naval_doctrine = 0.05
+				#land_doctrine = 0.05
+				#air_doctrine = 0.05
+        		#naval_doctrine = 0.05
 			}
 			
 			modifier = {
+				land_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
+				naval_doctrine_cost_factor = -0.05
 				army_org_Factor = 0.10
 				planning_speed = 0.30
         max_planning = 0.10

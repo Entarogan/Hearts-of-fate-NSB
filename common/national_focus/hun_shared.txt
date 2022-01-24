@@ -3304,9 +3304,9 @@
 
 			add_to_tech_sharing_group = HUN_United_Naval_Academy_exchange
 
-      add_tech_bonus = {
+			add_doctrine_cost_reduction = {
         name = HUN_United_Naval_Academy
-        bonus = 1.5
+        cost_reduction = 0.75
         uses = 1
         category = naval_doctrine
       }
@@ -3314,9 +3314,9 @@
 
 			  add_to_tech_sharing_group = HUN_United_Naval_Academy_exchange
 
-        add_tech_bonus = {
+			  add_doctrine_cost_reduction = {
           name = HUN_United_Naval_Academy
-          bonus = 0.5
+          cost_reduction = 0.25
           uses = 1
           category = naval_doctrine
         }
@@ -3490,9 +3490,9 @@
 
 			add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
-      add_tech_bonus = {
+			add_doctrine_cost_reduction = {
         name = HUN_Joint_air_command
-        bonus = 1.5
+        cost_reduction = 0.75
         uses = 1
         category = air_doctrine
       }

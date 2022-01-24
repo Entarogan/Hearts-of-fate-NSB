@@ -1459,9 +1459,9 @@ focus_tree = {
 
 			army_experience = 10
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = FIC_East_Asian_trench_war
-				bonus = 0.5
+				cost_reduction = 0.25
 				uses = 2
 				category = land_doctrine
 			}
@@ -1499,9 +1499,9 @@ focus_tree = {
 
       completion_reward = {
 
-			add_tech_bonus = {
+        add_doctrine_cost_reduction = {
 				name = FIC_East_Asian_Mobile_Warfare
-				bonus = 0.5
+				cost_reduction = 0.25
 				uses = 1
 				category = land_doctrine
 			}
@@ -1970,9 +1970,9 @@ focus_tree = {
 		completion_reward = {
 			navy_experience = 25
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = FRA_naval_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -2020,9 +2020,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = FRA_the_old_school
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}

@@ -105,9 +105,9 @@ CHI_army_reform = {
 		}
 		complete_effect = {
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CHI_army_reform
-				bonus = 0.5
+				cost_reduction = 0.25
 				uses = 1
 				category = land_doctrine
 			}
@@ -223,9 +223,9 @@ CHI_army_reform = {
 
 			army_experience = -200
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = CHI_lessons_of_war
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}

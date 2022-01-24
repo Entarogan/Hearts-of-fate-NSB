@@ -1653,9 +1653,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH  }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = AST_pacific_area_navy
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}

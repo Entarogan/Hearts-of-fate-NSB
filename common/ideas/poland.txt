@@ -23,10 +23,12 @@ country = {
         motorized_defence_factor = 0.10
         surrender_limit = 0.15
         max_surrender_limit_offset = 0.15
+				
+		land_doctrine_cost_factor = -0.05
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.05
+				#land_doctrine = 0.05
 			}
     }
 
@@ -46,13 +48,14 @@ country = {
 			
 			modifier = {
 				army_core_defence_factor = 0.10
+				land_doctrine_cost_factor = -0.05
         production_speed_bunker_factor = 0.20
         production_speed_air_base_factor = 0.20
         production_speed_anti_air_building_factor = 0.20
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.05
+				#land_doctrine = 0.05
 			}
       
 		}
@@ -207,10 +210,11 @@ country = {
 			modifier = {
                 experience_gain_army = 0.03
 				army_armor_attack_factor = 0.10
+				land_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
 			}
 
 		}
@@ -237,10 +241,11 @@ country = {
 			modifier = {
                 experience_gain_army = 0.03
 				army_defence_factor = 0.03
+				land_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
 			}
 
 		}
@@ -294,10 +299,11 @@ country = {
 			modifier = {
                 experience_gain_navy = 0.01
 		        industrial_capacity_dockyard = 0.10
+				naval_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-                naval_doctrine = 0.10
+                #naval_doctrine = 0.10
 			}
 
 		}
@@ -325,10 +331,12 @@ country = {
                 experience_gain_army = 0.03
 		        army_infantry_attack_factor = 0.05
 		        army_infantry_defence_factor = 0.05
+				land_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
+				
 			}
 
 		}
@@ -355,10 +363,11 @@ country = {
 			modifier = {
                 experience_gain_army = 0.03
 				army_attack_factor = 0.03
+				land_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
 			}
 
 		}
@@ -385,10 +394,11 @@ country = {
 			modifier = {
                 experience_gain_army = 0.03
 				army_defence_factor = 0.03
+				land_doctrine_cost_factor = -0.1
 			}
 
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
 			}
 
 		}
@@ -502,7 +512,7 @@ country = {
 		picture = generic_victors_of_ww1
 
 			research_bonus = {
-				land_doctrine = -0.50
+				#land_doctrine = -0.50
 			}
 
 			targeted_modifier = { 
@@ -511,6 +521,7 @@ country = {
 			}
 		
 		modifier = {
+			land_doctrine_cost_factor = 0.5
 			stability_factor = 0.10
 			drift_defence_factor = 0.5
 			army_org_Factor = 0.05

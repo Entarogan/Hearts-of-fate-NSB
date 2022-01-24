@@ -950,7 +950,10 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			research_bonus = {
-				land_doctrine = 0.05
+				#land_doctrine = 0.05
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.05
 			}
 		}
 		imperial_austerity_idea = {
@@ -1021,12 +1024,13 @@ ideas = {
 			
 			modifier = {
 				political_power_gain = 0.05
+				naval_doctrine_cost_factor = -0.1
         industrial_capacity_dockyard = 0.05
 			}
 
 			research_bonus = {
 				naval_equipment = 0.10
-				naval_doctrine = 0.10
+				#naval_doctrine = 0.10
 			}
 
 		}
@@ -1050,13 +1054,14 @@ ideas = {
 				political_power_gain = 0.25
 				stability_factor = 0.10
 				war_support_factor = 0.10
+				naval_doctrine_cost_factor = -0.15
 				justify_war_goal_time = -0.25
         industrial_capacity_dockyard = 0.10
 			}
 
 			research_bonus = {
 				naval_equipment = 0.15
-				naval_doctrine = 0.15
+				#naval_doctrine = 0.15
 			}
 
 		}
@@ -1572,11 +1577,13 @@ ideas = {
 			
 			research_bonus = {
 				naval_equipment = -0.1
-				naval_doctrine = -0.1
-				land_doctrine = 0.05
+				#naval_doctrine = -0.1
+				#land_doctrine = 0.05
 			}
 			
 			modifier = {
+				land_doctrine_cost_factor = -0.05
+				naval_doctrine_cost_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 				production_speed_dockyard_factor = -0.2
 				industrial_capacity_factory = 0.1
@@ -1654,11 +1661,13 @@ ideas = {
 			picture = jap_interservice_rivalry_navy_dominant
 			
 			research_bonus = { 
-				land_doctrine = -0.1
-				naval_doctrine = 0.05
+				#land_doctrine = -0.1
+				#naval_doctrine = 0.05
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = 0.1
+				naval_doctrine_cost_factor = -0.05
 				production_speed_arms_factory_factor = -0.2
 				production_speed_dockyard_factor = 0.2
 				planning_speed = -0.1

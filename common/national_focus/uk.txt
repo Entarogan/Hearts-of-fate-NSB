@@ -1894,9 +1894,9 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = uk_waves_focus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 3
 				category = naval_doctrine
 			}
@@ -5069,9 +5069,9 @@ focus_tree = {
 			factor = 10
 		}
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 3
 				category = naval_doctrine
 			}
@@ -6428,9 +6428,9 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = ARTURIA_royal_naval_idea
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ENG_royal_naval_insititute_focus
-				bonus = 0.5
+				cost_reduction = 0.25
 				uses = 2
 				category = naval_doctrine
 			}
@@ -6547,17 +6547,17 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = {
 			add_ideas = ARTURIA_rising_sun_never_set_idea
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ENG_rising_sun_never_set_focus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
 			JAP = {
 				add_ideas = ARTURIA_rising_sun_never_set_idea
-				add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 					name = ENG_rising_sun_never_set_focus
-					bonus = 1
+					cost_reduction = 0.5
 					uses = 2
 					category = naval_doctrine
 				}

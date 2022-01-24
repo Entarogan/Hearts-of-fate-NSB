@@ -1262,11 +1262,12 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			research_bonus = {
-				land_doctrine = -0.75
+				#land_doctrine = -0.75
 			}
 			modifier = {
 				conscription = -0.003
 				war_support_factor = -0.05
+				land_doctrine_cost_factor = 0.75
 			}
 		}
 

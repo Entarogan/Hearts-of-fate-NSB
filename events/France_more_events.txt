@@ -1328,17 +1328,17 @@ country_event = {     # Italy:  France wants a naval cooperation
 			factor = 85
 		}
     add_ideas = { FRA_ITA_Naval_Acedemy }
-    add_tech_bonus = {
+    add_doctrine_cost_reduction = {
           name = ncooperation_focus_doctrine
-          bonus = 0.75
+          cost_reduction = 0.35
           uses = 3
           category = naval_doctrine
         }
     effect_tooltip = {
       FRA = {
-        add_tech_bonus = {
+        add_doctrine_cost_reduction = {
           name = ncooperation_focus_doctrine
-          bonus = 0.50
+          cost_reduction = 0.25
           uses = 3
           category = naval_doctrine
         }
@@ -1371,9 +1371,9 @@ country_event = {
 			factor = 85
 		}
     add_ideas = { FRA_ITA_Naval_Acedemy }
-    add_tech_bonus = {
+    add_doctrine_cost_reduction = {
       name = ncooperation_focus_doctrine
-      bonus = 0.50
+      cost_reduction = 0.25
       uses = 3
       category = naval_doctrine
     }
