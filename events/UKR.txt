@@ -14,46 +14,8 @@ country_event = {
 
 		add_political_power = -30
 
-
-		remove_country_leader_role = {
-			character = UKR_nikita_khrushchev
-			ideology = marxism
-		}
-		UKR_nikita_khrushchev = { set_nationality = SOV }
-        SOV = {
-            add_advisor_role = {
-                Character = UKR_nikita_khrushchev
-                advisor = {
-                    slot = political_advisor
-                    idea_token = nikita_khrushchyov
-                    traits = {
-                        Cunning_politician
-                    }
-                    available = {
-                        NOT = { has_country_flag = arrest_khrushchev }
-                        UKR_nikita_khrushchev = {
-                            is_country_leader = no
-                        }
-                        SOV_lev_trotsky = {
-                            is_country_leader = no
-                        }				
-                        if = {
-                            limit = { has_dlc = "Man the Guns" }	
-                            NOT = { has_autonomy_state = autonomy_supervised_state }
-                        }
-                    }
-                    do_effect = {
-                        NOT = {
-                            has_government = communism
-                        }
-                    }	
-                    allowed = {
-                        original_tag = SOV
-                    }
-                }
-                activate = no
-            }
-        }
+		#UKR_nikita_khrushchev = { set_nationality = SOV }
+		retire_character = UKR_nikita_khrushchev
 		add_country_leader_role = {
 			character = "SOV_leonid_brezhnev"
 			country_leader = {

@@ -1919,7 +1919,7 @@ country_event = {     #选举
 		retire_country_leader = yes
 		
 		add_country_leader_role = {
-			character = "UKR_nikita_khrushchev"
+			character = "SOV_nikita_khrushchev"
 			country_leader = {
 				ideology = leninism
 				traits = { Cunning_politician  economic_reformer }
@@ -1927,13 +1927,7 @@ country_event = {     #选举
 			}
 			promote_leader = yes 
 		}
-		UKR_nikita_khrushchev = {
-			set_portraits = {
-				civilian = {
-					large = "gfx/leaders/SOV/Portrait_Nikita_Khrushchev.dds"
-				}
-			}
-		}
+
 	}
 	
 	option = {

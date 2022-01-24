@@ -44,7 +44,9 @@ ENG_organize_the_blackshirts = {
 			has_full_control_of_state = 119
 		}
 
-		highlight_states = { state = 119 }
+		highlight_states = {
+			highlight_state_targets = { state = 119 } 
+		}
 
 		on_map_mode = map_only
 
@@ -114,7 +116,9 @@ ENG_organize_the_blackshirts = {
 			has_full_control_of_state = 120
 		}
 
-		highlight_states = { state = 120 }
+		highlight_states = {
+			highlight_state_targets = { state = 120 } 
+		}
 
 		on_map_mode = map_only
 
@@ -184,8 +188,9 @@ ENG_organize_the_blackshirts = {
 			has_full_control_of_state = 136
 		}
 
-		highlight_states = { state = 136 }
-
+		highlight_states = {
+			highlight_state_targets = { state = 136 } 
+		}
 		on_map_mode = map_only
 
 		cost = 17
@@ -2240,7 +2245,7 @@ ENG_appeal_to_imperial_loyalists = {
 					create_country_leader = {
 						name = "William Birdwood"
 						desc = "POLITICS_WILLIAM_BIRDWOOD_DESC"
-						picture = "gfx/leaders/ENG/portrait_eng_william_birdwood.dds"
+						picture = GFX_portrait_William_Birdwood
 						expire = "1965.1.1"
 						ideology = centrism
 						traits = {
@@ -2285,8 +2290,8 @@ ENG_appeal_to_imperial_loyalists = {
 			has_army_experience > 5
 		}
 
-		targets = { ENG D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
-
+		targets = { ENG }
+		targets_dynamic = yes
 		target_trigger = {
 			FROM = {
 				original_tag = ENG
@@ -2395,8 +2400,8 @@ ENG_appeal_to_imperial_loyalists = {
 			}
 		}
 
-		targets = { AST D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
-
+		targets = { AST }
+		targets_dynamic = yes
 		target_root_trigger = {
 			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
@@ -2512,8 +2517,8 @@ ENG_appeal_to_imperial_loyalists = {
 			}
 		}
 
-		targets = { NZL D01 D02 D03 D04 D05 D06 D07 D08 D09 D10 D11 D12 D13 D14 D15 }
-
+		targets = { NZL }
+		targets_dynamic = yes
 		target_root_trigger = {
 			has_completed_focus = ENG_appeal_to_imperial_loyalists
 		}
@@ -5697,6 +5702,7 @@ political_actions = {
 					picture = GFX_portrait_eng_wallis_simpson
 					expire = "1965.1.1"
 					ideology = despotism
+					female = yes
 					traits = {
 						unpopular_monarch socialite_connections wallis_fancy_title
 					}
@@ -5749,6 +5755,7 @@ political_actions = {
 					picture = GFX_portrait_eng_wallis_simpson
 					expire = "1965.1.1"
 					ideology = despotism
+					female = yes
 					traits = {
 						unpopular_monarch socialite_connections wallis_fancy_title
 					}

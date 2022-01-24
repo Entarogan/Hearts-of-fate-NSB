@@ -49,7 +49,7 @@ BUL_internal_factions = {
 			has_country_flag = BUL_factions_unlocked_flag
 			NOT = { has_country_flag = BUL_tsar_boris_is_dead_flag }
 			has_country_leader = {
-				name = "Boris III"
+				character = BUL_boris_iii
 				ruling_only = yes
 			}
 		}
@@ -744,7 +744,7 @@ BUL_internal_factions = {
 			unlock_decision_tooltip = BUL_cooperation_appoint_zveno_members
 			BUL_zveno_low_loyalty_increase_effect = yes
 			custom_effect_tooltip = available_chief_of_army
-			show_ideas_tooltip = BUL_kiril_stanchev_bftb
+			show_ideas_tooltip = BUL_kiril_stanchev
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = BUL_stoyan_trendafilov
 			show_ideas_tooltip = BUL_vladimir_stoychev
@@ -4064,34 +4064,37 @@ BUL_internal_factions = {
 						long_name = BUL_zveno_bulgaria_neutrality_party_long
 						name = BUL_zveno_bulgaria_neutrality_party
 					}
-					if = {
+
+					if = { # Delete duplicated Kimon Georgiev, the impostor, the fake, the cheap pirate copy
+						limit = {
+							has_character = BUL_kimon_georgiev
+						}
+						retire_character = BUL_kimon_georgiev
+					}
+
+					if = { # Transfer Kimon Georgiev the real one, the original one, the only one -> And then add him the country role he needs
 						limit = {
 							BUL = {
-								OR = {
-									has_country_leader = {
-										name = "Kimon Georgiev"
-										ruling_only = yes
+								has_character = BUL_kimon_georgiev
+							}
+						}
+						BUL = {
+							BUL_kimon_georgiev = {
+								set_nationality = BUZ
+								add_country_leader_role = {
+									character = "BUL_kimon_georgiev"
+									country_leader = {
+										ideology=despotism
+										traits = { old_coup_maker hardened_officer }
+										expire="1965.1.1"
 									}
-									has_idea = BUL_kimon_georgiev
+									promote_leader = yes
 								}
 							}
 						}
-						retire_ideology_leader = neutrality #Retire whoever is the non-aligned country leader and replace by a generic guy
 					}
-					else = {
-						retire_ideology_leader = neutrality #Retire whoever is the non-aligned country leader and replace by Kimon Georgiev
-						create_country_leader = {
-							name = "Kimon Georgiev"
-							desc = "POLITICS_KIMON_GEORGIEV_DESC"
-							picture = GFX_portrait_bul_kimon_georgiev
-							expire = "1965.1.1"
-							ideology = despotism
-							traits = {
-								old_coup_maker hardened_officer
-							}
-						}
-						set_country_flag = BUL_appointed_zveno_members_flag
-					}
+
+					set_country_flag = BUL_appointed_zveno_members_flag
 					set_country_flag = BUL_zveno_bolstered_flag
 
 					delete_unit_template_and_units = {
@@ -6451,7 +6454,12 @@ BUL_purchase_equipment = {
 				}
 				BUL_is_valid_subject = yes
 			}
-			FROM = { has_tech = basic_light_tank }
+			FROM = { 
+				OR = {
+					has_tech = basic_light_tank 
+					has_tech = basic_light_tank_chassis 
+				}
+			}
 			NOT = { has_country_flag = BUL_purchasing_armor_flag }
 
 			NOT = { has_war_with = FROM }
@@ -6530,15 +6538,15 @@ BUL_purchase_equipment = {
 					num_of_civilian_factories < 10
 					AND = {
 						stockpile_ratio = { 
-			  				archetype = light_tank_equipment
+			  				archetype = light_tank_chassis
 			  				ratio > 0.75
 			  			}
 			  			stockpile_ratio = { 
-			  				archetype = medium_tank_equipment
+			  				archetype = medium_tank_chassis
 			  				ratio > 0.75
 			  			}
 			  			stockpile_ratio = { 
-			  				archetype = heavy_tank_equipment
+			  				archetype = heavy_tank_chassis
 			  				ratio > 0.75
 			  			}
 					}
@@ -7799,10 +7807,11 @@ prospect_for_resources = {
 			has_dlc = "Battle for the Bosporus"
 		}
 
-		highlight_state_targets = {
-			state = 212
+		highlight_states = {
+			highlight_state_targets = {
+				state = 212
+			}
 		}
-
 		available = {
 			has_tech = construction3
 			num_of_civilian_factories_available_for_projects > 1
@@ -7869,7 +7878,7 @@ prospect_for_resources = {
 		allowed = {
 			has_dlc = "Battle for the Bosporus"
 		}
-
+		target_array = allies
 		target_trigger = {
 			FROM = {
 				is_in_faction_with = ROOT
@@ -7882,7 +7891,9 @@ prospect_for_resources = {
 				}
 			}
 		}
-
+		target_root_trigger = {
+			has_completed_focus = BUL_uranium_prospecting
+		}
 		ai_will_do = {
 			base = 0.1
 			modifier = {
@@ -8092,7 +8103,7 @@ BUL_bulgarian_administration_of_the_balkans = {
 				OR = {
 					has_government = fascism
 					has_country_leader = {
-						name = "Ferdinand I"
+						character = BUL_ferdinand_i
 						ruling_only = yes
 					}
 				}
@@ -8314,7 +8325,7 @@ BUL_align_bulgaria = {
 					is_in_faction_with = GER
 				}
 				has_completed_focus = BUL_approach_germany
-				has_idea = BUL_georgi_ivanov_kyoseivanov_bftb
+				has_idea = BUL_georgi_ivanov_kyoseivanov
 				NOT = { has_idea = BUL_bogdan_filov }
 				has_country_flag = { flag = BUL_german_influence_flag value > 3 }
 			}
@@ -9648,13 +9659,15 @@ BUL_dominance_in_the_seas = {
 		}
 
 		highlight_states = { 
-			BUL_state_is_in_the_black_sea = yes
-			controller = {
-				NOT = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-						is_in_faction_with = ROOT
+			highlight_states_trigger = { 
+				BUL_state_is_in_the_black_sea = yes
+				controller = {
+					NOT = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 					}
 				}
 			}
@@ -9751,13 +9764,15 @@ BUL_dominance_in_the_seas = {
 		is_good = no
 
 		highlight_states = { 
-			BUL_state_is_in_the_aegean_sea = yes
-			controller = {
-				NOT = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-						is_in_faction_with = ROOT
+			highlight_states_trigger = { 
+				BUL_state_is_in_the_aegean_sea = yes
+				controller = {
+					NOT = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 					}
 				}
 			}
@@ -9848,13 +9863,15 @@ BUL_dominance_in_the_seas = {
 		is_good = no
 
 		highlight_states = { 
-			BUL_state_is_in_the_adriatic_sea = yes
-			controller = {
-				NOT = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-						is_in_faction_with = ROOT
+			highlight_states_trigger = { 
+				BUL_state_is_in_the_adriatic_sea = yes
+				controller = {
+					NOT = {
+						OR = {
+							tag = ROOT
+							is_subject_of = ROOT
+							is_in_faction_with = ROOT
+						}
 					}
 				}
 			}
@@ -9926,7 +9943,7 @@ political_actions = {
 		visible = {
 			has_government = fascism
 			NOT = {
-				has_country_leader = { name = "Aleksandar Tsankov" }
+				has_country_leader = { character = BUL_aleksandar_tsankov }
 			}
 		}
 
@@ -9941,15 +9958,14 @@ political_actions = {
 				long_name = BUL_national_social_movement_party_long
 				name = BUL_national_social_movement_party
 			}
-			create_country_leader = {
-				name = "Aleksandar Tsankov"
-				desc = "POLITICS_BOGDAN_FILOV_DESC"
-				picture = GFX_portrait_bul_aleksandar_tsankov
-				expire = "1965.1.1"
-				ideology = nazism
-				traits = {
-					the_bloody_professor
+			add_country_leader_role = {
+				character = BUL_aleksandar_tsankov
+				country_leader = {
+				  ideology=nazism
+				  traits = { the_bloody_professor }
+				  expire="1965.1.1"
 				}
+				promote_leader = yes
 			}
 		}
 	}
@@ -9976,7 +9992,7 @@ political_actions = {
 		visible = {
 			has_government = communism
 			NOT = {
-				has_country_leader = { name = "Kimon Georgiev" }
+				has_country_leader = { character = BUL_kimon_georgiev }
 			}
 		}
 
@@ -9986,14 +10002,18 @@ political_actions = {
 		
 		complete_effect = {
 			retire_ideology_leader = communism
-			create_country_leader = {
-				name = "Kimon Georgiev"
-				desc = "POLITICS_KIMON_GEORGIEV_DESC"
-				picture = GFX_portrait_bul_kimon_georgiev
-				expire = "1965.1.1"
-				ideology = anti_revisionism
-				traits = {
-					old_coup_maker hardened_officer
+			if = {
+				limit = {
+					has_character = BUL_kimon_georgiev
+				}
+				add_country_leader_role = {
+					character = "BUL_kimon_georgiev"
+					country_leader = {
+					  ideology=anti_revisionism
+					  traits = { old_coup_maker hardened_officer }
+					  expire="1965.1.1"
+					}
+					promote_leader = yes
 				}
 			}
 		}

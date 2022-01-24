@@ -2379,7 +2379,7 @@ characters={
 			}
 		}		
 	}
-		SOV_sergey_korolyov = {
+	SOV_sergey_korolyov = {
 		name = SOV_sergey_korolyov
 		portraits = {
 			army = {
@@ -2402,5 +2402,46 @@ characters={
 				rocket_scientist
 			}
 		}		
+	}
+
+	SOV_nikita_khrushchev={
+		name = SOV_nikita_khrushchyov
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/Portrait_Nikita_Khrushchev.dds"
+			}
+			army = {
+				small = "GFX_idea_nikita_khrushchev"
+			}
+		}
+		advisor = {
+			cost = 150
+			slot = political_advisor
+			idea_token = nikita_khrushchyov
+			traits = {
+				Cunning_politician
+			}
+			available = {
+				NOT = { has_country_flag = arrest_khrushchev }
+				SOV_nikita_khrushchev = {
+					is_country_leader = no
+				}
+				SOV_lev_trotsky = {
+					is_country_leader = no
+				}				
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}	
+			allowed = {
+				original_tag = SOV
+			}
+		}
 	}
 }

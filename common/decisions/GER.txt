@@ -2464,15 +2464,16 @@ GER_Internal_politics = {
 		}
 		remove_effect = {
 			set_country_flag = GER_a_new_Siegfried_flag
-			create_country_leader = {
-				character = GER_siegfried
-				desc = ""
-				picture = "portrait_sieg_Fuhrer.dds"
-				expire = "1965.1.1"
-				ideology = valkist
-				traits = {
-					Wachter_des_Vaterlandes_fake
+			add_country_leader_role = {
+				character = GER_sieg_young
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = valkist
+					traits = {
+						Wachter_des_Vaterlandes_fake
+					}
 				}
+				promote_leader = yes
 			}
 			hidden_effect = {
 				news_event = {
