@@ -626,12 +626,15 @@ focus_tree = {
 			}
 			hidden_effect = {
 				retire_ideology_leader = neutrality
-				create_country_leader = {
-					character = RUS_anastasia_i
-					desc = "POLITICS_ANASTASIA_DESC"
-					picture = "Portrait_Anastasia.dds"
-					ideology = authoritarian_democracy  
-					traits = { Shvibzik }
+				add_country_leader_role = {
+					character = "RUS_anastasia_i"
+					country_leader = {
+						desc = "POLITICS_ANASTASIA_DESC"
+						ideology = authoritarian_democracy
+						traits = { Shvibzik }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
 				}
 			}
 		}
@@ -670,14 +673,16 @@ focus_tree = {
 					add_idea = RUS_rebirth_of_the_tsar_1
 				}
 			}
-			create_country_leader = {
-				character = RUS_anastasia_i
-				desc = "POLITICS_ANASTASIA_DESC"
-				picture = "Portrait_Anastasia.dds"
-				ideology = conservatism
-				traits = {  Shvibzik }
-			}
-			
+			add_country_leader_role = {
+				character = "RUS_anastasia_i"
+				country_leader = {
+					desc = "POLITICS_ANASTASIA_DESC"
+					ideology = conservatism
+					traits = { Shvibzik }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes 
+			}			
 			set_politics = {	
 				ruling_party = democratic
 				last_election = "1922.12.9"
@@ -3193,9 +3198,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_expand_pacific_fleet
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = rus_naval_doctrine
-				bonus = 1.5
+				cost_reduction = 0.75
 				uses = 3
 				category = naval_doctrine
 			}
@@ -3896,13 +3901,17 @@ focus_tree = {
 			show_ideas_tooltip = RUS_sergey_taboritsky
 			hidden_effect = {
 				retire_ideology_leader = neutrality
-				create_country_leader = {
-					character = RUS_anastasia_i
-					desc = "POLITICS_ANASTASIA_DESC"
-					picture = "Portrait_Anastasia.dds"
-					ideology = absolute_monarchy 
-					traits = { Shvibzik }
-				}
+				add_country_leader_role = {
+					character = "RUS_anastasia_i"
+					country_leader = {
+						desc = "POLITICS_ANASTASIA_DESC"
+						ideology = absolute_monarchy
+						traits = { Shvibzik }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				
 			}
 		}
 
@@ -6831,14 +6840,17 @@ focus = {   ###土地分给农民
 					limit = { 
 					  NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } 
 					}
-					create_country_leader = {
-						character = RUS_anastasia_i
-						desc = "POLITICS_ANASTASIA_DESC"
-						picture = "Portrait_Anastasia.dds"
-						ideology = stratocracy
-						traits = { Shvibzik }
-					}
-          drop_cosmetic_tag = yes
+					add_country_leader_role = {
+						character = "RUS_anastasia_i"
+						country_leader = {
+							desc = "POLITICS_ANASTASIA_DESC"
+							ideology = stratocracy
+							traits = { Shvibzik }
+							expire = "1965.1.1"
+						}
+						promote_leader = yes 
+					}	
+         			drop_cosmetic_tag = yes
 
 					set_party_name = {
 						ideology = neutrality
@@ -6886,29 +6898,37 @@ focus = {   ###土地分给农民
 
 				}
 
-				create_country_leader = {
-					name = "Makiri Sigisrenko"
-					desc = "POLITICS_MATOU_SHINJI_DESC"
-					picture = "Portrait_Matou_Shinji.dds"
-					ideology = conservatism
-					traits = { ambitious_activator }
-				}
 
-				create_country_leader = {
-					name = "Makiri Sigisrenko"
-					desc = "POLITICS_MATOU_SHINJI_DESC"
-					picture = "Portrait_Matou_Shinji.dds"
-					ideology = stratocracy
-					traits = { ambitious_activator }
-				}
-
-				create_country_leader = {
-					name = "Makiri Sigisrenko"
-					desc = "POLITICS_MATOU_SHINJI_DESC"
-					picture = "Portrait_Matou_Shinji.dds"
-					ideology = fascism_ideology
-					traits = { ambitious_activator }
-				}
+				add_country_leader_role = {
+					character = "RUS_matou_shinji"
+					country_leader = {
+						desc = "POLITICS_MATOU_SHINJI_DESC"
+						ideology = conservatism
+						traits = { ambitious_activator }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_matou_shinji"
+					country_leader = {
+						desc = "POLITICS_MATOU_SHINJI_DESC"
+						ideology = stratocracy
+						traits = { ambitious_activator }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_matou_shinji"
+					country_leader = {
+						desc = "POLITICS_MATOU_SHINJI_DESC"
+						ideology = fascism_ideology
+						traits = { ambitious_activator }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
 
 				if = {
 					limit = { 
@@ -6983,30 +7003,36 @@ focus = {   ###土地分给农民
 
 				}
 
-				create_country_leader = {
-					name = "Tatenashi Sarashiki"
-					desc = "POLITICS_SARASHIKI_DESC"
-					picture = "Portrait_Tatenashi_Sarashiki.dds"
-					ideology = conservatism
-					traits = { Head_of_Advisor_to_Japan }
-				}
-
-				create_country_leader = {
-					name = "Tatenashi Sarashiki"
-					desc = "POLITICS_SARASHIKI_DESC"
-					picture = "Portrait_Tatenashi_Sarashiki.dds"
-					ideology = stratocracy
-					traits = { Head_of_Advisor_to_Japan }
-				}
-
-				create_country_leader = {
-					name = "Tatenashi Sarashiki"
-					desc = "POLITICS_SARASHIKI_DESC"
-					picture = "Portrait_Tatenashi_Sarashiki.dds"
-					ideology = fascism_ideology
-					traits = { Head_of_Advisor_to_Japan }
-				}
-
+				add_country_leader_role = {
+					character = "RUS_tatenashi_sarashiki"
+					country_leader = {
+						desc = "POLITICS_SARASHIKI_DESC"
+						ideology = conservatism
+						traits = { Head_of_Advisor_to_Japan }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_tatenashi_sarashiki"
+					country_leader = {
+						desc = "POLITICS_SARASHIKI_DESC"
+						ideology = stratocracy
+						traits = { Head_of_Advisor_to_Japan }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_tatenashi_sarashiki"
+					country_leader = {
+						desc = "POLITICS_SARASHIKI_DESC"
+						ideology = fascism_ideology
+						traits = { Head_of_Advisor_to_Japan }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
 				if = {
 					limit = { 
 						or = { 
@@ -7081,30 +7107,36 @@ focus = {   ###土地分给农民
 
 				}
 
-				create_country_leader = {
-					name = "Victoria Romanovna"
-					desc = "POLITICS_JIANZI_DESC"
-					picture = "Portrait_RUS_Victoria_Romanovna.png"
-					ideology = conservatism
-					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
-				}
-
-				create_country_leader = {
-					name = "Victoria Romanovna"
-					desc = "POLITICS_JIANZI_DESC"
-					picture = "Portrait_RUS_Victoria_Romanovna.png"
-					ideology = stratocracy
-					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
-				}
-
-				create_country_leader = {
-					name = "Victoria Romanovna"
-					desc = "POLITICS_JIANZI_DESC"
-					picture = "Portrait_RUS_Victoria_Romanovna.png"
-					ideology = fascism_ideology
-					traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
-				}
-
+				add_country_leader_role = {
+					character = "RUS_Victoria_Romanovna"
+					country_leader = {
+						desc = "POLITICS_JIANZI_DESC"
+						ideology = conservatism
+						traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_Victoria_Romanovna"
+					country_leader = {
+						desc = "POLITICS_JIANZI_DESC"
+						ideology = stratocracy
+						traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
+				add_country_leader_role = {
+					character = "RUS_Victoria_Romanovna"
+					country_leader = {
+						desc = "POLITICS_JIANZI_DESC"
+						ideology = fascism_ideology
+						traits = { self_styled_All_Russian_Tsar Defler_of_sun_god }
+						expire = "1965.1.1"
+					}
+					promote_leader = yes 
+				}	
 				drop_cosmetic_tag = yes
 
 				set_party_name = {

@@ -1,6 +1,6 @@
 characters={
 	RUS_sergey_taboritsky={
-		name="Sergey Taboritsky"
+		name=RUS_sergey_taboritsky
 		advisor={
 			slot = political_advisor
 			idea_token = RUS_sergey_taboritsky
@@ -37,7 +37,7 @@ characters={
 		}
 	}
 	RUS_lavr_kornilov={
-		name="Lavr Kornilov"
+		name=RUS_lavr_kornilov
 		advisor={
 			slot = army_chief
 			idea_token = RUS_lavr_kornilov
@@ -78,7 +78,7 @@ characters={
 		}
 	}
 	RUS_pavel_shatilov={
-		name="Pavel Shatilov"
+		name=RUS_pavel_shatilov
 		advisor={
 			slot = army_chief
 			idea_token = RUS_pavel_shatilov
@@ -113,24 +113,24 @@ characters={
 		}
 	}
 	RUS_anton_denikin={
-		name="Anton Denikin"
+		name=RUS_anton_denikin
 		advisor={
 			slot = army_chief
 			idea_token = RUS_anton_denikin
 			allowed  = {
-					original_tag  = RUS
+				original_tag  = RUS
+			}
+			available  = {
+				not  = {
+					has_idea  = RUS_entente_observe_committee 
 				}
-				available  = {
-					not  = {
-						has_idea  = RUS_entente_observe_committee 
-					}
-				}
-				traits  = {
-					rus_Mass_mobilization 
-				}
-				ai_will_do  = {
-					factor  = 3.000
-				}
+			}
+			traits  = {
+				rus_Mass_mobilization 
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
 		}
 		portraits={
 			army={
@@ -151,7 +151,7 @@ characters={
 		}
 	}
 	RUS_dmitry_yazov={
-		name="Dmitry Yazov"
+		name=RUS_dmitry_yazov
 		advisor={
 			slot = army_chief
 			idea_token = RUS_dmitry_yazov
@@ -189,13 +189,28 @@ characters={
 		}
 	}
 	RUS_nikolay_krylov={
-		name="Nikolay Krylov"
+		name=RUS_nikolay_krylov
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_nikolay_krylov"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Nikolay_Krylov.dds"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RUS_nikolay_krylov
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+				not  = {
+					has_idea  = RUS_entente_observe_committee 
+				}
+			}
+			traits  = {
+				army_chief_reform_2 
 			}
 		}
 		corps_commander={
@@ -209,7 +224,7 @@ characters={
 		}
 	}
 	RUS_mikhail_berens={
-		name="Mikhail Berens"
+		name=RUS_mikhail_berens
 		advisor={
 			slot = navy_chief
 			idea_token = RUS_mikhail_berens
@@ -243,18 +258,18 @@ characters={
 		}
 	}
 	RUS_nestor_monastyrev={
-		name="Nestor Monastyrev"
+		name=RUS_nestor_monastyrev
 		advisor={
 			slot = navy_chief
 			idea_token = RUS_nestor_monastyrev
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-				}
-				traits  = {
-					navy_chief_decisive_battle_2 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+			}
+			traits  = {
+				navy_chief_decisive_battle_2 
+			}
 		}
 		portraits={
 			army={
@@ -277,7 +292,7 @@ characters={
 		}
 	}
 	RUS_kalina={
-		name="Kalina"
+		name=RUS_kalina
 		advisor={
 			slot = high_command
 			idea_token = RUS_kalina
@@ -316,7 +331,7 @@ characters={
 		}
 	}
 	RUS_berezovich_kryuger={
-		name="Berezovich Kryuger"
+		name=RUS_berezovich_kryuger
 		advisor={
 			slot = high_command
 			idea_token = RUS_berezovich_kryuger
@@ -355,10 +370,35 @@ characters={
 		}
 	}
 	RUS_bronya_zaychik={
-		name="Bronya Zaychik"
+		name="RUS_bronya_zaychik"
 		portraits={
 			civilian={
 				large="gfx/leaders/RUS/Portrait_Bronya_Zaychik.dds"
+			}
+			army={
+				small="GFX_idea_RUS_bronya_zaychik"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RUS_bronya_zaychik
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+				or  = {
+					has_country_flag  = RUS_Kadoc_SR_deal_set 
+					has_completed_focus  = rus_restore_the_democracy 
+				}
+				not  = {
+					has_country_flag  = RUS_Zaychik_dead 
+				}
+			}
+			traits  = {
+				Ural_Silver_Wolf 
+			}
+			ai_will_do  = {
+				factor  = 3.000
 			}
 		}
 		country_leader={
@@ -368,7 +408,7 @@ characters={
 		}
 	}
 	RUS_vladimir_makarov={
-		name="Vladimir Makarov"
+		name=RUS_vladimir_makarov
 		advisor={
 			slot = high_command
 			idea_token = RUS_vladimir_makarov
@@ -452,10 +492,10 @@ characters={
 		}
 	}
 	RUS_pyotr_wrangel={
-		name="Pyotr Wrangel"
+		name=RUS_pyetr_vrangel
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_pyetr_vrangel"
 			}
 			army={
 				large="gfx/leaders/RUS/portrait_Pyotr_Wrangel.png"
@@ -469,6 +509,27 @@ characters={
 			planning_skill=4
 			logistics_skill=2
 			legacy_id=460
+		}
+		advisor={
+			slot = army_chief
+			idea_token = RUS_pyetr_vrangel
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+				not  = {
+					has_country_flag  = rus_wranger_dead_flag 
+				}
+				not  = {
+					has_idea  = RUS_entente_observe_committee 
+				}
+			}
+			traits  = {
+				black_baron 
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
 		}
 	}
 	RUS_anatoly_pepelyaev={
@@ -875,7 +936,7 @@ characters={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/RUS/Portrait_RUS_Anton_Turkul.tga"
+				large="gfx/leaders/RUS/Portrait_RUS_Anton_Turkul.png"
 			}
 		}
 		corps_commander={
@@ -915,7 +976,7 @@ characters={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/RUS/Portrait_RUS_Ivan_Romanovsky.tga"
+				large="gfx/leaders/RUS/Portrait_RUS_Ivan_Romanovsky.png"
 			}
 		}
 		corps_commander={
@@ -949,24 +1010,24 @@ characters={
 		}
 	}
 	RUS_sergei_markov={
-		name="Sergei Markov"
+		name=RUS_sergey_markov
 		advisor={
 			slot = high_command
 			idea_token = RUS_sergey_markov
 			allowed  = {
-					original_tag  = RUS
+				original_tag  = RUS
+			}
+			available  = {
+				not  = {
+					has_country_flag  = RUS_Some_generals_left_flag 
 				}
-				available  = {
-					not  = {
-						has_country_flag  = RUS_Some_generals_left_flag 
-					}
-				}
-				traits  = {
-					army_armored_2 
-				}
-				ai_will_do  = {
-					factor  = 3.000
-				}
+			}
+			traits  = {
+				army_armored_2 
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
 		}
 		portraits={
 			army={
@@ -1007,13 +1068,28 @@ characters={
 		}
 	}
 	RUS_roman_von_ungernsternberg={
-		name="Roman von Ungern-Sternberg"
+		name=RUS_roman_sternberg
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_roman_sternberg"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Ungern_Sternberg.dds"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RUS_roman_sternberg
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+			}
+			traits  = {
+				Predator 
+			}
+			ai_will_do  = {
+				factor  = 2.000
 			}
 		}
 		corps_commander={
@@ -1027,13 +1103,28 @@ characters={
 		}
 	}
 	RUS_aleksandr_kolchak={
-		name="Aleksandr Kolchak"
+		name=RUS_alexandr_kolchak
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_alexandr_kolchak"
 			}
 			army={
 				large="gfx/leaders/RUS/portrait_Alexander_Kolchak.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = RUS_alexandr_kolchak
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+				not  = {
+					has_country_flag  = rus_kolchack_dead 
+				}
+			}
+			traits  = {
+				navy_fleet_logistics_3 
 			}
 		}
 		navy_leader={
@@ -1047,10 +1138,10 @@ characters={
 		}
 	}
 	RUS_boris_vilkitsky={
-		name="Boris Vilkitsky"
+		name=RUS_boris_andreyevich_vilkitsky
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_boris_andreyevich_vilkitsky"
 			}
 			army={
 				large="gfx/leaders/RUS/Portrait_Boris_Andreyevich_Vilkitsky.dds"
@@ -1064,6 +1155,19 @@ characters={
 			coordination_skill=1
 			legacy_id=-1
 		}
+		advisor={
+			slot = navy_chief
+			idea_token = RUS_boris_andreyevich_vilkitsky
+			allowed  = {
+				original_tag  = RUS
+			}
+			available  = {
+			}
+			traits  = {
+				navy_chief_commerce_raiding_2 
+			}
+		}
+
 	}
 	RUS_georges_florovsky={
 		advisor={
@@ -1085,7 +1189,7 @@ characters={
 					factor  = 1.000
 				}
 		}
-		name="RUS_georges_florovsky"
+		name=RUS_georges_florovsky
 		portraits={
 			army={
 				small="GFX_idea_RUS_georges_florovsky"
@@ -1126,10 +1230,11 @@ characters={
 					factor  = 4.000
 				}
 		}
-		name="RUS_matou_shinji"
+		name=RUS_matou_shinji
 		portraits={
 			army={
 				small="GFX_idea_RUS_matou_shinji"
+				large="gfx/leaders/RUS/Portrait_Matou_Shinji.dds"
 			}
 		}
 	}
@@ -1159,7 +1264,7 @@ characters={
 					factor  = 2.000
 				}
 		}
-		name="RUS_anna_viktorovna"
+		name=RUS_anna_viktorovna
 		portraits={
 			army={
 				small="GFX_idea_RUS_anna_viktorovna"
@@ -1234,38 +1339,11 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RUS_tatenashi_sarashiki"
+				large="gfx/leaders/RUS/Portrait_Tatenashi_Sarashiki.dds"
 			}
 		}
 	}
-	RUS_pyetr_vrangel={
-		advisor={
-			slot = army_chief
-			idea_token = RUS_pyetr_vrangel
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					not  = {
-						has_country_flag  = rus_wranger_dead_flag 
-					}
-					not  = {
-						has_idea  = RUS_entente_observe_committee 
-					}
-				}
-				traits  = {
-					black_baron 
-				}
-				ai_will_do  = {
-					factor  = 3.000
-				}
-		}
-		name="RUS_pyetr_vrangel"
-		portraits={
-			army={
-				small="GFX_idea_RUS_pyetr_vrangel"
-			}
-		}
-	}
+
 	RUS_alexander_ivanovich_knovalov={
 		advisor={
 			slot = political_advisor
@@ -1433,26 +1511,7 @@ characters={
 			}
 		}
 	}
-	RUS_boris_andreyevich_vilkitsky={
-		advisor={
-			slot = navy_chief
-			idea_token = RUS_boris_andreyevich_vilkitsky
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-				}
-				traits  = {
-					navy_chief_commerce_raiding_2 
-				}
-		}
-		name="RUS_boris_andreyevich_vilkitsky"
-		portraits={
-			army={
-				small="GFX_idea_RUS_boris_andreyevich_vilkitsky"
-			}
-		}
-	}
+
 	RUS_boris_vasilchikov={
 		advisor={
 			slot = political_advisor
@@ -1482,17 +1541,17 @@ characters={
 			slot = political_advisor
 			idea_token = RUS_ivan_serov
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_reorganize_Okhrana 
-				}
-				traits  = {
-					prince_of_terror head_of_intelligence 
-				}
-				ai_will_do  = {
-					factor  = 2.000
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_reorganize_Okhrana 
+			}
+			traits  = {
+				prince_of_terror head_of_intelligence 
+			}
+			ai_will_do  = {
+				factor  = 2.000
+			}
 		}
 		name="RUS_ivan_serov"
 		portraits={
@@ -1534,17 +1593,17 @@ characters={
 			slot = political_advisor
 			idea_token = RUS_nikolai_chebotaryov
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_spirit_of_kazan 
-				}
-				traits  = {
-					Mining_Engineer Founder_of_ROA 
-				}
-				ai_will_do  = {
-					factor  = 5.000
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_spirit_of_kazan 
+			}
+			traits  = {
+				Mining_Engineer Founder_of_ROA 
+			}
+			ai_will_do  = {
+				factor  = 5.000
+			}
 		}
 		name="RUS_nikolai_chebotaryov"
 		portraits={
@@ -1558,15 +1617,15 @@ characters={
 			slot = political_advisor
 			idea_token = RUS_alexander_guchkov
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_Octobrists_win 
-					is_puppet  = no 
-				}
-				traits  = {
-					socialite_connections democratic_reformer 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_Octobrists_win 
+				is_puppet  = no 
+			}
+			traits  = {
+				socialite_connections democratic_reformer 
+			}
 		}
 		name="RUS_alexander_guchkov"
 		portraits={
@@ -1600,13 +1659,13 @@ characters={
 			slot = air_chief
 			idea_token = RUS_evgeniy_miller
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-				}
-				traits  = {
-					air_airborne_2 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+			}
+			traits  = {
+				air_airborne_2 
+			}
 		}
 		name="RUS_evgeniy_miller"
 		portraits={
@@ -1640,45 +1699,23 @@ characters={
 			}
 		}
 	}
-	RUS_roman_sternberg={
-		advisor={
-			slot = high_command
-			idea_token = RUS_roman_sternberg
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-				}
-				traits  = {
-					Predator 
-				}
-				ai_will_do  = {
-					factor  = 2.000
-				}
-		}
-		name="RUS_roman_sternberg"
-		portraits={
-			army={
-				small="GFX_idea_RUS_roman_sternberg"
-			}
-		}
-	}
+
 	RUS_simon_kuznets={
 		advisor={
 			slot = political_advisor
 			idea_token = RUS_simon_kuznets
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_national_investment_bank 
-				}
-				traits  = {
-					financial_expert 
-				}
-				ai_will_do  = {
-					factor  = 2.000
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_national_investment_bank 
+			}
+			traits  = {
+				financial_expert 
+			}
+			ai_will_do  = {
+				factor  = 2.000
+			}
 		}
 		name="RUS_simon_kuznets"
 		portraits={
@@ -1692,15 +1729,15 @@ characters={
 			slot = political_advisor
 			idea_token = RUS_viktor_chernov
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_PSR_comes_back 
-					is_puppet  = no 
-				}
-				traits  = {
-					democratic_reformer 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_PSR_comes_back 
+				is_puppet  = no 
+			}
+			traits  = {
+				democratic_reformer 
+			}
 		}
 		name="RUS_viktor_chernov"
 		portraits={
@@ -1714,15 +1751,15 @@ characters={
 			slot = political_advisor
 			idea_token = RUS_irakli_tsereteli
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_Menshviks_win 
-					is_puppet  = no 
-				}
-				traits  = {
-					democratic_reformer 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_Menshviks_win 
+				is_puppet  = no 
+			}
+			traits  = {
+				democratic_reformer 
+			}
 		}
 		name="RUS_irakli_tsereteli"
 		portraits={
@@ -1731,107 +1768,32 @@ characters={
 			}
 		}
 	}
-	RUS_alexandr_kolchak={
-		advisor={
-			slot = navy_chief
-			idea_token = RUS_alexandr_kolchak
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					not  = {
-						has_country_flag  = rus_kolchack_dead 
-					}
-				}
-				traits  = {
-					navy_fleet_logistics_3 
-				}
-		}
-		name="RUS_alexandr_kolchak"
-		portraits={
-			army={
-				small="GFX_idea_RUS_alexandr_kolchak"
-			}
-		}
-	}
+
 	RUS_g_k={
 		advisor={
 			slot = theorist
 			idea_token = RUS_g_k
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					has_completed_focus  = rus_continue_modernization 
-				}
-				research_bonus  = {
-					cat_grand_battle_plan  = 0.150
-					cat_mass_assault  = 0.150
-				}
-				modifier  = {
-					production_speed_arms_factory_factor  = 0.050
-				}
-				traits  = {
-					safety_contractor 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+				has_completed_focus  = rus_continue_modernization 
+			}
+			research_bonus  = {
+				cat_grand_battle_plan  = 0.150
+				cat_mass_assault  = 0.150
+			}
+			modifier  = {
+				production_speed_arms_factory_factor  = 0.050
+			}
+			traits  = {
+				safety_contractor 
+			}
 		}
 		name="RUS_g_k"
 		portraits={
 			army={
 				small="GFX_idea_RUS_g_k"
-			}
-		}
-	}
-	RUS_nikolay_krylov={
-		advisor={
-			slot = army_chief
-			idea_token = RUS_nikolay_krylov
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					not  = {
-						has_idea  = RUS_entente_observe_committee 
-					}
-				}
-				traits  = {
-					army_chief_reform_2 
-				}
-		}
-		name="RUS_nikolay_krylov"
-		portraits={
-			army={
-				small="GFX_idea_RUS_nikolay_krylov"
-			}
-		}
-	}
-	RUS_bronya_zaychik={
-		advisor={
-			slot = high_command
-			idea_token = RUS_bronya_zaychik
-			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-					or  = {
-						has_country_flag  = RUS_Kadoc_SR_deal_set 
-						has_completed_focus  = rus_restore_the_democracy 
-					}
-					not  = {
-						has_country_flag  = RUS_Zaychik_dead 
-					}
-				}
-				traits  = {
-					Ural_Silver_Wolf 
-				}
-				ai_will_do  = {
-					factor  = 3.000
-				}
-		}
-		name="RUS_bronya_zaychik"
-		portraits={
-			army={
-				small="GFX_idea_RUS_bronya_zaychik"
 			}
 		}
 	}

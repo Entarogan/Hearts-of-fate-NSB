@@ -175,10 +175,12 @@ characters={
 
 			cost = 100
 			research_bonus = {
-				land_doctrine = 0.10
+				#land_doctrine = 0.10
 				armor = 0.1
 			}
-
+			modifier = {
+				land_doctrine_cost_factor = -0.1
+			}
 			traits = { GER_guderian_T }
 
 			ai_will_do = {

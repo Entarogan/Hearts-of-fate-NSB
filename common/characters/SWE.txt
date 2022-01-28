@@ -357,9 +357,6 @@ characters={
 						tag  = FIN
 					}
 				}
-				research_bonus  = {
-					air_doctrine  = 0.150
-				}
 				traits  = {
 					angry_birds 
 				}
@@ -426,9 +423,7 @@ characters={
 				available  = {
 					has_completed_focus  = swe_paradox 
 				}
-				research_bonus  = {
-					land_doctrine  = 0.150
-				}
+				
 				traits  = {
 					hearts_of_iron_4 CPU0 
 				}

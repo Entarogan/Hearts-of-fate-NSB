@@ -2375,9 +2375,11 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.15
+				#land_doctrine = 0.15
 			}
-			
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+			}
 			picture = reines_theorists
 			
 			traits = { military_theorist }
@@ -2406,9 +2408,11 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.08
+				#land_doctrine = 0.08
 			}
-			
+			modifier = {
+				land_doctrine_cost_factor = -0.08
+			}
 			picture = animusphere
 			
 			traits = { elite_action }

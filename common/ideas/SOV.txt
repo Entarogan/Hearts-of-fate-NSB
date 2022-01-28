@@ -607,9 +607,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.10
-				naval_doctrine = -0.10
-				air_doctrine = -0.10
+				#land_doctrine = -0.10
+				#naval_doctrine = -0.10
+				#air_doctrine = -0.10
 			}
 
 			modifier = {
@@ -619,6 +619,10 @@ ideas = {
 				send_volunteer_factor = -0.8
 				industrial_capacity_factory = -0.2
 				training_time_factor = 0.2
+
+				land_doctrine_cost_factor = 0.1
+				naval_doctrine_cost_factor = 0.1
+				air_doctrine_cost_factor = 0.1
 			}
 		}
 
@@ -636,9 +640,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.09
-				naval_doctrine = -0.09
-				air_doctrine = -0.09
+				#land_doctrine = -0.09
+				#naval_doctrine = -0.09
+				#air_doctrine = -0.09
 			}
 
 			modifier = {
@@ -648,6 +652,10 @@ ideas = {
 				send_volunteer_factor = -0.74
 				industrial_capacity_factory = -0.18
 				training_time_factor = 0.18
+
+				land_doctrine_cost_factor = 0.09
+				naval_doctrine_cost_factor = 0.09
+				air_doctrine_cost_factor = 0.09
 			}
 		}
 		officers_purged_3 = {
@@ -664,9 +672,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.08
-				naval_doctrine = -0.08
-				air_doctrine = -0.08				
+				#land_doctrine = -0.08
+				#naval_doctrine = -0.08
+				#air_doctrine = -0.08				
 			}
 
 			modifier = {
@@ -676,6 +684,10 @@ ideas = {
 				send_volunteer_factor = -0.68
 				industrial_capacity_factory = -0.16
 				training_time_factor = 0.16
+
+				land_doctrine_cost_factor = 0.08
+				naval_doctrine_cost_factor = 0.08
+				air_doctrine_cost_factor = 0.08
 			}
 		}
 		officers_purged_4 = {
@@ -692,9 +704,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.07
-				naval_doctrine = -0.07
-				air_doctrine = -0.07				
+				#land_doctrine = -0.07
+				#naval_doctrine = -0.07
+				#air_doctrine = -0.07				
 			}
 
 			modifier = {
@@ -704,6 +716,10 @@ ideas = {
 				send_volunteer_factor = -0.62
 				industrial_capacity_factory = -0.14
 				training_time_factor = 0.14
+
+				land_doctrine_cost_factor = 0.07
+				naval_doctrine_cost_factor = 0.07
+				air_doctrine_cost_factor = 0.07
 			}
 		}
 		officers_purged_5 = {
@@ -720,9 +736,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.06
-				naval_doctrine = -0.06
-				air_doctrine = -0.06
+				#land_doctrine = -0.06
+				#naval_doctrine = -0.06
+				#air_doctrine = -0.06
 			}
 
 			modifier = {
@@ -732,6 +748,11 @@ ideas = {
 				send_volunteer_factor = -0.56
 				industrial_capacity_factory = -0.12
 				training_time_factor = 0.12
+
+				
+				land_doctrine_cost_factor = 0.06
+				naval_doctrine_cost_factor = 0.06
+				air_doctrine_cost_factor = 0.06
 			}
 		}
 		officers_purged_6 = {
@@ -748,9 +769,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.05
-				naval_doctrine = -0.05
-				air_doctrine = -0.05
+				#land_doctrine = -0.05
+				#naval_doctrine = -0.05
+				#air_doctrine = -0.05
 			}
 
 			modifier = {
@@ -760,6 +781,10 @@ ideas = {
 				send_volunteer_factor = -0.5
 				industrial_capacity_factory = -0.10
 				training_time_factor = 0.10
+
+				land_doctrine_cost_factor = 0.05
+				naval_doctrine_cost_factor = 0.05
+				air_doctrine_cost_factor = 0.05
 			}
 		}
 		officers_purged_7 = {
@@ -776,9 +801,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.04
-				naval_doctrine = -0.04
-				air_doctrine = -0.04
+				#land_doctrine = -0.04
+				#naval_doctrine = -0.04
+				#air_doctrine = -0.04
 			}
 
 			modifier = {
@@ -788,6 +813,10 @@ ideas = {
 				send_volunteer_factor = -0.44
 				industrial_capacity_factory = -0.08
 				training_time_factor = 0.08
+
+				land_doctrine_cost_factor = 0.04
+				naval_doctrine_cost_factor = 0.04
+				air_doctrine_cost_factor = 0.04
 			}
 		}
 		officers_purged_8 = {
@@ -804,9 +833,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.03
-				naval_doctrine = -0.03
-				air_doctrine = -0.03
+				#land_doctrine = -0.03
+				#naval_doctrine = -0.03
+				#air_doctrine = -0.03
 			}
 
 			modifier = {
@@ -816,6 +845,10 @@ ideas = {
 				send_volunteer_factor = -0.38
 				industrial_capacity_factory = -0.06
 				training_time_factor = 0.06
+
+				land_doctrine_cost_factor = 0.03
+				naval_doctrine_cost_factor = 0.03
+				air_doctrine_cost_factor = 0.03
 			}
 		}
 		officers_purged_9 = {
@@ -832,9 +865,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.02
-				naval_doctrine = -0.02
-				air_doctrine = -0.02
+				#land_doctrine = -0.02
+				#naval_doctrine = -0.02
+				#air_doctrine = -0.02
 			}
 
 			modifier = {
@@ -844,6 +877,10 @@ ideas = {
 				send_volunteer_factor = -0.32
 				industrial_capacity_factory = -0.04
 				training_time_factor = 0.04
+
+				land_doctrine_cost_factor = 0.02
+				naval_doctrine_cost_factor = 0.02
+				air_doctrine_cost_factor = 0.02
 			}
 		}
 		officers_purged_10 = {
@@ -860,9 +897,9 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = -0.01
-				naval_doctrine = -0.01
-				air_doctrine = -0.01
+				#land_doctrine = -0.01
+				#naval_doctrine = -0.01
+				#air_doctrine = -0.01
 			}
 
 			modifier = {
@@ -872,6 +909,10 @@ ideas = {
 				send_volunteer_factor = -0.26
 				industrial_capacity_factory = -0.02
 				training_time_factor = 0.02
+
+				land_doctrine_cost_factor = 0.01
+				naval_doctrine_cost_factor = 0.01
+				air_doctrine_cost_factor = 0.01
 			}
 		}
 

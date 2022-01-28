@@ -1749,9 +1749,9 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 							name = POL_the_twin_threats
-							bonus = 1.0
+							cost_reduction = 0.5
 							uses = 1
 							category = naval_doctrine
 						}
@@ -1840,9 +1840,9 @@ focus_tree = {
 				}
 			available_if_capitulated = yes
 			completion_reward = {
-					add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 							name = POL_baltic_navy
-							bonus = 1.0
+							cost_reduction = 0.5
 							uses = 1
 							category = naval_doctrine
 						}

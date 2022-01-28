@@ -6301,9 +6301,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = MEX_brown_water_navy
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -6364,9 +6364,9 @@ focus_tree = {
 				remove_idea = MEX_brown_water_navy
 				add_idea = MEX_blue_water_navy
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -6422,9 +6422,9 @@ focus_tree = {
 				remove_idea = MEX_brown_water_navy
 				add_idea = MEX_raiding_navy
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = naval_doctrine
 			}
@@ -6471,9 +6471,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 30
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -7316,9 +7316,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 150
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = modern_army
-				bonus = 1
+				cost_reduction = 0.5
 				category = land_doctrine
 				uses = 2
 			}
@@ -7353,9 +7353,9 @@ focus_tree = {
 
 		completion_reward = {
 			army_experience = 150
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = modern_army
-				bonus = 1
+				cost_reduction = 0.5
 				category = land_doctrine
 				uses = 2
 			}

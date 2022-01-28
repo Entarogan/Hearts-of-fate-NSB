@@ -801,10 +801,11 @@ ideas = {
 				experience_gain_air = 0.05
 				experience_gain_air_factor = 0.1
 				air_training_xp_gain_factor = 0.2
+				air_doctrine_cost_factor = -0.1
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.10
+				#air_doctrine = 0.10
 			}
 		}
 		

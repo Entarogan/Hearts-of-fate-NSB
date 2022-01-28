@@ -1,0 +1,14 @@
+characters={
+	RUS_Victoria_Romanovna={
+		name="Victoria Romanovna"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_Victoria_Romanovna.png"
+			}
+		}
+	}
+
+}

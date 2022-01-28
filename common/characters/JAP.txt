@@ -171,8 +171,11 @@ characters={
 				tag = JAP
 			}
 			research_bonus = {
-				land_doctrine = 0.1
+				#land_doctrine = 0.1
 				infantry_weapons = 0.1
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.1
 			}
 			available = { 
 				NOT = {
@@ -1046,10 +1049,12 @@ characters={
 			}
 			research_bonus = {
 				cat_superior_firepower = 0.1
-				air_doctrine = 0.1
+				#air_doctrine = 0.1
 				artillery = 0.05
 				light_fighter = 0.05
-				
+			}
+			modifier = {
+				air_doctrine_cost_factor = -0.1
 			}
 			traits = { army_agility_fire }
 		}
@@ -2829,9 +2834,12 @@ characters={
 			}
 			cost = 150
 			research_bonus = {
-				naval_doctrine = 0.07
+				#naval_doctrine = 0.07
 			}
-			
+			modifier = {
+
+				naval_doctrine_cost_factor = -0.07
+			}
 			traits = { command_system }
 
 			ai_will_do = {

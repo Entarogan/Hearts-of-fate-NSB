@@ -1515,10 +1515,11 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			research_bonus = {
-				land_doctrine = -0.5
+				#land_doctrine = -0.5
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = 0.5
 				conscription = -0.005
 			    war_support_factor = -0.3
 				army_org_factor = -0.1
@@ -1544,10 +1545,11 @@ ideas = {
 			picture = generic_victors_of_ww1
 			
 			research_bonus = {
-				land_doctrine = 0.1
+				#land_doctrine = 0.1
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = -0.1
 				conscription = -0.005
 			    war_support_factor = -0.2
 				army_org_factor = -0.1
@@ -1572,10 +1574,11 @@ ideas = {
 			picture = generic_victors_of_ww1
 
 			research_bonus = {
-				land_doctrine = 0.1
+				#land_doctrine = 0.1
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = -0.1
 				conscription = 0.015
 				max_dig_in = 5
 				army_defence_factor = 0.1
@@ -1598,10 +1601,11 @@ ideas = {
 			picture = generic_war_preparation
 
 			research_bonus = {
-				land_doctrine = 0.1
+				#land_doctrine = 0.1
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = -0.1
 				conscription = 0.05
 				army_org_factor = 0.1
 		    army_defence_factor = 0.1
@@ -1627,10 +1631,11 @@ ideas = {
 			picture = generic_war_preparation
 
 			research_bonus = {
-				land_doctrine = 0.1
+				#land_doctrine = 0.1
 			}
 
 			modifier = {
+				land_doctrine_cost_factor = -0.1
 				conscription = 0.05
 				army_org_factor = 0.1
 		    army_attack_factor = 0.10
@@ -1999,14 +2004,12 @@ ideas = {
 			picture = general_staff
 
 			modifier = {
-		    research_speed_factor = -0.05
+		    	research_speed_factor = -0.05
+				land_doctrine_cost_factor = -0.25
+				naval_doctrine_cost_factor = -0.15
+				air_doctrine_cost_factor = -0.15
 			}
-
-			research_bonus = {
-				land_doctrine = 0.25
-				air_doctrine = 0.15
-        naval_doctrine = 0.15
-			}
+			
 		}
 		
 		FRA_Inverted_cross_idea = { #倒十字

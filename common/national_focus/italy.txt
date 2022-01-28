@@ -1110,9 +1110,9 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}
@@ -1268,9 +1268,9 @@ focus_tree = {
 				category = ss_tech
 			}
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = submarine_doctrine
 			}

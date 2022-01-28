@@ -1265,9 +1265,9 @@ focus_tree = {
 		relative_position_id = ira_mediterrean_navy
     completion_reward = {
       #### Protect Western Shore
-      add_tech_bonus = {
+      add_doctrine_cost_reduction = {
         name = ira_protect_western_shore
-        bonus = 1.0
+        cost_reduction = 0.5
         uses = 3
         category = naval_doctrine
       }

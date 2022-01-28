@@ -887,9 +887,14 @@ ideas = {
 				marine_tech = 0.20
 				para_tech = 0.20
 				mountaineers_tech = 0.20
-				land_doctrine = 0.05
-				air_doctrine = 0.05
-				naval_doctrine = 0.05
+				#land_doctrine = 0.05
+				#air_doctrine = 0.05
+				#naval_doctrine = 0.05
+			}
+			modifier = {
+				land_doctrine_cost_factor = -0.05
+				naval_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
 			}
 		}
 		

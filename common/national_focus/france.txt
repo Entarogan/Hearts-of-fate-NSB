@@ -358,9 +358,9 @@ focus_tree = {
 							uses = 3
 							category = naval_equipment
 						}
-					add_tech_bonus = {
+						add_doctrine_cost_reduction = {
 							name = ncooperation_focus_doctrine
-							bonus = 0.75
+							cost_reduction = 0.35
 							uses = 3
 							category = naval_doctrine
 						}
@@ -7708,9 +7708,9 @@ country_event = {
 		}
 
 			completion_reward = {
-					add_tech_bonus = {
+				add_doctrine_cost_reduction = {
 							name = FRA_naval_doctrine_effort
-							bonus = 1.0
+							cost_reduction = 0.5
 							uses = 2
 							category = naval_doctrine
 						}

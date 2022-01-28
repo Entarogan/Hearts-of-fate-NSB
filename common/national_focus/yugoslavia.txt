@@ -3315,9 +3315,9 @@ focus_tree = {
 
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = YUG_contest_the_adriatic
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine
 			}

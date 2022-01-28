@@ -2159,9 +2159,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = swe_gate_of_skye
         completion_reward = {
-            add_tech_bonus = {
+            add_doctrine_cost_reduction = {
 				name = swe_claim_north_scotland
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = naval_doctrine	
 			}
