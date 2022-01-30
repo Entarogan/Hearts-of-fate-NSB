@@ -358,15 +358,9 @@ focus_tree = {
 							uses = 3
 							category = naval_equipment
 						}
-<<<<<<< HEAD
 						add_doctrine_cost_reduction = {
 							name = ncooperation_focus_doctrine
 							cost_reduction = 0.35
-=======
-					add_doctrine_cost_reduction = {
-							name = ncooperation_focus_doctrine
-							bonus = 0.25
->>>>>>> 0824ebd (Naval Doctrine)
 							uses = 3
 							category = naval_doctrine
 						}
