@@ -1267,7 +1267,11 @@ focus_tree = {
       #### Protect Western Shore
       add_doctrine_cost_reduction = {
         name = ira_protect_western_shore
+<<<<<<< HEAD
         cost_reduction = 0.5
+=======
+        bonus = 0.5
+>>>>>>> 0824ebd (Naval Doctrine)
         uses = 3
         category = naval_doctrine
       }

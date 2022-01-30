@@ -3304,9 +3304,15 @@
 
 			add_to_tech_sharing_group = HUN_United_Naval_Academy_exchange
 
+<<<<<<< HEAD
 			add_doctrine_cost_reduction = {
         name = HUN_United_Naval_Academy
         cost_reduction = 0.75
+=======
+      add_doctrine_cost_reduction = {
+        name = HUN_United_Naval_Academy
+        bonus = 0.60
+>>>>>>> 0824ebd (Naval Doctrine)
         uses = 1
         category = naval_doctrine
       }
@@ -3314,9 +3320,15 @@
 
 			  add_to_tech_sharing_group = HUN_United_Naval_Academy_exchange
 
+<<<<<<< HEAD
 			  add_doctrine_cost_reduction = {
           name = HUN_United_Naval_Academy
           cost_reduction = 0.25
+=======
+        add_doctrine_cost_reduction = {
+          name = HUN_United_Naval_Academy
+          bonus = 0.33
+>>>>>>> 0824ebd (Naval Doctrine)
           uses = 1
           category = naval_doctrine
         }

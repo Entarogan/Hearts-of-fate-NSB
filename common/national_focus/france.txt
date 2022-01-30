@@ -352,15 +352,21 @@ focus_tree = {
 			  factor = 5
 			}
 			completion_reward = {
-					add_tech_bonus = {
+					add_doctrine_cost_reduction = {
 							name = ncooperation_focus
-							bonus = 0.75
+							bonus = 0.25
 							uses = 3
 							category = naval_equipment
 						}
+<<<<<<< HEAD
 						add_doctrine_cost_reduction = {
 							name = ncooperation_focus_doctrine
 							cost_reduction = 0.35
+=======
+					add_doctrine_cost_reduction = {
+							name = ncooperation_focus_doctrine
+							bonus = 0.25
+>>>>>>> 0824ebd (Naval Doctrine)
 							uses = 3
 							category = naval_doctrine
 						}
@@ -7708,9 +7714,15 @@ country_event = {
 		}
 
 			completion_reward = {
+<<<<<<< HEAD
 				add_doctrine_cost_reduction = {
 							name = FRA_naval_doctrine_effort
 							cost_reduction = 0.5
+=======
+					add_doctrine_cost_reduction = {
+							name = FRA_naval_doctrine_effort
+							bonus = 0.5
+>>>>>>> 0824ebd (Naval Doctrine)
 							uses = 2
 							category = naval_doctrine
 						}

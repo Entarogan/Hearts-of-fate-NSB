@@ -1112,7 +1112,11 @@ focus_tree = {
 			navy_experience = 25
 			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
+<<<<<<< HEAD
 				cost_reduction = 0.5
+=======
+				bonus = 0.5
+>>>>>>> 0824ebd (Naval Doctrine)
 				uses = 2
 				category = naval_doctrine
 			}
@@ -6697,9 +6701,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = ita_imeprial_dockyard
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ita_mid_naval_doctrine
-				bonus = 1.5
+				bonus = 0.60
 				uses = 2
 				category = naval_doctrine
 			}
