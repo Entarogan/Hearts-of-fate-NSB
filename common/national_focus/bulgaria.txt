@@ -1096,11 +1096,7 @@ focus_tree = {
 			air_experience = 15
 			add_doctrine_cost_reduction = {
 				name = BUL_vasil_levsky_national_military_university
-<<<<<<< HEAD
 			    cost_reduction = 0.35
-=======
-			    bonus = 0.20
->>>>>>> 0824ebd (Naval Doctrine)
 			    uses = 2
 				category = land_doctrine
 				category = naval_doctrine
@@ -1327,11 +1323,7 @@ focus_tree = {
 			navy_experience = 15
 			add_doctrine_cost_reduction = {
 				name = BUL_a_black_sea_fleet
-<<<<<<< HEAD
 			    cost_reduction = 0.35
-=======
-			    bonus = 0.25
->>>>>>> 0824ebd (Naval Doctrine)
 			    uses = 1
 				category = naval_doctrine
 			}
@@ -2279,14 +2271,8 @@ focus_tree = {
 			navy_experience = 25
 			add_doctrine_cost_reduction = {
 				name = BUL_a_powerful_bulgarian_navy
-<<<<<<< HEAD
 			    cost_reduction = 0.5
 			    uses = 1
-=======
-			    bonus = 0.5
-			    uses = 2
-			    category = bb_tech
->>>>>>> 0824ebd (Naval Doctrine)
 			    category = naval_doctrine
 			}
 			add_tech_bonus = {
@@ -2317,11 +2303,7 @@ focus_tree = {
 			navy_experience = 25
 			add_doctrine_cost_reduction = {
 				name = BUL_modern_tactics
-<<<<<<< HEAD
 			    cost_reduction = 0.5
-=======
-			    bonus = 0.5
->>>>>>> 0824ebd (Naval Doctrine)
 			    uses = 2
 			    category = naval_doctrine
 			}
@@ -3249,15 +3231,9 @@ focus_tree = {
 
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-<<<<<<< HEAD
 			add_doctrine_cost_reduction = { 
 				name = BUL_darzhavna_samoletna_fabrika
 			    cost_reduction = 0.5
-=======
-			add_doctrine_cost_reduction = {
-				name = BUL_darzhavna_samoletna_fabrika
-			    bonus = 0.5
->>>>>>> 0824ebd (Naval Doctrine)
 			    uses = 2
 				category = land_doctrine
 				category = air_doctrine
@@ -7348,11 +7324,7 @@ focus_tree = {
 			navy_experience = 50
 			add_doctrine_cost_reduction = {
 				name = BUL_consolidate_dominance_of_the_seas
-<<<<<<< HEAD
 			    cost_reduction = 0.5
-=======
-			    bonus = 0.5
->>>>>>> 0824ebd (Naval Doctrine)
 			    uses = 2
 				category = naval_doctrine
 			}

@@ -4929,11 +4929,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = JAP_prepare_for_war_with_the_us_tech
-<<<<<<< HEAD
 				cost_reduction = 0.75
-=======
-				bonus = 0.60
->>>>>>> 0824ebd (Naval Doctrine)
 				uses = 1
 				category = naval_doctrine
 			}
@@ -5151,11 +5147,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = JAP_strike_south_doctrine
-<<<<<<< HEAD
 				cost_reduction = 0.5
-=======
-				bonus = 0.5
->>>>>>> 0824ebd (Naval Doctrine)
 				uses = 2
 				category = naval_doctrine
 			}

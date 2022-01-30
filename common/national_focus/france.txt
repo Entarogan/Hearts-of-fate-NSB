@@ -7714,15 +7714,9 @@ country_event = {
 		}
 
 			completion_reward = {
-<<<<<<< HEAD
 				add_doctrine_cost_reduction = {
 							name = FRA_naval_doctrine_effort
 							cost_reduction = 0.5
-=======
-					add_doctrine_cost_reduction = {
-							name = FRA_naval_doctrine_effort
-							bonus = 0.5
->>>>>>> 0824ebd (Naval Doctrine)
 							uses = 2
 							category = naval_doctrine
 						}
