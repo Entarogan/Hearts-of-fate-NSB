@@ -4464,6 +4464,23 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			if = {
+				limit = {
+					has_full_control_of_state = 223 #TULA
+				}
+				223 = { #TULA
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = synthetic_refinery
+						level = 1
+						instant_build = yes
+					}
+				}
+				# Moscow - Tula
+				build_railway = {
+					path = { 6380 6414 9348 6290 6396 6262 }
+				}
+			}
 
 			add_political_power = 120
 			add_resource = {
@@ -4779,6 +4796,46 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			# Moscow - Rostov on Don
+			build_railway = {
+				path = { 9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 }
+			}
+			# Stalingrad-Rostov on Don
+			build_railway = {
+				path = { 3529 9504 533 9516 509 500 11459 } #(Stalingrad - Conjunction near Millerovo)
+			}
+			# Stalingrad-Mikhaylovka 
+			build_railway = {
+				path = { 9504 3582 9436 11485 3539 9564 11408 } #(Conjunction right next to Stalingrad - Conjunction in West Saratov)
+			}
+			# Stalingrad - Astrakhan
+			build_railway = {
+				path = { 3529 11474 520 6516 6486 9455 11429 6620 9753 }
+			}
+			# Tbilisi - Yerevan
+			build_railway = {
+				path = { 1599 9702 12441 3564 12320 }
+			}
+
+			#Supply Hub in Yerevan
+			230 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 12320
+					instant_build = yes
+				}
+			}
+			#Supply Hub in Kandalaksha
+			213 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 6181
+					instant_build = yes
+				}
+			}
+
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Omsk
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Novo_Nikolayevsk
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Krasnoyarsk
@@ -5643,6 +5700,28 @@ focus_tree = {
 			remove_ideas = SOV_Ural_armor_production_idea
 
 			add_ideas = SOV_Soviet_industrial_power_idea
+			#Build Railways in Caucasus
+			if = {
+				limit = {
+					has_full_control_of_state = 229 #BAKU
+					has_full_control_of_state = 230 #ARMENIA
+					has_full_control_of_state = 231 #GEORGIA
+				}
+				# Baku - Tbilisi
+				build_railway = {
+					path = { 7661 1536 4614 4477 11645 11674 1539 11708 1599 }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 232 #DAGESTAN
+					has_full_control_of_state = 821 #CHECHNYA-INGUSHETIA
+				}
+				# Makhachkala (Hub province) - Grozny
+				build_railway = {
+					path = { 3668 3682 3672 }
+				}
+			}
 		}
 	}
 
