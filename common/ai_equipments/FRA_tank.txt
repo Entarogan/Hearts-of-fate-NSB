@@ -728,13 +728,9 @@ FRA_medium_tanks = {
 				special_type_slot_4 = additional_machine_guns
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 4
+				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = {
-					base = 2
-					modifier = {
-						add = 3
-						has_war = yes
-					}
+					base = 5
 				}
 			}
 		}
@@ -770,8 +766,8 @@ FRA_medium_tanks = {
 					} 
 				}
 				turret_type_slot = tank_medium_three_man_tank_turret
-				suspension_type_slot = tank_torsion_bar_suspension
-				armor_type_slot = tank_cast_armor
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_module
 				special_type_slot_2 = armor_skirts
@@ -782,13 +778,14 @@ FRA_medium_tanks = {
 				tank_nsb_engine_upgrade = 12
 				tank_nsb_armor_upgrade = 12
 			}
+	  }
 
 		allowed_modules = {
 			tank_medium_cannon
 			tank_medium_cannon_2
 			tank_medium_three_man_tank_turret
-			tank_torsion_bar_suspension
-			tank_cast_armor
+			tank_bogie_suspension
+			tank_welded_armor
 			tank_gasoline_engine
 			armor_skirts
 			tank_radio_3
@@ -891,8 +888,8 @@ FRA_medium_tank_destroyer = {
 			modules = {
 				main_armament_slot = { 
 					any_of = { 
-						tank_heavy_cannon 
 						tank_heavy_cannon_2
+						tank_heavy_cannon
 					} 
 				}
 				turret_type_slot = tank_medium_fixed_superstructure_turret
@@ -911,8 +908,8 @@ FRA_medium_tank_destroyer = {
 		}
 
 		allowed_modules = {
-			tank_heavy_cannon
 			tank_heavy_cannon_2
+			tank_heavy_cannon
 			tank_medium_fixed_superstructure_turret
 			tank_bogie_suspension
 			tank_welded_armor
@@ -1075,8 +1072,8 @@ FRA_medium_tank_artillery = {
 		}
 
 		allowed_modules = {
-			tank_medium_howitzer
 			tank_medium_howitzer_2
+			tank_medium_howitzer
 			tank_light_fixed_superstructure_turret
 			tank_gasoline_engine
 			tank_welded_armor

@@ -972,7 +972,7 @@ ENG_medium_tank_destroyer = {
 					}
 				}
 				turret_type_slot = tank_medium_fixed_superstructure_turret
-				suspension_type_slot = tank_bogie_suspension
+				suspension_type_slot = tank_christie_suspension
 				armor_type_slot = tank_welded_armor
 				engine_type_slot = tank_gasoline_engine
 				special_type_slot_1 = tank_radio_module
@@ -981,13 +981,9 @@ ENG_medium_tank_destroyer = {
 				special_type_slot_4 = additional_machine_guns
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 6
+				tank_nsb_engine_upgrade = 12
 				tank_nsb_armor_upgrade = {
-					base = 6
-					modifier = {
-						add = 6
-						has_war = yes
-					}
+					base = 11
 				}
 			}
 		}
@@ -997,7 +993,7 @@ ENG_medium_tank_destroyer = {
 			tank_high_velocity_cannon_2 
 			tank_high_velocity_cannon_3 
 			tank_medium_fixed_superstructure_turret
-			tank_bogie_suspension
+			tank_christie_suspension
 			tank_welded_armor
 			tank_gasoline_engine
 			tank_radio_3
@@ -1095,13 +1091,9 @@ ENG_medium_tank_artillery = {
 				special_type_slot_4 = extra_ammo_storage
 			}
 			upgrades = {
-				tank_nsb_engine_upgrade = 4
+				tank_nsb_engine_upgrade = 9
 				tank_nsb_armor_upgrade = {
-					base = 4
-					modifier = {
-						add = 1
-						has_war = yes
-					}
+					base = 6
 				}
 			}
 		}
@@ -1150,7 +1142,6 @@ ENG_medium_tank_artillery = {
 		}
 
 		allowed_modules = {
-			extra_ammo_storage
 			tank_heavy_howitzer
 			tank_medium_fixed_superstructure_turret
 			tank_christie_suspension

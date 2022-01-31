@@ -16,8 +16,8 @@ set_technology = {
   early_bomber = 1
 	fuel_silos = 1
   motorised_infantry = 1
-  gwtank = 1
-  basic_light_tank = 1
+  # gwtank = 1
+  # basic_light_tank = 1
   fuel_refining = 1
 	early_fighter = 1
 	tech_support = 1
@@ -63,6 +63,17 @@ add_ideas = {
   irq_mesopotamia_civilization
   irq_kurds_opposite_1
   irq_marshes
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
+	}
 }
 
 set_popularities = {

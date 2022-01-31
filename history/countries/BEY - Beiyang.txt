@@ -48,6 +48,14 @@ add_ideas = {
   	CHI_incompetent_officers
   	idea_man_railway
 }
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
 
 give_military_access = JAP
 give_military_access = RUS

@@ -1048,7 +1048,7 @@ characters={
 		name=FRA_nestor_makhno
 		portraits={
 			army={
-				large="gfx/leaders/FRA/Portrait_France_Missak_Manouchian.tga"
+				large="gfx/leaders/FRA/Portrait_France_Nestor_Makhno.tga"
 				small="GFX_idea_nestor_makhno"
 			}
 		}

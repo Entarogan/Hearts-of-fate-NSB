@@ -4,17 +4,12 @@ armor_generic = {
 		GER
 		JAP
 		ENG
-		FRA
-		SWE
-		POL
 		USA
 		ITA
 		SOV
-		RUS
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {
@@ -26,12 +21,18 @@ armor_generic = {
 
 		modifier = {
 			factor = 7
-			has_tech = basic_medium_tank
+			OR = {
+				has_tech = basic_medium_tank
+				has_tech = basic_medium_tank_chassis
+			}
 		}
 		
 		modifier = {
 			factor = 2
-			has_tech = main_battle_tank
+			OR = {
+				has_tech = main_battle_tank
+				has_tech = main_battle_tank_chassis
+			}
 		}
 	}
 	
@@ -56,7 +57,7 @@ armor_generic = {
 		}
 		
 		can_upgrade_in_field = {
-			has_equipment = { light_tank_equipment < 500 } 
+			has_equipment = { light_tank_chassis < 500 } 
 		}
 		
 		target_width = 18.0
@@ -234,7 +235,10 @@ armor_generic = {
 
 			modifier = {
 				factor = 4
-				has_tech = basic_medium_tank
+				OR = {
+					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis
+				}
 			}
 		}
 		
@@ -503,16 +507,12 @@ garrison_generic = {
 		GER
 		JAP
 		ENG
-		FRA
 		USA
 		ITA
 		SOV
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 	
 	roles = {
@@ -717,8 +717,6 @@ infantry_generic = {
 		GER
 		JAP
 		ENG
-		FRA
-		SWE
 		USA
 		ITA
 		SOV
@@ -731,12 +729,9 @@ infantry_generic = {
 		SIK
 		MEN
 		MAN
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {
@@ -843,8 +838,6 @@ infantry_big_generic = {
 		GER
 		JAP
 		ENG
-		FRA
-		SWE
 		USA
 		ITA
 		SOV
@@ -857,12 +850,9 @@ infantry_big_generic = {
 		SIK
 		MEN
 		MAN
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {
@@ -985,17 +975,13 @@ mountaineers_generic = {
 	blocked_for = {
 		GER
 		JAP
-		FRA
 		ENG
 		USA
 		ITA
 		SOV
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {
@@ -1101,17 +1087,13 @@ marines_generic = {
 	blocked_for = {
 		GER
 		JAP
-		SWE
 		ENG
 		USA
 		ITA
 		SOV
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {
@@ -1215,6 +1197,9 @@ marines_generic = {
 					has_tech = amphibious_tank
 					has_tech = amphibious_mechanized_infantry
 				}
+				NOT = {
+					has_tech = amphibious_tank_chassis
+				}
 			}
 			modifier = {
 				is_major = no
@@ -1298,18 +1283,13 @@ paratrooper_generic = {
 	blocked_for = {
 		GER
 		JAP
-		FRA
-		SWE
 		ENG
 		USA
 		ITA
 		SOV
-		RUS
-		POL
 		HUN
-		CZE
 		ROM
-		YUG
+		FRA
 	}
 
 	roles = {

@@ -10,9 +10,9 @@ set_technology = {
 	tech_mountaineers = 1
 	motorised_infantry = 1
 	gw_artillery = 1
-	gwtank = 1
-	basic_light_tank = 1
-	improved_light_tank = 1
+	# gwtank = 1
+	# basic_light_tank = 1
+	# improved_light_tank = 1
 	interwar_antiair = 1
     interwar_antitank = 1
 	early_fighter = 1
@@ -48,6 +48,20 @@ add_ideas = {
 	limited_conscription
 	war_economy
 }
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		armor_tech_1 = 1
+		engine_tech_1 = 1
+	}
+}
+
 
 recruit_character = CZE_Zapadoslavia_Brno
 add_country_leader_role = {
