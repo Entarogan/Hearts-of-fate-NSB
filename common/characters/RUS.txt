@@ -1568,21 +1568,21 @@ characters={
 			slot = army_chief
 			idea_token = RUS_entente_observe_committee
 			allowed  = {
-					original_tag  = RUS
+				original_tag  = RUS
+			}
+			available  = {
+				is_subject  = no 
+				not  = {
+					has_country_flag  = RUS_Japanese_puppet_flag 
+					has_country_flag  = RUS_entente_observe_committee_dissolved 
+					has_completed_focus  = rus_dissolve_observe_committee 
+					has_completed_focus  = rus_fall_of_ussr 
 				}
-				available  = {
-					is_subject  = no 
-					not  = {
-						has_country_flag  = RUS_Japanese_puppet_flag 
-						has_country_flag  = RUS_entente_observe_committee_dissolved 
-						has_completed_focus  = rus_dissolve_observe_committee 
-						has_completed_focus  = rus_fall_of_ussr 
-					}
-				}
-				removal_cost  = -1.000
-				traits  = {
-					RUS_observer_committee 
-				}
+			}
+			removal_cost  = -1.000
+			traits  = {
+				RUS_observer_committee 
+			}
 		}
 		name="RUS_entente_observe_committee"
 		portraits={

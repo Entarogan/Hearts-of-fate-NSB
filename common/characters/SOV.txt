@@ -883,7 +883,7 @@ characters={
 			slot = army_chief
 			idea_token = SOV_klara
 			available = {
-				
+				has_idea = SOV_nonna_political
 			}
 			allowed = {
 				original_tag = SOV

@@ -9,8 +9,10 @@ if = {
 	}
 }
 
+recruit_character = RUS_entente_observe_committee
+
 add_ideas = {
-  SOV_Focus_on_the_inside_idea
+  	SOV_Focus_on_the_inside_idea
 	extensive_conscription
     RUS_sour_loser
 	RUS_Orthodox
@@ -22,7 +24,7 @@ add_ideas = {
 	RUS_entente_observe_committee
 	RUS_political_uncertainty
 	rus_japanese_advisory_group
-  RUS_Japanese_economic_control_2_idea
+  	RUS_Japanese_economic_control_2_idea
 	RUS_aristocrats
 }
 
@@ -203,7 +205,7 @@ recruit_character = RUS_nyto_isomer
 recruit_character = RUS_boris_andreyevich_vilkitsky
 recruit_character = RUS_boris_vasilchikov
 recruit_character = RUS_ivan_serov
-recruit_character = RUS_entente_observe_committee
+
 recruit_character = RUS_nikolai_chebotaryov
 recruit_character = RUS_alexander_guchkov
 recruit_character = RUS_aleksandr_kazakov
