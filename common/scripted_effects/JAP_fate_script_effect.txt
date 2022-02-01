@@ -1,9 +1,9 @@
 
 JAP_create_democratic_leaders = {
 		
-	create_corps_commander = {
-		name = "Ryougi Shiki"  # 两仪式
-		picture = "Portrait_ryougi_shiki.dds"
+	add_corps_commander_role = {
+		# 两仪式
+		Character = JAP_rgouyi_shiki
 		traits = {  brilliant_strategist infantry_leader commando trickster urban_assault_specialist trait_engineer }
 		skill = 4
 		attack_skill = 6
@@ -11,11 +11,9 @@ JAP_create_democratic_leaders = {
 		planning_skill = 3
 		logistics_skill = 2
 	}
-
-		
-	create_corps_commander = {
-		name = "Sakamoto Ryoma"  # 坂本龙马
-		picture = "Portrait_sakamoto_ryoma.dds"
+	add_corps_commander_role = {
+		# 坂本龙马
+		Character = JAP_sakamoto_ryoma
 		traits = { brilliant_strategist cavalry_officer cavalry_leader combined_arms_expert politically_connected }
 		skill = 5
 		attack_skill = 4
@@ -23,10 +21,9 @@ JAP_create_democratic_leaders = {
 		planning_skill = 4
 		logistics_skill = 4
 	}
-
-	create_corps_commander = {
-		name = "Asagami Fujino"  # 浅上藤乃
-		picture = "Portrait_asagami_fujino.dds"
+	add_corps_commander_role = {
+		# 浅上藤乃
+		Character = JAP_asagami_fujino
 		traits = { trait_cautious commando urban_assault_specialist }
 		skill = 3
 		attack_skill = 5
@@ -34,10 +31,9 @@ JAP_create_democratic_leaders = {
 		planning_skill = 2
 		logistics_skill = 1
 	}
-
-	create_corps_commander = {
-		name = "Sizuki Sojyuro"  # 静希草十郎
-		picture = "Portrait_sizuki_sojyuro.dds"
+	add_corps_commander_role = {
+		# 静希草十郎
+		Character = JAP_sizuki_sojyuro
 		traits = { trait_cautious urban_assault_specialist }
 		skill = 3
 		attack_skill = 3
@@ -46,9 +42,9 @@ JAP_create_democratic_leaders = {
 		logistics_skill = 2
 	}
 
-	create_corps_commander = {
-		name = "Kirisame Marisa"  # 雾雨魔理沙
-		picture = "Portrait_Kirisame_Marisa.dds"
+	add_corps_commander_role = {
+		# 雾雨魔理沙
+		Character = JAP_kirisame_marisa
 		traits = { trait_reckless urban_assault_specialist bearer_of_artillery organizer trickster }
 		skill = 5
 		attack_skill = 7
@@ -56,10 +52,9 @@ JAP_create_democratic_leaders = {
 		planning_skill = 3
 		logistics_skill = 3
 	}
-
-	create_corps_commander = {
-		name = "Hakurei Reimu"  # 博丽灵梦
-		picture = "Portrait_Hakurei_Reimu.dds"
+	add_corps_commander_role = {
+		# 博丽灵梦
+		Character = JAP_hakurei_reimu
 		traits = { career_officer trait_reckless harsh_leader organizer trickster brilliant_strategist }
 		skill = 5
 		attack_skill = 5
@@ -67,7 +62,6 @@ JAP_create_democratic_leaders = {
 		planning_skill = 4
 		logistics_skill = 2
 	}
-
 }
 
 JAP_lock_all_initial_templates = {
@@ -316,19 +310,19 @@ JAP_set_party_name_reorganized = {
 
 if = {
 	limit = { 
-	OR = {
-		has_country_leader = { name = "Tohsaka Rin" ruling_only = yes }
-		has_country_leader = { name = "Ryougi Shiki" ruling_only = yes }
-		has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
-		has_country_leader = { name = "Adashino Hishiri" ruling_only = yes }
-		has_country_leader = { name = "Syokuhou Misaki" ruling_only = yes }
-		has_country_leader = { name = "Kongou Mitsuko" ruling_only = yes }
-	}
+		OR = {
+			has_country_leader = { name = "Tohsaka Rin" ruling_only = yes }
+			has_country_leader = { name = "Ryougi Shiki" ruling_only = yes }
+			has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
+			has_country_leader = { name = "Adashino Hishiri" ruling_only = yes }
+			has_country_leader = { name = "Syokuhou Misaki" ruling_only = yes }
+			has_country_leader = { name = "Kongou Mitsuko" ruling_only = yes }
+		}
 	}
 	set_party_name = {
-	ideology = democratic
-	long_name = JAP_democratic_party_Jiyutou
-	name = JAP_democratic_party_Jiyutou
+		ideology = democratic
+		long_name = JAP_democratic_party_Jiyutou
+		name = JAP_democratic_party_Jiyutou
 	}
 }
 
@@ -338,19 +332,19 @@ if = {
 
 if = {
 	limit = { 
-	OR = {
-		has_country_leader = { name = "Kirisame Marisa" ruling_only = yes }
-		has_country_leader = { name = "Syameimaru Aya" ruling_only = yes }
-		has_country_leader = { name = "Aozaki Aoko" ruling_only = yes }
-		has_country_leader = { name = "Touno Akiha" ruling_only = yes }
-		has_country_leader = { name = "Sajyou Ayaka" ruling_only = yes }
-		has_country_leader = { name = "Sakamoto Ryoma" ruling_only = yes }
-	}
+		OR = {
+			has_country_leader = { name = "Kirisame Marisa" ruling_only = yes }
+			has_country_leader = { name = "Syameimaru Aya" ruling_only = yes }
+			has_country_leader = { name = "Aozaki Aoko" ruling_only = yes }
+			has_country_leader = { name = "Touno Akiha" ruling_only = yes }
+			has_country_leader = { name = "Sajyou Ayaka" ruling_only = yes }
+			has_country_leader = { name = "Sakamoto Ryoma" ruling_only = yes }
+		}
 	}
 	set_party_name = {
-	ideology = democratic
-	long_name = JAP_democratic_party_Shinpotou
-	name = JAP_democratic_party_Shinpotou
+		ideology = democratic
+		long_name = JAP_democratic_party_Shinpotou
+		name = JAP_democratic_party_Shinpotou
 	}
 }
 
@@ -359,45 +353,45 @@ if = {
 
 if = {
 	limit = { 
-	OR = {
-		has_country_leader = { name = "Tohsaka Tokiomi" ruling_only = yes }
-		has_country_leader = { name = "Yakumo Ran" ruling_only = yes }
-		has_country_leader = { name = "Shikieiki Yamaxanadu" ruling_only = yes }
-		has_country_leader = { name = "Kuonji Alice" ruling_only = yes }
-		has_country_leader = { name = "Moriya Suwako" ruling_only = yes }
-		has_country_leader = { name = "Saigyouji Yuyuko" ruling_only = yes }
-		has_country_leader = { name = "Shoukaku" ruling_only = yes }
-		has_country_leader = { name = "Zuikaku" ruling_only = yes }
-		has_country_leader = { name = "Sajyou Manaka" ruling_only = yes }
-		AND = {
-		has_country_leader = { name = "Hakurei Reimu" ruling_only = yes }
-		has_idea = idea_jap_conservatives
+		OR = {
+			has_country_leader = { name = "Tohsaka Tokiomi" ruling_only = yes }
+			has_country_leader = { name = "Yakumo Ran" ruling_only = yes }
+			has_country_leader = { name = "Shikieiki Yamaxanadu" ruling_only = yes }
+			has_country_leader = { name = "Kuonji Alice" ruling_only = yes }
+			has_country_leader = { name = "Moriya Suwako" ruling_only = yes }
+			has_country_leader = { name = "Saigyouji Yuyuko" ruling_only = yes }
+			has_country_leader = { name = "Shoukaku" ruling_only = yes }
+			has_country_leader = { name = "Zuikaku" ruling_only = yes }
+			has_country_leader = { name = "Sajyou Manaka" ruling_only = yes }
+			AND = {
+				has_country_leader = { name = "Hakurei Reimu" ruling_only = yes }
+				has_idea = idea_jap_conservatives
+			}
 		}
 	}
-	}
 	set_party_name = {
-	ideology = democratic
-	long_name = JAP_democratic_party_Kyodoutou
-	name = JAP_democratic_party_Kyodoutou
+		ideology = democratic
+		long_name = JAP_democratic_party_Kyodoutou
+		name = JAP_democratic_party_Kyodoutou
 	}
 }
 
 
 if = {
 	limit = { 
-	OR = {
-		has_country_leader = { name = "Hijiri Byakuren"  ruling_only = yes }
-		has_country_leader = { name = "Emiya Shiro" ruling_only = yes }
-		AND = {
-		has_idea = idea_jap_liberals
-		has_country_leader = { name = "Hakurei Reimu" ruling_only = yes }
+		OR = {
+				has_country_leader = { name = "Hijiri Byakuren"  ruling_only = yes }
+				has_country_leader = { name = "Emiya Shiro" ruling_only = yes }
+			AND = {
+				has_idea = idea_jap_liberals
+				has_country_leader = { name = "Hakurei Reimu" ruling_only = yes }
+			}
 		}
 	}
-	}
 	set_party_name = {
-	ideology = democratic
-	long_name = JAP_democratic_party_Shakai_Seigitou
-	name = JAP_democratic_party_Shakai_Seigitou
+		ideology = democratic
+		long_name = JAP_democratic_party_Shakai_Seigitou
+		name = JAP_democratic_party_Shakai_Seigitou
 	}
 }
 
@@ -410,14 +404,13 @@ JAP_set_party_name = {
 
 if = {
 	limit = { 
-	OR = {
-		
-		has_country_leader = { name = "Ryougi Shiki" ruling_only = yes }
-		has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
-		has_country_leader = { name = "Adashino Hishiri" ruling_only = yes }
-		has_country_leader = { name = "Syokuhou Misaki" ruling_only = yes }
-		has_country_leader = { name = "Kongou Mitsuko" ruling_only = yes }
-	}
+		OR = {
+			has_country_leader = { name = "Ryougi Shiki" ruling_only = yes }
+			has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
+			has_country_leader = { name = "Adashino Hishiri" ruling_only = yes }
+			has_country_leader = { name = "Syokuhou Misaki" ruling_only = yes }
+			has_country_leader = { name = "Kongou Mitsuko" ruling_only = yes }
+		}
 	}
 	set_party_name = {
 	ideology = democratic
@@ -526,7 +519,7 @@ JAP_civil_war_start = {
 		set_country_flag = jap_civil_war_started
 		
 	}
-	JAP_create_democratic_leaders = yes
+	
 	add_timed_idea = {
 		idea = JAP_political_instability
 		days = 400
@@ -596,7 +589,7 @@ JAP_civil_war_start = {
 			}
 		}
 	}
-
+	JAP_create_democratic_leaders = yes
 	if = {
 		limit = { 
 			has_idea = JAP_yakumo_yukari

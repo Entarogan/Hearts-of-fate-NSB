@@ -218,3 +218,10 @@ recruit_character = RUS_bronya_zaychik
 recruit_character = RUS_havier_witkin
 
 recruit_character = RUS_Victoria_Romanovna
+recruit_character = RUS_Konstantin_Rodzaevsky
+
+
+
+
+
+

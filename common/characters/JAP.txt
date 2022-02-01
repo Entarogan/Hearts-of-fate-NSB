@@ -1695,6 +1695,7 @@ characters={
 	}
 
 	JAP_rgouyi_shiki={
+		# 两仪式
 		name=rgouyi_shiki
 		portraits={
 			navy={
@@ -1702,6 +1703,7 @@ characters={
 			}
 			army={
 				small="GFX_idea_rgouyi_shiki"
+				large="gfx/leaders/JAP/Portrait_ryougi_shiki.dds"
 			}
 		}
 		advisor={
@@ -1737,6 +1739,7 @@ characters={
 		}
 	}
 	JAP_sakamoto_ryoma={
+		##龙马
 		name=Sakamoto_Ryoma
 		portraits={
 			army = {

@@ -971,6 +971,12 @@ recruit_character = JAP_nishi_kinuyo
 recruit_character = JAP_shimada_alice
 recruit_character = JAP_mitsurugi_meiya
 
+###2022/2/1
+recruit_character = JAP_rgouyi_shiki
+recruit_character = JAP_asagami_fujino
+recruit_character = JAP_sizuki_sojyuro
+
+
 add_ideas = {
 	JAP_yakumo_yukari
 	JAP_yasaka_kanako

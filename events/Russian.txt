@@ -261,15 +261,16 @@ country_event = {   ### Anti-Tsarina Coup
 		name = russian.5.a
 		ai_chance = { base = 70 }
 		retire_ideology_leader = neutrality
-
-		create_country_leader = {
-			name = "Provisional Military Government"
-			desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_DESC"
-			picture = "Portrait_RUS_Provisional_Military_Government.dds"
-			ideology = stratocracy
-			traits = { }
+		add_country_leader_role = {
+			character = "RUS_Provisional_Military_Government"
+			country_leader = {
+				ideology = stratocracy
+				desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
-		
 		add_popularity = {
 		  ideology = fascism
 		  popularity = -0.10
@@ -288,14 +289,16 @@ country_event = {   ### Anti-Tsarina Coup
 		name = russian.5.b
 		ai_chance = { base = 30 }
 
-		create_country_leader = {
-			character = RUS_anastasia_i
-			desc = "POLITICS_ANASTASIA_PUPPET_DESC"
-			picture = "Portrait_Anastasia.dds"
-			ideology = fascism_ideology
-			traits = { popular_figurehead2  }
+		add_country_leader_role = {
+			character = "RUS_anastasia_i"
+			country_leader = {
+				ideology = fascism_ideology
+				desc = "POLITICS_ANASTASIA_PUPPET_DESC"
+				traits = {  popular_figurehead2 }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
-		
 		set_politics = {	
 		  ruling_party = fascism
 		  last_election = "1922.12.9"
@@ -340,18 +343,19 @@ country_event = {   ### Select a leader for junta
 		name = russian.6.a  ## Kadoc 
 		ai_chance = { base = 25 }
 
-    create_country_leader = {
-		character = RUS_kadoc_zemiupus
-		desc = "POLITICS_KADOC_JUNTA_DESC"
-		picture = "Portrait_kadoc_zemiupus.dds"
-		ideology = stratocracy
-		traits = {  socialite_connections }
-    }
-    
-    hidden_effect = {
-      set_country_flag = RUS_Zemiupus_coup
-    }
-    
+		add_country_leader_role = {
+			character = "RUS_kadoc_zemiupus"
+			country_leader = {
+				ideology=stratocracy
+				desc = "POLITICS_KADOC_JUNTA_DESC"
+				traits = { socialite_connections  }
+				expire="1965.1.1"
+			}
+			promote_leader = yes
+		}
+		hidden_effect = {
+		set_country_flag = RUS_Zemiupus_coup
+		}
 	}
   
   option = {	
@@ -361,14 +365,16 @@ country_event = {   ### Select a leader for junta
       has_completed_focus = rus_prohibit_democratic_opponents
     }
     
-    create_country_leader = {
-      name = "Berezovich Kryuger"
-      desc = "POLITICS_BEREZOVICH_JUNTA_DESC"
-      picture = "Portrait_Berezovich_Kryuger.dds"
-      ideology = stratocracy
-      traits = {  war_industrialist }
-    }
-    
+	add_country_leader_role = {
+		character = "RUS_berezovich_kryuger"
+		country_leader = {
+			ideology=stratocracy
+			desc = "POLITICS_BEREZOVICH_JUNTA_DESC"
+			traits = { war_industrialist  }
+			expire="1965.1.1"
+		}
+		promote_leader = yes
+	}
     hidden_effect = {
       set_country_flag = RUS_Kryuger_coup
     }
@@ -381,14 +387,16 @@ country_event = {   ### Select a leader for junta
       check_variable = { ROOT.RUS_Army_Obedience < 0 }
     }
 
-    create_country_leader = {
-		name = "Lavr Kornilov"
-		desc = "POLITICS_LAVR_KORNILOV_DESC"
-		picture = "Portrait_RUS_Lavr_Kornilov.png"
-		ideology = stratocracy
-		traits = { hawk }
-    }
-    
+	add_country_leader_role = {
+		character = "RUS_lavr_kornilov"
+		country_leader = {
+			ideology=stratocracy
+			desc = "POLITICS_LAVR_KORNILOV_DESC"
+			traits = { hawk  }
+			expire="1965.1.1"
+		}
+		promote_leader = yes
+	}
     hidden_effect = {
       set_country_flag = RUS_Kornilov_coup
 	    country_event = { id = russian.10 days = 2 }
@@ -403,15 +411,16 @@ country_event = {   ### Select a leader for junta
 		check_variable = { ROOT.RUS_Army_Obedience < 1 }
 		check_variable = { ROOT.RUS_Navy_Obedience > -1 }
     }
-
-    create_country_leader = {
-		name = "Pyotr Wranger"
-		desc = "POLITICS_PYOTR_WRANGER_DESC"
-		picture = "portrait_Pyotr_Wrangel.png"
-		ideology = stratocracy
-		traits = { Railway_Engineer  }
-    }
-    
+	add_country_leader_role = {
+		character = "RUS_pyotr_wrangel"
+		country_leader = {
+			ideology=stratocracy
+			desc = "POLITICS_PYOTR_WRANGER_DESC"
+			traits = { Railway_Engineer  }
+			expire="1965.1.1"
+		}
+		promote_leader = yes
+	}
     hidden_effect = {
 		set_country_flag = RUS_Wranger_coup
 		country_event = { id = russian.10 days = 2 }
@@ -425,14 +434,16 @@ country_event = {   ### Select a leader for junta
 		trigger = {
 			check_variable = { ROOT.RUS_Navy_Obedience < 0 }
 		}
-
-    create_country_leader = {
-		name = "Alexander Kolchak"
-		desc = "POLITICS_ALEXANDER_KOLCHAK_DESC"
-		picture = "portrait_Alexander_Kolchak.png"
-		ideology = stratocracy
-		traits = { Admiral_kolchak }
-    }
+		add_country_leader_role = {
+			character = "RUS_aleksandr_kolchak"
+			country_leader = {
+				ideology=stratocracy
+				desc = "POLITICS_ALEXANDER_KOLCHAK_DESC"
+				traits = { Admiral_kolchak  }
+				expire="1965.1.1"
+			}
+			promote_leader = yes
+		}
     
     hidden_effect = {
 		set_country_flag = RUS_Kolchack_coup
@@ -443,26 +454,27 @@ country_event = {   ### Select a leader for junta
 	option = {	
 		name = russian.6.g    ## Zakhaev
 		ai_chance = { base = 15 }
-    trigger = {
-		has_completed_focus = rus_negotiation_with_democrats
-    }
-
-    create_country_leader = {
-		name = "Imran Zakhaev"
-		desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
-		picture = "Portrait_Imran_Zakhaev.dds"
-		ideology = stratocracy
-		traits = { Nationalist_Revenger  }
-    }
-    
-    add_popularity = {
-		popularity = 0.10
-		ideology = fascism
-    }
-    
-    hidden_effect = {
-		set_country_flag = RUS_Zakhaev_coup
-    }
+		trigger = {
+			has_completed_focus = rus_negotiation_with_democrats
+		}
+		add_country_leader_role = {
+			character = "RUS_imran_zakhaev"
+			country_leader = {
+				ideology=stratocracy
+				desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+				traits = { Nationalist_Revenger  }
+				expire="1965.1.1"
+			}
+			promote_leader = yes
+		}
+		add_popularity = {
+			popularity = 0.10
+			ideology = fascism
+		}
+		
+		hidden_effect = {
+			set_country_flag = RUS_Zakhaev_coup
+		}
 	}
 	
 }
@@ -534,14 +546,16 @@ country_event = {   ### Kadoc's Promise
 		name = russian.8.a    ### Sure
 		ai_chance = { base = 100 }
 
-    create_country_leader = {
-		name = "Provisional Government"
-		desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
-		picture = "Portrait_RUS_Provisional_Government.dds"
-		ideology = socialism
-		traits = {  }
-    }
-    
+	add_country_leader_role = {
+		character = "RUS_Provisional_Government"
+		country_leader = {
+			ideology = socialism
+			desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
+			traits = {   }
+			expire = "1965.1.1"
+		}
+		promote_leader = yes
+	}
     set_politics = {	
 		ruling_party = democratic
 		last_election = "1922.12.9"
@@ -682,15 +696,15 @@ country_event = {   ### Kornilov's Death
 		kill_ideology_leader = neutrality
 		
 		hidden_effect = {
-			create_country_leader = {
-				character = RUS_kadoc_zemiupus
-				desc = ""
-				picture = "Portrait_kadoc_zemiupus.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
-				traits = {
-				  socialite_connections
+			add_country_leader_role = {
+				character = "RUS_kadoc_zemiupus"
+				country_leader = {
+					ideology=stratocracy
+					#desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+					traits = { socialite_connections  }
+					expire="1965.1.1"
 				}
+				promote_leader = yes
 			}
 		}
 		
@@ -707,7 +721,7 @@ country_event = {   ### Kornilov's Death
 		}
 		
 		unlock_national_focus = rus_Kadoc_the_vozhd
-    remove_ideas = { RUS_political_uncertainty }
+    	remove_ideas = { RUS_political_uncertainty }
 	}
 	
 	option = {	
@@ -717,15 +731,15 @@ country_event = {   ### Kornilov's Death
 
 		kill_ideology_leader = neutrality
 
-		create_country_leader = {
-			name = "Anna Viktorovna"
-			desc = ""
-			picture = "Portrait_RUS_Anna_Viktorovna.dds"
-			expire = "1965.1.1"
-			ideology = stratocracy
-			traits = {			
-        Anti_Japanese
+		add_country_leader_role = {
+			character = "RUS_anna_viktorovna"
+			country_leader = {
+				ideology=stratocracy
+				#desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+				traits = { Anti_Japanese  }
+				expire="1965.1.1"
 			}
+			promote_leader = yes
 		}
 		if = {
 			limit = { has_idea = RUS_kadoc_government }
@@ -759,14 +773,16 @@ country_event = {   ### Kryuger's Reform
 		name = russian.12.a    ### Kryuger choose to build a democratic government
 		ai_chance = { base = 100 }
     
-    create_country_leader = {
-		name = "Provisional Government"
-		desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
-		picture = "Portrait_RUS_Provisional_Government.dds"
-		ideology = conservatism
-		traits = {  }
-    }
-    
+	add_country_leader_role = {
+		character = "RUS_Provisional_Government"
+		country_leader = {
+			ideology = conservatism
+			desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
+			traits = {   }
+			expire = "1965.1.1"
+		}
+		promote_leader = yes
+	}
     set_politics = {	
 		ruling_party = democratic
 		last_election = "1922.12.9"
@@ -819,14 +835,15 @@ country_event = {   ### Kolchak's Death
 
 		kill_ideology_leader = neutrality
 		
-		create_country_leader = {
-			name = "Nataliya Rostova"
-			desc = ""
-			picture = "Portrait_Nataliya_Andreyevich_Rostova.dds"
-			expire = "1965.1.1"
-			ideology = authoritarian_democracy
-			traits = {
+		add_country_leader_role = {
+			character = "RUS_nataliya_andreyevich_rostova"
+			country_leader = {
+				ideology=authoritarian_democracy
+				#desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+				traits = {   }
+				expire="1965.1.1"
 			}
+			promote_leader = yes
 		}
 		
 		add_popularity = {
@@ -860,16 +877,16 @@ country_event = {   ### Kolchak's Death
 
     kill_ideology_leader = neutrality
 
-    create_country_leader = {
-		name = "Nyto Isomer"
-		desc = ""
-		picture = "Portrait_Nyto_Isomer.dds"
-		expire = "1965.1.1"
-		ideology = stratocracy
-		traits = {
-		
+	add_country_leader_role = {
+		character = "RUS_nyto_isomer"
+		country_leader = {
+			ideology = stratocracy
+			#desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+			traits = {   }
+			expire = "1965.1.1"
 		}
-    }
+		promote_leader = yes
+	}
     remove_ideas = { RUS_political_uncertainty }
 	if = {
 		limit = { has_idea = RUS_kadoc_government }
@@ -887,15 +904,15 @@ country_event = {   ### Kolchak's Death
 		kill_ideology_leader = neutrality
 		
 		hidden_effect = {
-			create_country_leader = {
-				character = RUS_kadoc_zemiupus
-				desc = ""
-				picture = "Portrait_kadoc_zemiupus.dds"
-				expire = "1965.1.1"
-				ideology = stratocracy
-				traits = {
-				  socialite_connections
+			add_country_leader_role = {
+				character = "RUS_kadoc_zemiupus"
+				country_leader = {
+					ideology = stratocracy
+					#desc = "POLITICS_IMRAN_ZAKHAEV_DESC"
+					traits = {  socialite_connections }
+					expire = "1965.1.1"
 				}
+				promote_leader = yes
 			}
 		}
 		
@@ -937,14 +954,17 @@ country_event = {   ### Wrangel's death
 
     if = {
 		limit = { has_country_leader = { name = "Pyotr Wranger" ruling_only = yes} } 
-		create_country_leader = {
-			name = "Provisional Government"
-			desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
-			picture = "Portrait_RUS_Provisional_Government.dds"
-			ideology = conservatism
-			traits = {  }
+
+		add_country_leader_role = {
+			character = "RUS_Provisional_Government"
+			country_leader = {
+				ideology = conservatism
+				desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_2_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
-	
 	set_politics = {	
         ruling_party = democratic
         last_election = "1922.12.9"
@@ -1070,12 +1090,15 @@ country_event = {   ### Tsarina's Suicide
 			set_cosmetic_tag = RUS_BL
 			country_event = { id = russian.17  days = 15 }
 		} 
-		create_country_leader = {
-			name = "Konstantin Rodzaevsky"
-			desc = "POLITICS_Rodzaevsky_DESC"
-			picture = "Portrait_RUS_Konstantin_Rodzaevsky.dds"
-			ideology = nazism
-			traits = {    }
+		add_country_leader_role = {
+			character = "RUS_Konstantin_Rodzaevsky"
+			country_leader = {
+				ideology = nazism
+				desc = "POLITICS_Rodzaevsky_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
     }
 
@@ -1087,12 +1110,15 @@ country_event = {   ### Tsarina's Suicide
 			set_cosmetic_tag = RUS_BL
 			country_event = { id = russian.17  days = 15 }
 		} 
-		create_country_leader = {
-			name = "Anastasy Vonsiatsky"
-			desc = "POLITICS_VONSIATSKY_DESC"
-			picture = "Portrait_Anastasy_Vonsiatsky.dds"
-			ideology = nazism
-			traits = {    }
+		add_country_leader_role = {
+			character = "RUS_Anastasy_Vonsiatsky"
+			country_leader = {
+				ideology = nazism
+				desc = "POLITICS_VONSIATSKY_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
     }
 
@@ -1104,12 +1130,15 @@ country_event = {   ### Tsarina's Suicide
 			set_cosmetic_tag = RUS_BL
 			country_event = { id = russian.17  days = 15 }
 		} 
-		create_country_leader = {
-			name = "Mikhail Matkovsky"
-			desc = "POLITICS_MATKOVSKY_DESC"
-			picture = "Portrait_mikhail_matkovsky.dds"
-			ideology = fascism_ideology
-			traits = {    }
+		add_country_leader_role = {
+			character = "RUS_mikhail_matkovsky"
+			country_leader = {
+				ideology = fascism_ideology
+				desc = "POLITICS_MATKOVSKY_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
     }
 }
@@ -1135,12 +1164,16 @@ country_event = {   ### DEFY's Operation
 			election_frequency = 48
 			elections_allowed = no
 		}
-		create_country_leader = {
-			name = "Provisional Military Government"
-			desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_DESC"
-			picture = "Portrait_RUS_Provisional_Military_Government.dds"
-			ideology = stratocracy
-			traits = { }
+
+		add_country_leader_role = {
+			character = "RUS_Provisional_Military_Government"
+			country_leader = {
+				ideology = stratocracy
+				desc = "POLITICS_RUS_PROVISIONAL_GOVERNMENT_DESC"
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
 		remove_unit_leader = 8805
 		hidden_effect = {
@@ -1196,26 +1229,36 @@ country_event = {   ### RPK's Betrayal
 			complete_national_focus = rus_black_league_coup
 		}
 		remove_ideas = { RUS_political_uncertainty }
-		create_country_leader = {
-			name = "Ruchnoy P. Kalashnikova"
-			desc = "POLITICS_RUS_RPK_DESC"
-			picture = "Portrait_Ruchnoy_Pulemyot_Kalashnikova_Vozhd.dds"
-			ideology = nazism
-			traits = { 
-        traitor
-      }
+		add_country_leader_role = {
+			character = "RUS_ruchnoy_kalashnikova"
+			country_leader = {
+				ideology = nazism
+				desc = "POLITICS_RUS_RPK_DESC"
+				traits = { traitor  }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
+		}
+		RUS_ruchnoy_kalashnikova = {
+			set_portraits = {
+				civilian = {
+					large = "gfx/leaders/RUS/Portrait_Ruchnoy_Pulemyot_Kalashnikova_Vozhd.dds"
+				}
+			}
 		}
 		hidden_effect = {
 			kill_ideology_leader = neutrality
-			create_country_leader = {
-				name = "Ruchnoy P. Kalashnikova"
-				desc = "POLITICS_RUS_RPK_DESC"
-				picture = "Portrait_Ruchnoy_Pulemyot_Kalashnikova.dds"
-				ideology = stratocracy
-				traits = { 
-          traitor
-        }
+			add_country_leader_role = {
+				character = "RUS_ruchnoy_kalashnikova"
+				country_leader = {
+					ideology = stratocracy
+					desc = "POLITICS_RUS_RPK_DESC"
+					traits = { traitor  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
+			###此处有头像问题
 		}	
 		remove_unit_leader = 8812
 		remove_unit_leader = 8813
@@ -1232,14 +1275,15 @@ country_event = {   ### RPK's Betrayal
 			limit = { NOT = { has_completed_focus = rus_keep_military_supervision } }
 			complete_national_focus = rus_keep_military_supervision
 		}
-		create_country_leader = {
-			name = "Antona Kalashnikova"
-			desc = "POLITICS_RUS_AK_DESC"
-			picture = "Portrait_Antona_Kalashnikova.dds"
-			ideology = stratocracy
-			traits = { 
-        Commando_Captain
-      }
+		add_country_leader_role = {
+			character = "RUS_antona_kalashnikova"
+			country_leader = {
+				ideology = stratocracy
+				desc = "POLITICS_RUS_AK_DESC"
+				traits = { Commando_Captain  }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
 		remove_unit_leader = 8815
     }
@@ -1267,12 +1311,15 @@ country_event = {   ### Imran Zakhaev's Revolution
 			set_cosmetic_tag = RUS_BL
 			country_event = { id = russian.17  days = 15 }
 		} 
-		create_country_leader = {
-			name = "Imran Zakhaev"
-			desc = "POLITICS_Rodzaevsky_DESC"
-			picture = "Portrait_Imran_Zakhaev.dds"
-			ideology = nazism
-			traits = {  Nationalist_Revenger  }
+		add_country_leader_role = {
+			character = "RUS_imran_zakhaev"
+			country_leader = {
+				ideology = nazism
+				desc = "POLITICS_Rodzaevsky_DESC"
+				traits = { Nationalist_Revenger  }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
 		set_politics = {	
 			ruling_party = fascism
@@ -1329,24 +1376,31 @@ country_event = {   ### Election
 
 		if = {
 			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
-			create_country_leader = {
-				character = RUS_anastasia_i
-				desc = "POLITICS_ANASTASIA_DESC"
-				picture = "Portrait_Anastasia.dds"
-				ideology = conservatism
-				traits = {  Shvibzik  }
+
+			add_country_leader_role = {
+				character = "RUS_anastasia_i"
+				country_leader = {
+					ideology = conservatism
+					desc = "POLITICS_ANASTASIA_DESC"
+					traits = { Shvibzik  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
 		if = {
 			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
-			create_country_leader = {
-				name = "Nataliya Andreyevich Rostova"
-				desc = "POLITICS_ROSTOVA_DESC"
-				picture = "Portrait_Nataliya_Andreyevich_Rostova.dds"
-				ideology = conservatism
-				traits = {   }
+			add_country_leader_role = {
+				character = "RUS_nataliya_andreyevich_rostova"
+				country_leader = {
+					ideology = conservatism
+					desc = "POLITICS_ROSTOVA_DESC"
+					traits = {   }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
@@ -1383,24 +1437,30 @@ country_event = {   ### Election
 
 		if = {
 			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
-			create_country_leader = {
-				character = RUS_anastasia_i
-				desc = "POLITICS_ANASTASIA_DESC"
-				picture = "Portrait_Anastasia.dds"
-				ideology = liberalism
-				traits = {  Shvibzik  }
+			add_country_leader_role = {
+				character = "RUS_anastasia_i"
+				country_leader = {
+					ideology = liberalism
+					desc = "POLITICS_ANASTASIA_DESC"
+					traits = { Shvibzik  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
 		if = {
 			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
-			create_country_leader = {
-				name = "Katya Uranova"
-				desc = "POLITICS_URANOVA_DESC"
-				picture = "Portrait_Katya_Uranova.dds"
-				ideology = liberalism
-				traits = {   }
+			add_country_leader_role = {
+				character = "RUS_Katya_Uranova"
+				country_leader = {
+					ideology = liberalism
+					desc = "POLITICS_URANOVA_DESC"
+					traits = {   }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
@@ -1439,16 +1499,16 @@ country_event = {   ### Election
 			popularity = 0.10
 		}
 
-		create_country_leader = {
-			name = "Bronya Zaychik"
-			desc = "POLITICS_ZAYCHIK_DESC"
-			picture = "Portrait_Bronya_Zaychik.dds"
-			ideology = socialism
-			traits = {   
-        Bomb_revolution
-      }
+		add_country_leader_role = {
+			character = "RUS_bronya_zaychik"
+			country_leader = {
+				ideology = socialism
+				desc = "POLITICS_ZAYCHIK_DESC"
+				traits = { Bomb_revolution }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
-
 		complete_national_focus = rus_PSR_comes_back
 		if = {
 			limit = { has_idea = RUS_political_uncertainty }
@@ -1483,24 +1543,30 @@ country_event = {   ### Election
 
 		if = {
 			limit = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } }
-			create_country_leader = {
-				character = RUS_anastasia_i
-				desc = "POLITICS_ANASTASIA_DESC"
-				picture = "Portrait_Anastasia.dds"
-				ideology = socialism
-				traits = {  Shvibzik  }
+			add_country_leader_role = {
+				character = "RUS_anastasia_i"
+				country_leader = {
+					ideology = socialism
+					desc = "POLITICS_ANASTASIA_DESC"
+					traits = { Shvibzik }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
 		if = {
 			limit = { NOT = { has_country_leader = { character = RUS_anastasia_i  ruling_only = yes } } }
 
-			create_country_leader = {
-				name = "Seele"
-				desc = "POLITICS_SEELE_DESC"
-				picture = "Portrait_RUS_Seele.dds"
-				ideology = socialism
-				traits = {   }
+			add_country_leader_role = {
+				character = "RUS_Seele"
+				country_leader = {
+					ideology = socialism
+					desc = "POLITICS_SEELE_DESC"
+					traits = {  }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 		}
 
@@ -4877,46 +4943,52 @@ country_event = {   ### 日本统治的终结
 			long_name = RUS_fascism_party_long
 			name = RUS_fascism_party
 		}
-
-		create_country_leader = {
-			character = RUS_anastasia_i
-			desc = "POLITICS_ANASTASIA_DESC"
-			picture = "Portrait_Anastasia.dds"
-			ideology = stratocracy
-			traits = {   Shvibzik }
-		}
-
-		create_country_leader = {
-			character = RUS_kadoc_zemiupus
-			desc = ""
-			picture = "Portrait_kadoc_zemiupus.dds"
-			expire = "1965.1.1"
-			ideology = valkist
-			traits = {
-				
+		add_country_leader_role = {
+			character = "RUS_anastasia_i"
+			country_leader = {
+				ideology = stratocracy
+				desc = "POLITICS_ANASTASIA_DESC"
+				traits = {  Shvibzik }
+				expire = "1965.1.1"
 			}
+			promote_leader = yes
+		}
+		add_country_leader_role = {
+			character = "RUS_kadoc_zemiupus"
+			country_leader = {
+				ideology = valkist
+				desc = ""
+				traits = {   }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes
 		}
 		if = {
 			limit = { NOT = { has_country_flag = RUS_Zaychik_dead } }
-			create_country_leader = {
-				name = "Bronya Zaychik"
-				desc = ""
-				picture = "Portrait_Bronya_Zaychik.dds"
-				expire = "1965.1.1"
-				ideology = socialism
-				traits = {
-					
+
+			add_country_leader_role = {
+				character = "RUS_bronya_zaychik"
+				country_leader = {
+					ideology = socialism
+					desc = ""
+					traits = {   }
+					expire = "1965.1.1"
 				}
+				promote_leader = yes
 			}
 		}
 		if = {
 			limit = { has_country_flag = RUS_Zaychik_dead }
-			create_country_leader = {
-				name = "Nataliya Andreyevich Rostova"
-				desc = "POLITICS_ROSTOVA_DESC"
-				picture = "Portrait_Nataliya_Andreyevich_Rostova.dds"
-				ideology = conservatism
-				traits = {   }
+
+			add_country_leader_role = {
+				character = "RUS_nataliya_andreyevich_rostova"
+				country_leader = {
+					ideology = conservatism
+					desc = "POLITICS_ROSTOVA_DESC"
+					traits = {   }
+					expire = "1965.1.1"
+				}
+				promote_leader = yes
 			}
 			set_party_name = { 
 				ideology = democratic 

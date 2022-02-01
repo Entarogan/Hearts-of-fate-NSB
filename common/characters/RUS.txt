@@ -1268,6 +1268,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RUS_anna_viktorovna"
+				large="gfx/leaders/RUS/Portrait_RUS_Anna_Viktorovna.dds"
 			}
 		}
 	}
@@ -1298,6 +1299,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RUS_nataliya_andreyevich_rostova"
+				large="gfx/leaders/RUS/Portrait_Nataliya_Andreyevich_Rostova.dds"
 			}
 		}
 	}
@@ -1508,6 +1510,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RUS_nyto_isomer"
+				large="gfx/leaders/RUS/Portrait_Nyto_Isomer.dds"
 			}
 		}
 	}
