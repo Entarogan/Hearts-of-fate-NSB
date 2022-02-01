@@ -10,5 +10,74 @@ characters={
 			}
 		}
 	}
+	RUS_Konstantin_Rodzaevsky={
+		name="Konstantin Rodzaevsky"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_Konstantin_Rodzaevsky.dds"
+			}
+		}
+	}
+	RUS_Anastasy_Vonsiatsky={
+		name = "Anastasy Vonsiatsky"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_Anastasy_Vonsiatsky.dds"
+			}
+		}
+	}
 
+	RUS_Katya_Uranova={
+		name = "Katya Uranova"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_Katya_Uranova.dds"
+			}
+		}
+	}
+
+	RUS_Seele={
+		name = "Seele"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_Seele.dds"
+			}
+		}
+	}
+
+	RUS_Provisional_Government={
+		name = "Provisional Government"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_Provisional_Government.dds"
+			}
+		}
+	}
+
+	RUS_Provisional_Military_Government={
+		name = "Provisional Military Government"
+		portraits={
+			army={
+				small="GFX_idea_RUS_sergey_taboritsky"
+			}
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_Provisional_Military_Government.dds"
+			}
+		}
+	}
 }
