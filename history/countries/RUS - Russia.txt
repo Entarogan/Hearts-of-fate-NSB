@@ -219,8 +219,11 @@ recruit_character = RUS_havier_witkin
 
 recruit_character = RUS_Victoria_Romanovna
 recruit_character = RUS_Konstantin_Rodzaevsky
-
-
+recruit_character = RUS_Anastasy_Vonsiatsky
+recruit_character = RUS_Katya_Uranova
+recruit_character = RUS_Seele
+recruit_character = RUS_Provisional_Government
+recruit_character = RUS_Provisional_Military_Government
 
 
 
