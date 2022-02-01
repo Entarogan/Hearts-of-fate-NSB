@@ -277,6 +277,9 @@ FRA_civil_war_north = {
 					character = FRA_leo_b_harwey
 					ideology = conservatism
 				}
+				FRA_Jeanne_Darc = {
+					promote_character = yes
+				}
 				add_country_leader_role = {
 					character = FRA_Jeanne_Darc
 					promote_leader = yes
@@ -314,12 +317,12 @@ FRA_civil_war_north = {
 				add_country_leader_role = {
 				promote_leader = yes
 				country_leader = {
-				ideology = stratocracy
-					expire = “1965.1.1.1”
-					traits = {
+					ideology = stratocracy
+						expire = “1965.1.1.1”
+						traits = {
 
+						}
 					}
-				}
 				}
 			}
 			
