@@ -2848,13 +2848,31 @@ country_event = {##清洗皇道派将领
 			limit = {
 				has_idea = JAP_hijikato_toshizo
 			}
-			add_ideas = JAP_tomoe_gozen##巴御前
+			add_ideas = JAP_tomoe_gozen ##巴御前
 		}
 		if = {
 			limit = {
 				has_idea = JAP_hinanawi_tenshi
 			}
-			add_ideas = JAP_yasaka_kanako##八坂神奈子
+			add_ideas = JAP_yasaka_kanako ##八坂神奈子
+		}
+		hidden_effect = {
+			JAP_hinanawi_tenshi = {
+				remove_country_leader_role = {
+					ideology = fascism_ideology
+				}
+			}
+			JAP_matara_okina = {
+				add_country_leader_role = {
+					Promote_leader = yes
+					Country_leader = {
+						ideology = fascism_ideology
+						traits = {
+							
+						}
+					}
+				}
+			}
 		}
 		remove_unit_leader = 8004
 		remove_unit_leader = 8009
@@ -2949,12 +2967,12 @@ country_event = {##清洗统制派、民主派贵族
 		set_country_flag = jap_yukari_yakumo_disabled
 		set_country_flag = jap_yasaka_kanako_disabled
 		set_country_flag = jap_hijiri_byakuren_disabled
-    set_country_flag = jap_ran_yakumo_disabled
+    	set_country_flag = jap_ran_yakumo_disabled
 		##没有八云蓝、泄矢诹访子、西行寺幽幽子
 		##删除八云紫、八云蓝、八坂神奈子、圣白莲、泄矢诹访子、西行寺幽幽子及其对应顾问，
 		add_ideas = JAP_matara_okina
 		add_ideas = JAP_hinanawi_tenshi
-    add_ideas = { JAP_kotomine_kirei }
+    	add_ideas = { JAP_kotomine_kirei }
 		##贵族院议长更换为摩多罗隐岐奈，枢密院院长更换为比那名居天子
 	}
 }
@@ -2975,6 +2993,24 @@ country_event = {##清洗贵族
 	}
 	option = {##
 		name = jap_purge.5.a
+		hidden_effect = {
+			JAP_hinanawi_tenshi = {
+				remove_country_leader_role = {
+					ideology = fascism_ideology
+				}
+			}
+			JAP_oda_nobunaga = {
+				add_country_leader_role = {
+					Promote_leader = yes
+					Country_leader = {
+						ideology = nazism
+						traits = {
+							
+						}
+					}
+				}
+			}
+		}
 		###移除将领
 		remove_unit_leader = 8030
 		remove_unit_leader = 8036
@@ -2989,7 +3025,7 @@ country_event = {##清洗贵族
 		###移除顾问
 		set_country_flag = jap_yukari_yakumo_disabled
 		set_country_flag = jap_ran_yakumo_disabled   ##八云蓝
-    set_country_flag = jap_houraisan_kaguya_disabled
+    	set_country_flag = jap_houraisan_kaguya_disabled
 		set_country_flag = jap_yasaka_kanako_disabled
 		set_country_flag = jap_hijiri_byakuren_disabled				
 		set_country_flag = jap_ibaraki_kasen_disabled

@@ -7144,7 +7144,12 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = ITA_tyrant_1
 			remove_ideas = ita_unaccepted_rome
-      remove_ideas = { Questione_romana }
+      		remove_ideas = { Questione_romana }
+			ITA_nero_claudius = {
+				remove_country_leader_role = {
+					ideology = authoritarian_democracy
+				}
+			}
 			set_capital = { state = 115 }
 			
 			start_civil_war = {
@@ -7407,6 +7412,11 @@ focus_tree = {
 
 			random_other_country = {
 				limit = { has_government = fascism  original_tag = ITA }
+				ITA = {
+					ITA_nero_claudius = {
+						set_nationality = PREV.PREV
+					}
+				}
 				add_country_leader_role = {
 					character = "ITA_nero_claudius"
 					country_leader = {

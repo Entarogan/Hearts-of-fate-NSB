@@ -775,6 +775,7 @@ characters={
 			traits = {
 				Field_commander
 			}
+			removal_cost = -1
 			ai_will_do = {
 				factor = 5
 			}
@@ -2042,7 +2043,7 @@ characters={
 			traits = {
 				Real_politics
 			}
-
+			removal_cost = -1
 			ai_will_do = {
 				factor = 5
 			}
@@ -2085,6 +2086,7 @@ characters={
 			traits = {
 				GER_thalmann_T
 			}
+			removal_cost = -1
 			ai_will_do = {
 				factor = 5
 			}
@@ -2107,6 +2109,7 @@ characters={
 			traits = {
 				Liberator_rosenberg
 			}
+			removal_cost = -1
 
       targeted_modifier = {
         tag = SOV
@@ -2151,6 +2154,8 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+
+			removal_cost = -1
 		}
 	}
 
@@ -2174,6 +2179,8 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+
+			removal_cost = -1
 		}
 	}
 
@@ -2196,6 +2203,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -2221,6 +2229,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -2243,6 +2252,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -2265,6 +2275,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -2970,6 +2981,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -2992,6 +3004,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 
@@ -3014,6 +3027,7 @@ characters={
 			ai_will_do = {
 				factor = 5
 			}
+			removal_cost = -1
 		}		
 	}
 

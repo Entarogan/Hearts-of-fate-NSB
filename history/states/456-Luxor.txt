@@ -13,7 +13,7 @@ local_supplies=0.0
 		}
 		owner = EGY
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 
 		victory_points = {

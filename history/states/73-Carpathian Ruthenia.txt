@@ -12,7 +12,7 @@ local_supplies=0.0
 		}
 		owner = HUN
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 		}
 		add_claim_by = CZE
 		add_core_of = HUN

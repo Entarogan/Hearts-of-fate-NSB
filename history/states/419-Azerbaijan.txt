@@ -9,7 +9,7 @@ local_supplies=0.0
 	history={
 		owner = PER
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		victory_points = {
 			1896 3 

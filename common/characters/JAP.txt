@@ -34,7 +34,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { the_hand_behind_the_scenes veteran }
+			traits = { the_hand_behind_the_scenes chairman_of_kizuku_in  }
 			
 			ai_will_do = {
 				factor = 5
@@ -62,7 +62,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { the_hand_behind_the_scenes veteran }
+			traits = { the_hand_behind_the_scenes chairman_of_kizuku_in  }
 			
 			ai_will_do = {
 				factor = 5
@@ -89,7 +89,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { reform_supporter veteran }
+			traits = { reform_supporter chairman_of_kizuku_in  }
 			
 			ai_will_do = {
 				factor = 5
@@ -108,7 +108,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ brilliant_strategist career_officer harsh_leader politically_connected trait_mountaineer }
+			traits={ brilliant_strategist career_officer harsh_leader politically_connected trait_mountaineer  }
 			skill=6
 			attack_skill=6
 			defense_skill=4
@@ -129,12 +129,10 @@ characters={
 				NOT = {
 					has_completed_focus = JAP_bafuku_authority
 				}
-				NOT = {
-					has_completed_focus = JAP_purge_kodoha_fate
-				}
+				
 			}
 			removal_cost = -1
-			traits = { theo_technocrat veteran }
+			traits = { theo_technocrat chairman_of_sumitsu_in  }
 			
 			ai_will_do = {
 				factor = 5
@@ -158,7 +156,7 @@ characters={
 				}
 			}
 			removal_cost = -1
-			traits = { gunshin veteran }
+			traits = { gunshin rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -227,9 +225,10 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
-			}	
+			}
+				
 			removal_cost = -1
-			traits = { ambitious_reformer }
+			traits = { ambitious_reformer chairman_of_sumitsu_in }
 			
 			ai_will_do = {
 				factor = 5
@@ -289,7 +288,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { religious_pacifist }
+			traits = { religious_pacifist chairman_of_sumitsu_in }
 			
 			ai_will_do = {
 				factor = 5
@@ -347,7 +346,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { coward_intriguer }
+			traits = { coward_intriguer chairman_of_sumitsu_in }
 			
 			ai_will_do = {
 				factor = 5
@@ -402,7 +401,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { ambitious_warlord }
+			traits = { ambitious_warlord rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -456,7 +455,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { morderate_rikugun }
+			traits = { morderate_rikugun rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -530,7 +529,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { rational_rikugun }
+			traits = { rational_rikugun rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -590,7 +589,7 @@ characters={
       
 			removal_cost = -1
       
-			traits = { neutral_warlord }
+			traits = { neutral_warlord rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -626,7 +625,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { gunshin }
+			traits = { gunshin rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -662,7 +661,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { berserker_rikugun }
+			traits = { berserker_rikugun rikugun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -718,7 +717,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { morderate_kaigun veteran }
+			traits = { morderate_kaigun kaigun_daijin_trait  }
 			
 			ai_will_do = {
 				factor = 5
@@ -775,7 +774,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { neutral_kaigun }
+			traits = { neutral_kaigun kaigun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -849,7 +848,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { pacifist_kaigun }
+			traits = { pacifist_kaigun kaigun_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -887,7 +886,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { radicalist_kaigun  }
+			traits = { radicalist_kaigun kaigun_daijin_trait  }
 			
 			ai_will_do = {
 				factor = 5
@@ -935,7 +934,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { popular_figurehead2  }
+			traits = { popular_figurehead2 jinja_kyoku_speaker }
 			
 			ai_will_do = {
 				factor = 5
@@ -964,7 +963,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { popular_figurehead2 }
+			traits = { popular_figurehead2 jinja_kyoku_speaker }
 			
 			ai_will_do = {
 				factor = 5
@@ -993,7 +992,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { kirisame_diplomacy  robber }
+			traits = { kirisame_diplomacy  robber gaimu_daijin_trait }
 			targeted_modifier = {
 				tag = CHI
 				generate_wargoal_tension_against = 0.75
@@ -1076,7 +1075,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { crafty_strategist }
+			traits = { crafty_strategist gaimu_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -1100,7 +1099,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { mind_reader }
+			traits = { mind_reader gaimu_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -1124,7 +1123,7 @@ characters={
 				original_tag = JAP
 			}
 			removal_cost = -1
-			traits = { back_stacker }
+			traits = { back_stacker gaimu_daijin_trait }
 			
 			ai_will_do = {
 				factor = 5
@@ -2974,6 +2973,64 @@ characters={
 			ai_will_do = {
 				factor = 1
 			}
+		}
+	}
+
+	JAP_NON = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = Non
+			ai_will_do = {
+				factor = 0
+			}
+			traits = { chairman_of_kizuku_in }
+			removal_cost = -1
+		}
+		advisor={
+			slot = special_second
+			idea_token = Non_1
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+		advisor={
+			slot = special_third
+			idea_token = Non_4
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+		advisor={
+			slot = special_fourth
+			idea_token = Non_3
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+		advisor={
+			slot = special_fifth
+			idea_token = Non_5
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = Non_2
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
 		}
 	}
 

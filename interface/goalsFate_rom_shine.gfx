@@ -1826,10 +1826,10 @@ spriteTypes = {
   
   spriteType = {
     name = "GFX_focus_ROM_war_fanaticism_shine"
-    texturefile = "gfx/interface/goals/GFX_focus_ROM_war_fanaticism.png"
+    texturefile = "gfx/interface/goals/focus_ROM_war_fanaticism.png"
     effectFile = "gfx/FX/buttonstate.lua"
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_war_fanaticism.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_war_fanaticism.png"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = -90.0
       animationlooping = no
@@ -1842,7 +1842,7 @@ spriteTypes = {
     }
 
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_war_fanaticism.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_war_fanaticism.png"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = 90.0
       animationlooping = no
@@ -1858,10 +1858,10 @@ spriteTypes = {
   
   spriteType = {
     name = "GFX_focus_ROM_kazikli_bey_shine"
-    texturefile = "gfx/interface/goals/GFX_focus_ROM_kazikli_bey.png"
+    texturefile = "gfx/interface/goals/focus_ROM_kazikli_bey.png"
     effectFile = "gfx/FX/buttonstate.lua"
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_kazikli_bey.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_kazikli_bey.png"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = -90.0
       animationlooping = no
@@ -1874,7 +1874,7 @@ spriteTypes = {
     }
 
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_kazikli_bey.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_kazikli_bey.png"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = 90.0
       animationlooping = no
@@ -1890,10 +1890,10 @@ spriteTypes = {
   
   spriteType = {
     name = "GFX_focus_ROM_BNR_shine"
-    texturefile = "gfx/interface/goals/GFX_focus_ROM_BNR.png"
+    texturefile = "gfx/interface/goals/focus_ROM_BNR.dds"
     effectFile = "gfx/FX/buttonstate.lua"
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_BNR.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_BNR.dds"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = -90.0
       animationlooping = no
@@ -1906,7 +1906,7 @@ spriteTypes = {
     }
 
     animation = {
-      animationmaskfile = "gfx/interface/goals/GFX_focus_ROM_BNR.png"
+      animationmaskfile = "gfx/interface/goals/focus_ROM_BNR.dds"
       animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
       animationrotation = 90.0
       animationlooping = no

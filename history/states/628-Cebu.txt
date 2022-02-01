@@ -11,7 +11,7 @@ local_supplies=0.0
 	{
 		owner = JAP
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			12118 = {
 				naval_base = 1
 			}

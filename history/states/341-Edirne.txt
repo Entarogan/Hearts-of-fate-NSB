@@ -16,7 +16,7 @@ local_supplies=0.0
 			11842 5
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			industrial_complex = 1
 			849 = {
 				naval_base = 3

@@ -12,7 +12,7 @@ local_supplies=0.0
 		owner = SEN
 		add_core_of = MLI
 		buildings = {
-			infrastructure = 1
+			infrastructure = 0
 		}
 
 	}

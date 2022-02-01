@@ -195,5 +195,35 @@ leader_traits = {
 		consumer_goods_factor = -0.03
 	}
 
+	chairman_of_kizuku_in = {
+		random = no
+		stability_factor = 0.025
+	}
+
+	chairman_of_sumitsu_in = {
+		random = no
+		political_power_factor = 0.025
+	}
+
+	rikugun_daijin_trait = {
+		random = no
+		experience_gain_army = 0.025
+	}
+
+	kaigun_daijin_trait = {
+		random = no
+		experience_gain_navy = 0.025
+	}
+
+	gaimu_daijin_trait = {
+		random = no
+		##
+	}
+
+	jinja_kyoku_speaker = {
+		random = no
+		##
+	}
+
 
 }

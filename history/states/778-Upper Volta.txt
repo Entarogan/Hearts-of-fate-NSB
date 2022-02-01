@@ -13,7 +13,7 @@ local_supplies=0.0
 			10836 1
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 	}
 
