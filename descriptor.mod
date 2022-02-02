@@ -1,4 +1,4 @@
-name="Hearts of Fate: dev"
+name="Hearts of Fate: dev - 2"
 version="1.8"
 tags={
 	"Alternative History"

@@ -15,7 +15,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-        NOT = { has_country_flag = GER_Continue_the_purge_flag }
+        		NOT = { has_country_flag = GER_Continue_the_purge_flag }
 			}
 			traits = {
 				GER_rundstedt_T
@@ -2966,7 +2966,7 @@ characters={
 		name=GER_special_third_nein
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		advisor={
@@ -2989,7 +2989,7 @@ characters={
 		name=GER_special_second_nein
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		advisor={
@@ -3012,7 +3012,7 @@ characters={
 		name=GER_special_sixth_nein
 		portraits={
 			army={
-				small="GFX_idea_generic_army_europe_2"
+				small="GFX_idea_advisor_unknown"
 			}
 		}
 		advisor={

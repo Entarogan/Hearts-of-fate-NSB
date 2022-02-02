@@ -7159,9 +7159,9 @@ focus_tree = {
 				only_own_territory = no
 				capital = 2
 				states = { 2 39 158 159 160 161 273 271 448 449 450 451 550 559 661 662 663 }
-        keep_unit_leaders = {
-          3392
-        }
+				keep_unit_leaders = {
+					3392
+				}
 			}
 
 			set_cosmetic_tag = ITA_SRI
@@ -7177,238 +7177,238 @@ focus_tree = {
 				logistics_skill = 3
 			}
 
-      create_field_marshal = {# Randolfo Pacciardi
-        name = "Randolfo Pacciardi"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Randolfo_Pacciardi.tga"
-        traits = {
-          politically_connected
-          trickster
-          guerilla_fighter
-          inspirational_leader
-        }
-        skill = 3
-        attack_skill = 3
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 3
-      }
-      create_field_marshal = {# Edmondo Rossoni
-        name = "Edmondo Rossoni"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Edmondo_Rossoni.tga"
-        traits = {
-          career_officer
-          organisational_leader
-          organizer
-        }
-        skill = 2
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 2
-        logistics_skill = 3
-      }
-
-      create_corps_commander = {# Dardano Fenulli
-        name = "Dardano Fenulli"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Dardano_Fenulli.tga"
-        traits = {
-          organizer
-          panzer_leader
-        }
-
-        skill = 2
-        attack_skill = 2
-        defense_skill = 2
-        planning_skill = 2
-        logistics_skill = 1
-      }
-      create_corps_commander = {# Ettore Troilo
-        name = "Ettore Troilo"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Ettore_Troilo.tga"
-        traits = {
-          war_hero
-          infantry_officer
-        }
-        skill = 2
-        attack_skill = 2
-        defense_skill = 1
-        planning_skill = 2
-        logistics_skill = 2
-      }
-      create_corps_commander = {# Giovanni Duca
-        name = "Giovanni Duca"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Giovanni_Duca.tga"
-        traits = { career_officer }
-        skill = 2
-        attack_skill = 3
-        defense_skill = 1
-        planning_skill = 2
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Francesco de Martini"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Francesco_de_Martini.tga"
-        traits = {
-          commando
-          naval_invader
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Igino Ghisellini"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Igino_Ghisellini.tga"
-        traits = {
-          trait_reckless
-          hill_fighter
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Michele Bianchi"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Michele_Bianchi.tga"
-        traits = {
-          harsh_leader
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Attilio Teruzzi"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Attilio_Teruzzi.tga"
-        traits = {
-          infantry_leader
-          adaptable
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Enea Navarini"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Enea_Navarini.tga"
-        traits = {
-          skilled_staffer
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-      create_corps_commander = {
-        name = "Pompeo Colajanni"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Pompeo_Colajanni.tga"
-        traits = {
-          commando
-        }
-        skill = 1
-        attack_skill = 1
-        defense_skill = 1
-        planning_skill = 1
-        logistics_skill = 1
-      }
-
-      create_navy_leader = {# Carlo Avegno
-        name = "Carlo Avegno"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Carlo_Avegno.tga"
-        traits = { superior_tactician }
-        skill = 2
-        attack_skill = 1
-        defense_skill = 2
-        maneuvering_skill = 1
-        coordination_skill = 2
-      }
-      create_navy_leader = {# Inigo Campioni
-        name = "Inigo Campioni"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Inigo_Campioni.tga"
-        traits = { ironside }
-        skill = 3
-        attack_skill = 2
-        defense_skill = 3
-        maneuvering_skill = 3
-        coordination_skill = 3
-      }
-      create_navy_leader = {# Riccardo Paladini
-        name = "Riccardo Paladini"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Riccardo_Paladini.tga"
-        traits = { ironside superior_tactician }
-        skill = 4
-        attack_skill = 3
-        defense_skill = 3
-        maneuvering_skill = 3
-        coordination_skill = 4
-      }
-      create_navy_leader = {# Romeo Bernotti
-        name = "Romeo Bernotti"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Romeo_Bernotti.tga"
-        traits = { air_controller }
-        skill = 3
-        attack_skill = 3
-        defense_skill = 2
-        maneuvering_skill = 2
-        coordination_skill = 3
-      }
-      create_navy_leader = {
-        name = "Luigi Biancheri"
-        portrait_path = "gfx/leaders/SRI/Portrait_SRI_Luigi_Biancheri.tga"
-        traits = { spotter }
-        skill = 2
-        attack_skill = 1
-        defense_skill = 2
-        maneuvering_skill = 3
-        coordination_skill = 2
-      }
-
-      remove_unit_leader = 3394
-      remove_unit_leader = 844
-      remove_unit_leader = 840
-      remove_unit_leader = 841
-      remove_unit_leader = 842
-      remove_unit_leader = 843
-      remove_unit_leader = 3393
-      remove_unit_leader = 3395
-      remove_unit_leader = 3396
-      remove_unit_leader = 3397
-      remove_unit_leader = 3398
-      remove_unit_leader = 3001
-      remove_unit_leader = 3000
-      remove_unit_leader = 3399
-      remove_unit_leader = 4000
-      remove_unit_leader = 4001
-      remove_unit_leader = 4002
-      remove_unit_leader = 4003      
-
-      remove_unit_leader = 3500
-      remove_unit_leader = 3501
-      remove_unit_leader = 3502
-      remove_unit_leader = 3503
-      remove_unit_leader = 3504
-      remove_unit_leader = 3505
-      remove_unit_leader = 3506
-      remove_unit_leader = 3507
-      remove_unit_leader = 3508
-      remove_unit_leader = 3509
-	 	add_country_leader_role = {
-			character = "ITA_giovanni_messe"
-			country_leader = {
-				ideology = authoritarian_democracy
-				traits = {  }
-				expire = "1965.3.1.1"
+			create_field_marshal = {# Randolfo Pacciardi
+				name = "Randolfo Pacciardi"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Randolfo_Pacciardi.tga"
+				traits = {
+				politically_connected
+				trickster
+				guerilla_fighter
+				inspirational_leader
+				}
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
 			}
-			promote_leader = yes 
-		}
+			create_field_marshal = {# Edmondo Rossoni
+				name = "Edmondo Rossoni"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Edmondo_Rossoni.tga"
+				traits = {
+				career_officer
+				organisational_leader
+				organizer
+				}
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 3
+			}
+
+			create_corps_commander = {# Dardano Fenulli
+				name = "Dardano Fenulli"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Dardano_Fenulli.tga"
+				traits = {
+				organizer
+				panzer_leader
+				}
+
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {# Ettore Troilo
+				name = "Ettore Troilo"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Ettore_Troilo.tga"
+				traits = {
+				war_hero
+				infantry_officer
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {# Giovanni Duca
+				name = "Giovanni Duca"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Giovanni_Duca.tga"
+				traits = { career_officer }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Francesco de Martini"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Francesco_de_Martini.tga"
+				traits = {
+				commando
+				naval_invader
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Igino Ghisellini"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Igino_Ghisellini.tga"
+				traits = {
+				trait_reckless
+				hill_fighter
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Michele Bianchi"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Michele_Bianchi.tga"
+				traits = {
+				harsh_leader
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Attilio Teruzzi"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Attilio_Teruzzi.tga"
+				traits = {
+				infantry_leader
+				adaptable
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Enea Navarini"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Enea_Navarini.tga"
+				traits = {
+				skilled_staffer
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Pompeo Colajanni"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Pompeo_Colajanni.tga"
+				traits = {
+				commando
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+
+			create_navy_leader = {# Carlo Avegno
+				name = "Carlo Avegno"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Carlo_Avegno.tga"
+				traits = { superior_tactician }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				maneuvering_skill = 1
+				coordination_skill = 2
+			}
+			create_navy_leader = {# Inigo Campioni
+				name = "Inigo Campioni"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Inigo_Campioni.tga"
+				traits = { ironside }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 3
+				maneuvering_skill = 3
+				coordination_skill = 3
+			}
+			create_navy_leader = {# Riccardo Paladini
+				name = "Riccardo Paladini"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Riccardo_Paladini.tga"
+				traits = { ironside superior_tactician }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				maneuvering_skill = 3
+				coordination_skill = 4
+			}
+			create_navy_leader = {# Romeo Bernotti
+				name = "Romeo Bernotti"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Romeo_Bernotti.tga"
+				traits = { air_controller }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				maneuvering_skill = 2
+				coordination_skill = 3
+			}
+			create_navy_leader = {
+				name = "Luigi Biancheri"
+				portrait_path = "gfx/leaders/SRI/Portrait_SRI_Luigi_Biancheri.tga"
+				traits = { spotter }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 2
+			}
+
+			remove_unit_leader = 3394
+			remove_unit_leader = 844
+			#remove_unit_leader = 840
+			remove_unit_leader = 841
+			remove_unit_leader = 842
+			remove_unit_leader = 843
+			remove_unit_leader = 3393
+			remove_unit_leader = 3395
+			remove_unit_leader = 3396
+			remove_unit_leader = 3397
+			remove_unit_leader = 3398
+			remove_unit_leader = 3001
+			remove_unit_leader = 3000
+			remove_unit_leader = 3399
+			remove_unit_leader = 4000
+			remove_unit_leader = 4001
+			remove_unit_leader = 4002
+			remove_unit_leader = 4003      
+
+			remove_unit_leader = 3500
+			remove_unit_leader = 3501
+			remove_unit_leader = 3502
+			remove_unit_leader = 3503
+			remove_unit_leader = 3504
+			remove_unit_leader = 3505
+			remove_unit_leader = 3506
+			remove_unit_leader = 3507
+			remove_unit_leader = 3508
+			remove_unit_leader = 3509
+			#add_country_leader_role = {
+			#	character = "ITA_giovanni_messe"
+			#	country_leader = {
+			#		ideology = authoritarian_democracy
+			#		traits = {  }
+			#		expire = "1965.3.1.1"
+			#	}
+			#	promote_leader = yes 
+			#}
 
 			random_other_country = {
 				limit = { has_government = fascism  original_tag = ITA }
@@ -7417,13 +7417,14 @@ focus_tree = {
 						set_nationality = PREV.PREV
 					}
 				}
+
 				add_country_leader_role = {
 					character = "ITA_nero_claudius"
 					country_leader = {
 						desc = "POLITICS_NERO_DESC"
 						ideology = fascism_ideology
 						traits = { Tyrant_of_rose }
-						id = 931
+						#id = 931
 						expire = "1965.3.1.1"
 					}
 					promote_leader = yes 
@@ -7436,167 +7437,168 @@ focus_tree = {
 					}
 				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3394
-            }
-            set_nationality = PREV
-          }
-        }
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 844
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3394
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 4000
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 844
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 840
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 4000
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 841
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 840
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 842
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 841
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 843
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 842
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3393
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 843
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3395
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3393
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3396
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3395
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3397
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3396
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3398
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3397
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3001
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3398
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3000
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3001
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 3399
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3000
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 4001
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 3399
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = { 
-          random_army_leader = { 
-            limit = {
-              has_id = 4002
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 4001
+						}
+						set_nationality = PREV
+					}
+				}
 
-        ITA = {    
-          random_army_leader = { 
-            limit = {
-              has_id = 4003
-            }
-            set_nationality = PREV
-          }
-        }
+				ITA = { 
+					random_army_leader = { 
+						limit = {
+						has_id = 4002
+						}
+						set_nationality = PREV
+					}
+				}
+
+				ITA = {    
+					random_army_leader = { 
+						limit = {
+						has_id = 4003
+						}
+						set_nationality = PREV
+					}
+				}
 
 
 			}
