@@ -33,6 +33,9 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = { has_country_flag = jap_yukari_yakumo_disabled }
+			}
 			removal_cost = -1
 			traits = { the_hand_behind_the_scenes chairman_of_kizuku_in  }
 			
@@ -61,8 +64,11 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = { has_country_flag = jap_matara_okina_disabled }
+			}
 			removal_cost = -1
-			traits = { the_hand_behind_the_scenes chairman_of_kizuku_in  }
+			traits = { low_profile_schemer chairman_of_kizuku_in  }
 			
 			ai_will_do = {
 				factor = 5
@@ -87,6 +93,9 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
+			}
+			available = {
+				NOT = { has_country_flag = jap_ibaraki_kasen_disabled }
 			}
 			removal_cost = -1
 			traits = { reform_supporter chairman_of_kizuku_in  }
@@ -129,6 +138,9 @@ characters={
 				NOT = {
 					has_completed_focus = JAP_bafuku_authority
 				}
+				NOT = {
+					has_country_flag = jap_yasaka_kanako_disabled
+				}
 				
 			}
 			removal_cost = -1
@@ -153,6 +165,9 @@ characters={
 				}
 				NOT = {
 					has_completed_focus = JAP_purge_kodoha_fate
+				}
+				NOT = {
+					has_country_flag = jap_yasaka_kanako_disabled
 				}
 			}
 			removal_cost = -1
@@ -181,6 +196,9 @@ characters={
 				}
 				NOT = {
 					has_completed_focus = JAP_purge_kodoha_fate
+				}
+				NOT = {
+					has_country_flag = jap_yasaka_kanako_disabled
 				}
 			}
 			cost = 150
@@ -225,6 +243,11 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
+			}
+			available = {
+				NOT = {
+					has_country_flag = jap_hinanawi_tenshi_disabled
+				}
 			}
 				
 			removal_cost = -1
@@ -287,6 +310,9 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = { has_country_flag = jap_hijiri_byakuren_disabled }
+			}
 			removal_cost = -1
 			traits = { religious_pacifist chairman_of_sumitsu_in }
 			
@@ -345,6 +371,9 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = { has_country_flag = jap_osakabehime_disabled }
+			}
 			removal_cost = -1
 			traits = { coward_intriguer chairman_of_sumitsu_in }
 			
@@ -360,6 +389,7 @@ characters={
 			}
 			available = {
 				NOT = { has_government = communism }
+				NOT = { has_country_flag = jap_osakabehime_disabled }
 			}
 			traits = { rear_construction }
 
@@ -399,6 +429,11 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
+			}
+			available = {
+				NOT = {
+					has_country_flag = jap_oda_nobunaga_disabled
+				}
 			}
 			removal_cost = -1
 			traits = { ambitious_warlord rikugun_daijin_trait }
@@ -990,6 +1025,9 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
+			}
+			available = {
+				NOT = { has_country_flag = jap_kirisame_marisa_disabled }
 			}
 			removal_cost = -1
 			traits = { kirisame_diplomacy  robber gaimu_daijin_trait }
