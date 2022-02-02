@@ -188,7 +188,9 @@ recruit_character = RUS_vladimir_manshteyn
 recruit_character = RUS_sergei_markov
 recruit_character = RUS_vasili_chernetsov
 recruit_character = RUS_roman_von_ungernsternberg
+
 recruit_character = RUS_aleksandr_kolchak
+
 recruit_character = RUS_boris_vilkitsky
 recruit_character = RUS_georges_florovsky
 recruit_character = RUS_matou_shinji
@@ -202,7 +204,7 @@ recruit_character = RUS_vladimir_zworykin
 recruit_character = RUS_nikita_dragovich
 recruit_character = RUS_leonid_ustrugov
 recruit_character = RUS_nyto_isomer
-recruit_character = RUS_boris_andreyevich_vilkitsky
+#recruit_character = RUS_boris_andreyevich_vilkitsky
 recruit_character = RUS_boris_vasilchikov
 recruit_character = RUS_ivan_serov
 
@@ -214,7 +216,7 @@ recruit_character = RUS_aleksandra_ivanovna_pokryshkin
 recruit_character = RUS_simon_kuznets
 recruit_character = RUS_viktor_chernov
 recruit_character = RUS_irakli_tsereteli
-recruit_character = RUS_alexandr_kolchak
+#recruit_character = RUS_alexandr_kolchak
 recruit_character = RUS_g_k
 recruit_character = RUS_bronya_zaychik
 recruit_character = RUS_havier_witkin

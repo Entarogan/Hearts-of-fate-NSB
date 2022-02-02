@@ -229,17 +229,17 @@ characters={
 			slot = navy_chief
 			idea_token = RUS_mikhail_berens
 			allowed  = {
-					original_tag  = RUS
-				}
-				available  = {
-				}
-				traits  = {
-					navy_chief_maneuver_2 
-				}
+				original_tag  = RUS
+			}
+			available  = {
+			}
+			traits  = {
+				navy_chief_maneuver_2 
+			}
 		}
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_mikhail_berens"
 			}
 			navy={
 				small="GFX_idea_RUS_mikhail_berens"
@@ -273,7 +273,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_RUS_nestor_monastyrev"
 			}
 			navy={
 				small="GFX_idea_RUS_nestor_monastyrev"
@@ -1380,11 +1380,14 @@ characters={
 					has_completed_focus  = rua_modernized_military_school 
 				}
 				research_bonus  = {
-					cat_mobile_warfare  = 0.150
-					cat_superior_firepower  = 0.150
+				#	cat_mobile_warfare  = 0.150
+				#	cat_superior_firepower  = 0.150
 				}
+
 				modifier  = {
 					army_attack_factor  = 0.050
+					cat_mobile_warfare_cost_factor = -0.15
+					cat_superior_firepower_cost_factor = -0.15
 				}
 				traits  = {
 					strategy_innovator 
@@ -1783,11 +1786,13 @@ characters={
 				has_completed_focus  = rus_continue_modernization 
 			}
 			research_bonus  = {
-				cat_grand_battle_plan  = 0.150
-				cat_mass_assault  = 0.150
+				#cat_grand_battle_plan  = 0.150
+				#cat_mass_assault  = 0.150
 			}
 			modifier  = {
 				production_speed_arms_factory_factor  = 0.050
+				cat_grand_battle_plan_cost_factor  = 0.150
+				cat_mass_assault_cost_factor  = 0.150
 			}
 			traits  = {
 				safety_contractor 
