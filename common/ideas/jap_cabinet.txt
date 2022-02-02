@@ -541,18 +541,18 @@ ideas = {
     }
     
     Non = {
-      picture = non
-      allowed_to_remove = {
-				always = no
-			}
-			default = yes
-      removal_cost = -1
-      
-			traits = {  }
-			
-			ai_will_do = {
-				factor = 5
-			}
+		picture = non
+		allowed_to_remove = {
+			always = no
+		}
+		default = yes
+		removal_cost = -1
+
+		traits = {  }
+
+		ai_will_do = {
+			factor = 5
+		}
     }
 
   }
