@@ -1026,6 +1026,12 @@ country_event = {     #中亚叛乱
 				elections_allowed = no
 			}
 
+
+			KAZ_Filipp_Goloshchyokin  = {
+				promote_character = yes
+				promote_character = conservatism
+			  }
+
       hidden_effect = {
         load_oob = "kaz_rebel_1936"
       }

@@ -10,7 +10,7 @@ local_supplies=0.0
 	history={
 		owner = YUG
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 			industrial_complex = 3
 		}
 		victory_points = {

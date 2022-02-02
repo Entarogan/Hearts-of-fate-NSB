@@ -21,7 +21,7 @@ local_supplies=0.0
 			4075 1 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			industrial_complex = 1
 			arms_factory = 1
 			dockyard = 1

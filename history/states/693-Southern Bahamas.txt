@@ -10,7 +10,7 @@ local_supplies=0.0
 		add_core_of = BAH
 		owner = BAH
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			10440 = {
 				naval_base = 1
 			}

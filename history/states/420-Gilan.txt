@@ -16,7 +16,7 @@ local_supplies=0.0
 			4901 3
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		add_core_of = PER
 	}

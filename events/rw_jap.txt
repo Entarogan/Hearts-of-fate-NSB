@@ -1102,8 +1102,16 @@ country_event = {##八云紫贪污案
       
     }
 		add_political_power = 50
-    add_ideas = { Non JAP_osakabehime  }
-    remove_unit_leader = 8030
+		if = {
+			limit = { has_idea = JAP_yakumo_yukari }
+			remove_ideas = { JAP_yakumo_yukari }
+		}
+		if = {
+			limit = { has_idea = JAP_yasaka_kanako }
+			remove_ideas = { JAP_yasaka_kanako }
+		}
+		add_ideas = { Non JAP_osakabehime  }
+		remove_unit_leader = 8030
 	}	
 	option = {##沙条爱歌伪造证据被发现了，被立刻逮捕，
 		name = rw_jap.9.b
@@ -1191,6 +1199,10 @@ country_event = {##谋杀织田信长
     remove_unit_leader = 8015
     
     JAP_military_government_conflicts_relaxed = yes
+	if = {
+		limit = { has_idea = JAP_oda_nobunaga }
+		remove_ideas = { JAP_oda_nobunaga }
+	}
     add_ideas = { JAP_yogyu_munenori }
 		##刺杀是成功的，织田被炸死了，
 		#将陆军大臣织田信长换为织田信胜，删除织田信长、茶茶将领
@@ -2808,14 +2820,15 @@ country_event = {##清洗织田信长
 			limit = {
 				has_idea = JAP_oda_nobunaga
 			}
-      if = {
-        limit = { has_idea = idea_jap_toseiha }
-        add_ideas = JAP_yogyu_munenori##柳生宗矩
-      }
+			remove_ideas = { JAP_oda_nobunaga }
 			if = {
-        limit = { OR = { has_idea = idea_jap_kodoha  has_idea = idea_jap_revolutionaries } }
-        add_ideas = JAP_hijikato_toshizo##土方岁三
-      }
+				limit = { has_idea = idea_jap_toseiha }
+				add_ideas = JAP_yogyu_munenori##柳生宗矩
+			}
+			if = {
+				limit = { OR = { has_idea = idea_jap_kodoha  has_idea = idea_jap_revolutionaries } }
+				add_ideas = JAP_hijikato_toshizo##土方岁三
+			}
 		}
 		remove_unit_leader = 8000
 		remove_unit_leader = 8015
@@ -2848,13 +2861,33 @@ country_event = {##清洗皇道派将领
 			limit = {
 				has_idea = JAP_hijikato_toshizo
 			}
-			add_ideas = JAP_tomoe_gozen##巴御前
+			remove_ideas = { JAP_hijikato_toshizo }
+			add_ideas = JAP_tomoe_gozen ##巴御前
 		}
 		if = {
 			limit = {
 				has_idea = JAP_hinanawi_tenshi
 			}
-			add_ideas = JAP_yasaka_kanako##八坂神奈子
+			remove_ideas = { JAP_hinanawi_tenshi }
+			add_ideas = JAP_yasaka_kanako ##八坂神奈子
+		}
+		hidden_effect = {
+			JAP_hinanawi_tenshi = {
+				remove_country_leader_role = {
+					ideology = fascism_ideology
+				}
+			}
+			JAP_matara_okina = {
+				add_country_leader_role = {
+					Promote_leader = yes
+					Country_leader = {
+						ideology = fascism_ideology
+						traits = {
+							
+						}
+					}
+				}
+			}
 		}
 		remove_unit_leader = 8004
 		remove_unit_leader = 8009
@@ -2899,6 +2932,24 @@ country_event = {##清洗统制派、民主派将领
 	option = {##
 		name = jap_purge.3.a
 		##海军大臣更换为加贺，陆军大臣更换为土方岁三
+		if = {
+			limit = {  
+				has_idea = JAP_nagato
+			}
+			remove_ideas = { JAP_nagato }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_shoukaku
+			}
+			remove_ideas = { JAP_shoukaku }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yogyu_munenori
+			}
+			remove_ideas = { JAP_yogyu_munenori }
+		}
 		add_ideas = JAP_hijikato_toshizo
 		add_ideas = JAP_kaga
 		##删除将领
@@ -2914,7 +2965,7 @@ country_event = {##清洗统制派、民主派将领
 		set_country_flag = jap_sakamoto_ryoma_disabled
 		set_country_flag = jap_shoukaku_disabled
 		set_country_flag = jap_nagato_disabled
-    set_country_flag = jap_zuikaku_disabled
+    	set_country_flag = jap_zuikaku_disabled
 		##没有铃鹿御前和瑞鹤
 	}
 }
@@ -2938,6 +2989,30 @@ country_event = {##清洗统制派、民主派贵族
 	}
 	option = {##
 		name = jap_purge.4.a
+		if = {
+			limit = {  
+				has_idea = JAP_yakumo_yukari
+			}
+			remove_ideas = { JAP_yakumo_yukari }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yasaka_kanako
+			}
+			remove_ideas = { JAP_yasaka_kanako }
+		}
+		if = {
+			limit = {  
+				has_idea = jap_hijiri_byakuren
+			}
+			remove_ideas = { jap_hijiri_byakuren }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yasaka_kanako_army
+			}
+			remove_ideas = { JAP_yasaka_kanako_army }
+		}
 		###移除将领
 		remove_unit_leader = 8030
 		remove_unit_leader = 8036
@@ -2949,12 +3024,12 @@ country_event = {##清洗统制派、民主派贵族
 		set_country_flag = jap_yukari_yakumo_disabled
 		set_country_flag = jap_yasaka_kanako_disabled
 		set_country_flag = jap_hijiri_byakuren_disabled
-    set_country_flag = jap_ran_yakumo_disabled
+    	set_country_flag = jap_ran_yakumo_disabled
 		##没有八云蓝、泄矢诹访子、西行寺幽幽子
 		##删除八云紫、八云蓝、八坂神奈子、圣白莲、泄矢诹访子、西行寺幽幽子及其对应顾问，
 		add_ideas = JAP_matara_okina
 		add_ideas = JAP_hinanawi_tenshi
-    add_ideas = { JAP_kotomine_kirei }
+    	add_ideas = { JAP_kotomine_kirei }
 		##贵族院议长更换为摩多罗隐岐奈，枢密院院长更换为比那名居天子
 	}
 }
@@ -2975,6 +3050,73 @@ country_event = {##清洗贵族
 	}
 	option = {##
 		name = jap_purge.5.a
+		hidden_effect = {
+			JAP_hinanawi_tenshi = {
+				remove_country_leader_role = {
+					ideology = fascism_ideology
+				}
+			}
+			JAP_oda_nobunaga = {
+				add_country_leader_role = {
+					Promote_leader = yes
+					Country_leader = {
+						ideology = nazism
+						traits = {
+							
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yakumo_yukari
+			}
+			remove_ideas = { JAP_yakumo_yukari }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yasaka_kanako
+			}
+			remove_ideas = { JAP_yasaka_kanako }
+		}
+		if = {
+			limit = {  
+				has_idea = jap_hijiri_byakuren
+			}
+			remove_ideas = { jap_hijiri_byakuren }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yasaka_kanako_army
+			}
+			remove_ideas = { JAP_yasaka_kanako_army }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_osakabehime
+			}
+			remove_ideas = { JAP_osakabehime }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_osakabehime
+			}
+			remove_ideas = { JAP_osakabehime }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_hinanawi_tenshi
+			}
+			remove_ideas = { JAP_hinanawi_tenshi }
+		}
+		if = {
+			limit = {  
+				has_idea = JAP_yakumo_ran_political_advisor
+			}
+			remove_ideas = { JAP_yakumo_ran_political_advisor }
+		}
+		remove_ideas = { JAP_yakumo_yukari JAP_yakumo_ran_political_advisor  }
 		###移除将领
 		remove_unit_leader = 8030
 		remove_unit_leader = 8036
@@ -2989,7 +3131,7 @@ country_event = {##清洗贵族
 		###移除顾问
 		set_country_flag = jap_yukari_yakumo_disabled
 		set_country_flag = jap_ran_yakumo_disabled   ##八云蓝
-    set_country_flag = jap_houraisan_kaguya_disabled
+    	set_country_flag = jap_houraisan_kaguya_disabled
 		set_country_flag = jap_yasaka_kanako_disabled
 		set_country_flag = jap_hijiri_byakuren_disabled				
 		set_country_flag = jap_ibaraki_kasen_disabled
@@ -2999,6 +3141,7 @@ country_event = {##清洗贵族
 
 		##贵族院议长更换为Non，枢密院院长更换为Non
 		###
+		
     add_ideas = { Non  Non_1 JAP_akechi_mitsuhide }
 	}
 }

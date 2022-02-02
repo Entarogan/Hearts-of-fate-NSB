@@ -970,6 +970,7 @@ recruit_character = JAP_Sion
 recruit_character = JAP_nishi_kinuyo
 recruit_character = JAP_shimada_alice
 recruit_character = JAP_mitsurugi_meiya
+recruit_character = JAP_NON
 
 ###2022/2/1
 recruit_character = JAP_rgouyi_shiki

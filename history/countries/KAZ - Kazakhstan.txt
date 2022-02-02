@@ -87,17 +87,7 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Fillipp Goloshchyokin"
-	desc = ""
-	picture = "Portrait_Filipp_Goloshchyokin.png"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}
-
+recruit_character = KAZ_Filipp_Goloshchyokin
 
 
 
