@@ -968,6 +968,9 @@ characters={
 			allowed = {
 				original_tag = JAP
 			}
+			available = {
+				NOT = { has_completed_focus = JAP_cancel_shinto }
+			}
 			removal_cost = -1
 			traits = { popular_figurehead2 jinja_kyoku_speaker }
 			
@@ -996,6 +999,9 @@ characters={
 			}
 			allowed = {
 				original_tag = JAP
+			}
+			available = {
+				NOT = { has_completed_focus = JAP_cancel_shinto }
 			}
 			removal_cost = -1
 			traits = { popular_figurehead2 jinja_kyoku_speaker }

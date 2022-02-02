@@ -8333,9 +8333,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			swap_ideas = {
-				add_idea = JAP_hakurei_reimu2
-				remove_idea = JAP_hakurei_reimu
+			JAP_hakurei_reimu = {
+				add_trait = {
+					trait = prince_of_terror
+					slot = special_sixth
+				}
 			}
 			add_stability = 0.05
 		}
@@ -8448,7 +8450,9 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = {
 				state_shintoism
+				JAP_hakurei_reimu
 			}
+			add_ideas = { Non_2 }
 			hidden_effect = {
 				country_event = {
 					id = rw_jap.34
@@ -8511,10 +8515,6 @@ focus_tree = {
 			add_timed_idea = {
 				idea = JAP_take_over_the_government
 				days = 360
-			}
-			country_event = {
-				id = rw_jap.34
-				days = 3
 			}
 		}
 		ai_will_do = {
