@@ -1791,8 +1791,8 @@ characters={
 			}
 			modifier  = {
 				production_speed_arms_factory_factor  = 0.050
-				cat_grand_battle_plan_cost_factor  = 0.150
-				cat_mass_assault_cost_factor  = 0.150
+				cat_grand_battle_plan_cost_factor  = -0.150
+				cat_mass_assault_cost_factor  = -0.150
 			}
 			traits  = {
 				safety_contractor 

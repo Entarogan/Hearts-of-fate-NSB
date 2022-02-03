@@ -524,7 +524,7 @@ mountaineers_ROM = {
 			}
 			
 			regiments = {
-				mountaineers = 12
+				mountaineers = 11
 				artillery_brigade = 5
         anti_tank_brigade = 2
         anti_air_brigade = 1

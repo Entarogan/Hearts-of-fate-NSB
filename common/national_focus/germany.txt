@@ -2760,9 +2760,9 @@ focus_tree = {
 
       add_ideas = GER_Mobile_Warfare_idea_1
 
-			add_tech_bonus = {
-				name = GER_New_tactics
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 3
 				category = cat_mobile_warfare
 			}		
@@ -2784,6 +2784,10 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		bypass = { 
+			has_tech = improved_medium_tank_chassis
+		}
+
 		ai_will_do = {
 			factor = 100
 		}
@@ -2794,10 +2798,55 @@ focus_tree = {
         name = GER_actung_panzer
         bonus = 1
         ahead_reduction = 1.5
-        technology = basic_medium_tank
+        technology = improved_medium_tank_chassis
       }
 
-			custom_effect_tooltip = GER_Author_Tips_tt
+			if = {
+				limit = {
+					NOT = { has_tech = basic_medium_tank_chassis }
+				}
+
+				set_technology = { basic_medium_tank_chassis = 1 }
+
+				create_equipment_variant = {
+					name = "Panzer III Ausf. A"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_high_velocity_cannon
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = smoke_launchers
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_GER_basic_medium_tank_medium"
+				}
+				create_equipment_variant = {
+					name = "Panzer IV Ausf. A"
+					type = medium_tank_chassis_1
+					parent_version = 1
+					modules = {
+						main_armament_slot = tank_close_support_gun
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = smoke_launchers
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 6
+						tank_nsb_armor_upgrade = 2
+					}
+					icon = "GFX_GER_basic_medium_tank_medium"
+				}
+			}
 
 		}
 	}
@@ -2815,6 +2864,10 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
+
+		bypass = { 
+			has_tech = improved_heavy_tank_chassis
+		}
 
 		ai_will_do = {
 			factor = 1000
@@ -2835,7 +2888,7 @@ focus_tree = {
         name = GER_30_ton_tank_project
         bonus = 1.0
         ahead_reduction = 1.5
-        technology = improved_heavy_tank
+        technology = improved_heavy_tank_chassis
       }
 
 		}
@@ -2982,7 +3035,7 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
-			} 
+			}
 
 		}
 	}
@@ -3026,9 +3079,9 @@ focus_tree = {
       remove_ideas = GER_CAS_doctrine_idea
       add_ideas = GER_Joint_air_to_ground_operations_idea
 
-			add_tech_bonus = {
-				name = GER_Joint_air_to_ground_operations
-				bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}	
@@ -3040,9 +3093,9 @@ focus_tree = {
 				category = radar_tech
 			}
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Joint_air_to_ground_operations
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = battlefield_support_tree
 			}	
@@ -3088,16 +3141,16 @@ focus_tree = {
 
 			add_research_slot = 1
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Lessons_from_the_war
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}	
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Lessons_from_the_war
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = battlefield_support_tree
 			}
@@ -3358,14 +3411,12 @@ focus_tree = {
 
       add_ideas = GER_Offense_is_the_best_defense_idea
 
-      add_tech_bonus = {
-        name = GER_Offense_is_the_best_defense
-        bonus = 1.0
+			add_doctrine_cost_reduction = {
+				name = GER_Lessons_from_the_war
+				cost_reduction = 0.5
 				uses = 2
-        technology = firebrigades
-        technology = backhand_blow
-        technology = modern_blitzkrieg
-      }
+				category = cat_mobile_warfare
+			}
 
 		}
 	}
@@ -3383,6 +3434,10 @@ focus_tree = {
 		cost = 5
 
 		available_if_capitulated = yes
+
+		bypass = { 
+			has_tech = advanced_medium_tank_chassis
+		}
 
 		ai_will_do = {
 			factor = 150
@@ -3406,8 +3461,15 @@ focus_tree = {
 				name = GER_Complete_the_20_ton_tank_project
 				bonus = 1.0
 				uses = 1
-				category = armor
+				technology = advanced_medium_tank_chassis
 			  }
+
+			add_tech_bonus = {
+				name = GER_Anti_armor_unit
+        bonus = 1.0
+        uses = 1
+				category = cat_anti_tank
+			}
 
 		}
 	}
@@ -3423,7 +3485,19 @@ focus_tree = {
 		relative_position_id = GER_Complete_the_20_ton_tank_project
 
 		cost = 5
+
+		available = {
+			OR = {
+				has_tech = advanced_medium_tank_chassis
+				has_tech = advanced_heavy_tank_chassis
+			}
+		}
+
 		available_if_capitulated = yes
+
+		bypass = { 
+			has_tech = main_battle_tank_chassis
+		}
 
 		ai_will_do = {
 			factor = 150
@@ -3442,9 +3516,10 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = GER_Standard_tank_design
+				ahead_reduction = 1
 				bonus = 1.0
 				uses = 1
-				category = armor
+				technology = main_battle_tank_chassis
 			  }
 
 		}
@@ -3578,7 +3653,7 @@ focus_tree = {
 			}
 
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = air_sup_bonus
 				bonus = 1.0
 				uses = 2
@@ -3903,7 +3978,7 @@ focus_tree = {
 
       add_ideas = GER_CAS_doctrine_idea
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_CAS_doctrine
 				bonus = 1.0
 				uses = 3
@@ -3989,6 +4064,10 @@ focus_tree = {
 
 		available_if_capitulated = yes
 
+		bypass = { 
+			has_tech = improved_infantry_weapons
+		}
+
 		ai_will_do = {
 			factor = 100
 			modifier = {
@@ -4009,28 +4088,11 @@ focus_tree = {
 
       recruit_character = GER_schmeisser_gewehr
 
-			if = {
-				limit = {
-					has_tech = improved_infantry_weapons
-				}
-        add_tech_bonus = {
-          name = GER_Modernization_of_light_weapons
-          bonus = 1.0
-          uses = 1
-          category = infantry_weapons
-        }
-			}
-
-			if = {
-				limit = {
-					NOT = { has_tech = improved_infantry_weapons }
-				}
-        add_tech_bonus = {
-          name = GER_Modernization_of_light_weapons
-          bonus = 3.0
-          uses = 1
-          technology = improved_infantry_weapons
-        }
+			add_tech_bonus = {
+				name = GER_Modernization_of_light_weapons
+				bonus = 3.0
+				uses = 1
+				technology = improved_infantry_weapons
 			}
 
 		}
@@ -4143,6 +4205,10 @@ focus_tree = {
 
 		cost = 5
 
+		available = {
+			has_tech = basic_medium_tank_chassis
+		}
+
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -4168,6 +4234,32 @@ focus_tree = {
 			}
 
       add_ideas = GER_Assault_gun_concept_idea
+
+			if = {
+				limit = {
+					is_ai = no
+				}
+
+				create_equipment_variant = {
+					name = "Stuh III Ausf. A"
+					type = medium_tank_artillery_chassis_1
+					parent_version = 1
+					modules = {
+						main_armament_slot = tank_close_support_gun
+						turret_type_slot = tank_medium_fixed_superstructure_turret
+						suspension_type_slot = tank_torsion_bar_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 5
+					}
+					icon = "GFX_GER_basic_medium_td"
+				}
+
+			}
 
 		}
 
@@ -4353,13 +4445,11 @@ focus_tree = {
 
       add_ideas = GER_Defense_first_idea
 
-			add_tech_bonus = {
-				name = GER_Defense_first
-        bonus = 1.0
-        uses = 2
-				technology = volkssturm
-				technology = nd_conscription
-				technology = werwolf_guerillas
+			add_doctrine_cost_reduction = {
+				name = GER_Lessons_from_the_war
+				bonus = 0.5
+				uses = 2
+				category = cat_mobile_warfare
 			}
 
 		}
@@ -4448,17 +4538,13 @@ focus_tree = {
 				name = GER_Anti_armor_unit
         bonus = 1.0
         uses = 1
-				technology = improved_medium_td
-				technology = advanced_medium_td
-				technology = improved_heavy_td
-				technology = advanced_heavy_td
+				technology = advanced_heavy_tank_chassis
 			}
 
 			add_tech_bonus = {
 				name = GER_Anti_armor_unit
         bonus = 1.0
         uses = 2
-				category = cat_heavy_armor
 				category = cat_anti_tank
 			}
 
@@ -5939,71 +6025,6 @@ focus_tree = {
           producer = GER
         }
 
-        if = {
-          limit = {
-            has_tech = basic_medium_tank
-          }
-
-          add_equipment_to_stockpile = {
-            type = medium_tank_equipment
-            amount = 200
-            producer = GER
-          }
-
-        }
-
-        if = {
-          limit = {
-            has_tech = basic_medium_td
-          }
-
-          add_equipment_to_stockpile = {
-            type = medium_tank_destroyer_equipment
-            amount = 80
-            producer = GER
-          }
-
-        }
-
-        if = {
-          limit = {
-            has_tech = basic_medium_art
-          }
-
-          add_equipment_to_stockpile = {
-            type = medium_tank_artillery_equipment
-            amount = 120
-            producer = GER
-          }
-
-        }
-
-        if = {
-          limit = {
-            has_tech = basic_medium_spaa
-          }
-
-          add_equipment_to_stockpile = {
-            type = medium_tank_aa_equipment
-            amount = 40
-            producer = GER
-          }
-
-        }
-
-        if = {
-          limit = {
-            has_tech = basic_heavy_tank
-          }
-
-          add_equipment_to_stockpile = {
-            type = heavy_tank_equipment
-            amount = 50
-            producer = GER
-          }
-
-        }
-
         add_equipment_to_stockpile = {
           type = fighter_equipment
           amount = 300
@@ -6216,14 +6237,14 @@ focus_tree = {
 
       add_tech_bonus = {
         name = GER_Legacy_of_the_Spanish_Civil_War
-        bonus = 1.0
+        bonus = 0.5
         uses = 1
         category = armor
       }
 
-			add_tech_bonus = {
-				name = GER_Legacy_of_the_Spanish_Civil_War
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_mobile_warfare
 			}	
@@ -8253,94 +8274,29 @@ focus_tree = {
         producer = GER
       }
 
-			if = {
-				limit = {
-				  has_tech = basic_medium_tank
-				}
-
-        add_equipment_to_stockpile = {
-          type = medium_tank_equipment
-          amount = 100
-          producer = GER
-        }
-
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 200
+				producer = GER
 			}
 
-			if = {
-				limit = {
-				  has_tech = basic_medium_td
-				}
-
-        add_equipment_to_stockpile = {
-          type = medium_tank_destroyer_equipment
-          amount = 40
-          producer = GER
-        }
-
+			add_equipment_to_stockpile = {
+				type = CAS_equipment
+				amount = 100
+				producer = GER
 			}
 
-			if = {
-				limit = {
-				  has_tech = basic_medium_art
-				}
-
-        add_equipment_to_stockpile = {
-          type = medium_tank_artillery_equipment
-          amount = 60
-          producer = GER
-        }
-
+			add_equipment_to_stockpile = {
+				type = nav_bomber_equipment
+				amount = 50
+				producer = GER
 			}
 
-			if = {
-				limit = {
-				  has_tech = basic_medium_spaa
-				}
-
-        add_equipment_to_stockpile = {
-          type = medium_tank_aa_equipment
-          amount = 20
-          producer = GER
-        }
-
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 50
+				producer = GER
 			}
-
-			if = {
-				limit = {
-				  has_tech = basic_heavy_tank
-				}
-
-        add_equipment_to_stockpile = {
-          type = heavy_tank_equipment
-          amount = 25
-          producer = GER
-        }
-
-			}
-
-        add_equipment_to_stockpile = {
-          type = fighter_equipment
-          amount = 200
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = CAS_equipment
-          amount = 100
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = nav_bomber_equipment
-          amount = 50
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = tac_bomber_equipment
-          amount = 50
-          producer = GER
-        }
 			
 		}
 		

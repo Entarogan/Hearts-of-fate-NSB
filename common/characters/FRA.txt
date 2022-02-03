@@ -459,7 +459,8 @@ characters={
 			}
 			cost = 150
 			research_bonus = {
-				cat_superior_firepower = 0.20
+				# cat_superior_firepower = 0.20
+				cat_superior_firepower_cost_factor = -0.175
 			}
 
 			traits = { The_superior_firepower }
@@ -698,7 +699,10 @@ characters={
 			}
 			cost = 150		
 			research_bonus = {
-				cat_mobile_warfare = 0.15
+				# cat_mobile_warfare = 0.15
+			}
+			modifier = {
+				cat_mobile_warfare_cost_factor = -0.15
 			}
 			traits = { Armored_torrent }
 			available = {

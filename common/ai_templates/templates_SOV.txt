@@ -127,7 +127,6 @@ armored_SOV = {
 			medium_sp_artillery_brigade
 			medium_tank_destroyer_brigade
 			mot_anti_air_brigade
-			infantry
 			engineer
 			armored_car_recon
 			signal_company
@@ -227,7 +226,6 @@ armored_SOV = {
 			medium_sp_artillery_brigade
 			medium_tank_destroyer_brigade
 			mot_anti_air_brigade
-			infantry
 			engineer
 			armored_car_recon
 			signal_company
