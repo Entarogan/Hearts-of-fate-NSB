@@ -460,6 +460,9 @@ characters={
 			cost = 150
 			research_bonus = {
 				# cat_superior_firepower = 0.20
+			}
+
+			modifier = {
 				cat_superior_firepower_cost_factor = -0.175
 			}
 
