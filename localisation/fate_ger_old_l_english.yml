@@ -1413,23 +1413,8 @@
  germany.615.b:0 "Tank was ordered."   
  
  Support_messerschmitt:0 "Support Messerschmitt"
- Support_kurt:0 "Support Tank"
- 
- more_italy.3.t:0 "Ethopian War"
- more_italy.3.desc:0 "The war against Ethiopia has begun, and Britain and France have protested against us as expected and threatened to impose trade sanctions ... so are we going to continue?"
- more_italy.3.a:0 "The Emperor will not fear anyone."
- more_italy.3.b:0 "We should keep composed."   
- 
- Invasion_Ethiopia:0 "Invade Ethopia" 
- NOT_Invasion_Ethiopia:0 "Abort Invasion" 
- 
- more_italy.4.t:0 "Spartakusbund protests!"
- more_italy.4.desc:0 "The Spartakists in exile in our country have begun to protest again. They have spoken out about the tyranny of the upper levels of the country, demanding a complete reorganization of the regime, and it is said that the group really found "Spartacus" to lead. Quick suppression is the best choice."
- more_italy.4.a:0 "Get them shot!"
- more_italy.4.b:0 "Just let them protest."    
- 
- Spartacus:0 "Protest Succeed"
- 
+ Support_kurt:0 "Support Tank" 
+
  SOV_Simplify_production:0 "Simplified Production"
  
  SOV_Simplify_production_idea:0 "Simplified Production"

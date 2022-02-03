@@ -891,7 +891,7 @@ characters={
 		}
 	}
 	JAP_kaga={
-		name=JAP_Kaga
+		name=JAP_kaga
 		portraits={
 			navy={
 				small="GFX_idea_JAP_Kaga"
@@ -913,7 +913,7 @@ characters={
 		}
 		advisor={
 			slot = special_fifth
-			idea_token = JAP_Kaga
+			idea_token = JAP_kaga
 			allowed_to_remove = {
 				always = no
 			}
@@ -929,7 +929,7 @@ characters={
 		}
 		advisor={
 			slot = navy_chief
-			idea_token = JAP_Kaga
+			idea_token = JAP_kaga
 			allowed = {
 				original_tag = JAP
 			}

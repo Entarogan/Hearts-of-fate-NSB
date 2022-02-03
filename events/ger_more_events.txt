@@ -2943,8 +2943,12 @@ country_event = {     # 解职帕拉塞尔苏斯
 		ai_chance = {
 			base = 10
 		}
-
-    add_ideas = { Non_2 }
+		if = {
+			limit = { has_idea = GER_Hohenheim_Paracelsus }
+			remove_ideas = { GER_Hohenheim_Paracelsus }
+		}
+		retire_character = GER_Hohenheim_Paracelsus
+    	add_ideas = { GER_special_sixth_nein }
 		
 	}
 
@@ -2953,8 +2957,12 @@ country_event = {     # 解职帕拉塞尔苏斯
 		ai_chance = {
 			base = 40
 		}
-
-    add_ideas = { GER_ubstacheit_von_Einzbern }
+		if = {
+			limit = { has_idea = GER_Hohenheim_Paracelsus }
+			remove_ideas = { GER_Hohenheim_Paracelsus }
+		}
+		retire_character = GER_Hohenheim_Paracelsus
+    	add_ideas = { GER_ubstacheit_von_Einzbern }
 		
 	}
 
@@ -2967,14 +2975,18 @@ country_event = {     # 解职帕拉塞尔苏斯
 			base = 50
 		}
 
-    if = {
-      limit = {
-        NOT = { has_country_flag = GER_Appoint_Dannick_flag }
-      }
-      set_country_flag = GER_Appoint_Dannick_flag
-    }
-
-    add_ideas = { GER_Darnic_Prestone }
+		if = {
+			limit = {
+				NOT = { has_country_flag = GER_Appoint_Dannick_flag }
+			}
+			set_country_flag = GER_Appoint_Dannick_flag
+		}
+		if = {
+			limit = { has_idea = GER_Hohenheim_Paracelsus }
+			remove_ideas = { GER_Hohenheim_Paracelsus }
+		}
+		GER_Hohenheim_Paracelsus
+		add_ideas = { GER_Darnic_Prestone }
 		
 	}	
   
@@ -2993,9 +3005,7 @@ country_event = {     # 勃艮第领
 		ai_chance = {
 			base = 100
 		}
-
-    country_event = { id = more_ger.69 days = 1 }
-		
+    	country_event = { id = more_ger.69 days = 1 }
 	}
   
 }
@@ -3014,11 +3024,14 @@ country_event = {     # 暗杀希姆莱
 			base = 100
 		}
 
-    set_country_flag = GER_Dismissal_Himmler_flag
-
-    country_event = { id = more_ger.70 days = 1 }
-	
-    add_ideas = { GER_Ernst_Rohm }
+		set_country_flag = GER_Dismissal_Himmler_flag
+		country_event = { id = more_ger.70 days = 1 }
+		if = {
+			limit = { has_idea = GER_Heinrich_Himmler }
+			remove_ideas = { GER_Heinrich_Himmler }
+		}
+		retire_character = GER_Heinrich_Himmler
+		add_ideas = { GER_Ernst_Rohm }
 
 		hidden_effect = {
 			news_event = { id = more_News.46 hours = 3 }
@@ -3059,9 +3072,7 @@ country_event = {     # 干掉罗森伯格
 		ai_chance = {
 			base = 100
 		}
-
-    country_event = { id = more_ger.72 days = 1 }
-		
+    	country_event = { id = more_ger.72 days = 1 }	
 	}
   
 }
@@ -3079,10 +3090,14 @@ country_event = {     # 干掉罗森伯格
 		ai_chance = {
 			base = 10
 		}
-
-    add_ideas = { Non_1 }
-
-		
+		if = {
+			limit = {
+				has_idea = GER_Alfred_Rosenberg
+			}
+			remove_ideas = { GER_Alfred_Rosenberg }
+		}
+		retire_character = GER_Alfred_Rosenberg
+    	add_ideas = { GER_special_second_nein }
 	}
  
 	option = {
@@ -3090,9 +3105,14 @@ country_event = {     # 干掉罗森伯格
 		ai_chance = {
 			base = 40
 		}
-
-    add_ideas = { GER_Martin_Heidegger }
-		
+		if = {
+			limit = {
+				has_idea = GER_Alfred_Rosenberg
+			}
+			remove_ideas = { GER_Alfred_Rosenberg }
+		}
+		retire_character = GER_Alfred_Rosenberg
+    	add_ideas = { GER_Martin_Heidegger }	
 	}
 
 	option = {
@@ -3104,15 +3124,21 @@ country_event = {     # 干掉罗森伯格
 			base = 50
 		}
 
-    if = {
-      limit = {
-        NOT = { has_country_flag = GER_Appoint_Dannick_flag }
-      }
-      set_country_flag = GER_Appoint_Dannick_flag
-    }
+		if = {
+			limit = {
+				has_idea = GER_Alfred_Rosenberg
+			}
+			remove_ideas = { GER_Alfred_Rosenberg }
+		}
 
-    add_ideas = { GER_Darnic_Prestone_2 }
-		
+		if = {
+			limit = {
+				NOT = { has_country_flag = GER_Appoint_Dannick_flag }
+			}
+			set_country_flag = GER_Appoint_Dannick_flag
+		}
+		retire_character = GER_Alfred_Rosenberg
+		add_ideas = { GER_Darnic_Prestone_2 }
 	}
  
 }
@@ -3141,10 +3167,7 @@ country_event = {     # 蹊跷的死亡
 		name = more_ger.73.a
 		ai_chance = {
 			base = 100
-		}
-
-
-		
+		}		
 	}
 
 	
@@ -3174,13 +3197,8 @@ country_event = {     # 分歧加剧
 		name = more_ger.74.a
 		ai_chance = {
 			base = 100
-		}
-
-
-		
+		}	
 	}
-
-	
 }
 
 country_event = {     # 飞哥死了
@@ -3193,11 +3211,11 @@ country_event = {     # 飞哥死了
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes character = GER_siegfried }
-    is_subject = no
-	  has_idea = GER_Siegfried_spirit_idea
-    NOT = { has_country_flag = GER_No_longer_oppose_flag }
-  }
+    	has_country_leader = { ruling_only = yes character = GER_siegfried }
+    	is_subject = no
+		has_idea = GER_Siegfried_spirit_idea
+    	NOT = { has_country_flag = GER_No_longer_oppose_flag }
+	}
 
 	mean_time_to_happen = {
 		days = 90
@@ -3627,8 +3645,6 @@ country_event = {     # 放人
 		ai_chance = {
 			base = 100
 		}
-
-		
 	}
 	
 }
@@ -3643,10 +3659,8 @@ country_event = {     # 戈林恢复秩序
 	
 	option = {
 		name = more_ger.82.a
-
-    set_country_flag = GER_Goering_restores_order_flag
-
-    add_political_power = -200
+		set_country_flag = GER_Goering_restores_order_flag
+		add_political_power = -200
 
 		ai_chance = {
 			base = 0
@@ -3656,15 +3670,11 @@ country_event = {     # 戈林恢复秩序
 
 	option = {
 		name = more_ger.82.b
-
-    set_country_flag = GER_Goering_restores_order_flag
-
-    country_event = { id = more_ger.114 days = 7 }
-
+    	set_country_flag = GER_Goering_restores_order_flag
+    	country_event = { id = more_ger.114 days = 7 }
 		ai_chance = {
 			base = 100
 		}
-		
 	}
 	
 }

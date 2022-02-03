@@ -6622,12 +6622,12 @@ focus_tree = {
 					black_king
 					motorized_expert
 				}
-				id = 901
+				# id = 901
 			}
 			remove_unit_leader = 801
 			create_field_marshal = {
 				name = "Arturia Pendragon (Alter)"
-				id = 802
+				# id = 802
 				picture = "Portrait_Arturia_Pendragon_Alter.dds"
 				traits = {
 					politically_connected
@@ -6668,7 +6668,7 @@ focus_tree = {
 					traits = {
 						Knight_of_Rebellion
 					}
-					id = 903
+					# id = 903
 				}
 			}
 			country_event = {

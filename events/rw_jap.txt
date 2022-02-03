@@ -1462,17 +1462,17 @@ country_event = {##鬼人正邪用炸弹袭击天皇
           
         }      
       }
-      kill_ideology_leader = fascism
-      create_country_leader = {
-        name = "Toyosatomimi no Miko"
-        desc = "POLITICS_TOYOSATOMIMI_NO_MIKO_DESC"
-        picture = "Portrait_Toyosatomimi_no_Miko_Empress.dds"
-        expire = "1965.1.1"
-        id = 9003
-        ideology = rexism
-        traits = {
-        }
-      }
+      #kill_ideology_leader = fascism
+      #create_country_leader = {
+      #  name = "Toyosatomimi no Miko"
+      #  desc = "POLITICS_TOYOSATOMIMI_NO_MIKO_DESC"
+      #  picture = "Portrait_Toyosatomimi_no_Miko_Empress.dds"
+      # expire = "1965.1.1"
+      #  id = 9003
+      #  ideology = rexism
+      #  traits = {
+      #  }
+      #}
     }
     
     if = {
@@ -1486,17 +1486,17 @@ country_event = {##鬼人正邪用炸弹袭击天皇
           
         }      
       }
-      kill_ideology_leader = neutrality
-      create_country_leader = {
-        name = "Toyosatomimi no Miko"
-        desc = "POLITICS_TOYOSATOMIMI_NO_MIKO_DESC"
-        picture = "Portrait_Toyosatomimi_no_Miko_Empress.dds"
-        expire = "1965.1.1"
-        id = 9031
-        ideology = absolute_monarchy
-        traits = {
-        }
-      }
+      #kill_ideology_leader = neutrality
+      #create_country_leader = {
+      #  name = "Toyosatomimi no Miko"
+      #  desc = "POLITICS_TOYOSATOMIMI_NO_MIKO_DESC"
+      #  picture = "Portrait_Toyosatomimi_no_Miko_Empress.dds"
+      #  expire = "1965.1.1"
+      #  id = 9031
+      #  ideology = absolute_monarchy
+      #  traits = {
+      #  }
+      #}
     }
 		
 		#圣德天皇继位，鬼人正邪被处决
@@ -4422,7 +4422,7 @@ country_event = {##八云紫干预政府预算决策（贵族院具有预算优�
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.2.a
+		name = hof_option_fine
 		add_political_power = -75
 	}
 }
@@ -4433,7 +4433,7 @@ country_event = {##八云紫批评首相
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.3.a
+		name = hof_option_fine
 		add_stability = -0.03
 		add_political_power = 50
 	}
@@ -4445,7 +4445,7 @@ country_event = {##八云紫干预军队
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.4.a
+		name = hof_option_fine
 		add_war_support = -0.03
 		army_experience = 10
 		navy_experience = 10
@@ -4492,7 +4492,7 @@ country_event = {##摩多罗隐岐奈视察陆军
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.6.a
+		name = hof_option_fine
 		add_political_power = 20
 		army_experience = 20
 	}
@@ -4504,7 +4504,7 @@ country_event = {##摩多罗隐岐奈视察舰队
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.7.a
+		name = hof_option_fine
 		add_political_power = -50
 		navy_experience = 20
 	}
@@ -4516,7 +4516,7 @@ country_event = {##摩多罗隐岐奈视察航空兵
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.8.a
+		name = hof_option_fine
 		add_political_power = -50
 		air_experience = 40
 	}
@@ -4562,7 +4562,7 @@ country_event = {##茨木华扇批评众议院
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.10.a
+		name = hof_option_fine
 		add_political_power = -50
 	}
 }
@@ -4573,7 +4573,7 @@ country_event = {##茨木华扇批评首相
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.11.a
+		name = hof_option_fine
 		add_political_power = 50
 		add_stability = -0.02
 	}
@@ -4585,7 +4585,7 @@ country_event = {##茨木华扇批评天皇
 	#picture = GFX_news_event_002
 	is_triggered_only = yes
 	option = {##
-		name = jap_cabinet.12.a
+		name = hof_option_fine
 		add_political_power = -100
 	}
 }

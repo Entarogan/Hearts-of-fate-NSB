@@ -1402,10 +1402,10 @@ characters={
 			}
 			available = {
 				has_government = fascism
-        or = {
-          has_completed_focus = GER_General_Mobilization_Act
-          has_completed_focus = GER_Start_the_wartime_economy
-        }
+				or = {
+					has_completed_focus = GER_General_Mobilization_Act
+					has_completed_focus = GER_Start_the_wartime_economy
+				}
 			}
 			traits = {
 				GER_goebbels_T
