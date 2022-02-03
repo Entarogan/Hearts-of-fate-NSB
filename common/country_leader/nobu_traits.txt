@@ -300,7 +300,7 @@ leader_traits = {
 		trade_laws_cost_factor = -0.20
 		economy_cost_factor = -0.20
     
-    compliance_gain = 0.01
+		# compliance_gain = 0.01
 		
 		ai_will_do = {
 			factor = 20

@@ -6114,10 +6114,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_reinforce_the_king_focus
 		available = {
-			has_country_leader = {
-				id = 900
-				ruling_only = yes
-			}
+			has_government = neutrality
 		}
 		ai_will_do = {
 			factor = 5
