@@ -374,20 +374,21 @@ characters={
 		name=SOV_grigory_kulik
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
+				small = GFX_portrait_SOV_grigory_kulik_small
 			}
 			army={
-				large="gfx/leaders/SOV/Portrait_Soviet_Grigory_Kulik.dds"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Grigory_Kulik.dds"
 			}
 		}
-		field_marshal={
-			traits={ old_guard inflexible_strategist career_officer politically_connected }
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
+		corps_commander = {
+			traits = { old_guard inflexible_strategist career_officer politically_connected }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 0
+			#visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 	SOV_kirill_meretskov={
@@ -1986,6 +1987,17 @@ characters={
 				factor = 1.000
 			}
 		}
+		field_marshal = {
+			traits = { career_officer inflexible_strategist trait_reckless }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = 0
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+		}	
+
 
 	}
 
@@ -2013,6 +2025,16 @@ characters={
 			ai_will_do = {
 				factor = 1.000
 			}
+		}
+		field_marshal = {
+			traits = { old_guard career_officer infantry_officer organizer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = 0
+			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
 		}
 	}
 

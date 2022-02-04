@@ -2148,7 +2148,16 @@ country_event = {
 
     add_timed_idea = { idea = GER_Darnic_run days = 90 }
 
-    recruit_character = GER_Darnic_Prestone
+    #recruit_character = GER_Darnic_Prestone
+	add_corps_commander_role = {
+		character = GER_Darnic_Prestone
+		traits = { politically_connected career_officer armor_officer trait_cautious organizer trickster skilled_staffer }
+		skill = 4
+		attack_skill = 3
+		defense_skill = 3
+		planning_skill = 5
+		logistics_skill = 3
+	}
 
     ROM = {
       country_event = { id = germany.579 days = 1 }
