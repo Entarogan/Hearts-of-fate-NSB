@@ -1892,8 +1892,17 @@ focus_tree = {
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = GER_gretel_jeckeln_strasserism
 
-			recruit_character = GER_gretel_jeckeln_strasserism
-
+			#recruit_character = GER_gretel_jeckeln_strasserism
+			add_corps_commander_role = {
+				character = GER_gretel_jeckeln_strasserism
+				traits = { infantry_officer career_officer politically_connected skilled_staffer }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 4
+				legacy_id = 2041
+			}
 		}
 	}
 
@@ -2530,8 +2539,17 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_vivi_schweinsteiger_strasserism
 
-			recruit_character = GER_vivi_schweinsteiger_strasserism
-
+			#recruit_character = GER_vivi_schweinsteiger_strasserism
+			add_corps_commander_role = {
+				character = GER_vivi_schweinsteiger_strasserism
+				traits = { career_officer politically_connected }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 5
+				legacy_id = 2043
+			}
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = joseph_goebbels
 
@@ -3073,11 +3091,20 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_heinrike_sayn_wittgenstein
 
-      recruit_character = GER_heinrike_sayn_wittgenstein
-
-      remove_ideas = GER_Mobile_Warfare_idea_3
-      remove_ideas = GER_CAS_doctrine_idea
-      add_ideas = GER_Joint_air_to_ground_operations_idea
+			#recruit_character = GER_heinrike_sayn_wittgenstein
+			add_corps_commander_role = {
+				character = GER_heinrike_sayn_wittgenstein
+				traits = { organizer cautious career_officer skilled_staffer }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+				legacy_id = 2039
+			}
+			remove_ideas = GER_Mobile_Warfare_idea_3
+			remove_ideas = GER_CAS_doctrine_idea
+			add_ideas = GER_Joint_air_to_ground_operations_idea
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -3190,10 +3217,22 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_gertrud_barkhorn
 
-		  recruit_character = GER_gertrud_barkhorn
-
-      swap_ideas = { remove_idea = GER_air_innovations_2_idea add_idea = GER_Ace_idea }
-      GER_increase_propaganda = yes
+		  	#recruit_character = GER_gertrud_barkhorn
+			add_corps_commander_role = {
+				character = GER_gertrud_barkhorn
+				traits = { hill_fighter career_officer armor_officer commando }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+				legacy_id = 2037
+			}
+			swap_ideas = { 
+				remove_idea = GER_air_innovations_2_idea 
+				add_idea = GER_Ace_idea 
+			}
+			GER_increase_propaganda = yes
 
 		}
 	}
@@ -3972,8 +4011,17 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = GER_minna_dietlinde_wilcke
 
-		  recruit_character = GER_minna_dietlinde_wilcke
-
+		  	#recruit_character = GER_minna_dietlinde_wilcke
+			add_corps_commander_role = {
+				Character = GER_minna_dietlinde_wilcke
+				traits = { organizer cautious career_officer skilled_staffer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = 2038
+			}
 			air_experience = 25
 
       add_ideas = GER_CAS_doctrine_idea
@@ -4086,8 +4134,17 @@ focus_tree = {
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = GER_schmeisser_gewehr
 
-      recruit_character = GER_schmeisser_gewehr
-
+      		#recruit_character = GER_schmeisser_gewehr
+			add_corps_commander_role = {
+				character = GER_schmeisser_gewehr
+				traits = { trickster commando infantry_officer urban_assault_specialist }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = 2045
+			}
 			add_tech_bonus = {
 				name = GER_Modernization_of_light_weapons
 				bonus = 3.0
@@ -5523,8 +5580,17 @@ focus_tree = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = GER_rusalka_schwagerin
 
-      recruit_character = GER_rusalka_schwagerin
-
+     		#recruit_character = GER_rusalka_schwagerin
+			add_corps_commander_role = {
+				character = GER_rusalka_schwagerin
+				traits = { trickster commando hill_fighter career_officer politically_connected harsh_leader }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = 2044
+			}
 			if = {
 				limit = {
 					has_idea = GER_Intricate_intelligence_agency
@@ -5666,13 +5732,83 @@ focus_tree = {
 
 		  custom_effect_tooltip = GER_Established_the_Supreme_Command_tt
 
-			recruit_character = GER_Joachim_Peiper
-			recruit_character = GER_Otto_Skorzeny
-			recruit_character = GER_Fritz_Klingenberg
-			recruit_character = GER_Hadwigis_Odin      
-			recruit_character = GER_Biank_Ataegina
-			recruit_character = GER_Otto_Kumm
-			recruit_character = GER_Beatrice_Waltrud_von_Kircheisen
+			#recruit_character = GER_Joachim_Peiper
+			add_corps_commander_role = {
+				character = GER_Joachim_Peiper
+				traits = { politically_connected trickster trait_reckless armor_officer cavalry_officer trait_engineer }
+				skill = 3
+				attack_skill = 5
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+				legacy_id = 2049
+			}
+			#recruit_character = GER_Otto_Skorzeny
+			add_corps_commander_role = {
+				character = GER_Otto_Skorzeny
+				traits = { politically_connected trickster media_personality commando trait_mountaineer }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+				legacy_id = 2031
+			}
+			#recruit_character = GER_Fritz_Klingenberg
+			add_corps_commander_role = {
+				character = GER_Fritz_Klingenberg
+				traits = { politically_connected trickster media_personality infantry_officer cavalry_officer trait_reckless urban_assault_specialist }
+				skill = 3
+				attack_skill = 5
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 1
+				legacy_id = 2030
+			}
+			#recruit_character = GER_Hadwigis_Odin      
+			add_corps_commander_role = {
+				character = GER_Hadwigis_Odin
+				traits = { trickster commando invader_ii career_officer politically_connected winter_specialist brilliant_strategist }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+				legacy_id = 2047
+			}
+			#recruit_character = GER_Biank_Ataegina
+			add_corps_commander_role = {
+				character = GER_Biank_Ataegina
+				traits = { trickster career_officer politically_connected winter_specialist hill_fighter armor_officer }
+				skill = 4
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 4
+				legacy_id = 2048
+			}
+			#recruit_character = GER_Otto_Kumm
+			add_corps_commander_role = {
+				character = GER_Otto_Kumm
+				traits = { politically_connected trickster infantry_officer cavalry_officer trait_mountaineer }
+				skill = 3
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+				legacy_id = 2050
+			}
+			#recruit_character = GER_Beatrice_Waltrud_von_Kircheisen
+			add_corps_commander_role = {
+				character = GER_Beatrice_Waltrud_von_Kircheisen
+				traits = { trickster commando trait_engineer scavenger }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+				legacy_id = 2046
+			}
 
       add_ideas = { GER_Wilhelm_Keitel }
 

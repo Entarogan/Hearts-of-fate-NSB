@@ -2060,14 +2060,6 @@ characters={
 			removal_cost = -1
 			traits = { Nuclear_fanatic }			
 		}	
-		corps_commander={
-      traits = { politically_connected career_officer armor_officer trait_cautious organizer trickster skilled_staffer }
-      skill = 4
-      attack_skill = 3
-      defense_skill = 3
-      planning_skill = 5
-      logistics_skill = 3
-		}
 	}
 
 	GER_ernst_thalmann={
@@ -2358,15 +2350,6 @@ characters={
 			ai_will_do = {
 				factor = 100
 			}
-		}		
-		corps_commander={
-      traits = { career_officer politically_connected }
-      skill = 3
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 5
-			legacy_id = 2043
 		}
 	}
 
@@ -2426,15 +2409,6 @@ characters={
 			traits = {
 				mystic_officer 
 			}
-		}		
-		corps_commander={
-			traits = { trickster commando hill_fighter career_officer politically_connected harsh_leader }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = 2044
 		}
 	}
 	
@@ -2465,15 +2439,6 @@ characters={
 				factor = 25
 			}
 		}
-		corps_commander={
-			traits = { hill_fighter career_officer armor_officer commando }
-      skill = 3
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 3
-			legacy_id = 2037
-		}
 	}	
 
 	GER_minna_dietlinde_wilcke={
@@ -2502,15 +2467,6 @@ characters={
 			ai_will_do = {
 				factor = 25
 			}
-		}
-		corps_commander={
-      traits = { organizer cautious career_officer skilled_staffer }
-      skill = 3
-      attack_skill = 3
-      defense_skill = 2
-      planning_skill = 3
-      logistics_skill = 3
-			legacy_id = 2038
 		}
 	}
 
@@ -2544,15 +2500,6 @@ characters={
 				factor = 25
 			}
 		}
-		corps_commander={
-      traits = { organizer cautious career_officer skilled_staffer }
-      skill = 4
-      attack_skill = 4
-      defense_skill = 3
-      planning_skill = 4
-      logistics_skill = 4
-			legacy_id = 2039
-		}
 	}
 
 	GER_Ilfriede_von_Feulner={
@@ -2561,15 +2508,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Ilfriede_von_Feulner.dds"
 			}
-		}
-		corps_commander={
-      traits = { trickster urban_assault_specialist career_officer }
-      skill = 3
-      attack_skill = 3
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 2
-			legacy_id = 2035
 		}
 	}
 
@@ -2580,15 +2518,6 @@ characters={
 				large="gfx/leaders/GER/Portrait_Lunateresia_von_Witzleben.dds"
 			}
 		}
-		corps_commander={
-      traits = { organizer cautious career_officer }
-      skill = 3
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 3
-			legacy_id = 2036
-		}
 	}
 
 	GER_Dreiundvierzig_Gewehr={
@@ -2597,15 +2526,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Dreiundvierzig_Gewehr.dds"
 			}
-		}
-		corps_commander={
-      traits = { infantry_officer urban_assault_specialist commando }
-      skill = 3
-      attack_skill = 3
-      defense_skill = 3
-      planning_skill = 2
-      logistics_skill = 3
-			legacy_id = 2040
 		}
 	}
 
@@ -2616,15 +2536,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Inghild_Bronikowski.dds"
 			}
-		}
-		corps_commander={
-      traits = { infantry_officer cautious organizer politically_connected }
-      skill = 3
-      attack_skill = 2
-      defense_skill = 3
-      planning_skill = 3
-      logistics_skill = 2
-			legacy_id = 2042
 		}
 	}
 
@@ -2657,15 +2568,6 @@ characters={
 			ai_will_do = {
 				factor = 40
 			}
-		}
-		corps_commander={
-			traits = { trickster commando infantry_officer urban_assault_specialist }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 2045
 		}
 	}
 
@@ -2702,15 +2604,6 @@ characters={
 				factor = 1
 			}
 		}		
-		corps_commander={
-      traits = { infantry_officer career_officer politically_connected skilled_staffer }
-      skill = 3
-      attack_skill = 2
-      defense_skill = 2
-      planning_skill = 4
-      logistics_skill = 4
-			legacy_id = 2041
-		}
 	}
 
 	GER_peter_strasser={
@@ -2843,15 +2736,6 @@ characters={
 				large="gfx/leaders/GER/Portrait_Joachim_Peiper.dds"
 			}
 		}
-		corps_commander={
-			traits = { politically_connected trickster trait_reckless armor_officer cavalry_officer trait_engineer }
-			skill = 3
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id = 2049
-		}
 	}
 
 	GER_Otto_Skorzeny={
@@ -2860,15 +2744,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Germany_Otto_Skorzeny.dds"
 			}
-		}
-		corps_commander={
-			traits = { politically_connected trickster media_personality commando trait_mountaineer }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = 2031
 		}
 	}
 
@@ -2879,15 +2754,6 @@ characters={
 				large="gfx/leaders/GER/Portrait_Germany_Fritz_Klingenberg.dds"
 			}
 		}
-		corps_commander={
-			traits = { politically_connected trickster media_personality infantry_officer cavalry_officer trait_reckless urban_assault_specialist }
-			skill = 3
-			attack_skill = 5
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 1
-			legacy_id = 2030
-		}
 	}
 
 	GER_Hadwigis_Odin={
@@ -2897,15 +2763,7 @@ characters={
 				large="gfx/leaders/GER/Portrait_Odin.dds"
 			}
 		}
-		corps_commander={
-			traits = { trickster commando invader_ii career_officer politically_connected winter_specialist brilliant_strategist }
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-			legacy_id = 2047
-		}
+
 	}
 
 	GER_Biank_Ataegina={
@@ -2914,15 +2772,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Biank_Ataegina.dds"
 			}
-		}
-		corps_commander={
-			traits = { trickster career_officer politically_connected winter_specialist hill_fighter armor_officer }
-			skill = 4
-        attack_skill = 3
-        defense_skill = 3
-        planning_skill = 4
-        logistics_skill = 4
-			legacy_id = 2048
 		}
 	}
 
@@ -2933,15 +2782,6 @@ characters={
 				large="gfx/leaders/GER/Portrait_Otto_Kumm.dds"
 			}
 		}
-		corps_commander={
-			traits = { politically_connected trickster infantry_officer cavalry_officer trait_mountaineer }
-			skill = 3
-			attack_skill = 3
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 2
-			legacy_id = 2050
-		}
 	}
 
 	GER_Beatrice_Waltrud_von_Kircheisen={
@@ -2950,15 +2790,6 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_Beatrice_Waltrud_von_Kircheisen.dds"
 			}
-		}
-		corps_commander={
-			traits = { trickster commando trait_engineer scavenger }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 3
-			legacy_id = 2046
 		}
 	}
 
