@@ -6136,10 +6136,6 @@ focus_tree = {
 		relative_position_id = uk_ideal_king_focus
 		available = {
 			has_government = neutrality
-			has_country_leader = {
-				id = 900
-				ruling_only = yes
-			}
 		}
 		ai_will_do = {
 			factor = 5
@@ -6164,10 +6160,6 @@ focus_tree = {
 		relative_position_id = uk_radiant_path_focus
 		available = {
 			has_government = neutrality
-			has_country_leader = {
-				id = 900
-				ruling_only = yes
-			}
 			neutrality > 0.8
 			has_stability > 0.75
 			date > 1939.6.1
