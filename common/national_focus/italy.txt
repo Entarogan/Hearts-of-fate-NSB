@@ -7371,35 +7371,35 @@ focus_tree = {
 				coordination_skill = 2
 			}
 
-			remove_unit_leader = 3394
-			remove_unit_leader = 844
+			#remove_unit_leader = 3394
+			#remove_unit_leader = 844
 			#remove_unit_leader = 840
-			remove_unit_leader = 841
-			remove_unit_leader = 842
-			remove_unit_leader = 843
-			remove_unit_leader = 3393
-			remove_unit_leader = 3395
-			remove_unit_leader = 3396
-			remove_unit_leader = 3397
-			remove_unit_leader = 3398
-			remove_unit_leader = 3001
-			remove_unit_leader = 3000
-			remove_unit_leader = 3399
-			remove_unit_leader = 4000
-			remove_unit_leader = 4001
-			remove_unit_leader = 4002
-			remove_unit_leader = 4003      
+			#remove_unit_leader = 841
+			#remove_unit_leader = 842
+			#remove_unit_leader = 843
+			#remove_unit_leader = 3393
+			#remove_unit_leader = 3395
+			#remove_unit_leader = 3396
+			#remove_unit_leader = 3397
+			#remove_unit_leader = 3398
+			#remove_unit_leader = 3001
+			#remove_unit_leader = 3000
+			#remove_unit_leader = 3399
+			#remove_unit_leader = 4000
+			#remove_unit_leader = 4001
+			#remove_unit_leader = 4002
+			#remove_unit_leader = 4003      
 
-			remove_unit_leader = 3500
-			remove_unit_leader = 3501
-			remove_unit_leader = 3502
-			remove_unit_leader = 3503
-			remove_unit_leader = 3504
-			remove_unit_leader = 3505
-			remove_unit_leader = 3506
-			remove_unit_leader = 3507
-			remove_unit_leader = 3508
-			remove_unit_leader = 3509
+			#remove_unit_leader = 3500
+			#remove_unit_leader = 3501
+			#remove_unit_leader = 3502
+			#remove_unit_leader = 3503
+			#remove_unit_leader = 3504
+			#remove_unit_leader = 3505
+			#remove_unit_leader = 3506
+			#remove_unit_leader = 3507
+			#remove_unit_leader = 3508
+			#remove_unit_leader = 3509
 			#add_country_leader_role = {
 			#	character = "ITA_giovanni_messe"
 			#	country_leader = {
@@ -7439,167 +7439,44 @@ focus_tree = {
 
 
 				ITA = { 
-					random_army_leader = { 
+					every_character = {
 						limit = {
-						has_id = 3394
-						}
-						set_nationality = PREV
-					}
-				}
+							OR = {
+								is_character = ITA_emilio_de_bono
+								###ID = 844?
+								is_character = ITA_romulus
+								is_character = ITA_caligula
 
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 844
+								is_character = ITA_julius_caesar
+								is_character = ITA_pietro_badoglio
+								is_character = ITA_ugo_cavallero
+								is_character = ITA_giovanni_messe
+								is_character = ITA_sebastiano_visconti_prasca
+								is_character = ITA_ubaldo_soddu
+								is_character = ITA_italo_balbo
+								is_character = ITA_rodolfo_graziani
+								is_character = ITA_inigo_campioni
+								is_character = ITA_alberto_da_zara
+								is_character = ITA_giuseppe_fioravanzo
+								is_character = ITA_carlo_bergamini
+								is_character = ITA_angelo_iachino
+								is_character = ITA_alberto_pariani
+								is_character = ITA_amedeo_di_savoiaaosta
+								is_character = ITA_annibale_bergonzoli
+								is_character = ITA_arnaldo_azzi
+								is_character = ITA_filiberto_duca_di_pistoia
+								is_character = ITA_ettore_bastico
+								is_character = ITA_gabriele_nasci
+								is_character = ITA_giuseppe_cordero_lanza_di_montezemolo
+								is_character = ITA_giuseppe_izzo
+								is_character = ITA_prince_umberto
+							}
+							
 						}
-						set_nationality = PREV
-					}
+						set_nationality = PREV.PREV
+						
+					}	
 				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 4000
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 840
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 841
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 842
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 843
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3393
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3395
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3396
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3397
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3398
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3001
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3000
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 3399
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 4001
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = { 
-					random_army_leader = { 
-						limit = {
-						has_id = 4002
-						}
-						set_nationality = PREV
-					}
-				}
-
-				ITA = {    
-					random_army_leader = { 
-						limit = {
-						has_id = 4003
-						}
-						set_nationality = PREV
-					}
-				}
-
 
 			}
 		}
