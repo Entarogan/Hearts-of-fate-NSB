@@ -413,7 +413,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ brilliant_strategist politically_connected skilled_staffer trickster trait_engineer hill_fighter }
+			traits={ brilliant_strategist politically_connected skilled_staffer trickster trait_engineer hill_fighter inspirational_leader }
 			skill=6
 			attack_skill=5
 			defense_skill=5
@@ -603,10 +603,10 @@ characters={
 				large="gfx/leaders/JAP/Portrait_Fujiwara_no_Mokou.dds"
 			}
 		}
-		corps_commander={
-			traits={ brilliant_strategist career_officer commando }
+		field_marshal={
+			traits={ brilliant_strategist career_officer organizer infantry_leader politically_connected skilled_staffer politically_connected skilled_staffer }
 			skill=5
-			attack_skill=3
+			attack_skill=4
 			defense_skill=5
 			planning_skill=5
 			logistics_skill=3
@@ -1750,7 +1750,7 @@ characters={
 			}
 		}
 		advisor={
-			slot = air_chief
+			slot = high_command
 			idea_token = rgouyi_shiki
 			allowed = {
 				original_tag = JAP
@@ -1832,10 +1832,10 @@ characters={
 				large="gfx/leaders/JAP/Portrait_minamoto_no_raiko.dds"
 			}
 		}
-		field_marshal={
-			traits={ brilliant_strategist career_officer trait_reckless infantry_officer cavalry_officer infantry_leader trickster infantry_expert }
+		corps_commander={
+			traits={ brilliant_strategist career_officer  infantry_officer cavalry_officer infantry_leader trickster infantry_expert }
 			skill=5
-			attack_skill=6
+			attack_skill=4
 			defense_skill=2
 			planning_skill=4
 			logistics_skill=4
