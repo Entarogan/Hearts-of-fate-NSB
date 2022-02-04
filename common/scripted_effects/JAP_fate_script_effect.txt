@@ -549,9 +549,6 @@ JAP_civil_war_start = {
 			ruling_party = democratic
 			ideology = neutrality
 			size = 0.4
-			keep_unit_leaders = {
-				8000 8001 8002 8003 8004 8005 8003 8008 8009 8011 8012 8013 8015 8017 8019 8020 8021 8022 8024 8025 8026 8027 8028 8030 8031 8032 8033 8034 8035 8036
-			}
 		}
 	}
 
@@ -565,9 +562,6 @@ JAP_civil_war_start = {
 			ruling_party = democratic
 			ideology = neutrality
 			size = 0.3
-			keep_unit_leaders = {
-				8000 8001 8002 8003 8004 8005 8003 8008 8009 8011 8012 8013 8015 8017 8019 8020 8021 8022 8024 8025 8026 8027 8028 8030 8031 8032 8033 8034 8035 8036
-			}
 		}
 	}
 
@@ -584,44 +578,9 @@ JAP_civil_war_start = {
 			ruling_party = democratic
 			ideology = neutrality
 			size = 0.2
-			keep_unit_leaders = {
-				8000 8001 8002 8003 8004 8005 8003 8008 8009 8011 8012 8013 8015 8017 8019 8020 8021 8022 8024 8025 8026 8027 8028 8030 8031 8032 8033 8034 8035 8036
-			}
 		}
 	}
 	JAP_create_democratic_leaders = yes
-	if = {
-		limit = { 
-			has_idea = JAP_yakumo_yukari
-		}
-		remove_ideas = { JAP_yakumo_yukari  }
-		add_ideas = { JAP_ibaraki_kasen }
-	}
-
-	if = {
-		limit = { 
-			has_idea = JAP_yasaka_kanako
-		}
-		remove_ideas = { JAP_yasaka_kanako  }
-		add_ideas = { JAP_hijiri_byakuren }
-	}
-
-	if = {
-		limit = { 
-		has_idea = JAP_matara_okina
-		}
-		remove_ideas = { JAP_matara_okina  }
-		add_ideas = { JAP_ibaraki_kasen }
-	}
-
-	if = {
-		limit = {
-		has_idea = JAP_oda_nobunaga
-		}
-		remove_ideas = { JAP_oda_nobunaga  }
-		add_ideas = { JAP_nagao_kagetora }
-	}
-
 	hidden_effect = {
 		random_other_country = {
 			limit = {
@@ -634,7 +593,12 @@ JAP_civil_war_start = {
 				fascism = 20
 				communism = 10
 			}
-
+			every_character = {
+				limit = {
+					is_country_leader = no
+				}
+				set_nationality = JAP
+			}
 		}
 	}
 
@@ -645,17 +609,23 @@ JAP_civil_war_start = {
 				neutrality = 5
 				communism = 10
 			}
-			every_unit_leader = {
+			every_character = {
 				limit = {
-				OR = {
-					has_id = 8000
-					has_id = 8004
-					has_id = 8009
-					has_id = 8015
-					has_id = 8025
-					has_id = 8030
-					has_id = 8036
-				}
+					OR = {
+						is_character = JAP_oda_nobunaga
+						is_character = JAP_hijikato_toshizo
+						is_character = JAP_okita_souji
+						is_character = JAP_cha_cha
+						is_character = JAP_yakumo_ran
+						is_character = JAP_fuma_kotaro
+						is_character = JAP_kiyohime
+						is_character = JAP_kato_danzo
+						is_character = JAP_masashibo_benkei
+						# is_character = JAP_sei_shonagon
+						is_character = JAP_benienma
+						is_character = JAP_yakumo_yukari
+						# is_character = JAP_matara_okina
+					}
 				}
 				set_nationality = event_target:jap_civil_war
 			}
@@ -665,60 +635,59 @@ JAP_civil_war_start = {
 			set_country_flag = jap_matara_okina_disabled
 			set_country_flag = jap_yukari_yakumo_disabled
 		}
-		
-		
 		JAP = {
 		if = {
-			limit = { NOT = { has_country_flag = persuade_tomoe_gozen } is_ai = no }
-			every_unit_leader = {
-			limit = {
-				OR = {
-				has_id = 8001
+			limit = { NOT = { has_country_flag = persuade_tomoe_gozen }  is_ai = no }
+			every_character = {
+				limit = {
+					OR = {
+						is_character = JAP_tomoe_gozen
+					}
 				}
-			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_tomoe_gozen_disabled
 		}
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_yogyu_munenori } is_ai = no }
-			every_unit_leader = {
-			limit = {
-				OR = {
-				has_id = 8005
+			every_character = {
+				limit = {
+					OR = {
+						is_character = JAP_yogyu_munenori
+					}
 				}
-			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_yogyu_munenori_disabled
 		}
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_miyamoto_musashi } is_ai = no }
-			every_unit_leader = {
-			limit = {
-				OR = {
-				has_id = 8008
+			every_character = {
+				limit = {
+					OR = {
+						is_character = JAP_miyamoto_musashi
+					}
 				}
-			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_miyamoto_musashi_disabled
 		}
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_fujiwara_no_mokou } is_ai = no }
-			every_unit_leader = {
+			every_character = {
 			limit = {
 				OR = {
-				has_id = 8017
-				has_id = 8003
-				has_id = 8011
-				has_id = 8013
+					is_character = JAP_fujiwara_no_mokou
+					is_character = JAP_minamoto_no_raiko
+					is_character = JAP_sakata_kintoki
+					is_character = JAP_minamoto_no_yoshitsune
+					is_character = JAP_fujiwara_chika
 				}
 			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_fujiwara_no_mokou_disabled
 			set_country_flag = jap_ushiwakamaru_disabled
@@ -728,43 +697,70 @@ JAP_civil_war_start = {
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_ysaka_kanako } is_ai = no }
-			every_unit_leader = {
-			limit = {
-				OR = {
-				has_id = 8031
-				has_id = 8028
+			every_character = {
+				limit = {
+					OR = {
+						is_character = JAP_yasaka_kanako
+						is_character = JAP_moriya_suwako
+					}
 				}
-			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_yasaka_kanako_disabled
 		}
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_hinanawi_tenshi } is_ai = no }
-			every_unit_leader = {
-			limit = {
-				OR = {
-				has_id = 8020
+			every_character = {
+				limit = {
+					OR = {
+						is_character = JAP_hinanawi_tenshi
+					}
 				}
-			}
-			set_nationality = event_target:jap_civil_war
+				set_nationality = event_target:jap_civil_war
 			}
 			set_country_flag = jap_hinanawi_tenshi_disabled
 		}
 		
 		if = {
 			limit = { NOT = { has_country_flag = persuade_saigyouji_yuyuko } is_ai = no }
-			every_unit_leader = {
+			every_character = {
 			limit = {
 				OR = {
-				has_id = 8027
-				has_id = 8024
+					has_id = JAP_saigyouji_yuyuko
+					has_id = JAP_konpaku_youmu
 				}
 			}
 			set_nationality = event_target:jap_civil_war
 			}
 		}
+		if = {
+			limit = { 
+				has_idea = JAP_yakumo_yukari
+			}
+			remove_ideas = { JAP_yakumo_yukari  }
+		}
+		if = {
+			limit = { 
+			has_idea = JAP_matara_okina
+			}
+			remove_ideas = { JAP_matara_okina  }
+		}
+		add_ideas = { JAP_ibaraki_kasen }
+		if = {
+			limit = {
+			has_idea = JAP_oda_nobunaga
+			}
+			remove_ideas = { JAP_oda_nobunaga  }
+		}
+		add_ideas = { JAP_nagao_kagetora }
+		if = {
+			limit = { 
+				has_idea = JAP_yasaka_kanako
+			}
+			remove_ideas = { JAP_yasaka_kanako  }
+		}
+		add_ideas = { JAP_hijiri_byakuren }
 		}  
 	}
 }
