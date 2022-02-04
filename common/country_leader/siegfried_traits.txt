@@ -1912,6 +1912,8 @@ leader_traits = {
 		
 		planning_speed = 0.05
 
+		land_doctrine_cost_factor = -0.1
+
 		#experience_gain_army = 0.10
 	}
 	
@@ -1922,6 +1924,8 @@ leader_traits = {
 		army_speed_factor = 0.03
 		
 		planning_speed = 0.15
+
+        cat_mobile_warfare_cost_factor = -0.15
 		
 		experience_gain_army = 0.15
 

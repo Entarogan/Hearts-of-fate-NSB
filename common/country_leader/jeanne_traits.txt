@@ -4,14 +4,16 @@ leader_traits = {
 		sprite = 8
 		random = no
 
-    planning_speed = 0.10
-    army_armor_attack_factor = 0.15
-    army_armor_defence_factor = 0.1
-    mechanized_attack_factor = 0.1
-    mechanized_defence_factor = 0.15
-    army_armor_speed_factor = 0.05
-	experience_gain_army = 0.10
-	command_cap = 20
+		planning_speed = 0.10
+		army_armor_attack_factor = 0.15
+		army_armor_defence_factor = 0.1
+		mechanized_attack_factor = 0.1
+		mechanized_defence_factor = 0.1
+		motorized_attack_factor = 0.1
+		motorized_defence_factor = 0.1
+		army_armor_speed_factor = 0.05
+		experience_gain_army = 0.10
+		command_cap = 20
 
 		
 		ai_will_do = {
@@ -25,28 +27,18 @@ leader_traits = {
 
 		equipment_bonus = {
 
-			medium_tank_equipment = {
-
+			armor = {
 				breakthrough = 0.1
-
 				ap_attack = 0.1
-
-        hard_attack = 0.1
-
-				reliability = 0.1
+                hard_attack = 0.1
 				
 				instant = yes
 			}
 
-			heavy_tank_equipment = {
-
-				breakthrough = 0.2
-
-				ap_attack = 0.15
-
-        hard_attack = 0.15
-
-				reliability = 0.15
+			heavy_tank_chassis = {
+				armor_value = 0.15
+				reliability = 0.15				
+				build_cost_ic = 0.15
 				
 				instant = yes
 			}
@@ -65,10 +57,10 @@ leader_traits = {
 
 
 		max_command_power = 30
-		army_infantry_attack_factor = 0.20
-		army_infantry_defence_factor = 0.15
-		motorized_attack_factor = 0.15
-		motorized_defence_factor = 0.10
+		army_artillery_attack_factor = 0.20
+		army_artillery_defence_factor = 0.15
+		army_infantry_attack_factor = 0.15
+		army_infantry_defence_factor = 0.10
 		cavalry_attack_factor = 0.15
 		cavalry_defence_factor = 0.10
 
@@ -617,10 +609,9 @@ leader_traits = {
 		sprite = 13
 		
 		experience_gain_army = 0.10
-		army_armor_speed_factor = 0.1
-		army_armor_attack_factor = 0.05
-		mechanized_attack_factor = 0.05
 		command_cap = 20
+
+		cat_mobile_warfare_cost_factor = -0.15
 		
 		ai_will_do = {
 			factor = 150
@@ -634,19 +625,7 @@ leader_traits = {
 		experience_gain_army = 0.10
 		command_cap = 20
 
-    equipment_bonus = {
-			artillery = {
-				soft_attack = 0.15
-
-				instant = yes
-			}
-
-			anti_tank = {
-				hard_attack = 0.15
-
-				instant = yes
-			}
-    }
+		cat_superior_firepower_cost_factor = -0.25
 		
 		ai_will_do = {
 			factor = 150

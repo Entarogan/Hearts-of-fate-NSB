@@ -6891,7 +6891,7 @@ country_event = {
 					add_ideas = FRA_Three-dimensional_war_idea
 					add_doctrine_cost_reduction = {
 						name = FRA_Three_dimensional_war
-						cost_reduction = 1
+						cost_reduction = 0.5
 						uses = 2
 						category = air_doctrine
 					} 
@@ -7916,7 +7916,7 @@ country_event = {
 					air_experience = 25
 					add_doctrine_cost_reduction = {
 						name = FRA_air_doctrine_effort
-						cost_reduction = 1
+						cost_reduction = 0.5
 						uses = 2
 						category = air_doctrine
 					} 

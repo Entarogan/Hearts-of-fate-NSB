@@ -1823,9 +1823,11 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-    RUS = { is_puppet = no }
+		date < 1940.1.1
+		NOT = { has_country_flag = RUS_is_Japanese_puppet_ever_flag }
+		RUS = { is_puppet = no }
 		RUS = { has_war_with = SOV }
-    RUS = { surrender_progress < 0.1 }
+		RUS = { surrender_progress < 0.1 }
 		SOV = { exists = yes }
 		SOV = { is_puppet = no }
     or = {
@@ -4502,7 +4504,8 @@ country_event = {   ### JAP傀儡RUS
     }
 
     RUS = {
-      set_country_flag = RUS_Japanese_puppet_flag
+		  set_country_flag = RUS_is_Japanese_puppet_ever_flag
+		  set_country_flag = RUS_Japanese_puppet_flag
 		  set_capital = { state = 408 }
 
 			give_resource_rights = { receiver = JAP state = 560 }

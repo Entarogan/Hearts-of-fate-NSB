@@ -26,7 +26,9 @@ leader_traits = {
 		army_armor_attack_factor = 0.15
 	  	army_armor_defence_factor = 0.1
 		mechanized_attack_factor = 0.1
-		mechanized_defence_factor = 0.15
+		mechanized_defence_factor = 0.1
+		motorized_attack_factor = 0.1
+		motorized_defence_factor = 0.1
 		army_armor_speed_factor = 0.05
 		heat_attrition_factor = -0.10
 

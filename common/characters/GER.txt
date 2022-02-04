@@ -137,7 +137,6 @@ characters={
 
 			cost = 100
 			research_bonus = {
-				cat_mobile_warfare = 0.15
 				armor = 0.1
 			}
 
