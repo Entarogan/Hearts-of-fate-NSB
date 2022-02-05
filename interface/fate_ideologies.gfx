@@ -116,8 +116,4 @@ spriteType = {
 	texturefile = "gfx/interface/ideologies/accelerationism.dds"
 }
 ###
-spriteType = {
-	name = "GFX_ideology_yezhovism"
-	texturefile = "gfx/interface/ideologies/yezhovism.png"
-}
 }
