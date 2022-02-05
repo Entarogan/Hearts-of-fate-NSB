@@ -10,7 +10,7 @@ characters={
 				large="gfx/leaders/AUS/Portrait_Austria_Adolf_Hitler.dds"
 			}
 			civilian={
-				large="gfx/leaders/AUS/Portrait_Austria_Adolf_Hitler.dds"
+				large="gfx/leaders/GER/Portrait_Adolf_Hitler_pol.png"
 			}
 		}
 		advisor={
