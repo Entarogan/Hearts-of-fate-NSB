@@ -1266,6 +1266,9 @@ characters={
 		}
 		name=RUS_anna_viktorovna
 		portraits={
+			civilian={
+				large="gfx/leaders/RUS/Portrait_RUS_Anna_Viktorovna.dds"
+			}
 			army={
 				small="GFX_idea_RUS_anna_viktorovna"
 				large="gfx/leaders/RUS/Portrait_RUS_Anna_Viktorovna.dds"

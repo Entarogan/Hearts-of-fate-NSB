@@ -381,7 +381,7 @@ characters={
 		name=gabriele_anunnzio
 		portraits={
 			civilian={
-				large="Portrait_ITA_Gabriele_Anunnzio.tga"
+				large="gfx/leaders/ITA/Portrait_ITA_Gabriele_Anunnzio.tga"
 			}
 			army = {
 				small = "GFX_idea_gabriele_anunnzio"
