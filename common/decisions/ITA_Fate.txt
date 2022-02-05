@@ -6,7 +6,7 @@ ITA_army_reform = {
 
 		available = {
       or = {
-        has_army_experience > 49
+        has_army_experience > 24
         AND = {
           is_ai = yes
           any_enemy_country = {
@@ -67,10 +67,10 @@ ITA_army_reform = {
             is_major = yes
           }
         }
-        army_experience = 50
+        army_experience = 25
       }
 
-			army_experience = -50	
+			army_experience = -25	
 		}		
 	}
 
@@ -80,7 +80,7 @@ ITA_army_reform = {
 
 		available = {
       or = {
-        has_navy_experience > 29
+        has_navy_experience > 24
         AND = {
           is_ai = yes
           any_enemy_country = {
@@ -125,10 +125,10 @@ ITA_army_reform = {
             is_major = yes
           }
         }
-        navy_experience = 30
+        navy_experience = 25
       }
 
-			navy_experience = -30	
+			navy_experience = -25	
 		}		
 	}
 
@@ -138,7 +138,7 @@ ITA_army_reform = {
 
 		available = {
       or = {
-        has_air_experience > 29
+        has_air_experience > 24
         AND = {
           is_ai = yes
           any_enemy_country = {
@@ -183,10 +183,10 @@ ITA_army_reform = {
             is_major = yes
           }
         }
-        air_experience = 30
+        air_experience = 25
       }
 
-			air_experience = -30	
+			air_experience = -25	
 		}		
 	}
 

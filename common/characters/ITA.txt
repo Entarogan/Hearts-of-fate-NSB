@@ -462,10 +462,15 @@ characters={
 			}
 			picture = nero_admiral
 			traits = { navy_chief_decisive_battle_3 }
+
+			modifier = {
+				army_artillery_attack_factor = 0.15
+			}
+
 			# REVISIT Old Guard to represent hesitance for necessary reforms
 
 			ai_will_do = {
-				factor = 1
+				factor = 2
 			}
 		}
 	}
@@ -548,9 +553,13 @@ characters={
 				NOT = { has_government = communism }
 			}
 			traits = { army_chief_morale_3 }
+
+			modifier = {
+				experience_gain_factor = 0.1
+			}
 			
 			ai_will_do = {
-				factor = 1
+				factor = 2
 			}
 		}
 	}
@@ -585,16 +594,9 @@ characters={
 			}
 			
 			traits = { caesar }
-			targeted_modifier = {
-				tag = FRA
-				attack_bonus_against = 0.05
-			}
-			targeted_modifier = {
-				tag = FRA
-				defense_bonus_against = 0.05
-			}
+
 			ai_will_do = {
-				factor = 1
+				factor = 4
 			}
 		}
 	}
