@@ -1794,281 +1794,8 @@ ideas = {
 
 	}
 	
-	
-	political_advisor = {
-			
-		reines_political = {
-
-			available = {
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-				has_intelligence_agency = yes
-				NOT = {
-					has_country_leader = {
-						name = "Olga Marie Animusphere"
-						ruling_only = yes
-					}
-				}
-				NOT = { has_completed_focus = uk_london_incident_focus }
-				NOT = { has_idea = reines_the_theorist }
-				NOT = { has_idea = ENG_holmes }
-			}
-			
-			allowed = {
-				original_tag = ENG
-				has_dlc = "La Resistance" 
-			}
-			picture = reines_theorists
-			traits = { Investigator }
-			
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 10
-					has_war = yes
-				}
-			}
-		}
-		
-		ENG_aozaki_aoko = {
-			
-			visible = {
-				has_country_flag = aoko_joined_us
-			}
-			
-			available = {
-				has_completed_focus = ENG_steady_as_she_goes
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-			}
-			
-			allowed = {
-				original_tag = "ENG"
-			}
-			
-			picture = aozaki_aoko
-			
-			research_bonus = {
-				rocketry = 0.20
-				cat_superior_firepower = 0.20
-			}
-			
-			traits = { fighter_for_freedom }
-			
-			ai_will_do = {
-				factor = 100
-			}
-		}
-		
-		eng_inorai = {
-
-			available = {
-				if = {
-					limit = { has_dlc = "Man the Guns" }	
-					NOT = { has_autonomy_state = autonomy_supervised_state }
-				}
-				NOT = { has_completed_focus = uk_round_table_focus }
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-			picture = inorai
-			traits = { democratic_reformer }
-			
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		
-		eng_gray = {
-
-			available = {
-				has_completed_focus = ENG_steady_as_she_goes
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-			picture = gray
-			traits = { kings_representative }
-			
-			ai_will_do = {
-				factor = 300
-			}
-		}
-
-		ENG_lev = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				NOT = { has_idea = ENG_moriarty }
-				NOT = { has_completed_focus = uk_london_incident_focus }
-				NOT = { has_country_flag = lev_suicided }
-			}
-			
-			traits = { war_industrialist armaments_organizer  quartermaster_general }
-			picture = lev
-			ai_will_do = {
-				factor = 3
-				modifier = {
-					factor = 2
-					has_war = no
-				}
-			}
-		}
-
-		ENG_agravain = {
-			
-			picture = command_agravain
-
-			available = {
-				OR = {
-					has_government = fascism
-					has_government = neutrality
-				}
-				
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { princess_of_terror }
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-	}
 		
 	# MILITARY
-	army_chief = {
-		
-	}
-	navy_chief = {
-
-		admiral_mordred = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				NOT = { has_government = fascism }
-				NOT = { has_idea = mordred }
-			}
-			picture = mordred_admiral
-			
-			traits = { navy_chief_maneuver_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		frankstein = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			picture = frankenstein
-
-			
-			traits = { navy_chief_decisive_battle_3 }
-			# REVISIT Secondary trait for anti-sub efforts?
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-	}
-	air_chief = {
-
-		cyril_newall = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-
-			
-			traits = { air_chief_reform_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		charles_portal = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-
-			
-			traits = { air_chief_night_operations_2 }
-			# REVISIT Stratetic bombing as secondary trait?
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		edward_ellington = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-
-			
-			traits = { air_chief_safety_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
-	high_command = {
-		drake = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			picture = drake
-			traits = { navy_chief_commerce_raiding_drake }
-			
-			ai_will_do = {
-				factor = 0.2
-			}
-		}
-		
-		ENG_david_stirling = {
-
-			available = {
-				has_completed_focus = ENG_special_air_service
-			}
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { army_commando_3 }
-			
-			ai_will_do = {
-				factor = 0.2
-			}
-		}
-	}
 	
 	naval_manufacturer = {
 		
@@ -2156,7 +1883,13 @@ ideas = {
 			traits = { light_aircraft_manufacturer }
 			
 			modifier = {
+		       army_bonus_air_superiority_factor = 0.05
 			}
+
+			ai_will_do = {
+				factor = 8
+			}
+
 		}
 		
 		hawker = {
@@ -2251,6 +1984,15 @@ ideas = {
 			
 			modifier = {
 			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.20
+					
+					instant = yes
+				}
+			}
+
 		}
 		
 		vauxhall = {
@@ -2262,13 +2004,30 @@ ideas = {
 
 			
 			research_bonus = {
-				motorized_equipment = 0.15
+				motorized_equipment = 0.25
 			}
 			
 			traits = { motorized_equipment_manufacturer }
 			
 			modifier = {
 			}
+
+			equipment_bonus = {
+
+				motorized_equipment = {
+					maximum_speed = 0.05
+
+					instant = yes
+				}
+		 
+				mechanized_equipment = {
+					maximum_speed = 0.05
+
+					instant = yes
+				}     
+			  
+			}
+
 		}
 		
 		royal_arsenal = {
@@ -2287,6 +2046,29 @@ ideas = {
 			
 			modifier = {
 			}
+
+			equipment_bonus = {
+				anti_air_equipment = {
+					air_attack = 0.05
+					hard_attack = 0.05
+					ap_attack = 0.15				
+					
+					instant = yes
+				}
+
+				anti_tank_equipment = {
+					hard_attack = 0.10
+					ap_attack = 0.15
+
+					instant = yes
+				}
+
+			}
+
+			ai_will_do = {
+				factor = 6
+			}
+
 		}
 	}
 	industrial_concern = {
@@ -2301,11 +2083,13 @@ ideas = {
 			
 			research_bonus = {
 				industry = 0.15
+				synth_resources = 0.2
 			}
 			
 			traits = { industrial_concern }
 			
 			modifier = {
+				fuel_gain_factor = 0.25
 			}
 
 			ai_will_do = {
@@ -2332,6 +2116,7 @@ ideas = {
 			traits = { electronics_concern }
 			
 			modifier = {
+                research_speed_factor = 0.05
 			}
 		}
 		
@@ -2351,100 +2136,32 @@ ideas = {
 				armor = 0.15
 			}
 			
-			traits = { medium_tank_manufacturer }
+			traits = { }
 			
 			modifier = {
 			}
+
+			equipment_bonus = {
+				armor = {
+					ap_attack = 0.1
+					hard_attack = 0.1
+
+					build_cost_ic = -0.05
+
+				    instant = yes
+				}
+			}
+
+			ai_will_do = {
+				factor = 7
+			}
+
 		}
 	}
 	
 	theorist = {	
 	
 		
-		reines_the_theorist = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			available = {
-				NOT = {
-					has_completed_focus = uk_london_incident_focus
-				}
-				NOT = { has_idea = reines_political }
-			}
-			
-			research_bonus = {
-				#land_doctrine = 0.15
-			}
-			modifier = {
-				land_doctrine_cost_factor = -0.05
-			}
-			picture = reines_theorists
-			
-			traits = { military_theorist }
-
-			ai_will_do = {
-				factor = 0
-			}
-		}
-
-		animusphere = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			available = {
-				NOT = {
-					has_country_leader = {
-						name = "Olga Marie Animusphere"
-						ruling_only = yes
-					}
-				}
-				NOT = {
-					has_completed_focus = uk_london_incident_focus
-				}
-			}
-			
-			research_bonus = {
-				#land_doctrine = 0.08
-			}
-			modifier = {
-				land_doctrine_cost_factor = -0.08
-			}
-			picture = animusphere
-			
-			traits = { elite_action }
-
-			ai_will_do = {
-				factor = 5
-			}
-		}
-		
-		ENG_aozaki_touko = {
-						
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				has_government = democratic
-			}
-			visible = {
-				has_country_flag = touko_joined_us
-			}
-			
-			picture = aozaki_touko
-			
-			research_bonus = {
-				infantry_weapons = 0.10
-			}
-			
-			traits = { doll_controller }
-			ai_will_do = {
-				factor = 100
-			}
-		}
 	}	
 }
 

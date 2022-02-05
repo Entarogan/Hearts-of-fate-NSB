@@ -859,7 +859,7 @@ ideas = {
 			
 			research_bonus = {
 				industry = 0.05
-				synth_resources = 0.1
+				synth_resources = 0.2
 			}
 
 			cost = 75
@@ -926,132 +926,6 @@ ideas = {
 	
 	
 	################################## Theoretics
-	theorist = {
-		von_braun = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				rocketry = 0.15
-			}
-			
-			traits = { GER_braun_T }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		heisenberg = {
-			allowed = {
-				original_tag = GER
-			}
-		
-			research_bonus = {
-				nuclear = 0.15
-			}
-			
-			traits = { GER_heisenberg_T }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		heinz_guderian = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				armor = 0.1
-			}
-			
-			traits = { GER_guderian_T }
-			
-			ai_will_do = {
-				factor = 15
-			}
-		}
-		
-		manstein = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				armor = 0.1
-			}
-
-			traits = { GER_manstein_T }
-			
-			ai_will_do = {
-				factor = 35
-			}
-			
-		}
-		
-		wolfram_von_richthofen = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				cat_battlefield_support = 0.15
-			}
-			
-			traits = { GER_richthofen_T }
-		}
-		
-		walther_wever = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				air_doctrine = 0.10
-			}
-			
-			traits = { GER_wever_T }
-		}
-		
-		ernst_udet = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				air_doctrine = 0.10
-			}
-			
-			traits = { GER_udet_T }
-		}
-		
-		alfred_saalwachter = {
-			allowed = {
-				original_tag = GER
-			}
-			
-			research_bonus = {
-				cat_trade_interdiction = 0.15
-			}
-			
-			traits = { GER_saalwachter_T }
-		}
-		
-		otto_ciliax = {
-			allowed = {
-				original_tag = GER
-			}
-
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { GER_ciliax_T }
-		}
-	}
 	
 	
 	

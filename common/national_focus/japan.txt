@@ -797,9 +797,15 @@ focus_tree = {
 		x = 26
 		y = 1
 		available = {
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		completion_reward = {
@@ -3609,9 +3615,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_bafuku_authority
 		available = {
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		bypass = {
@@ -3645,9 +3657,15 @@ focus_tree = {
 		y = 1
 		relative_position_id = JAP_tenka_fubu_focus
 		available = {
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		bypass = {
@@ -3675,9 +3693,15 @@ focus_tree = {
 		y = 3
 		relative_position_id = JAP_tenka_fubu_focus
 		available = {
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		bypass = {
@@ -8439,9 +8463,15 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		x = 1
@@ -8474,9 +8504,15 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		x = 0
@@ -8503,9 +8539,15 @@ focus_tree = {
 		}
 		available = {
 			is_subject = no
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 		}
 		x = 0
@@ -8536,9 +8578,15 @@ focus_tree = {
 			has_stability > 0.6
 			has_war_support > 0.7
 			is_subject = no
-			has_country_leader = {
-				name = "Oda Nobunaga"
-				ruling_only = yes
+			OR = {
+				has_country_leader = {
+					character = JAP_oda_nobunaga
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Oda Nobunaga"
+					ruling_only = yes
+				}
 			}
 			date > 1940.6.1
 		}

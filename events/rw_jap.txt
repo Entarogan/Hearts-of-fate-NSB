@@ -1804,13 +1804,17 @@ country_event = {##日本关东军入侵
 	option = {##与日军决一死战，满铁被破坏	
 		name = rw_jap.19.b
 
-    ai_chance = {
-      base = 50
+		ai_chance = {
+			base = 50
+			modifier = {
+				JAP = { is_ai = no }
+				factor = 0
+			}
 			modifier = {
 				has_war = yes
 				factor = 0
 			}
-    }
+		}
 
     JAP_man_railway_destroyed = yes
 		JAP = {

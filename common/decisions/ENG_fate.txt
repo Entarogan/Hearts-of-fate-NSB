@@ -268,47 +268,8 @@ ENG_European_Equilibrium_Strategy = {
         AND = {
           is_ai = yes
           or = {
-            casualties > 300000
-            AND = {
-              has_war_with = GER
-              has_war_with = ITA
-            }
-            AND = {
-              has_war_with = GER
-              has_war_with = FRA
-            }
-            AND = {
-              has_war_with = GER
-              has_war_with = JAP
-            }
-            AND = {
-              has_war_with = GER
-              has_war_with = SWE
-            }
-            AND = {
-              has_war_with = FRA
-              has_war_with = ITA
-            }
-            AND = {
-              has_war_with = FRA
-              has_war_with = JAP
-            }
-            AND = {
-              has_war_with = FRA
-              has_war_with = SWE
-            }
-            AND = {
-              has_war_with = ITA
-              has_war_with = JAP
-            }
-            AND = {
-              has_war_with = ITA
-              has_war_with = SWE
-            }
-            AND = {
-              has_war_with = JAP
-              has_war_with = SWE
-            }
+            casualties > 500000
+            surrender_progress > 0.05
           }
         }
         casualties > 1000000

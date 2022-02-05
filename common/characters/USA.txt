@@ -135,7 +135,7 @@ characters={
 		advisor={
 			cost = 150
 			
-			slot = theorist
+			slot = high_command
 			idea_token = george_patton
 			ledger = army
 			allowed = {
@@ -143,9 +143,13 @@ characters={
 			}
 			
 			traits = {
-				army_armored_3
-				army_cavalry_1
+				armored_Vanguard
 			}
+
+			ai_will_do = {
+				factor = 3.000
+			}
+
 		}
 
 		corps_commander={
@@ -287,7 +291,6 @@ characters={
 				}
 				traits = {
 					army_infantry_2
-					army_artillery_1
 				}
 				cost = 100
 				ai_will_do = {

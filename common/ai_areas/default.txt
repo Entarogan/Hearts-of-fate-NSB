@@ -161,5 +161,10 @@ areas = {
         }
    }
 
+   CZE_hof = {
+        strategic_regions = {
+          22
+        }
+   }
 	
 }

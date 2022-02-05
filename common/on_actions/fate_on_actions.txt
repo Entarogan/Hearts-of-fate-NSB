@@ -9,27 +9,48 @@ on_actions = {
 					country_event = { id = intro.0 days = 5 random = 1 }
 				}
 			}
-      
-			  JAP = {
+
+			JAP = {
 				JAP_lock_all_initial_templates = yes
 				country_event = { id = jap_elective.1  days = 35 }
 				country_event = { id = jap_elective.27  days = 68 }
 				country_event = { id = jap_elective.35  days = 45 }
 				country_event = { id = jap_elective.37  days = 59 }
-			  }
-			  
-			  SOV = {
-				country_event = { id = soviet_flavour.1  days = 5 }
-			  }
-			  
-			  RUS = {
-				country_event = { id = russian_flavour.9  days = 40 }
-			  }
+			}
 
-				MAN = {
-					give_resource_rights = { receiver = JAP state = 716 }
-					give_resource_rights = { receiver = JAP state = 328 }
-				}
+			SOV = {
+			    country_event = { id = soviet_flavour.1  days = 5 }
+			}
+
+			RUS = {
+			    country_event = { id = russian_flavour.9  days = 40 }
+			}
+
+			MAN = {
+				give_resource_rights = { receiver = JAP state = 716 }
+				give_resource_rights = { receiver = JAP state = 328 }
+			}
+
+			KEN = {
+				give_resource_rights = { receiver = ENG state = 771 }
+				give_resource_rights = { receiver = ENG state = 542 }
+			}
+
+			BUR = {
+				give_resource_rights = { receiver = ENG state = 640 }
+				give_resource_rights = { receiver = ENG state = 288 }
+			}
+
+			MAL = {
+				give_resource_rights = { receiver = ENG state = 336 }
+				give_resource_rights = { receiver = ENG state = 672 }
+				give_resource_rights = { receiver = ENG state = 333 }
+			}
+
+			BAH = {
+				give_resource_rights = { receiver = ENG state = 691 }
+				give_resource_rights = { receiver = ENG state = 687 }
+			}
 			
 		}
 	}
