@@ -1891,7 +1891,7 @@ characters={
 	}
 
 	GER_otto_strasser={ 
-		name=GER_Anton_Drexler
+		name=GER_otto_strasser
 		portraits={
 			army={
 				small="GFX_idea_otto_strasser"
