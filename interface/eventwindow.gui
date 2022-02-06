@@ -9,7 +9,8 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow"
 		position = { x=-282 y=-310 }	
-		size = { width = 581 height =427 }
+		#size = { width = 581 height =427 }
+		size = { width = 581 height =457 }
 		moveable = yes
 		Orientation = CENTER		
 		
@@ -81,7 +82,8 @@ guiTypes = {
 		containerWindowType = {
 			name = "bottom_Window"
 			position = { x=0 y=221 }	
-			size = { width = 581 height = 206 }
+			#size = { width = 581 height = 206 }
+			size = { width = 581 height = 236 }
 			moveable = yes
 			clipping = no
 			Orientation = UPPER_LEFT
