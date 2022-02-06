@@ -3762,7 +3762,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_shinsengumi_focus
-		icon = GFX_focus_shinsengumi
+		icon = GFX_focus_shinsengumi 
 		cost = 5
 		prerequisite = {
 			focus = JAP_kyoto_militrary_academy_focus
