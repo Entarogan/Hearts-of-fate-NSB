@@ -3174,14 +3174,14 @@
 
 		available = {
       has_country_flag = HUN_Hungary_stands_tall_in_the_Balkans_flag
-      ITA = { has_country_leader = {  name = "Nero Claudius" ruling_only = yes } }
+      ITA = { has_country_leader = {  character = ITA_nero_claudius ruling_only = yes } }
       ITA = {
         OR = {
           is_in_faction = no
           is_faction_leader = yes
         }
       }
-	  HUN_elizabeth_báthory = {
+	  HUN_elizabeth_bathory = {
 		is_country_leader = yes
 	}
       is_subject = no
@@ -6553,7 +6553,7 @@
       factor = 75
     }
     available = {
-		HUN_elizabeth_báthory = {
+		HUN_elizabeth_bathory = {
 			is_country_leader = yes
 		}
     }
@@ -6582,7 +6582,7 @@
       factor = 200
     }
     available = {
-		HUN_elizabeth_báthory = {
+		HUN_elizabeth_bathory = {
 			is_country_leader = yes
 		}
     }
@@ -6629,7 +6629,7 @@
       factor = 75
     }
     available = {
-		HUN_elizabeth_báthory = {
+		HUN_elizabeth_bathory = {
 			is_country_leader = yes
 		}
     }
@@ -6660,7 +6660,7 @@
       factor = 300
     }
     available = {
-		HUN_elizabeth_báthory = {
+		HUN_elizabeth_bathory = {
 			is_country_leader = yes
 		}
     }

@@ -63,7 +63,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 50
+		value = 25
 	}
 
 	ai_strategy = {
@@ -75,7 +75,7 @@ SOV_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 25 #because doctrine 70
+		value = 50 #because doctrine 70
 	}
 	
 	#Air unit factors
@@ -162,6 +162,25 @@ SOV_unit_production = {
 		id = armor
 		value = 40
 	}
+
+	ai_strategy = {
+		type = equipment_variant_production_factor
+		id = motorized_equipment
+		value = 30
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = motorized_equipment
+		value = 4
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = armored_car_equipment
+		value = 2
+	}
+
 }	
 
 SOV_halt_light_armor_production_in_transitioning = {

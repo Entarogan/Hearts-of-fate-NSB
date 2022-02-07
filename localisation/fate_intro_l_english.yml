@@ -52,3 +52,7 @@
  ENG_agravain_desc:0 "King Arthur’s right arm, Agravain, is the key figure for the stable existence of the Knights of the Round Table. With the strategy and the iron fist to maintain the stability of the country's internal affairs and diplomacy, Agravain is the person who is willing to do dirty work. However, although he is full of suspicions about other Knights, his loyalty to King Arthur is undeniable."
  
  agravain_desc:0 "King Arthur’s right arm, Agravain, is the key figure for the stable existence of the Knights of the Round Table. With the strategy and the iron fist to maintain the stability of the country's internal affairs and diplomacy, Agravain is the person who is willing to do dirty work. However, although he is full of suspicions about other Knights, his loyalty to King Arthur is undeniable."
+
+ intro.3.t:0 "AI Behavior Correction"
+ intro.3.desc:0 "Due to some reasons that only Paradox programmers know, the AI controlled countries won't correctly build divisions designed by the MOD author automatically and then stay unarmed. Save and load this game at this moment could refresh AIs and solve this problem. If you want an exciting gameplay experience, we plea for a Save-Load now."
+ intro.3.a:0 "Understood"

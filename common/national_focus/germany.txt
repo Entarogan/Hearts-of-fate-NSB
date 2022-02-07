@@ -2985,7 +2985,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				bonus = 1.0
-			  ahead_reduction = 2
+			  ahead_reduction = 1.5
 				uses = 1
 				name = GER_Panzergrenadier
 				technology = mechanised_infantry
@@ -2994,7 +2994,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				bonus = 1.0
-			  ahead_reduction = 2
+			  ahead_reduction = 1.5
 				uses = 1
 				name = GER_Panzergrenadier
 				technology = armored_car2

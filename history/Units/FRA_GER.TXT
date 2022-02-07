@@ -46,20 +46,20 @@ units = {
 		location = 3594
 		division_template = "TST-Legion Dragon（Panzer）"
         start_experience_factor = 0.8
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "GER" version_name = "Panzer I Ausf. A" } }
 	}
 	division = {
 		name = "2. TST-Legion Dragon（Panzer）"
 		location = 3594
 		division_template = "TST-Legion Dragon（Panzer）"
         start_experience_factor = 0.8
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "GER" version_name = "Panzer I Ausf. A" } }
 	}
 	division = {
 		name = "3. TST-Legion Dragon（Panzer）"
 		location = 3594
 		division_template = "TST-Legion Dragon（Panzer）"
         start_experience_factor = 0.8
-		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "GER" version_name = "Panzer I Ausf. A" } }
 	}
 }

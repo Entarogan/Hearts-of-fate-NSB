@@ -4,48 +4,56 @@
 		location = 377
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "7. Marines of Empire"
 		location = 377
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "17. Knight of Empire"
 		location = 377
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "17. Marines of Empire"
 		location = 377
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "18. Knight of Empire"
 		location = 377
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "18. Marines of Empire"
 		location = 377
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "19. Knight of Empire"
 		location = 377
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "19. Marines of Empire"
 		location = 377
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "15. Knight"

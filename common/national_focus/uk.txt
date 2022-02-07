@@ -6471,7 +6471,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_royal_mobile_regiment
 		available = {
-			date > 1937.1.1
+			date > 1938.1.1
 			ITA_possibly_alliance = yes
 		}
 		bypass = {

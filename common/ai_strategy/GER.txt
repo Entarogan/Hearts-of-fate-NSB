@@ -220,6 +220,12 @@ GER_unit_production = {
 		id = fighter
 		value = 4
 	}
+
+	ai_strategy = { #added to railway gun define (set to 0 by default, increased in default strategies)
+		type = railway_gun_divisions_ratio
+		value = 1
+	}
+
 }	
 
 GER_halt_light_armor_production_in_transitioning = {

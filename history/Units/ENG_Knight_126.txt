@@ -4,12 +4,14 @@
 		location = 6103
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "4. Marines of Empire"
 		location = 6103
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "6. Knight"
@@ -34,12 +36,14 @@
 		location = 6103
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "5. Marines of Empire"
 		location = 6103
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "9. Knight"
@@ -64,12 +68,14 @@
 		location = 6103
 		division_template = "Knight of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "6. Marines of Empire"
 		location = 6103
 		division_template = "Marines of Empire"
         start_experience_factor = 0.5
+		force_equipment_variants = { heavy_tank_chassis_1 = { owner = "ENG" version_name = "Medium Mk. II" } }
 	}
 	division = {
 		name = "12. Knight"

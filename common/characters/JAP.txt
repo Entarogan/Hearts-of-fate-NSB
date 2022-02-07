@@ -738,8 +738,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 4
 			legacy_id=8105
 		}
 		advisor={
@@ -795,9 +795,9 @@ characters={
 			skill=5
 			attack_skill=5
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=8107
+			maneuvering_skill = 4
+			coordination_skill = 3
+			# 
 		}
 		advisor={
 			slot = special_fifth
@@ -869,8 +869,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 4
 			legacy_id=8108
 		}
 		advisor={
@@ -907,9 +907,9 @@ characters={
 			skill=5
 			attack_skill=6
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=8102
+			maneuvering_skill = 3
+			coordination_skill = 5
+			# legacy_id=8102
 		}
 		advisor={
 			slot = special_fifth
@@ -929,7 +929,7 @@ characters={
 		}
 		advisor={
 			slot = navy_chief
-			idea_token = JAP_kaga
+			idea_token = JAP_kaga_naval_chief
 			allowed = {
 				original_tag = JAP
 			}
@@ -1680,7 +1680,6 @@ characters={
 			}
 		}
 	}
-
 	JAP_Katsushika_Hokusai={
 		name=Katsushika_Hokusai
 		portraits={
@@ -1689,7 +1688,17 @@ characters={
 			}
 			army={
 				small="GFX_idea_katsushika_hokusai"
+				large="gfx/leaders/JAP/Portrait_Katsushika_Hokusai.dds"
 			}
+		}
+		navy_leader={
+			traits={ bold aviation_enthusiast seawolf superior_tactician spotter air_controller }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill = 1
+			coordination_skill = 4
+			legacy_id=-1
 		}
 		advisor={
 			slot = navy_chief
@@ -2423,26 +2432,7 @@ characters={
 			legacy_id=-1
 		}
 	}
-	JAP_katsushika_hokusai={
-		name="Katsushika Hokusai"
-		portraits={
-			army={
-				small="GFX_idea_advisor_unknown"
-			}
-			army={
-				large="gfx/leaders/JAP/Portrait_Katsushika_Hokusai.dds"
-			}
-		}
-		navy_leader={
-			traits={ bold aviation_enthusiast seawolf superior_tactician spotter air_controller }
-			skill=3
-			attack_skill=3
-			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
-		}
-	}
+
 	JAP_nagae_iku={
 		name=JAP_nagae_iku
 		portraits={
@@ -2460,8 +2450,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 5
 			legacy_id=8026
 		}
 		advisor={
@@ -2494,8 +2484,8 @@ characters={
 			skill=5
 			attack_skill=5
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 5
 			legacy_id=8100
 		}
 	}
@@ -2514,8 +2504,8 @@ characters={
 			skill=4
 			attack_skill=5
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 3
 			legacy_id=8103
 		}
 	}
@@ -2534,8 +2524,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 4
 			legacy_id=8101
 		}
 	}
@@ -2554,8 +2544,8 @@ characters={
 			skill=5
 			attack_skill=4
 			defense_skill=5
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 4
 			legacy_id=8106
 		}
 	}
@@ -2574,8 +2564,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 3
 			legacy_id=8104
 		}
 	}
@@ -2596,8 +2586,8 @@ characters={
 			skill=4
 			attack_skill=6
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 3
 			legacy_id=8110
 		}
 		advisor={
@@ -2630,8 +2620,8 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 2
+			coordination_skill = 2
 			legacy_id=8111
 		}
 	}
@@ -2650,8 +2640,8 @@ characters={
 			skill=3
 			attack_skill=4
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 2
 			legacy_id=8112
 		}
 	}
@@ -2670,8 +2660,8 @@ characters={
 			skill=3
 			attack_skill=5
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 2
 			legacy_id=8113
 		}
 	}
@@ -2690,8 +2680,8 @@ characters={
 			skill=2
 			attack_skill=4
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 1
 			legacy_id=8114
 		}
 	}
@@ -2710,8 +2700,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 2
+			coordination_skill = 2
 			legacy_id=8115
 		}
 	}
@@ -2730,8 +2720,8 @@ characters={
 			skill=3
 			attack_skill=2
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 2
+			coordination_skill = 3
 			legacy_id=8116
 		}
 	}
@@ -2750,8 +2740,8 @@ characters={
 			skill=3
 			attack_skill=4
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 2
+			coordination_skill = 2
 			legacy_id=8117
 		}
 	}
@@ -2770,8 +2760,8 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 1
 			legacy_id=8118
 		}
 	}
@@ -2790,8 +2780,8 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 4
+			coordination_skill = 1
 			legacy_id=8120
 		}
 	}
@@ -2810,8 +2800,8 @@ characters={
 			skill=2
 			attack_skill=5
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 2
+			coordination_skill = 1
 			legacy_id=8121
 		}
 	}
@@ -2830,8 +2820,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill = 3
+			coordination_skill = 3
 			legacy_id=8122
 		}
 	}

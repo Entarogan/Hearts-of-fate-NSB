@@ -109,7 +109,7 @@ characters={
 			}
 		}
 	}
-	HUN_elizabeth_báthory={
+	HUN_elizabeth_bathory={
 		name=hun_bathory
 		portraits={
 			civilian={

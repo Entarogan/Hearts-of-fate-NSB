@@ -789,22 +789,6 @@
  
  FRA_rhineland:0 "Annex Rheinland" 
  
- SS_Siegfried:0 "Organize Thuleschutztruppe" 
- 
- SS_Walkure:0 "Organize Thuleschutztruppe" 
- 
- SS_Prinz_Eugen:0 "Organize Thuleschutztruppe" 
-
- SS_Frundsberg:0 "Organize Thuleschutztruppe" 
- 
- SS_Wiking:0 "Organize Thuleschutztruppe"  
- 
- SS_Thor:0 "Organize Thuleschutztruppe"  
- 
- SS_Loki:0 "Organize Thuleschutztruppe"  
- 
- SS_Fenrir:0 "Organize Thuleschutztruppe"  
- 
  GER_join:0 "Join Germany"
  
  CHI_join_GER_SOV_war:0 "It is the time!" 

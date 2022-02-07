@@ -398,7 +398,7 @@ country_event = {
 		tag = GER
     is_ai = yes
     is_subject = no
-		date > 1938.6.1
+		date > 1938.1.1
 	}
 
 	option = { 
@@ -449,7 +449,7 @@ country_event = {
 		tag = GER
     is_ai = yes
     is_subject = no
-		date > 1939.6.1
+		date > 1938.6.1
 	}
 
 	option = { 
@@ -1249,8 +1249,6 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-
-			add_ideas = ita_mythology
 
 			if = {
 				limit = { NOT = { has_tech = armored_car1 } }

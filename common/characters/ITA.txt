@@ -98,6 +98,21 @@ characters={
 				mobile_warfare_expert
 			}
 		}
+		advisor = {
+			slot = high_command
+			idea_token = giovanni_messe
+			allowed = {
+				original_tag = ITA
+			}
+			available = {
+				has_completed_focus = ITA_Motorized_artillery
+			}
+			traits = { ITA_Mobile_Combat_Master }
+			
+			ai_will_do = {
+				factor = 3
+			}
+		}
 	}
 	ITA_sebastiano_visconti_prasca={
 		name=ITA_sebastiano_visconti_prasca
@@ -1550,6 +1565,9 @@ characters={
 			ledger = army
 			allowed = {
 				original_tag = ITA
+			}
+			available = {
+				NOT = { has_idea = julius_caesar }	
 			}
 			traits = {
 				army_infantry_2

@@ -220,6 +220,7 @@ units = {
 		location = 9239
 		division_template = "Tank Brigade"
 		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "ENG" version_name = "Light Tank Mk. IV" } }
 	}
 	division= {	# "3rd Infantry Division"
 		division_name = {
