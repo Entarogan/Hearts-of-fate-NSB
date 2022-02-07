@@ -808,6 +808,10 @@
  ISR_communism_party_Mapam_long:0 "United Workers Party of Isratin"
  
  CZE_State_neutrality:0 "Czech Republic"
- CZE_State_neutrality_DEF:0 "Czech State"
+ CZE_State_neutrality_DEF:0 "Czech Republic"
+ CZE_State_democratic:0 "Czech Republic"
+ CZE_State_democratic_DEF:0 "Czech Republic"
+ CZE_State_communism:0 "Czech People's Republic"
+ CZE_State_communism_DEF:0 "Czech People's Republic"
  CZE_State_fascism:0 "Czech State"
  CZE_State_fascism_DEF:0 "Czech State"
