@@ -3039,7 +3039,8 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_women_conscription
-		icon = GFX_goal_demand_sudetenland
+		#icon = GFX_goal_demand_sudetenland
+		icon = GFX_focus_SOV_womens_fascist_movement
 		cost = 5.00
 		prerequisite = {
 			focus = rus_Yunarmia

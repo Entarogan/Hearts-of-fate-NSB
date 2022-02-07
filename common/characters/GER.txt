@@ -2205,7 +2205,7 @@ characters={
 				small="GFX_idea_heinrich_himmler"
 			}
 			civilian = {
-				large="gfx/leaders/GER/Portrait_Germany_Heinrich_Himmler.dds"
+				large="gfx/leaders/GER/Portrait_Germany_Himmler.dds"
 			}
 		}
 		advisor={

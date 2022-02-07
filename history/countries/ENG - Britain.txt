@@ -264,6 +264,7 @@ recruit_character = ENG_harry_pollitt
 #	}
 #}
 recruit_character = ENG_Gawain
+
 recruit_character = ENG_Lancelot
 recruit_character = ENG_Agravain
 recruit_character = ENG_Tristan
@@ -298,6 +299,16 @@ recruit_character = ENG_cyril_newall
 recruit_character = ENG_charles_portal
 recruit_character = ENG_edward_ellington
 recruit_character = ENG_david_stirling
+
+recruit_character = ENG_merlin
+recruit_character = ENG_charles_babbage
+recruit_character = ENG_holmes
+recruit_character = ENG_moriarty
+recruit_character = ENG_kay
+recruit_character = ENG_Sion
+
+
+
 
 ### Ship Variants ###
 

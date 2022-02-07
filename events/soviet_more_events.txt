@@ -711,32 +711,32 @@ country_event = {     #
 
 		add_political_power = -200
 
-    add_stability = -0.10
+		add_stability = -0.10
 
-    kill_country_leader = yes
+		kill_country_leader = yes
 
-  #  create_country_leader = {
-  #    name = "Mikhail Tukhachevsky"
-  #    desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
-  #    picture = "Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
-    #  expire = "1953.3.1"
-    #  ideology = leninism
-    #  traits = {
-#
-   #   }
-   # }
-	add_country_leader_role = {
-		character = "SOV_mikhail_tukhachevsky"
-		country_leader = {
-			ideology = leninism
-			traits = {  }
-			expire = "1965.3.1.1"
+		#  create_country_leader = {
+		#    name = "Mikhail Tukhachevsky"
+		#    desc = "POLITICS_MIKHAIL_TUKHACHEVSKY_DESC"
+		#    picture = "Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
+			#  expire = "1953.3.1"
+			#  ideology = leninism
+			#  traits = {
+		#
+		#   }
+		# }
+		add_country_leader_role = {
+			character = "SOV_mikhail_tukhachevsky"
+			country_leader = {
+				ideology = leninism
+				traits = {  }
+				expire = "1965.3.1.1"
+			}
+			promote_leader = yes 
 		}
-		promote_leader = yes 
-	}
-	hidden_effect = {
-		news_event = { id = more_News.41  hours = 3 }
-	}
+		hidden_effect = {
+			news_event = { id = more_News.41  hours = 3 }
+		}
 
 	}
 
