@@ -165,7 +165,7 @@ characters={
 		}
 	}
 	FRA_gilles_de_rais_alter={
-		name=gilles_de_rais
+		name=FRA_gilles_de_rais
 		portraits={
 			army={
 				large="gfx/leaders/FRA/Portrait_DeRaisCaster.dds"
