@@ -149,25 +149,6 @@ GER_reichskommissariats = {
 	}
 }
 
-	GER_TEXT = {
-		icon = ger_reichskommissariats
-
-		cost = 0
-		complete_effect = {
-			country_event = more_ger.67
-			country_event = more_ger.112
-			country_event = more_ger.94
-			country_event = more_ger.35
-			country_event = more_ger.45
-
-			country_event = more_ger.55
-		}
-
-
-
-
-
-	}
 	GER_qingdao = {
 
 		icon = ger_reichskommissariats
