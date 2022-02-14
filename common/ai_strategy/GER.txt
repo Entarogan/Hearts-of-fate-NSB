@@ -182,7 +182,7 @@ GER_unit_production = {
 	ai_strategy = {
 		type = equipment_production_factor
 		id = infantry
-		value = 0 
+		value = -10 
 	}
 
 	ai_strategy = {

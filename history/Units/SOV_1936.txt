@@ -218,7 +218,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 1x Tank Bge, 2x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	### Leningraskaya Gruppa Armiya (Leningrad Army Group) -- Leningrad ###
@@ -253,6 +253,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 2x Mekh Bge, 1x Mot Bge
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 	# Subordinate to AG
 	division= {			
@@ -261,6 +262,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 2x Mekh Bge
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 	
 		
@@ -305,7 +307,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 3x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	# 5ya Strelkoviy Korpus
@@ -348,7 +350,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 1x Tank Bge, 2x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	# 6ya Kavaleriyskiy Korpus
@@ -512,7 +514,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 3x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	# 3ya Strelkoviy Korpus		
@@ -584,6 +586,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 2x Mekh Bge, 1x Mot Bge
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 
@@ -944,7 +947,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 1x Tank Bge, 2x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	# 6ya Strelkoviy Korpus		
@@ -987,7 +990,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 1x H Tank Bge, 2x Mekh Bge
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.65
-
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 	# 17ya Strelkoviy Korpus		
@@ -1056,6 +1059,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		# 2x Mekh Bge, 1x Mot Bge
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.8
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "SOV" version_name = "BT-5" } }
 	}
 
 

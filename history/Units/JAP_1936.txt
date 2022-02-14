@@ -33,6 +33,9 @@ division_template = {
 		motorized = { x = 1 y = 1 }
 		light_armor = { x= 2 y = 0 }
 		light_armor = { x= 2 y = 1 }
+		medium_armor = { x= 2 y = 2 }
+		medium_armor = { x= 2 y = 3 }
+		medium_armor = { x= 2 y = 4 }
 	}
 	support = {
 		engineer = { x = 0 y = 0 }
@@ -143,6 +146,8 @@ units = {
 		location = 12446 #Toyohara
 		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "JAP" version_name = "Type 94 Tankette" } }
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "JAP" version_name = "Type 89 I-Go" } }
 	}
 
 	#Chuo Homengun - East Japan Army
@@ -486,6 +491,8 @@ units = {
 		location = 1182
 		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "JAP" version_name = "Type 94 Tankette" } }
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "JAP" version_name = "Type 89 I-Go" } }
 	}
 
 	#2 Homengun - 2nd Field Army

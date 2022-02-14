@@ -1554,6 +1554,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			modifier = {
+		        army_artillery_attack_factor = 0.10
 				army_infantry_attack_factor = 0.10
 				army_infantry_defence_factor = 0.10
 			}
@@ -1575,6 +1576,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			modifier = {
+		        army_artillery_attack_factor = 0.10
 				army_infantry_attack_factor = 0.10
 				army_infantry_defence_factor = 0.10
 				attrition = -0.10
@@ -1598,6 +1600,7 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			modifier = {
+		        army_artillery_attack_factor = 0.20
 				army_infantry_attack_factor = 0.20
 				army_infantry_defence_factor = 0.20
 				attrition = -0.15
@@ -1671,7 +1674,9 @@ ideas = {
 				army_armor_speed_factor = 0.10
 				army_armor_attack_factor = 0.10
 				motorized_attack_factor = 0.10
-				motorized_defence_factor = 0.10
+				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.05
 				army_speed_factor = 0.05
 			}
 
@@ -1702,7 +1707,9 @@ ideas = {
 				army_armor_speed_factor = 0.10
 				army_armor_attack_factor = 0.20
 				motorized_attack_factor = 0.20
-				motorized_defence_factor = 0.20
+				motorized_defence_factor = 0.10
+				mechanized_attack_factor = 0.20
+				mechanized_defence_factor = 0.10
 				army_speed_factor = 0.05
 			}
 
@@ -1755,7 +1762,9 @@ ideas = {
 				army_armor_speed_factor = 0.10
 				army_armor_attack_factor = 0.15
 				motorized_attack_factor = 0.10
-				motorized_defence_factor = 0.10
+				motorized_defence_factor = 0.05
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.05
 				army_speed_factor = 0.05
 		    air_cas_present_factor = 0.10
 			}
@@ -1787,7 +1796,9 @@ ideas = {
 				army_armor_speed_factor = 0.10
 				army_armor_attack_factor = 0.25
 				motorized_attack_factor = 0.20
-				motorized_defence_factor = 0.20
+				motorized_defence_factor = 0.10
+				mechanized_attack_factor = 0.20
+				mechanized_defence_factor = 0.10
 				army_speed_factor = 0.05
 		    air_cas_present_factor = 0.20
 			}

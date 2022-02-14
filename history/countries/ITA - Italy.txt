@@ -5,7 +5,7 @@ oob = "ITA_1936"
 set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.7
-starting_train_buffer = 33
+starting_train_buffer = 3
 
 add_ideas = {
   ita_Colonial_war
@@ -733,43 +733,24 @@ if = {
 }
 
 if = {
-		limit = {
-			has_dlc = "No Step Back"
-		}
-		create_equipment_variant = {
-			name = "L6/40"
-			type = light_tank_chassis_1
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_auto_cannon
-				turret_type_slot = tank_light_one_man_tank_turret
-				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 4
-			}
-			icon = "GFX_ITA_improved_light_tank_medium"
-		}
-
-		create_equipment_variant = {
-			name = "M11/39"
-			type = light_tank_chassis_2
-			parent_version = 0
-			modules = {
-				main_armament_slot = tank_high_velocity_cannon
-				turret_type_slot = tank_light_fixed_superstructure_turret
-				suspension_type_slot = tank_bogie_suspension
-				armor_type_slot = tank_riveted_armor
-				engine_type_slot = tank_gasoline_engine
-				special_type_slot_1 = secondary_turret_hmg
-			}
-			upgrades = {
-				tank_nsb_engine_upgrade = 2
-				tank_nsb_armor_upgrade = 3
-			}
-			icon = "GFX_ITA_basic_medium_tank_medium"
-		}
+	limit = {
+		has_dlc = "No Step Back"
 	}
+	create_equipment_variant = {
+		name = "L3/35"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 1
+		}
+		icon = "GFX_ITA_basic_light_tank_medium"
+	}
+}

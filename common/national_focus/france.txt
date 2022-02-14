@@ -2709,22 +2709,20 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_puppet_austria
 			available = {
-					has_government = neutrality
-					is_puppet = no
-          or = {
-            threat > 0.30
-            date > 1938.1.1
-            GER = {
-              has_war = yes
-              any_enemy_country = {
-                is_major = yes
-              }
-            }
-          }
-				SPR = {			
-					has_civil_war = no
+				has_government = neutrality
+				is_puppet = no
+				or = {
+					threat > 0.30
+					date > 1938.1.1
+					GER = {
+					  has_war = yes
+					  any_enemy_country = {
+						is_major = yes
+					  }
+					}
 				}
-				}
+
+			}
 			
 			ai_will_do = {
 					factor = 500
@@ -2758,7 +2756,6 @@ country_event = {
 							random_other_country = {
 									limit = {
 											original_tag = SPR
-											has_government = fascism
 										}
 									FRA = {
 											create_wargoal = {
@@ -4068,7 +4065,7 @@ country_event = {
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				bonus = 0.5
 				uses = 1
 				category = land_doctrine
 			} # REVISIT May use modifier?
@@ -10097,9 +10094,12 @@ country_event = {
 		x = -1
 		y = 1
 		relative_position_id = FRA_republican_struggle
-			available = {
-        NOT = { has_government = communism }
-      }
+		available = {
+			has_country_leader = {
+				character = FRA_leo_b_harwey
+				ruling_only = yes
+			}
+		}
 			available_if_capitulated = yes
 			ai_will_do = {
 					factor = 800
@@ -10538,12 +10538,12 @@ country_event = {
 				}
 			available_if_capitulated = yes
 			ai_will_do = {
+				factor = 400
+				modifier = {
 					factor = 2
-			modifier = {
-				factor = 250
-				FRA = { has_war = yes }
-			}
+					FRA = { has_war = yes }
 				}
+			}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
 					add_ideas = { tot_economic_mobilisation }

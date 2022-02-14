@@ -23,7 +23,7 @@
 }
 division_template = {
 	name = "Dokuritsu Konsei Ryodan"					
-	division_names_group = MAN_GAR_01
+	division_names_group = MAN_ARM_01
 									
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -33,6 +33,9 @@ division_template = {
 		motorized = { x = 1 y = 1 }
 		light_armor = { x= 2 y = 0 }
 		light_armor = { x= 2 y = 1 }
+		medium_armor = { x= 2 y = 2 }
+		medium_armor = { x= 2 y = 3 }
+		medium_armor = { x= 2 y = 4 }
 	}
 	support = {
 		engineer = { x = 0 y = 0 }
@@ -204,6 +207,8 @@ units = {
 		location = 10433
 		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "MAN" creator = "JAP" amount = 120 version_name = "Type 94 Tankette"} }
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "MAN" creator = "JAP" amount = 120 version_name = "Type 89 I-Go"} }
 	}
 
 	division = { # "2 Dokuritsu Konsei Ryodan"
@@ -214,6 +219,8 @@ units = {
 		location = 10433
 		division_template = "Dokuritsu Konsei Ryodan"
 		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "MAN" creator = "JAP" amount = 120 version_name = "Type 94 Tankette"} }
+		force_equipment_variants = { medium_tank_chassis_0 = { owner = "MAN" creator = "JAP" amount = 120 version_name = "Type 89 I-Go"} }
 	}
 
 }

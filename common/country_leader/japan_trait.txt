@@ -35,26 +35,12 @@ leader_traits = {
 		sprite = 5
 
 
+		army_artillery_attack_factor = 0.15
 		army_infantry_attack_factor = 0.20
-		army_infantry_defence_factor = 0.15
-    experience_gain_army = 0.10
-    command_cap = 15
+		army_infantry_defence_factor = 0.10
+		experience_gain_army = 0.10
+		command_cap = 15
 
-		equipment_bonus = {
-
-      artillery = {
-		soft_attack = 0.1
-
-		instant = yes
-      }
-
-      anti_tank = {
-		ap_attack = 0.1
-
-		instant = yes
-      }
-
-		}
 	
 		ai_will_do = {
 			factor = 4
@@ -313,45 +299,36 @@ leader_traits = {
   ## Kappa
   experimental_naval_arsenal = {
     random = no
-    naval_torpedo_range_factor = 1
+
     equipment_bonus = {
-			amphibious_mechanized_equipment = {
-        breakthrough = 0.20
-        armor_value = 0.15
-        hard_attack = 0.15
-        soft_attack = 0.15
-        maximum_speed = 0.20
-        reliability = 0.15
-				instant = yes
-      }
-      amphibious_tank_equipment = {
-        breakthrough = 0.20
-        armor_value = 0.15
-        hard_attack = 0.15
-        soft_attack = 0.15
-        maximum_speed = 0.20
-        reliability = 0.15
-				instant = yes
-      }
-      
-      screen_ship = {
-				torpedo_attack = 0.20
-        naval_speed = 0.20
-				instant = yes
-			}
-      
-      convoy = {
-        naval_speed = 0.20
-				instant = yes
-      }
-      
-      submarine = {
-				torpedo_attack = 0.20
-        naval_range = 0.20
-        naval_speed = 0.20
-				instant = yes
-			}
+		amphibious_mechanized_equipment = {
+			breakthrough = 0.20
+			armor_value = 0.15
+			hard_attack = 0.15
+			soft_attack = 0.15
+			maximum_speed = 0.20
+			reliability = 0.15
+			instant = yes
 		}
+
+		screen_ship = {
+			torpedo_attack = 0.20
+			naval_speed = 0.20
+			instant = yes
+		}
+
+		convoy = {
+			naval_speed = 0.20
+			instant = yes
+		}
+  
+		submarine = {
+			torpedo_attack = 0.20
+			naval_range = 0.20
+			naval_speed = 0.20
+			instant = yes
+		}
+	}
   }
   
   ## TypeMoon
@@ -373,25 +350,25 @@ leader_traits = {
 				instant = yes
       }
     
-      anti_tank = {
+      anti_tank_equipment = {
         hard_attack = 0.10
 				instant = yes
       }
-      artillery = {
+      artillery_equipment = {
         soft_attack = 0.10
 				instant = yes
       }
-      anti_air = {
+      anti_air_equipment = {
         air_attack = 0.10
 				instant = yes
       }
       
-      motorized = {
+      motorized_equipment = {
         maximum_speed = 0.10
         armor_value = 0.10
 				instant = yes
       }
-      mechanized = {
+      mechanized_equipment = {
         maximum_speed = 0.10
         armor_value = 0.10
 				instant = yes
@@ -541,9 +518,9 @@ leader_traits = {
   advanced_sensor_production = {
     random = no
     production_speed_radar_station_factor = 0.30
-    spotting_chance = 0.15
-    navy_submarine_detection_factor = 0.15
-    recon_factor = 0.15
+    spotting_chance = 0.10
+    navy_submarine_detection_factor = 0.10
+    recon_factor = 0.10
     equipment_bonus = { 
       submarine = {
         surface_detection = 0.20
@@ -572,7 +549,7 @@ leader_traits = {
   advanced_army_production = {
     random = no
     equipment_bonus = {
-      infantry = {
+      infantry_equipment = {
         soft_attack = 0.15
         hard_attack = 0.15
         reliability = 0.15
@@ -636,9 +613,11 @@ leader_traits = {
 	army_motorized_expert = {
 		random = no
 		sprite = 8	
-		#摩托化部队攻击+15%，防御+15%
+		#摩托化机械化部队攻击+15%，防御+10%
 		motorized_attack_factor = 0.15
-		motorized_defence_factor = 0.15		
+		motorized_defence_factor = 0.10		
+		mechanized_attack_factor = 0.15
+		mechanized_defence_factor = 0.10
 		equipment_bonus = {
 			#摩托化装备：最大速度+20%，装甲率+15%
 			motorized_equipment = {

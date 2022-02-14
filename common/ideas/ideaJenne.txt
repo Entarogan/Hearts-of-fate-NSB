@@ -1722,7 +1722,7 @@ ideas = {
           instant = yes
 
 				}
-				anti_tank = {
+				anti_tank_equipment = {
 					build_cost_ic = -0.15
 
           instant = yes

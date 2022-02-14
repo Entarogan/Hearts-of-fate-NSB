@@ -25,13 +25,8 @@ ideas = {
 
 			picture = a_Paris
 
-			equipment_bonus = {
-				artillery_equipment = {
-					soft_attack = 0.05
-				}
-				anti_tank = {
-					hard_attack = 0.05
-				}
+			modifier = {
+				army_artillery_attack_factor = 0.05
 			}
 		}
 	Moscow = { 

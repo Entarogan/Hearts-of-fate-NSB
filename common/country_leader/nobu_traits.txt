@@ -443,9 +443,9 @@ leader_traits = {
 	command_system = {
 		sprite = 14
 		
-		command_power_gain = 0.5
-		command_power_gain_mult = 0.5
-		max_command_power = 100
+		command_power_gain = 0.25
+		command_power_gain_mult = 0.25
+		max_command_power = 50
 		
 		ai_will_do = {
 			factor = 5

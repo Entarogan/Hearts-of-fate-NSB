@@ -4654,10 +4654,10 @@
 
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = HUN_Horse_riding_and_blade_slashing
-				bonus = 1.0
-				uses = 2
+				bonus = 0.5
+				uses = 3
 				category = cat_mobile_warfare
 			}	
 		}
@@ -6074,7 +6074,7 @@
       factor = 100
     }
     available = {
-      communism > 0.70
+      communism > 0.60
       has_stability > 0.60
     }
 
@@ -7984,7 +7984,7 @@
 		x = 2
 		y = 1
 		relative_position_id = HUN_Hungarian_economy
-		cost = 5
+		cost = 1
     ai_will_do = {
       factor = 175
 			modifier = {
@@ -9765,10 +9765,10 @@
 				limit = {
           GER = { is_faction_leader = yes }
 					is_in_faction_with = GER
-          GER = { has_tech = basic_medium_tank }
+          GER = { has_tech = improved_medium_tank_chassis }
 				}
         add_equipment_to_stockpile = {
-          type = medium_tank_equipment
+          type = medium_tank_chassis_2
           amount = 500
           producer = GER
         }
@@ -9792,10 +9792,10 @@
 				limit = {
           FRA = { is_faction_leader = yes }
 					is_in_faction_with = FRA
-          FRA = { has_tech = basic_medium_tank }
+          FRA = { has_tech = improved_medium_tank_chassis }
 				}
         add_equipment_to_stockpile = {
-          type = medium_tank_equipment
+          type = medium_tank_chassis_2
           amount = 500
           producer = FRA
         }
@@ -9819,10 +9819,10 @@
 				limit = {
           ITA = { is_faction_leader = yes }
 					is_in_faction_with = ITA
-          ITA = { has_tech = basic_medium_tank }
+          ITA = { has_tech = improved_medium_tank_chassis }
 				}
         add_equipment_to_stockpile = {
-          type = medium_tank_equipment
+          type = medium_tank_chassis_2
           amount = 500
           producer = ITA
         }
@@ -9846,10 +9846,10 @@
 				limit = {
           ENG = { is_faction_leader = yes }
 					is_in_faction_with = ENG
-          ENG = { has_tech = basic_medium_tank }
+          ENG = { has_tech = improved_medium_tank_chassis }
 				}
         add_equipment_to_stockpile = {
-          type = medium_tank_equipment
+          type = medium_tank_chassis_2
           amount = 500
           producer = ENG
         }
@@ -9873,10 +9873,10 @@
 				limit = {
           USA = { is_faction_leader = yes }
 					is_in_faction_with = USA
-          USA = { has_tech = basic_medium_tank }
+          USA = { has_tech = improved_medium_tank_chassis }
 				}
         add_equipment_to_stockpile = {
-          type = medium_tank_equipment
+          type = medium_tank_chassis_2
           amount = 500
           producer = USA
         }
@@ -10278,24 +10278,24 @@
 		y = 1
 		relative_position_id = HUN_Military_reform
 		cost = 5
-    ai_will_do = {
-      factor = 150
+		ai_will_do = {
+			factor = 150
 			modifier = {
 				factor = 2
-        has_war = yes
+				has_war = yes
 			}
 			modifier = {
 				factor = 2
-        date > 1938.1.1
+				date > 1938.1.1
 			}
-    }
-    available = {
+		}
+		available = {
 
-    }
+		}
 
 
-    bypass = {
-    }
+		bypass = {
+		}
     
     
     
@@ -10303,9 +10303,9 @@
 		completion_reward = {
 			add_ideas = HUN_Mobile_Warfare_idea_1
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = GER_Lessons_from_the_war
-				bonus = 1.0
+				bonus = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -10327,11 +10327,11 @@
 			factor = 50
 			modifier = {
 				factor = 2
-        has_war = yes
+				has_war = yes
 			}
 			modifier = {
 				factor = 2
-        date > 1938.1.1
+				date > 1938.1.1
 			}
 		}
 
@@ -10349,21 +10349,17 @@
 
 		completion_reward = {
 
-      if = {
-        limit = { NOT = { has_tech = motorised_infantry } }
+			if = {
+				limit = { NOT = { has_tech = motorised_infantry } }
 
-			  set_technology = { motorised_infantry = 1 }
-      }
+				set_technology = { motorised_infantry = 1 }
+			}
 
-      if = {
-        limit = { has_tech = motorised_infantry }
-
-				add_equipment_to_stockpile = {
-					type = motorized_equipment
-					amount = 500
-					producer = HUN
-				}
-      }
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 500
+				producer = HUN
+			}
 
 			add_tech_bonus = {
 				name = HUN_the_botond
@@ -10388,11 +10384,11 @@
 			factor = 50
 			modifier = {
 				factor = 2
-        has_war = yes
+				has_war = yes
 			}
 			modifier = {
 				factor = 2
-        date > 1938.1.1
+				date > 1938.1.1
 			}
 		}
 
@@ -10401,7 +10397,7 @@
 		}
 
 		bypass = {
-
+			has_tech = improved_medium_tank_chassis
 		}
 
 		
@@ -10412,41 +10408,38 @@
 
 			if = {
 				limit = {
-					has_tech = basic_medium_tank
+					NOT = { has_tech = basic_medium_tank_chassis }
+				}
+				set_technology = { basic_medium_tank_chassis = 1 }
+
+				create_equipment_variant = {
+					name = "40M Turan I"
+					type = medium_tank_chassis_1
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_small_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_bogie_suspension
+						armor_type_slot = tank_riveted_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_1
+						special_type_slot_2 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 0
+					}
+					icon = "GFX_HUN_basic_medium_tank"
 				}
 
-        add_equipment_to_stockpile = {
-          type = medium_tank_equipment
-          amount = 250
-          producer = HUN
-        }
-
-        add_tech_bonus = {
-          name = HUN_Turan
-          bonus = 1.0
-          uses = 1
-          category = armor
-        }
 			}
 
-			if = {
-				limit = {
-					NOT = { has_tech = basic_medium_tank }
-				}
-        add_tech_bonus = {
-          name = HUN_Turan
-				  ahead_reduction = 2.0
-          uses = 1
-          technology = basic_medium_tank
-        }
+			add_tech_bonus = {
+				name = HUN_Technology_crystallization
+				bonus = 1
+				ahead_reduction = 1.0
+				technology = improved_medium_tank_chassis
 			}
-
-      add_tech_bonus = {
-        name = HUN_Technology_crystallization
-        bonus = 0.5
-        uses = 1
-        category = armor
-      }
 
 		}
 	}
@@ -10513,7 +10506,7 @@
 			factor = 50
 			modifier = {
 				factor = 2
-        has_war = yes
+				has_war = yes
 			}
 		}
 
@@ -10522,7 +10515,7 @@
 		}
 
 		bypass = {
-
+			has_tech = improved_infantry_weapons
 		}
 
 		
@@ -10535,44 +10528,21 @@
 				limit = {
 					has_completed_focus = HUN_Genius_weapon_designer
 				}
-        add_tech_bonus = {
-          name = HUN_Danuvia_39
-          bonus = 0.5
-          uses = 1
-          category = infantry_weapons
-        }
-			}
-
-			if = {
-				limit = {
-					has_tech = improved_infantry_weapons
+				add_tech_bonus = {
+				  name = HUN_Danuvia_39
+				  bonus = 0.5
+				  uses = 1
+				  category = infantry_weapons
 				}
-
-        add_equipment_to_stockpile = {
-          type = infantry_equipment
-          amount = 1500
-          producer = HUN
-        }
-
-        add_tech_bonus = {
-          name = HUN_Danuvia_39
-          bonus = 1.0
-          uses = 1
-          category = infantry_weapons
-        }
 			}
 
-			if = {
-				limit = {
-					NOT = { has_tech = improved_infantry_weapons }
-				}
-        add_tech_bonus = {
-          name = HUN_Danuvia_39
-          bonus = 3.0
-          uses = 1
-          technology = improved_infantry_weapons
-        }
+			add_tech_bonus = {
+			  name = HUN_Danuvia_39
+			  bonus = 3.0
+			  uses = 1
+			  technology = improved_infantry_weapons
 			}
+
 		}
 	}  
   
@@ -10709,9 +10679,9 @@
         add_idea = HUN_Mobile_Warfare_idea_2
       }
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = HUN_arpad
-				bonus = 1.0
+				bonus = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -10788,12 +10758,12 @@
 			}
 			modifier = {
 				factor = 4
-        has_war = yes
+				has_war = yes
 			}
 		}
 
 		available = {
-      has_completed_focus = HUN_arpad_tank
+            has_completed_focus = HUN_arpad_tank
 		}
 
 		bypass = {
@@ -10805,17 +10775,29 @@
 		
 
 		completion_reward = {
-      swap_ideas = {
-        remove_idea = HUN_arpad_tank_idea
-        add_idea = HUN_arpad_tank_2_idea
-      }
+			swap_ideas = {
+				remove_idea = HUN_arpad_tank_idea
+				add_idea = HUN_arpad_tank_2_idea
+			}
 
-			add_tech_bonus = {
-				name = HUN_Zrinyi
-        bonus = 1.0
-        uses = 1
-				technology = basic_medium_td
-				technology = improved_medium_td
+			create_equipment_variant = {
+				name = "Zrinyi"
+				type = medium_tank_artillery_chassis_1
+				parent_version = 0
+				modules = {
+					main_armament_slot = tank_medium_howitzer
+					turret_type_slot = tank_medium_fixed_superstructure_turret
+					suspension_type_slot = tank_bogie_suspension
+					armor_type_slot = tank_riveted_armor
+					engine_type_slot = tank_gasoline_engine
+					special_type_slot_1 = tank_radio_2
+					special_type_slot_2 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 6
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "GFX_HUN_basic_medium_tank"
 			}
 
 		}
@@ -10840,7 +10822,7 @@
 			}
 			modifier = {
 				factor = 3
-        has_war = yes
+				has_war = yes
 			}
 		}
 
@@ -10849,7 +10831,7 @@
 		}
 
 		bypass = {
-
+			has_tech = advanced_infantry_weapons
 		}
 
 		
@@ -10862,43 +10844,19 @@
 				limit = {
 					has_completed_focus = HUN_Genius_weapon_designer
 				}
-        add_tech_bonus = {
-          name = HUN_Danuvia_43
-          bonus = 0.5
-          uses = 1
-          category = infantry_weapons
-        }
+				add_tech_bonus = {
+				  name = HUN_Danuvia_43
+				  bonus = 0.5
+				  uses = 1
+				  category = infantry_weapons
+				}
 			}
 
-			if = {
-				limit = {
-					has_tech = advanced_infantry_weapons
-				}
-
-        add_equipment_to_stockpile = {
-          type = infantry_equipment
-          amount = 1500
-          producer = HUN
-        }
-
-        add_tech_bonus = {
-          name = HUN_Danuvia_43
-          bonus = 1.0
-          uses = 1
-          category = infantry_weapons
-        }
-			}
-
-			if = {
-				limit = {
-					NOT = { has_tech = advanced_infantry_weapons }
-				}
-        add_tech_bonus = {
-          name = HUN_Danuvia_43
-          bonus = 3.0
-          uses = 1
-          technology = advanced_infantry_weapons
-        }
+			add_tech_bonus = {
+			  name = HUN_Danuvia_43
+			  bonus = 3.0
+			  uses = 1
+			  technology = advanced_infantry_weapons
 			}
 		}
 	}
@@ -11001,9 +10959,9 @@
         add_idea = HUN_Mobile_Warfare_idea_3
       }
 
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = HUN_villam
-				bonus = 1.0
+				bonus = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}

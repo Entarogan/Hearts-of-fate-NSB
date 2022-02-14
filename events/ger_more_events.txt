@@ -336,7 +336,7 @@ country_event = {     # GER_Obligations_of_Youth_League
 	option = {
 		name = more_ger.9.a
 		ai_chance = {
-			base = 50
+			base = 0
 			modifier = {
 				factor = 0
         has_game_rule = {
@@ -396,7 +396,7 @@ country_event = {     # GER_Reconstruction_of_faith
 	option = {
 		name = more_ger.10.a
 		ai_chance = {
-			base = 20
+			base = 0
 			modifier = {
 				factor = 0
         has_game_rule = {
@@ -448,7 +448,7 @@ country_event = {     # GER_TST_position
 		name = more_ger.11.a
 
 		ai_chance = {
-			base = 70
+			base = 0
 			modifier = {
 				factor = 0
         has_game_rule = {
@@ -508,7 +508,7 @@ country_event = {     # GER_Entering_the_school
 	option = {
 		name = more_ger.12.a
 		ai_chance = {
-			base = 50
+			base = 0
 		}
 
 		modify_country_flag = {
@@ -671,7 +671,7 @@ country_event = {     # GER_Preventive_arrest
 	option = {
 		name = more_ger.18.a
 		ai_chance = {
-			base = 50
+			base = 0
 		}
 
 		modify_country_flag = {

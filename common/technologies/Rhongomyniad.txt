@@ -54,9 +54,9 @@ technologies = {
 			always = no
 		}
     doctrine = yes	
-		category_army = {
-			casualty_trickleback = 0.015
-			experience_loss_factor = -0.012
+		engineer = {
+			casualty_trickleback = 0.010
+			experience_loss_factor = -0.010
 		}
 		categories = {
 			land_doctrine

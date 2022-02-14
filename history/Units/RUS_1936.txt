@@ -328,7 +328,7 @@ units = {
 		division_template = "Mekhanizirovaniy Korpus"		
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.55
-
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "RUS" creator = "FRA" amount = 280 version_name = "FT Char Cannon"} }
 	}
 
 	division= {	# "16ya Moskovskaya Kavaleriyskaya Diviziya"		

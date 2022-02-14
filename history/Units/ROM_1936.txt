@@ -183,7 +183,7 @@ units = {
 		location = 9617
 		division_template = "Regimentul de Blindate"
 		start_experience_factor = 0.8
-		force_equipment_variants = { gw_tank_equipment = { owner = "ROM" creator = "FRA" amount = 96 } }
+		force_equipment_variants = { light_tank_chassis_0 = { owner = "ROM" creator = "FRA" amount = 72 version_name = "FT Char Cannon"} }
 
 	}
 

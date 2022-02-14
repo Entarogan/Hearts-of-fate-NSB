@@ -264,6 +264,7 @@ units = {
 		location = 11584 
 		division_template = "Divisione Celere" 
 		start_experience_factor = 0.3 
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "ITA" version_name = "L3/35" } }
 	} 
 	division = { # 
 		division_name = {
@@ -273,6 +274,7 @@ units = {
 		location = 11584 
 		division_template = "Divisione Celere" 
 		start_experience_factor = 0.3 
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "ITA" version_name = "L3/35" } }
 	} 
 	division = { # 
 		division_name = {
@@ -282,6 +284,7 @@ units = {
 		location = 11584 
 		division_template = "Divisione Celere" 
 		start_experience_factor = 0.3 
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "ITA" version_name = "L3/35" } }
 	} 
 
 	### Gruppo d'Armata Sud ###
