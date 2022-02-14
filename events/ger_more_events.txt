@@ -2,7 +2,6 @@
 # GSK Britain Events
 ###########################
 add_namespace = more_ger
-
 country_event = {     # GER: Tsingtao
 	id = more_ger.1
 	title = more_ger.1.t
@@ -2899,31 +2898,31 @@ country_event = {     # 鲁登道夫2
 			base = 100
 		}
 
-    random_army_leader = {
-      limit = { 
-        has_id = 2026 
-      }
-      
-      add_skill_level = -1
-      
-      add_attack = -1
-      add_defense = -1
-      add_planning = -1
-      add_logistics = -1
-      
-      add_unit_leader_trait = substance_abuser
+		random_army_leader = {
+		limit = { 
+			has_id = 2026 
+		}
+		
+		add_skill_level = -1
+		
+		add_attack = -1
+		add_defense = -1
+		add_planning = -1
+		add_logistics = -1
+		
+		add_unit_leader_trait = substance_abuser
 
-    }
+		}
 
 
-    if = {
-      limit = {
-        has_country_flag = GER_otto_strasser_in_power_flag
-      }
-		  custom_effect_tooltip = GER_strass_Political_struggle_1_tooltip
+		if = {
+		limit = {
+			has_country_flag = GER_otto_strasser_in_power_flag
+		}
+			custom_effect_tooltip = GER_strass_Political_struggle_1_tooltip
 
-      set_country_flag = GER_strass_Political_struggle_1_flag
-    }		
+		set_country_flag = GER_strass_Political_struggle_1_flag
+		}		
 		
 	}
 
@@ -2985,7 +2984,7 @@ country_event = {     # 解职帕拉塞尔苏斯
 			limit = { has_idea = GER_Hohenheim_Paracelsus }
 			remove_ideas = { GER_Hohenheim_Paracelsus }
 		}
-		GER_Hohenheim_Paracelsus
+		retire_character = GER_Hohenheim_Paracelsus
 		add_ideas = { GER_Darnic_Prestone }
 		
 	}	
@@ -3153,10 +3152,10 @@ country_event = {     # 蹊跷的死亡
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes character = GER_siegfried }
-    is_subject = no
-    has_country_flag = GER_Dismissal_Himmler_flag
-    has_country_flag = GER_Dismissal_Rosenberg_flag
+		has_country_leader = { ruling_only = yes character = GER_siegfried }
+		is_subject = no
+		has_country_flag = GER_Dismissal_Himmler_flag
+		has_country_flag = GER_Dismissal_Rosenberg_flag
 	}
 
 	mean_time_to_happen = {
@@ -3183,10 +3182,10 @@ country_event = {     # 分歧加剧
 	
 	trigger = {
 		tag = GER
-    has_country_leader = { ruling_only = yes character = GER_siegfried }
-    is_subject = no
-    has_country_flag = GER_Dismissal_Himmler_flag
-    has_country_flag = GER_Dismissal_Rosenberg_flag
+		has_country_leader = { ruling_only = yes character = GER_siegfried }
+		is_subject = no
+		has_country_flag = GER_Dismissal_Himmler_flag
+		has_country_flag = GER_Dismissal_Rosenberg_flag
 	}
 
 	mean_time_to_happen = {

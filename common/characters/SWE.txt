@@ -1,334 +1,98 @@
 characters={
-	SWE_sven_linderot={
-		name="Sven Linderot"
+	SWE_per_albin_hansson={
+		name=SWE_per_albin_hansson
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large=GFX_portrait_SWE_per_albin_hansson
 			}
 		}
 		country_leader={
-			desc="POLITICS_SVEN_LINDEROT_DESC"
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_sven_olov_lindholm={
+		name=SWE_sven_olov_lindholm
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_sven_olov_lindholm
+			}
+		}
+		country_leader={
+			ideology=nazism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_sven_linderot={
+		name=SWE_sven_linderot
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_sven_linderot
+			}
+		}
+		country_leader={
 			ideology=marxism
 			expire="1965.1.1.1"
 			id=-1
 		}
 	}
-	SWE_ortlinde={
-		name="Ortlinde"
-		advisor={
-			slot = army_chief
-			idea_token = SWE_ortlinde
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					army_infantry_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
+	SWE_axel_pehrssonbramstorp={
+		name=SWE_axel_pehrssonbramstorp
+		portraits={
+			civilian={
+				large=GFX_portrait_SWE_axel_pehrssonbramstorp
+			}
 		}
+		country_leader={
+			ideology=centrism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_folke_hogberg={
+		name=SWE_folke_hogberg
 		portraits={
 			army={
-				small="GFX_idea_ortlinde"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Ortlinde.dds"
+				large=GFX_portrait_SWE_folke_hogberg
+				small=GFX_portrait_SWE_folke_hogberg_small
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist trickster commando winter_specialist }
-			skill=4
-			attack_skill=4
+			traits={ commando }
+			skill=3
+			attack_skill=1
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
-			legacy_id=-1
+			legacy_id=0
 		}
 	}
-	SWE_hildr={
-		name="Hildr"
-		advisor={
-			slot = air_chief
-			idea_token = SWE_hildr
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					air_air_superiority_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
+	SWE_erik_af_edholm={
+		name=SWE_erik_af_edholm
 		portraits={
 			army={
-				small="GFX_idea_hildr"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Hildr.dds"
+				large=GFX_portrait_SWE_erik_af_edholm
+				small=GFX_portrait_SWE_erik_af_edholm_small
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist trickster commando winter_specialist hill_fighter }
-			skill=4
-			attack_skill=3
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=2
-			legacy_id=-1
-		}
-	}
-	SWE_sigurd={
-		name="Sigurd"
-		advisor={
-			slot = high_command
-			idea_token = SWE_sigurd
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					army_chief_offensive_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_sigurd"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Sigurd.dds"
-			}
-		}
-		corps_commander={
-			traits={ infantry_officer war_hero organizer trickster commando winter_specialist skirmisher }
-			skill=5
-			attack_skill=6
-			defense_skill=4
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=2053
-		}
-	}
-	SWE_beowulf={
-		name="Beowulf"
-		portraits={
-			army={
-				small="GFX_idea_advisor_unknown"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Beowulf.dds"
-			}
-		}
-		field_marshal={
-			traits={ harsh_leader politically_connected war_hero winter_specialist offensive_doctrine inspirational_leader adaptable }
-			skill=5
-			attack_skill=4
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=3
-			legacy_id=-1
-		}
-	}
-	SWE_ophelia_phamrsolone={
-		name="Ophelia Phamrsolone"
-		advisor={
-			slot = political_advisor
-			idea_token = SWE_ophelia
-			allowed  = {
-					original_tag  = SWE
-				}
-				ai_will_do  = {
-					factor  = 10.000
-				}
-				traits  = {
-					silent_workhorse 
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_ophelia"
-			}
-			civilian={
-				large="gfx/leaders/SWE/Portrait_Ophelia_Phamrsolone.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_OPHELIA_DESC"
-			ideology=nazism
-			traits={ Ich_will_es_niemals_glanzen_sehen Nordic_Bloodline }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	SWE_riesbyfe_stridberg={
-		name="Riesbyfe Stridberg"
-		advisor={
-			slot = political_advisor
-			idea_token = SWE_Ries
-			allowed  = {
-					original_tag  = SWE
-				}
-				available  = {
-					or  = {
-						has_completed_focus  = swe_freedom_of_trade 
-						has_completed_focus  = swe_german_celtic_bond 
-						has_completed_focus  = swe_Noregskonungasogum 
-					}
-					NOT = { has_government = fascism }
-				}
-				traits  = {
-					holy_shield 
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_Ries"
-			}
-			civilian={
-				large="gfx/leaders/SWE/Portrait_Riesbyfe_Stridberg.dds"
-			}
-		}
-		corps_commander={
-			traits={ inflexible_strategist trait_cautious winter_specialist }
-			skill=4
-			attack_skill=2
-			defense_skill=6
-			planning_skill=2
-			logistics_skill=4
-			legacy_id=-1
-		}
-		country_leader={
-			desc="POLITICS_RIESBYFE_DESC"
-			ideology=socialism
-			traits={ unpopular_catholic defender }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	SWE_scáthachskaði={
-		name="Scáthach-Skaði"
-		advisor={
-			slot = high_command
-			idea_token = SWE_skadi
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					army_logistics_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_skadi"
-			}
-			civilian={
-				large="gfx/leaders/SWE/Portrait_purple.dds"
-			}
-		}
-		field_marshal={
-			traits={ politically_connected skilled_staffer trickster winter_specialist logistics_wizard defensive_doctrine organisational_leader inspirational_leader expert_improviser adaptable winter_expert }
-			skill=5
-			attack_skill=3
-			defense_skill=6
-			planning_skill=4
-			logistics_skill=4
-			legacy_id=-1
-		}
-		country_leader={
-			desc="POLITICS_SKADI_DESC"
-			ideology=theocracy
-			traits={ genunine_wisdom }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	SWE_Þrúðr={
-		name="Þrúðr"
-		advisor={
-			slot = air_chief
-			idea_token = SWE_thudr
-			allowed  = {
-					original_tag  = SWE
-				}
-				traits  = {
-					air_close_air_support_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
-				}
-		}
-		portraits={
-			army={
-				small="GFX_idea_thudr"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Trudr.dds"
-			}
-		}
-		corps_commander={
-			traits={ brilliant_strategist trickster commando winter_specialist hill_fighter }
+			traits={ hill_fighter }
 			skill=4
 			attack_skill=4
-			defense_skill=2
+			defense_skill=1
 			planning_skill=4
-			logistics_skill=3
-			legacy_id=-1
-		}
-	}
-	SWE_tryka={
-		name="Tryka"
-		portraits={
-			army={
-				small="GFX_idea_advisor_unknown"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Tyrka.dds"
-			}
-		}
-		corps_commander={
-			traits={ organizer winter_specialist }
-			skill=3
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
 			logistics_skill=4
-			legacy_id=-1
+			legacy_id=0
 		}
 	}
-	SWE_brynhildr={
-		name="Brynhildr"
+	SWE_claes_lindstrom={
+		name=SWE_claes_lindstrom
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
-			}
-			army={
-				large="gfx/leaders/SWE/Portrait_Brynhildr.dds"
-			}
-		}
-		corps_commander={
-			traits={ brilliant_strategist cavalry_officer politically_connected skilled_staffer trickster winter_specialist offensive_doctrine inspirational_leader combined_arms_expert winter_expert }
-			skill=5
-			attack_skill=5
-			defense_skill=5
-			planning_skill=4
-			logistics_skill=3
-			legacy_id=2052
-		}
-	}
-	SWE_claes_lindström={
-		name="Claes Lindström"
-		portraits={
-			army={
-				small="gfx/interface/ideas/idea_europe_generic_navy_2.dds"
-			}
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+				large=GFX_portrait_SWE_claes_lindstrom
+				small=GFX_portrait_SWE_claes_lindstrom_small
 			}
 		}
 		navy_leader={
@@ -336,129 +100,223 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
-			legacy_id=-1
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=0
 		}
 	}
-	SWE_rovio={
+	SWE_per_sylvan={
 		advisor={
-			slot = theorist
-			idea_token = rovio
-			allowed  = {
-					or  = {
-						original_tag  = SWE
-						original_tag  = FIN
-					}
+			slot = army_chief
+			idea_token = SWE_per_sylvan
+			allowed = {
+					original_tag = SWE
 				}
-				available  = {
-					or  = {
-						has_completed_focus  = swe_integral_finland 
-						tag  = FIN
-					}
+				traits = {
+					army_chief_defensive_1
 				}
-				traits  = {
-					angry_birds 
-				}
-				ai_will_do  = {
-					factor  = 5.000
+				cost =  50
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="rovio"
+		name=SWE_per_sylvan
 		portraits={
 			army={
-				small="GFX_idea_rovio"
+				small="GFX_idea_generic_army_europe_6"
 			}
 		}
 	}
-	SWE_eric={
+	SWE_gosta_ehrensvard={
 		advisor={
 			slot = navy_chief
-			idea_token = SWE_eric
-			allowed  = {
-					original_tag  = SWE
+			idea_token = SWE_gosta_ehrensvard
+			allowed = {
+					original_tag = SWE
 				}
-				available  = {
-					has_completed_focus  = swe_Kalmarunionen 
+				traits = {
+					navy_chief_commerce_raiding_2
 				}
-				traits  = {
-					navy_chief_commerce_raiding_3 
-				}
-				ai_will_do  = {
-					factor  = 10.000
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="SWE_eric"
+		name=SWE_gosta_ehrensvard
 		portraits={
 			army={
-				small="GFX_idea_eric"
+				small="GFX_idea_generic_navy_europe_2"
 			}
 		}
 	}
-	SWE_gelda={
+	SWE_torsten_friis={
 		advisor={
-			slot = political_advisor
-			idea_token = SWE_gelda
-			allowed  = {
-					original_tag  = SWE
+			slot = air_chief
+			idea_token = SWE_torsten_friis
+			allowed = {
+					original_tag = SWE
 				}
-				traits  = {
-					agricultural_management 
+				traits = {
+					air_chief_all_weather_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="SWE_gelda"
+		name=SWE_torsten_friis
 		portraits={
 			army={
-				small="GFX_idea_gelda"
+				small="GFX_idea_generic_air_europe_3"
 			}
 		}
 	}
-	SWE_paradox={
+	SWE_erik_palmstierna={
 		advisor={
+			cost = 100
 			slot = theorist
-			idea_token = paradox
-			allowed  = {
-					original_tag  = SWE
+			idea_token = SWE_erik_palmstierna
+			ledger = navy
+				allowed = {
+					original_tag = SWE
 				}
-				available  = {
-					has_completed_focus  = swe_paradox 
-				}
-				
-				traits  = {
-					hearts_of_iron_4 CPU0 
-				}
-				ai_will_do  = {
-					factor  = 5.000
-				}
+				traits = { naval_theorist }
 		}
-		name="paradox"
+		name=SWE_erik_palmstierna
 		portraits={
 			army={
-				small="GFX_idea_paradox"
+				small="GFX_idea_generic_political_advisor_europe_1"
 			}
 		}
 	}
-	SWE_andersen={
+	SWE_helge_stromback={
 		advisor={
-			slot = political_advisor
-			idea_token = SWE_andersen
-			allowed  = {
-					original_tag  = SWE
+			slot = high_command
+			idea_token = SWE_helge_stromback
+			ledger = navy
+				allowed = {
+					original_tag = SWE
 				}
-				available  = {
-					has_completed_focus  = swe_Kalmarunionen 
+				traits = {
+					navy_fleet_logistics_2
 				}
-				ai_will_do  = {
-					factor  = 10.000
-				}
-				traits  = {
-					literary_spokesman 
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="SWE_andersen"
+		name=SWE_helge_stromback
 		portraits={
 			army={
-				small="GFX_idea_andersen"
+				small="GFX_idea_generic_navy_europe_2"
+			}
+		}
+	}
+	SWE_helge_jung={
+		advisor={
+			cost = 100
+			
+			slot = theorist
+			idea_token = SWE_helge_jung
+			ledger = army
+				allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					military_theorist
+				}
+		}
+		name=SWE_helge_jung
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SWE_olof_thornell={
+		advisor={
+			slot = army_chief
+			idea_token = SWE_olof_thornell
+			allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					army_chief_old_guard
+				}
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_olof_thornell
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_5"
+			}
+		}
+	}
+	SWE_bengt_nordenskiold={
+		advisor={
+			slot = air_chief
+			idea_token = SWE_bengt_nordenskiold
+			allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					air_chief_ground_support_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_bengt_nordenskiold
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_3"
+			}
+		}
+	}
+	SWE_ivar_holmquist={
+		advisor={
+			slot = army_chief
+			idea_token = SWE_ivar_holmquist
+			allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					army_chief_organizational_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_ivar_holmquist
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_1"
+			}
+		}
+	}
+	SWE_fabian_tamm={
+		advisor={
+			slot = navy_chief
+			idea_token = SWE_fabian_tamm
+			allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					navy_chief_reform_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_fabian_tamm
+		portraits={
+			army={
+				small="GFX_idea_generic_navy_europe_1"
 			}
 		}
 	}
@@ -466,65 +324,166 @@ characters={
 		advisor={
 			slot = navy_chief
 			idea_token = SWE_charles_de_champs
-			allowed  = {
-					original_tag  = SWE
+			allowed = {
+					original_tag = SWE
 				}
-				traits  = {
-					navy_chief_decisive_battle_2 
+				traits = {
+					navy_chief_decisive_battle_2
 				}
-				ai_will_do  = {
-					factor  = 1.000
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="SWE_charles_de_champs"
+		name=SWE_charles_de_champs
 		portraits={
 			army={
 				small="GFX_idea_generic_navy_europe_2"
 			}
 		}
 	}
-	SWE_sitonai={
+	SWE_axel_rappe={
 		advisor={
-			slot = army_chief
-			idea_token = SWE_sitonai
-			allowed  = {
-					original_tag  = SWE
+			slot = high_command
+			idea_token = SWE_axel_rappe
+			ledger = army
+				allowed = {
+					original_tag = SWE
 				}
-				available  = {
-					has_completed_focus  = swe_integral_finland 
+				traits = {
+					army_artillery_2
 				}
-				traits  = {
-					Yumiduka_Satsuki_attrition 
-				}
-				ai_will_do  = {
-					factor  = 1.000
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
 				}
 		}
-		name="SWE_sitonai"
+		name=SWE_axel_rappe
 		portraits={
 			army={
-				small="GFX_idea_sitonai"
+				small="GFX_idea_generic_army_europe_1"
 			}
 		}
 	}
-	SWE_beowulf={
+	SWE_oscar_nygren={
+		advisor={
+			slot = army_chief
+			idea_token = SWE_oscar_nygren
+			allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					army_chief_drill_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_oscar_nygren
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_3"
+			}
+		}
+	}
+	SWE_axel_ljungdahl={
 		advisor={
 			slot = high_command
-			idea_token = SWE_beowulf
+			idea_token = SWE_axel_ljungdahl
+			ledger = air
+				allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					air_bomber_interception_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_axel_ljungdahl
+		portraits={
+			army={
+				small="GFX_idea_generic_air_europe_2"
+			}
+		}
+	}
+	SWE_archibald_douglas={
+		advisor={
+			slot = high_command
+			idea_token = SWE_archibald_douglas
+			ledger = army
+				allowed = {
+					original_tag = SWE
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+		name=SWE_archibald_douglas
+		portraits={
+			army={
+				small="GFX_idea_generic_army_europe_2"
+			}
+		}
+	}
+	SWE_ernst_wigforss={
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_ernst_wigforss
 			allowed  = {
 					original_tag  = SWE
 				}
 				traits  = {
-					army_chief_morale_3 
-				}
-				ai_will_do  = {
-					factor  = 1.000
+					captain_of_industry 
 				}
 		}
-		name="SWE_beowulf"
+		name=SWE_ernst_wigforss
 		portraits={
 			army={
-				small="GFX_idea_beowulf"
+				small="GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+	}
+	SWE_thorwald_bergquist={
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_thorwald_bergquist
+			allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					compassionate_gentleman 
+				}
+		}
+		name=SWE_thorwald_bergquist
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_5"
+			}
+		}
+	}
+	SWE_osten_unden={
+		advisor={
+			slot = political_advisor
+			idea_token = SWE_osten_unden
+			allowed  = {
+					original_tag  = SWE
+				}
+				traits  = {
+					silent_workhorse 
+				}
+		}
+		name=SWE_osten_unden
+		portraits={
+			army={
+				small="GFX_idea_generic_political_advisor_europe_2"
 			}
 		}
 	}
