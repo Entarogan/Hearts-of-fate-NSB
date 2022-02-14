@@ -1077,20 +1077,7 @@ characters={
 			id=-1
 		}
 	}
-	SOV_alexander_fyodorovich_kerensky={
-		name=SOV_aleksandr_kerensky
-		portraits={
-			civilian={
-				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
-			ideology=socialism
-			expire="1953.3.1.1"
-			id=-1
-		}
-	}
+
 	SOV_iona_yakir={
 		name=SOV_iona_yakir
 		portraits={
@@ -2464,6 +2451,64 @@ characters={
 			allowed = {
 				original_tag = SOV
 			}
+		}
+	}
+
+
+
+	###
+	SOV_alexander_fyodorovich_kerensky={
+		name=SOV_aleksandr_kerensky
+		portraits={
+			civilian = {
+				large = GFX_portrait_SOV_aleksandr_kerensky
+			}
+			army = {
+				small = "GFX_idea_alexander_kerensky"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALEXANDER_FYODOROVICH_KERENSKY_DESC"
+			ideology=socialism
+			expire="1953.3.1.1"
+			traits={
+				democratic_reformer
+			}
+			id=-1
+		}
+	}
+	SOV_nikolay_ustryalov = {
+		name = SOV_nikolay_ustryalov
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
+				small = "GFX_idea_SOV_nikolay_ustryalov"
+			}
+		}
+		country_leader = {
+			ideology = national_populist
+			expire = "1953.3.1.1"
+			traits={
+				political_chameleon
+			}
+			id = -1
+		}
+	}
+	SOV_aleksandr_kazembek = {
+		name = SOV_aleksandr_kazembek
+		portraits = {
+			civilian = {
+				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
+				small = "GFX_idea_SOV_aleksandr_kazembek"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1953.3.1.1"
+			traits={
+				mladorossi_theorist
+			}
+			id = -1
 		}
 	}
 }
