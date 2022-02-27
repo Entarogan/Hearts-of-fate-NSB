@@ -2481,7 +2481,7 @@ characters={
 		name = SOV_nikolay_ustryalov
 		portraits = {
 			civilian = {
-				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
+				large="gfx/leaders/SOV/Portrait_Soviet_Nikolay_Ustryalov.png"
 				small = "GFX_idea_SOV_nikolay_ustryalov"
 			}
 		}
@@ -2498,7 +2498,7 @@ characters={
 		name = SOV_aleksandr_kazembek
 		portraits = {
 			civilian = {
-				large="gfx/leaders/SOV/Portrait_Soviet_Generic_1.dds"
+				large="gfx/leaders/SOV/Portrait_Soviet_Alexander_Kazembek.png"
 				small = "GFX_idea_SOV_aleksandr_kazembek"
 			}
 		}
