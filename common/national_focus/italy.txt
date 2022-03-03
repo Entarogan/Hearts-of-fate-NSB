@@ -274,7 +274,7 @@ focus_tree = {
         name = ITA_Multipurpose_artillery
         bonus = 0.5
         uses = 1
-        category = anti_air
+        category = cat_anti_air
       }
 
 		}
