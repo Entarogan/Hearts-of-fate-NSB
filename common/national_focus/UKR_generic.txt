@@ -1,0 +1,1162 @@
+shared_focus  = {
+	id = UKR_generic_Zaporizhzhia_industrial_complex
+	icon = GFX_goal_generic_construct_civ_factory
+	cost = 5.00
+	x = 34
+	y = 0
+	available = {
+		200 = { CONTROLLER = { OR = { tag = ROOT is_subject_of = ROOT } } }
+		NOT = { has_war_with = SOV }
+	}
+	completion_reward = {
+		200 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Ukraine_is_not_yet_lost
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 36
+	y = 10
+
+}
+shared_focus  = {
+	id = UKR_generic_unfulfilled_ambition
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 26
+	y = 10
+
+}
+shared_focus  = {
+	id = UKR_generic_legacy_of_muelsyse
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_Zaporizhzhia_industrial_complex
+	}
+	available = {
+		has_idea = UKR_DniproHES_idea
+	}
+	x = -3
+	y = 1
+	relative_position_id = UKR_generic_Zaporizhzhia_industrial_complex
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_DniproHES_idea
+			add_idea = UKR_DniproHES_idea_2
+		}
+		add_tech_bonus = {
+			name = UKR_generic_legacy_of_muelsyse
+			bonus = 1.5
+			ahead_reduction = 0.5
+			uses = 2
+			category = industry
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_DniproHES_expansion
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_legacy_of_muelsyse
+	}
+	available = {
+		has_full_control_of_state = 226
+		has_full_control_of_state = 196
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_legacy_of_muelsyse
+	completion_reward = {
+		226 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		196 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_investment_in_Donbas
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_Zaporizhzhia_industrial_complex
+	}
+	available = {
+		has_full_control_of_state = 227
+		has_full_control_of_state = 228
+	}
+	x = 3
+	y = 1
+	relative_position_id = UKR_generic_Zaporizhzhia_industrial_complex
+	completion_reward = {
+		227 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		228 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_integrate_Crimea
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_investment_in_Donbas
+	}
+	available = {
+		has_full_control_of_state = 137
+	}
+	x = 0
+	y = 2
+	relative_position_id = UKR_generic_investment_in_Donbas
+	completion_reward = {
+		transfer_state = 137
+		add_state_core = 137
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Donbass_line
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_investment_in_Donbas
+	}
+	available = {
+		has_full_control_of_state = 221
+		has_full_control_of_state = 227
+		has_full_control_of_state = 228
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_generic_investment_in_Donbas
+	completion_reward = {
+		227 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9446
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 9461
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9476
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 547
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11513
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 570
+				instant_build = yes
+			}
+		}
+		228 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 6493
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3421
+				instant_build = yes
+			}
+		}
+		221 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11541
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3409
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 9556
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 5
+				province = 418
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 11397
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_expand_Odessa 
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_legacy_of_muelsyse
+	}
+	available = {
+		has_full_control_of_state = 192
+	}
+	x = 2
+	y = 1
+	relative_position_id = UKR_generic_legacy_of_muelsyse
+	completion_reward = {
+		192 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 11670
+				level = 3
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 3738
+				level = 3
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_the_traitor
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Ukraine_is_not_yet_lost
+	}
+	x = 5
+	y = 1
+	relative_position_id = UKR_generic_Ukraine_is_not_yet_lost
+
+}
+shared_focus  = {
+	id = UKR_generic_support_Kyiv_Polytechnic_Institute 
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_Zaporizhzhia_industrial_complex
+	}
+	available = {
+		has_full_control_of_state = 202
+	}
+	x = 7
+	y = 1
+	relative_position_id = UKR_generic_Zaporizhzhia_industrial_complex
+	completion_reward = {
+		202 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_tech_bonus = {
+			name = UKR_generic_support_Kyiv_Polytechnic_Institute
+			bonus = 1.0
+			ahead_reduction = 1.0
+			uses = 2
+			category = engineers_tech
+		}
+		add_tech_bonus = {
+			name = UKR_generic_support_Kyiv_Polytechnic_Institute
+			bonus = 1.0
+			ahead_reduction = 0.5
+			uses = 1
+			category = electronics
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Mariupol_metallurgical_industries
+	icon = GFX_goal_unknown
+	cost = 5.00
+	prerequisite = {
+		focus = UKR_generic_investment_in_Donbas
+	}
+	available = {
+		has_full_control_of_state = 227
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_generic_investment_in_Donbas
+	completion_reward = {
+		add_resource = {
+			type = steel
+			amount = 10
+			state = 227
+		}
+		add_resource = {
+			type = chromium
+			amount = 20
+			state = 227
+		}
+		add_resource = {
+			type = tungsten
+			amount = 15
+			state = 227
+		}
+		227 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				province = 6420
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 3421
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Black_Sea_Fleet
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_Mariupol_metallurgical_industries
+	}
+	prerequisite = {
+		focus = UKR_generic_expand_Odessa 
+	}
+	available = {
+		has_full_control_of_state = 196
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_generic_Mariupol_metallurgical_industries
+	completion_reward = {
+		196 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 721
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Kryvyi_Rih_mine
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_DniproHES_expansion
+	}
+	available = {
+		has_full_control_of_state = 226
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_generic_DniproHES_expansion
+	completion_reward = {
+		add_resource = {
+			type = steel
+			amount = 35
+			state = 226
+		}
+		add_tech_bonus = {
+			name = UKR_generic_Kryvyi_Rih_mine
+			bonus = 1.5
+			ahead_reduction = 0.5
+			uses = 1
+			category = construction_tech
+		}
+		add_tech_bonus = {
+			name = UKR_generic_Kryvyi_Rih_mine
+			bonus = 1.5
+			ahead_reduction = 0.5
+			uses = 1
+			category = excavation_tech
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Dnieper_Aluminium_Plant
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_DniproHES_expansion
+	}
+	available = {
+		has_full_control_of_state = 200
+		has_full_control_of_state = 226
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_generic_DniproHES_expansion
+	completion_reward = {
+		200 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_resource = {
+			type = aluminium
+			amount = 20
+			state = 200
+		}
+		226 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		add_resource = {
+			type = aluminium
+			amount = 10
+			state = 226
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Kharkiv_aviation_plant
+	icon = GFX_focus_SOV_women_in_aviation
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_support_Kyiv_Polytechnic_Institute 
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_generic_support_Kyiv_Polytechnic_Institute 
+	completion_reward = {
+		add_tech_bonus = {
+			name = UKR_generic_Kharkiv_aviation_plant
+			bonus = 1.0
+			ahead_reduction = 1.0
+			uses = 1
+			category = air_equipment
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Antonov_STC
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_support_Kyiv_Polytechnic_Institute 
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_generic_support_Kyiv_Polytechnic_Institute 
+	completion_reward = {
+		add_tech_bonus = {
+			name = UKR_generic_Antonov_STC
+			bonus = 1.0
+			ahead_reduction = 1.0
+			uses = 2
+			category = air_equipment
+		}
+		add_tech_bonus = {
+			name = UKR_generic_Antonov_STC
+			bonus = 1.5
+			ahead_reduction = 0.5
+			uses = 2
+			category = armor
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_air_war_game
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Kharkiv_aviation_plant
+	}
+	prerequisite = {
+		focus = UKR_generic_Donbass_line
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_Kharkiv_aviation_plant
+	completion_reward = {
+		air_experience = 30
+		add_doctrine_cost_reduction = {
+			name = UKR_generic_air_war_game
+			cost_reduction = 0.75
+			uses = 2
+			category = air_doctrine
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_expand_Sevastopol_stronghold
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_integrate_Crimea
+	}
+	available = {
+		has_full_control_of_state = 137
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_integrate_Crimea
+	completion_reward = {
+		137 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = bunker
+				province = 3686
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9680
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 6704
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 9680
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 3686
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 6704
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				province = 9680
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_Mykolaiv_shipbuilding
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Black_Sea_Fleet
+	}
+	available = {
+		has_full_control_of_state = 197
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_Black_Sea_Fleet
+	completion_reward = {
+		197 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 11683
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				province = 11546
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_repair_lwow_industrial
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Zaporizhzhia_industrial_complex
+	}
+	available = {
+		has_full_control_of_state = 91
+		has_full_control_of_state = 89
+	}
+	x = -6
+	y = 1
+	relative_position_id = UKR_generic_Zaporizhzhia_industrial_complex
+	completion_reward = {
+		91 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		89 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_develop_Carpathian_Ruthenia_and_Bukovyna
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_repair_lwow_industrial
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_repair_lwow_industrial
+	available = {
+		has_full_control_of_state = 73
+		has_full_control_of_state = 80
+	}
+	completion_reward = {
+		73 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		80 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_defence_at_West
+	icon = GFX_goal_unknown
+	cost = 7.00
+	prerequisite = {
+		focus = UKR_generic_Zaporizhzhia_industrial_complex
+	}
+	available = {
+		has_full_control_of_state = 199
+		has_full_control_of_state = 201
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_Zaporizhzhia_industrial_complex
+	completion_reward = {
+		201 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = bunker
+				province = 9493
+				level = 4
+				instant_build =yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3470
+				level = 4
+				instant_build =yes
+			}
+		}
+		199 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = bunker
+				province = 3511
+				level = 4
+				instant_build =yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6509
+				level = 4
+				instant_build =yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 462
+				level = 4
+				instant_build =yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3430
+				level = 4
+				instant_build =yes
+			}
+		}
+	}
+
+}
+shared_focus  = {
+	id = UKR_generic_enemy_of_enemy
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Ukraine_is_not_yet_lost
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_Ukraine_is_not_yet_lost
+
+}
+shared_focus  = {
+	id = UKR_seek_reconcile_with_Poland
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Ukraine_is_not_yet_lost
+	}
+	x = -5
+	y = 1
+	relative_position_id = UKR_generic_Ukraine_is_not_yet_lost
+
+}
+shared_focus  = {
+	id = UKR_generic_woo_romania
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_seek_reconcile_with_Poland
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_seek_reconcile_with_Poland
+
+}
+shared_focus  = {
+	id = UKR_generic_contact_baltic
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_seek_reconcile_with_Poland
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_seek_reconcile_with_Poland
+
+}
+shared_focus  = {
+	id = UKR_generic_tight_alliance
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_contact_baltic
+	}
+	prerequisite = {
+		focus = UKR_generic_woo_romania
+	}
+	x = 0
+	y = 2
+	relative_position_id = UKR_seek_reconcile_with_Poland
+
+}
+shared_focus  = {
+	id = UKR_generic_German_military_support
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_enemy_of_enemy
+	}
+	x = 2
+	y = 1
+	relative_position_id = UKR_generic_enemy_of_enemy
+
+}
+shared_focus  = {
+	id = UKR_generic_Alfred_Rosenberg
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_enemy_of_enemy
+	}
+	prerequisite = {
+		focus = UKR_generic_enemy_of_enemy
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_generic_enemy_of_enemy
+
+}
+shared_focus  = {
+	id = UKR_generic_Continent_Economic_Sphere
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_enemy_of_enemy
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_enemy_of_enemy
+
+}
+shared_focus  = {
+	id = UKR_generic_liberator_of_nations
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Alfred_Rosenberg
+		focus = UKR_generic_tight_alliance
+	}
+	x = -1
+	y = 2
+	relative_position_id = UKR_generic_Alfred_Rosenberg
+
+}
+shared_focus  = {
+	id = UKR_generic_new_Ukraine_nationalism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_Continent_Economic_Sphere
+	}
+	prerequisite = {
+		focus = UKR_generic_German_military_support
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_generic_Continent_Economic_Sphere
+
+}
+shared_focus  = {
+	id = UKR_generic_attract_American_investment
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_the_traitor
+	}
+	x = 3
+	y = 1
+	relative_position_id = UKR_the_traitor
+
+}
+shared_focus  = {
+	id = UKR_generic_British_aircraft_cooperation
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_the_traitor
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_the_traitor
+
+}
+shared_focus  = {
+	id = UKR_generic_French_army_tech
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_the_traitor
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_the_traitor
+
+}
+shared_focus  = {
+	id = UKR_generic_allied_joint_staff
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_British_aircraft_cooperation
+		focus = UKR_generic_French_army_tech
+	}
+	prerequisite = {
+		focus = UKR_the_traitor
+	}
+	x = 0
+	y = 2
+	relative_position_id = UKR_the_traitor
+
+}
+shared_focus  = {
+	id = UKR_generic_prepare_for_next_war
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_allied_joint_staff
+		focus = UKR_generic_new_Ukraine_nationalism
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_generic_allied_joint_staff
+
+}
+shared_focus  = {
+	id = UKR_generic_recapture_western_ukraine
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_unfulfilled_ambition
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_generic_unfulfilled_ambition
+
+}
+shared_focus  = {
+	id = UKR_generic_demand_Bugeac_and_Bukovyna
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_unfulfilled_ambition
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_generic_unfulfilled_ambition
+
+}
+shared_focus  = {
+	id = UKR_generic_demand_Carpathian_Ruthenia
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_demand_Bugeac_and_Bukovyna
+		focus = UKR_generic_recapture_western_ukraine
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_generic_demand_Bugeac_and_Bukovyna
+
+}
+shared_focus  = {
+	id = UKR_generic_seize_greater_Ukraine
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_generic_unfulfilled_ambition
+	}
+	x = 2
+	y = 1
+	relative_position_id = UKR_generic_unfulfilled_ambition
+
+}
