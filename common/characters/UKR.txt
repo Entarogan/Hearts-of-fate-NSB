@@ -67,6 +67,27 @@ characters={
 			id=-1
 		}
 	}
+
+	UKR_Stepan_Bandera={
+		name="Stepan Bandera"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_Stepan_Bandera.dds"
+			}
+			army = {
+				small="GFX_idea_advisor_unknown"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected urban_assault_specialist commando }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+
 	UKR_pavlo_skoropadskyi={
 		name="Pavlo Skoropadskyi"
 		portraits={
@@ -186,25 +207,42 @@ characters={
 			legacy_id=-1
 		}
 	}
-	UKR_ivan_poltavetsostrianytsia={
-		name="Ivan Poltavets-Ostrianytsia"
+	UKR_Nestor_Makhno={
+		name="Nestor Makhno"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_UKR_Ivan_Poltavets_Ostrianytsia.tga"
+				large="gfx/leaders/UKR/Portrait_Nestor_Makhno.tga"
 			}
 		}
 		corps_commander={
-			skill=1
-			attack_skill=1
-			defense_skill=1
-			planning_skill=1
-			logistics_skill=1
-			legacy_id=-1
+			traits = {
+				war_hero
+				media_personality
+				winter_specialist
+				cavalry_leader
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
 		}
 	}
+	UKR_Makhnovshchina={
+		name="Ukrainian Soviet"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Nestor_Makhno.tga"
+			}
+		}
+	}
+
 
 
 	#####
@@ -213,6 +251,20 @@ characters={
 		portraits={
 			civilian = {
 				large = "gfx/leaders/UKR/Portrait_Leonid_Brezhnev.dds"
+			}
+		}
+	}
+
+
+	#####
+	UKR_Talulah_Artorius={
+		name = "Talulah Artorius"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Talulah_Artorius.dds"
 			}
 		}
 	}

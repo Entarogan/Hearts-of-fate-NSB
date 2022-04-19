@@ -1,658 +1,677 @@
-focus_tree = {
-	id = UKR_Anarchist
-	country = {
-		factor = 1
-	}
-	default = yes
-	focus = {
-		id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
-		icon = GFX_goal_unknown
-		cost = 10.00
-		x = 10
-		y = 0
+shared_focus = {
+	id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 10
+	y = 0
 
-	}
-	focus = {
-		id = UKR_Anarchist_New_Batko
-		icon = GFX_goal_unknown
-		cost = 10.00
-		x = 10
-		y = 4
+}
+shared_focus = {
+	id = UKR_Anarchist_New_Batko
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 10
+	y = 4
 
-	}
-	focus = {
-		id = UKR_Anarchist_the_great_famility
-		icon = GFX_goal_unknown
-		cost = 10.00
-		x = 23
-		y = 5
+}
+shared_focus = {
+	id = UKR_Anarchist_the_great_family
+	icon = GFX_goal_unknown
+	cost = 10.00
+	x = 23
+	y = 5
 
+}
+shared_focus = {
+	id = UKR_Anarchist_collect_weapons
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	}
-	focus = {
-		id = UKR_Anarchist_collect_weapons
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 
+}
+shared_focus = {
+	id = UKR_Anarchist_open_depot
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	}
-	focus = {
-		id = UKR_Anarchist_open_depot
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
-		}
-		x = 2
-		y = 1
-		relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	x = 2
+	y = 1
+	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 
+}
+shared_focus = {
+	id = UKR_Anarchist_develop_guerrilla_tactics
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_great_family
 	}
-	focus = {
-		id = UKR_Anarchist_develop_guerrilla_tactics
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_great_famility
-		}
-		x = 3
-		y = 1
-		relative_position_id = UKR_Anarchist_the_great_famility
+	x = 3
+	y = 1
+	relative_position_id = UKR_Anarchist_the_great_family
 
+}
+shared_focus = {
+	id = UKR_Anarchist_rebuild_the_black_army
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	}
-	focus = {
-		id = UKR_Anarchist_rebuild_the_black_army
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 
+}
+shared_focus = {
+	id = UKR_Anarchist_great_project
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_collect_weapons
 	}
-	focus = {
-		id = UKR_Anarchist_great_project
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_collect_weapons
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_rebuild_the_black_army
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_open_depot
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_collect_weapons
+	prerequisite = {
+		focus = UKR_Anarchist_rebuild_the_black_army
+	}
+	prerequisite = {
+		focus = UKR_Anarchist_open_depot
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_collect_weapons
 
+}
+shared_focus = {
+	id = UKR_Anarchist_Strengthen_displinary
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_New_Batko
 	}
-	focus = {
-		id = UKR_Anarchist_Strengthen_displinary
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_New_Batko
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_New_Batko
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_New_Batko
 
+}
+shared_focus = {
+	id = UKR_Anarchist_protect_peasants
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_New_Batko
 	}
-	focus = {
-		id = UKR_Anarchist_protect_peasants
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_New_Batko
-		}
-		x = 2
-		y = 1
-		relative_position_id = UKR_Anarchist_New_Batko
+	x = 2
+	y = 1
+	relative_position_id = UKR_Anarchist_New_Batko
 
+}
+shared_focus = {
+	id = UKR_Anarchist_maximal_recruitment
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_New_Batko
 	}
-	focus = {
-		id = UKR_Anarchist_maximal_recruitment
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_New_Batko
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_New_Batko
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_New_Batko
 
+}
+shared_focus = {
+	id = UKR_Anarchist_the_Reunion
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_Strengthen_displinary
 	}
-	focus = {
-		id = UKR_Anarchist_the_Reunion
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_Strengthen_displinary
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_maximal_recruitment
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_protect_peasants
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_Strengthen_displinary
+	prerequisite = {
+		focus = UKR_Anarchist_maximal_recruitment
+	}
+	prerequisite = {
+		focus = UKR_Anarchist_protect_peasants
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_Strengthen_displinary
 
+}
+shared_focus = {
+	id = UKR_Anarchist_defend_NKVD
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_Reunion
 	}
-	focus = {
-		id = UKR_Anarchist_defend_NKVD
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_Reunion
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_the_Reunion
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_the_Reunion
 
+}
+shared_focus = {
+	id = UKR_Anarchist_fight_against_petilura
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_Reunion
 	}
-	focus = {
-		id = UKR_Anarchist_fight_against_petilura
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_Reunion
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_the_Reunion
+	completion_reward = {
+		hidden_effect = {
+			country_event = { id = ukr_reunion.6 days = 3 }
 		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_the_Reunion
+	}
 
+}
+shared_focus = {
+	id = UKR_Anarchist_pludge_Soviet_collector
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_Reunion
 	}
-	focus = {
-		id = UKR_Anarchist_pludge_Soviet_collector
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_Reunion
+	x = 2
+	y = 1
+	relative_position_id = UKR_Anarchist_the_Reunion
+	completion_reward = {
+		hidden_effect = {
+			country_event = { id = ukr_reunion.7 days = 3 }
 		}
-		x = 2
-		y = 1
-		relative_position_id = UKR_Anarchist_the_Reunion
+	}
 
+}
+shared_focus = {
+	id = UKR_Anarchist_all_power_to_soviet
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_defend_NKVD
 	}
-	focus = {
-		id = UKR_Anarchist_all_power_to_soviet
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_defend_NKVD
+	prerequisite = {
+		focus = UKR_Anarchist_fight_against_petilura
+	}
+	prerequisite = {
+		focus = UKR_Anarchist_pludge_Soviet_collector
+	}
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_defend_NKVD
+	completion_reward = {
+		if = {
+			limit = { 
+				check_variable = { talula_san > 0.20 }
+			}
+			hidden_effect = {
+				set_country_flag = UKR_anarchist_normal_flag
+			}
 		}
-		prerequisite = {
-			focus = UKR_Anarchist_fight_against_petilura
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_pludge_Soviet_collector
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_defend_NKVD
+	}
 
+}
+shared_focus = {
+	id = UKR_Anarchist_keep_sanity
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_all_power_to_soviet
 	}
-	focus = {
-		id = UKR_Anarchist_keep_sanity
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_all_power_to_soviet
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_go_to_the_extremity
-		}
-		x = -4
-		y = 1
-		relative_position_id = UKR_Anarchist_all_power_to_soviet
+	mutually_exclusive = {
+		focus = UKR_Anarchist_go_to_the_extremity
+	}
+	available = {
+		has_country_flag = UKR_anarchist_normal_flag
+	}
+	x = -4
+	y = 1
+	relative_position_id = UKR_Anarchist_all_power_to_soviet
 
+}
+shared_focus = {
+	id = UKR_Anarchist_go_to_the_extremity
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_all_power_to_soviet
 	}
-	focus = {
-		id = UKR_Anarchist_go_to_the_extremity
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_all_power_to_soviet
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_keep_sanity
-		}
-		x = 4
-		y = 1
-		relative_position_id = UKR_Anarchist_all_power_to_soviet
+	mutually_exclusive = {
+		focus = UKR_Anarchist_keep_sanity
+	}
+	x = 4
+	y = 1
+	relative_position_id = UKR_Anarchist_all_power_to_soviet
 
+}
+shared_focus = {
+	id = UKR_Anarchist_military_democracy
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_great_family
 	}
-	focus = {
-		id = UKR_Anarchist_military_democracy
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_great_famility
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_the_great_famility
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_the_great_family
 
+}
+shared_focus = {
+	id = UKR_Anarchist_remove_antisemitism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_the_great_family
 	}
-	focus = {
-		id = UKR_Anarchist_remove_antisemitism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_the_great_famility
-		}
-		x = -3
-		y = 1
-		relative_position_id = UKR_Anarchist_the_great_famility
+	x = -3
+	y = 1
+	relative_position_id = UKR_Anarchist_the_great_family
+	completion_reward = {
+		country_event = { id = ukr_reunion.13  days = 70 } 
+	}
 
+}
+shared_focus = {
+	id = UKR_Anarchist_redistribute_land
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_keep_sanity
+		focus = UKR_Anarchist_go_to_the_extremity
 	}
-	focus = {
-		id = UKR_Anarchist_redistribute_land
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_keep_sanity
-			focus = UKR_Anarchist_go_to_the_extremity
-		}
-		x = 0
-		y = 2
-		relative_position_id = UKR_Anarchist_all_power_to_soviet
+	x = 0
+	y = 2
+	relative_position_id = UKR_Anarchist_all_power_to_soviet
 
+}
+shared_focus = {
+	id = UKR_Anarchist_tolerate_factionalism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_keep_sanity
 	}
-	focus = {
-		id = UKR_Anarchist_tolerate_factionalism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_keep_sanity
-		}
-		x = -3
-		y = 1
-		relative_position_id = UKR_Anarchist_keep_sanity
+	x = -3
+	y = 1
+	relative_position_id = UKR_Anarchist_keep_sanity
 
+}
+shared_focus = {
+	id = UKR_Anarchist_elect_regional_representative_soviet
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_keep_sanity
 	}
-	focus = {
-		id = UKR_Anarchist_elect_regional_representative_soviet
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_keep_sanity
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_keep_sanity
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_keep_sanity
 
+}
+shared_focus = {
+	id = UKR_Anarchist_integrate_farmers_and_soldiers
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_redistribute_land
 	}
-	focus = {
-		id = UKR_Anarchist_integrate_farmers_and_soldiers
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_redistribute_land
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_maintain_ideological_unity
-		}
-		x = 1
-		y = 1
-		relative_position_id = UKR_Anarchist_redistribute_land
+	prerequisite = {
+		focus = UKR_Anarchist_maintain_ideological_unity
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_Anarchist_redistribute_land
 
+}
+shared_focus = {
+	id = UKR_Anarchist_agricutural_cooperatives
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_redistribute_land
 	}
-	focus = {
-		id = UKR_Anarchist_agricutural_cooperatives
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_redistribute_land
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_keep_sanity
-		}
-		x = -1
-		y = 1
-		relative_position_id = UKR_Anarchist_redistribute_land
+	prerequisite = {
+		focus = UKR_Anarchist_keep_sanity
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_Anarchist_redistribute_land
 
+}
+shared_focus = {
+	id = UKR_Anarchist_anarchist_transport
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_elect_regional_representative_soviet
 	}
-	focus = {
-		id = UKR_Anarchist_anarchist_teleport
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_elect_regional_representative_soviet
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_elect_regional_representative_soviet
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_elect_regional_representative_soviet
 
+}
+shared_focus = {
+	id = UKR_Anarchist_direct_democracy
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_elect_regional_representative_soviet
 	}
-	focus = {
-		id = UKR_Anarchist_direct_democracy
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_elect_regional_representative_soviet
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_tolerate_factionalism
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_regional_autonomy
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_anarchist_teleport
+	prerequisite = {
+		focus = UKR_Anarchist_tolerate_factionalism
+	}
+	mutually_exclusive = {
+		focus = UKR_Anarchist_regional_autonomy
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_anarchist_transport
 
+}
+shared_focus = {
+	id = UKR_Anarchist_regional_autonomy
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_agricutural_cooperatives
 	}
-	focus = {
-		id = UKR_Anarchist_regional_autonomy
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_agricutural_cooperatives
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_elect_regional_representative_soviet
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_direct_democracy
-		}
-		x = 2
-		y = 1
-		relative_position_id = UKR_Anarchist_anarchist_teleport
+	prerequisite = {
+		focus = UKR_Anarchist_elect_regional_representative_soviet
+	}
+	mutually_exclusive = {
+		focus = UKR_Anarchist_direct_democracy
+	}
+	x = 2
+	y = 1
+	relative_position_id = UKR_Anarchist_anarchist_transport
 
+}
+shared_focus = {
+	id = UKR_Anarchist_radical_republicianism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_direct_democracy
 	}
-	focus = {
-		id = UKR_Anarchist_radical_republicianism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_direct_democracy
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_direct_democracy
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_direct_democracy
 
+}
+shared_focus = {
+	id = UKR_Anarchist_market_socialism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_regional_autonomy
 	}
-	focus = {
-		id = UKR_Anarchist_market_socialism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_regional_autonomy
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_regional_autonomy
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_regional_autonomy
 
+}
+shared_focus = {
+	id = UKR_Anarchist_trade_union_economics
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_regional_autonomy
+		focus = UKR_Anarchist_direct_democracy
 	}
-	focus = {
-		id = UKR_Anarchist_trade_union_economics
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_regional_autonomy
-			focus = UKR_Anarchist_direct_democracy
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_regional_autonomy
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_regional_autonomy
 
+}
+shared_focus = {
+	id = UKR_Anarchist_export_revolution
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_integrate_farmers_and_soldiers
+		focus = UKR_Anarchist_agricutural_cooperatives
 	}
-	focus = {
-		id = UKR_Anarchist_export_revolution
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_integrate_farmers_and_soldiers
-			focus = UKR_Anarchist_agricutural_cooperatives
-		}
-		x = 0
-		y = 2
-		relative_position_id = UKR_Anarchist_redistribute_land
+	x = 0
+	y = 2
+	relative_position_id = UKR_Anarchist_redistribute_land
 
+}
+shared_focus = {
+	id = UKR_Anarchist_maintain_ideological_unity
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_go_to_the_extremity
 	}
-	focus = {
-		id = UKR_Anarchist_maintain_ideological_unity
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_go_to_the_extremity
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_go_to_the_extremity
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_go_to_the_extremity
 
+}
+shared_focus = {
+	id = UKR_Anarchist_develop_military_railway
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_maintain_ideological_unity
 	}
-	focus = {
-		id = UKR_Anarchist_develop_military_railway
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_maintain_ideological_unity
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_maintain_ideological_unity
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_maintain_ideological_unity
 
+}
+shared_focus = {
+	id = UKR_Anarchist_pistol_and_speaker
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_maintain_ideological_unity
 	}
-	focus = {
-		id = UKR_Anarchist_pistol_and_speaker
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_maintain_ideological_unity
-		}
-		x = 4
-		y = 1
-		relative_position_id = UKR_Anarchist_maintain_ideological_unity
+	x = 4
+	y = 1
+	relative_position_id = UKR_Anarchist_maintain_ideological_unity
 
+}
+shared_focus = {
+	id = UKR_Anarchist_discipline_in_union
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_develop_military_railway
 	}
-	focus = {
-		id = UKR_Anarchist_discipline_in_union
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_develop_military_railway
-		}
-		x = -1
-		y = 1
-		relative_position_id = UKR_Anarchist_develop_military_railway
+	x = -1
+	y = 1
+	relative_position_id = UKR_Anarchist_develop_military_railway
 
+}
+shared_focus = {
+	id = UKR_Anarchist_remove_Buldrokkastee
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_pistol_and_speaker
 	}
-	focus = {
-		id = UKR_Anarchist_remove_Buldrokkastee
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_pistol_and_speaker
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_pistol_and_speaker
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_pistol_and_speaker
 
+}
+shared_focus = {
+	id = UKR_Anarchist_work_for_our_future
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_develop_military_railway
 	}
-	focus = {
-		id = UKR_Anarchist_work_for_our_future
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_develop_military_railway
-		}
-		x = 1
-		y = 1
-		relative_position_id = UKR_Anarchist_develop_military_railway
+	x = 1
+	y = 1
+	relative_position_id = UKR_Anarchist_develop_military_railway
 
+}
+shared_focus = {
+	id = UKR_Anarchist_War_Sorelism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_discipline_in_union
 	}
-	focus = {
-		id = UKR_Anarchist_War_Sorelism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_discipline_in_union
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_work_for_our_future
-		}
-		x = 0
-		y = 2
-		relative_position_id = UKR_Anarchist_develop_military_railway
+	prerequisite = {
+		focus = UKR_Anarchist_work_for_our_future
+	}
+	x = 0
+	y = 2
+	relative_position_id = UKR_Anarchist_develop_military_railway
 
+}
+shared_focus = {
+	id = UKR_Anarchist_loyal_to_our_cause
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_trade_union_economics
+		focus = UKR_Anarchist_market_socialism
+		focus = UKR_Anarchist_radical_republicianism
 	}
-	focus = {
-		id = UKR_Anarchist_loyal_to_our_cause
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_trade_union_economics
-			focus = UKR_Anarchist_market_socialism
-			focus = UKR_Anarchist_radical_republicianism
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_trade_union_economics
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_trade_union_economics
 
+}
+shared_focus = {
+	id = UKR_Anarchist_Operation_Chernobog
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_War_Sorelism
 	}
-	focus = {
-		id = UKR_Anarchist_Operation_Chernobog
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_War_Sorelism
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_integrate_farmers_and_soldiers
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_War_Sorelism
+	prerequisite = {
+		focus = UKR_Anarchist_integrate_farmers_and_soldiers
+	}
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_War_Sorelism
 
+}
+shared_focus = {
+	id = UKR_Anarchist_cult_of_personality
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_remove_Buldrokkastee
 	}
-	focus = {
-		id = UKR_Anarchist_cult_of_personality
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_remove_Buldrokkastee
-		}
-		prerequisite = {
-			focus = UKR_Anarchist_War_Sorelism
-		}
-		x = 0
-		y = 2
-		relative_position_id = UKR_Anarchist_remove_Buldrokkastee
+	prerequisite = {
+		focus = UKR_Anarchist_War_Sorelism
+	}
+	x = 0
+	y = 2
+	relative_position_id = UKR_Anarchist_remove_Buldrokkastee
 
+}
+shared_focus = {
+	id = UKR_Anarchist_ensure_ideological_integrity
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_military_democracy
 	}
-	focus = {
-		id = UKR_Anarchist_ensure_ideological_integrity
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_military_democracy
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_fair_nationalism
-		}
-		x = -1
-		y = 1
-		relative_position_id = UKR_Anarchist_military_democracy
+	mutually_exclusive = {
+		focus = UKR_Anarchist_fair_nationalism
+	}
+	x = -1
+	y = 1
+	relative_position_id = UKR_Anarchist_military_democracy
 
+}
+shared_focus = {
+	id = UKR_Anarchist_fair_nationalism
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_military_democracy
 	}
-	focus = {
-		id = UKR_Anarchist_fair_nationalism
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_military_democracy
-		}
-		mutually_exclusive = {
-			focus = UKR_Anarchist_ensure_ideological_integrity
-		}
-		x = 1
-		y = 1
-		relative_position_id = UKR_Anarchist_military_democracy
+	mutually_exclusive = {
+		focus = UKR_Anarchist_ensure_ideological_integrity
+	}
+	x = 1
+	y = 1
+	relative_position_id = UKR_Anarchist_military_democracy
 
+}
+shared_focus = {
+	id = UKR_Anarchist_Jewish_combat_regiments
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_remove_antisemitism
 	}
-	focus = {
-		id = UKR_Anarchist_Jewish_combat_regiments
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_remove_antisemitism
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_remove_antisemitism
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_remove_antisemitism
 
+}
+shared_focus = {
+	id = UKR_Anarchist_Yeti_squadron
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_develop_guerrilla_tactics
 	}
-	focus = {
-		id = UKR_Anarchist_Yeti_squadron
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_develop_guerrilla_tactics
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_develop_guerrilla_tactics
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_develop_guerrilla_tactics
 
+}
+shared_focus = {
+	id = UKR_Anarchist_bilingual_school
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_ensure_ideological_integrity
+		focus = UKR_Anarchist_fair_nationalism
 	}
-	focus = {
-		id = UKR_Anarchist_bilingual_school
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_ensure_ideological_integrity
-			focus = UKR_Anarchist_fair_nationalism
-		}
-		x = 0
-		y = 2
-		relative_position_id = UKR_Anarchist_military_democracy
+	x = 0
+	y = 2
+	relative_position_id = UKR_Anarchist_military_democracy
 
+}
+shared_focus = {
+	id = UKR_Reunion_Headquarters
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_bilingual_school
 	}
-	focus = {
-		id = UKR_Reunion_Headquarters
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_bilingual_school
-		}
-		x = 0
-		y = 1
-		relative_position_id = UKR_Anarchist_bilingual_school
+	x = 0
+	y = 1
+	relative_position_id = UKR_Anarchist_bilingual_school
 
+}
+shared_focus = {
+	id = UKR_Anarchist_Integrate_Kuban
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_bilingual_school
 	}
-	focus = {
-		id = UKR_Anarchist_Integrate_Kuban
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_bilingual_school
-		}
-		x = 2
-		y = 1
-		relative_position_id = UKR_Anarchist_bilingual_school
+	x = 2
+	y = 1
+	relative_position_id = UKR_Anarchist_bilingual_school
 
+}
+shared_focus = {
+	id = UKR_Anarchist_prepare_fore_next_war
+	icon = GFX_goal_unknown
+	cost = 10.00
+	prerequisite = {
+		focus = UKR_Anarchist_bilingual_school
 	}
-	focus = {
-		id = UKR_Anarchist_prepare_fore_next_war
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = UKR_Anarchist_bilingual_school
-		}
-		x = -2
-		y = 1
-		relative_position_id = UKR_Anarchist_bilingual_school
+	x = -2
+	y = 1
+	relative_position_id = UKR_Anarchist_bilingual_school
 
-	}
 }
