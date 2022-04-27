@@ -112,7 +112,7 @@ ENG_biesongle_ai_Strategy = {
       }
 
       date < 1942.1.1
-      has_army_manpower = { size < 999999 }
+      has_army_manpower = { size < 1699999 }
 
 		OR = {
 			has_war_with = GER 

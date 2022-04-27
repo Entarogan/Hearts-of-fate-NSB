@@ -33,3 +33,24 @@ UKR_Legacy_of_the_Great_Famine = {
 		remove_ideas = { UKR_Legacy_of_the_Great_Famine_idea_5 }
 	}
 }
+
+UKR_Splitted_Country_Level_down = {
+	if = {
+		limit = { has_idea = UKR_splitted_country }
+		swap_ideas = {
+			remove_idea = UKR_splitted_country
+			add_idea = UKR_splitted_country_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = UKR_splitted_country_1 }
+		swap_ideas = {
+			remove_idea = UKR_splitted_country_1
+			add_idea = UKR_splitted_country_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = UKR_splitted_country_2 }
+		remove_ideas = UKR_splitted_country_2
+	}
+}

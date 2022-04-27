@@ -1,4 +1,8 @@
-﻿add_namespace = ukr
+﻿####
+## Made by Yezhov/Entarogan
+####
+
+add_namespace = ukr
 
 # Khrushchev_goes_to_Moscow
 country_event = {
@@ -101,6 +105,10 @@ country_event = {
 			popularity = -0.50 
 		}
 
+		add_ideas = {
+			UKR_splitted_country
+		}
+
 		drop_cosmetic_tag = yes
 
 		if = {
@@ -154,6 +162,7 @@ country_event = {
 			load_focus_tree = { 
 					tree = ukr_focus_2
 			}
+			country_event = { id = ukr.10  days = 30 }
 		}
 
 	}
@@ -203,6 +212,11 @@ country_event = {
 			}
 		}
 
+		if = {
+			limit = { has_country_flag = UKR_konovalets_alive }
+			country_event = { id = ukr.12 days = 35 } 
+		}
+
 	}
 }
 
@@ -247,6 +261,8 @@ country_event = {
 		date > 1937.2.20
 		UKR = { is_subject = no }
 		has_war = yes
+		#### Banned due to the new version
+		always = no
 	}
 	
 	mean_time_to_happen = {
@@ -532,7 +548,7 @@ country_event = {
 
 }
 
-country_event = {
+country_event = {  ### 
 	id = ukr.9
 	title = ukr.9.t
 	desc = ukr.9.d
@@ -580,8 +596,403 @@ country_event = {
 		ai_chance = {
 			base = 0
 		}
+	}
+}
 
 
+country_event = {   #### Ukrainian Rebellion introduction
+	id = ukr.10
+	title = ukr.10.t
+	desc = ukr.10.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukr.10.a
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 20
+
+		country_event = { id = ukr.11  days = 35 }
 	}
 
+}
+
+
+country_event = {   #### Assassinate Konovalets
+	id = ukr.11
+	title = ukr.11.t
+	desc = ukr.11.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### Konovalets bombed
+		name = ukr.11.a
+
+		ai_chance = {
+			base = 40
+		}
+		remove_country_leader_role = {
+			character = UKR_yevhen_konovalets
+			ideology = fascism_ideology
+		}
+
+		add_country_leader_role = {
+			Character = UKR_Stepan_Bandera
+			Promote_leader = yes
+			Country_leader = {
+			ideology = nazism
+				traits = {
+					
+				}
+			}
+		}
+
+		retire_character = UKR_yevhen_konovalets
+
+		country_event = { id = ukr.16 days = 10 }
+	}
+
+	option = {  ### Konovalets alive
+		name = ukr.11.b
+
+		ai_chance = {
+			base = 60
+		}
+
+		add_political_power = -25
+		hidden_effect = {
+			set_country_flag = UKR_konovalets_alive
+		}
+	}
+	
+}
+
+country_event = {  ### After War 
+	id = ukr.12
+	title = ukr.12.t
+	desc = ukr.12.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### Maintain the stratocracy
+		name = ukr.12.a
+
+		ai_chance = {
+			base = 40
+		}
+		
+		country_event = { id = ukr.15 days = 50 }
+		######
+	}
+
+	option = {  ### Open an Election 
+		name = ukr.12.b
+
+		ai_chance = {
+			base = 60
+		}
+
+		country_event = { id = ukr.13 days = 60 }
+	}
+}
+
+
+country_event = {  ### After War Election 
+	id = ukr.13
+	title = ukr.13.t
+	desc = ukr.13.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### SDPists
+		name = ukr.13.a
+
+		ai_chance = {
+			base = 40
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+		}
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.25
+		}
+	}
+
+	option = {  ### OUN
+		name = ukr.13.b
+		ai_chance = {
+			base = 40
+		}
+
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.25
+		}
+	}
+}
+
+country_event = {  ### 1941 election
+	id = ukr.14
+	title = ukr.14.t
+	desc = ukr.14.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	fire_only_once = yes
+	trigger = {
+		tag = UKR
+		is_subject = no
+		has_government = democratic
+		exists = yes
+		date > 1941.5.1
+	}
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {  ### SDPists
+		name = ukr.14.a
+
+		ai_chance = {
+			base = 40
+		}
+
+		add_stability = 0.05
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+	}
+
+	option = {  ### SN
+		name = ukr.14.b
+		ai_chance = {
+			base = 60
+		}
+
+		#### 换泽连斯基爷爷
+	}
+
+	#option = {  ### Reunion
+	#	name = ukr.14.c
+	#	ai_chance = {
+	#		base = 40
+	#	}
+	#
+	#		#### Reunion
+	#}
+}
+
+
+country_event = {  ### Directorate
+	id = ukr.15
+	title = ukr.15.t
+	desc = ukr.15.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {  ### 
+		name = ukr.15.a
+
+		ai_chance = {
+			base = 40
+		}
+
+		if = {
+			limit = { NOt = { has_government = neutrality } }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+	}
+}
+
+
+country_event = {  ### Intensive...
+	id = ukr.16
+	title = ukr.16.t
+	desc = ukr.16.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### 
+		name = ukr.16.a
+
+		add_stability = -0.15
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.15
+		}
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.15
+		}
+
+		set_party_name = {
+			### TODO: Localisation
+			ideology = communism
+			name = UKR_black_army
+			long_name = UKR_black_army_long
+		}
+
+		country_event = { id = ukr.17  days = 25 }
+	}
+}
+
+
+country_event = {  ### Bandera's coup against Petlura
+	id = ukr.17
+	title = ukr.17.t
+	desc = ukr.17.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### Bandera has succeeded
+		name = ukr.17.a
+
+		add_stability = -0.10
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		retire_character = UKR_symon_petlura
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.20
+		}
+	}
+
+	option = {  ### Bandera's coup failed,  Melnyk turned to cooperation
+		name = ukr.17.b
+		add_stability = 0.10
+		if = {
+			limit = { NOT = { has_government = neutrality } }
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.15
+		}
+
+		remove_country_leader_role = {
+			character = UKR_Stepan_Bandera
+			ideology = nazism
+		}
+
+		add_country_leader_role = {
+			Character = UKR_andriy_melnyk
+			Promote_leader = yes
+			Country_leader = {
+			ideology = fascism_ideology
+				traits = {
+				}
+			}
+		}
+
+		retire_character = UKR_Stepan_Bandera
+	}
+
+	option = {  ### The government has been brought into Chaos...
+		name = ukr.17.c
+		add_stability = -0.15
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 0
+		}
+
+		#### TODO: Set Party Name
+		#### 
+
+		hidden_effect = {
+			country_event = { id = ukr.18 days = 5 }
+		}
+	}
+}
+
+
+country_event = {  ### Anarchist Triumph
+	id = ukr.18
+	title = ukr.18.t
+	desc = ukr.18.d
+	picture = GFX_report_event_vienna_award_negotiations
+	
+	is_triggered_only = yes
+	
+	option = {  ### 
+		name = ukr.18.a
+		add_political_power = 100
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
+
+		add_country_leader_role = {
+			Character = UKR_Nestor_Makhno
+			Promote_leader = yes
+			Country_leader = {
+			ideology = libertarian_socialist
+				expire = “1965.1.1”
+				traits = {
+					
+				}
+			}
+		}
+
+		if = {
+			limit = { has_idea = UKR_anarchist_guerrilla }
+			swap_ideas = {
+				remove_idea = UKR_anarchist_guerrilla
+				add_idea = UKR_anarchist_low_popularity_1
+			}
+		}
+
+		set_cosmetic_tag = UKR_anarchist
+		load_focus_tree = ukr_focus_makhno
+
+		hidden_effect = {
+			country_event = { id = ukr_reunion.1 days = 10 }
+		}
+	}
 }

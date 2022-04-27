@@ -4,12 +4,22 @@
 default_unit_production = {
 	enable = {
 		always = yes
-		NOT = { original_tag = GER } NOT = { original_tag = FRA } NOT = { original_tag = CHI  } NOT = { original_tag = ENG  }
-		not = { original_tag = CZE } 
+		NOT = { original_tag = GER } 
+		NOT = { original_tag = FRA } 
+		NOT = { original_tag = FIC } 
+		NOT = { original_tag = CHI } 
+		NOT = { original_tag = PRC } 
+		NOT = { original_tag = GXC } 
+		NOT = { original_tag = YUN } 
+		NOT = { original_tag = SHX } 
+		NOT = { original_tag = XSM } 
+		NOT = { original_tag = SIK } 
+
+		NOT = { original_tag = ENG }
 		not = { original_tag = SWE } 
-		not = { original_tag = POL } 
 		not = { original_tag = ITA } 
 		not = { original_tag = SOV } 
+		not = { original_tag = RUS }
 		not = { original_tag = ROM } 
 		not = { original_tag = HUN } 
 		not = { original_tag = USA } 
@@ -41,6 +51,12 @@ default_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
+		value = 2
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
 		value = 2
 	}
 
@@ -444,18 +460,25 @@ default_marines_production = {
 default_mobile_production = {
 	enable = {
 		NOT = { original_tag = GER }
-		ai_wants_divisions > 11
-		has_tech = motorised_infantry
+		ai_wants_divisions > 49
+		has_tech = mechanised_infantry
 	}
 	abort = {
-		ai_wants_divisions < 12
+		ai_wants_divisions < 50
 	}
 
 	ai_strategy = {
 		type = role_ratio
-		id = mobile
+		id = mechanized
 		value = 2
 	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -2
+	}
+
 }
 
 default_armored_production = {
@@ -477,17 +500,17 @@ default_armored_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 0
+		value = -2
 	}
 }
 
 highered_armored_production = {
 	enable = {
 		NOT = { original_tag = GER }
-		num_of_military_factories > 69
+		num_of_military_factories > 99
 	}
 	abort = {
-		num_of_military_factories < 70
+		num_of_military_factories < 100
 	}
 
 	ai_strategy = {
@@ -495,6 +518,19 @@ highered_armored_production = {
 		id = armor
 		value = 5
 	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+
 }
 
 slightly_naval_focused_nation = {
@@ -710,7 +746,7 @@ default_stockpile_management = {
 
 DEFAULT_template_design = {
 	enable = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = POL } }	
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = SWE } }	
 		date < 1940.1.1				
 	}
 	abort = { 
@@ -762,7 +798,7 @@ DEFAULT_template_design = {
 
 DEFAULT_template_design = {
 	enable = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = POL } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = SWE } }
 		date > 1940.1.1				
 	}
 

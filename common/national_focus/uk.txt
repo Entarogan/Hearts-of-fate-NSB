@@ -9026,22 +9026,6 @@ focus_tree = {
 					}
 				}
 			}
-			454 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			455 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
 		}
 		bypass = {
 			NOT = {
@@ -9055,12 +9039,6 @@ focus_tree = {
 					is_fully_controlled_by = ROOT
 				}
 				453 = {
-					is_fully_controlled_by = ROOT
-				}
-				454 = {
-					is_fully_controlled_by = ROOT
-				}
-				455 = {
 					is_fully_controlled_by = ROOT
 				}
 			}
@@ -9128,37 +9106,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			454 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = coastal_bunker
-					level = 2
-					province = 4206
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 2
-					province = 4206
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 2
-					province = 4206
-					instant_build = yes
-				}
-			}
 			453 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -9191,19 +9138,6 @@ focus_tree = {
 				}
 			}
 			452 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			455 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = air_base

@@ -1211,12 +1211,12 @@ ideas = {
 			picture = chi_hyper_inflation5
 
 			modifier = {
-				stability_factor = -0.2
-				stability_weekly = -0.02
-				political_power_gain = -0.5
-				production_speed_buildings_factor = -0.5
-				production_factory_max_efficiency_factor = -0.5
-				consumer_goods_factor = 0.5
+				stability_factor = -0.3
+				stability_weekly = -0.015
+				political_power_gain = -0.3
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.3
+				consumer_goods_factor = 0.3
 			}
 		}
 		
@@ -1236,10 +1236,10 @@ ideas = {
 			picture = chi_hyper_inflation3
 
 			modifier = {
-				stability_factor = -0.25
-				production_speed_buildings_factor = -0.25
-				production_factory_max_efficiency_factor = -0.25
-				consumer_goods_factor = 0.25
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.15
 			}
 		}
 		
@@ -1259,11 +1259,11 @@ ideas = {
 			picture = generic_foreign_capital
 
 			modifier = {
-				stability_factor = -0.2
-				political_power_gain = -0.3
-				production_speed_buildings_factor = -0.3
-				production_factory_max_efficiency_factor = -0.3
-				consumer_goods_factor = 0.3
+				stability_factor = -0.25
+				political_power_gain = -0.25
+				production_speed_buildings_factor = -0.25
+				production_factory_max_efficiency_factor = -0.25
+				consumer_goods_factor = 0.25
 			}
 		}
 		
@@ -1283,7 +1283,7 @@ ideas = {
 			picture = generic_foreign_capital
 
 			modifier = {
-				stability_factor = -0.2
+				stability_factor = -0.1
 				political_power_gain = -0.2
 				production_speed_buildings_factor = -0.2
 				production_factory_max_efficiency_factor = -0.2
@@ -1307,11 +1307,10 @@ ideas = {
 			picture = generic_foreign_capital
 
 			modifier = {
-				stability_factor = -0.1
-				political_power_gain = -0.1
-				production_speed_buildings_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
-				consumer_goods_factor = 0.1
+				political_power_gain = -0.15
+				production_speed_buildings_factor = -0.15
+				production_factory_max_efficiency_factor = -0.15
+				consumer_goods_factor = 0.15
 			}
 		}
 		
@@ -1394,11 +1393,9 @@ ideas = {
 			picture = chi_hyper_inflation
 
 			modifier = {
-				industrial_capacity_factory = 0.1
-				stability_factor = -0.1
-				political_power_gain = -0.15
+				industrial_capacity_factory = 0.2
+				political_power_gain = -0.1
 				production_speed_buildings_factor = -0.1
-				production_factory_max_efficiency_factor = -0.1
 				consumer_goods_factor = 0.1
 			}
 		}

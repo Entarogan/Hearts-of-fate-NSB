@@ -252,6 +252,97 @@ mechanized_JAP = {
 	}
 	
 	match_to_count = 0.55
+
+	mechanized_default_JAP_21_width = {
+	
+		upgrade_prio = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_army_manpower = { size < 1200000 } 
+					has_army_size = { size < 120 }
+				}
+			}
+		}
+		
+		target_width = 21.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 4000.0
+			
+			support = {
+				armored_car_recon = 1
+				engineer = 1
+				artillery = 1
+				anti_tank = 1
+				anti_air = 1
+			}
+			
+			regiments = {
+				mechanized = 9
+				medium_tank_destroyer_brigade = 1
+				mot_anti_air_brigade = 1
+			}
+		}
+		
+		allowed_types = {
+			mechanized		
+			engineer
+			armored_car_recon
+			anti_tank
+			anti_air
+			artillery
+			medium_tank_destroyer_brigade
+			mot_anti_air_brigade
+		}
+
+		#replace_at_match = 0.6
+		#replace_with = mechanized_default_JAP
+		#target_min_match = 0.5
+	}
 	
 	mechanized_default_JAP = {
 	
@@ -259,8 +350,19 @@ mechanized_JAP = {
 			factor = 2
 
 			modifier = {
-				factor = 1
+				factor = 2
+				OR = {
+					has_army_manpower = { size < 1200000 } 
+					has_army_size = { size < 120 }
+				}
 			}			
+		}
+
+		enable = {
+			OR = {
+				has_army_manpower = { size > 1199999 } 
+				has_army_size = { size > 119 }
+			}
 		}
 		
 		target_width = 42.0
@@ -362,17 +464,119 @@ infantry_JAP = {
 	
 	match_to_count = 0.60 #0.45 to 0.70 to 0.6
 
+	infantry_default_JAP_21_width = {
+	
+		upgrade_prio = {
+			factor = 15
+
+			modifier = {
+				factor = 2
+				OR = {
+					has_army_manpower = { size < 1200000 } 
+					has_army_size = { size < 120 }
+				}
+			}
+		}
+		
+		target_width = 21.0
+		width_weight = 1.0
+		column_swap_factor = 0.5
+		
+		stat_weights = {
+			0.00 #-- default_morale
+			0.00 #-- defense
+			1.00 #-- breakthrough
+			0.00 #-- hardness
+			4.00 #-- soft_attack
+			0.00 #-- hard_attack
+			0.00 #-- recon
+			1.00 #-- entrenchment
+			0.00 #-- initiative
+			0.00 #-- casualty_trickleback
+			0.00 #-- supply_consumption_factor
+			0.00 #-- supply_consumption
+			0.00 #-- suppression
+			0.00 #-- suppression_factor
+			0.00 #-- experience_loss_factor
+			0.00 #-- equipment_capture_factor
+			0.00 #-- fuel_capacity
+			#-- Air Values
+			0.00 #-- air_attack
+			#-- Common Values
+			0.60 #-- max_organisation
+			0.40 #-- max_strength
+			0.00 #-- maximum_speed
+			0.00 #-- armor_value
+			0.20 #-- ap_attack
+			0.00 #-- reliability
+			0.00 #-- reliability_factor
+			0.00 #-- weight
+			0.00 #-- fuel_consumption
+			0.00 #-- fuel_consumption_factor
+			0.00 #-- strat_attack
+			0.00 #-- carrier_size
+			0.00 #-- acc_hot_gain
+			0.00 #-- acc_cold_gain
+			0.00 #-- build_cost_ic
+		}
+		
+		target_template = {
+			weight = 0.9
+			match_value = 2000.0
+			
+			support = {
+				engineer = 1
+				light_tank_recon = 1
+				artillery = 1
+				anti_tank = 1
+				anti_air = 1
+			}
+			
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+		}
+		
+		allowed_types = {
+			infantry		
+			engineer
+			light_tank_recon
+			anti_tank
+			anti_air
+			artillery
+			artillery_brigade
+		}
+
+		#replace_at_match = 0.6
+		#replace_with = infantry_default_JAP
+		#target_min_match = 0.5
+	}
+
 	infantry_default_JAP = {
 	
 		upgrade_prio = {
 			factor = 20
-
+			modifier = {
+				factor = 0				
+				OR = {
+					has_army_manpower = { size < 1200000 } 
+					has_army_size = { size < 120 }
+				}
+			}
 			modifier = {
 				factor = 2
 				OR = {
 					CHI = { has_capitulated = no }
 					country_exists = CHI
 				}
+			}
+		}
+
+		enable = {
+			OR = {
+				has_army_manpower = { size > 1199999 } 
+				has_army_size = { size > 119 }
 			}
 		}
 		

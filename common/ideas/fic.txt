@@ -824,279 +824,32 @@ ideas = {
 
 	political_advisor = {	
 		
-		francois_de_la_Rocque = {
-			
-			picture = Francois_de_la_Rocque
-			
-			allowed = {
-				original_tag = "FIC"
-			}
-			available = {
 
-			}
-			
-			traits = { retired_officer_1 }
-
-			do_effect = {
-
-			}
-			on_add = {
-
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		marcel_Deat = {
-			
-			picture = Marcel_Deat
-			
-			allowed = {
-				original_tag = "FIC"
-			}
-			available = {
-
-			}
-			
-			traits = { Navy_commissar }
-
-			do_effect = {
-
-			}
-			on_add = {
-
-			}
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		FRA_pierre_pucheu = {
-			
-			
-			allowed = {
-				original_tag = "FIC"
-			}
-			
-			available = {
-				not = { has_government = communism }
-			}
-			cost = 150 
-			traits = { technocrat }
-
-			do_effect = {
-				
-			}
-
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 	}
 
 	# MILITARY
 	army_chief = {
-		
-
-		FRA_pierre_alombert_goget = {
-			
-			picture = generic_army_europe_1
-
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { army_chief_defensive_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}		
+				
 		
 	}
 
 	navy_chief = {
-		
-		marcel_gensoul = {
 			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { navy_chief_naval_aviation_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		jean_marie_abrial = {
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { navy_chief_commerce_raiding_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}	
 	}
 
 	air_chief = {
 			
-		joseph_vuillemin = {
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { air_chief_ground_support_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-		robert_odic = {
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { air_chief_all_weather_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 	}
 
 	high_command = {
 
-		charles_de_gaulle = {
-
-			picture = charles_de_gaulle
-
-			ledger = army
-						
-			allowed = {
-				original_tag = FIC
-			}
-			available = {
-
-			}
-			
-			cost = 75
-						
-			research_bonus = {
-				land_doctrine = 0.10
-			}
-			
-			traits = { Forgotten_armored_Vanguard }
-
-			ai_will_do = {
-				factor = 100
-			}
-
-		}
-		
-		
-		charles_huntziger = {
-
-			picture = fra_charles_huntziger
-
-			ledger = army
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { army_logistics_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		alfred_heurtaux = {
-			ledger = air
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { air_air_combat_training_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		emile_muselier = {
-			ledger = navy
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-
-			
-			traits = { navy_fleet_logistics_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 		
 	}
 
 	theorist = {
 
-		jean_decoux = {
-			
-			
-			allowed = {
-				original_tag = FIC
-			}
-			
-			
-			research_bonus = {
-				naval_doctrine = 0.10
-			}
-			
-			traits = { naval_theorist }
-
-			ai_will_do = {
-				factor = 1
-			}
-
-		}
 
     }
 		

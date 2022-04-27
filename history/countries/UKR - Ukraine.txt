@@ -81,6 +81,12 @@ add_ideas = {
 	UKR_Developed_agriculture_idea
 	UKR_Cossack_tradition_idea
 }
+
+add_timed_idea = {
+	idea = UKR_USA_dam_working
+	days = 200
+}
+
 recruit_character = UKR_symon_petlura
 add_country_leader_role = {
 	character = UKR_symon_petlura
@@ -105,3 +111,7 @@ recruit_character = UKR_mykola_kapustyanskyi
 recruit_character = UKR_ivan_poltavetsostrianytsia
 
 recruit_character = SOV_leonid_brezhnev
+recruit_character = UKR_Nestor_Makhno
+recruit_character = UKR_Makhnovshchina
+recruit_character = UKR_Talulah_Artorius
+recruit_character = UKR_Stepan_Bandera

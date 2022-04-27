@@ -25,241 +25,28 @@ ideas = {
 
 	political_advisor = {
 
-		SWE_andersen = {
 
-			picture = andersen
-			
-			allowed = {
-				original_tag = SWE
-			}
-            
-            available = {
-                has_completed_focus = swe_Kalmarunionen
-            }
-			ai_will_do = {
-                factor = 10
-            }
-			traits = { literary_spokesman }
-		}
-
-		SWE_ophelia = {
-
-			picture = ophelia
-
-			allowed = {
-				original_tag = SWE
-			}
-			ai_will_do = {
-                factor = 10
-            }
-			traits = { silent_workhorse }
-		}
-
-		SWE_gelda = {
-
-			picture = gelda
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-			traits = { agricultural_management }
-		}
-        
-        SWE_Ries = {
-
-			picture = Ries
-			
-			allowed = {
-				original_tag = SWE
-			}
-            
-            available = {
-                OR = {
-                    has_completed_focus = swe_freedom_of_trade
-                    has_completed_focus = swe_german_celtic_bond
-                    has_completed_focus = swe_Noregskonungasogum
-                }
-            }
-			
-			traits = { holy_shield }
-		}
 	}
 
 	# MILITARY
 	army_chief = {
 
-		SWE_ortlinde = {
-			
-			picture = ortlinde
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
 
-			
-			traits = { army_infantry_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		SWE_sitonai = {
-			
-			picture = sitonai
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-            available = {
-                has_completed_focus = swe_integral_finland
-            }
-			
-			traits = { Yumiduka_Satsuki_attrition }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 	}
 
 	air_chief = {
 		
 
-		SWE_hildr = {
-			
-			picture = hildr
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { air_air_superiority_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		SWE_thudr = {
-			
-			picture = thudr
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { air_close_air_support_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 	}
 
 	navy_chief = {
 
-		SWE_eric = {
-			
-			picture = eric
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-            available = {
-                has_completed_focus = swe_Kalmarunionen
-            }
-            
-			
-			traits = { navy_chief_commerce_raiding_3 }
-			
-			ai_will_do = {
-				factor = 10
-			}
-		}
-
-
-		SWE_charles_de_champs = {
-			
-			picture = generic_navy_europe_2
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { navy_chief_decisive_battle_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 	}
 
 	high_command = {
-
-		SWE_sigurd = {
-			
-			picture = sigurd
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { army_chief_offensive_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	
-		SWE_skadi = {
-			
-			picture = skadi
-
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { army_logistics_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-
-		SWE_beowulf = {
-			
-			picture = beowulf
-			
-			allowed = {
-				original_tag = SWE
-			}
-			
-
-			
-			traits = { army_chief_morale_3 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 
 	}
 
@@ -676,59 +463,6 @@ ideas = {
 	}
      theorist = {	
 	
-    
-        paradox = {
-            
-            allowed = {
-                original_tag = SWE
-            }
-            
-            available = {
-                has_completed_focus = swe_paradox
-            }
-            
-            research_bonus = {
-                land_doctrine = 0.15
-            }
-            
-            picture = paradox
-            
-            traits = { hearts_of_iron_4 CPU0 }
-
-            ai_will_do = {
-                factor = 5
-            }
-        }
-
-        rovio = {
-            
-            allowed = {
-                OR = {
-                    original_tag = SWE
-                    original_tag = FIN
-                }
-                
-            }
-            
-            available = {
-                OR = {
-                    has_completed_focus = swe_integral_finland
-                    tag = FIN
-                }
-            }
-            
-            research_bonus = {
-                air_doctrine = 0.15
-            }
-            
-            picture = rovio
-            
-            traits = { angry_birds }
-
-            ai_will_do = {
-                factor = 5
-            }
-        }
 
 	}
 }

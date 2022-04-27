@@ -2,6 +2,89 @@ ideas = {
 
     country = {
 
+		Roman_spirit_defence_idea = {			
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+
+			allowed_civil_war = {
+				OR = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+
+			available = {
+				is_subject = no
+			}
+
+			picture = vittoria_mutilata
+			
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+
+				army_defence_factor = 0.05
+				air_superiority_efficiency = 0.05
+				naval_coordination = 0.05
+
+				research_speed_factor = 0.05
+
+				non_core_manpower = 0.03
+			}
+		}
+
+		Roman_spirit_idea = {			
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					OR = {
+						has_government = communism
+						has_government = democratic
+					}
+				}
+			}
+
+			available = {
+				is_subject = no		
+				or = { 
+					ITA = { is_faction_leader = yes }
+					ITA = { is_in_faction = no }
+				}
+			}
+
+			picture = vittoria_mutilata
+			
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.05
+				air_superiority_efficiency = 0.05
+				naval_coordination = 0.05
+
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+
+				non_core_manpower = 0.05
+
+				land_doctrine_cost_factor = -0.05
+				air_doctrine_cost_factor = -0.05
+				naval_doctrine_cost_factor = -0.05
+
+				communism_acceptance = -10
+				democratic_acceptance = -10
+				fascism_acceptance = 10
+				ai_focus_aggressive_factor = 0.5
+				justify_war_goal_time = -0.05
+			}
+		}
+
 		ita_fighter_discount = {
 			
 			allowed = {
@@ -1264,6 +1347,9 @@ ideas = {
 		}
 		
 		ita_unaccepted_rome = {
+			available = {
+				is_in_faction = no
+			}
 
 			allowed = {
 				original_tag = ITA

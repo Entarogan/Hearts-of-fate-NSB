@@ -305,6 +305,53 @@ country_event = {
 		
 		add_stability = -0.05
 		add_war_support = -0.05
+
+		if = {
+			limit = { 
+				ITA = { is_subject = no }
+				or = { 
+					ITA = { is_faction_leader = yes }
+					ITA = { is_in_faction = no }
+				}
+				or = { 
+					ITA = { has_government = fascism }
+					ITA = { has_government = neutrality }
+				}
+			}
+
+			every_country = {
+				limit = {
+					is_in_faction_with = ITA
+				}
+				GER = {
+					add_to_faction = PREV
+				}
+			}
+
+			GER = { 
+			    add_to_faction = ROOT 
+			}
+
+			random_country = {
+			  limit = {
+				tag = GER
+				is_in_faction_with = ITA
+			  }
+			  random_enemy_country = {
+				limit = {
+				  NOT = { has_war_with = ITA }
+				}
+				ITA = {
+				  add_to_war = {
+					targeted_alliance = PREV.PREV
+					enemy = PREV
+					hostility_reason = asked_to_join
+				  }
+				}
+			  }
+			}
+
+		}
 		
 		GER = {			
 			country_event = germany.527
@@ -607,7 +654,31 @@ country_event = {
 			producer = GER 
 		}
 
-		set_technology = { gw_artillery = 1 }
+		if = {
+	limit = { is_researching_technology = advanced_battleship }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =   gw_artillery }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =    gw_artillery }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+					limit = { is_researching_technology =     gw_artillery }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {     gw_artillery = 1 }
+				}
+}
+}
+}
 		
 		add_popularity = {
 			ideology = fascism
@@ -898,8 +969,56 @@ country_event = {
 			producer = GER 
 		}
 
-		set_technology = { motorised_infantry = 1 }
-		set_technology = { basic_light_tank_chassis = 1 }
+		if = {
+	limit = { is_researching_technology = advanced_battleship }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =   motorised_infantry }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =    motorised_infantry }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+					limit = { is_researching_technology =     motorised_infantry }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {     motorised_infantry = 1 }
+				}
+}
+}
+}
+		if = {
+	limit = { is_researching_technology = advanced_battleship }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =   basic_light_tank_chassis }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+	limit = { is_researching_technology =    basic_light_tank_chassis }
+	add_timed_idea = { idea = zuodehao days = 90 }
+}
+else = {
+	if = {
+					limit = { is_researching_technology =     basic_light_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {     basic_light_tank_chassis = 1 }
+				}
+}
+}
+}
 
 		create_equipment_variant = {
 			name = "Panzer I Ausf. A"
@@ -8035,63 +8154,6 @@ country_event = {
 	}
 }
 
-# Soviets Accept German-Soviet Treaty
-country_event = {
-	id = germany.76
-	title = germany.76.t
-	desc = germany.76.d
-	picture = GFX_report_event_physics_lab_02
-
-	is_triggered_only = yes
-	
-	option = {
-		name = germany.76.a	#bah
-		# REVISIT Balance research bonus
-
-          if = {
-            limit = {
-              is_ai = yes
-            }
-			set_technology = { basic_medium_tank = 1 }
-			set_technology = { basic_medium_art = 1 }
-			set_technology = { basic_medium_spaa = 1 }
-          }
-
-          if = {
-            limit = {
-              HOL = { is_ai = yes }
-              HOL = { is_in_faction_with = GER }
-            }
-			HOL = { set_technology = { basic_medium_tank = 1 } }
-			HOL = { set_technology = { basic_medium_art = 1 } }
-			HOL = { set_technology = { basic_medium_spaa = 1 } }
-          }
-
-          if = {
-            limit = {
-              is_ai = no
-            }
-		add_tech_bonus = {
-			name = GER_soviet_treaty
-			bonus = 1
-			ahead_reduction = 3
-			technology = basic_medium_tank
-		}
-          }
-
-		add_tech_bonus = {
-			name = GER_soviet_treaty
-			bonus = 0.5
-			uses = 2
-			category = armor
-		}
-		SOV = {
-			add_opinion_modifier = { target = GER modifier = sov_ger_treaty }
-			add_opinion_modifier = { target = GER modifier = sov_ger_treaty_trade }
-		}
-	}
-}
-
 # Soviets Reject German-Soviet Treaty
 country_event = {
 	id = germany.77
@@ -11038,8 +11100,20 @@ country_event = {
 		tag = GER
 		GER = {
 			has_government = fascism
-			owns_state = 217 
-			owns_state = 195 
+		}
+		OR = {
+			GER = { owns_state = 217 } 
+			any_other_country = {
+				is_subject_of = GER
+				owns_state = 217
+			}
+		}
+		OR = {
+			GER = { owns_state = 195 } 
+			any_other_country = {
+				is_subject_of = GER
+				owns_state = 195
+			}
 		}
 	}
 
@@ -11048,8 +11122,8 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		set_province_name = { id = 3529 name = "Hindenburg"}
-		set_province_name = { id = 3151 name = "Ludendorff"}
+		set_province_name = { id = 3529 name = "Siegfriedburg"}
+		set_province_name = { id = 3151 name = "Kriemhildburg"}
 		set_global_flag = GER_cities_renamed
 	}
 
@@ -11095,339 +11169,5 @@ country_event = {
 		reset_province_name = 3151
 		clr_global_flag = GER_cities_renamed
 		clr_global_flag = ROM_king_is_silly
-	}
-}
-
-
-country_event = {
-	id = germany.1013
-	title = germany.1013.t
-	desc = germany.1013.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = SWE
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1013.a
-		ai_chance = {
-			base = 100
-		}
-			set_technology = { basic_heavy_td = 1 }
-
-			division_template = {
-				name = "infantry" 
-				priority = 1
-			    division_names_group = SWE_INF_01
-				regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 0 y = 2 }
-                            infantry = { x = 0 y = 3 }				
-                            infantry = { x = 0 y = 4 }
-
-		    	   		 	infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-
-		    	   		 	artillery_brigade = { x = 2 y = 0 }
-		    	   		 	artillery_brigade = { x = 2 y = 1 }
-		    	   		 	artillery_brigade = { x = 2 y = 2 }
-
-		    	   		 	heavy_armor = { x = 3 y = 0 }
-		    	   		 	heavy_tank_destroyer_brigade = { x = 3 y = 1 }
-				}
-	           support = {
-                            armored_car_recon = { x = 0 y = 0 }
-                            engineer = { x = 0 y = 1 }
-                            artillery = { x = 0 y = 2 }
-                            anti_air = { x = 0 y = 3 }
-                            field_hospital = { x = 0 y = 4 }
-	            }
-			}
-
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 141 }
-					create_unit = {
-						division = "name = \"0. Arméfördelningen\" division_template = \"infantry\" start_experience_factor = 0.5" 
-						owner = SWE
-					}
-				}
-
-	}
-}
-
-country_event = {
-	id = germany.1014
-	title = germany.1014.t
-	desc = germany.1014.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = SWE
-		date > 1940.6.1
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1014.a
-		ai_chance = {
-			base = 100
-		}
-
-			set_technology = { mechanised_infantry = 1 }
-			set_technology = { basic_medium_tank = 1 }
-			set_technology = { basic_medium_art = 1 }
-			set_technology = { basic_medium_td = 1 }
-			set_technology = { basic_medium_spaa = 1 }
-
-			division_template = {
-				name = "mechanized medium armor" 
-				priority = 1
-			    division_names_group = SWE_ARM_01
-				regiments = {
-							medium_armor = { x = 0 y = 0 }
-							medium_armor = { x = 0 y = 1 }
-							medium_armor = { x = 0 y = 2 }
-                            medium_armor = { x = 0 y = 3 }				
-                            medium_armor = { x = 0 y = 4 }
-
-		    	   		 	mechanized = { x = 1 y = 0 }
-							mechanized = { x = 1 y = 1 }
-							mechanized = { x = 1 y = 2 }
-							mechanized = { x = 1 y = 3 }
-							mechanized = { x = 1 y = 4 }
-
-		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 0 }
-		    	   		 	medium_sp_artillery_brigade = { x = 2 y = 1 }
-		    	   		 	medium_sp_anti_air_brigade = { x = 2 y = 2 }
-
-				}
-	           support = {
-                            armored_car_recon = { x = 0 y = 0 }
-                            engineer = { x = 0 y = 1 }
-                            artillery = { x = 0 y = 2 }
-                            anti_air = { x = 0 y = 3 }
-                            field_hospital = { x = 0 y = 4 }
-	            }
-			}
-
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 141 }
-					create_unit = {
-						division = "name = \"-1. Pansarfördelningen\" division_template = \"mechanized medium armor\" start_experience_factor = 0.5" 
-						owner = SWE
-					}
-				}
-
-	}
-}
-
-country_event = {
-	id = germany.1015
-	title = germany.1015.t
-	desc = germany.1015.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		num_of_factories > 50
-		tag = SWE
-		date > 1941.6.1
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1015.a
-		ai_chance = {
-			base = 100
-		}
-
-			set_technology = { improved_medium_tank = 1 }
-			set_technology = { improved_medium_td = 1 }
-			set_technology = { improved_medium_art = 1 }
-			set_technology = { improved_medium_spaa = 1 }
-			set_technology = { improved_heavy_tank = 1 }
-			set_technology = { improved_heavy_td = 1 }
-			set_technology = { improved_heavy_art = 1 }
-			set_technology = { improved_heavy_spaa = 1 }
-	}
-}
-
-country_event = {
-	id = germany.1016
-	title = germany.1016.t
-	desc = germany.1016.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		num_of_factories > 50
-		tag = SWE
-		date > 1943.6.1
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1016.a
-		ai_chance = {
-			base = 100
-		}
-
-			set_technology = { mechanised_infantry2 = 1 }
-			set_technology = { advanced_medium_tank = 1 }
-			set_technology = { advanced_medium_td = 1 }
-			set_technology = { advanced_medium_art = 1 }
-			set_technology = { advanced_medium_spaa = 1 }
-			set_technology = { advanced_heavy_tank = 1 }
-			set_technology = { advanced_heavy_td = 1 }
-			set_technology = { advanced_heavy_art = 1 }
-			set_technology = { advanced_heavy_spaa = 1 }
-	}
-}
-
-country_event = {
-	id = germany.1017
-	title = germany.1017.t
-	desc = germany.1017.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		num_of_factories > 50
-		tag = SWE
-		date > 1945.6.1
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1017.a
-		ai_chance = {
-			base = 100
-		}
-
-			set_technology = { mechanised_infantry3 = 1 }
-			set_technology = { main_battle_tank = 1 }
-			set_technology = { modern_td = 1 }
-			set_technology = { modern_art = 1 }
-			set_technology = { modern_spaa = 1 }
-
-			division_template = {
-				name = "modern mechanized medium armor" 
-				priority = 1
-			    division_names_group = SWE_ARM_01
-				regiments = {
-							modern_armor = { x = 0 y = 0 }
-							modern_armor = { x = 0 y = 1 }
-							modern_armor = { x = 0 y = 2 }
-                            modern_armor = { x = 0 y = 3 }				
-                            modern_armor = { x = 0 y = 4 }
-
-		    	   		 	mechanized = { x = 1 y = 0 }
-							mechanized = { x = 1 y = 1 }
-							mechanized = { x = 1 y = 2 }
-							mechanized = { x = 1 y = 3 }
-							mechanized = { x = 1 y = 4 }
-
-		    	   		 	modern_sp_artillery_brigade = { x = 2 y = 0 }
-		    	   		 	modern_sp_artillery_brigade = { x = 2 y = 1 }
-		    	   		 	modern_sp_anti_air_brigade = { x = 2 y = 2 }
-
-				}
-	           support = {
-                            armored_car_recon = { x = 0 y = 0 }
-                            engineer = { x = 0 y = 1 }
-                            artillery = { x = 0 y = 2 }
-                            signal_company = { x = 0 y = 3 }
-                            logistics_company = { x = 0 y = 4 }
-	            }
-			}
-
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 141 }
-					create_unit = {
-						division = "name = \"-2. Pansarfördelningen\" division_template = \"modern mechanized medium armor\" start_experience_factor = 0.5" 
-						owner = SWE
-					}
-				}
-
-	}
-}
-
-country_event = {
-	id = germany.1018
-	title = germany.1018.t
-	desc = germany.1018.desc
-	picture = GFX_report_event_german_reichstag_gathering
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = SWE
-        is_ai = yes
-    is_subject = no
-	}
-
-	option = { 
-		name = germany.1018.a
-		ai_chance = {
-			base = 100
-		}
-			division_template = {
-				name = "marines" 
-				priority = 1
-			    division_names_group = SWE_MAR_01
-				regiments = {
-							marine = { x = 0 y = 0 }
-							marine = { x = 0 y = 1 }
-							marine = { x = 0 y = 2 }
-                            marine = { x = 0 y = 3 }				
-                            marine = { x = 0 y = 4 }	
-
-		    	   		 	marine = { x = 1 y = 0 }
-							marine = { x = 1 y = 1 }
-		    	   		 	marine = { x = 1 y = 2 }
-							marine = { x = 1 y = 3 }
-
-		    	   		 	artillery_brigade = { x = 2 y = 0 }
-		    	   		 	artillery_brigade = { x = 2 y = 1 }
-		    	   		 	artillery_brigade = { x = 2 y = 2 }
-
-
-				}
-	           support = {
-                            recon = { x = 0 y = 0 }
-                            engineer = { x = 0 y = 1 }
-                            artillery = { x = 0 y = 2 }
-                            field_hospital = { x = 0 y = 3 }
-                            anti_air = { x = 0 y = 4 }
-	            }
-			}
-
-				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
-					prioritize = { 141 }
-					create_unit = {
-						division = "name = \"0. Kustjägarfördelningen\" division_template = \"marines\" start_experience_factor = 0.5" 
-						owner = SWE
-					}
-				}
-
 	}
 }

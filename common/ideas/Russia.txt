@@ -2269,7 +2269,7 @@ ideas = {
 			}
 			picture = rus_siberian_cavalry
 			modifier = {
-				cavalry_attack_factor = 0.15
+				cavalry_attack_factor = 0.10
 				cavalry_defence_factor = 0.05
 				# cavalry_speed_factor = 0.15
 			}

@@ -151,6 +151,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			always = no
 			OR = {
 				is_subject = yes
 				has_global_flag = ENG_decolonized

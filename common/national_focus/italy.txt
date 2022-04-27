@@ -2509,6 +2509,17 @@ focus_tree = {
             type = industrial_complex
             level = 10
           }
+		  random_owned_controlled_state = {
+			limit = {
+					is_core_of = ROOT
+					is_on_continent = europe
+				}
+				add_resource = {
+					type = steel
+					amount = 40
+				}
+			}
+		  
         }
         20 = {
           add_political_power = 80
@@ -2516,6 +2527,16 @@ focus_tree = {
             type = industrial_complex
             level = 8
           }
+		  random_owned_controlled_state = {
+			limit = {
+					is_core_of = ROOT
+					is_on_continent = europe
+				}
+				add_resource = {
+					type = steel
+					amount = 32
+				}
+			}
         }
         20 = {
           add_political_power = 60
@@ -2523,6 +2544,16 @@ focus_tree = {
             type = industrial_complex
             level = 6
           }
+		  random_owned_controlled_state = {
+			limit = {
+					is_core_of = ROOT
+					is_on_continent = europe
+				}
+				add_resource = {
+					type = steel
+					amount = 24
+				}
+			}
         }
         20 = {
           add_political_power = 40
@@ -2530,6 +2561,16 @@ focus_tree = {
             type = industrial_complex
             level = 4
           }
+		  random_owned_controlled_state = {
+			limit = {
+					is_core_of = ROOT
+					is_on_continent = europe
+				}
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+			}
         }
         20 = {
           add_political_power = 20
@@ -2537,6 +2578,16 @@ focus_tree = {
             type = industrial_complex
             level = 2
           }
+		  random_owned_controlled_state = {
+			limit = {
+					is_core_of = ROOT
+					is_on_continent = europe
+				}
+				add_resource = {
+					type = steel
+					amount = 8
+				}
+			}
         }
       }
 
@@ -7145,6 +7196,12 @@ focus_tree = {
 			remove_ideas = ITA_tyrant_1
 			remove_ideas = ita_unaccepted_rome
       		remove_ideas = { Questione_romana }
+
+			swap_ideas = {
+				remove_idea = Roman_spirit_idea
+				add_idea = Roman_spirit_defence_idea
+			}
+
 			ITA_nero_claudius = {
 				remove_country_leader_role = {
 					ideology = authoritarian_democracy
@@ -9104,6 +9161,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = ita_humanism
 		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = Roman_spirit_idea
+				add_idea = Roman_spirit_defence_idea
+			}
+
 			add_country_leader_role = {
 				character = "ITA_nero_claudius"
 				country_leader = {

@@ -13,6 +13,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
 		tag = FRA
     is_ai = yes
     is_subject = no
@@ -160,70 +161,6 @@ country_event = {
         producer = SOV
       }
 
-			219 = {
-
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }								
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-      }
 
 	}
 		
@@ -1547,7 +1484,6 @@ country_event = {
 
 		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 1000 }
 		add_equipment_to_stockpile = { type = anti_air_equipment amount = 1000 }
-		add_equipment_to_stockpile = { type = light_tank_equipment amount = 500 }
 		add_equipment_to_stockpile = { type = motorized_equipment amount = 500 }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 4000 }
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 40000 }
@@ -1605,7 +1541,6 @@ country_event = {
 
 		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
 		add_equipment_to_stockpile = { type = anti_air_equipment amount = 500 }
-		add_equipment_to_stockpile = { type = light_tank_equipment amount = 500 }
 		add_equipment_to_stockpile = { type = motorized_equipment amount = 500 }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 3000 }
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 25000 }
@@ -1754,7 +1689,6 @@ country_event = {
 
 		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 200 }
 		add_equipment_to_stockpile = { type = anti_air_equipment amount = 200 }
-		add_equipment_to_stockpile = { type = light_tank_equipment amount = 200 }
 		add_equipment_to_stockpile = { type = motorized_equipment amount = 200 }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 900 }
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
@@ -1797,28 +1731,10 @@ country_event = {
 
 		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 300 }
 		add_equipment_to_stockpile = { type = anti_air_equipment amount = 300 }
-		add_equipment_to_stockpile = { type = light_tank_equipment amount = 300 }
 		add_equipment_to_stockpile = { type = motorized_equipment amount = 300 }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 1200 }
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
 		add_equipment_to_stockpile = { type = support_equipment amount = 900 }
-
-    563 = {
-
-      create_unit = {
-        division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-        owner = RUS
-      }
-      create_unit = {
-        division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-        owner = RUS
-      }
-      create_unit = {
-        division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-        owner = RUS
-      }
-
-    }
 
 	}
 		
@@ -1991,77 +1907,6 @@ country_event = {
       type = armored_car_equipment
       amount = 200
       producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = light_tank_equipment
-      amount = 100
-      producer = GER
-    }
-
-    if = {
-      limit = {
-        has_tech = basic_medium_tank
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 500
-        producer = GER
-      }
-
-    }
-
-    if = {
-      limit = {
-        has_tech = basic_medium_td
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 200
-        producer = GER
-      }
-
-    }
-
-    if = {
-      limit = {
-        has_tech = basic_medium_art
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 300
-        producer = GER
-      }
-
-    }
-
-    if = {
-      limit = {
-        has_tech = basic_medium_spaa
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 100
-        producer = GER
-      }
-
-    }
-
-    if = {
-      limit = {
-        has_tech = basic_heavy_tank
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 200
-        producer = GER
-      }
-
     }
 
       add_equipment_to_stockpile = {
@@ -2271,6 +2116,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
 		date > 1942.1.1
     tag = GER
     is_ai = yes	
@@ -2301,21 +2147,39 @@ country_event = {
 			limit = {
 				not = { has_tech = amphibious_mechanized_infantry }
 			}
-			set_technology = { amphibious_mechanized_infantry = 1 }
+			if = {
+					limit = { is_researching_technology =  amphibious_mechanized_infantry }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  amphibious_mechanized_infantry = 1 }
+				}
 		}
 
 		if = {
 			limit = {
 				not = { has_tech = amphibious_tank }
 			}
-			set_technology = { amphibious_tank = 1 }
+			if = {
+					limit = { is_researching_technology =  amphibious_tank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  amphibious_tank = 1 }
+				}
 		}
 
 		if = {
 			limit = {
 				not = { has_tech = amphibious_tank_2 }
 			}
-			set_technology = { amphibious_tank_2 = 1 }
+			if = {
+					limit = { is_researching_technology =  amphibious_tank_2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  amphibious_tank_2 = 1 }
+				}
 		}
 
 		add_equipment_to_stockpile = { type = amphibious_tank_equipment amount = 2000 }
@@ -2407,6 +2271,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
     tag = SOV
     or = {
       NOT = { has_war_with = RUS }
@@ -2497,7 +2362,13 @@ country_event = {
         limit = {
           not = { has_tech = basic_medium_tank }
         }
-        set_technology = { basic_medium_tank = 1 }
+        if = {
+					limit = { is_researching_technology =  basic_medium_tank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_tank = 1 }
+				}
       }
 
       add_equipment_to_stockpile = {
@@ -2510,7 +2381,13 @@ country_event = {
         limit = {
           not = { has_tech = basic_medium_td }
         }
-        set_technology = { basic_medium_td = 1 }
+        if = {
+					limit = { is_researching_technology =  basic_medium_td }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_td = 1 }
+				}
       }
 
       add_equipment_to_stockpile = {
@@ -2523,7 +2400,13 @@ country_event = {
         limit = {
           not = { has_tech = basic_medium_art }
         }
-        set_technology = { basic_medium_art = 1 }
+        if = {
+					limit = { is_researching_technology =  basic_medium_art }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_art = 1 }
+				}
       }
 
       add_equipment_to_stockpile = {
@@ -2536,7 +2419,13 @@ country_event = {
         limit = {
           not = { has_tech = basic_medium_spaa }
         }
-        set_technology = { basic_medium_spaa = 1 }
+        if = {
+					limit = { is_researching_technology =  basic_medium_spaa }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_spaa = 1 }
+				}
       }
 
       add_equipment_to_stockpile = {
@@ -2549,7 +2438,13 @@ country_event = {
         limit = {
           not = { has_tech = basic_heavy_tank }
         }
-        set_technology = { basic_heavy_tank = 1 }
+        if = {
+					limit = { is_researching_technology =  basic_heavy_tank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_heavy_tank = 1 }
+				}
       }
 
       add_equipment_to_stockpile = {
@@ -2589,6 +2484,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
     tag = RUS
     or = {
       NOT = { has_war_with = SOV }
@@ -2679,7 +2575,13 @@ country_event = {
 			limit = {
 				not = { has_tech = basic_medium_tank }
 			}
-			set_technology = { basic_medium_tank = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_medium_tank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_tank = 1 }
+				}
 		}
 
     add_equipment_to_stockpile = {
@@ -2692,7 +2594,13 @@ country_event = {
 			limit = {
 				not = { has_tech = basic_medium_td }
 			}
-			set_technology = { basic_medium_td = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_medium_td }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_td = 1 }
+				}
 		}
 
     add_equipment_to_stockpile = {
@@ -2705,7 +2613,13 @@ country_event = {
 			limit = {
 				not = { has_tech = basic_medium_art }
 			}
-			set_technology = { basic_medium_art = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_medium_art }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_art = 1 }
+				}
 		}
 
     add_equipment_to_stockpile = {
@@ -2718,7 +2632,13 @@ country_event = {
 			limit = {
 				not = { has_tech = basic_medium_spaa }
 			}
-			set_technology = { basic_medium_spaa = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_medium_spaa }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_spaa = 1 }
+				}
 		}
 
     add_equipment_to_stockpile = {
@@ -2731,7 +2651,13 @@ country_event = {
 			limit = {
 				not = { has_tech = basic_heavy_tank }
 			}
-			set_technology = { basic_heavy_tank = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_heavy_tank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_heavy_tank = 1 }
+				}
 		}
 
     add_equipment_to_stockpile = {
@@ -2793,7 +2719,13 @@ country_event = {
 			limit = {
 				not = { has_tech = decimetric_radar }
 			}
-			set_technology = { decimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  decimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  decimetric_radar = 1 }
+				}
 		}
 
 
@@ -2832,7 +2764,13 @@ country_event = {
 			limit = {
 				not = { has_tech = improved_decimetric_radar }
 			}
-			set_technology = { improved_decimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  improved_decimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  improved_decimetric_radar = 1 }
+				}
 		}
 
 
@@ -2871,7 +2809,13 @@ country_event = {
 			limit = {
 				not = { has_tech = centimetric_radar }
 			}
-			set_technology = { centimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  centimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  centimetric_radar = 1 }
+				}
 		}
 
 
@@ -2910,7 +2854,13 @@ country_event = {
 			limit = {
 				not = { has_tech = improved_centimetric_radar }
 			}
-			set_technology = { improved_centimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  improved_centimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  improved_centimetric_radar = 1 }
+				}
 		}
 
 
@@ -2949,7 +2899,13 @@ country_event = {
 			limit = {
 				not = { has_tech = advanced_centimetric_radar }
 			}
-			set_technology = { advanced_centimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  advanced_centimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  advanced_centimetric_radar = 1 }
+				}
 		}
 
 
@@ -3093,19 +3049,6 @@ country_event = {
       producer = USA
     }
 
-		if = {
-			limit = {
-				not = { has_tech = basic_medium_tank }
-			}
-			set_technology = { basic_medium_tank = 1 }
-		}
-
-    add_equipment_to_stockpile = {
-      type = medium_tank_equipment
-      amount = 1500
-      producer = USA
-    }
-
 
 	}
 		
@@ -3172,12 +3115,6 @@ country_event = {
 
     add_equipment_to_stockpile = {
       type = motorized_equipment
-      amount = 300
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = heavy_tank_equipment
       amount = 300
       producer = ENG
     }
@@ -3253,12 +3190,6 @@ country_event = {
       producer = ENG
     }
 
-    add_equipment_to_stockpile = {
-      type = heavy_tank_equipment
-      amount = 300
-      producer = ENG
-    }
-
 
 	}
 		
@@ -3291,24 +3222,6 @@ country_event = {
 
 		army_experience = 50
 
-		if = {
-			limit = { NOT = { has_tech = gw_artillery } }
-
-			set_technology = { gw_artillery = 1 }
-		}
-
-		if = {
-			limit = { NOT = { has_tech = interwar_antiair } }
-
-			set_technology = { interwar_antiair = 1 }
-		}
-
-		if = {
-			limit = { NOT = { has_tech = interwar_antitank } }
-
-			set_technology = { interwar_antitank = 1 }
-		}
-
     add_equipment_to_stockpile = {
       type = infantry_equipment
       amount = 2000
@@ -3318,24 +3231,6 @@ country_event = {
     add_equipment_to_stockpile = {
       type = support_equipment
       amount = 200
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 200
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 100
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 100
       producer = GER
     }
 
@@ -3453,24 +3348,6 @@ country_event = {
       producer = CHI
     }
 
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 200
-      producer = CHI
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 100
-      producer = CHI
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 100
-      producer = CHI
-    }
-
 
 	}
 		
@@ -3524,24 +3401,6 @@ country_event = {
     add_equipment_to_stockpile = {
       type = support_equipment
       amount = 200
-      producer = CHI
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 200
-      producer = CHI
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 100
-      producer = CHI
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 100
       producer = CHI
     }
 
@@ -3745,7 +3604,7 @@ country_event = {
 
     add_equipment_to_stockpile = {
       type = infantry_equipment
-      amount = 12000
+      amount = 6000
       producer = FRA
     }
 
@@ -3786,7 +3645,7 @@ country_event = {
 
     add_equipment_to_stockpile = {
       type = infantry_equipment
-      amount = 10000
+      amount = 5000
       producer = ENG
     }
 

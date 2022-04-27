@@ -4656,7 +4656,7 @@
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = HUN_Horse_riding_and_blade_slashing
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = cat_mobile_warfare
 			}	
@@ -10305,7 +10305,7 @@
 
 			add_doctrine_cost_reduction = {
 				name = GER_Lessons_from_the_war
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -10681,7 +10681,7 @@
 
 			add_doctrine_cost_reduction = {
 				name = HUN_arpad
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -10961,7 +10961,7 @@
 
 			add_doctrine_cost_reduction = {
 				name = HUN_villam
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}

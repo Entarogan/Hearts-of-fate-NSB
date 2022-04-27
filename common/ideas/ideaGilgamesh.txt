@@ -1179,213 +1179,26 @@ ideas = {
 	}
   
   political_advisor = { 
-    irq_siduri = {
-		allowed = {
-			original_tag = IRQ
-		}
-		
-		traits = {
-			government_head_siduri
-		}
-		
-		picture = siduri
-		
-		ai_will_do = {
-			factor = 20
-		}
-    }
-    
-    irq_barzan = {
-		allowed = {
-			original_tag = IRQ
-		}
-			
-		traits = {
-			bandit_barzan
-		}
-      
-		available = {
-			has_completed_focus = ira_ally_the_militias
-		}
-		
-		picture = barzan
-		
-		ai_will_do = {
-			factor = 3
-		}
-    }
-    
-    irq_flueger = {
-      allowed = {
-        original_tag = IRQ
-      }
-      
-      traits = {
-        mercenary_head
-      }
-      
-      available = {
-        has_completed_focus = ira_mercenary
-      }
-      
-      picture = flueger
-      
-      ai_will_do = {
-				factor = 5
-			}
-    }
-    
-    irq_atrum_galliasta = {
-      allowed = {
-        original_tag = IRQ
-      }
-      
-      traits = {
-        upstart
-      }
-      
-      available = {
-        has_completed_focus = ira_ishtar_mineral_company
-      }
-      
-      picture = atrum_galliasta
-      
-      ai_will_do = {
-				factor = 6
-			}
-    }
     
   
   }
   
   army_chief = { 
     
-    IRQ_Enkidu = {
-			
-			picture = enkidu
-			
-			allowed = {
-				original_tag = IRQ
-			}
-			
-
-			
-			traits = { army_chief_maneuver_3 }
-			
-			ai_will_do = {
-				factor = 10
-			}
-		}
     
     
   }
   
   air_chief = {
-    IRQ_Ishtar = {
-      picture = ishtar
-			
-			allowed = {
-				original_tag = IRQ
-			}
-			
 
-			
-			traits = { air_chief_ground_support_Ishtar }
-			
-			ai_will_do = {
-				factor = 10
-			}
-    }
   
   }
   
   navy_chief = {
-    IRQ_Ziusudra = {
-      picture = hassan_i_sabbah
-			
-			allowed = {
-				original_tag = IRQ
-			}
-			available = {
-        has_completed_focus = ira_Ziusudra
-      }
-
-			
-			traits = { navy_capital_ship_3 }
-			
-			ai_will_do = {
-				factor = 10
-			}
-    }
   
   }
   
   high_command = {
-    IRQ_Tiamat = {
-      picture = tiamat
-			
-			allowed = {
-				original_tag = IRQ
-			}
-      
-      available = {
-        has_completed_focus = ira_wake_tiamat
-      }
-      
-			traits = { navy_amphibious_assault_3 }
-			
-			ai_will_do = {
-				factor = 5
-			}
-    }
-    
-    IRQ_Gilgamesh = {
-      picture = gilgamesh
-			
-			allowed = {
-				original_tag = IRQ
-			}
-      available = {
-        NOT = { has_country_flag = GILGAMESH_DIED }
-      }
-      
-			traits = { army_artillery_3 }
-			
-			ai_will_do = {
-				factor = 10
-			}
-    }
-    
-    IRQ_Semiramis = {
-      picture = semiramis
-			
-			allowed = {
-				original_tag = IRQ
-			}
-
-			traits = { air_strategic_bombing_3 }
-			
-			ai_will_do = {
-				factor = 5
-			}
-    }
-    
-    IRQ_Ereshkigal = {
-			
-			picture = ereshkigal
-			
-			allowed = {
-				original_tag = IRQ
-			}
-			
-
-			
-			traits = { army_chief_entrenchment_expert }
-			
-			ai_will_do = {
-				factor = 20
-			}
-		}
   
   }
 	
