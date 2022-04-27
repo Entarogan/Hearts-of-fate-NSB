@@ -4355,7 +4355,7 @@ country_event = {
       AND = {
         RUS = { is_ai = yes } 
         SOV = { is_ai = yes } 
-			  date > 1938.9.1	
+			  date > 1938.6.1	
       }
       AND = {
 				OR = {
@@ -4521,7 +4521,7 @@ country_event = {   ### JAP傀儡RUS
 				is_subject = no
 			}
 
-			set_autonomy = { target = FROM autonomy_state = autonomy_dominion }
+			set_autonomy = { target = FROM autonomy_state = autonomy_Far_east_protectorate }
 		}
 		if = {
 			limit = { 

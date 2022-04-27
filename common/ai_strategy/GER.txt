@@ -228,6 +228,66 @@ GER_unit_production = {
 
 }	
 
+GER_armored_production = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		has_tech = mechanised_infantry
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+
+}
+
+GER_highered_armored_production = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		num_of_military_factories > 249
+	}
+	abort = {
+		num_of_military_factories < 250
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 3
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 7
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+}
+
 GER_halt_light_armor_production_in_transitioning = {
 
 	allowed = {
@@ -3818,73 +3878,6 @@ GER_Dying_RUS = {
 		type = consider_weak
 		id = "RUS"
 		value = -999
-	}
-
-}
-
-
-GER_Apennine_front_is_at_a_standstill = {
-	allowed = {
-		original_tag = GER
-	}
-
-  enable = {
-		date < 1943.1.1
-		stockpile_ratio = {
-			archetype = infantry_equipment
-			ratio < 0.75
-		}
-		original_tag = GER
-    has_war_with = ITA
-		ITA = { surrender_progress < 0.3 }
-		has_country_flag = GER_Begin_the_battle_of_Apennines_flag
-		has_country_flag = GER_End_the_battle_of_Apennines_flag
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		area = Apennin_hof
-		ratio = 0
-		ordertype = front
-		priority = 999
-		execution_type = careful
-		execute_order = no
-		manual_attack = yes
-	}
-
-}
-
-GER_Kaiserreich_Trench_warfare = {
-	allowed = {
-		original_tag = GER
-	}
-
-  enable = {
-    casualties > 750000
-    has_army_manpower = { size < 1499999 }
-		original_tag = GER
-    has_war_with = FRA
-		FRA = { is_ai = no }
-		FRA = { is_subject = no }
-    FRA = { has_capitulated = no }
-		FRA = { surrender_progress < 0.3 }
-		NOT = { has_country_flag = GER_Start_the_French_campaign_flag }
-		NOT = { has_country_flag = GER_Begin_the_battle_of_Apennines_flag }
-	}
-	
-	abort_when_not_enabled = yes
-
-	ai_strategy = {
-		type = front_control
-		area = GER_west_line_hof
-		ratio = 0
-		ordertype = front
-		priority = 999
-		execution_type = careful
-		execute_order = no
-		manual_attack = yes
 	}
 
 }

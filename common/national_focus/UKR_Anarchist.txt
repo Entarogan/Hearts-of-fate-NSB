@@ -17,9 +17,16 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_the_great_family
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	x = 23
 	y = 5
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_stability = 0.10
+	}
 
 }
 shared_focus = {
@@ -49,13 +56,21 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_develop_guerrilla_tactics
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
+	available = {
+		
+	}
 	prerequisite = {
 		focus = UKR_Anarchist_the_great_family
 	}
 	x = 3
 	y = 1
 	relative_position_id = UKR_Anarchist_the_great_family
+	completion_reward = {
+		hidden_effect = {
+			country_event = { id = ukr_reunion.13  days = 70 } 
+		}
+	}
 
 }
 shared_focus = {
@@ -91,19 +106,39 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_Strengthen_displinary
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_New_Batko
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_New_Batko
+	completion_reward = {
+		if = {
+			limit = {
+				has_idea = UKR_Black_army_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Black_army_idea
+				add_idea = UKR_Black_army_05_idea
+			}
+		}
+		if = {
+			limit = {
+				has_idea = UKR_Black_army_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Black_army_1_idea
+				add_idea = UKR_Black_army_15_idea
+			}
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_protect_peasants
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_New_Batko
 	}
@@ -115,7 +150,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_maximal_recruitment
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = UKR_Anarchist_New_Batko
 	}
@@ -145,7 +180,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_defend_NKVD
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 2.00
 	prerequisite = {
 		focus = UKR_Anarchist_the_Reunion
 	}
@@ -157,7 +192,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_fight_against_petilura
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_the_Reunion
 	}
@@ -165,6 +200,18 @@ shared_focus = {
 	y = 1
 	relative_position_id = UKR_Anarchist_the_Reunion
 	completion_reward = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.05
+		}
 		hidden_effect = {
 			country_event = { id = ukr_reunion.6 days = 3 }
 		}
@@ -174,7 +221,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_pludge_Soviet_collector
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_the_Reunion
 	}
@@ -182,6 +229,13 @@ shared_focus = {
 	y = 1
 	relative_position_id = UKR_Anarchist_the_Reunion
 	completion_reward = {
+		if = {
+			limit = {
+				SOV = { NOT = { has_idea = UKR_Destruction_behind_enemy_lines_idea } }
+			}
+			SOV = { add_ideas = UKR_Destruction_behind_enemy_lines_idea }
+		}
+		SOV = { add_political_power = -50 }
 		hidden_effect = {
 			country_event = { id = ukr_reunion.7 days = 3 }
 		}
@@ -252,19 +306,28 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_military_democracy
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_the_great_family
+	}
+	available = {
+		has_idea = UKR_Cossack_tradition_idea
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_the_great_family
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Cossack_tradition_idea
+			add_idea = UKR_Cossack_military_democracy_idea
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_remove_antisemitism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_the_great_family
 	}
@@ -272,7 +335,18 @@ shared_focus = {
 	y = 1
 	relative_position_id = UKR_Anarchist_the_great_family
 	completion_reward = {
-		country_event = { id = ukr_reunion.13  days = 70 } 
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.10
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		remove_ideas = { UKR_OUN_subversion }
+		hidden_effect = {
+			country_event = { id = ukr_reunion.13  days = 70 } 
+		}
 	}
 
 }
@@ -575,7 +649,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_ensure_ideological_integrity
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_military_democracy
 	}
@@ -590,7 +664,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_fair_nationalism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_military_democracy
 	}

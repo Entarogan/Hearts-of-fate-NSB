@@ -3434,15 +3434,15 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		ai_will_do = {
-			factor = 150
+			factor = 300
 			modifier = {
 				factor = 3
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+					date > 1942.1.1
+					casualties > 500000
+					has_defensive_war = yes
+					surrender_progress > 0.10
+				}
 			}
 		}
 		
@@ -3582,16 +3582,21 @@ focus_tree = {
 			factor = 150
 			modifier = {
 				factor = 3
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+					date > 1942.1.1
+					casualties > 500000
+					has_defensive_war = yes
+					surrender_progress > 0.10
+				}
 			}
 		}
 		
 		completion_reward = {
+
+			swap_ideas = {
+				remove_idea = GER_Offense_is_the_best_defense_idea
+				add_idea = GER_Offense_is_the_best_defense_1_idea
+			}
 
 			add_tech_bonus = {
 				name = GER_Modern_infantry
@@ -3651,6 +3656,50 @@ focus_tree = {
 	}
 
 	focus = {
+		id = GER_German_Glory
+		icon = GFX_GER_Valkist_glory
+		prerequisite = { focus = GER_Standard_tank_design }
+
+		prerequisite = { focus = GER_Strengthen_the_support_system }
+		x = 1
+		y = 1
+
+		relative_position_id = GER_Standard_tank_design
+
+		cost = 1
+
+		available = {
+			has_war = yes
+			surrender_progress < 0.05
+            has_tech = modern_blitzkrieg
+		}
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 3
+				or = {
+				  date > 1942.1.1
+				  casualties > 500000
+				  has_defensive_war = yes
+				  surrender_progress > 0.10
+				}
+			}
+		}
+		
+		completion_reward = {
+
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+
+		}
+	}
+
+	focus = {
 		id = GER_air_innovation
 		icon = GFX_GER_trust_in_the_luftwaffe
 		prerequisite = { focus = GER_Wehrmacht }
@@ -3694,7 +3743,7 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = air_sup_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 2
 				category = battlefield_support_tree
 			}
@@ -4028,7 +4077,7 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = GER_CAS_doctrine
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 3
 				category = battlefield_support_tree
 			}
@@ -4482,19 +4531,19 @@ focus_tree = {
 			factor = 150
 			modifier = {
 				factor = 2
-        or = {
+				or = {
 					casualties > 3000000
-					surrender_progress > 0.15
-        }
+					surrender_progress > 0.30
+				}
 			}
 			modifier = {
 				factor = 3
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+					date > 1942.1.1
+					casualties > 500000
+					has_defensive_war = yes
+					surrender_progress > 0.10
+				}
 			}
 		}
 		
@@ -4504,7 +4553,7 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = GER_Lessons_from_the_war
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_mobile_warfare
 			}
@@ -4530,12 +4579,12 @@ focus_tree = {
 			factor = 150
 			modifier = {
 				factor = 3
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+					date > 1942.1.1
+					casualties > 500000
+					has_defensive_war = yes
+					surrender_progress > 0.10
+				}
 			}
 		}
 		

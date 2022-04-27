@@ -34,5 +34,14 @@ ideas = {
 				pocket_penalty = -0.1
 			}
 		}
+
+		zuodehao = {
+			available = {
+				is_ai = yes
+			}
+			modifier = {
+				research_speed_factor = 0.30
+			}
+		}
 	}
 }

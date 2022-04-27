@@ -1808,14 +1808,39 @@ ideas = {
 
 			available = {
 				is_subject = no
-      }
+            }
 			
 			removal_cost = -1
 
 			picture = aggressive_obk
 
 			modifier = {
-        army_attack_factor = 0.10
+                army_attack_factor = 0.10
+			}
+		}
+
+		GER_Offense_is_the_best_defense_1_idea = { 
+
+			allowed = {
+				always = no 
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_subject = no
+            }
+			
+			removal_cost = -1
+
+			picture = aggressive_obk
+
+			modifier = {
+				cas_damage_reduction = 0.05
+				recon_factor = 0.05
+                army_attack_factor = 0.10
 			}
 		}
 
@@ -3288,102 +3313,6 @@ ideas = {
 	
 	political_advisor = {
 
-		Ferdinand_von_Bredow_advisor = {
-
-      picture = bredow
-			
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-				NOT = { has_completed_focus = GER_Clean_up_Juncker }
-			}
-
-			available = {
-				NOT = { has_idea = rudolf_hess }	
-				NOT = { has_completed_focus = GER_Clean_up_Juncker }
-			}
-			
-			traits = { Representative_of_the_Wehrmacht }
-
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		herman_Goring_advisor = {
-
-      picture = goering
-			
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				NOT = { has_idea = goering }	
-        NOT = { has_country_flag = arrest_goering }
-				has_completed_focus = GER_Goring_Project
-				NOT = { has_completed_focus = GER_Authorize_the_new_armaments_minister }
-			}
-
-			cost = 75
-			
-			traits = { Corrupt_bureaucracy Military_builders }
-
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		otto_Strasser_advisor = {
-
-      picture = otto_strasser
-			
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-        NOT = { has_country_flag = arrest_Strasser }
-				has_completed_focus = GER_Strasser_Project
-			}
-
-			cost = 75
-			
-			traits = { Radical_reformer }
-
-			ai_will_do = {
-				factor = 100
-			}
-		}
-
-		Illyasviel_von_Einzbern_advisor = {
-
-      picture = Illyasviel_von_Einzbern
-			
-			allowed = {
-				original_tag = GER
-			}
-
-			visible = {
-		    has_country_flag = GER_Illyasviel_von_Einzbern_flag
-			}
-
-			available = {
-
-			}
-
-			cost = 75
-			
-			traits = { feminist_ultranationalist }
-
-			ai_will_do = {
-				factor = 5
-				modifier = {
-					factor = 5
-					has_country_flag = GER_Strasser_leads_economic_policy_flag
-				}
-			}
-		}
 
   }
 

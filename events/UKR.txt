@@ -1,4 +1,8 @@
-﻿add_namespace = ukr
+﻿####
+## Made by Yezhov/Entarogan
+####
+
+add_namespace = ukr
 
 # Khrushchev_goes_to_Moscow
 country_event = {
@@ -99,6 +103,10 @@ country_event = {
 		add_popularity = { 
 			ideology = communism 
 			popularity = -0.50 
+		}
+
+		add_ideas = {
+			UKR_splitted_country
 		}
 
 		drop_cosmetic_tag = yes
@@ -253,6 +261,8 @@ country_event = {
 		date > 1937.2.20
 		UKR = { is_subject = no }
 		has_war = yes
+		#### Banned due to the new version
+		always = no
 	}
 	
 	mean_time_to_happen = {
@@ -606,6 +616,8 @@ country_event = {   #### Ukrainian Rebellion introduction
 		}
 
 		add_political_power = 20
+
+		country_event = { id = ukr.11  days = 35 }
 	}
 
 }
@@ -635,7 +647,6 @@ country_event = {   #### Assassinate Konovalets
 			Promote_leader = yes
 			Country_leader = {
 			ideology = nazism
-				expire = “1965.1.1.1”
 				traits = {
 					
 				}
@@ -643,6 +654,8 @@ country_event = {   #### Assassinate Konovalets
 		}
 
 		retire_character = UKR_yevhen_konovalets
+
+		country_event = { id = ukr.16 days = 10 }
 	}
 
 	option = {  ### Konovalets alive
@@ -848,6 +861,8 @@ country_event = {  ### Intensive...
 			name = UKR_black_army
 			long_name = UKR_black_army_long
 		}
+
+		country_event = { id = ukr.17  days = 25 }
 	}
 }
 
@@ -901,7 +916,6 @@ country_event = {  ### Bandera's coup against Petlura
 			Promote_leader = yes
 			Country_leader = {
 			ideology = fascism_ideology
-				expire = “1965.1.1.1”
 				traits = {
 				}
 			}
@@ -917,6 +931,9 @@ country_event = {  ### Bandera's coup against Petlura
 		add_popularity = {
 			ideology = communism
 			popularity = 0.15
+		}
+		ai_chance = {
+			factor = 0
 		}
 
 		#### TODO: Set Party Name
@@ -956,10 +973,18 @@ country_event = {  ### Anarchist Triumph
 			Promote_leader = yes
 			Country_leader = {
 			ideology = libertarian_socialist
-				expire = “1965.1.1.1”
+				expire = “1965.1.1”
 				traits = {
 					
 				}
+			}
+		}
+
+		if = {
+			limit = { has_idea = UKR_anarchist_guerrilla }
+			swap_ideas = {
+				remove_idea = UKR_anarchist_guerrilla
+				add_idea = UKR_anarchist_low_popularity_1
 			}
 		}
 

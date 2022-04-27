@@ -407,12 +407,12 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_equipment
+					type = light_tank_chassis
 					amount = 150
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = medium_tank_equipment
+					type = medium_tank_chassis
 					amount = 750
 					producer = GER
 				}
@@ -432,7 +432,7 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = heavy_tank_equipment
+					type = heavy_tank_chassis
 					amount = 250
 					producer = GER
 				}
@@ -563,12 +563,12 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_equipment
+					type = light_tank_chassis
 					amount = 150
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = medium_tank_equipment
+					type = medium_tank_chassis
 					amount = 750
 					producer = GER
 				}
@@ -588,7 +588,7 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = heavy_tank_equipment
+					type = heavy_tank_chassis
 					amount = 250
 					producer = GER
 				}
@@ -1683,12 +1683,12 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_equipment
+					type = light_tank_chassis
 					amount = 150
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = medium_tank_equipment
+					type = medium_tank_chassis
 					amount = 750
 					producer = GER
 				}
@@ -1708,7 +1708,7 @@ GER_war_plan = {
 					producer = GER
 				}
 				add_equipment_to_stockpile = {
-					type = heavy_tank_equipment
+					type = heavy_tank_chassis
 					amount = 250
 					producer = GER
 				}
@@ -6446,15 +6446,15 @@ GER_purchase_equipment = {
 					surrender_progress > 0.3
 					OR = {
 						stockpile_ratio = {
-							archetype = light_tank_equipment
+							archetype = light_tank_chassis
 							ratio < 0.75
 						}
 						stockpile_ratio = {
-							archetype = medium_tank_equipment
+							archetype = medium_tank_chassis
 							ratio < 0.75
 						}
 						stockpile_ratio = {
-							archetype = heavy_tank_equipment
+							archetype = heavy_tank_chassis
 							ratio < 0.75
 						}
 					}
@@ -6467,13 +6467,13 @@ GER_purchase_equipment = {
 			modifier = {
 				factor = 0
 				NOT = {
-					has_tech = gwtank
+					has_tech = gwtank_chassis
 				}
 				NOT = {
-					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis
 				}
 				NOT = {
-					has_tech = basic_heavy_tank
+					has_tech = basic_heavy_tank_chassis
 				}
 			}
 			modifier = {
@@ -6482,15 +6482,15 @@ GER_purchase_equipment = {
 					num_of_civilian_factories < 10
 					AND = {
 						stockpile_ratio = {
-							archetype = light_tank_equipment
+							archetype = light_tank_chassis
 							ratio > 0.75
 						}
 						stockpile_ratio = {
-							archetype = medium_tank_equipment
+							archetype = medium_tank_chassis
 							ratio > 0.75
 						}
 						stockpile_ratio = {
-							archetype = heavy_tank_equipment
+							archetype = heavy_tank_chassis
 							ratio > 0.75
 						}
 					}
@@ -6501,6 +6501,11 @@ GER_purchase_equipment = {
 			civilian_factory_use = 1
 		}
 		complete_effect = {
+
+			hidden_effect = {
+			    set_variable = { GER_armor_seller = GER }
+			}
+
 			country_event = more_ger.42
 			GER = {
 				add_offsite_building = {
@@ -6522,69 +6527,73 @@ GER_purchase_equipment = {
 			}
 		}
 		remove_effect = {
+
 			if = {
 				limit = {
-					has_country_flag = GER_purchase_light_tank_equipment_flag
+					GER = { has_country_flag = GER_purchase_light_tank_equipment_flag }
 				}
 				if = {
 					limit = {
 						has_idea = HUN_Sepp_Janko
 					}
 					add_equipment_to_stockpile = {
-						type = light_tank_equipment
+						type = var:GER_armor_type
 						amount = 10
 						producer = GER
 					}
 				}
 				add_equipment_to_stockpile = {
-					type = light_tank_equipment
+					type = var:GER_armor_type
 					amount = 40
 					producer = GER
 				}
-				clr_country_flag = GER_purchase_light_tank_equipment_flag
+				GER = { clr_country_flag = GER_purchase_light_tank_equipment_flag }
 			}
+
 			if = {
 				limit = {
-					has_country_flag = GER_purchase_medium_tank_equipment_flag
+					GER = { has_country_flag = GER_purchase_medium_tank_equipment_flag }
 				}
 				if = {
 					limit = {
 						has_idea = HUN_Sepp_Janko
 					}
 					add_equipment_to_stockpile = {
-						type = medium_tank_equipment
+						type = var:GER_armor_type
 						amount = 5
 						producer = GER
 					}
 				}
 				add_equipment_to_stockpile = {
-					type = medium_tank_equipment
+					type = var:GER_armor_type
 					amount = 20
 					producer = GER
 				}
-				clr_country_flag = GER_purchase_medium_tank_equipment_flag
+				GER = { clr_country_flag = GER_purchase_medium_tank_equipment_flag }
 			}
+
 			if = {
 				limit = {
-					has_country_flag = GER_purchase_heavy_tank_equipment_flag
+					GER = { has_country_flag = GER_purchase_heavy_tank_equipment_flag }
 				}
 				if = {
 					limit = {
 						has_idea = HUN_Sepp_Janko
 					}
 					add_equipment_to_stockpile = {
-						type = heavy_tank_equipment
+						type = var:GER_armor_type
 						amount = 2
 						producer = GER
 					}
 				}
 				add_equipment_to_stockpile = {
-					type = heavy_tank_equipment
+					type = var:GER_armor_type
 					amount = 10
 					producer = GER
 				}
-				clr_country_flag = GER_purchase_heavy_tank_equipment_flag
+				GER = { clr_country_flag = GER_purchase_heavy_tank_equipment_flag }
 			}
+
 			GER = {
 				add_offsite_building = {
 					type = industrial_complex

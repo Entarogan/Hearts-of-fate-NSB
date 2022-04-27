@@ -1578,7 +1578,7 @@ focus_tree = {
 				name = SOV_Reorganizing_the_Red_Army
 				cost_reduction = 0.75
 				uses = 1
-				category = land_doctrine
+				category = cat_mass_assault
 			} 
 
 		}
@@ -2467,7 +2467,7 @@ focus_tree = {
 				name = SOV_Lessons_from_War_Infantry_Tactics
 				cost_reduction = 0.5
 				uses = 4
-				category = land_doctrine
+				category = cat_mass_assault
 			} 
 
       swap_ideas = {
@@ -2598,7 +2598,7 @@ focus_tree = {
 				name = SOV_Mass_Breakthroughs
 				cost_reduction = 1.0
 				uses = 1
-				category = land_doctrine
+				category = cat_mass_assault
 			} 
 
 			add_tech_bonus = {
@@ -2691,19 +2691,19 @@ focus_tree = {
 		available = {
 			has_war = yes
 			any_enemy_country = {
-        NOT = { TAG = RUS }
+				NOT = { TAG = RUS }
 				is_major = yes
 			}
-      or = {
-        date > 1942.1.1
-        casualties > 500000
-        surrender_progress > 0.20
-      }
+			or = {
+				date > 1942.1.1
+				casualties > 500000
+				surrender_progress > 0.20
+			}
 		}
 
-    bypass = {
+		bypass = {
 
-    }
+		}
 
 		available_if_capitulated = yes
 
@@ -2711,39 +2711,45 @@ focus_tree = {
 
 			army_experience = 100
 
-      add_tech_bonus = {
-        name = SOV_Lessons_from_War_tank_Tactics
+			hidden_effect = {
+				set_technology = { masterful_blitz = 1 popup = no }
+			}
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+
+			add_tech_bonus = {
+				name = SOV_Lessons_from_War_tank_Tactics
 				bonus = 3.0
 				ahead_reduction = 1.0
-        uses = 1
-        category = armor
-      }
+				uses = 1
+				category = armor
+			}
+
 			add_doctrine_cost_reduction = {
 				name = SOV_Lessons_from_War_tank_Tactics
 				cost_reduction = 0.5
 				uses = 4
-				category = land_doctrine
+				category = cat_mass_assault
 			} 
 
-      if = {
-        limit = {
-          has_idea = SOV_Mass_Breakthroughs_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_Mass_Breakthroughs_idea
-          add_idea = SOV_Mass_Breakthroughs_1_idea
-        }
-      }
+			if = {
+				limit = {
+				    has_idea = SOV_Mass_Breakthroughs_idea
+				}
+				swap_ideas = {
+					remove_idea = SOV_Mass_Breakthroughs_idea
+					add_idea = SOV_Mass_Breakthroughs_1_idea
+				}
+			}
 
-      if = {
-        limit = {
-          has_idea = SOV_Mass_Breakthroughs_idea_1
-        }
-        swap_ideas = {
-          remove_idea = SOV_Mass_Breakthroughs_idea_1
-          add_idea = SOV_Mass_Breakthroughs_1_idea_1
-        }
-      }
+			if = {
+				limit = {
+				    has_idea = SOV_Mass_Breakthroughs_idea_1
+				}
+				swap_ideas = {
+					remove_idea = SOV_Mass_Breakthroughs_idea_1
+					add_idea = SOV_Mass_Breakthroughs_1_idea_1
+				}
+			}
 
 		}
 	}
@@ -2775,7 +2781,7 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = SOV_transpolar_flights
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -3233,7 +3239,7 @@ focus_tree = {
 
 			add_doctrine_cost_reduction = {
 				name = GER_Joint_air_to_ground_operations
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 4
 				category = air_doctrine
 			}	
@@ -5971,23 +5977,23 @@ focus_tree = {
 		relative_position_id = SOV_Soviet_industrial_power
 		cost = 5
 		ai_will_do = {
-			factor = 20
-      modifier = {
-        date < 1942.1.1
-				or = {
-					GER = { surrender_progress < 0.3 }
-					GER = { casualties < 1000000 }
-					GER = { has_war = no }
-				}
-        factor = 0
-      }
-      modifier = {
+			factor = 1
+			modifier = {
+				date > 1942.1.1
+				factor = 20
+			}
+			modifier = {
 				or = {
 					GER = { surrender_progress > 0.3 }
 					GER = { casualties > 1500000 }
+					AND = {
+						GER = { has_war_with = FRA }
+						FRA = { is_subject = no }
+						FRA = { surrender_progress < 0.5 }
+					}
 				}
-        factor = 100
-      }
+				factor = 100
+			}
 		}
 
     available = {

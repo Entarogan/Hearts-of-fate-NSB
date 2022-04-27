@@ -1206,6 +1206,7 @@ country_event = {     #中亚叛乱2
 				transfer_state = 742
 				transfer_state = 405
 				transfer_state = 584
+				transfer_state = 830
 			}
 		}
 

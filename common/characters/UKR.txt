@@ -238,7 +238,7 @@ characters={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_Nestor_Makhno.tga"
+				large="gfx/leaders/UKR/Portrait_UKR_Reunion_Makhnovshchina.png"
 			}
 		}
 	}

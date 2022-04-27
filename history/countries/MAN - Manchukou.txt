@@ -51,7 +51,7 @@ if = {
 JAP = {
 	set_autonomy = {
 		target = MAN
-		autonomous_state = autonomy_colony
+		autonomous_state = autonomy_Kwantung_Army
 		freedom_level = 0.35
 	}
 }

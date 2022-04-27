@@ -5,6 +5,6 @@ CZE_purchase_equipment = {
 	priority = 100
 
 	allowed = {
-		always = no
+		always = yes
 	}
 }

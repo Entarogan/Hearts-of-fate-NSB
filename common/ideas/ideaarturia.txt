@@ -2,6 +2,32 @@ ideas = {
 
     country = {
 
+		ENG_Colonial_gains_idea = {
+			
+			available = {
+				is_subject = no		
+				NOT = { has_government = communism }
+				NOT = { has_government = fascism }
+			}
+
+			picture = SPR_seize_the_gold_reserves
+			
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				global_building_slots_factor = 0.1
+				conscription = 0.02
+		        conscription_factor = 0.05
+			}
+		}
+
       ENG_Empire_Mobilization_idea = {
 
         allowed = {
@@ -1247,282 +1273,20 @@ ideas = {
 	}
 	
 	political_advisor = {
-	ENG_merlin = {
-			
-			picture = advisor_merlin
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			available = {
-				has_government = neutrality
-			}
-			
-			traits = { kings_advisor }
 
-			ai_will_do = {
-				factor = 10
-				modifier = {
-					factor = 2
-					has_war = no
-				}
-			}
-
-		}
-		
-	ENG_elmelloi = {
-			
-			picture = advisor_elmelloi
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			available = {
-				NOT = {
-					has_country_leader = {
-						name = "Lord El Melloi II"
-						ruling_only = yes
-					}
-				}
-				NOT = { has_completed_focus = uk_london_incident_focus }
-			}
-			
-			traits = { strategy_educator }
-			
-			research_bonus = {
-				land_doctrine = 0.08
-				air_doctrine = 0.08
-				naval_doctrine = 0.08
-			}
-
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 2
-					has_war = no
-				}
-			}
-
-		}
-		
-	ENG_charles_babbage = {
-			
-			picture = advisor_babbage
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-			traits = { machinery_expert }
-			
-			research_bonus = {
-				electronics = 0.20
-				armor = 0.15
-			}
-		}
-		
-	ENG_holmes = {
-			
-			picture = advisor_holmes
-			
-			allowed = {
-				original_tag = ENG
-				has_dlc = "La Resistance" 
-			}
-
-			available = {
-				has_intelligence_agency = yes
-				NOT = { has_idea = reines_political }
-			}
-			
-			traits = { super_detective }
-
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 10
-					has_war = yes
-				}
-			}
-
-		}
-		
-	ENG_moriarty = {
-			
-			picture = advisor_moriarty
-			
-			allowed = {
-				original_tag = ENG
-			}
-
-			available = {
-				NOT = { has_idea = ENG_lev }
-				NOT = { has_completed_focus = uk_london_incident_focus }
-				NOT = { has_country_flag = lev_suicided }
-			}
-			
-			traits = { crime_head }
-
-			ai_will_do = {
-				factor = 2
-				modifier = {
-					factor = 3
-					has_war = yes
-				}
-			}
-
-		}
     }
 
     army_chief = {
 	
-		mash_kyrielight = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = chief_mash
-			
-			traits = { lord_camelot }
-			
-			available = {
-				NOT = { has_government = fascism }
-			}
-			
-			ai_will_do = {
-				factor = 4
-			}
-		}
-		
-		mordred = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			available = {
-				NOT = { has_government = fascism }
-				NOT = { has_idea = admiral_mordred }
-			}
-			
-            picture = chief_mordred
-			
-			traits = { charge_1 }
-			
-			ai_will_do = {
-				factor = 3
-			}
-		}
-		
-		tristan = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = chief_tristan
-			
-			traits = { Joint_operations }
-			
-			ai_will_do = {
-				factor = 3
-			}
-		}
+
     }
 	
 	high_command = {
 	
-	    gawain = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = command_gawain
-			
-			traits = { Boost_morale }
-			
-			ai_will_do = {
-				factor = 3
-			}
-		}
-		
-	    lancelot = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = command_lancelot
-			
-			traits = { Fierce_general }
-			
-			ai_will_do = {
-				factor = 5
-			}
-		}
-		
-	    agravain = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = command_agravain
-			
-			traits = { Butcher_1 }
-			
-			ai_will_do = {
-				factor = 3
-			}
-		}
-		
-		arturia_kay = {
-			
-			allowed = {
-				original_tag = ENG
-			}
-			
-            picture = command_kay
-			
-			traits = { Logistics_support }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	
 	}
 	
 	theorist = {
-		
-		ENG_Sion = {
-						
-			allowed = {
-				original_tag = ENG
-			}
-			
-			picture = sion_eltnam_atlasia
-			
-			available = {
-				has_completed_focus = uk_cooperation_with_atlas
-				or = {
-					ENG = { controls_state = 446 }
-					AND = {
-						EGY = { controls_state = 446 }
-						EGY = { is_subject_of = ENG }
-					}
-				}
-			}
-			
-			research_bonus = {
-				cat_grand_battle_plan = 0.15
-			}
-			
-			traits = { all_in_plan }
-		}
 		
 		
 		

@@ -64,7 +64,7 @@ focus_tree = {
 
     shared_focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	shared_focus = UKR_Anarchist_New_Batko
-	shared_focus = UKR_Anarchist_the_great_famility
+	shared_focus = UKR_Anarchist_the_great_family
 }
 
 focus_tree = {
@@ -82,7 +82,7 @@ focus_tree = {
 
     shared_focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	shared_focus = UKR_Anarchist_New_Batko
-	shared_focus = UKR_Anarchist_the_great_famility
+	shared_focus = UKR_Anarchist_the_great_family
 	shared_focus = UKR_generic_Zaporizhzhia_industrial_complex
 	shared_focus = UKR_generic_Ukraine_is_not_yet_lost
 	shared_focus = UKR_generic_unfulfilled_ambition

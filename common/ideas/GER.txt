@@ -304,12 +304,8 @@ ideas = {
 
 			available = {
 			  NOT = { GER = { has_war_with = ITA } }
-        NOT = { ITA = { is_in_faction_with = ROM } }
-        NOT = { ITA = { is_in_faction_with = HUN } }
         NOT = { ITA = { is_in_faction_with = FRA } }
         NOT = { ITA = { is_in_faction_with = ENG } }
-        NOT = { GER = { is_in_faction_with = ROM } }
-        NOT = { GER = { is_in_faction_with = HUN } }
         NOT = { GER = { is_in_faction_with = FRA } }
         NOT = { GER = { is_in_faction_with = ENG } }
       }

@@ -17,6 +17,24 @@ country_event = {
 		### Welcome back, Batko!
 		add_political_power = 25
 		add_war_support = 0.10
+		if = {
+			limit = {
+				has_idea = UKR_independent_Army_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_independent_Army_idea
+				add_idea = UKR_Black_army_idea
+			}
+		}
+		if = {
+			limit = {
+				has_idea = UKR_independent_Army_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_independent_Army_1_idea
+				add_idea = UKR_Black_army_idea
+			}
+		}
 
 		### Remove Some Fascist Characters
 		hidden_effect = {
@@ -73,7 +91,6 @@ country_event = {
 			Promote_leader = yes
 			Country_leader = {
 			ideology = libertarian_socialist
-				expire = “1965.1.1.1”
 				traits = {
 					
 				}
@@ -81,7 +98,9 @@ country_event = {
 		}
 
 		retire_character = UKR_Nestor_Makhno
-
+		hidden_effect = {
+			country_event = { id = ukr_reunion.4  days = 10 }
+		}
 	}
 }
 
@@ -104,7 +123,6 @@ country_event = {
 			Promote_leader = yes
 			Country_leader = {
 				ideology = libertarian_socialist
-				expire = “1965.1.1.1”
 				traits = {
 					
 				}
@@ -137,6 +155,24 @@ country_event = {
 		}
 		hidden_effect = {
 			country_event = { id = ukr_reunion.12  days = 65 }
+		}
+		if = {
+			limit = {
+				has_idea = UKR_Black_army_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Black_army_idea
+				add_idea = UKR_Black_army_1_idea
+			}
+		}
+		if = {
+			limit = {
+				has_idea = UKR_Black_army_05_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Black_army_05_idea
+				add_idea = UKR_Black_army_15_idea
+			}
 		}
 	}
 
@@ -324,7 +360,6 @@ country_event = {   #### The Evolution of the Reunion
 			Promote_leader = yes
 			Country_leader = {
 			ideology = totalist
-				expire = “1965.1.1.1”
 				traits = {
 					
 				}

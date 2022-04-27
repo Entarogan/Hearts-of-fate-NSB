@@ -26,109 +26,217 @@ country_event = {
 			if = {
 				limit = { NOT = { has_tech = tech_military_police } }
 
-				set_technology = { tech_military_police = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_military_police }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_military_police = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = armored_car1 } }
 
-				set_technology = { armored_car1 = 1 }
+				if = {
+					limit = { is_researching_technology =  armored_car1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armored_car1 = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = basic_medium_tank_chassis } }
 
-				set_technology = { basic_medium_tank_chassis = 1 }
+				if = {
+					limit = { is_researching_technology =  basic_medium_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_tank_chassis = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = armor_tech_1 } }
 
-				set_technology = { armor_tech_1 = 1 }
+				if = {
+					limit = { is_researching_technology =  armor_tech_1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armor_tech_1 = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = armor_tech_2 } }
 
-				set_technology = { armor_tech_2 = 1 }
+				if = {
+					limit = { is_researching_technology =  armor_tech_2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armor_tech_2 = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = engine_tech_1 } }
 
-				set_technology = { engine_tech_1 = 1 }
+				if = {
+					limit = { is_researching_technology =  engine_tech_1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  engine_tech_1 = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = engine_tech_2 } }
 
-				set_technology = { engine_tech_2 = 1 }
+				if = {
+					limit = { is_researching_technology =  engine_tech_2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  engine_tech_2 = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = interwar_artillery } }
 
-				set_technology = { interwar_artillery = 1 }
+				if = {
+					limit = { is_researching_technology =  interwar_artillery }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  interwar_artillery = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = interwar_antiair } }
 
-				set_technology = { interwar_antiair = 1 }
+				if = {
+					limit = { is_researching_technology =  interwar_antiair }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  interwar_antiair = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = interwar_antitank } }
 
-				set_technology = { interwar_antitank = 1 }
+				if = {
+					limit = { is_researching_technology =  interwar_antitank }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  interwar_antitank = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = electronic_mechanical_engineering } }
 
-				set_technology = { electronic_mechanical_engineering = 1 }
+				if = {
+					limit = { is_researching_technology =  electronic_mechanical_engineering }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  electronic_mechanical_engineering = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = radio } }
 
-				set_technology = { radio = 1 }
+				if = {
+					limit = { is_researching_technology =  radio }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  radio = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = tech_maintenance_company } }
 
-				set_technology = { tech_maintenance_company = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_maintenance_company }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_maintenance_company = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = tech_field_hospital } }
 
-				set_technology = { tech_field_hospital = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_field_hospital }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_field_hospital = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = tech_logistics_company } }
 
-				set_technology = { tech_logistics_company = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_logistics_company }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_logistics_company = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = tech_signal_company } }
 
-				set_technology = { tech_signal_company = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_signal_company }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_signal_company = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = improved_light_tank_chassis } }
 
-				set_technology = { improved_light_tank_chassis = 1 }
+				if = {
+					limit = { is_researching_technology =  improved_light_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  improved_light_tank_chassis = 1 }
+				}
 			}
 
 			if = {
 				limit = { NOT = { has_tech = tech_engineers2 } }
 
-				set_technology = { tech_engineers2 = 1 }
+				if = {
+					limit = { is_researching_technology =  tech_engineers2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_engineers2 = 1 }
+				}
 			}
 
 			if = {
@@ -201,6 +309,33 @@ country_event = {
 					icon = "GFX_JAP_improved_light_tank_medium"
 				}
 
+			}
+
+			division_template = {
+				name = "infantry 21" 
+				priority = 1
+			  division_names_group = JAP_Inf_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }		
+
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+					artillery_brigade = { x = 2 y = 3 }	
+				}
+			 support = {
+					engineer = { x = 0 y = 0 }
+					light_tank_recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
+				}
 			}
 
 			division_template = {
@@ -306,25 +441,49 @@ country_event = {
 		if = {
 			limit = { NOT = { has_tech = artillery1 } }
 
-			set_technology = { artillery1 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery1 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = radio_detection } }
 
-			set_technology = { radio_detection = 1 }
+			if = {
+					limit = { is_researching_technology =  radio_detection }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  radio_detection = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = decimetric_radar } }
 
-			set_technology = { decimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  decimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  decimetric_radar = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = tech_maintenance_company2 } }
 
-			set_technology = { tech_maintenance_company2 = 1 }
+			if = {
+					limit = { is_researching_technology =  tech_maintenance_company2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  tech_maintenance_company2 = 1 }
+				}
 		}
 
 
@@ -355,67 +514,133 @@ country_event = {
 		if = {
 			limit = { NOT = { has_tech = improved_medium_tank_chassis } }
 
-			set_technology = { improved_medium_tank_chassis = 1 }
+			if = {
+					limit = { is_researching_technology =  improved_medium_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  improved_medium_tank_chassis = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = basic_medium_tank_chassis } }
 
-			set_technology = { basic_medium_tank_chassis = 1 }
+			if = {
+					limit = { is_researching_technology =  basic_medium_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  basic_medium_tank_chassis = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = mechanised_infantry } }
 
-			set_technology = { mechanised_infantry = 1 }
+			if = {
+					limit = { is_researching_technology =  mechanised_infantry }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  mechanised_infantry = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = armored_car2 } }
 
-			set_technology = { armored_car2 = 1 }
+			if = {
+					limit = { is_researching_technology =  armored_car2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armored_car2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = improved_decimetric_radar } }
 
-			set_technology = { improved_decimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  improved_decimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  improved_decimetric_radar = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = centimetric_radar } }
 
-			set_technology = { centimetric_radar = 1 }
+			if = {
+					limit = { is_researching_technology =  centimetric_radar }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  centimetric_radar = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = artillery2 } }
 
-			set_technology = { artillery2 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antiair1 } }
 
-			set_technology = { antiair1 = 1 }
+			if = {
+					limit = { is_researching_technology =  antiair1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antiair1 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antiair2 } }
 
-			set_technology = { antiair2 = 1 }
+			if = {
+					limit = { is_researching_technology =  antiair2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antiair2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank1 } }
 
-			set_technology = { antitank1 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank1 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank1 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank2 } }
 
-			set_technology = { antitank2 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank2 = 1 }
+				}
 		}
 
 
@@ -555,6 +780,37 @@ country_event = {
 			}
 
 			division_template = {
+				name = "mechanized 21" 
+				priority = 1
+			  division_names_group = JAP_MEC_01
+				regiments = {
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }			
+
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+
+					mechanized = { x = 2 y = 0 }
+					mechanized = { x = 2 y = 1 }
+					mechanized = { x = 2 y = 2 }
+
+					medium_tank_destroyer_brigade = { x = 3 y = 0 }
+
+					mot_anti_air_brigade = { x = 4 y = 0 }
+
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					armored_car_recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
+				}
+			}
+
+			division_template = {
 				name = "mechanized" 
 				priority = 1
 			  division_names_group = JAP_MEC_01
@@ -622,43 +878,85 @@ country_event = {
 		if = {
 			limit = { NOT = { has_tech = artillery2 } }
 
-			set_technology = { artillery2 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = artillery3 } }
 
-			set_technology = { artillery3 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank2 } }
 
-			set_technology = { antitank2 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank3 } }
 
-			set_technology = { antitank3 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = advanced_light_tank_chassis } }
 
-			set_technology = { advanced_light_tank_chassis = 1 }
+			if = {
+					limit = { is_researching_technology =  advanced_light_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  advanced_light_tank_chassis = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = armor_tech_3 } }
 
-			set_technology = { armor_tech_3 = 1 }
+			if = {
+					limit = { is_researching_technology =  armor_tech_3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armor_tech_3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = engine_tech_3 } }
 
-			set_technology = { engine_tech_3 = 1 }
+			if = {
+					limit = { is_researching_technology =  engine_tech_3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  engine_tech_3 = 1 }
+				}
 		}
 
 		if = {
@@ -784,91 +1082,181 @@ country_event = {
 		if = {
 			limit = { NOT = { has_tech = advanced_medium_tank_chassis } }
 
-			set_technology = { advanced_medium_tank_chassis = 1 }
+			if = {
+					limit = { is_researching_technology =  advanced_medium_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  advanced_medium_tank_chassis = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = advanced_heavy_tank_chassis } }
 
-			set_technology = { advanced_heavy_tank_chassis = 1 }
+			if = {
+					limit = { is_researching_technology =  advanced_heavy_tank_chassis }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  advanced_heavy_tank_chassis = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = mechanised_infantry2 } }
 
-			set_technology = { mechanised_infantry2 = 1 }
+			if = {
+					limit = { is_researching_technology =  mechanised_infantry2 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  mechanised_infantry2 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = armored_car3 } }
 
-			set_technology = { armored_car3 = 1 }
+			if = {
+					limit = { is_researching_technology =  armored_car3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armored_car3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = artillery3 } }
 
-			set_technology = { artillery3 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = artillery4 } }
 
-			set_technology = { artillery4 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery4 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery4 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = artillery5 } }
 
-			set_technology = { artillery5 = 1 }
+			if = {
+					limit = { is_researching_technology =  artillery5 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  artillery5 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antiair3 } }
 
-			set_technology = { antiair3 = 1 }
+			if = {
+					limit = { is_researching_technology =  antiair3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antiair3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antiair4 } }
 
-			set_technology = { antiair4 = 1 }
+			if = {
+					limit = { is_researching_technology =  antiair4 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antiair4 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antiair5 } }
 
-			set_technology = { antiair5 = 1 }
+			if = {
+					limit = { is_researching_technology =  antiair5 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antiair5 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank3 } }
 
-			set_technology = { antitank3 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank4 } }
 
-			set_technology = { antitank4 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank4 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank4 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank5 } }
 
-			set_technology = { antitank5 = 1 }
+			if = {
+					limit = { is_researching_technology =  antitank5 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  antitank5 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = armor_tech_4 } }
 
-			set_technology = { armor_tech_3 = 1 }
+			if = {
+					limit = { is_researching_technology =  armor_tech_3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  armor_tech_3 = 1 }
+				}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = engine_tech_4 } }
 
-			set_technology = { engine_tech_3 = 1 }
+			if = {
+					limit = { is_researching_technology =  engine_tech_3 }
+					add_timed_idea = { idea = zuodehao days = 90 }
+				}
+				else = {
+					set_technology = {  engine_tech_3 = 1 }
+				}
 		}
 
 		if = {

@@ -509,15 +509,15 @@ CZE_purchase_equipment = {
 					surrender_progress > 0.3
 					OR = {
             stockpile_ratio = { 
-              archetype = light_tank_equipment
+              archetype = light_tank_chassis
               ratio < 0.75
             }
             stockpile_ratio = { 
-              archetype = medium_tank_equipment
+              archetype = medium_tank_chassis
               ratio < 0.75
             }
             stockpile_ratio = { 
-              archetype = heavy_tank_equipment
+              archetype = heavy_tank_chassis
               ratio < 0.75
             }
 					}
@@ -529,9 +529,9 @@ CZE_purchase_equipment = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { has_tech = gwtank }
-				NOT = { has_tech = basic_medium_tank }
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = gwtank_chassis }
+				NOT = { has_tech = basic_medium_tank_chassis }
+				NOT = { has_tech = basic_heavy_tank_chassis }
 			}
 			modifier = {
 				factor = 0
@@ -539,15 +539,15 @@ CZE_purchase_equipment = {
 					num_of_civilian_factories < 10
 					AND = {
 						stockpile_ratio = { 
-			  				archetype = light_tank_equipment
+			  				archetype = light_tank_chassis
 			  				ratio > 0.75
 			  			}
 			  			stockpile_ratio = { 
-			  				archetype = medium_tank_equipment
+			  				archetype = medium_tank_chassis
 			  				ratio > 0.75
 			  			}
 			  			stockpile_ratio = { 
-			  				archetype = heavy_tank_equipment
+			  				archetype = heavy_tank_chassis
 			  				ratio > 0.75
 			  			}
 					}
@@ -561,6 +561,12 @@ CZE_purchase_equipment = {
 		complete_effect = {
 
       country_event = czech.38
+
+			hidden_effect = {
+			    set_variable = { CZE_armor_seller = CZE }
+			}
+
+			country_event = czech.38
 
 			CZE = {
 				add_offsite_building = {
@@ -586,42 +592,40 @@ CZE_purchase_equipment = {
 
 			if = {
 				limit = {
-					has_country_flag = CZE_purchase_light_tank_equipment_flag
+					CZE = { has_country_flag = CZE_purchase_light_tank_equipment_flag }
 				}
-
-        add_equipment_to_stockpile = {
-          type = light_tank_equipment
-          amount = 40
-          producer = CZE
-        }
-			  clr_country_flag = CZE_purchase_light_tank_equipment_flag
+				add_equipment_to_stockpile = {
+					type = var:CZE_armor_type
+					amount = 40
+					producer = CZE
+				}
+				CZE = { clr_country_flag = CZE_purchase_light_tank_equipment_flag }
 			}
 
 			if = {
 				limit = {
-					has_country_flag = CZE_purchase_medium_tank_equipment_flag
+					CZE = { has_country_flag = CZE_purchase_medium_tank_equipment_flag }
 				}
-
-        add_equipment_to_stockpile = {
-          type = medium_tank_equipment
-          amount = 20
-          producer = CZE
-        }
-			  clr_country_flag = CZE_purchase_medium_tank_equipment_flag
+				add_equipment_to_stockpile = {
+					type = var:CZE_armor_type
+					amount = 20
+					producer = CZE
+				}
+				CZE = { clr_country_flag = CZE_purchase_medium_tank_equipment_flag }
 			}
 
 			if = {
 				limit = {
-					has_country_flag = CZE_purchase_heavy_tank_equipment_flag
+					CZE = { has_country_flag = CZE_purchase_heavy_tank_equipment_flag }
 				}
-
-        add_equipment_to_stockpile = {
-          type = heavy_tank_equipment
-          amount = 10
-          producer = CZE
-        }
-			  clr_country_flag = CZE_purchase_heavy_tank_equipment_flag
+				add_equipment_to_stockpile = {
+					type = var:CZE_armor_type
+					amount = 10
+					producer = CZE
+				}
+				CZE = { clr_country_flag = CZE_purchase_heavy_tank_equipment_flag }
 			}
+
 
 			CZE = {
 				add_offsite_building = {

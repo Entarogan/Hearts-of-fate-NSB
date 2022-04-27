@@ -111,6 +111,36 @@ USA_unit_production = {
 
 }	
 
+USA_armored_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		has_tech = mechanised_infantry
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = mechanized
+		value = 5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -10
+	}
+
+}
+
 USA_halt_light_armor_production_in_transitioning = {
 	enable = {
 		original_tag = USA

@@ -660,13 +660,12 @@ leader_traits = {
 		random = no
 		sprite = 8	
 		army_armor_attack_factor = 0.05
-		army_speed_factor = 0.10
-		#装甲部队攻击+5%，部队移动速度+10%
+		#装甲部队攻击+5%
 		equipment_bonus = {
 			#装甲最大速度+10%， 突破+15%，软攻+15%
 			armor = {
-				maximum_speed = 0.1
-				breakthrough = 0.15
+				maximum_speed = 0.15
+				breakthrough = 0.10
 				soft_attack = 0.15
 				instant = yes
 			}

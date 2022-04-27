@@ -2157,10 +2157,6 @@ focus_tree = {
 				factor = 0
 			}
 			modifier = {
-				casualties > 2000000
-				factor = 0
-			}
-			modifier = {
 				RUS = {
 					is_ai = no
 				}
@@ -4941,10 +4937,6 @@ focus_tree = {
 				}
 				factor = 0
 			}
-			modifier = {
-				casualties > 1000000
-				factor = 0
-			}
 		}
 		available = {
 		}
@@ -5000,7 +4992,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = JAP_air_training_plan
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}
@@ -5104,10 +5096,6 @@ focus_tree = {
 				has_army_manpower = {
 					size < 849999
 				}
-				factor = 0
-			}
-			modifier = {
-				casualties > 1000000
 				factor = 0
 			}
 		}
@@ -5261,10 +5249,6 @@ focus_tree = {
 				has_army_manpower = {
 					size < 849999
 				}
-				factor = 0
-			}
-			modifier = {
-				casualties > 1000000
 				factor = 0
 			}
 		}
@@ -5937,10 +5921,6 @@ focus_tree = {
 				}
 				factor = 0
 			}
-			modifier = {
-				casualties > 2000000
-				factor = 0
-			}
 		}
 		available = {
 			date > 1940.1.1
@@ -6129,10 +6109,6 @@ focus_tree = {
 				has_army_manpower = {
 					size < 1249999
 				}
-				factor = 0
-			}
-			modifier = {
-				casualties > 2000000
 				factor = 0
 			}
 		}
@@ -10843,7 +10819,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = JAP_japanese_air_power_theory
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 4
 				category = air_doctrine
 			}

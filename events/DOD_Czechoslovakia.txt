@@ -1127,19 +1127,17 @@ country_event = {     # 购买坦克
 		ai_chance = {
 			base = 15
 			modifier = {
-				factor = 0
-				NOT = { has_tech = gwtank }
-			}
-			modifier = {
 				factor = 2
 				stockpile_ratio = { 
-	  				archetype = light_tank_equipment
+	  				archetype = light_tank_chassis
 	  				ratio < 0.76
 	  			}
 			}
 		}
 
-		set_country_flag = CZE_purchase_light_tank_equipment_flag
+		set_variable = { CZE_armor_type = token:light_tank_chassis }
+		var:CZE_armor_seller = { set_country_flag = CZE_purchase_light_tank_equipment_flag }	
+
 		
 	}
 
@@ -1149,12 +1147,12 @@ country_event = {     # 购买坦克
 			base = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_medium_tank }
+				NOT = { has_tech = basic_medium_tank_chassis }
 			}
 			modifier = {
 				factor = 2
 				stockpile_ratio = { 
-	  				archetype = medium_tank_equipment
+	  				archetype = medium_tank_chassis
 	  				ratio < 0.76
 	  			}
 			}
@@ -1162,11 +1160,12 @@ country_event = {     # 购买坦克
 
 		trigger = {
 			CZE = {
-				has_tech = basic_medium_tank
+				has_tech = basic_medium_tank_chassis
 			}
 		}
 
-		set_country_flag = CZE_purchase_medium_tank_equipment_flag
+		set_variable = { CZE_armor_type = token:medium_tank_chassis }
+		var:CZE_armor_seller = { set_country_flag = CZE_purchase_medium_tank_equipment_flag }
 		
 	}
 
@@ -1176,12 +1175,12 @@ country_event = {     # 购买坦克
 			base = 10
 			modifier = {
 				factor = 0
-				NOT = { has_tech = basic_heavy_tank }
+				NOT = { has_tech = basic_heavy_tank_chassis }
 			}
 			modifier = {
 				factor = 2
 				stockpile_ratio = { 
-	  				archetype = heavy_tank_equipment
+	  				archetype = heavy_tank_chassis
 	  				ratio < 0.76
 	  			}
 			}
@@ -1189,11 +1188,12 @@ country_event = {     # 购买坦克
 
 		trigger = {
 			CZE = {
-				has_tech = basic_heavy_tank
+				has_tech = basic_heavy_tank_chassis
 			}
 		}
 
-		set_country_flag = CZE_purchase_heavy_tank_equipment_flag
+		set_variable = { CZE_armor_type = token:heavy_tank_chassis }
+		var:CZE_armor_seller = { set_country_flag = CZE_purchase_heavy_tank_equipment_flag }
 		
 	}
 	

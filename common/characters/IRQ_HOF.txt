@@ -227,7 +227,12 @@ characters={
 			available = {
         		NOT = { has_country_flag = GILGAMESH_DIED }
 			}
-			traits = { army_chief_entrenchment_expert }
+			traits = {  }
+
+			modifier = {
+				max_dig_in = 15
+			}
+
 			ai_will_do = {
 				factor = 20
 			}
