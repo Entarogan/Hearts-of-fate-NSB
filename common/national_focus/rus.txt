@@ -6392,7 +6392,7 @@ focus = {   ###土地分给农民
 
 			add_doctrine_cost_reduction = {
 				name = SOV_transpolar_flights
-				bonus = 0.5
+				cost_reduction = 0.5 
 				uses = 2
 				category = air_doctrine
 			}
@@ -6837,7 +6837,7 @@ focus = {   ###土地分给农民
 
 			add_doctrine_cost_reduction = {
 				name = GER_Joint_air_to_ground_operations
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 4
 				category = air_doctrine
 			}	
