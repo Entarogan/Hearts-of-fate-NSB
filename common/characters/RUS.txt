@@ -401,11 +401,11 @@ characters={
 				factor  = 3.000
 			}
 		}
-		country_leader={
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
-		}
+		# country_leader={
+		# 	ideology=socialism
+		# 	expire="1965.1.1.1"
+		# 	id=-1
+		# }
 	}
 	RUS_vladimir_makarov={
 		name=RUS_vladimir_makarov
