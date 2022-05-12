@@ -2985,9 +2985,8 @@ country_event = {
 	trigger = {
 		tag = FRA
 		is_puppet = no
-    has_global_flag = FRA_Economic_crisis_flag
-    RHI = { is_subject_of = FRA }
-
+		has_global_flag = FRA_Economic_crisis_flag
+		RHI = { is_subject_of = FRA }
 	}
 
 	mean_time_to_happen = {
@@ -3101,6 +3100,11 @@ country_event = {
 
 	option = {
 		name = germany.596.b
+
+		trigger = {
+			always = no
+		}
+
 		ai_chance = {
 			base = 50
 		}

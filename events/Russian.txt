@@ -300,15 +300,15 @@ country_event = {   ### Anti-Tsarina Coup
 			promote_leader = yes
 		}
 		set_politics = {	
-		  ruling_party = fascism
-		  last_election = "1922.12.9"
-		  election_frequency = 48
-		  elections_allowed = no
+			ruling_party = fascism
+			last_election = "1922.12.9"
+			election_frequency = 48
+			elections_allowed = no
 		}
 		
 		add_popularity = {
-		  ideology = fascism
-		  popularity = 0.10
+			ideology = fascism
+			popularity = 0.10
 		}
 
 		set_party_name = { 
@@ -327,8 +327,6 @@ country_event = {   ### Anti-Tsarina Coup
 		unlock_national_focus = rus_black_league_coup
     
 	}
-  
-  
 }
 
 country_event = {   ### Select a leader for junta

@@ -929,15 +929,15 @@ ideas = {
 
 			}
 
+			available = {
+			    has_country_flag = SOV_great_patriotic_war_start_flag
+			}
+
 			modifier = {
 				political_power_gain = -0.1
 				army_org_factor = 0.05
 				war_support_factor = 0.10
 				conscription = 0.03
-			}
-
-			cancel = {
-				has_war = no 
 			}
 
 		}
@@ -953,6 +953,10 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = communism
+			}
+
+			available = {
+			    has_country_flag = SOV_great_patriotic_war_start_flag
 			}
 
 			modifier = {
@@ -972,15 +976,11 @@ ideas = {
 					instant = yes 
 
 				}
-        support_equipment = {
-          build_cost_ic = -0.10
+				support_equipment = {
+					build_cost_ic = -0.10
 					reliability = -0.05
-          instant = yes
-        }
-			}
-
-			cancel = {
-				has_war = no 
+					instant = yes
+				}
 			}
 
 		}
@@ -997,6 +997,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = communism
 			}
+
+			available = {
+			    has_country_flag = SOV_great_patriotic_war_start_flag
+			}
 			
 			modifier = {
 				political_power_gain = -0.3
@@ -1004,9 +1008,9 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
 				resistance_growth_on_our_occupied_states = 0.15
-        production_factory_max_efficiency_factor = 0.10
-        production_factory_efficiency_gain_factor = 0.10
-        war_support_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				war_support_factor = 0.15
 				conscription = 0.03
 			}
 
@@ -1015,16 +1019,12 @@ ideas = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 					instant = yes 
-
 				}
-        support_equipment = {
-          build_cost_ic = -0.10
+				support_equipment = {
+					build_cost_ic = -0.10
 					reliability = -0.05
-          instant = yes
-        }
-			}
-			cancel = {
-				has_war = no 
+					instant = yes
+				}
 			}
 
 		}
@@ -1041,6 +1041,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = communism
 			}
+
+			available = {
+			    has_country_flag = SOV_great_patriotic_war_start_flag
+			}
 			
 			modifier = {
 				political_power_gain = -0.3
@@ -1048,9 +1052,9 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
 				resistance_growth_on_our_occupied_states = 0.15
-        production_factory_max_efficiency_factor = 0.10
-        production_factory_efficiency_gain_factor = 0.10
-        war_support_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				war_support_factor = 0.15
 				conscription = 0.03
 			}
 
@@ -1061,42 +1065,40 @@ ideas = {
 					instant = yes 
 
 				}
-        support_equipment = {
-          build_cost_ic = -0.10
+				support_equipment = {
+					build_cost_ic = -0.10
 					reliability = -0.05
-          instant = yes
-        }
-        artillery_equipment = {
+					instant = yes
+				}
+				artillery_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 					instant = yes 
-        }
-        anti_air_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-          
-          instant = yes
-        }
-        anti_tank_equipment = {
+				}
+				anti_air_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 
-          instant = yes
-        }
+					instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+
+					instant = yes
+				}
 				armor = {
 					build_cost_ic = -0.15 
 					reliability = -0.05
 					instant = yes 
 				}
-        motorized_equipment = {
+				motorized_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 					instant = yes 
-        }
+				}
 			}
-			cancel = {
-				has_war = no 
-			}
+
 		}
 
 		SOV_great_patriotic_war_5 = {
@@ -1112,24 +1114,24 @@ ideas = {
 				has_government = communism
 			}
 			
-			research_bonus = {
-
+			available = {
+			    has_country_flag = SOV_great_patriotic_war_start_flag
 			}
 
 			modifier = {
-        stability_weekly = -0.002
-        war_support_weekly = -0.002
+				stability_weekly = -0.002
+				war_support_weekly = -0.002
 				political_power_gain = -0.5
 				army_org_factor = 0.10
 				army_core_defence_factor = 0.10
 				army_core_attack_factor = 0.10
 				resistance_growth_on_our_occupied_states = 0.30
-        production_factory_max_efficiency_factor = 0.20
-        production_factory_efficiency_gain_factor = 0.20
-		    production_factory_start_efficiency_factor = 0.15
-		    production_speed_arms_factory_factor = 0.15
-		    production_speed_industrial_complex_factor = -0.30
-        war_support_factor = 0.30
+				production_factory_max_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.20
+				production_factory_start_efficiency_factor = 0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = -0.30
+				war_support_factor = 0.30
 				conscription = 0.05
 			}
 
@@ -1140,42 +1142,40 @@ ideas = {
 					instant = yes 
 
 				}
-        support_equipment = {
-          build_cost_ic = -0.10
+				support_equipment = {
+					build_cost_ic = -0.10
 					reliability = -0.05
-          instant = yes
-        }
-        artillery_equipment = {
+					instant = yes
+				}
+				artillery_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 					instant = yes 
-        }
-        anti_air_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-          
-          instant = yes
-        }
-        anti_tank_equipment = {
+				}
+				anti_air_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 
-          instant = yes
-        }
+					instant = yes
+				}
+				anti_tank_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+
+					instant = yes
+				}
 				armor = {
 					build_cost_ic = -0.15 
 					reliability = -0.05
 					instant = yes 
 				}
-        motorized_equipment = {
+				motorized_equipment = {
 					build_cost_ic = -0.10 
 					reliability = -0.05
 					instant = yes 
-        }
+				}
 			}
-			cancel = {
-				has_war = no 
-			}
+
 		}
 
 

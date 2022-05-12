@@ -2,6 +2,227 @@ ideas = {
 
     country = {
 
+		SOV_Soviet_industrial_power_idea = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = sov_factory_use
+
+			research_bonus = {
+				train_tech = 0.2
+			}
+			
+			modifier = {
+
+				consumer_goods_factor = -0.05
+
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.2
+				mobilization_speed = 0.1
+
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+
+				global_building_slots = 0.1
+				local_resources_factor = 0.10
+
+				fuel_gain_factor_from_states = 0.3	
+				fuel_gain_factor = 0.15
+
+				research_speed_factor = 0.05
+			}
+
+			equipment_bonus = {
+
+				train_equipment = {
+					build_cost_ic = -0.25
+					reliability = 0.1
+
+					instant = yes
+				}
+
+				infantry_equipment = {
+					build_cost_ic = -0.15 
+
+					instant = yes
+				}
+
+				artillery_equipment = {
+					build_cost_ic = -0.15 
+
+					instant = yes
+				}
+
+				anti_air_equipment = {
+					build_cost_ic = -0.15 
+
+					instant = yes
+				}
+
+				anti_tank_equipment = {
+					build_cost_ic = -0.15 
+
+					instant = yes
+				}
+
+				motorized_equipment = {
+					build_cost_ic = -0.15
+
+					instant = yes
+				}
+
+				armor = {
+					build_cost_ic = -0.15
+
+					instant = yes
+				}
+
+				fighter_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				jet_fighter_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				CAS_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				tac_bomber_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				jet_tac_bomber_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				nav_bomber_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				strat_bomber_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}
+
+				jet_strat_bomber_equipment = {
+					build_cost_ic = -0.10
+
+					instant = yes
+				}	
+
+			}
+
+		}
+
+		SOV_zorgen_Institute_idea = {
+
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = coal_liquidization
+
+			modifier = {			
+				fuel_gain_factor_from_states = 0.3	
+				fuel_gain_factor = 0.15
+			}
+		}
+
+		SOV_transformation_of_nature = { #Comes from focus
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = SOV_transformation_of_nature
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				global_building_slots = 0.1
+
+				fuel_gain_factor_from_states = 0.3	
+				fuel_gain_factor = 0.15
+
+				local_resources_factor = 0.10
+			}
+		}
+
+		SOV_soviet_railways_idea = {
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			research_bonus = {
+				train_tech = 0.2
+			}
+
+			modifier = {
+				production_speed_rail_way_factor = 0.15
+				production_speed_supply_node_factor = 0.15
+				mobilization_speed = 0.05
+			}
+
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.25
+					reliability = 0.1
+
+					instant = yes
+				}
+			}
+
+		}
+
 		SOV_Expansionism_idea = {
 
 			allowed = {
@@ -14,13 +235,13 @@ ideas = {
 
 			removal_cost = -1
 
-		  picture = fourth_international
+			picture = fourth_international
 
-      modifier = {	
+			modifier = {	
 				justify_war_goal_time = -0.35
 			}
 
-    }
+		}
 
 		SOV_World_revolution_idea = {
 
@@ -2294,122 +2515,6 @@ ideas = {
 			}
 
 		    }
-
-		}
-
-		SOV_Soviet_industrial_power_idea = {
-			removal_cost = -1
-			
-			allowed = {
-				always = no # Added via focus
-			}
-
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			picture = sov_factory_use
-			
-			modifier = {
-				production_factory_efficiency_gain_factor = 0.10
-        production_factory_start_efficiency_factor = 0.10
-        production_factory_max_efficiency_factor = 0.10
-				research_speed_factor = 0.05
-			}
-
-			equipment_bonus = {
-
-        infantry_equipment = {
-          build_cost_ic = -0.15 
-          
-          instant = yes
-        }
-
-        artillery_equipment = {
-          build_cost_ic = -0.15 
-          
-          instant = yes
-        }
-
-        anti_air_equipment = {
-					build_cost_ic = -0.15 
-          
-          instant = yes
-        }
-
-        anti_tank_equipment = {
-					build_cost_ic = -0.15 
-
-          instant = yes
-        }
-
-        motorized_equipment = {
-          build_cost_ic = -0.15
-          
-          instant = yes
-        }
-
-        armor = {
-          build_cost_ic = -0.15
-          
-          instant = yes
-        }
-
-        fighter_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        heavy_fighter_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        jet_fighter_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        CAS_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        tac_bomber_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        jet_tac_bomber_equipment = {
-          build_cost_ic = -0.10
-
-          instant = yes
-        }
-
-        nav_bomber_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        strat_bomber_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        jet_strat_bomber_equipment = {
-          build_cost_ic = -0.10
-
-          instant = yes
-        }	
-
-      }
 
 		}
 

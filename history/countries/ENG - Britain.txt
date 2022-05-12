@@ -251,9 +251,6 @@ recruit_character = ENG_Waver
 recruit_character = ENG_Olga_Marie_Animusphere
 
 
-recruit_character = ENG_oswald_mosley
-
-recruit_character = ENG_harry_pollitt
 #create_country_leader = {
 #	name = "Rajani Palme Dutt"
 #	desc = "POLITICS_PALME_DUTT_DESC"
@@ -308,7 +305,12 @@ recruit_character = ENG_moriarty
 recruit_character = ENG_kay
 recruit_character = ENG_Sion
 
+recruit_character = ENG_Samuel_Lewis
+recruit_character = ENG_Enfield_Bren
+recruit_character = ENG_Sheffield_Turpin
+recruit_character = ENG_Welrod_Reeves
 
+recruit_character = ENG_Lev_Lainur_Flauros
 
 
 ### Ship Variants ###

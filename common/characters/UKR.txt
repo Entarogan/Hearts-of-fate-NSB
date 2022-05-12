@@ -243,8 +243,6 @@ characters={
 		}
 	}
 
-
-
 	#####
 	SOV_leonid_brezhnev={
 		name = "Leonid Brezhnev"
@@ -265,6 +263,102 @@ characters={
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Talulah_Artorius.dds"
+			}
+		}
+	}
+
+	UKR_Alina={
+		name = "Alina"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Alina.dds"
+			}
+		}
+	}
+
+	UKR_Yelena_Frostnova={
+		name = "Yelena Frostnova"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Yelena_Frostnova.dds"
+			}
+		}
+	}
+
+	UKR_Buldrokkastee={
+		name = "Buldrokkas'tee"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Buldrokkastee.dds"
+			}
+		}
+	}
+
+	UKR_W={
+		name = "W"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_W.png"
+			}
+		}
+	}
+
+	UKR_Mephisto={
+		name = "Mephisto"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Mephisto.png"
+			}
+		}
+	}
+
+	UKR_Crownsplayer={
+		name = "Crownsplayer"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Crownslayer.png"
+			}
+		}
+	}
+
+	UKR_Faust={
+		name = "Faust"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Faust.png"
+			}
+		}
+	}
+
+	UKR_Ines={
+		name = "Ines"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Ines.png"
 			}
 		}
 	}

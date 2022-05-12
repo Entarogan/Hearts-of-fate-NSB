@@ -286,7 +286,7 @@ country_event = {
 		}
 		add_popularity = {
 			ideology = democratic
-			popularity = -0.20
+			popularity = -0.15
 		}
 		if = {
 			limit = { check_variable = { talula_san < 20 } }
@@ -317,6 +317,13 @@ country_event = {
 		}
 
 		add_political_power = 20
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.075
+		}
+		hidden_effect = {
+			country_event = { id = ukr_reunion.11  days = 3 }
+		} 
 	}
 
 	option = {
@@ -372,6 +379,10 @@ country_event = {   #### The Evolution of the Reunion
 					large = "gfx/leaders/ROM/Portrait_Talulah_Artorius_alter.dds"
 				}
 			}
+		}
+
+		hidden_effect = {
+			set_country_flag = UKR_Anarchist_turn_to_extreme
 		}
 	}
 	

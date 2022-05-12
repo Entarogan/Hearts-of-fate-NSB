@@ -28,6 +28,39 @@ areas = {
 		}
 	}
 
+    mainland_europe = {
+        strategic_regions = {
+            208 # france
+            19
+            20
+            5 # benelux
+            41 # iberia
+            209
+            210
+            23 # italy
+            21
+            7 # germany
+            6
+            8
+            22 # chechoslovakia
+            38 # poland
+            39
+            37 # baltics
+            27 # balkans
+            24
+            26
+            25 # greece
+        }
+    }
+	
+	normandy_landing_zone = {
+        strategic_regions = {
+            208 # france
+            20
+            5 # benelux
+        }
+    }
+
 	north_america = {
 
 		continents = { 
@@ -166,5 +199,13 @@ areas = {
           22
         }
    }
+
+	home_islands = {
+		strategic_regions = {
+			76 	#Okinawa et al
+			154 #Kanto
+			160 #Phillipines - we care about these too!
+		}
+	}
 	
 }

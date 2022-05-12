@@ -5088,24 +5088,24 @@ country_event = {
 			limit = { NOT = { has_tech = antitank2 } }
 
 			if = {
-					limit = { is_researching_technology =  antitank2 }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  antitank2 = 1 }
-				}
+				limit = { is_researching_technology =  antitank2 }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  antitank2 = 1 }
+			}
 		}
 
 		if = {
 			limit = { NOT = { has_tech = antitank3 } }
 
 			if = {
-					limit = { is_researching_technology =  antitank3 }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  antitank3 = 1 }
-				}
+				limit = { is_researching_technology =  antitank3 }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  antitank3 = 1 }
+			}
 		}
 
 		if = {

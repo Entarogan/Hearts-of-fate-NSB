@@ -1,0 +1,36 @@
+
+UKR_food_export_trade_cate = {
+
+	icon = generic_political_actions
+
+	priority = 100
+
+	allowed = {
+		original_tag = UKR
+		has_completed_focus = UKR_food_export_trade
+	}
+}
+
+UKR_second_general_election_cate = {
+
+	icon = generic_political_actions
+
+	priority = 100
+
+	allowed = {
+		original_tag = UKR
+	}
+}
+
+UKR_OUN_policy_cate = {
+
+	icon = generic_political_actions
+
+	priority = 100
+
+	allowed = {
+		original_tag = UKR
+		has_completed_focus = UKR_OUN_win_election
+	}
+}
+

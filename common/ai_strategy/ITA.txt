@@ -1194,3 +1194,32 @@ ITA_like_GER = { # :O
 	}
 
 }
+
+ITA_dont_defend_ETH = {
+	allowed = {
+		original_tag = ITA
+	}
+
+	enable = {
+		date < 1941.1.1
+		tag = ITA
+		owns_state = 271
+		NOT = { ITA = { is_in_faction_with = ENG } }
+		EGY = {
+			has_capitulated = no
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+
+		# ETH
+		state = 271
+		state = 550
+		state = 559
+
+		value = -100
+	}
+}

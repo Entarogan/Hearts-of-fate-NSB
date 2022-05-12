@@ -1,32 +1,66 @@
 ideas = {
     country = {
 
-			Powerful_influence_idea = {
-
-				available = {
-					is_subject = no 
-				}
-
-				allowed = {
-					always = no
-				}
-
-				allowed_civil_war = {
-					always = yes
-				}
-
-				removal_cost = -1
-
-				picture = FRA_la_deluge
-
-				modifier = {
-					stability_factor = 0.05
-					war_support_factor = 0.05
-				}
-				rule = {
-					can_join_factions = no
-				}
+		ENG_IDEC_idea = {
+			
+			available = {
+				is_subject_of = ENG
 			}
+
+			picture = SPR_seize_the_gold_reserves
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			targeted_modifier = { 
+				tag = ENG 
+				
+				trade_opinion_factor = 0.25
+				extra_trade_to_target_factor = 0.50
+				trade_cost_for_target_factor = -0.50
+			}
+
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			    research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				local_resources_factor = 0.15
+			}
+		}
+
+		Powerful_influence_idea = {
+
+			available = {
+				is_subject = no 
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = FRA_la_deluge
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+			rule = {
+				can_join_factions = no
+			}
+		}
 
       Ast_Migrate_country = {
         allowed = {

@@ -2398,7 +2398,8 @@ focus_tree = {
 
 	focus = {
 		id = POR_popular_front
-		available = {			
+		available = {		
+			always = no	
 		}
 
 		bypass = {		
@@ -3798,7 +3799,8 @@ focus_tree = {
 	focus = {
 		id = POR_strict_neutrality_in_the_spanish_civil_war
 		available = {
-			SPR_scw_in_progress = yes			
+			SPR_scw_in_progress = yes	
+			always = no		
 		}
 
 		bypass = {
@@ -4008,6 +4010,7 @@ focus_tree = {
 		available = {
 			democratic > 0.5
 			has_war = no
+			always = no
 		}
 
 		bypass = {		
@@ -4582,6 +4585,7 @@ focus_tree = {
 				NOT = { has_government = ROOT }
 				NOT = { is_in_faction_with = ROOT }
 			}
+			always = no
 		}
 
 		bypass = {		
@@ -4606,8 +4610,8 @@ focus_tree = {
 					}
 					POR = {
 						create_wargoal = {
-						  	target = PREV
-						    type = topple_government
+							target = PREV
+							type = topple_government
 						}
 					}
 				}
@@ -4802,6 +4806,7 @@ focus_tree = {
 					}
 				}
 			}
+			always = no
 			any_country = {
 				is_major = yes
 				has_war_with = ENG
@@ -4994,7 +4999,8 @@ focus_tree = {
 
 	focus = {
 		id = POR_national_syndicalism
-		available = {			
+		available = {	
+			always = no		
 		}
 
 		bypass = {		
@@ -5708,7 +5714,8 @@ focus_tree = {
 
 	focus = {
 		id = POR_a_royal_wedding
-		available = {			
+		available = {	
+			always = no		
 		}
 
 		bypass = {		

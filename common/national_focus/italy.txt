@@ -672,10 +672,14 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = ITA_giovanni_messe_command
-
 			add_ideas = ITA_Motorized_artillery_idea
+
+			add_tech_bonus = {
+				name = ITA_Multipurpose_artillery
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
 
 		}
 	}

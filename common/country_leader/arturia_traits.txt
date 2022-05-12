@@ -240,9 +240,12 @@ leader_traits = {
 	strategy_educator = {
 		random = no
 		sprite = 13
-		experience_gain_army = 0.075
-        experience_gain_air = 0.075
-		experience_gain_navy = 0.075
+		experience_gain_army = 0.08
+        experience_gain_air = 0.08
+		experience_gain_navy = 0.08
+		land_doctrine_cost_factor = -0.08
+		naval_doctrine_cost_factor = -0.08
+		air_doctrine_cost_factor = -0.08
 		ai_will_do = {
 			factor = 1
 		}

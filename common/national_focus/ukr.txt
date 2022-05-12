@@ -87,3 +87,22 @@ focus_tree = {
 	shared_focus = UKR_generic_Ukraine_is_not_yet_lost
 	shared_focus = UKR_generic_unfulfilled_ambition
 }
+
+focus_tree = {
+	id = ukr_focus_nationalism
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = UKR
+		}
+	}
+	continuous_focus_position = { x = 0 y = 1600 }
+
+    shared_focus = UKR_SDP_win_election
+	shared_focus = UKR_Indefinite_ruling_cabinet
+	shared_focus = UKR_OUN_win_election
+	shared_focus = UKR_generic_Zaporizhzhia_industrial_complex
+}

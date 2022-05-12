@@ -577,18 +577,6 @@ USA_semper_fi = {
 	}
 
 	ai_strategy = {
-		type = area_priority
-		id = pacific
-		value = 160 # 
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = oceania
-		value = 80 #  
-	}
-
-	ai_strategy = {
 		type = unit_ratio
 		id = marines
 		value = 5
@@ -653,41 +641,39 @@ USA_help_waters_around_GER = {
 	}
 }
 
-# TODO: experimental /Dan
-USA_TEST_help_uk_be_winnigest = {
+
+USA_help_waters_around_GER = {
+	allowed = { original_tag = USA }
 	enable = {
-		original_tag = USA
 		is_in_faction_with = ENG
+		NOT = { has_war_with = JAP }
+		has_war_with = GER
+		ENG = { has_war_with = GER }
+	}
+	abort = {
+		GER = {
+			has_capitulated = yes
+		}
 	}
 
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 18 # channel
+	}
+}
+
+USA_onto_the_beaches = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		has_war = yes
+	}
 	abort_when_not_enabled = yes
-	
-	ai_strategy = {
-		type = spare_unit_factor
-		value = 50
-	}
 
 	ai_strategy = {
-		type = send_volunteers_desire
-		id = ENG
-		value = 50
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = 80 # removes most of negatives set elsewhere
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = suez
-		value = 130 # brings it 90 above base 
-	}
-
-  ai_strategy = {
-		type = garrison
-		value = -50
+		type = naval_invasion_focus
+		value = 55
 	}
 }
 
@@ -849,23 +835,360 @@ USA_wants_synthetic_2 = {
 	}
 }
 
-USA_and_ENG_against_enemy = {
-
+USA_gang_up_GER_with_ENG = {
 	allowed = {
-		original_tag = USA
+		tag = USA
 	}
-
 	enable = {
 		tag = USA
+		date > 1940.6.6
 		is_in_faction_with = ENG
 		surrender_progress < 0.05
 	}
 
-	abort_when_not_enabled = yes
-	
+	# help fronts in europe & africa
 	ai_strategy = {
 		type = force_defend_ally_borders
-		id = "ENG"
 		value = 100
+		target = europe
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		value = 100
+		target = africa
+	}
+}
+
+USA_Defends_australia_new_zealand = {
+	allowed = {
+		tag = USA
+	}
+
+	enable = {
+		AST = {
+			exists = yes
+		}
+		is_ally_with = USA
+	}
+
+	abort_when_not_enabled = yes
+
+	# northen territory
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 520
+		value = 10
+	}
+
+	#papua
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 523
+		value = 10
+	}
+
+	#marshall islands
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 633
+		value = 10
+	}
+}
+
+USA_produce_floating_harbors = {
+	allowed = {	original_tag = USA }
+	enable = {
+		is_historical_focus_on = yes
+		date > 1941.1.1
+		has_war = yes
+		num_of_naval_factories > 25
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = unit_ratio
+		id = floating_harbor # for floating harbors, 'unit_ratio' is actually not a ratio but an absolute desired number
+		value = 10
+	}
+}
+
+USA_stay_away_from_my_pacific = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		has_war_with = JAP
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = pacific
+		value = 100
+	}
+}
+
+USA_start_buffering_in_pacific = {
+	allowed = {
+		tag = USA
+	}
+	enable = {
+		date > 1943.3.3
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# pacific islands
+		states = {
+			633 #Marshall
+			632 #Wake
+			684 #Caroline
+			645 #Iwo Jima
+			638 #Guam
+			646 #Saipan
+		}
+
+		ratio = 0.05
+
+		area = pacific
+
+		subtract_invasions_from_need = yes
+		subtract_fronts_from_need = no
+	}
+}
+
+USA_ask_ENG_FRA_for_access_before_war = {
+	allowed = {
+		tag = USA
+	}
+	enable = {
+		date > 1940.9.9
+		NOT = {
+			OR = {
+				is_in_faction_with = ENG
+				has_military_access_to = ENG
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = ENG
+		target = military_access
+		value = 1000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = FRA
+		target = military_access
+		value = 1000
+	}
+}
+
+USA_unit_buffer_for_europe = {
+	allowed = {
+		tag = USA
+	}
+	enable = {
+		date > 1941.1.1
+		is_in_faction_with = ENG
+
+		should_USA_invade_europe_or_africa = yes
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 2
+
+		# south england
+		states = {
+			125
+			126
+			127
+			128
+			129
+			338
+			123
+			122
+		}
+
+		ratio = 0.20
+
+		area = europe
+
+		subtract_invasions_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 2
+
+		# spain
+		states = {
+			171
+			180
+			112
+			179
+			795
+			169
+			173
+			167
+		}
+
+		ratio = 0.1
+		area = europe
+
+		subtract_invasions_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 1
+
+		# north africa
+		states = {
+			290
+			461
+			459
+			460
+			458
+			665
+			448
+			449
+			450
+			451
+			452
+			447
+		}
+
+		ratio = 0.15
+
+		area = europe
+
+		subtract_invasions_from_need = no
+	}
+}
+
+USA_unit_buffer_for_africa = {
+	allowed = {
+		tag = USA
+	}
+	enable = {
+		date > 1941.1.1
+		is_in_faction_with = ENG
+
+		should_USA_invade_europe_or_africa = yes
+
+		all_state = {
+			OR = {
+				is_on_continent = africa
+				AND = {
+					GER = {
+						divisions_in_state = { state = PREV size < 1 }
+					}
+					ITA = {
+						divisions_in_state = { state = PREV size < 1 }
+					}
+				}
+			}
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 1
+
+		# north africa
+		states = {
+			290
+			461
+			459
+			460
+			458
+			665
+			448
+			449
+			450
+			451
+			452
+			447
+		}
+
+		ratio = 0.2
+
+		area = africa
+
+		subtract_invasions_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 1
+
+		# west africa
+		states = {
+			699
+			557
+			272
+			792
+			700
+		}
+
+		ratio = 0.15
+
+		area = africa
+
+		subtract_invasions_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 1
+
+		# east africa
+		states = {
+			559
+			269
+			268
+			550
+			551
+		}
+
+		ratio = 0.15
+
+		area = africa
+
+		subtract_invasions_from_need = no
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		order_id = 1
+
+		# south africa
+		states = {
+			541
+			681
+			719
+		}
+
+		ratio = 0.15
+
+		area = africa
+
+		subtract_invasions_from_need = no
 	}
 }

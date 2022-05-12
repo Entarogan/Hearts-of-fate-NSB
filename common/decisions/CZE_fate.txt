@@ -9,6 +9,7 @@ CZE_purchase_equipment = {
 		available = {			
 			NOT = { has_war_with = CZE }
 			NOT = { is_justifying_wargoal_against = CZE }
+			num_of_civilian_factories_available_for_projects > 1
 		}
 
 		visible = {
@@ -119,6 +120,7 @@ CZE_purchase_equipment = {
 		available = {
 			NOT = { has_war_with = CZE }
 			NOT = { is_justifying_wargoal_against = CZE }
+			num_of_civilian_factories_available_for_projects > 1
 		}
 
 		visible = {
@@ -293,6 +295,7 @@ CZE_purchase_equipment = {
 		available = {
 			NOT = { has_war_with = CZE }
 			NOT = { is_justifying_wargoal_against = CZE }
+			num_of_civilian_factories_available_for_projects > 1
 		}
 
 		visible = {
@@ -467,6 +470,7 @@ CZE_purchase_equipment = {
 		available = {
 			NOT = { has_war_with = CZE }
 			NOT = { is_justifying_wargoal_against = CZE }
+			num_of_civilian_factories_available_for_projects > 1
 		}
 
 		visible = {
@@ -560,8 +564,6 @@ CZE_purchase_equipment = {
 		
 		complete_effect = {
 
-      country_event = czech.38
-
 			hidden_effect = {
 			    set_variable = { CZE_armor_seller = CZE }
 			}
@@ -645,6 +647,7 @@ CZE_purchase_equipment = {
 		available = {
 			NOT = { has_war_with = CZE }
 			NOT = { is_justifying_wargoal_against = CZE }
+			num_of_civilian_factories_available_for_projects > 1
 		}
 
 		visible = {

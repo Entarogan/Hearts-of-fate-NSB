@@ -86,18 +86,6 @@ characters={
 			logistics_skill=4
 			legacy_id=3396
 		}
-		advisor={
-			cost = 150
-			slot = theorist
-			idea_token = giovanni_messe
-			ledger = army
-			allowed = {
-				original_tag = ITA
-			}
-			traits = {
-				mobile_warfare_expert
-			}
-		}
 		advisor = {
 			slot = high_command
 			idea_token = giovanni_messe
@@ -105,7 +93,7 @@ characters={
 				original_tag = ITA
 			}
 			available = {
-				has_completed_focus = ITA_Motorized_artillery
+
 			}
 			traits = { ITA_Mobile_Combat_Master }
 			

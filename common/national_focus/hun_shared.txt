@@ -10363,7 +10363,7 @@
 
 			add_tech_bonus = {
 				name = HUN_the_botond
-				bonus = 1.0
+				bonus = 2.0
 				uses = 1
 				category = motorized_equipment
 			}
