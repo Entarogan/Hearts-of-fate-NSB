@@ -352,7 +352,7 @@ focus_tree = {
 			  factor = 5
 			}
 			completion_reward = {
-					add_doctrine_cost_reduction = {
+				add_tech_bonus = {
 							name = ncooperation_focus
 							bonus = 0.25
 							uses = 3
