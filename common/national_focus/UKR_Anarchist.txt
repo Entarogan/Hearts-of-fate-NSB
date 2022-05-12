@@ -1,9 +1,22 @@
 shared_focus = {
 	id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	x = 10
 	y = 0
+	available = {
+		UKR_Nestor_Makhno = {
+			is_country_leader = yes
+		}
+	}
+	completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.05
+		swap_ideas = {
+			remove_idea = UKR_anarchist_low_popularity_1
+			add_idea = UKR_anarchist_low_popularity_2
+		}
+	}
 
 }
 shared_focus = {
@@ -12,6 +25,19 @@ shared_focus = {
 	cost = 10.00
 	x = 10
 	y = 4
+	available = {
+		UKR_Talulah_Artorius = {
+			is_country_leader = yes
+		}
+	}
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.10
+		}
+		add_stability = 0.025
+		
+	}
 
 }
 shared_focus = {
@@ -32,25 +58,56 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_collect_weapons
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	}
+	available = {
+		UKR_Nestor_Makhno = {
+			is_country_leader = yes
+		}
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	completion_reward = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 2500
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+			producer = SOV
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 250
+			producer = SOV
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_open_depot
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	}
+	available = {
+		UKR_Nestor_Makhno = {
+			is_country_leader = yes
+		}
 	}
 	x = 2
 	y = 1
 	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	completion_reward = {
+		add_stability = 0.10
+		add_political_power = 100
+	}
 
 }
 shared_focus = {
@@ -76,19 +133,38 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_rebuild_the_black_army
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 3.00
 	prerequisite = {
 		focus = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	}
+	available = {
+		UKR_Nestor_Makhno = {
+			is_country_leader = yes
+		}
 	}
 	x = -2
 	y = 1
 	relative_position_id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
+	completion_reward = {
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			name = UKR_Anarchist_rebuild_the_black_army
+			cost_reduction = 0.5
+			uses = 1
+			category = army_doctrine
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_great_project
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 100.00
+	available = {
+		UKR_Nestor_Makhno = {
+			is_country_leader = yes
+		}
+	}
 	prerequisite = {
 		focus = UKR_Anarchist_collect_weapons
 	}
@@ -101,6 +177,9 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_collect_weapons
+	completion_reward = {
+		custom_effect_tooltip = UKR_Makhno_great_ideal_tt
+	}
 
 }
 shared_focus = {
@@ -145,6 +224,12 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = UKR_Anarchist_New_Batko
+	completion_reward = {
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+	}
 
 }
 shared_focus = {
@@ -175,6 +260,82 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_Strengthen_displinary
+	completion_reward = {
+		set_party_name = {
+			### TODO: Localisation
+			ideology = communism
+			name = UKR_reunion_name
+			long_name = UKR_reunion_name_long
+		}
+		set_cosmetic_tag = UKR_Reunionist
+		if = {
+			limit = { has_idea = UKR_anarchist_low_popularity_2 }
+			swap_ideas = {
+				remove_idea = UKR_anarchist_low_popularity_2
+				add_idea = UKR_anarchist_reunion
+			}
+		}
+		else_if = {
+			limit = { has_idea = UKR_anarchist_low_popularity_1 }
+			swap_ideas = {
+				remove_idea = UKR_anarchist_low_popularity_1
+				add_idea = UKR_anarchist_reunion
+			}
+		}
+		else = {
+			add_ideas = { UKR_anarchist_reunion }
+		}
+		hidden_effect = {
+			set_party_name = {
+				### TODO: Localisation
+				ideology = fascism
+				name = UKR_reunion_name
+				long_name = UKR_reunion_name_long
+			}
+			set_party_name = {
+				### TODO: Localisation
+				ideology = neutrality
+				name = UKR_reunion_name
+				long_name = UKR_reunion_name_long
+			}
+			set_party_name = {
+				### TODO: Localisation
+				ideology = democratic
+				name = UKR_reunion_name
+				long_name = UKR_reunion_name_long
+			}
+			add_country_leader_role = {
+				Character = UKR_Alina
+				Promote_leader = yes
+				Country_leader = {
+					ideology = socialism
+					traits = {
+						
+					}
+				}
+			}
+			add_country_leader_role = {
+				Character = UKR_Buldrokkastee
+				Promote_leader = yes
+				Country_leader = {
+					ideology = stratocracy
+					traits = {
+						
+					}
+				}
+			}
+			add_country_leader_role = {
+				Character = UKR_Mephisto
+				Promote_leader = yes
+				Country_leader = {
+					ideology = nazism
+					traits = {
+						
+					}
+				}
+			}
+		}
+	}
 
 }
 shared_focus = {
@@ -187,6 +348,15 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_the_Reunion
+	completion_reward = {
+		if = {
+			limit = { has_intelligence_agency = no }
+			create_intelligence_agency = yes
+		}
+		else = {
+			upgrade_intelligence_agency = upgrade_passive_defense
+		}
+	}
 
 }
 shared_focus = {
@@ -245,7 +415,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_all_power_to_soviet
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_defend_NKVD
 	}
@@ -254,6 +424,12 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = UKR_Anarchist_pludge_Soviet_collector
+	}
+	available = {
+		OR = {
+			has_war = no
+			surrender_progress < 0.20
+		}
 	}
 	x = 0
 	y = 1
@@ -273,7 +449,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_keep_sanity
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_all_power_to_soviet
 	}
@@ -286,6 +462,12 @@ shared_focus = {
 	x = -4
 	y = 1
 	relative_position_id = UKR_Anarchist_all_power_to_soviet
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
 
 }
 shared_focus = {
@@ -298,9 +480,18 @@ shared_focus = {
 	mutually_exclusive = {
 		focus = UKR_Anarchist_keep_sanity
 	}
+	available = {
+		has_country_flag = UKR_Anarchist_turn_to_extreme
+	}
 	x = 4
 	y = 1
 	relative_position_id = UKR_Anarchist_all_power_to_soviet
+	completion_reward = {
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
 
 }
 shared_focus = {
@@ -353,7 +544,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_redistribute_land
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_keep_sanity
 		focus = UKR_Anarchist_go_to_the_extremity
@@ -361,78 +552,112 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = UKR_Anarchist_all_power_to_soviet
+	completion_reward = {
+		add_timed_idea = {
+			days = 180
+			idea = UKR_Anarchist_redistribute_land
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_tolerate_factionalism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_keep_sanity
 	}
 	x = -3
 	y = 1
 	relative_position_id = UKR_Anarchist_keep_sanity
+	completion_reward = {
+		add_stability = -0.15
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_elect_regional_representative_soviet
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 7.00
 	prerequisite = {
 		focus = UKR_Anarchist_keep_sanity
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_keep_sanity
+	completion_reward = {
+		UKR_Splitted_Country_Level_down = yes
+		add_ideas = { UKR_regional_representative_soviet }
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_integrate_farmers_and_soldiers
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_redistribute_land
 	}
 	prerequisite = {
 		focus = UKR_Anarchist_maintain_ideological_unity
 	}
+	available = {
+		has_government = communism
+	}
 	x = 1
 	y = 1
 	relative_position_id = UKR_Anarchist_redistribute_land
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Developed_agriculture_idea
+			add_idea = UKR_Anarchist_integrate_farmers_and_soldiers
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_agricutural_cooperatives
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_redistribute_land
 	}
 	prerequisite = {
 		focus = UKR_Anarchist_keep_sanity
 	}
+	available = {
+		has_government = communism
+	}
 	x = -1
 	y = 1
 	relative_position_id = UKR_Anarchist_redistribute_land
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Developed_agriculture_idea
+			add_idea = UKR_Anarchist_agriculture_cooperatives_idea
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_anarchist_transport
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_elect_regional_representative_soviet
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_elect_regional_representative_soviet
+	completion_reward = {
+		add_ideas = { SPR_anarchist_public_transport }
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_direct_democracy
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_elect_regional_representative_soviet
 	}
@@ -445,12 +670,18 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = UKR_Anarchist_anarchist_transport
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_regional_representative_soviet
+			add_idea = UKR_Anarchist_direct_democracy
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_regional_autonomy
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_agricutural_cooperatives
 	}
@@ -463,36 +694,54 @@ shared_focus = {
 	x = 2
 	y = 1
 	relative_position_id = UKR_Anarchist_anarchist_transport
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_regional_representative_soviet
+			add_idea = UKR_Anarchist_regional_autonomy
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_radical_republicianism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_direct_democracy
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_direct_democracy
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Anarchist_direct_democracy
+			add_idea = UKR_Anarchist_radical_republicianism
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_market_socialism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_regional_autonomy
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_regional_autonomy
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Anarchist_regional_autonomy
+			add_idea = UKR_Anarchist_market_socialism
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_trade_union_economics
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_regional_autonomy
 		focus = UKR_Anarchist_direct_democracy
@@ -500,106 +749,229 @@ shared_focus = {
 	x = -2
 	y = 1
 	relative_position_id = UKR_Anarchist_regional_autonomy
+	completion_reward = {
+		add_ideas = { UKR_Anarchist_trade_union_economics }
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_export_revolution
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_integrate_farmers_and_soldiers
 		focus = UKR_Anarchist_agricutural_cooperatives
 	}
+	available = {
+		has_government = communism
+	}
 	x = 0
 	y = 2
 	relative_position_id = UKR_Anarchist_redistribute_land
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_anarchist_reunion
+			add_idea = UKR_anarchist_reunion_2
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_maintain_ideological_unity
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_go_to_the_extremity
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_go_to_the_extremity
+	completion_reward = {
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.05
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		add_political_power = 100
+		UKR_Splitted_Country_Level_down = yes
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_develop_military_railway
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
+	available = {
+		has_government = communism
+	}
 	prerequisite = {
 		focus = UKR_Anarchist_maintain_ideological_unity
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_maintain_ideological_unity
+	completion_reward = {
+		add_ideas = { UKR_Anarchist_develop_military_railway }
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_pistol_and_speaker
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
+	ai_will_do = {
+		factor = 1000
+	}
 	prerequisite = {
 		focus = UKR_Anarchist_maintain_ideological_unity
+	}
+	available = {
+		has_government = communism
 	}
 	x = 4
 	y = 1
 	relative_position_id = UKR_Anarchist_maintain_ideological_unity
+	completion_reward = {
+		custom_effect_tooltip = Talula_not_remove_Buldrokkastee_coup_tt
+		add_timed_idea = {
+			idea = UKR_Anarchist_black_terror
+			days = 150
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_discipline_in_union
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_develop_military_railway
+	}
+	available = {
+		has_government = communism
 	}
 	x = -1
 	y = 1
 	relative_position_id = UKR_Anarchist_develop_military_railway
+	completion_reward = {
+		add_ideas = { UKR_Anarchist_discipline_in_union }
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_remove_Buldrokkastee
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_pistol_and_speaker
+	}
+	available = {
+		has_government = communism
 	}
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_pistol_and_speaker
+	completion_reward = {
+		retire_character = UKR_Buldrokkastee
+		army_experience = 25
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_work_for_our_future
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_develop_military_railway
+	}
+	available = {
+		has_government = communism
 	}
 	x = 1
 	y = 1
 	relative_position_id = UKR_Anarchist_develop_military_railway
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+			add_ideas = { tot_economic_mobilisation }
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = UKR_Anarchist_work_for_our_future_state_flag_1
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_core_of = ROOT
+				NOT = { has_state_flag = UKR_Anarchist_work_for_our_future_state_flag_1 }
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+			set_state_flag = UKR_Anarchist_work_for_our_future_state_flag_2
+		}
+	}
+	complete_tooltip = {
+		add_ideas = { tot_economic_mobilisation }
+		random_owned_controlled_state = {
+			limit = { has_state_flag = UKR_Anarchist_work_for_our_future_state_flag_1 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { has_state_flag = UKR_Anarchist_work_for_our_future_state_flag_2 }
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
 
 }
 shared_focus = {
 	id = UKR_Anarchist_War_Sorelism
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_discipline_in_union
 	}
 	prerequisite = {
 		focus = UKR_Anarchist_work_for_our_future
 	}
+	available = {
+		has_government = communism
+		threat > 0.39
+	}
 	x = 0
 	y = 2
 	relative_position_id = UKR_Anarchist_develop_military_railway
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = UKR_Anarchist_discipline_in_union
+			add_idea = UKR_Anarchist_War_Sorelism
+		}
+	}
 
 }
 shared_focus = {
@@ -614,6 +986,9 @@ shared_focus = {
 	x = 0
 	y = 1
 	relative_position_id = UKR_Anarchist_trade_union_economics
+	completion_reward = {
+		add_political_power = 100
+	}
 
 }
 shared_focus = {
@@ -626,6 +1001,9 @@ shared_focus = {
 	prerequisite = {
 		focus = UKR_Anarchist_integrate_farmers_and_soldiers
 	}
+	available = {
+		has_government = communism
+	}
 	x = -2
 	y = 1
 	relative_position_id = UKR_Anarchist_War_Sorelism
@@ -634,16 +1012,28 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Anarchist_cult_of_personality
 	icon = GFX_goal_unknown
-	cost = 10.00
+	cost = 5.00
 	prerequisite = {
 		focus = UKR_Anarchist_remove_Buldrokkastee
 	}
 	prerequisite = {
 		focus = UKR_Anarchist_War_Sorelism
 	}
+	available = {
+		has_government = communism
+		has_country_leader = {
+			character = UKR_Talulah_Artorius
+			ruling_only = yes
+		}
+	}
 	x = 0
 	y = 2
 	relative_position_id = UKR_Anarchist_remove_Buldrokkastee
+	completion_reward = {
+		UKR_Talulah_Artorius = {
+			add_trait = { trait = Savior_of_People }
+		}
+	}
 
 }
 shared_focus = {
@@ -708,9 +1098,15 @@ shared_focus = {
 		focus = UKR_Anarchist_ensure_ideological_integrity
 		focus = UKR_Anarchist_fair_nationalism
 	}
+	available = {
+		
+	}
 	x = 0
 	y = 2
 	relative_position_id = UKR_Anarchist_military_democracy
+	completion_reward = {
+		UKR_Splitted_Country_Level_down = yes
+	}
 
 }
 shared_focus = {

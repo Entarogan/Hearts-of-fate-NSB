@@ -139,12 +139,12 @@ leader_traits = {
 	}
 ####
 
-
-
-
-
-
-
-
-
+	Savior_of_People = {
+		random = no
+		sprite = 5
+		political_power_factor = 0.10
+		army_attack_factor = 0.10
+		breakthrough_factor = 0.10
+		industrial_capacity_factory = 0.10
+	}
 }

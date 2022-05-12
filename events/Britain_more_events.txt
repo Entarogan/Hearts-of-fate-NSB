@@ -1266,6 +1266,12 @@ country_event = {     # The continental balance of power policy
 	# We should help France  
   option = {
 		name = more_britain.23.b
+		trigger = {
+			AND = {
+			  FRA = { surrender_progress > 0.15 }
+			  FRA = { casualties > 749999 }
+			}
+		}
 		ai_chance = {
 			base = 40
 			modifier = {
@@ -1300,6 +1306,10 @@ country_event = {     # The continental balance of power policy
 				GER = { is_ai = no }
 			}
 			modifier = {
+				factor = 0.5
+				FRA = { is_ai = no }
+			}
+			modifier = {
 				factor = 2
 				ENG = { has_government = democratic }
 			}
@@ -1309,27 +1319,27 @@ country_event = {     # The continental balance of power policy
 			}
 			modifier = {
 				factor = 0
-	      FRA = { has_completed_focus = FRA_the_path_of_avenger }
+				FRA = { has_completed_focus = FRA_the_path_of_avenger }
 			}
 			modifier = {
 				factor = 0.5
-	      FRA = { has_completed_focus = FRA_unified_Franco_Iberia }
+				FRA = { has_completed_focus = FRA_unified_Franco_Iberia }
 			}
 			modifier = {
 				factor = 0.5
-	      FRA = { has_completed_focus = FRA_claim_spain }
+				FRA = { has_completed_focus = FRA_claim_spain }
 			}
 			modifier = {
 				factor = 0.5
-	      FRA = { has_completed_focus = FRA_dominant_middle_east }
+				FRA = { has_completed_focus = FRA_dominant_middle_east }
 			}
 			modifier = {
 				factor = 0.5
-	      FRA = { has_completed_focus = FRA_Claim_Napoli }
+				FRA = { has_completed_focus = FRA_Claim_Napoli }
 			}
 			modifier = {
 				factor = 1.5
-	      FRA = { surrender_progress > 0.10 }
+				FRA = { surrender_progress > 0.10 }
 			}
 			modifier = {
 				factor = 2
@@ -1353,6 +1363,12 @@ country_event = {     # The continental balance of power policy
 	# We should help Ger 
   option = {
 		name = more_britain.23.c
+		trigger = {
+			AND = {
+			  GER = { surrender_progress > 0.15 }
+			  GER = { casualties > 749999 }
+			}
+		}
 		ai_chance = {
 			base = 40
 			modifier = {
@@ -1379,6 +1395,10 @@ country_event = {     # The continental balance of power policy
 			modifier = {
 				factor = 1.5
 				FRA = { is_ai = no }
+			}
+			modifier = {
+				factor = 0.5
+				GER = { is_ai = no }
 			}
 			modifier = {
 				factor = 2

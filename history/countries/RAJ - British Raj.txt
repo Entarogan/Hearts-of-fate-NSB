@@ -25,6 +25,7 @@ if = {
 	limit = { has_dlc = "Together for Victory" }
 
 	add_ideas = {
+		ENG_IDEC_idea
 		RAJ_princely_states
 		RAJ_marginalized_muslim_community
 		RAJ_agrarian_society

@@ -4463,6 +4463,8 @@ focus_tree = {
 
 			add_research_slot = 1
 
+			add_ideas = SOV_zorgen_Institute_idea
+
 			add_tech_bonus = {
 				name = SOV_Support_the_zorgen_Institute
 				bonus = 1
@@ -4509,6 +4511,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			swap_ideas = {
+				add_idea = SOV_transformation_of_nature
+				remove_idea = SOV_zorgen_Institute_idea
+			}
+
 			if = {
 				limit = {
 					has_full_control_of_state = 223 #TULA
@@ -4841,6 +4849,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_ideas = SOV_soviet_railways_idea
+
 			# Moscow - Rostov on Don
 			build_railway = {
 				path = { 9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 }
@@ -5727,10 +5738,12 @@ focus_tree = {
 
 		available = {
 			is_puppet = no
-      has_idea = SOV_Simplify_weapons_production_idea_1	
-      has_idea = SOV_New_structure_of_artillery_idea	
-      has_idea = SOV_Independent_automotive_industry_idea	
-      has_idea = SOV_Ural_armor_production_idea
+			has_idea = SOV_Simplify_weapons_production_idea_1	
+			has_idea = SOV_New_structure_of_artillery_idea	
+			has_idea = SOV_Independent_automotive_industry_idea	
+			has_idea = SOV_Ural_armor_production_idea
+			has_idea = SOV_transformation_of_nature	
+			has_idea = SOV_soviet_railways_idea
 		}
 
 		available_if_capitulated = yes
@@ -5743,6 +5756,8 @@ focus_tree = {
 			remove_ideas = SOV_New_structure_of_artillery_idea
 			remove_ideas = SOV_Independent_automotive_industry_idea
 			remove_ideas = SOV_Ural_armor_production_idea
+			remove_ideas = SOV_transformation_of_nature
+			remove_ideas = SOV_soviet_railways_idea
 
 			add_ideas = SOV_Soviet_industrial_power_idea
 			#Build Railways in Caucasus

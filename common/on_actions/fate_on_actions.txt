@@ -51,6 +51,10 @@ on_actions = {
 				give_resource_rights = { receiver = ENG state = 691 }
 				give_resource_rights = { receiver = ENG state = 687 }
 			}
+
+			PER = {
+				give_resource_rights = { receiver = ENG state = 413 }
+			}
 			
 		}
 	}

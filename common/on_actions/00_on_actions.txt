@@ -1252,25 +1252,24 @@ on_actions = {
 				if = {
 					limit = {
 						has_dlc = "Waking the Tiger"
-						has_game_rule = {
-							rule = GER_ai_behavior
-							option = RANDOM
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = GER_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = GER_ai_behavior
+								option = RANDOM
+							}
 						}
 					}
 					random_list = {
-						50 = {
+						100 = {
 							GER = {
-								set_country_flag = GER_AI_RANDOM_FASCIST
-							}
-						}
-						35 = {
-							GER = {
-								set_country_flag = GER_AI_RANDOM_KAISER
-							}
-						}
-						15 = {
-							GER = {
-								set_country_flag = GER_AI_RANDOM_DEMOCRATIC
+								set_country_flag = GER_AI_RANDOM_VALKIST_CONSERVATIVE_RIGHT
 							}
 						}
 					}
@@ -1279,20 +1278,44 @@ on_actions = {
 			ITA = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = ITA_ai_behavior
-							option = RANDOM
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = ITA_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = ITA_ai_behavior
+								option = RANDOM
+							}
 						}
 					}
 					random_list = {
-						50 = {
+						25 = {
 							ITA = {
-								set_country_flag = ITA_AI_RANDOM_FASCIST_HISTORICAL
+								set_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_DANNUNZIO
 							}
 						}
-						50 = {
+						15 = {
 							ITA = {
-								set_country_flag = ITA_AI_RANDOM_FASCIST_ALTERNATE
+								set_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_BALBO
+							}
+						}
+						10 = {
+							ITA = {
+								set_country_flag = ITA_AI_RANDOM_SPARTACUS
+							}
+						}
+						20 = {
+							ITA = {
+								set_country_flag = ITA_AI_RANDOM_RESTORE_THE_REPUBLIC
+							}
+						}
+						30 = {
+							ITA = {
+								set_country_flag = ITA_AI_RANDOM_COMPROMISE_WITH_THE_SENATE
 							}
 						}
 					}
@@ -1344,117 +1367,88 @@ on_actions = {
 					}
 				}
 			}
-			PRC = {
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-						has_game_rule = {
-							rule = PRC_ai_behavior
-							option = RANDOM
-						}
-					}
-					random_list = {
-						34 = {
-							PRC = {
-								set_country_flag = PRC_AI_RANDOM_HISTORICAL
-							}
-						}
-						33 = {
-							PRC = {
-								set_country_flag = PRC_AI_RANDOM_ALTERNATE_1
-							}
-						}
-						33 = {
-							PRC = {
-								set_country_flag = PRC_AI_RANDOM_ALTERNATE_2
-							}
-						}
-					}
-				}
-			}
 			SOV = {
 				if = {
 					limit = {
-						has_game_rule = {
-							rule = SOV_ai_behavior
-							option = RANDOM
-						}
-					}
-					random_list = {
-						50 = {
-							SOV = {
-								set_country_flag = SOV_AI_RANDOM_COMMUNIST_HISTORICAL
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = SOV_ai_behavior
+									option = DEFAULT
+								}
 							}
-						}
-						50 = {
-							SOV = {
-								set_country_flag = SOV_AI_RANDOM_COMMUNIST_ALTERNATE
+							has_game_rule = {
+								rule = SOV_ai_behavior
+								option = RANDOM
 							}
 						}
 					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = FRA_ai_behavior
-							option = RANDOM
-						}
-						NOT = {
-							has_dlc = "La Resistance"
-						}
-					}
 					random_list = {
-						15 = {
-							set_country_flag = FRA_AI_COMMUNIST
-						}
-						40 = {
-							set_country_flag = FRA_AI_RANDOM_DEMOCRATIC_ALTERNATE
-						}
-						30 = {
-							set_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
-						}
-						15 = {
-							set_country_flag = FRA_AI_FASCIST
-						}
-					}
-				}
-			}
-			FRA = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = FRA_ai_behavior
-							option = RANDOM
-						}
-						has_dlc = "La Resistance"
-					}
-					random_list = {
-						15 = {
-							set_country_flag = FRA_AI_COMMUNIST
-						}
-						40 = {
-							set_country_flag = FRA_AI_DEMOCRATIC_ALTERNATE
+						25 = {
+							SOV = {
+								set_country_flag = SOV_AI_RANDOM_TROTSKY
+							}
 						}
 						25 = {
-							set_country_flag = FRA_AI_DEMOCRATIC_HISTORICAL
+							SOV = {
+								set_country_flag = SOV_AI_RANDOM_BUKHARIN
+							}
 						}
-						10 = {
-							set_country_flag = FRA_AI_FASCIST
+						25 = {
+							SOV = {
+								set_country_flag = SOV_AI_RANDOM_YEZHOV
+							}
 						}
-						10 = {
-							random_list = {
-								35 = {
-									set_country_flag = FRA_AI_ORLEANIST
-								}
-								50 = {
-									set_country_flag = FRA_AI_LEGITIMIST
-								}
-								15 = {
-									set_country_flag = FRA_AI_BONAPARTIST
+						25 = {
+							SOV = {
+								set_country_flag = SOV_AI_RANDOM_TUKHACHEVSKI
+							}
+						}
+					}
+				}
+			}
+			FRA = {
+				if = {
+					limit = {
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = FRA_ai_behavior
+									option = DEFAULT
 								}
 							}
+							has_game_rule = {
+								rule = FRA_ai_behavior
+								option = RANDOM
+							}
+						}
+					}
+					random_list = {
+						15 = {
+							set_country_flag = FRA_AI_RANDOM_RADICAL_SOCIALIST
+						}
+						24 = {
+							set_country_flag = FRA_AI_RANDOM_CONSTITUTIONAL_MONARCHY
+						}
+						10 = {
+							set_country_flag = FRA_AI_RANDOM_DEMOCRATIC_CONSERVATISM
+						}
+						15 = {
+							set_country_flag = FRA_AI_RANDOM_DEMOCRATIC_SOCIAL_DEMOCRACY
+						}
+						1 = {
+							set_country_flag = FRA_AI_RANDOM_WITCH_OF_ORLEANS
+						}
+						10 = {
+							set_country_flag = FRA_AI_RANDOM_CHARLEMAGNE
+						}
+						10 = {
+							set_country_flag = FRA_AI_RANDOM_BONAPARTIST_NAPOLEON
+						}
+						15 = {
+							set_country_flag = FRA_AI_RANDOM_HABSBURG_DYNASTY
 						}
 					}
 				}
@@ -1463,30 +1457,59 @@ on_actions = {
 				if = {
 					limit = {
 						has_dlc = "Waking the Tiger"
-						has_game_rule = {
-							rule = JAP_ai_behavior
-							option = RANDOM
+						OR = {
+							AND = {
+								is_historical_focus_on = no
+								has_game_rule = {
+									rule = JAP_ai_behavior
+									option = DEFAULT
+								}
+							}
+							has_game_rule = {
+								rule = JAP_ai_behavior
+								option = RANDOM
+							}
 						}
 					}
 					random_list = {
-						40 = {
+						10 = {
 							JAP = {
-								set_country_flag = JAP_AI_RANDOM_FASCIST
+								set_country_flag = JAP_AI_RANDOM_NOBU
 							}
 						}
-						35 = {
+						5 = {
 							JAP = {
-								set_country_flag = JAP_AI_RANDOM_NEUTRALITY
+								set_country_flag = JAP_AI_RANDOM_NOBUREV
 							}
 						}
 						15 = {
 							JAP = {
-								set_country_flag = JAP_AI_RANDOM_DEMOCRATIC
+								set_country_flag = JAP_AI_RANDOM_KODOHA
 							}
 						}
 						10 = {
 							JAP = {
-								set_country_flag = JAP_AI_RANDOM_COMMUNIST
+								set_country_flag = JAP_AI_RANDOM_REV
+							}
+						}
+						10 = {
+							JAP = {
+								set_country_flag = JAP_AI_RANDOM_LIBERALISM
+							}
+						}
+						20 = {
+							JAP = {
+								set_country_flag = JAP_AI_RANDOM_CONSERVATISM
+							}
+						}
+						15 = {
+							JAP = {
+								set_country_flag = JAP_AI_RANDOM_YOUKUSANKAI
+							}
+						}
+						15 = {
+							JAP = {
+								set_country_flag = JAP_AI_RANDOM_TOSEIHA
 							}
 						}
 					}
@@ -1752,20 +1775,17 @@ on_actions = {
 						}
 					}
 					random_list = {
-						15 = {
-							set_country_flag = ENG_AI_RANDOM_COMMUNIST
+						25 = {
+							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_EL_MELLOI
 						}
 						25 = {
-							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ALTERNATE
+							set_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ANIMUSPHERE
 						}
-						30 = {
-							set_country_flag = ENG_AI_DEMOCRATIC_HISTORICAL
+						49 = {
+							set_country_flag = ENG_AI_DEMOCRATIC_GOD_BLESS_THE_KING
 						}
-						20 = {
-							set_country_flag = ENG_AI_RANDOM_NEUTRALITY
-						}
-						20 = {
-							set_country_flag = ENG_AI_RANDOM_FASCIST
+						1 = {
+							set_country_flag = ENG_AI_RANDOM_DARKENED_FOCUS
 						}
 					}
 				}

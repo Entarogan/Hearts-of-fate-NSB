@@ -1296,100 +1296,6 @@ GER_area_priority = {
 	}
 }
 
-GER_focus_europe = {
-
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		original_tag = GER
-		OR = {
-			has_war_with = FRA
-			has_war_with = ITA
-			has_war_with = SOV
-			has_war_with = RUS
-		}
-	}
-
-	abort = {
-		OR = {
-			NOT = { has_war_with = FRA }
-			FRA = { exists = no	}
-      FRA = { is_subject = yes }
-      FRA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = ITA }
-			ITA = { exists = no	}
-      ITA = { is_subject = yes }
-      ITA = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = SOV }
-			SOV = { exists = no	}
-      SOV = { is_subject = yes }
-      SOV = { has_capitulated = yes }
-		}
-		OR = {
-			NOT = { has_war_with = RUS }
-			RUS = { exists = no	}
-      RUS = { is_subject = yes }
-      RUS = { has_capitulated = yes }
-		}
-	}
-
-	
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = -90
-	}
-	ai_strategy = {
-		type = area_priority
-		id = suez
-		value = -90
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = -90
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = asia
-		value = -120
-	}	
-	
-	ai_strategy = {
-		type = area_priority
-		id = pacific
-		value = -120 
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = oceania
-		value = -120
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = north_america
-		value = -120
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = south_america
-		value = -120
-	}
-
-
-}
-
 invading_france_is_pointless_because_we_go_through_benelux_soon = {
 
 	allowed = {
@@ -1434,7 +1340,6 @@ worry_about_barbarossa_before_africa = {
 		country_exists = SOV
 		NOT = {	is_in_faction_with = SOV }
 		has_war_with = ENG
-		ENG = { is_ai = yes }
 	}
 
 	abort_when_not_enabled = yes
@@ -1449,6 +1354,13 @@ worry_about_barbarossa_before_africa = {
 		id = suez
 		value = -50
 	}
+
+	ai_strategy = {
+		type = area_priority
+		id = africa
+		value = -50
+	}
+
 }
 
 make_sure_poland_is_ganked_before_we_move = {
@@ -3720,7 +3632,7 @@ GER_Dying_FRA = {
 		original_tag = GER
     has_idea = GER_yellow_Manstein
 		stockpile_ratio = {
-			archetype = infantry_equipment
+			archetype = medium_tank_chassis
 			ratio > 0.75
 		}
 		FRA = { is_ai = yes }
@@ -3733,22 +3645,26 @@ GER_Dying_FRA = {
 		area = GER_west_line_hof
 		ratio = 0.5
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "FRA"
-		value = -999
+		type = front_unit_request
+
+		tag = FRA
+
+		value = 50 # lets put more units, should be safe
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "BEL"
-		value = -999
+		type = front_unit_request
+
+		tag = BEL
+
+		value = 50 # lets put more units, should be safe
 	}
 
 }
@@ -3762,7 +3678,7 @@ GER_Dying_FRA_Player = {
 		original_tag = GER
     has_idea = GER_yellow_Manstein
 		stockpile_ratio = {
-			archetype = infantry_equipment
+			archetype = medium_tank_chassis
 			ratio > 0.75
 		}
 		FRA = { is_ai = no }
@@ -3775,22 +3691,26 @@ GER_Dying_FRA_Player = {
 		area = GER_west_line_hof
 		ratio = 0.7
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "FRA"
-		value = -999
+		type = front_unit_request
+
+		tag = FRA
+
+		value = 50 # lets put more units, should be safe
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "BEL"
-		value = -999
+		type = front_unit_request
+
+		tag = BEL
+
+		value = 50 # lets put more units, should be safe
 	}
 
 }
@@ -3804,7 +3724,7 @@ GER_Dying_CZE = {
 		original_tag = GER
 		has_country_flag = GER_Start_the_CZE_campaign_flag
 		stockpile_ratio = {
-			archetype = infantry_equipment
+			archetype = medium_tank_chassis
 			ratio > 0.75
 		}
 	}
@@ -3816,16 +3736,18 @@ GER_Dying_CZE = {
 		area = CZE_hof
 		ratio = 0.7
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "CZE"
-		value = -999
+		type = front_unit_request
+
+		tag = CZE
+
+		value = 50 # lets put more units, should be safe
 	}
 
 }
@@ -3838,16 +3760,14 @@ GER_Dying_RUS = {
   enable = {
 		original_tag = GER
 		stockpile_ratio = {
-			archetype = infantry_equipment
+			archetype = medium_tank_chassis
 			ratio > 0.75
 		}
 		or = {
 			AND = {
-				SOV = { is_ai = yes }
 				SOV = { is_subject = no }
 			}
 			AND = {
-				RUS = { is_ai = yes }
 				RUS = { is_subject = no }
 			}
 		}
@@ -3862,22 +3782,38 @@ GER_Dying_RUS = {
 		area = Dahe_Line_of_Defense
 		ratio = 0.7
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
+		type = front_armor_score
 		id = "SOV"
-		value = -999
+		value = 100
 	}
 
 	ai_strategy = {
-		type = consider_weak
+		type = front_armor_score
 		id = "RUS"
-		value = -999
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = SOV
+
+		value = 50 # lets put more units, should be safe
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = RUS
+
+		value = 50 # lets put more units, should be safe
 	}
 
 }
@@ -3928,73 +3864,30 @@ GER_Dahe_Line_of_Defense_SOV = {
 	ai_strategy = {
 		type = front_control
 		area = Dahe_Line_of_Defense
-		ratio = 0
+		ratio = 0.75
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = careful
 		execute_order = no
 		manual_attack = yes
 	}
 
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = SOV
+
+		value = 50 # lets put more units, should be safe
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = RUS
+
+		value = 50 # lets put more units, should be safe
+	}
+
 }
 
 
-GER_no_go_to_Africa = {
-
-	allowed = {
-		original_tag = GER
-	}
-
-	enable = {
-		original_tag = GER
-		OR = {
-			AND = {
-				FRA = { is_subject = no }
-				FRA = { is_in_faction_with = GER }
-			}
-			AND = {
-				ITA = { is_subject = no }
-				ITA = { is_in_faction_with = GER }
-			}
-			AND = {
-				IRQ = { is_subject = no }
-				IRQ = { is_in_faction_with = GER }
-			}
-		}
-	}
-
-	abort = {
-		OR = {
-			GER = { controls_state = 16 }
-			any_other_country = {
-				is_in_faction_with = GER
-				controls_state = 16
-			}
-		}
-		OR = {
-			GER = { controls_state = 219 }
-			any_other_country = {
-				is_in_faction_with = GER
-				controls_state = 219
-			}
-		}
-	}	
-	
-	ai_strategy = {
-		type = area_priority
-		id = middle_east
-		value = -150
-	}
-	ai_strategy = {
-		type = area_priority
-		id = suez
-		value = -130
-	}
-	
-	ai_strategy = {
-		type = area_priority
-		id = africa
-		value = -100
-	}
-	
-}

@@ -1131,11 +1131,12 @@ jap_early_invasions_are_risky_and_best_wait_for_later = {
 	}
 	
 	abort = {
-    OR = {
-      BEY = { has_capitulated = yes }
-      BEY = { is_subject_of = JAP }
-      NOT = { country_exists = BEY }		
-    }
+		OR = {
+			date < 1939.1.1
+			BEY = { has_capitulated = yes }
+			BEY = { is_subject_of = JAP }
+			NOT = { country_exists = BEY }		
+		}
 	}
 
 	ai_strategy = {
@@ -1320,16 +1321,26 @@ JAP_rush_china_ai = {
 		area = Manchuria_hof
 		ratio = 0.5
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "CHI"
-		value = -999
+		type = front_unit_request
+
+		tag = BEY
+
+		value = 50
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = CHI
+
+		value = 25
 	}
 
 }
@@ -1363,16 +1374,26 @@ JAP_rush_china_player = {
 		area = Manchuria_hof
 		ratio = 0.7
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "CHI"
-		value = -999
+		type = front_unit_request
+
+		tag = BEY
+
+		value = 50
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = CHI
+
+		value = 25
 	}
 
 }
@@ -1404,16 +1425,26 @@ JAP_Dying_china = {
 		area = asia
 		ratio = 0.5
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes
 	}
 
 	ai_strategy = {
-		type = consider_weak
-		id = "CHI"
-		value = -999
+		type = front_unit_request
+
+		tag = BEY
+
+		value = 50
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = CHI
+
+		value = 50
 	}
 
 }
@@ -1442,9 +1473,9 @@ JAP_Dying_white = {
 	ai_strategy = {
 		type = front_control
 		area = Southern_Resource_Area
-		ratio = 0
+		ratio = 0.25
 		ordertype = front
-		priority = 999
+		priority = 100
 		execution_type = rush_weak
 		execute_order = yes
 		manual_attack = yes

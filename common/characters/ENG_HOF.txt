@@ -127,9 +127,7 @@ characters={
 			traits = { strategy_educator }
 			
 			modifier = {
-				land_doctrine_cost_factor = -0.08
-				naval_doctrine_cost_factor = -0.08
-				air_doctrine_cost_factor = -0.08
+
 			}
 
 			ai_will_do = {
@@ -187,11 +185,9 @@ characters={
 				small="GFX_idea_lev"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1938.1.1.1"
-		}
 		advisor={
+			slot = political_advisor
+			idea_token = ENG_Lev_Lainur_Flauros
 			allowed = {
 				original_tag = ENG
 			}
@@ -813,9 +809,7 @@ characters={
 			}
 
 			available = {
-				NOT = { has_idea = ENG_lev }
-				NOT = { has_completed_focus = uk_london_incident_focus }
-				NOT = { has_country_flag = lev_suicided }
+				NOT = { has_idea = ENG_Lev_Lainur_Flauros }
 			}
 			
 			traits = { crime_head }
@@ -884,6 +878,74 @@ characters={
 			}
 			
 			traits = { all_in_plan }
+		}
+	}
+
+	ENG_Samuel_Lewis ={
+		name= "Samuel Lewis"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_Lewis_1.dds"
+			}
+		}
+		corps_commander = {
+			traits = { inflexible_strategist trait_cautious  }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	ENG_Enfield_Bren ={
+		name= "Enfield Bren"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_BrenMKMod.dds"
+			}
+		}
+		corps_commander = {
+			traits = { infantry_leader trait_engineer }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	ENG_Sheffield_Turpin ={
+		name= "Sheffield Turpin"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_StenMK2.dds"
+			}
+		}
+		corps_commander = {
+			traits = { trickster commando naval_invader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	ENG_Welrod_Reeves ={
+		name= "Welrod Reeves"
+		portraits={
+			army={
+				large="gfx/leaders/ENG/Portrait_WelrodMod.dds"
+			}
+		}
+		corps_commander = {
+			traits = { trait_reckless trickster infantry_leader commando naval_invader }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 3
 		}
 	}
 

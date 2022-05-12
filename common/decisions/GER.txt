@@ -1326,6 +1326,83 @@ GER_war_plan = {
 	}
 
 
+	GER_Securing_RHI_decisions = {
+		icon = hol_draw_up_staff_plans
+		target_trigger = {
+			FROM = {
+				original_tag = RHI
+			}
+		}
+		available = {
+		}
+		visible = {
+			tag = GER
+			is_subject = no
+			has_war_with = FRA
+		}
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 15
+		}
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+		days_remove = 30
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 2
+				country_exists = RHI
+				NOT = {
+					GER = { has_war_with = RHI }
+				}
+			}
+			modifier = {
+				factor = 2
+				RHI = {
+					is_subject = no
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+		targeted_modifier = {
+
+		}
+		modifier = {
+
+		}
+		remove_effect = {
+
+			if = {
+				limit = {
+					country_exists = RHI
+					NOT = {
+						has_war_with = RHI
+					}
+					NOT = {
+						RHI = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						RHI = {
+							is_subject_of = GER
+						}
+					}
+				}
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = RHI
+				}
+			}
+
+		}
+	}
+
+
 	GER_Start_the_Manstein_operations_decisions = {
 		icon = hol_draw_up_staff_plans
 		target_trigger = {
@@ -1530,6 +1607,31 @@ GER_war_plan = {
 					id = news.234
 				}
 			}
+
+			if = {
+				limit = {
+					country_exists = RHI
+					NOT = {
+						has_war_with = RHI
+					}
+					NOT = {
+						RHI = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						RHI = {
+							is_subject_of = GER
+						}
+					}
+				}
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = "RHI"
+					value = 1000
+				}
+			}
+
 			if = {
 				limit = {
 					country_exists = HOL
@@ -1624,110 +1726,35 @@ GER_war_plan = {
 					days = 60
 				}
 			}
+
 			if = {
 				limit = {
-		      always = no
-					tag = GER
-					is_ai = yes
-					any_enemy_country = {
-						is_ai = no
-						or = {
-							tag = ENG
-							tag = FRA
+					country_exists = RHI
+					NOT = {
+						has_war_with = RHI
+					}
+					NOT = {
+						RHI = {
+							is_in_faction_with = GER
+						}
+					}
+					NOT = {
+						RHI = {
+							is_subject_of = GER
 						}
 					}
 				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = GER
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = "RHI"
+					value = -1000
 				}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment
-					amount = 750
-					producer = GER
-				}
-				if = {
-					limit = {
-						has_tech = mechanised_infantry
-					}
-					add_equipment_to_stockpile = {
-						type = mechanized_equipment
-						amount = 1000
-						producer = GER
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = armored_car_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_chassis
-					amount = 750
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_destroyer_equipment
-					amount = 200
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_artillery_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_aa_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis
-					amount = 250
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = CAS_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment
-					amount = 100
-					producer = GER
+				declare_war_on = {
+					type = puppet_wargoal_focus
+					target = RHI
 				}
 			}
+
 			if = {
 				limit = {
 					country_exists = HOL
@@ -5912,6 +5939,7 @@ GER_purchase_equipment = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			country_exists = GER
@@ -6024,6 +6052,7 @@ GER_purchase_equipment = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			country_exists = GER
@@ -6217,6 +6246,7 @@ GER_purchase_equipment = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			country_exists = GER
@@ -6410,6 +6440,7 @@ GER_purchase_equipment = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			country_exists = GER
@@ -6612,6 +6643,7 @@ GER_purchase_equipment = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			country_exists = GER
@@ -7230,6 +7262,7 @@ special_projects = {
 			NOT = {
 				is_justifying_wargoal_against = GER
 			}
+			num_of_civilian_factories_available_for_projects > 1
 		}
 		visible = {
 			original_tag = GER
