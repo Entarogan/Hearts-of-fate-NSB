@@ -1432,7 +1432,7 @@ ideas = {
         army_core_attack_factor = 0.1
         army_core_defence_factor = 0.1
 				resistance_growth_on_our_occupied_states = 0.15
-		    surrender_limit = 0.10
+		    surrender_limit = 0.05
 			}
 		}
 
@@ -1539,8 +1539,8 @@ ideas = {
 			picture = blitzkrieg
 			
 			modifier = {
-				army_armor_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
 				org_loss_when_moving = -0.05
 				land_reinforce_rate = 0.01
 			}
@@ -1562,8 +1562,8 @@ ideas = {
 			picture = blitzkrieg
 			
 			modifier = {
-				army_armor_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
 		    mechanized_attack_factor = 0.05
@@ -1590,8 +1590,9 @@ ideas = {
 			
 			modifier = {
 		    army_speed_factor = 0.05
-				army_armor_speed_factor = 0.10
+				recon_factor = 0.1
 				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
 		    mechanized_attack_factor = 0.10
@@ -1755,8 +1756,10 @@ ideas = {
 
 			modifier = {		
 		    army_speed_factor = 0.05
-				army_armor_speed_factor = 0.10
+				recon_factor = 0.1
+				breakthrough_factor = 0.1
 				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
 		    mechanized_attack_factor = 0.10
@@ -1769,29 +1772,6 @@ ideas = {
         air_superiority_detect_factor = 0.05
         army_bonus_air_superiority_factor = 0.05
         air_cas_present_factor = 0.10
-			}
-
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				mechanized_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				motorized_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				infantry_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
 			}
 
 		}

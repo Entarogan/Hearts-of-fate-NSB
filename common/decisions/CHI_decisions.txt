@@ -6250,11 +6250,12 @@ political_actions = {
 	CHI_join_united_front = {
 		available = {
 			is_literally_china = yes
+            NOT = { is_guaranteed_by = SOV }
 			CHI = {
-        or = {
-          is_in_faction_with = BEY
-          has_country_flag = CHI_annexed_BEY
-        }
+				or = {
+				  is_in_faction_with = BEY
+				  has_country_flag = CHI_annexed_BEY
+				}
 			}
 			OR = {
 				BEY = {

@@ -1,12 +1,29 @@
 ideas = {
 
-	# POLITICAL
-	political_advisor = {		
+	country = {
 
+		FRA_French_Academy_of_Sciences_idea = {
 
+			allowed = {
+				original_tag = FRA
+			}
 
+			picture = generic_research_bonus
+
+			allowed_civil_war = {
+
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.06
+			}
+		}
 
 	}
+
+	# POLITICAL
 		
 	# MILITARY
 

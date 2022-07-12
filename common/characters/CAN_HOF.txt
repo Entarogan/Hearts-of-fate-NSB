@@ -25,11 +25,11 @@ characters={
 			id=-1
 		}
 	}
-	CAN_Earthspirit={
-		name="Earthspirit"
+	CAN_Carissa={
+		name="Carissa"
 		portraits={
 			civilian={
-				large="gfx/leaders/CAN/Portrait_Earthspirit.dds"
+				large="gfx/leaders/CAN/Portrait_Carissa.dds"
 			}
 		}
 		country_leader={

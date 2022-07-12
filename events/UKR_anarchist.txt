@@ -7,7 +7,7 @@ country_event = {
 	id = ukr_reunion.1
 	title = ukr_reunion.1.t
 	desc = ukr_reunion.1.d
-	picture = GFX_report_event_soviet_purge_trial
+	picture = GFX_report_event_UKR_anarchist_makhno_1
 
 	is_triggered_only = yes
 
@@ -48,7 +48,7 @@ country_event = {
 	id = ukr_reunion.2
 	title = ukr_reunion.2.t
 	desc = ukr_reunion.2.d
-	picture = GFX_report_event_generic_riot
+	picture = GFX_report_event_UKR_anarchist_generic_patroit
 	
 	fire_only_once = yes
 
@@ -59,8 +59,9 @@ country_event = {
 		#### TODO: Add Reunion People
 
 		hidden_effect = {
-			country_event = { id = ukr_reunion.3  days = 35 }
+			country_event = { id = ukr_reunion.3  days = 20 }
 		}
+
 
 	}
 }
@@ -71,7 +72,7 @@ country_event = {
 	id = ukr_reunion.3
 	title = ukr_reunion.3.t
 	desc = ukr_reunion.3.d
-	picture = GFX_report_event_generic_scandinavia
+	picture = GFX_report_event_UKR_anarchist_reunion_camp
 	
 	fire_only_once = yes
 
@@ -110,7 +111,7 @@ country_event = {
 	id = ukr_reunion.4
 	title = ukr_reunion.4.t
 	desc = ukr_reunion.4.d
-	picture = GFX_report_event_generic_scandinavia
+	picture = GFX_report_event_UKR_anarchist_talula_and_reunion
 	
 	fire_only_once = yes
 
@@ -142,7 +143,7 @@ country_event = {
 	id = ukr_reunion.5
 	title = ukr_reunion.5.t
 	desc = ukr_reunion.5.d
-	picture = GFX_report_event_generic_riot
+	picture = GFX_report_event_UKR_anarchist_talula_and_alina
 	
 	fire_only_once = yes
 
@@ -153,9 +154,7 @@ country_event = {
 		ai_chance = {
 			base = 40
 		}
-		hidden_effect = {
-			country_event = { id = ukr_reunion.12  days = 65 }
-		}
+		
 		if = {
 			limit = {
 				has_idea = UKR_Black_army_idea
@@ -174,6 +173,10 @@ country_event = {
 				add_idea = UKR_Black_army_15_idea
 			}
 		}
+
+		hidden_effect = {
+			set_country_flag = UKR_anarchist_alina_join_flag
+		}
 	}
 
 }
@@ -183,7 +186,7 @@ country_event = {
 	id = ukr_reunion.6
 	title = ukr_reunion.6.t
 	desc = ukr_reunion.6.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_talula_crying
 	
 	is_triggered_only = yes
 	
@@ -211,7 +214,7 @@ country_event = {
 	id = ukr_reunion.7
 	title = ukr_reunion.7.t
 	desc = ukr_reunion.7.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_soviet_brezhnev_04
 	
 	is_triggered_only = yes
 	
@@ -241,9 +244,15 @@ country_event = {
 	id = ukr_reunion.8
 	title = ukr_reunion.8.t
 	desc = ukr_reunion.8.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_alina_dead
 	fire_only_once = yes
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			set_country_flag = UKR_anarchist_alina_dead_flag
+		}
+	}
 	
 	option = {
 		#### Set Novastar as the mentor
@@ -266,7 +275,7 @@ country_event = {
 	id = ukr_reunion.9
 	title = ukr_reunion.9.t
 	desc = ukr_reunion.9.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_talula_arguing
 	
 	fire_only_once = yes
 	trigger = {
@@ -305,7 +314,7 @@ country_event = {
 	id = ukr_reunion.10
 	title = ukr_reunion.10.t
 	desc = ukr_reunion.10.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_generic_village_burning
 	
 	is_triggered_only = yes
 	
@@ -337,6 +346,21 @@ country_event = {
 			base = 100
 		}
 		#### TODO: The coup
+		remove_country_leader_role = {
+			character = UKR_Talulah_Artorius
+			ideology = libertarian_socialist
+		}
+
+		add_country_leader_role = {
+			Character = UKR_Yelena_Frostnova
+			Promote_leader = yes
+			Country_leader = {
+			ideology = libertarian_socialist
+				traits = {
+					
+				}
+			}
+		}
 		add_political_power = 20
 	}
 
@@ -347,7 +371,7 @@ country_event = {   #### The Evolution of the Reunion
 	id = ukr_reunion.11
 	title = ukr_reunion.11.t
 	desc = ukr_reunion.11.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_talula_at_her_seat
 	
 	is_triggered_only = yes
 	
@@ -376,7 +400,10 @@ country_event = {   #### The Evolution of the Reunion
 		UKR_Talulah_Artorius = {
 			set_portraits = {
 				civilian = {
-					large = "gfx/leaders/ROM/Portrait_Talulah_Artorius_alter.dds"
+					large = "gfx/leaders/UKR/Portrait_Talulah_Artorius_alter.dds"
+				}
+				army = {
+					large = "gfx/leaders/UKR/Portrait_Talulah_Artorius_alter.dds"
 				}
 			}
 		}
@@ -393,7 +420,7 @@ country_event = {
 	id = ukr_reunion.12
 	title = ukr_reunion.12.t
 	desc = ukr_reunion.12.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_talula_arguing
 	
 	is_triggered_only = yes
 	
@@ -405,6 +432,12 @@ country_event = {
 		}
 
 		add_political_power = -20
+		hidden_effect = {
+			country_event = {
+				id = ukr_reunion.14
+				days = 35
+			}
+		}
 	}
 }
 
@@ -414,7 +447,7 @@ country_event = {
 	id = ukr_reunion.13
 	title = ukr_reunion.13.t
 	desc = ukr_reunion.13.d
-	picture = GFX_report_event_vienna_award_negotiations
+	picture = GFX_report_event_UKR_anarchist_patriot_and_frostnova
 	
 	is_triggered_only = yes
 	
@@ -426,5 +459,114 @@ country_event = {
 		}
 
 		add_political_power = -20
+	}
+}
+
+country_event = {   
+	#### Flavour: Is FrostNova the real Anastasia?
+	id = ukr_reunion.14
+	title = ukr_reunion.14.t
+	desc = ukr_reunion.14.d
+	picture = GFX_report_event_UKR_anarchist_generic_frostnova
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukr_reunion.14.a
+
+		ai_chance = {
+			base = 100
+		}
+
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = ukr_reunion.15
+	title = ukr_reunion.15.t
+	desc = ukr_reunion.15.d
+	picture = GFX_report_event_UKR_anarchist_reunion_camp
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+        has_government = communism
+		has_completed_focus = UKR_Anarchist_all_power_to_soviet
+		date > 1937.4.20
+		is_subject = no
+		has_war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = ukr.3.a
+
+		add_political_power = 150
+
+		#swap_ideas = {
+			#remove_idea = UKR_Developed_agriculture_idea
+			#add_idea = UKR_Promote_industrialization_idea
+		#}
+		delete_unit_template_and_units = { 
+			division_template = "Nightingale Battalion Group" 
+			disband = yes
+		}
+		delete_unit_template_and_units = { 
+			division_template = "Otaman Strelkovaya" 
+			disband = yes
+		}
+		delete_unit_template_and_units = { 
+			division_template = "Sich Riflemen" 
+			disband = yes
+		}
+		if = {
+			limit = {
+				has_completed_focus = UKR_Call_for_civilians
+			}
+			delete_unit_template_and_units = { 
+				division_template = "militia" 
+				disband = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_completed_focus = UKR_Extremist_forces
+			}
+			delete_unit_template_and_units = { 
+				division_template = "OUN" 
+				disband = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_completed_focus = UKR_Assemble_the_Cossacks
+			}
+			delete_unit_template_and_units = { 
+				division_template = "Cossacks" 
+				disband = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_completed_focus = UKR_Unite_anarchists
+			}
+			delete_unit_template_and_units = { 
+				division_template = "anarchists" 
+				disband = yes
+			}
+		}
+		hidden_effect = {
+			load_focus_tree = ukr_focus_talula_win
+		}
+		
+
 	}
 }

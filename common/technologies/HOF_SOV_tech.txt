@@ -1,0 +1,22 @@
+technologies = {
+
+    masterful_deep_battle = {	
+		research_cost = 1000
+        start_year = 3000
+		allow = {
+			always = no
+		}
+        doctrine = yes	
+
+		supply_consumption_factor = -0.1
+		category_all_infantry = {
+			max_organisation = 5
+		}
+
+		categories = {
+			land_doctrine
+		}
+	}
+	
+}	
+

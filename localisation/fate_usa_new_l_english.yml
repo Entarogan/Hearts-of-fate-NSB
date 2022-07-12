@@ -59,3 +59,6 @@
  USA_OFN_decisions:0 "Organization of Free Nations"
  USA_form_OFN:0 "Protect Free Nations"
  
+ USA_invite_france_when_france_is_nearly_surrendered:0 "Confronting France's Enemies"
+ USA_invite_france_when_france_is_nearly_surrender_desc:0 "A report submitted by Johns Hopkins University, our leading think tank, points out that the expansionist forces trying to conquer [FRA.GetName] at the moment have a high chance of posing a threat to the entire world, and thus advocates GetName] to join the war to defend the free world. A number of government cabinet members scoffed at the report, saying that it was based on nonsense, as it claimed to be "based on past experience. Has any power in the past conquered France and then conquered the whole world, including the United States?"
+ 

@@ -1,4 +1,48 @@
 characters={
+
+	RUS_carl_mannerheim={
+		name=RUS_carl_mannerheim
+		portraits={
+			army={
+				large="gfx/leaders/RUS/Portrait_RUS_carl_mannerheim.png"
+				small="GFX_idea_carl_mannerheim"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = RUS_carl_mannerheim
+			allowed = {
+				original_tag = RUS
+			}
+			available  = {
+			    has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
+				NOT = { has_idea = RUS_roman_sternberg }
+				not  = {
+					has_country_flag  = RUS_Some_generals_left_flag 
+				}
+			}
+			traits = {
+				Madahan
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 3.000
+			}
+		}	
+		corps_commander={
+			traits={ inflexible_strategist trait_cautious war_hero cavalry_officer trickster winter_specialist }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=58
+			visible = {
+				has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
+			}
+		}
+	}
+
 	RUS_sergey_taboritsky={
 		name=RUS_sergey_taboritsky
 		advisor={
@@ -1084,6 +1128,7 @@ characters={
 				original_tag  = RUS
 			}
 			available  = {
+				NOT = { has_idea = RUS_carl_mannerheim }
 			}
 			traits  = {
 				Predator 

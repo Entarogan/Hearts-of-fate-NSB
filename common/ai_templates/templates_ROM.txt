@@ -41,10 +41,6 @@ armored_ROM = {
 	
 		upgrade_prio = {
 			factor = 2
-
-			modifier = {
-				factor = 10
-			}
 			
 			modifier = {
 				factor = 30
@@ -158,6 +154,10 @@ armored_ROM = {
 				}
 			}
 		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
+		}
 		
 		target_width = 42.0
 		width_weight = 3.0
@@ -214,8 +214,7 @@ armored_ROM = {
 			}
 			
 			regiments = {
-				modern_armor = 4
-				medium_armor = 3
+				modern_armor = 7
 				mot_artillery_brigade = 2
 			  mot_anti_air_brigade = 1
 				mot_anti_tank_brigade = 1
@@ -226,7 +225,6 @@ armored_ROM = {
 
 		allowed_types = {
 			modern_armor
-      medium_armor
 			mechanized
 			mot_artillery_brigade
 			mot_anti_air_brigade

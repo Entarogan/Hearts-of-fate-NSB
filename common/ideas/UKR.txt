@@ -1,0 +1,221 @@
+ideas = {
+
+
+
+	# TECHNOLOGY
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		UKR_mykolaiv_shipbuilding = {
+
+			allowed = {
+				original_tag = UKR
+			}
+
+			available = {
+				has_completed_focus = UKR_generic_Mykolaiv_shipbuilding
+			}
+			
+			picture = UKR_mykolaiv_shipbuilding
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			equipment_bonus = {
+
+			}
+			traits = { coastal_defence_naval_manufacturer } # 岸防舰艇制造商
+			modifier = {
+				#海军研究+15%，巡洋舰、驱逐舰航程+10%，成本-10%
+
+			}
+		}
+		UKR_crimea_marine_plant = {
+
+			allowed = {
+				original_tag = UKR
+			}
+
+			available = {
+				has_completed_focus = UKR_generic_integrate_Crimea
+			}
+			
+			picture = SOV_sevastopol_marine_plant
+			research_bonus = {
+				naval_equipment = 0.1
+			}
+			
+			traits = { repair_and_refurbishment_plant }
+			
+			modifier = {
+				naval_accidents_chance = -0.15
+				repair_speed_factor = 0.15
+				refit_ic_cost = -0.1
+				refit_speed = 0.1
+			}
+
+			equipment_bonus = {
+				coastal_defense_ships = {
+					build_cost_ic = -0.1
+				}
+				submarine = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+		
+		UKR_kharkiv_aviation_plant = {
+			#OAK
+			allowed = {
+				original_tag = UKR		
+			}
+			available = {
+				has_completed_focus = UKR_generic_Kharkiv_aviation_plant
+			}
+			picture = UKR_kharkiv_aviation_plant
+			research_bonus = {
+				#航空研究+15%，
+				air_equipment = 0.15
+			}
+			equipment_bonus  = {
+				#轻型战斗机、CAS、海轰成本-10%，机动性+10%，航程+10%
+				fighter_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				CAS_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				nav_bomber_equipment = {
+					build_cost_ic = -0.1
+					air_agility = 0.1 
+					air_range = 0.1
+
+					instant = yes
+				}
+			
+			}
+			traits = { light_aircraft_manufacturer } #轻型飞机制造商
+		}	
+		UKR_antonov_ASTC = {
+			#
+			allowed = {
+				original_tag = UKR		
+			}
+			available = {
+				has_completed_focus = UKR_generic_Antonov_STC
+			}
+			picture = UKR_antonov_ASTC
+			research_bonus = {
+				#航空研究+15%，
+				air_equipment = 0.15
+			}
+			equipment_bonus  = {
+				#战略轰炸机成本-15%，机动+10%；重型战斗机成本-10%，机动+10%
+				heavy_fighter_equipment = {
+					build_cost_ic = -0.1
+					air_agility = 0.1 
+				}
+				
+				strat_bomber_equipment = {
+					build_cost_ic = -0.15
+					air_agility = 0.1 
+				}
+			
+			}	
+			traits = { heavy_aircraft_manufacturer } #重型飞机制造商
+		}	
+	}
+	
+	####工业
+	industrial_concern = {
+	
+		UKR_AZST = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+      
+			available = { has_completed_focus = UKR_generic_Mariupol_metallurgical_industries }
+      
+			picture = UKR_AZST
+			
+			research_bonus = {
+				#工业研究+15%
+				industry = 0.15
+			}
+			equipment_bonus = {
+
+				mechanized_equipment = {
+					build_cost_ic = -0.05
+				}
+				armor = {
+					build_cost_ic = -0.05
+				}
+			}
+			traits = { industrial_concern }
+			modifier = {
+				#，工厂产出+5%，装甲、机械化成本-5%
+				industrial_capacity_factory = 0.05
+
+
+			}
+		}
+		
+		UKR_dniper_HES = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+      
+			available = { has_completed_focus = UKR_generic_DniproHES_expansion }
+      
+			picture = UKR_dniper_HES
+			
+
+			traits = { electricity_center }
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+
+			}
+		}
+    
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		UKR_kyiv_polytechnic_institute = {
+			picture = RUS_kyiv_polytechnic_institute
+			allowed = {
+				original_tag = UKR
+			}
+			
+			available = { has_completed_focus = UKR_generic_support_Kyiv_Polytechnic_Institute }
+      
+			research_bonus = {
+				#步兵装备研究+10%，炮兵研究+10%，摩托化研究+10% 空军+5%
+				infantry_weapons = 0.10
+				artillery = 0.10
+				motorized_equipment = 0.1
+				air_equipment = 0.05
+			}
+
+			modifier = {
+
+			}
+			traits = { comprehensive_polytechnic_institute }
+		}
+
+ 
+	}
+
+}

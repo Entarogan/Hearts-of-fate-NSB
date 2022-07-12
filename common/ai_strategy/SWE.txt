@@ -621,7 +621,7 @@ SWE_we_like_GER = { # :O
 
 SWE_we_anti_communist = { 
 	enable = {
-        has_idea = GER_anti_communist_volunteers_I
+        has_idea = GER_anti_communist_volunteers_idea
 	    SWE = { has_war_with = SOV }
 	}
 	abort = {

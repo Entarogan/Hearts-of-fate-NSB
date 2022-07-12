@@ -313,6 +313,10 @@ armor_CHI = {
 				NOT = {	has_tech = main_battle_tank_chassis }
 			}
 		}
+
+		can_upgrade_in_field = {
+			has_equipment = { medium_tank_chassis > 500 }
+		}
 		
 		target_width = 20.0
 		width_weight = 1.5
@@ -403,6 +407,10 @@ armor_CHI = {
 					has_tech = main_battle_tank_chassis
 				}
 			}
+		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
 		}
 		
 		target_width = 20.0

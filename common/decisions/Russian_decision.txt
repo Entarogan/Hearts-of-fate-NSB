@@ -1,6 +1,42 @@
 
 operations = {
 
+	RUS_riding_home_mission = {
+
+		icon = generic_operation
+
+		allowed = {
+			tag = rus
+		}
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 365
+		fire_only_once = yes
+
+		activation = {
+			date < 1936.1.10
+			tag = rus
+		}
+
+		is_good = yes
+
+		complete_effect = {
+
+
+		}
+
+		timeout_effect = {
+		    country_event = russian.1
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 	RUS_Across_the_Urals_mission = {
 
 		icon = generic_operation
@@ -10,9 +46,11 @@ operations = {
 		}
 
 		available = {
-			573 = { is_controlled_by_ROOT_or_ally = yes }
-			582 = { is_controlled_by_ROOT_or_ally = yes }
-			402 = { is_controlled_by_ROOT_or_ally = yes }
+			or = {
+				573 = { is_controlled_by_ROOT_or_ally = yes }
+				582 = { is_controlled_by_ROOT_or_ally = yes }
+				402 = { is_controlled_by_ROOT_or_ally = yes }
+			}
 		}
 
 		days_mission_timeout = 240
@@ -25,19 +63,80 @@ operations = {
 		is_good = no
 
 		complete_effect = {
-			add_war_support = 0.05
 
-		  activate_mission = RUS_Advance_to_Volga_mission
+			set_global_flag = RUS_Across_the_Urals_flag
+			SOV = {
+				add_stability = -0.1
+				add_war_support = -0.2
+			}
+
+			custom_effect_tooltip = RUS_enemy_collapses_tt	
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SOV 
+							is_owned_by = RUS
+						}
+					}
+					damage_units = {
+						state = THIS 
+						limit = { tag = SOV } 
+						damage = 0.1
+						ratio = yes  
+						army = yes
+					}
+				}
+
+				SOV = {
+					transfer_units_fraction= {
+						target = RUS
+						size = 0
+						stockpile_ratio = 0
+						army_ratio = 0.1
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes 
+						}
+					}
+
+				}
+			}
+
+			add_war_support = 0.1
+
+		    activate_mission = RUS_Advance_to_Volga_mission
 
 			add_timed_idea = {
-				days = 60
+				days = 120
 				idea = RUS_Advance_to_Volga
 			}
 
 		}
 
 		timeout_effect = {
-			add_war_support = -0.1		
+			add_stability = -0.1
+			add_war_support = -0.2		
+
+			custom_effect_tooltip = RUS_army_collapses_tt	
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SOV 
+							is_owned_by = RUS
+						}
+					}
+					damage_units = {
+						state = THIS 
+						limit = { tag = RUS } 
+						damage = 0.15
+						ratio = yes  
+						army = yes
+					}
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -69,15 +168,49 @@ operations = {
 		complete_effect = {
 			add_war_support = 0.05
 
+			custom_effect_tooltip = RUS_enemy_collapses_1_tt	
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_owned_by = SOV 
+							is_owned_by = RUS
+						}
+					}
+					damage_units = {
+						state = THIS 
+						limit = { tag = SOV } 
+						damage = 0.1
+						ratio = yes  
+						army = yes
+					}
+				}
+
+				SOV = {
+					transfer_units_fraction= {
+						target = RUS
+						size = 0
+						stockpile_ratio = 0
+						army_ratio = 0.1
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes 
+						}
+					}
+
+				}
+			}
+
 			add_timed_idea = {
-				days = 60
+				days = 120
 				idea = RUS_Advance_to_Moscow
 			}
 
 		}
 
 		timeout_effect = {
-			add_war_support = -0.1	
+			add_war_support = -0.05
 		}
 
 		ai_will_do = {
@@ -173,9 +306,10 @@ Western_relationship = {
 
 		available = {
 			NOT = { has_idea = RUS_sour_loser }
-      country_exists = JAP
-      JAP = { is_subject = no }
-      NOT = { has_war_with = JAP }
+			country_exists = JAP
+			JAP = { is_subject = no }
+			NOT = { has_war_with = JAP }
+			NOT = { is_subject_of = JAP }
 		}
 		visible = {
 			OR = {
@@ -626,10 +760,10 @@ Unify_Russian = {
 			has_completed_focus = rus_no_compromise_on_united_russia
 			KAZ = { exists = yes  }
 		}
-		days_remove = 60
-		cost = 50
+		days_remove = 30
+		cost = 0
 		ai_will_do = {
-			factor = 10000
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -643,7 +777,7 @@ Unify_Russian = {
 	rus_invade_ukr = {
 		icon = generic_prepare_civil_war
 		available = {
-			has_completed_focus = rus_no_compromise_on_united_russia
+			NOT = { has_idea = SOV_Focus_on_the_inside_idea }
 			UKR = {
 				any_neighbor_country = {
 					OR = {
@@ -697,7 +831,7 @@ Unify_Russian = {
 		days_remove = 60
 		cost = 50
 		ai_will_do = {
-			factor = 10000
+			factor = 1000
 		}
 
 		remove_effect = {
@@ -721,6 +855,7 @@ Unify_Russian = {
 			}
 		}
 		visible = {
+            always = no
 			is_subject = no
 			has_completed_focus = rus_promise_autonomy
 		}

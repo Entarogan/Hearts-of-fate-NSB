@@ -7,6 +7,7 @@ armor_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		ROM
 		FRA
@@ -526,6 +527,7 @@ mechanized_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		FRA
 	}
@@ -650,6 +652,7 @@ garrison_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		ROM
 		FRA
@@ -869,6 +872,7 @@ infantry_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		CHI
 		PRC 
 		GXC
@@ -991,6 +995,7 @@ infantry_big_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		CHI
 		PRC 
 		GXC
@@ -1130,6 +1135,7 @@ mountaineers_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		ROM
 		FRA
@@ -1243,6 +1249,7 @@ marines_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		ROM
 		FRA
@@ -1440,6 +1447,7 @@ paratrooper_generic = {
 		USA
 		ITA
 		SOV
+		RUS
 		HUN
 		ROM
 		FRA

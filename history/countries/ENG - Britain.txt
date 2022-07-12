@@ -237,6 +237,7 @@ add_to_faction = BUR
 
 give_military_access = RAJ
 give_guarantee = ISR
+give_guarantee = PER
 add_to_faction = RAJ		# Must be after puppet
 add_to_faction = MAL
 

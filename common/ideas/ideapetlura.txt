@@ -2,6 +2,67 @@ ideas = {
 
   country = {
 
+		UKR_factory_rerouted_1_idea = {
+			allowed = {
+				original_tag = UKR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+
+		UKR_factory_rerouted_2_idea = {
+			allowed = {
+				original_tag = UKR
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_central_management
+			modifier = {
+				civilian_factory_use = 10
+			}
+		}
+
+		UKR_no_army_idea = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = disarmed_nation
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				stability_factor = 0.3
+
+				war_support_factor = -0.50
+
+				political_power_gain = -0.50
+
+		        command_power_gain_mult = -1
+
+				experience_gain_army_factor = -1
+		        experience_gain_air_factor = -1
+
+				training_time_army_factor = 1
+				military_leader_cost_factor = 1
+				mobilization_laws_cost_factor = 1
+			}
+		}
+
 		UKR_Verkhovna_Rada_1_idea = {
 
 			name = UKR_Verkhovna_Rada_idea
@@ -10,7 +71,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_government
 			
 			allowed_civil_war = {
 				always = yes
@@ -35,7 +96,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_government
 			
 			allowed_civil_war = {
 				always = yes
@@ -59,7 +120,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_government
 			
 			allowed_civil_war = {
 				always = yes
@@ -84,7 +145,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_government
 			
 			allowed_civil_war = {
 				always = yes
@@ -108,7 +169,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_manpower_bonus
 			
 			allowed_civil_war = {
 				always = yes
@@ -129,7 +190,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_manpower_bonus
 			
 			allowed_civil_war = {
 				always = yes
@@ -149,7 +210,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = SPR_crush_the_revolution
 			
 			allowed_civil_war = {
 				always = yes
@@ -170,7 +231,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = SPR_anti_fascist_crusade
 			
 			allowed_civil_war = {
 				always = yes
@@ -179,6 +240,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				stability_factor = 0.05
 				fascism_drift = -0.03
 				communism_drift = -0.07
 			}
@@ -191,7 +253,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = PAL_Balfour_Declaration
 			
 			allowed_civil_war = {
 				always = yes
@@ -200,9 +262,54 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				improve_relations_maintain_cost_factor = -0.1
+				improve_relations_maintain_cost_factor = -0.2
 				weekly_manpower = 300
 				research_speed_factor = 0.03
+			}
+		}
+
+		UKR_the_price_of_independence_idea = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = generic_purge
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+		        political_power_gain = -0.25
+
+				max_command_power = -25
+				command_power_gain_mult = -0.25
+			}
+		}
+
+		UKR_the_price_of_independence_real_idea = {
+			
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = generic_purge
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+		        political_power_gain = -0.50
+
+				max_command_power = -50
+				command_power_gain_mult = -0.50
+				consumer_goods_factor = 0.05
 			}
 		}
 
@@ -221,7 +328,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-		        research_speed_factor = 0.05
+		        research_speed_factor = 0.03
 			}
 		}
 
@@ -256,7 +363,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -292,7 +399,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_state_economy
 			
 			allowed_civil_war = {
 				always = yes
@@ -314,7 +421,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_coins
 			
 			allowed_civil_war = {
 				always = yes
@@ -337,7 +444,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_coins
 			
 			allowed_civil_war = {
 				always = yes
@@ -358,7 +465,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = great_depression
 			
 			allowed_civil_war = {
 				always = yes
@@ -378,7 +485,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_local_self_management
 			
 			allowed_civil_war = {
 				always = yes
@@ -401,7 +508,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_ukraine_flag_idea
 			
 			allowed_civil_war = {
 				always = yes
@@ -423,7 +530,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_ukraine_flag_idea
 			
 			allowed_civil_war = {
 				always = yes
@@ -445,7 +552,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_ukraine_flag_idea
 			
 			allowed_civil_war = {
 				always = yes
@@ -467,7 +574,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_ukraine_flag_idea
 			
 			allowed_civil_war = {
 				always = yes
@@ -490,7 +597,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = HUN_treaty_of_triannon
 			
 			allowed_civil_war = {
 				always = yes
@@ -511,7 +618,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_general_staff
 			
 			allowed_civil_war = {
 				always = yes
@@ -520,8 +627,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = 0.1
+				planning_speed = 0.15
 				mobilization_laws_cost_factor = -0.25
+
+				justify_war_goal_time = -0.15       
 			}
 		}
 
@@ -533,7 +642,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_general_staff
 			
 			allowed_civil_war = {
 				always = yes
@@ -542,14 +651,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				political_power_factor = 0.15
+				planning_speed = 0.15
 				command_power_gain_mult = 0.15
-				mobilization_laws_cost_factor = -0.25
-				mobilization_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.50
 				high_command_cost_factor = -0.25
 				air_chief_cost_factor = -0.25
 				army_chief_cost_factor = -0.25
 				navy_chief_cost_factor = -0.25
+
+				justify_war_goal_time = -0.15
 			}
 		}
 
@@ -561,7 +671,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_general_staff
 			
 			allowed_civil_war = {
 				always = yes
@@ -571,14 +681,15 @@ ideas = {
 			
 			modifier = {
 				neutrality_drift = 0.1
-				political_power_factor = 0.15
+				planning_speed = 0.15
 				command_power_gain_mult = 0.15
-				mobilization_laws_cost_factor = -0.25
 				mobilization_laws_cost_factor = -0.25
 				high_command_cost_factor = -0.25
 				air_chief_cost_factor = -0.25
 				army_chief_cost_factor = -0.25
 				navy_chief_cost_factor = -0.25
+
+				justify_war_goal_time = -0.15    
 			}
 		}
 
@@ -590,7 +701,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -645,7 +756,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -680,7 +791,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -721,7 +832,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -756,7 +867,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_death_men
 			
 			allowed_civil_war = {
 				always = yes
@@ -805,13 +916,15 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = HOL_negotiating_with_extremists
 			
 			modifier = {
+				political_power_gain = -0.1
+
 				production_factory_max_efficiency_factor = 0.1
 				army_morale_factor = 0.1
 
-				stability_factor = 0.3
+				stability_factor = 0.15
 			}
 		}
 
@@ -831,7 +944,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = HOL_negotiating_with_extremists
 			
 			modifier = {
 				stability_factor = 0.1
@@ -854,7 +967,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = vittoria_mutilata
 			
 			modifier = {
 				political_power_gain = 0.3
@@ -869,7 +982,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = SPR_political_violence
 			
 			allowed_civil_war = {
 				always = yes
@@ -878,9 +991,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				stability_weekly = -0.001
 				production_factory_max_efficiency_factor = -0.05
 				political_power_gain = -0.05
-				training_time_army_factor = 0.10
+		        autonomy_gain = 0.1
 			}
 		}
 
@@ -890,7 +1004,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_oun_subversion
 			
 			allowed_civil_war = {
 				always = yes
@@ -899,8 +1013,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+				stability_weekly = -0.004
 				industrial_capacity_factory = -0.075
 				stability_factor = -0.05
+				training_time_army_factor = 0.10
+		        autonomy_gain = 0.4
 			}
 		}
 
@@ -911,8 +1028,8 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
-			
+			picture = UKR_oun_subversion
+
 			allowed_civil_war = {
 				always = yes
 			}
@@ -931,7 +1048,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = UKR_oun_subversion
 			
 			allowed_civil_war = {
 				always = yes
@@ -1089,30 +1206,6 @@ ideas = {
 
 		}
 
-		UKR_Developed_agriculture_idea = {
-			
-			allowed = {
-				original_tag = UKR
-			}
-
-			picture = generic_agrarian_reform
-			
-			allowed_civil_war = {
-				always = yes
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				MONTHLY_POPULATION = 0.10
-				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = -0.05
-				industrial_capacity_factory = -0.05
-				research_speed_factor = -0.03
-			}
-
-		}
-
 		UKR_Food_from_Ukraine_idea = {
 			
 			allowed = {
@@ -1140,7 +1233,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = CZE_Sugar_industry
 			
 			allowed_civil_war = {
 				always = yes
@@ -1165,7 +1258,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = CZE_Sugar_industry
 			
 			allowed_civil_war = {
 				always = yes
@@ -1180,13 +1273,34 @@ ideas = {
 
 		}
 
+		UKR_Europe_granary_2_idea = {
+			name = UKR_Europe_granary_idea
+			
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = CZE_Sugar_industry
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.07
+			}
+
+		}
+
 		UKR_emerging_industrial_countries_idea = {
 			
 			allowed = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_economic_control
 			
 			allowed_civil_war = {
 				always = yes
@@ -1196,7 +1310,6 @@ ideas = {
 			
 			modifier = {
 				MONTHLY_POPULATION = 0.05
-				consumer_goods_factor = -0.05
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
@@ -1209,7 +1322,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = generic_economic_control
 			
 			allowed_civil_war = {
 				always = yes
@@ -1218,7 +1331,6 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = -0.05
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.10
@@ -1304,6 +1416,373 @@ ideas = {
 			modifier = {
 				agency_upgrade_time = -0.15
 				operative_slot = 2
+				intel_network_gain_factor = 0.20
+			}
+		}
+
+		UKR_Natsionalna_hvardiya_Ukrayiny_1_idea = {
+
+			name = UKR_Natsionalna_hvardiya_Ukrayiny_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = generic_army_cooperation
+			modifier = {
+				conscription = 0.01
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		UKR_Natsionalna_hvardiya_Ukrayiny_3_idea = {
+
+			name = UKR_Natsionalna_hvardiya_Ukrayiny_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = generic_army_cooperation
+			modifier = {
+				conscription = 0.01
+				special_forces_attack_factor = 0.05
+				special_forces_cap = 0.01
+
+				no_supply_grace = 12
+				out_of_supply_factor = -0.02
+				land_night_attack = 0.02
+				recon_factor = 0.02
+
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		UKR_Natsionalna_hvardiya_Ukrayiny_2_idea = {
+
+			name = UKR_Natsionalna_hvardiya_Ukrayiny_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = generic_army_cooperation
+			modifier = {
+				conscription = 0.03
+				army_core_defence_factor = 0.05
+			}
+		}
+
+        UKR_We_were_born_in_great_times_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.01
+			}
+		}
+
+        UKR_indestructible_as_rock_1_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				army_defence_factor = 0.1
+
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.02
+			}
+		}
+
+        UKR_indestructible_as_rock_2_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				army_defence_factor = 0.1
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.03
+			}
+		}
+
+        UKR_Tears_do_not_bring_freedom_1_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.02
+			}
+		}
+
+        UKR_Tears_do_not_bring_freedom_2_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+
+				army_defence_factor = 0.1
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.03
+			}
+		}
+
+        UKR_Warriors_bring_victory_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+
+				army_defence_factor = 0.1
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				conscription_factor = 0.15
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.04
+			}
+		}
+
+        UKR_all_one_heart_1_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+
+				army_defence_factor = 0.1
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				conscription_factor = 0.15
+				MONTHLY_POPULATION = 0.15
+
+			}
+		}
+
+        UKR_all_one_heart_2_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				conscription_factor = 0.15
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = -0.05
+			}
+		}
+
+        UKR_Ukraine_is_above_all_things_1_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				conscription_factor = 0.15
+				MONTHLY_POPULATION = 0.15
+
+				consumer_goods_factor = 0.05
+			}
+		}
+
+        UKR_Ukraine_is_above_all_things_2_idea = {
+
+			name = UKR_We_were_born_in_great_times_idea
+
+			allowed = {
+				original_tag = UKR
+				always = no
+			}
+
+			allowed_civil_war = {
+
+			}
+
+			available = {
+
+			}
+			picture = rus_Natsgvardia
+			modifier = {
+				army_attack_factor = 0.15
+				army_defence_factor = 0.10
+
+				offensive_war_stability_factor = 0.20
+				defensive_war_stability_factor = 0.20
+
+				conscription_factor = 0.15
+				MONTHLY_POPULATION = 0.15
 			}
 		}
 
@@ -1394,9 +1873,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        production_factory_max_efficiency_factor = 0.30
-        line_change_production_efficiency_factor = 0.15
-        production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = 0.20
+				line_change_production_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.20
 			}
 
 		}
@@ -1430,8 +1909,10 @@ ideas = {
 			equipment_bonus = {
 
 				infantry_equipment = {
-					build_cost_ic = -0.30 instant = yes
-					reliability = -0.10 instant = yes
+					build_cost_ic = -0.20 
+					reliability = -0.10
+
+					instant = yes
 				}
 
 			}
@@ -1517,8 +1998,7 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				production_speed_arms_factory_factor = 0.20
-				industrial_capacity_factory = 0.20
+				industrial_capacity_factory = 0.30
 				war_support_weekly = -0.002
 				stability_weekly = -0.002
 			}
@@ -1547,6 +2027,7 @@ ideas = {
 			picture = SPR_crush_the_revolution
 
 			modifier = {
+				stability_weekly = -0.001
 				supply_consumption_factor = 0.10	
 			}
 
@@ -1621,6 +2102,37 @@ ideas = {
 			}
 		}	
 
+		UKR_German_consultant_idea_2 = {
+			name = UKR_German_consultant_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				is_subject = no 
+				NOT = {
+					has_war_with = GER
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+
+			removal_cost = -1
+
+			picture = general_staff
+			
+			modifier = {
+				army_org_Factor = 0.15
+				planning_speed = 0.25
+				max_planning = 0.10
+			}
+		}	
+
 		UKR_independent_Army_idea = {
 			
 			allowed = {
@@ -1678,7 +2190,7 @@ ideas = {
 		}
 
 		UKR_Black_army_idea = {
-			
+			name = UKR_Black_army
 			allowed = {
 				always = no
 			}
@@ -1704,7 +2216,7 @@ ideas = {
 		}
 
 		UKR_Black_army_05_idea = {
-			
+			name = UKR_Black_army
 			allowed = {
 				always = no
 			}
@@ -1730,7 +2242,8 @@ ideas = {
 			}
 		}
 
-		UKR_Black_army_1_idea = {	
+		UKR_Black_army_1_idea = {
+			name = UKR_Black_army	
 			allowed = {
 				always = no
 			}
@@ -1755,6 +2268,7 @@ ideas = {
 		}
 
 		UKR_Black_army_15_idea = {	
+			name = UKR_Black_army
 			allowed = {
 				always = no
 			}
@@ -1885,6 +2399,92 @@ ideas = {
 			}
 		}
 
+		UKR_Cossack_military_democracy_1_idea = {
+			name = UKR_Cossack_military_democracy_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+
+			removal_cost = -1
+
+			picture = rus_siberian_cavalry
+			
+			modifier = {
+				war_support_factor = 0.10
+				planning_speed = 0.20
+				army_morale_factor = 0.15
+				army_attack_factor = 0.10
+				army_defence_factor = 0.10
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+				conscription_factor = 0.15
+			}
+		}
+
+		UKR_Cossack_military_democracy_2_idea = {
+			name = UKR_Cossack_military_democracy_idea
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+
+			removal_cost = -1
+
+			picture = rus_siberian_cavalry
+			
+			modifier = {
+				war_support_factor = 0.10
+				planning_speed = 0.20
+				army_morale_factor = 0.15
+				army_core_attack_factor = 0.15
+				army_core_attack_factor = 0.15
+				production_speed_arms_factory_factor = 0.05
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+				conscription_factor = 0.20
+			}
+		}
+
+		UKR_Reunion_Headquarters_idea = {
+			name = UKR_Reunion_Headquarters
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+
+			removal_cost = -1
+
+			picture = general_staff
+			
+			modifier = {
+				max_planning = 0.10
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+			}
+		}
+
 		#############################
 
 		UKR_DniproHES_idea = {
@@ -1903,7 +2503,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = por_hydroelectric_power
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
@@ -1911,9 +2511,8 @@ ideas = {
 			}
 		}
 
-		UKR_DniproHES_idea_2 = {
+		UKR_DniproHES_damaged_idea = {
 			
-			name = UKR_DniproHES_idea
 			allowed = {
 				always = no
 			}
@@ -1928,7 +2527,31 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = por_hydroelectric_power
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		UKR_DniproHES_idea_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+
+			}
+
+			removal_cost = -1
+
+			picture = por_hydroelectric_power
 			
 			modifier = {
 				production_speed_buildings_factor = 0.10
@@ -1953,7 +2576,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = ukr_splitted_country
 			
 			modifier = {
 				political_power_factor = -0.15
@@ -1977,7 +2600,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = ukr_splitted_country
 			
 			modifier = {
 				political_power_factor = -0.10
@@ -2001,7 +2624,7 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = ukr_splitted_country
 			
 			modifier = {
 				political_power_factor = -0.10
@@ -2023,8 +2646,8 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
-			
+			picture = generic_production_bonus
+
 			modifier = {
 				political_power_cost = 0.10
 				production_speed_buildings_factor = 0.25
@@ -2038,7 +2661,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = prc_low_popular_support2
 			
 			allowed_civil_war = {
 				always = yes
@@ -2062,7 +2685,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = prc_low_popular_support2
 			
 			allowed_civil_war = {
 				always = yes
@@ -2076,6 +2699,10 @@ ideas = {
 				trade_laws_cost_factor = 0.30
 				mobilization_laws_cost_factor = 0.30
 				economy_cost_factor = 0.30
+			}
+
+			rule = {
+				can_join_factions = no
 			}
 		}
 
@@ -2100,6 +2727,10 @@ ideas = {
 				mobilization_laws_cost_factor = 0.15
 				economy_cost_factor = 0.15
 			}
+
+			rule = {
+				can_join_factions = no
+			}
 		}
 
 		UKR_anarchist_reunion = {
@@ -2120,6 +2751,10 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.10
 				war_support_factor = 0.10
+			}
+
+			rule = {
+				can_join_factions = no
 			}
 		}
 
@@ -2143,6 +2778,10 @@ ideas = {
 				war_support_factor = 0.10
 				conscription_factor = 0.20
 			}
+
+			rule = {
+				can_join_factions = no
+			}
 		}
 
 		UKR_Anarchist_redistribute_land = {
@@ -2152,7 +2791,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = raj_risk_of_famine
+			picture = eng_for_the_good_of_the_revolution
 			
 			allowed_civil_war = {
 				always = yes
@@ -2173,7 +2812,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = POL_looming_peasants_strike
 			
 			allowed_civil_war = {
 				always = yes
@@ -2196,7 +2835,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = SPR_international_brigades
 			
 			allowed_civil_war = {
 				always = yes
@@ -2221,7 +2860,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = gre_agricultural_communes
 			
 			allowed_civil_war = {
 				always = yes
@@ -2241,7 +2880,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = POL_ideology_drift_defence
 			
 			allowed_civil_war = {
 				always = yes
@@ -2263,7 +2902,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = SOV_system_decentralization
 			
 			allowed_civil_war = {
 				always = yes
@@ -2274,6 +2913,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.10
 				production_speed_buildings_factor = 0.10
+				production_factory_max_efficiency_factor = -0.10
 				consumer_goods_factor = -0.03
 				stability_factor = 0.15
 			}
@@ -2285,7 +2925,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = SOV_system_decentralization
 			
 			allowed_civil_war = {
 				always = yes
@@ -2297,6 +2937,7 @@ ideas = {
 				political_power_cost = 0.10
 				production_speed_buildings_factor = 0.10
 				production_speed_industrial_complex_factor = 0.10
+				production_factory_max_efficiency_factor = -0.10
 				consumer_goods_factor = -0.055
 				research_speed_factor = 0.075
 				stability_factor = 0.15
@@ -2304,12 +2945,12 @@ ideas = {
 
 		}
 
-		UKR_Anarchist_radical_republicianism = {
+		UKR_Anarchist_radical_republicanism = {
 			allowed = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = POL_ideology_drift_defence
 			
 			allowed_civil_war = {
 				always = yes
@@ -2335,7 +2976,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = SOV_conspiracy_in_the_academy_airforce
 			
 			allowed_civil_war = {
 				always = yes
@@ -2357,7 +2998,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = generic_build_infrastructure
 
 			allowed_civil_war = {
 				always = yes
@@ -2376,7 +3017,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = generic_industrial_concern_1
 
 			allowed_civil_war = {
 				always = yes
@@ -2397,7 +3038,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = man_five_year_plan_industry
 
 			allowed_civil_war = {
 				always = yes
@@ -2421,7 +3062,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = generic_agrarian_reform
+			picture = new_economic_policy
 
 			allowed_civil_war = {
 				always = yes
@@ -2431,6 +3072,93 @@ ideas = {
 			
 			modifier = {
 				industrial_capacity_factory = 0.075
+			}
+		}
+
+		UKR_generic_liberator_of_nations = {
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = EST_democratic_opposition
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.10
+			}
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.10
+			}
+		}
+
+		UKR_generic_prepare_for_next_war = {
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = generic_war_preparation
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_speed_arms_factory_factor = 0.15
+			}
+
+		}
+
+		UKR_generic_new_Ukraine_nationalism = {
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = vittoria_mutilata
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
+		UKR_Anarchist_maximal_recruitment = {
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = SPR_international_brigades
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				training_time_army_factor = -0.30
 			}
 		}
 

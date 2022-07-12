@@ -598,7 +598,35 @@ focus_tree = {
 				is_coastal = yes
 				is_controlled_by = ROOT
 			}
-			num_of_factories > 20
+			OR = {
+				num_of_factories > 20
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		complete_tooltip = {
@@ -1002,7 +1030,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 10
+			OR = {
+				num_of_factories > 10
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 		
 		ai_will_do = {
@@ -1079,7 +1135,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 10
+			OR = {
+				num_of_factories > 1
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1156,7 +1240,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 15
+			OR = {
+				num_of_factories > 15
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1233,7 +1345,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 15
+			OR = {
+				num_of_factories > 3
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1310,7 +1450,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 20
+			OR = {
+				num_of_factories > 20
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		bypass = {
@@ -1410,7 +1578,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 20
+			OR = {
+				num_of_factories > 5
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1487,7 +1683,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 25
+			OR = {
+				num_of_factories > 25
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		bypass = {
@@ -1587,7 +1811,35 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		available = {
-			num_of_factories > 25
+			OR = {
+				num_of_factories > 25
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -1703,7 +1955,35 @@ focus_tree = {
 		icon = GFX_focus_research
 		prerequisite = { focus = extra_tech_slot }
 		available = {
-			num_of_factories > 10
+			OR = {
+				num_of_factories > 10
+				AND = {
+					TAG = EGY
+					EGY = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = KEN
+					KEN = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = BUR
+					BUR = { is_subject_of = ENG }
+				}
+				AND = {
+					TAG = MAL
+					MAL = { is_subject_of = ENG }
+					ENG = { num_of_factories > 120 }
+				}
+				AND = {
+					TAG = SEN
+					SEN = { is_subject_of = FRA }
+				}
+				AND = {
+					TAG = MAD
+					MAD = { is_subject_of = FRA }
+					FRA = { num_of_factories > 120 }
+				}
+			}
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes

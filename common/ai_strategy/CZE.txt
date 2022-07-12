@@ -50,28 +50,6 @@ CZE_shift_production = {
 	}
 }
 
-CZE_halt_light_armor_production_in_transitioning = {
-	allowed = {
-		original_tag = CZE
-	}
-	enable = {
-		has_template_majority_unit = medium_armor
-		OR = {
-			has_equipment = { light_tank_equipment > 600 }
-			date > 1939.1.1
-		}		
-	}
-	abort = {
-		# once we start we never go back to light armor
-	}
-
-	ai_strategy = {
-		type = equipment_variant_production_factor
-		id = light_tank_equipment
-		value = -100
-	}
-}
-
 
 CZE_highered_armored_production = {
 	allowed = { original_tag = CZE }
@@ -127,10 +105,6 @@ CZE_super_boost_light_for_med_armor = {
 	}
 
 	# lets do changes more often during this period too
-	ai_strategy = {
-		type = template_xp_reserve 
-		value = -125
-	}
 
 	# this is gateway
 	ai_strategy = {
@@ -166,10 +140,6 @@ CZE_super_boost_light_for_modern_armor = {
 	}
 
 	# lets do changes more often during this period too
-	ai_strategy = {
-		type = template_xp_reserve 
-		value = -125
-	}
 
 	# this is gateway
 	ai_strategy = {

@@ -82,6 +82,9 @@ country_event = {
 			popularity = 0.10
 		}
 
+		remove_country_leader_trait = otaman
+		add_country_leader_trait = real_otaman
+
 	}
 
 	option = {
@@ -104,12 +107,15 @@ country_event = {
 					expire="1965.1.1.1"
 					ideology = stratocracy
 					traits = {
-						fascist_militia_leader
+
 					}
 				}
 				promote_leader = yes
 			}
 		}
+
+		remove_country_leader_trait = otaman
+		add_country_leader_trait = real_otaman
 
 	}
 
@@ -149,12 +155,23 @@ country_event = {
 	option = {
 		name = ukr_nationalism.4.a
 
-		add_political_power = -25
+		add_political_power = -50
 
 		clr_country_flag = UKR_not_established_SN
 		set_country_flag = UKR_established_SN
 	}
 
+	option = {
+		name = ukr_nationalism.4.b
+
+		add_political_power = 50
+
+		clr_country_flag = UKR_not_established_SN
+		set_country_flag = UKR_established_SN
+
+		clr_country_flag = UKR_only_SDP
+		set_country_flag = UKR_another_SDP
+	}
 
 }
 
@@ -169,6 +186,10 @@ country_event = {
 
 	option = {
 		name = ukr_nationalism.5.a
+
+		trigger = {
+			always = no
+		}
 
 		add_political_power = -25
 
@@ -225,6 +246,10 @@ country_event = {
 
 	is_triggered_only = yes
 
+	immediate = {
+		complete_national_focus = UKR_Second_election
+	}
+
 	option = {
 		name = ukr_nationalism.7.a 
 		
@@ -237,7 +262,21 @@ country_event = {
 			popularity = 0.2
 		}
 
-		complete_national_focus = UKR_Second_election
+		if = {
+			limit = { has_country_flag = UKR_another_SDP }
+			add_country_leader_role = {
+				character = UKR_Lesia_Petliura
+				country_leader = {
+					expire="1965.1.1.1"
+					ideology = socialism
+					traits = {
+						liberal_journalist
+					}
+				}
+				promote_leader = yes
+			}
+		}
+
 		set_country_flag = UKR_reconcile_conflict_flag
 	}
 
@@ -248,10 +287,27 @@ country_event = {
 
 		add_popularity = {
 			ideology = democratic
-			popularity = 0.2
+			popularity = 0.1
 		}
 
-		complete_national_focus = UKR_Second_election
+		set_party_name = {
+			ideology = democratic
+			long_name = UKR_democratic_Zelensky_party_long
+			name = UKR_democratic_Zelensky_party
+		}
+
+		add_country_leader_role = {
+			character = UKR_Seymon_Zelensky
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = liberalism
+				traits = {
+					Servant_of_the_People
+				}
+			}
+			promote_leader = yes
+		}
+
 		set_country_flag = UKR_Reduced_redundancy_flag
 	}
 
@@ -269,10 +325,9 @@ country_event = {
 
 		set_politics = {
 			ruling_party = neutrality
-			elections_allowed = no
+			elections_allowed = yes
 		}
 
-		complete_national_focus = UKR_Second_election
 		set_country_flag = UKR_help_farmers_flag
 
 	}
@@ -282,7 +337,7 @@ country_event = {
 
 		# OUN
 
-		add_political_power = -100
+		add_political_power = -150
 
 		add_popularity = {
 			ideology = fascism
@@ -291,10 +346,24 @@ country_event = {
 
 		set_politics = {
 			ruling_party = fascism
-			elections_allowed = no
+			elections_allowed = yes
 		}
 
-		complete_national_focus = UKR_Second_election
+		if = {
+			limit = { has_country_flag = UKR_registered_OUN_Roman }
+			add_country_leader_role = {
+				character = UKR_Roman_Shukhevych
+				country_leader = {
+					expire="1965.1.1.1"
+					ideology = fascism_ideology
+					traits = {
+						nationalist_symbol
+					}
+				}
+				promote_leader = yes
+			}
+		}
+
 		set_country_flag = UKR_unity_against_foreign_aggression_flag
 	}
 

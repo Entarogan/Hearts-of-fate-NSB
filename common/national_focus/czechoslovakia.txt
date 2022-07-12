@@ -2209,8 +2209,11 @@
 		}
 
 		bypass = {
-			HUN = { exists = no }
-			HUN = { is_subject_of = CZE}
+			OR = {
+				has_war_with = HUN
+				HUN = { exists = no }
+				HUN = { is_subject_of = CZE}
+			}
 		}
 
 		
@@ -2370,9 +2373,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 3.0
+				cost_reduction = 0.75
 				uses = 1
 				category = land_doctrine
 			}
@@ -3068,9 +3071,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -3253,9 +3256,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
 			}
@@ -3906,9 +3909,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_trade_interdiction
 			}
@@ -3945,9 +3948,9 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = naval_doc_bonus
-				bonus = 1.0
+				cost_reduction = 0.25
 				uses = 2
 				category = cat_fleet_in_being
 			}

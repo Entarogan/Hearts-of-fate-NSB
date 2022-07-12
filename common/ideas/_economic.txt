@@ -16,8 +16,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.25
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
-				production_factory_max_efficiency_factor = -0.25
-				production_factory_efficiency_gain_factor = -0.25
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
 				conversion_cost_civ_to_mil_factor = 0.5
 				conversion_cost_mil_to_civ_factor = 0.5
 				generate_wargoal_tension = 1.00
@@ -54,8 +54,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.2
 				production_speed_arms_factory_factor = -0.4
 				production_speed_dockyard_factor = -0.4
-				production_factory_max_efficiency_factor = -0.2
-				production_factory_efficiency_gain_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 				conversion_cost_civ_to_mil_factor= 0.4
 				conversion_cost_mil_to_civ_factor = 0.4
 				generate_wargoal_tension = 1.00
@@ -87,8 +87,8 @@ ideas = {
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = -0.3
 				production_speed_dockyard_factor = -0.3
-				production_factory_max_efficiency_factor = -0.15
-				production_factory_efficiency_gain_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
@@ -119,6 +119,19 @@ ideas = {
 					has_war_support > 0.3
 					congress_high_support_trigger = yes
 				}	
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
 			}
 			on_add = {
 				if = {
@@ -195,6 +208,19 @@ ideas = {
 					has_war_support > 0.5
 					congress_high_support_trigger = yes
 				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_3
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
 			}
 
 			cost = 150
@@ -235,20 +261,21 @@ ideas = {
 			
 			
 			available = {
-				has_war_support > 0.5
-				OR = {
-					has_government = fascism
-					has_government = communism
-					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
-					AND = {
-						has_war = yes
-						any_enemy_country = {
-							ic_ratio = { 
-								tag = ROOT 
-								ratio > 0.4
-							}
+				if = {
+					limit = {
+						NOT = {
+							has_idea = tot_economic_mobilisation
 						}
 					}
+					OR = {
+						has_war_support > 0.5
+						surrender_progress > 0
+					}
+				}
+				OR = {
+					custom_trigger_tooltip = { tooltip = or_clarification_tooltip always = no }
+					has_war = yes
+					has_idea = tot_economic_mobilisation
 				}
 
 				if = {
@@ -274,20 +301,36 @@ ideas = {
 					has_war_support > 0.75
 					congress_high_support_trigger = yes
 				}		
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_4
+						}
+					}
+				}
 			}
-		
+
 			cost = 150
 			removal_cost = -1
 			
 			modifier = {
 				consumer_goods_factor = 0.2
-				production_speed_industrial_complex_factor = -0.20
+				production_speed_industrial_complex_factor = -0.30
 				production_speed_arms_factory_factor = 0.2
 				production_speed_dockyard_factor = 0.2
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+				local_resources_factor = 0.2
 				conversion_cost_civ_to_mil_factor= -0.2
 				conversion_cost_mil_to_civ_factor = 0.2
+
+				war_support_weekly = -0.005
 			}
 			
 			cancel_if_invalid = no
@@ -309,15 +352,41 @@ ideas = {
 					factor = 20
 					manpower_per_military_factory >  1000
 				}
+
+				modifier = {
+					# If we CAN go for total mobilization and have enough manpower for it, skip war economy, it's only a waste of PP
+					factor = 0
+
+					manpower_per_military_factory > 15000
+					has_war = yes
+					has_war_support > 0.8
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.5
+						}
+					}
+				}
+
+				modifier = {
+					add = 1800
+
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
    			}
 		}
-		
+
 		tot_economic_mobilisation = {
 			
 			
 			available = {
 				has_war = yes
-				has_war_support > 0.8
+				OR = {
+					has_war_support > 0.8
+					surrender_progress > 0.1
+				}
 				any_enemy_country = {
 					ic_ratio = { 
 						tag = ROOT 
@@ -348,6 +417,19 @@ ideas = {
 					}
 					has_war_support > 0.9
 					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = {
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
 				}
 			}
 			on_add = {
@@ -406,17 +488,21 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				consumer_goods_factor = 0.15
-		    conscription_factor = -0.2
-				production_speed_industrial_complex_factor = -0.30
+				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = -0.50
 				production_speed_arms_factory_factor = 0.3
 				production_speed_dockyard_factor = 0.3
-				production_factory_max_efficiency_factor = 0.20
-				production_factory_efficiency_gain_factor = 0.10
-		    line_change_production_efficiency_factor = 0.10
-        production_factory_start_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.3
+				industrial_capacity_dockyard = 0.3
+				local_resources_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
 				conversion_cost_mil_to_civ_factor = 0.3
+
+				supply_consumption_factor = -0.10
+				supply_node_range = 0.2
+
+				stability_weekly = -0.003
+				war_support_weekly = -0.008
 			}
 			
 			cancel_if_invalid = no
@@ -578,7 +664,20 @@ ideas = {
 					}
 					NOT = { has_idea = CHI_nine_power_treaty }
 				}
-
+				if = {
+					limit = {
+						
+	  
+																		
+	 
+				
+					  
+			  
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
 				if = {
 					limit = {
 						original_tag = GER

@@ -13,18 +13,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		always = no
 		tag = FRA
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      or = {
-        tag = ENG
-        tag = GER
-        tag = ITA
-      }
-    }
+		is_ai = yes
+		is_subject = no
+		has_civil_war = yes
 	}	
 
 	mean_time_to_happen = {
@@ -34,43 +26,131 @@ country_event = {
 
 	option = {
 		name = martian.1.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-		add_political_power = 150
+		add_political_power = 300
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 15000
-      producer = FRA
-    }
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"1. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
 
-			16 = {
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"2. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
 
-        create_unit = {
-          division = "name = \"infantry\" division_template = \"infantry\" start_experience_factor = 0.5"  
-          owner = FRA
-        }
-        create_unit = {
-          division = "name = \"infantry\" division_template = \"infantry\" start_experience_factor = 0.5"  
-          owner = FRA
-        }
-        create_unit = {
-          division = "name = \"infantry\" division_template = \"infantry\" start_experience_factor = 0.5"  
-          owner = FRA
-        }
-        create_unit = {
-          division = "name = \"infantry\" division_template = \"infantry\" start_experience_factor = 0.5"  
-          owner = FRA
-        }
-        create_unit = {
-          division = "name = \"infantry\" division_template = \"infantry\" start_experience_factor = 0.5"  
-          owner = FRA
-        }								
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"3. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
 
-        
-      }
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"4. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"5. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"6. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"7. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"8. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"9. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"10. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"11. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"12. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"13. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"14. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
+
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			create_unit = {
+			  division = "name = \"15. France infantry\" division_template = \"infantry 21\" start_experience_factor = 0.2" 
+			  owner = FRA
+			}
+		}
 
 	}
 		
@@ -82,88 +162,50 @@ country_event = {
 	desc = martian.2.d
 	picture = GFX_report_event_generic_funeral
 
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = SOV
-    NOT = { has_country_flag = Ai_big_cheat_infan_flag }
-    or = {
-      NOT = { has_war_with = RUS }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = RUS }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    219 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
+	fire_only_once = no
+	is_triggered_only = no
+
+	hidden = yes
 
 	mean_time_to_happen = {
-		days = 1
+		days = 2
 	}
 
+	trigger = {
+		is_subject = yes
+		
+		OVERLORD = {
+			has_war = yes
+			any_country = {
+				has_war_with = PREV
+				ROOT = { not = { has_war_with = PREV} }
+			}
+		}
+		
+		
+		
+	}
+
+	immediate = {
+		OVERLORD = {
+			every_country = {
+				limit = { 
+					has_war_with = PREV
+				}
+				ROOT = {
+					add_to_war = { 
+					    targeted_alliance = PREV.PREV
+					    enemy = PREV
+					}
+				}
+			}
+			country_event = martian.3
+		}
+	}
 
 	option = {
-		name = martian.2.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_infan_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = infantry_equipment
-        amount = 25000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = support_equipment
-        amount = 2500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = artillery_equipment
-        amount = 2500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_air_equipment
-        amount = 1250
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_tank_equipment
-        amount = 1250
-        producer = SOV
-      }
-
 
 	}
-		
 }
 
 country_event = {
@@ -173,1326 +215,11 @@ country_event = {
 	picture = GFX_report_event_generic_funeral
 
 	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1939.7.1
-    NOT = { has_country_flag = Ai_big_cheat_armor_flag }
-    tag = SOV
-    or = {
-      NOT = { has_war_with = RUS }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = RUS }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    219 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
+	is_triggered_only = yes
 
 	option = {
 		name = martian.3.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_armor_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = armored_car_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 400
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 200
-        producer = SOV
-      }
-
-			219 = {
-								
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-      }
-
 	}
-		
-}
-
-country_event = {
-	id = martian.4
-	title = martian.4.t
-	desc = martian.4.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = RUS
-    NOT = { has_country_flag = Ai_big_cheat_infan_flag }
-    or = {
-      NOT = { has_war_with = SOV }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = SOV }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    219 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.4.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_infan_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = infantry_equipment
-        amount = 25000
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = support_equipment
-        amount = 2500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = artillery_equipment
-        amount = 2500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_air_equipment
-        amount = 1250
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_tank_equipment
-        amount = 1250
-        producer = RUS
-      }
-
-			219 = {
-
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }								
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.5
-	title = martian.5.t
-	desc = martian.5.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1939.7.1
-    NOT = { has_country_flag = Ai_big_cheat_armor_flag }
-    tag = RUS
-    or = {
-      NOT = { has_war_with = SOV }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = SOV }
-      }
-    }
-    is_ai = yes
-    is_subject = no 
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    219 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.5.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_armor_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 1500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = armored_car_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 1500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 400
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 600
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 600
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 200
-        producer = RUS
-      }
-
-			219 = {
-								
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.6
-	title = martian.6.t
-	desc = martian.6.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = SOV
-    NOT = { has_country_flag = Ai_big_cheat_infan_flag }
-    or = {
-      NOT = { has_war_with = RUS }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = RUS }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    217 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.6.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_infan_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = infantry_equipment
-        amount = 25000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = support_equipment
-        amount = 2500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = artillery_equipment
-        amount = 2500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_air_equipment
-        amount = 1250
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_tank_equipment
-        amount = 1250
-        producer = SOV
-      }
-
-			217 = {
-	
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }  
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.7
-	title = martian.7.t
-	desc = martian.7.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1939.7.1
-    NOT = { has_country_flag = Ai_big_cheat_armor_flag }
-    tag = SOV
-    or = {
-      NOT = { has_war_with = RUS }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = RUS }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    217 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.7.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_armor_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = armored_car_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 400
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 200
-        producer = SOV
-      }
-
-			217 = {
-								
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = SOV
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.8
-	title = martian.8.t
-	desc = martian.8.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = RUS
-    NOT = { has_country_flag = Ai_big_cheat_infan_flag }
-    or = {
-      NOT = { has_war_with = SOV }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = SOV }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    217 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.8.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_infan_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = infantry_equipment
-        amount = 25000
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = support_equipment
-        amount = 2500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = artillery_equipment
-        amount = 2500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_air_equipment
-        amount = 1250
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_tank_equipment
-        amount = 1250
-        producer = RUS
-      }
-
-			217 = {
-
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }								
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"Rifle\" division_template = \"Rifle\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.9
-	title = martian.9.t
-	desc = martian.9.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1939.7.1
-    NOT = { has_country_flag = Ai_big_cheat_armor_flag }
-    tag = RUS
-    or = {
-      NOT = { has_war_with = SOV }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = SOV }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    217 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.9.a
-    ai_chance = {
-			factor = 100
-		}
-
-			set_country_flag = {
-				value = 1
-				days = 365
-				flag = Ai_big_cheat_armor_flag
-			}
-
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 1500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = armored_car_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 1500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 400
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 600
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 500
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 600
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 300
-        producer = RUS
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 200
-        producer = RUS
-      }
-
-			217 = {
-								
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"medium tank corp\" division_template = \"medium Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"motorized Rifle\" division_template = \"motorized\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-        create_unit = {
-          division = "name = \"heavy tank corp\" division_template = \"heavy Armored\" start_experience_factor = 0.5"  
-          owner = RUS
-        }
-
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.10
-	title = martian.10.t
-	desc = martian.10.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		date > 1937.6.1
-    tag = RUS
-    is_ai = yes
-    is_subject = no
-    has_war_with = SOV
-    SOV = { is_ai = yes }
-    573 = { is_controlled_by_ROOT_or_ally = yes }
-    582 = { is_controlled_by_ROOT_or_ally = yes }
-    402 = { is_controlled_by_ROOT_or_ally = yes }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.10.a
-    ai_chance = {
-			factor = 100
-		}
-
-		add_political_power = 150
-
-		add_timed_idea = {
-			idea = RUS_SOV_For_victory_idea
-			days = 365
-		}
-
-		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 1000 }
-		add_equipment_to_stockpile = { type = anti_air_equipment amount = 1000 }
-		add_equipment_to_stockpile = { type = motorized_equipment amount = 500 }
-		add_equipment_to_stockpile = { type = artillery_equipment amount = 4000 }
-		add_equipment_to_stockpile = { type = infantry_equipment amount = 40000 }
-		add_equipment_to_stockpile = { type = support_equipment amount = 3000 }
-		add_equipment_to_stockpile = { type = fighter_equipment amount = 600 }
-		add_equipment_to_stockpile = { type = tac_bomber_equipment amount = 400 }
-
-	}
-		
 }
 
 country_event = {
@@ -1505,22 +232,20 @@ country_event = {
 	
 	trigger = {
 		date > 1937.6.1
-    tag = SOV
-    is_ai = yes
-    is_subject = no
-    has_war_with = RUS
-    RUS = { is_ai = yes }
-    or = {
-		  date > 1937.12.1
-      NOT = { has_war_with = UKR }
-      AND = {
-        has_war_with = UKR
-        UKR = { surrender_progress > 0.6 } 
-      }	
-    }	
-    573 = { is_controlled_by_ROOT_or_ally = yes }
-    582 = { is_controlled_by_ROOT_or_ally = yes }
-    402 = { is_controlled_by_ROOT_or_ally = yes }
+		tag = SOV
+		is_ai = yes
+		is_subject = no
+		has_war_with = RUS
+		SOV = { is_ai = yes }
+		RUS = { is_ai = yes }
+		or = {
+			date > 1937.12.1
+			NOT = { has_war_with = UKR }
+			AND = {
+				has_war_with = UKR
+				UKR = { surrender_progress > 0.6 } 
+			}	
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -1530,128 +255,76 @@ country_event = {
 
 	option = {
 		name = martian.11.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-		add_timed_idea = {
-			idea = RUS_SOV_For_victory_idea
-			days = 365
-		}
 
-		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 500 }
-		add_equipment_to_stockpile = { type = anti_air_equipment amount = 500 }
-		add_equipment_to_stockpile = { type = motorized_equipment amount = 500 }
-		add_equipment_to_stockpile = { type = artillery_equipment amount = 3000 }
-		add_equipment_to_stockpile = { type = infantry_equipment amount = 25000 }
-		add_equipment_to_stockpile = { type = support_equipment amount = 1500 }
-		add_equipment_to_stockpile = { type = fighter_equipment amount = 300 }
-		add_equipment_to_stockpile = { type = tac_bomber_equipment amount = 200 }
+        random_list = {
+			10 = { ### ai RUS win
+				SOV = {
+					transfer_units_fraction= {
+						target = RUS
+						size = 0
+						stockpile_ratio = 0
+						army_ratio = 0.5
+						navy_ratio = 0
+						air_ratio = 0
+						keep_unit_leaders_trigger = {
+							always = yes 
+						}
+					}
 
-	}
-		
-}
-
-country_event = {
-	id = martian.12
-	title = martian.12.t
-	desc = martian.12.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1937.6.1
-    tag = SOV
-    is_ai = yes
-    is_subject = no
-    has_war_with = RUS
-    RUS = { is_ai = yes }
-    or = {
-      NOT = { has_war_with = UKR }
-      AND = {
-        has_war_with = UKR
-        UKR = { surrender_progress > 0.6 } 
-      }	
-    }	
-    or = {
-      563 = { is_controlled_by_ROOT_or_ally = yes }
-      566 = { is_controlled_by_ROOT_or_ally = yes }
-    }	
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.12.a
-    ai_chance = {
-			factor = 100
-		}
-
-		RUS = {
-      add_timed_idea = {
-        idea = RUS_SOV_fall_idea
-        days = 365
-      }
-		}
-
-		JAP = {
-      add_state_claim = 408
-      add_state_claim = 409
-      add_state_claim = 560
-      add_state_claim = 657
-      add_state_claim = 561
-      add_state_claim = 637
-
-			transfer_state = 408
-			transfer_state = 409
-			transfer_state = 560
-			transfer_state = 657
-			transfer_state = 561
-			transfer_state = 637
-
-      408 = {
-
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
+				}
+				RUS = {
+					add_timed_idea = {
+						idea = RUS_SOV_For_victory_idea
+						days = 730
+					}
+					capital_scope = {
+						create_unit = {
+							division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor= 1.0"
+							owner = RUS
+							count = 20
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					SOV = {
+						has_country_leader  = {
+							ruling_only  = yes 
+							character = SOV_nikolay_yezhov
+						}
+					}
+				}
+				modifier = {
+					factor = 2
+					has_global_flag = UKR_still_on_earth_flag
+				}
+				modifier = {
+					factor = 2
+					or = {
+						573 = { is_controlled_by = RUS }
+						582 = { is_controlled_by = RUS }
+						402 = { is_controlled_by = RUS }
+					}
+				}
+			}
+			90 = { ### ai SOV win
+				add_timed_idea = {
+					idea = RUS_SOV_For_victory_idea
+					days = 730
+				}
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"infantry 26\" start_experience_factor = 0.2 start_equipment_factor= 1.0"
+						owner = SOV
+						count = 20
+					}
+				}
+			}
         }
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
-        }
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
-        }
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
-        }
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
-        }								
-        create_unit = {
-          division = "name = \"Shidan\" division_template = \"Shidan\" start_experience_factor = 0.5"  
-          owner = JAP
-        }
-
-      }
-
-		}
-
-    hidden_effect = {
-		  news_event = { id = rus_news.1 days = 2 }
-    }
-
-    hidden_effect = {
-      news_event = { id = jap_news.3 days = 7 }
-    }
 
 	}
 		
@@ -1667,11 +340,11 @@ country_event = {
 	
 	trigger = {
 		date > 1937.1.1
-    tag = SOV
-    is_ai = yes
-    is_subject = no
-    has_war_with = RUS
-    RUS = { is_ai = no }	
+		tag = SOV
+		is_ai = yes
+		is_subject = no
+		has_war_with = RUS
+		RUS = { is_ai = no }	
 	}	
 
 	mean_time_to_happen = {
@@ -1681,18 +354,20 @@ country_event = {
 
 	option = {
 		name = martian.13.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		add_political_power = 250
 
-		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 200 }
-		add_equipment_to_stockpile = { type = anti_air_equipment amount = 200 }
-		add_equipment_to_stockpile = { type = motorized_equipment amount = 200 }
-		add_equipment_to_stockpile = { type = artillery_equipment amount = 900 }
-		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
-		add_equipment_to_stockpile = { type = support_equipment amount = 600 }
+
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 26\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = SOV
+				count = 5
+			}
+		}
 
 
 	}
@@ -1709,11 +384,11 @@ country_event = {
 	
 	trigger = {
 		date > 1937.1.1
-    tag = RUS
-    is_ai = yes
-    is_subject = no
-    has_war_with = SOV
-    SOV = { is_ai = no }	
+		tag = RUS
+		is_ai = yes
+		is_subject = no
+		has_war_with = SOV
+		SOV = { is_ai = no }	
 	}	
 
 	mean_time_to_happen = {
@@ -1723,53 +398,19 @@ country_event = {
 
 	option = {
 		name = martian.14.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		add_political_power = 250
 
-		add_equipment_to_stockpile = { type = anti_tank_equipment amount = 300 }
-		add_equipment_to_stockpile = { type = anti_air_equipment amount = 300 }
-		add_equipment_to_stockpile = { type = motorized_equipment amount = 300 }
-		add_equipment_to_stockpile = { type = artillery_equipment amount = 1200 }
-		add_equipment_to_stockpile = { type = infantry_equipment amount = 10000 }
-		add_equipment_to_stockpile = { type = support_equipment amount = 900 }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.15
-	title = martian.15.t
-	desc = martian.15.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		has_dlc = "Man the Guns"
-    tag = ITA
-    is_ai = yes
-    is_subject = no
-	}	
-
-	mean_time_to_happen = {
-		days = 30
-	}
-
-
-	option = {
-		name = martian.15.a
-    ai_chance = {
-			factor = 100
-		}
-
-			hidden_effect = { 
-				load_oob = "ITA_VV_ai"
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = RUS
+				count = 5
 			}
+		}
 
 	}
 		
@@ -1785,9 +426,9 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Man the Guns"
-    tag = GER
-    is_ai = yes	
-    is_subject = no
+		tag = GER
+		is_ai = yes	
+		is_subject = no
 	}	
 
 	mean_time_to_happen = {
@@ -1797,7 +438,7 @@ country_event = {
 
 	option = {
 		name = martian.16.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -1808,130 +449,6 @@ country_event = {
 		create_ship = { type = ship_hull_heavy_2 equipment_variant = "Bismarck Class" creator = GER }
 
 		create_ship = { type = ship_hull_heavy_2 equipment_variant = "Bismarck Class" creator = GER }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.17
-	title = martian.17.t
-	desc = martian.17.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		tag = GER
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      or = {
-        tag = ENG
-        tag = FRA
-        tag = ITA
-        tag = SWE
-        tag = SOV
-        tag = RUS
-        tag = JAP
-        tag = USA
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.17.a
-    ai_chance = {
-			factor = 100
-		}
-
-		add_political_power = 300
-
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 7500
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 1000
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 750
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 250
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 250
-      producer = GER
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 250
-      producer = GER
-    }
-
-    if = {
-      limit = {
-        has_tech = mechanised_infantry
-      }
-
-      add_equipment_to_stockpile = {
-        type = mechanized_equipment
-        amount = 750
-        producer = GER
-      }
-
-    }
-
-    add_equipment_to_stockpile = {
-      type = armored_car_equipment
-      amount = 200
-      producer = GER
-    }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 300
-        producer = GER
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 200
-        producer = GER
-      }
-
-      add_equipment_to_stockpile = {
-        type = nav_bomber_equipment
-        amount = 150
-        producer = GER
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 150
-        producer = GER
-      }
 
 	}
 		
@@ -1946,15 +463,15 @@ country_event = {
 	fire_only_once = no
 	
 	trigger = {
-    tag = GER
-    is_ai = yes	
-    is_subject = no
-    GER = { is_faction_leader = yes }
-    is_in_faction_with = HOL
-    any_country = {
-      NOT = { has_war_with = GER }
-      has_war_with = HOL
-    }
+		tag = GER
+		is_ai = yes	
+		is_subject = no
+		GER = { is_faction_leader = yes }
+		is_in_faction_with = HOL
+		any_country = {
+			NOT = { has_war_with = GER }
+			has_war_with = HOL
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -1964,34 +481,34 @@ country_event = {
 
 	option = {
 		name = martian.18.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    random_country = {
-      limit = {
-        tag = HOL
-        is_in_faction_with = GER
-      }
-      random_enemy_country = {
-        limit = {
-          NOT = { has_war_with = GER }
-        }
-        GER = {
-          add_to_war = {
-            targeted_alliance = PREV.PREV
-            enemy = PREV
-            hostility_reason = asked_to_join
-          }
-        }
-      }
-    }
+		random_country = {
+			limit = {
+				tag = HOL
+				is_in_faction_with = GER
+			}
+			random_enemy_country = {
+				limit = {
+				    NOT = { has_war_with = GER }
+				}
+				GER = {
+					add_to_war = {
+						targeted_alliance = PREV.PREV
+						enemy = PREV
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+		}
 
 	}
 		
 }
 
-country_event = {
+country_event = { # 嗨茧联邦差不多得了
 	id = martian.19
 	title = martian.19.t
 	desc = martian.19.d
@@ -2000,20 +517,20 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = GER
-    is_ai = yes	
-    is_subject = no 
-    GER = { is_faction_leader = yes }
-    country_exists = RKP
-    country_exists = POL
-    NOT = { has_war_with = POL }
-	  POL = { is_subject = no }
-    or = {
-      POL = { is_in_faction = no }
-      POL = { is_faction_leader = yes }
-      LAT = { is_faction_leader = yes }
-      EST = { is_faction_leader = yes }
-    }	
+		tag = GER
+		is_ai = yes	
+		is_subject = no 
+		GER = { is_faction_leader = yes }
+		country_exists = RKP
+		country_exists = POL
+		NOT = { has_war_with = POL }
+		POL = { is_subject = no }
+		or = {
+			POL = { is_in_faction = no }
+			POL = { is_faction_leader = yes }
+			LAT = { is_faction_leader = yes }
+			EST = { is_faction_leader = yes }
+		}	
 	}	
 
 	mean_time_to_happen = {
@@ -2023,11 +540,11 @@ country_event = {
 
 	option = {
 		name = martian.19.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    annex_country = { target = POL }
+        annex_country = { target = POL }
 
 	}
 		
@@ -2042,14 +559,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    or = {
-      tag = SOV
-      tag = RUS
-    }	
-    is_ai = yes	
-    is_subject = no
-    has_war = no
-	  is_subject = no
+		or = {
+		  tag = SOV
+		  tag = RUS
+		}	
+		is_ai = yes	
+		is_subject = no
+		has_war = no
+		is_subject = no
 		date > 1938.6.1
 	}	
 
@@ -2060,7 +577,7 @@ country_event = {
 
 	option = {
 		name = martian.20.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2070,7 +587,7 @@ country_event = {
 		
 }
 
-country_event = {
+country_event = { # 嗨茧联邦差不多得了
 	id = martian.21
 	title = martian.21.t
 	desc = martian.21.d
@@ -2079,15 +596,15 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = GER
-    is_ai = yes	
-    is_subject = no
-    GER = { is_faction_leader = yes }
-    country_exists = EST
-    NOT = { has_war_with = EST }
-	  EST = { is_subject = no }
-    EST = { is_faction_leader = yes }
-    is_neighbor_of = EST
+		tag = GER
+		is_ai = yes	
+		is_subject = no
+		GER = { is_faction_leader = yes }
+		country_exists = EST
+		NOT = { has_war_with = EST }
+		EST = { is_subject = no }
+		EST = { is_faction_leader = yes }
+		is_neighbor_of = EST
 	}	
 
 	mean_time_to_happen = {
@@ -2097,592 +614,11 @@ country_event = {
 
 	option = {
 		name = martian.21.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    annex_country = { target = EST }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.22
-	title = martian.22.t
-	desc = martian.22.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-		date > 1942.1.1
-    tag = GER
-    is_ai = yes	
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      or = {
-        tag = ENG
-        tag = FRA
-        tag = SOV
-        tag = RUS
-      }
-    }
-	}	
-
-	mean_time_to_happen = {
-		days = 10
-	}
-
-
-	option = {
-		name = martian.22.a
-    ai_chance = {
-			factor = 100
-		}
-
-		if = {
-			limit = {
-				not = { has_tech = amphibious_mechanized_infantry }
-			}
-			if = {
-					limit = { is_researching_technology =  amphibious_mechanized_infantry }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  amphibious_mechanized_infantry = 1 }
-				}
-		}
-
-		if = {
-			limit = {
-				not = { has_tech = amphibious_tank }
-			}
-			if = {
-					limit = { is_researching_technology =  amphibious_tank }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  amphibious_tank = 1 }
-				}
-		}
-
-		if = {
-			limit = {
-				not = { has_tech = amphibious_tank_2 }
-			}
-			if = {
-					limit = { is_researching_technology =  amphibious_tank_2 }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  amphibious_tank_2 = 1 }
-				}
-		}
-
-		add_equipment_to_stockpile = { type = amphibious_tank_equipment amount = 2000 }
-		add_equipment_to_stockpile = { type = amphibious_mechanized_equipment amount = 2000 }
-
-		hidden_effect = {
-			division_template = {
-				name = "Landekraft"
-				priority = 2
-        is_locked = yes
-        division_names_group = GER_Arm_01
-				regiments = {
-					amphibious_armor = { x = 0 y = 0 }
-					amphibious_armor = { x = 0 y = 1 }
-					amphibious_armor = { x = 0 y = 2 }
-					amphibious_armor = { x = 0 y = 3 }
-					amphibious_armor = { x = 0 y = 4 }
-					amphibious_mechanized = { x = 1 y = 0 }
-					amphibious_mechanized = { x = 1 y = 1 }
-					amphibious_mechanized = { x = 1 y = 2 }
-					amphibious_mechanized = { x = 1 y = 3 }
-					amphibious_mechanized = { x = 1 y = 4 }
-				}
-				support = {
-          armored_car_recon = { x = 0 y = 0 }
-          engineer = { x = 0 y = 1 }
-          artillery = { x = 0 y = 2 }
-          maintenance_company = { x = 0 y = 3 }
-          logistics_company = { x = 0 y = 4 }
-				}
-			}
-				
-			random_owned_controlled_state = {
-				limit = { ROOT = { has_full_control_of_state = PREV } }
-				prioritize = { 64 }
-				create_unit = {
-					division = "name = \"1. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"2. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"3. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"4. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"5. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"6. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"7. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"8. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"9. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-				create_unit = {
-					division = "name = \"10. TST-Landekraft\" division_template = \"Landekraft\" start_experience_factor = 1.0" 
-					owner = GER
-				}
-			}
-		}
-
-	}
-		
-}
-
-country_event = {
-	id = martian.23
-	title = martian.23.t
-	desc = martian.23.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = SOV
-    or = {
-      NOT = { has_war_with = RUS }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = RUS }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    or = {
-      has_idea = SOV_lacking_industrialization_1 			
-      has_idea = SOV_lacking_industrialization_2 			
-      has_idea = SOV_lacking_industrialization_3 			
-      has_idea = SOV_lacking_industrialization_4 			
-      has_idea = SOV_lacking_industrialization_5 			
-      has_idea = SOV_lacking_industrialization_6 			
-      has_idea = SOV_lacking_industrialization_7 			
-      has_idea = SOV_lacking_industrialization_8 
-    }
-    surrender_progress > 0.1
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.23.a
-    ai_chance = {
-			factor = 100
-		}
-
-      add_equipment_to_stockpile = {
-        type = infantry_equipment
-        amount = 30000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = support_equipment
-        amount = 3000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = artillery_equipment
-        amount = 3000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_air_equipment
-        amount = 1000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = anti_tank_equipment
-        amount = 1000
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = armored_car_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      if = {
-        limit = {
-          not = { has_tech = basic_medium_tank }
-        }
-        if = {
-					limit = { is_researching_technology =  basic_medium_tank }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_tank = 1 }
-				}
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_equipment
-        amount = 1500
-        producer = SOV
-      }
-
-      if = {
-        limit = {
-          not = { has_tech = basic_medium_td }
-        }
-        if = {
-					limit = { is_researching_technology =  basic_medium_td }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_td = 1 }
-				}
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_destroyer_equipment
-        amount = 400
-        producer = SOV
-      }
-
-      if = {
-        limit = {
-          not = { has_tech = basic_medium_art }
-        }
-        if = {
-					limit = { is_researching_technology =  basic_medium_art }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_art = 1 }
-				}
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_artillery_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      if = {
-        limit = {
-          not = { has_tech = basic_medium_spaa }
-        }
-        if = {
-					limit = { is_researching_technology =  basic_medium_spaa }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_spaa = 1 }
-				}
-      }
-
-      add_equipment_to_stockpile = {
-        type = medium_tank_aa_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      if = {
-        limit = {
-          not = { has_tech = basic_heavy_tank }
-        }
-        if = {
-					limit = { is_researching_technology =  basic_heavy_tank }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_heavy_tank = 1 }
-				}
-      }
-
-      add_equipment_to_stockpile = {
-        type = heavy_tank_equipment
-        amount = 500
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = fighter_equipment
-        amount = 600
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = CAS_equipment
-        amount = 300
-        producer = SOV
-      }
-
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment
-        amount = 200
-        producer = SOV
-      }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.24
-	title = martian.24.t
-	desc = martian.24.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-		always = no
-    tag = RUS
-    or = {
-      NOT = { has_war_with = SOV }
-      any_enemy_country = {
-        is_major = yes
-        NOT = { tag = SOV }
-      }
-    }
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    or = {
-      has_idea = SOV_lacking_industrialization_1 			
-      has_idea = SOV_lacking_industrialization_2 			
-      has_idea = SOV_lacking_industrialization_3 			
-      has_idea = SOV_lacking_industrialization_4 			
-      has_idea = SOV_lacking_industrialization_5 			
-      has_idea = SOV_lacking_industrialization_6 			
-      has_idea = SOV_lacking_industrialization_7 			
-      has_idea = SOV_lacking_industrialization_8 
-    }
-    surrender_progress > 0.1
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.24.a
-    ai_chance = {
-			factor = 100
-		}
-
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 30000
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 3000
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 3000
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 1000
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 1000
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 1500
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = armored_car_equipment
-      amount = 300
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = light_tank_equipment
-      amount = 300
-      producer = RUS
-    }
-
-		if = {
-			limit = {
-				not = { has_tech = basic_medium_tank }
-			}
-			if = {
-					limit = { is_researching_technology =  basic_medium_tank }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_tank = 1 }
-				}
-		}
-
-    add_equipment_to_stockpile = {
-      type = medium_tank_equipment
-      amount = 1500
-      producer = RUS
-    }
-
-		if = {
-			limit = {
-				not = { has_tech = basic_medium_td }
-			}
-			if = {
-					limit = { is_researching_technology =  basic_medium_td }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_td = 1 }
-				}
-		}
-
-    add_equipment_to_stockpile = {
-      type = medium_tank_destroyer_equipment
-      amount = 400
-      producer = RUS
-    }
-
-		if = {
-			limit = {
-				not = { has_tech = basic_medium_art }
-			}
-			if = {
-					limit = { is_researching_technology =  basic_medium_art }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_art = 1 }
-				}
-		}
-
-    add_equipment_to_stockpile = {
-      type = medium_tank_artillery_equipment
-      amount = 600
-      producer = RUS
-    }
-
-		if = {
-			limit = {
-				not = { has_tech = basic_medium_spaa }
-			}
-			if = {
-					limit = { is_researching_technology =  basic_medium_spaa }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_medium_spaa = 1 }
-				}
-		}
-
-    add_equipment_to_stockpile = {
-      type = medium_tank_aa_equipment
-      amount = 300
-      producer = RUS
-    }
-
-		if = {
-			limit = {
-				not = { has_tech = basic_heavy_tank }
-			}
-			if = {
-					limit = { is_researching_technology =  basic_heavy_tank }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  basic_heavy_tank = 1 }
-				}
-		}
-
-    add_equipment_to_stockpile = {
-      type = heavy_tank_equipment
-      amount = 500
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = fighter_equipment
-      amount = 600
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = CAS_equipment
-      amount = 300
-      producer = RUS
-    }
-
-    add_equipment_to_stockpile = {
-      type = tac_bomber_equipment
-      amount = 200
-      producer = RUS
-    }
+        annex_country = { target = EST }
 
 	}
 		
@@ -2698,10 +634,10 @@ country_event = {
 	
 	trigger = {
 		date > 1939.1.1
-    is_ai = yes	
-    is_subject = no
-    not = { has_tech = decimetric_radar }
-    is_major = yes
+		is_ai = yes	
+		is_subject = no
+		not = { has_tech = decimetric_radar }
+		is_major = yes
 	}	
 
 	mean_time_to_happen = {
@@ -2711,7 +647,7 @@ country_event = {
 
 	option = {
 		name = martian.25.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2720,12 +656,12 @@ country_event = {
 				not = { has_tech = decimetric_radar }
 			}
 			if = {
-					limit = { is_researching_technology =  decimetric_radar }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  decimetric_radar = 1 }
-				}
+				limit = { is_researching_technology =  decimetric_radar }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  decimetric_radar = 1 }
+			}
 		}
 
 
@@ -2743,10 +679,10 @@ country_event = {
 	
 	trigger = {
 		date > 1940.1.1
-    is_ai = yes	
-    is_subject = no
-    not = { has_tech = improved_decimetric_radar }
-    is_major = yes
+		is_ai = yes	
+		is_subject = no
+		not = { has_tech = improved_decimetric_radar }
+		is_major = yes
 	}	
 
 	mean_time_to_happen = {
@@ -2756,7 +692,7 @@ country_event = {
 
 	option = {
 		name = martian.26.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2765,12 +701,12 @@ country_event = {
 				not = { has_tech = improved_decimetric_radar }
 			}
 			if = {
-					limit = { is_researching_technology =  improved_decimetric_radar }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  improved_decimetric_radar = 1 }
-				}
+				limit = { is_researching_technology =  improved_decimetric_radar }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  improved_decimetric_radar = 1 }
+			}
 		}
 
 
@@ -2788,10 +724,10 @@ country_event = {
 	
 	trigger = {
 		date > 1941.1.1
-    is_ai = yes	
-    is_subject = no
-    not = { has_tech = centimetric_radar }
-    is_major = yes
+		is_ai = yes	
+		is_subject = no
+		not = { has_tech = centimetric_radar }
+		is_major = yes
 	}	
 
 	mean_time_to_happen = {
@@ -2801,7 +737,7 @@ country_event = {
 
 	option = {
 		name = martian.27.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2810,12 +746,12 @@ country_event = {
 				not = { has_tech = centimetric_radar }
 			}
 			if = {
-					limit = { is_researching_technology =  centimetric_radar }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  centimetric_radar = 1 }
-				}
+				limit = { is_researching_technology =  centimetric_radar }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  centimetric_radar = 1 }
+			}
 		}
 
 
@@ -2833,10 +769,10 @@ country_event = {
 	
 	trigger = {
 		date > 1942.1.1
-    is_ai = yes	
-    is_subject = no
-    not = { has_tech = improved_centimetric_radar }
-    is_major = yes
+		is_ai = yes	
+		is_subject = no
+		not = { has_tech = improved_centimetric_radar }
+		is_major = yes
 	}	
 
 	mean_time_to_happen = {
@@ -2846,7 +782,7 @@ country_event = {
 
 	option = {
 		name = martian.28.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2855,12 +791,12 @@ country_event = {
 				not = { has_tech = improved_centimetric_radar }
 			}
 			if = {
-					limit = { is_researching_technology =  improved_centimetric_radar }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  improved_centimetric_radar = 1 }
-				}
+				limit = { is_researching_technology =  improved_centimetric_radar }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  improved_centimetric_radar = 1 }
+			}
 		}
 
 
@@ -2878,10 +814,10 @@ country_event = {
 	
 	trigger = {
 		date > 1943.1.1
-    is_ai = yes	
-    is_subject = no
-    not = { has_tech = advanced_centimetric_radar }
-    is_major = yes
+		is_ai = yes	
+		is_subject = no
+		not = { has_tech = advanced_centimetric_radar }
+		is_major = yes
 	}	
 
 	mean_time_to_happen = {
@@ -2891,7 +827,7 @@ country_event = {
 
 	option = {
 		name = martian.29.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
@@ -2900,12 +836,12 @@ country_event = {
 				not = { has_tech = advanced_centimetric_radar }
 			}
 			if = {
-					limit = { is_researching_technology =  advanced_centimetric_radar }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  advanced_centimetric_radar = 1 }
-				}
+				limit = { is_researching_technology =  advanced_centimetric_radar }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  advanced_centimetric_radar = 1 }
+			}
 		}
 
 
@@ -2922,24 +858,24 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ITA
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    2 = {
-      is_controlled_by = ROOT
-      any_neighbor_state = {
-        any_neighbor_state = {
-          CONTROLLER = {
-            has_war_with = ROOT
-          }
-          OWNER = { tag = ROOT }
-        }
-      }
-    }
+		tag = ITA
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+			is_ai = no
+			is_major = yes
+		}
+		2 = {
+			is_controlled_by = ROOT
+			any_neighbor_state = {
+				any_neighbor_state = {
+					CONTROLLER = {
+					    has_war_with = ROOT
+					}
+					OWNER = { tag = ROOT }
+				}
+			}
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -2949,35 +885,33 @@ country_event = {
 
 	option = {
 		name = martian.30.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 
-			2 = {
-								
-        create_unit = {
-          division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
-          owner = ITA
-        }
-        create_unit = {
-          division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
-          owner = ITA
-        }
-        create_unit = {
-          division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
-          owner = ITA
-        }
-        create_unit = {
-          division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
-          owner = ITA
-        }
-        create_unit = {
-          division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
-          owner = ITA
-        }
-
-      }
+		2 = {						
+			create_unit = {
+				division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
+				owner = ITA
+			}
+			create_unit = {
+				division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
+				owner = ITA
+			}
+			create_unit = {
+				division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
+				owner = ITA
+			}
+			create_unit = {
+				division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
+				owner = ITA
+			}
+			create_unit = {
+				division = "name = \"Corpo di Difesa\" division_template = \"infantry\" start_experience_factor = 0.8"  
+				owner = ITA
+			}
+		}
 
 	}
 		
@@ -2992,14 +926,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = USA
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    surrender_progress > 0.1
+		tag = USA
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+			is_ai = no
+			is_major = yes
+		}
+		surrender_progress > 0.1
 	}	
 
 	mean_time_to_happen = {
@@ -3009,45 +943,17 @@ country_event = {
 
 	option = {
 		name = martian.31.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 30000
-      producer = USA
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 3000
-      producer = USA
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 3000
-      producer = USA
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 1000
-      producer = USA
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 1000
-      producer = USA
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 500
-      producer = USA
-    }
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = USA
+				count = 30
+			}
+		}
 
 
 	}
@@ -3063,13 +969,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ENG
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_major = yes
-    }
-    has_idea = ENG_Empire_Mobilization_idea
+		tag = ENG
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+		  is_major = yes
+		}
+		has_idea = ENG_Empire_Mobilization_idea
 	}	
 
 	mean_time_to_happen = {
@@ -3079,46 +985,17 @@ country_event = {
 
 	option = {
 		name = martian.32.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 10000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 1000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 1000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 300
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 300
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 300
-      producer = ENG
-    }
-
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = ENG
+				count = 15
+			}
+		}
 
 	}
 		
@@ -3133,14 +1010,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ENG
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
-      is_major = yes
-    }
-    has_idea = ENG_Empire_Mobilization_idea
+		tag = ENG
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+		  is_ai = no
+		  is_major = yes
+		}
+		has_idea = ENG_Empire_Mobilization_idea
 	}	
 
 	mean_time_to_happen = {
@@ -3150,46 +1027,17 @@ country_event = {
 
 	option = {
 		name = martian.33.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 10000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 1000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 1000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 300
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 300
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 300
-      producer = ENG
-    }
-
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = ENG
+				count = 15
+			}
+		}
 
 	}
 		
@@ -3204,9 +1052,9 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = CHI
-    is_ai = yes
-    is_subject = no
+		tag = CHI
+		is_ai = yes
+		is_subject = no
 	}	
 
 	mean_time_to_happen = {
@@ -3216,24 +1064,23 @@ country_event = {
 
 	option = {
 		name = martian.34.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		army_experience = 50
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 2000
-      producer = GER
-    }
+		add_equipment_to_stockpile = {
+		  type = infantry_equipment
+		  amount = 2000
+		  producer = GER
+		}
 
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 200
-      producer = GER
-    }
-
+		add_equipment_to_stockpile = {
+		  type = support_equipment
+		  amount = 200
+		  producer = GER
+		}
 
 	}
 		
@@ -3248,15 +1095,15 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = JAP
-    is_ai = yes
-    is_subject = no
-    has_war_with = CHI
-    any_enemy_country = {
-      NOT = { tag = CHI }
-      is_ai = no
-      is_major = yes
-    }
+		tag = JAP
+		is_ai = yes
+		is_subject = no
+		has_war_with = CHI
+		any_enemy_country = {
+		  NOT = { tag = CHI }
+		  is_ai = no
+		  is_major = yes
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3266,44 +1113,16 @@ country_event = {
 
 	option = {
 		name = martian.35.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 7500
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 500
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 500
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 200
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 200
-      producer = JAP
-    }
-
-		add_equipment_to_stockpile = {
-			type = armored_car_equipment
-			amount = 500
-			producer = JAP
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = JAP
+				count = 15
+			}
 		}
 
 	}
@@ -3319,10 +1138,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = CHI
-    is_ai = yes
-    is_subject = no
-    surrender_progress > 0.5
+		tag = CHI
+		is_ai = yes
+		is_subject = no
+		surrender_progress > 0.5
 	}	
 
 	mean_time_to_happen = {
@@ -3332,21 +1151,21 @@ country_event = {
 
 	option = {
 		name = martian.36.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 7500
-      producer = CHI
-    }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 7500
+			producer = CHI
+		}
 
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 200
-      producer = CHI
-    }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = CHI
+		}
 
 
 	}
@@ -3362,23 +1181,23 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = CHI
-    is_ai = yes
-    is_subject = no
-    surrender_progress > 0.3
-    any_enemy_country = {
-      is_ai = no
-      or = {
-        tag = ENG
-        tag = FRA
-        tag = ITA
-        tag = SWE
-        tag = SOV
-        tag = RUS
-        tag = JAP
-        tag = USA
-      }
-    }
+		tag = CHI
+		is_ai = yes
+		is_subject = no
+		surrender_progress > 0.3
+		any_enemy_country = {
+			is_ai = no
+			or = {
+				tag = ENG
+				tag = FRA
+				tag = ITA
+				tag = SWE
+				tag = SOV
+				tag = RUS
+				tag = JAP
+				tag = USA
+			}
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3388,21 +1207,21 @@ country_event = {
 
 	option = {
 		name = martian.37.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 7500
-      producer = CHI
-    }
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 7500
+			producer = CHI
+		}
 
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 200
-      producer = CHI
-    }
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 200
+			producer = CHI
+		}
 
 
 	}
@@ -3418,10 +1237,10 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ITA
-    is_ai = yes
-    is_subject = no
-    surrender_progress > 0.4
+		tag = ITA
+		is_ai = yes
+		is_subject = no
+		surrender_progress > 0.4
 	}	
 
 	mean_time_to_happen = {
@@ -3431,39 +1250,17 @@ country_event = {
 
 	option = {
 		name = martian.38.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 5000
-      producer = ITA
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 500
-      producer = ITA
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 500
-      producer = ITA
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 200
-      producer = ITA
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 200
-      producer = ITA
-    }
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = ITA
+				count = 10
+			}
+		}
 
 
 	}
@@ -3479,13 +1276,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = HUN
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
+		tag = HUN
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+			is_ai = no
 			tag = ROM
-    }
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3495,29 +1292,19 @@ country_event = {
 
 	option = {
 		name = martian.39.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		add_political_power = 250
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 3000
-      producer = HUN
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 300
-      producer = HUN
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 300
-      producer = HUN
-    }
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = HUN
+				count = 3
+			}
+		}
 
 	}
 		
@@ -3532,13 +1319,13 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ROM
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
-      is_ai = no
+		tag = ROM
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
+			is_ai = no
 			tag = HUN
-    }
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3548,112 +1335,19 @@ country_event = {
 
 	option = {
 		name = martian.40.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		add_political_power = 250
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 3000
-      producer = ROM
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 300
-      producer = ROM
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 300
-      producer = ROM
-    }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.41
-	title = martian.41.t
-	desc = martian.41.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-    tag = FRA
-		date > 1936.6.1
-    is_ai = yes
-    is_subject = no
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.41.a
-    ai_chance = {
-			factor = 100
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = ROM
+				count = 3
+			}
 		}
-
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 6000
-      producer = FRA
-    }
-
-    add_equipment_to_stockpile = {
-      type = heavy_tank_equipment
-      amount = 300
-      producer = FRA
-    }
-
-	}
-		
-}
-
-country_event = {
-	id = martian.42
-	title = martian.42.t
-	desc = martian.42.d
-	picture = GFX_report_event_generic_funeral
-
-	fire_only_once = yes
-	
-	trigger = {
-    tag = ENG
-    is_ai = yes
-    is_subject = no
-	}	
-
-	mean_time_to_happen = {
-		days = 1
-	}
-
-
-	option = {
-		name = martian.42.a
-    ai_chance = {
-			factor = 100
-		}
-
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 5000
-      producer = ENG
-    }
-
-    add_equipment_to_stockpile = {
-      type = motorized_equipment
-      amount = 1000
-      producer = ENG
-    }
 
 	}
 		
@@ -3668,12 +1362,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = ROM
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
+		tag = ROM
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
 			tag = HUN
-    }
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3683,30 +1377,17 @@ country_event = {
 
 	option = {
 		name = martian.43.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		random_list = {
 			50 = {
 				add_political_power = 250
-
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 3000
-					producer = ROM
-				}
-
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 300
-					producer = ROM
-				}
-
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 300
-					producer = ROM
+				create_unit = {
+					division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+					owner = ROM
+					count = 3
 				}
 			}
 			50 = {
@@ -3728,14 +1409,14 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = JAP
-    is_ai = yes
-    is_subject = no
-    has_war_with = CHI
-    any_enemy_country = {
-      NOT = { tag = CHI }
-      is_major = yes
-    }
+		tag = JAP
+		is_ai = yes
+		is_subject = no
+		has_war_with = CHI
+		any_enemy_country = {
+			NOT = { tag = CHI }
+			is_major = yes
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3745,39 +1426,17 @@ country_event = {
 
 	option = {
 		name = martian.44.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
-    add_equipment_to_stockpile = {
-      type = infantry_equipment
-      amount = 5000
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = support_equipment
-      amount = 300
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = artillery_equipment
-      amount = 300
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_air_equipment
-      amount = 100
-      producer = JAP
-    }
-
-    add_equipment_to_stockpile = {
-      type = anti_tank_equipment
-      amount = 100
-      producer = JAP
-    }
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"infantry 21\" start_experience_factor = 0.2 start_equipment_factor = 1.0"
+				owner = JAP
+				count = 3
+			}
+		}
 
 		add_equipment_to_stockpile = {
 			type = armored_car_equipment
@@ -3798,12 +1457,12 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-    tag = CZE
-    is_ai = yes
-    is_subject = no
-    any_enemy_country = {
+		tag = CZE
+		is_ai = yes
+		is_subject = no
+		any_enemy_country = {
 			tag = HUN
-    }
+		}
 	}	
 
 	mean_time_to_happen = {
@@ -3813,31 +1472,13 @@ country_event = {
 
 	option = {
 		name = martian.45.a
-    ai_chance = {
+		ai_chance = {
 			factor = 100
 		}
 
 		random_list = {
 			50 = {
-				add_political_power = 150
-
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 2000
-					producer = CZE
-				}
-
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 200
-					producer = CZE
-				}
-
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 200
-					producer = CZE
-				}
+				add_political_power = 300
 			}
 			50 = {
 

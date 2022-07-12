@@ -1987,35 +1987,23 @@
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		complete_tooltip = {
-			random_state = {
-				limit = {
-					has_state_flag = SAF_south_african_railways_Inf
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
+
         search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = SAF_south_african_railways_Inf
-			}
+			custom_effect_tooltip = available_designer
+			 
+							
+							   
+			  
+	  
+	 
+								 
+						  
+			  
+						
+	 
+			show_ideas_tooltip = SAF_south_african_railways
 		}
 	}
 
@@ -2161,7 +2149,17 @@
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_flag = SAF_infrastructure_effort_Inf2
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2172,15 +2170,30 @@
 				limit = {
 					free_building_slots = {
 						building = infrastructure
-						size > 2
+						size > 0
 					}
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 				set_state_flag = SAF_infrastructure_effort_Inf
+				random_neighbor_state = { # done like this to prevent double selection of previous state
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = SAF_infrastructure_effort_Inf2
+				}
 			}
 		}
 	}
@@ -3086,9 +3099,9 @@
 
 		completion_reward = {
 			air_experience = 25
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SAF_perfect_the_cab_rank_technique
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_battlefield_support
 			}
@@ -3310,9 +3323,9 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SAF_protect_the_trade
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = convoy_defense_tree
 			}
@@ -3352,9 +3365,9 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SAF_disrupt_the_trade
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = cat_trade_interdiction
 			}
@@ -3556,9 +3569,9 @@
         search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = SAF_prepare_overseas_offensive
-				bonus = 1.0
+				cost_reduction = 0.5
 				uses = 1
 				category = convoy_defense_tree
 			}

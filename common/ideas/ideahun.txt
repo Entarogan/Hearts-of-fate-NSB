@@ -2137,7 +2137,7 @@ ideas = {
 				war_support_factor = 0.20
 				offensive_war_stability_factor = 0.20
 				defensive_war_stability_factor = 0.20
-		    surrender_limit = 0.20
+		        surrender_limit = 0.05
 				conscription_factor = 0.20
 			}
 		}
@@ -2198,7 +2198,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-		    research_speed_factor = 0.05
+		        research_speed_factor = 0.03
 			}
 		}
 
@@ -2456,6 +2456,7 @@ ideas = {
 			picture = blitzkrieg
 			
 			modifier = {
+				recon_factor = 0.1
 				army_armor_speed_factor = 0.05
 				army_armor_attack_factor = 0.10
 				motorized_attack_factor = 0.10
@@ -2483,6 +2484,8 @@ ideas = {
 			picture = blitzkrieg
 			
 			modifier = {
+				recon_factor = 0.1
+				breakthrough_factor = 0.1
 				army_armor_speed_factor = 0.10
 				army_armor_attack_factor = 0.15
 				motorized_attack_factor = 0.15
@@ -2491,29 +2494,6 @@ ideas = {
 		    mechanized_defence_factor = 0.05
 				org_loss_when_moving = -0.10
 				land_reinforce_rate = 0.05
-			}
-
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				mechanized_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				motorized_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
-				infantry_equipment = {
-					breakthrough = 0.1
-					instant = yes
-				}
-
 			}
 			
 		}

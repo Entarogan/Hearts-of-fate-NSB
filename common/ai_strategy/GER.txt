@@ -3048,7 +3048,7 @@ GER_dont_like_fra = { # :O
 
 GER_we_anti_communist = { 
 	enable = {
-        has_idea = GER_anti_communist_volunteers_I
+        has_idea = GER_anti_communist_volunteers_idea
 	    GER = { has_war_with = SOV }
 	}
 	abort = {

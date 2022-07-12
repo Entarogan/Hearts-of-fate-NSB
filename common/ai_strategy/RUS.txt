@@ -45,7 +45,7 @@ RUS_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = cavalry
-		value = 5
+		value = 0
 	}
 
 	ai_strategy = {
@@ -63,7 +63,7 @@ RUS_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = armor
-		value = 50
+		value = 30
 	}
 
 	ai_strategy = {
@@ -75,7 +75,7 @@ RUS_unit_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 25 #because doctrine 70
+		value = 50 #because doctrine 70
 	}
 	
 	#Air unit factors
@@ -162,26 +162,13 @@ RUS_unit_production = {
 		id = armor
 		value = 40
 	}
-}	
-
-RUS_halt_light_armor_production_in_transitioning = {
-	enable = {
-		original_tag = RUS
-		has_template_majority_unit = medium_armor
-		OR = {
-			has_equipment = { light_tank_equipment > 600 }
-			date > 1939.1.1
-		}		
-	}
-	abort = {
-		# once we start we never go back to light armor
-	}
 
 	ai_strategy = {
 		type = equipment_variant_production_factor
-		id = light_tank_equipment
-		value = -75
+		id = motorized_equipment
+		value = 30
 	}
+
 }
 
 southern_thrust = {

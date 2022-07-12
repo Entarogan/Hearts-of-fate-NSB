@@ -103,11 +103,12 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-		add_manpower = 2000
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = 2000
-			producer = SOV
+
+		add_stability = -0.05
+
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = UKR_Suppresses_Bandits
 		}
 	}
 }
@@ -132,7 +133,13 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-		add_political_power = -50
+
+		add_political_power = -30
+
+		add_autonomy_ratio = {
+			value = -0.03
+			localization = UKR_Landlord_re_education
+		}
 	}
 }
 
@@ -159,6 +166,14 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
+
+		add_political_power = -50
+
+		add_autonomy_ratio = {
+			value = -0.05
+			localization = UKR_Labor_reform_camp
+		}
+
 		random_owned_controlled_state = {
 			limit = {
 				is_core_of = UKR
@@ -168,6 +183,7 @@ shared_focus = {
 					include_locked = yes
 				}
 			}
+		    add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -200,6 +216,14 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
+
+		add_political_power = -50
+
+		add_popularity = { 
+			ideology = communism 
+			popularity = 0.1 
+		}
+
 		add_timed_idea = {
 			idea = UKR_Loyalty_test_idea
 			days = 730
@@ -252,6 +276,14 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
+
+		add_stability = 0.05
+
+		add_popularity = { 
+			ideology = communism 
+			popularity = 0.05
+		}
+
 		add_timed_idea = {
 			idea = UKR_Resume_agricultural_production_idea
 			days = 180
@@ -287,6 +319,7 @@ shared_focus = {
 					include_locked = yes
 				}
 			}
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -302,6 +335,7 @@ shared_focus = {
 					include_locked = yes
 				}
 			}
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -401,6 +435,8 @@ shared_focus = {
 		factor = 100
 	}
 	available = {
+		is_subject = no
+		has_war_with = SOV
 	}
 	bypass = {
 	}
@@ -434,7 +470,7 @@ shared_focus = {
 	completion_reward = {
 		add_offsite_building = {
 			type = arms_factory
-			level = 2
+			level = 1
 		}
 	}
 }
@@ -458,7 +494,7 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		add_stability = 0.2
+		add_stability = 0.05
 		add_war_support = 0.1
 	}
 }
@@ -482,7 +518,10 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		add_ideas = UKR_Emergency_munitions_production_idea
+		add_timed_idea = {
+			idea = UKR_Emergency_munitions_production_idea
+			days = 180
+		}
 	}
 }
 
@@ -508,7 +547,10 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		add_ideas = UKR_War_tax_idea
+		add_timed_idea = {
+			idea = UKR_War_tax_idea
+			days = 180
+		}
 	}
 }
 
@@ -531,10 +573,6 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		add_offsite_building = {
-			type = industrial_complex
-			level = 1
-		}
 		add_timed_idea = {
 			idea = UKR_Rescue_the_industrial_zone_idea
 			days = 180
@@ -567,7 +605,10 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		add_ideas = UKR_Forced_labor_idea
+		add_timed_idea = {
+			idea = UKR_Forced_labor_idea
+			days = 180
+		}
 	}
 }
 
@@ -586,10 +627,13 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-		army_experience = 25
+		add_political_power = 100
+
+		add_command_power = 50
+
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
-			cost_reduction = 0.5
+			cost_reduction = 0.33
 			uses = 1
 			category = land_doctrine
 		} 
@@ -615,6 +659,9 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
+
+		set_country_flag = UKR_Call_for_civilians_flag
+
 		custom_effect_tooltip = UKR_Call_for_civilians_tt
 		division_template = {
 			name = "militia"
@@ -626,10 +673,6 @@ shared_focus = {
 				infantry = {
 					x = 0
 					y = 1
-				}
-				infantry = {
-					x = 0
-					y = 2
 				}
 			}
 			priority = 0
@@ -717,6 +760,9 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
+
+		set_country_flag = UKR_Extremist_forces_flag
+
 		custom_effect_tooltip = UKR_Extremist_forces_tt
 		division_template = {
 			name = "OUN"
@@ -748,6 +794,10 @@ shared_focus = {
 						x = 0
 						y = 0
 					}
+					anti_air = {
+						x = 0
+						y = 1
+					}
 				}
 			priority = 1
 			is_locked = yes
@@ -777,6 +827,9 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
+
+		set_country_flag = UKR_Assemble_the_Cossacks_flag
+
 		custom_effect_tooltip = UKR_Assemble_the_Cossacks_tt
 		division_template = {
 			name = "Cossacks"
@@ -827,6 +880,7 @@ shared_focus = {
 	available = {
 	}
 	bypass = {
+		has_country_flag = UKR_Bandera_has_succeeded_flag
 	}
 	available_if_capitulated = yes
 	completion_reward = {
@@ -980,11 +1034,15 @@ shared_focus = {
 	available = {
 	}
 	bypass = {
+		has_country_flag = UKR_Bandera_has_succeeded_flag
 	}
 	available_if_capitulated = yes
 	completion_reward = {
 		SOV = {
-			add_ideas = UKR_Destruction_behind_enemy_lines_idea
+			add_timed_idea = {
+				idea = UKR_Destruction_behind_enemy_lines_idea
+				days = 180
+			}
 		}
 	}
 }

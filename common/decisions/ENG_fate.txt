@@ -203,62 +203,63 @@ ENG_biesongle_ai_Strategy = {
 ENG_European_Equilibrium_Strategy = {
 
 	ENG_invite_france_when_france_is_nearly_surrender = {
-    icon = generic_army_support
+		icon = generic_army_support
 
-    visible = {
-      tag = ENG
-      is_faction_leader = yes
-	  FRA = { has_civil_war = no }
-      ENG = { NOT = { has_government = fascism } }
-      ENG = { is_subject = no }
-      ENG = { NOT = { is_in_faction_with = FRA } }
-      ENG = { NOT = { has_war_with = FRA } }
-      OR = {
-        ENG = { NOT = { is_in_faction_with = GER } }
-        FRA = { NOT = { has_war_with = GER } }
-      }
-      OR = {
-        ENG = { NOT = { is_in_faction_with = ITA } }
-        FRA = { NOT = { has_war_with = ITA } }
-      }
-      
-      country_exists = FRA
-      FRA = { is_subject = no }
-      OR = {
-        FRA = { is_faction_leader = yes }
-        FRA = { is_in_faction = no }
-      }
+		visible = {
+			tag = ENG
+			is_faction_leader = yes
+			FRA = { has_civil_war = no }
+			ENG = { NOT = { has_government = fascism } }
+			ENG = { is_subject = no }
+			ENG = { NOT = { is_in_faction_with = FRA } }
+			ENG = { NOT = { has_war_with = FRA } }
+			OR = {
+				ENG = { NOT = { is_in_faction_with = GER } }
+				FRA = { NOT = { has_war_with = GER } }
+			}
+			OR = {
+				ENG = { NOT = { is_in_faction_with = ITA } }
+				FRA = { NOT = { has_war_with = ITA } }
+			}
+
+			country_exists = FRA
+			FRA = { is_subject = no }
+			OR = {
+				FRA = { is_faction_leader = yes }
+				FRA = { is_in_faction = no }
+			}
 		}
 
-    ai_will_do = {
+		ai_will_do = {
 			factor = 1000
 			modifier = {
 				factor = 0
 				surrender_progress > 0.15 
 			}
-      modifier = {
-				factor = 0
-				FRA = { is_ai = no }
+			#modifier = {
+				#factor = 0
+				#FRA = { is_ai = no }
+			#}
+		}
+
+		available = {
+			FRA = { NOT = { has_government = fascism } }
+			FRA = { NOT = { has_government = communism } }
+			FRA = { is_subject = no }
+			NOT = { FRA = { has_war_with = ENG } }
+			OR = {
+				FRA = { has_war_with = GER }
+				FRA = { has_war_with = ITA }
 			}
+			FRA = { surrender_progress > 0.6 }
 		}
 
-    available = {
-      FRA = { NOT = { has_government = fascism } }
-      FRA = { NOT = { has_government = communism } }
-		  FRA = { is_subject = no }
-		  NOT = { FRA = { has_war_with = ENG } }
-		  OR = {
-			FRA = { has_war_with = GER }
-			FRA = { has_war_with = ITA }
-		  }
-      FRA = { surrender_progress > 0.65 }
-		}
-
-    complete_effect = {
+		complete_effect = {
+		    set_global_flag = ENG_invite_france_flag
 			FRA = { country_event = { id = lr_france.101  hours = 3 } }
 		}
 
-  }
+    }
 
 	ENG_Empire_Mobilization_dec = {
 

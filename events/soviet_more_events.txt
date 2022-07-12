@@ -3,6 +3,8 @@
 ###########################
 add_namespace = more_soviet
 add_namespace = soviet_flavour
+add_namespace = more_soviet_dlc
+add_namespace = more_soviet_news_dlc
 
 country_event = {
 	id = soviet_flavour.1
@@ -314,16 +316,11 @@ country_event = {
 
 	fire_only_once = yes
 	mean_time_to_happen = {
-		days = 5
+		days = 7
 	}
 	trigger = {
 		tag = SOV
-		OR = {
-			has_completed_focus = SOV_Continue_military_control
-			has_completed_focus = SOV_Humane_communism
-			has_completed_focus = SOV_Return_of_exile
-			has_completed_focus = SOV_expend_NKVD
-		}
+		has_completed_focus = SOV_Great_Purge_will_fail
 	}
 
 	option = {
@@ -335,6 +332,36 @@ country_event = {
 		}
 		army_experience = 10
 		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = more_soviet_dlc.12
+	title = more_soviet_dlc.12.t
+	desc = more_soviet_dlc.12.d
+	picture = GFX_report_event_tur_soviets
+
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+	trigger = {
+		tag = SOV
+		date > 1936.12.11
+		NOT = { has_completed_focus = SOV_Humane_communism } 
+		NOT = { has_completed_focus = SOV_Return_of_exile } 
+		NOT = { has_country_flag = SOV_Achieving_the_Enver_Plan_flag }
+	}
+
+	option = {
+
+		name = more_soviet_dlc.12.a
+
+		ai_chance = {
+			factor = 100
+		}
+
+		add_political_power = -30
 	}
 }
 
@@ -370,14 +397,19 @@ country_event = {     #
 		NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
 		focus_progress = {
 			focus = SOV_Great_Purge_will_fail
-			progress > 0.25
+			progress > 0.1
 		}
 	}
 	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
+
+	immediate = {
+		hidden_effect = {
+			country_event = more_soviet_dlc.1
+		}
+	}	
 	
 	option = {
 		name = more_soviet.2.a
@@ -385,7 +417,6 @@ country_event = {     #
 			base = 50
 		}
 
-    custom_effect_tooltip = SOV_Regime_collapse_tt
 
 		add_political_power = -100
 
@@ -424,14 +455,87 @@ country_event = {     #
 			remove_ideas = SOV_nikola_bukharin
 		}
 
-		custom_effect_tooltip = remove_political_advisor
-		show_ideas_tooltip = nikita_khrushchev
-		set_country_flag = arrest_khrushchev
 		hidden_effect = {
-			remove_ideas = nikita_khrushchev
+		    country_event = { id = more_soviet.3  days = 3 }
 		}
+
 	}
 }
+
+country_event = {
+	id = more_soviet_dlc.1
+	title = more_soviet_dlc.1.t
+	desc = more_soviet_dlc.1.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = more_soviet_dlc.1.a
+
+		add_political_power = 1
+
+		hidden_effect = {
+			country_event = more_soviet_dlc.2
+		}
+
+	}
+}
+
+country_event = {
+	id = more_soviet_dlc.2
+	title = more_soviet_dlc.2.t
+	desc = more_soviet_dlc.2.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = more_soviet_dlc.2.a
+
+		hidden_effect = {
+			country_event = more_soviet_dlc.3
+		}
+
+	}
+}
+
+country_event = {
+	id = more_soviet_dlc.3
+	title = more_soviet_dlc.3.t
+	desc = more_soviet_dlc.3.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = more_soviet_dlc.3.a
+
+		add_political_power = -100
+
+		add_stability = -0.10
+
+        custom_effect_tooltip = SOV_Khrushchev_attacked_tt
+
+		custom_effect_tooltip = remove_political_advisor
+		show_ideas_tooltip = nikita_khrushchyov
+		set_country_flag = arrest_khrushchev
+		hidden_effect = {
+			remove_ideas = nikita_khrushchyov
+		}
+
+	}
+}
+
 
 country_event = {     # 
 	id = more_soviet.3
@@ -439,20 +543,22 @@ country_event = {     #
 	desc = more_soviet.3.d
 	picture = GFX_report_event_soviet_purge_officers_01
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
-	trigger = {
-		tag = SOV
-		NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
-		focus_progress = {
-			focus = SOV_Great_Purge_will_fail
-			progress > 0.50
-		}
-	}
+	#fire_only_once = yes
+
+	#trigger = {
+		#tag = SOV
+		#NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
+		#focus_progress = {
+			#focus = SOV_Great_Purge_will_fail
+			#progress > 0.35
+		#}
+	#}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	#mean_time_to_happen = {
+		#days = 1
+	#}
 	
 	option = {
 		name = more_soviet.3.a
@@ -483,11 +589,8 @@ country_event = {     #
 
 		add_political_power = -100
 
-		custom_effect_tooltip = remove_political_advisor
-		show_ideas_tooltip = nikita_khrushchev
-		set_country_flag = arrest_khrushchev
 		hidden_effect = {
-			remove_ideas = nikita_khrushchev
+		    country_event = { id = more_soviet.4  days = 20 }
 		}
 
 	}
@@ -508,11 +611,8 @@ country_event = {     #
 
 		set_country_flag = SOV_Tukhachevski_coup
 
-		custom_effect_tooltip = remove_political_advisor
-		show_ideas_tooltip = nikita_khrushchev
-		set_country_flag = arrest_khrushchev
 		hidden_effect = {
-			remove_ideas = nikita_khrushchev
+		    country_event = { id = more_soviet.6  days = 2 }
 		}
 
 	}
@@ -524,21 +624,23 @@ country_event = {     #
 	desc = more_soviet.4.d
 	picture = GFX_report_event_soviet_purge_officers_02
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
-	trigger = {
-		tag = SOV
-		NOT = { has_country_flag = SOV_Tukhachevski_coup_win }
-		NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
-		focus_progress = {
-			focus = SOV_Great_Purge_will_fail
-			progress > 0.75
-		}
-	}
+	#fire_only_once = yes
+
+	#trigger = {
+		#tag = SOV
+		#NOT = { has_country_flag = SOV_Tukhachevski_coup_win }
+		#NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
+		#focus_progress = {
+			#focus = SOV_Great_Purge_will_fail
+			#progress > 0.70
+		#}
+	#}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	#mean_time_to_happen = {
+		#days = 1
+	#}
 	
 	option = {
 		name = more_soviet.4.a
@@ -550,16 +652,22 @@ country_event = {     #
 
 		set_country_flag = SOV_Purged_by_Stalin_flag
 
+		retire_character = SOV_mikhail_tukhachevsky
 		custom_effect_tooltip = remove_theorist
 		show_ideas_tooltip = mikhail_tukhachevsky
+
+		retire_character = SOV_aleksandr_yegorov
+		retire_character = SOV_vasily_blyukher
 		custom_effect_tooltip = remove_chief_of_army
 		show_ideas_tooltip = alexander_yegorov
 		show_ideas_tooltip = vasily_blucher
+
+		retire_character = SOV_pyotr_smirnov
+		retire_character = SOV_mikhail_frinovsky
 		custom_effect_tooltip = remove_chief_of_navy
 		show_ideas_tooltip = pyotr_smirnov
 		show_ideas_tooltip = mikhail_frinovsky
-		remove_unit_leader = 401 #mikhail_tukhachevsky, field marshal
-		remove_unit_leader = 3390 #
+
 		custom_effect_tooltip = soviet.27_tt
 		hidden_effect = {
 			remove_ideas = mikhail_tukhachevsky
@@ -569,9 +677,134 @@ country_event = {     #
 			remove_ideas = mikhail_frinovsky
 		}
 
+		UKR = { country_event = more_ukraine_dlc.1 }
+
 	}
 	
 }
+
+country_event = { # 没抓到亚基尔
+	id = more_soviet_dlc.4
+	title = more_soviet_dlc.4.t
+	desc = more_soviet_dlc.4.d
+	picture = GFX_report_event_soviet_purge_officers_02
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			news_event = { id = more_soviet_news_dlc.1 }
+		}
+	}
+
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = more_soviet_dlc.4.a
+
+		add_political_power = -25
+
+		retire_character = SOV_iona_yakir
+		retire_character = SOV_vitaly_primakov
+
+		hidden_effect = {
+            country_event = { id = more_soviet_dlc.5 days = 2 }
+			FRA = { country_event = { id = ukr_western.3  days = 7 } }
+			ENG = { country_event = { id = ukr_western.3  days = 7 } }
+			USA = { country_event = { id = ukr_western.3  days = 7 } }
+		}
+
+	}
+}
+
+news_event = { # 亚基尔爆料
+	id = more_soviet_news_dlc.1
+	title = more_soviet_news_dlc.1.t
+	desc = more_soviet_news_dlc.1.d
+	picture = GFX_news_event_journalists_speech
+
+	major = yes
+
+	is_triggered_only = yes
+
+	fire_for_sender = yes
+
+	option = {
+		name = more_soviet_news_dlc.1.a
+		trigger = {
+			tag = SOV
+		}
+
+		add_political_power = -50
+
+	}
+
+	option = {
+		name = more_soviet_news_dlc.1.b
+		trigger = {
+			tag = UKR
+		}
+	}
+
+	option ={
+		name = more_soviet_news_dlc.1.c
+		trigger = {
+			OR = {
+				tag = GER
+				tag = JAP
+				tag = POL
+				tag = RUS
+			}
+		}
+	}
+
+	option ={
+		name = more_soviet_news_dlc.1.f
+		trigger = {
+			NOT = {
+				OR = {
+					tag = SOV
+					tag = UKR
+					tag = GER
+					tag = JAP
+					tag = POL
+					tag = RUS
+				}
+			}
+		}
+	}
+}
+
+country_event = { # 密谋
+	id = more_soviet_dlc.5
+	title = more_soviet_dlc.5.t
+	desc = more_soviet_dlc.5.d
+	picture = GFX_report_event_RUS_savinkov2
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = more_soviet_dlc.5.a
+
+		add_political_power = -1
+
+	}
+
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		name = more_soviet_dlc.5.b
+
+
+	}
+
+}
+
 
 country_event = {
 	id = more_soviet.5
@@ -587,9 +820,58 @@ country_event = {
 		}
 		name = more_soviet.5.a
 
+		hidden_effect = {
+			country_event = more_soviet_dlc.6
+		}
+
+	}
+}
+
+country_event = { # 刺杀朱加什维利
+	id = more_soviet_dlc.6
+	title = more_soviet_dlc.6.t
+	desc = more_soviet_dlc.6.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.6.a
+
+		add_political_power = -1
+
+		add_manpower = -1
+
+		hidden_effect = {
+			country_event = more_soviet_dlc.7
+		}
+
+	}
+
+
+
+}
+
+country_event = { # 代理总书记叶若夫
+	id = more_soviet_dlc.7
+	title = more_soviet_dlc.7.t
+	desc = more_soviet_dlc.7.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.7.a
+
 		add_political_power = -100
 
-    	add_stability = -0.05
+    	add_stability = -0.1
 
     	kill_country_leader = yes
 
@@ -604,19 +886,674 @@ country_event = {
 			}
 			promote_leader = yes 
 		}
-		custom_effect_tooltip = remove_political_advisor
-		show_ideas_tooltip = SOV_lavrentiy_beria
-		set_country_flag = Beria_is_dead
+
 		hidden_effect = {
-			remove_ideas = SOV_lavrentiy_beria
-			
+			UKR = { country_event = { id = more_ukraine_dlc.3 days = 3 } }	 	
 		}
+
 		hidden_effect = {
 			news_event = { id = more_News.40  hours = 3 }
 		}
 
 	}
+
 }
+
+country_event = {     # 处决赫鲁晓夫
+	id = more_soviet_dlc.10
+	title = more_soviet_dlc.10.t
+	desc = more_soviet_dlc.10.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = more_soviet_dlc.10.a
+		ai_chance = {
+            base = 100
+		}
+
+
+		add_political_power = -1
+		retire_character = SOV_nikita_khrushchev
+
+	}
+	
+}
+
+country_event = { # 乌克兰的麻烦
+	id = more_soviet_dlc.13
+	title = more_soviet_dlc.13.t
+	desc = {
+		text = more_soviet_dlc.13.d1
+		trigger = {
+			SOV = {
+                NOT = { has_country_flag = purged_NKVD }
+			}
+		}
+	}
+	desc = {
+		text = more_soviet_dlc.13.d2
+		trigger = {
+			SOV = {
+                has_country_flag = purged_NKVD
+			}
+		}
+	}
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.13.a
+
+		add_political_power = -25
+
+		hidden_effect = {
+            UKR = { country_event = { id = more_ukraine_dlc.14 days = 1 } }
+		}
+
+		if = {
+			limit = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+			hidden_effect = {
+				country_event = { id = more_soviet_dlc.14 days = 7 }
+			}
+		}
+
+		if = {
+			limit = {
+                NOT = { has_country_flag = purged_NKVD }
+				NOT = {
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_nikolay_yezhov
+					}
+				}
+			}
+			hidden_effect = {
+				country_event = { id = more_soviet_dlc.15 days = 7 }
+			}
+		}
+
+	}
+
+}
+
+country_event = { # 捷尔任斯基的计中计
+	id = more_soviet_dlc.14
+	title = more_soviet_dlc.14.t
+	desc = more_soviet_dlc.14.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.14.a
+
+	}
+
+}
+
+country_event = { # 审查乌克兰军区
+	id = more_soviet_dlc.15
+	title = more_soviet_dlc.15.t
+	desc = more_soviet_dlc.15.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 75
+		}
+		name = more_soviet_dlc.15.a
+
+		add_political_power = -50
+
+		hidden_effect = {
+			country_event = more_soviet_dlc.16
+		}
+
+	}
+
+	option = {
+		ai_chance = {
+			base = 25
+		}
+		name = more_soviet_dlc.15.b
+
+
+	}
+
+}
+
+country_event = { # 贝利亚的请求
+	id = more_soviet_dlc.16
+	title = more_soviet_dlc.16.t
+	desc = more_soviet_dlc.16.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.16.a
+
+		hidden_effect = {
+			UKR = { country_event = { id = more_ukraine_dlc.15 days = 1 } }
+		}
+
+	}
+
+}
+
+country_event = { # 亚基尔的回电
+	id = more_soviet_dlc.17
+	title = more_soviet_dlc.17.t
+	desc = more_soviet_dlc.17.d
+	picture = GFX_report_event_RUS_moscow
+
+	is_triggered_only = yes
+
+	option = {
+		ai_chance = {
+			base = 100
+		}
+		name = more_soviet_dlc.17.a
+
+		UKR = { set_country_flag = UKR_censorship_army_flag }
+
+	}
+
+}
+
+country_event = { # 莫罗佐娃代表团
+	id = more_soviet_dlc.20
+	title = more_soviet_dlc.20.t
+	desc = more_soviet_dlc.20.d
+	picture = GFX_report_event_SOV_demands
+
+	is_triggered_only = yes
+
+	option = {
+		name = more_soviet_dlc.20.a
+
+		ai_chance = {
+			base = 99
+		}
+
+		GER = { country_event = { id = more_soviet_dlc.21 days = 1 } }
+
+	}
+
+	option = {
+		name = more_soviet_dlc.20.b
+
+		ai_chance = {
+			base = 1
+		}
+
+		GER = { country_event = { id = more_soviet_dlc.24 days = 1 } }
+
+		add_opinion_modifier = {
+			target = GER
+			modifier = embargo
+		}
+		add_opinion_modifier = {
+			target = GER
+			modifier = sanctions_relations
+		}
+		GER = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = embargo
+			}
+			add_opinion_modifier = {
+				target = SOV
+				modifier = sanctions_relations
+			}
+		}
+
+	}
+
+}
+
+# Soviet-German Trade Agreement - Event for GER
+country_event = {
+	id = more_soviet_dlc.21
+	title = more_soviet_dlc.21.t
+	desc = more_soviet_dlc.21.d
+	picture = GFX_report_event_SOV_demands
+
+	is_triggered_only = yes
+			
+	option = { # Accept -> This will also make GER more likely to take Molotov-Ribbentrop pact and less to take Anti-Soviet Pact
+		name = more_soviet_dlc.21.a
+
+		ai_chance = {
+			base = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+			modifier = {
+				factor = 10
+				has_war_with = ENG
+			}
+			modifier = {
+				factor = 0.1
+				has_completed_focus = GER_anti_comitern_pact
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_war_with = FROM
+					is_justifying_wargoal_against = FROM
+				}
+			}
+		}
+
+		add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 545 } #Technically 1 year but really 18 months for Soviet payment 
+		set_variable = { SOV_capital_for_soviet_imports = ROOT.capital } #Store capital where the dynamic modifier is set so that it can be removed easily later
+		capital_scope = {
+			add_dynamic_modifier = { modifier = SOV_soviet_imports }
+		}
+
+		#Effects to Soviets
+		effect_tooltip = {
+
+			FROM = {
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					if = {
+						limit = {
+							NOT = { has_tech = basic_ship_hull_cruiser }
+						}
+						set_technology = { basic_ship_hull_cruiser = 1 }
+					}
+					if = {
+						limit = {
+							NOT = { has_tech = basic_cruiser_armor_scheme }
+						}
+						set_technology = { basic_cruiser_armor_scheme = 1 }
+					}
+					if = {
+						limit = {
+							has_tech = basic_medium_battery
+						}
+						create_equipment_variant = {
+							name = "Hipper Class"
+							type = ship_hull_cruiser_2
+							name_group = SOV_CA_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_medium_battery_2
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = cruiser_ship_engine_1
+								fixed_ship_secondaries_slot = empty
+								fixed_ship_armor_slot = ship_armor_cruiser_2
+								front_1_custom_slot = ship_anti_air_1
+								mid_1_custom_slot = ship_torpedo_1
+								mid_2_custom_slot = ship_airplane_launcher_1
+								rear_1_custom_slot = ship_medium_battery_2
+							}
+						}
+					}
+					else = {
+						create_equipment_variant = {
+							name = "Hipper Class"
+							type = ship_hull_cruiser_2
+							name_group = SOV_CA_HISTORICAL
+							parent_version = 0
+							modules = {
+								fixed_ship_battery_slot = ship_medium_battery_1
+								fixed_ship_anti_air_slot = ship_anti_air_1
+								fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+								fixed_ship_radar_slot = empty
+								fixed_ship_engine_slot = cruiser_ship_engine_1
+								fixed_ship_secondaries_slot = empty
+								fixed_ship_armor_slot = ship_armor_cruiser_2
+								front_1_custom_slot = ship_anti_air_1
+								mid_1_custom_slot = ship_torpedo_1
+								mid_2_custom_slot = ship_airplane_launcher_1
+								rear_1_custom_slot = ship_medium_battery_1
+							}
+						}
+					}
+					
+					# CA: Lützow -> Petropavlovsk
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_cruiser_2
+							creator = "SOV"
+							version_name = "Hipper Class"
+						}
+						name = "Petropavlovsk"
+						requested_factories = 1
+						progress = 0.5
+						amount = 1
+					}
+
+					add_tech_bonus = {
+						name = more_soviet_dlc.21.t
+						bonus = 0.5
+						uses = 2
+						category = ship_modules_tech
+						category = bb_tech
+						category = dd_tech
+					}
+				}
+				else = { #No MTG
+					if = {
+						limit = {
+							NOT = { has_tech = basic_heavy_cruiser }
+						}
+						set_technology = { basic_heavy_cruiser = 1 }
+					}
+					create_equipment_variant = {
+						name = "Hipper Class"
+						type = heavy_cruiser_2
+						parent_version = 0
+						upgrades = {
+							ship_reliability_upgrade = 1
+							ship_engine_upgrade = 1
+							ship_armor_upgrade = 2
+							ship_gun_upgrade = 2
+						}
+					}
+
+					add_equipment_production = {
+						equipment = {
+							type = heavy_cruiser_2
+							creator = "SOV"
+						}
+						requested_factories = 1
+						progress = 0.5
+						amount = 1
+					}
+
+					add_tech_bonus = {
+						name = more_soviet_dlc.21.t
+						bonus = 0.5
+						uses = 2
+						category = ca_tech
+						category = bb_tech
+						category = dd_tech
+					}
+				}
+
+				add_tech_bonus = {
+					name = more_soviet_dlc.21.t
+					bonus = 1.0
+					uses = 1
+					category = armor
+					category = artillery
+				}
+
+				add_tech_bonus = {
+					name = more_soviet_dlc.21.t
+					bonus = 0.5
+					uses = 2
+					category = air_equipment
+				}
+			}
+		}
+
+		add_opinion_modifier = {
+			target = FROM
+			modifier = SOV_strengthened_relations_with_us
+		}
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_strengthened_relations_with_us
+			}
+		}
+		hidden_effect = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = SOV_strengthened_relations_with_us_trade
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_strengthened_relations_with_us_trade
+				}
+			}
+		}
+		FROM = { country_event = { id = more_soviet_dlc.22 hours = 1 } }
+	}
+
+	option = { # Refuse
+		name = more_soviet_dlc.21.b
+
+		ai_chance = {
+			base = 1
+		}
+
+		FROM = {
+			country_event = { id = more_soviet_dlc.23 hours = 1 }
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = SOV_rejected_our_demands
+			}
+		}
+	}
+}
+
+# Soviet-German Trade Agreement - GER Accepts - Event for SOV
+country_event = {
+	id = more_soviet_dlc.22
+	title = more_soviet_dlc.22.t
+	desc = more_soviet_dlc.22.desc
+	picture = GFX_report_event_molotov_ribentrop_handshake
+
+	is_triggered_only = yes
+			
+	option = { # Good
+		name = more_soviet_dlc.22.a
+
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = basic_ship_hull_cruiser }
+				}
+				set_technology = { basic_ship_hull_cruiser = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_tech = basic_cruiser_armor_scheme }
+				}
+				set_technology = { basic_cruiser_armor_scheme = 1 }
+			}
+			if = {
+				limit = {
+					has_tech = basic_medium_battery
+				}
+				create_equipment_variant = {
+					name = "Hipper Class"
+					type = ship_hull_cruiser_2
+					name_group = SOV_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_2
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_1
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = ship_armor_cruiser_2
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_torpedo_1
+						mid_2_custom_slot = ship_airplane_launcher_1
+						rear_1_custom_slot = ship_medium_battery_2
+					}
+				}
+			}
+			else = {
+				create_equipment_variant = {
+					name = "Hipper Class"
+					type = ship_hull_cruiser_2
+					name_group = SOV_CA_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_battery_slot = ship_medium_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_1
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = cruiser_ship_engine_1
+						fixed_ship_secondaries_slot = empty
+						fixed_ship_armor_slot = ship_armor_cruiser_2
+						front_1_custom_slot = ship_anti_air_1
+						mid_1_custom_slot = ship_torpedo_1
+						mid_2_custom_slot = ship_airplane_launcher_1
+						rear_1_custom_slot = ship_medium_battery_1
+					}
+				}
+			}
+			
+			# CA: Lützow -> Petropavlovsk
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_2
+					creator = "SOV"
+					version_name = "Hipper Class"
+				}
+				name = "Petropavlovsk"
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+
+			add_tech_bonus = {
+				name = more_soviet_dlc.21.t
+				bonus = 0.5
+				uses = 2
+				category = ship_modules_tech
+				category = bb_tech
+				category = dd_tech
+			}			
+		}
+		else = { #No MTG
+			if = {
+				limit = {
+					NOT = { has_tech = basic_heavy_cruiser }
+				}
+				set_technology = { basic_heavy_cruiser = 1 }
+			}
+			create_equipment_variant = {
+				name = "Hipper Class"
+				type = heavy_cruiser_2
+				parent_version = 0
+				upgrades = {
+					ship_reliability_upgrade = 1
+					ship_engine_upgrade = 1
+					ship_armor_upgrade = 2
+					ship_gun_upgrade = 2
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = heavy_cruiser_2
+					creator = "SOV"
+				}
+				requested_factories = 1
+				progress = 0.5
+				amount = 1
+			}
+
+			add_tech_bonus = {
+				name = more_soviet_dlc.21.t
+				bonus = 0.5
+				uses = 2
+				category = ca_tech
+				category = bb_tech
+				category = dd_tech
+			}
+		}
+
+		add_tech_bonus = {
+			name = more_soviet_dlc.21.t
+			bonus = 1.0
+			uses = 1
+			category = armor
+			category = artillery
+		}
+
+		add_tech_bonus = {
+			name = more_soviet_dlc.21.t
+			bonus = 0.5
+			uses = 2
+			category = air_equipment
+		}
+
+		#Effects to Germans
+		effect_tooltip = {
+			FROM = {
+				add_timed_idea = { idea = SOV_soviet_german_trade_agreement days = 545 } #Technically 1 year but really 18 months for Soviet payment 
+				capital_scope = {
+					add_dynamic_modifier = { modifier = SOV_soviet_imports }
+				}
+			}
+
+			add_opinion_modifier = {
+				target = FROM
+				modifier = SOV_strengthened_relations_with_us
+			}
+			FROM = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_strengthened_relations_with_us
+				}
+			}
+		}
+		hidden_effect = { news_event = { id = nsb_news.103 days = 1 } }
+	}
+}
+
+# Soviet-German Trade Agreement - GER Refuses - Event for SOV
+country_event = {
+	id = more_soviet_dlc.23
+	title = more_soviet_dlc.23.t
+	desc = more_soviet_dlc.23.desc
+	picture = GFX_report_event_SOV_demands
+
+	is_triggered_only = yes
+			
+	option = { # Damn
+		name = more_soviet_dlc.23.a
+
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = FROM
+				modifier = SOV_rejected_our_demands
+			}
+		}
+	}
+}
+
+
 
 country_event = {     # 
 	id = more_soviet.6
@@ -624,23 +1561,21 @@ country_event = {     #
 	desc = more_soviet.6.d
 	picture = GFX_report_event_soviet_soldiers
 
-	fire_only_once = yes
+	is_triggered_only = yes
 
-	trigger = {
-		tag = SOV
-		has_country_flag = SOV_Tukhachevski_coup
-		NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
-		focus_progress = {
-			focus = SOV_Great_Purge_will_fail
-			progress > 0.55
-		}
-	}
+	#trigger = {
+		#tag = SOV
+		#has_country_flag = SOV_Tukhachevski_coup
+		#NOT = { has_completed_focus = SOV_Great_Purge_will_fail }
+		#focus_progress = {
+			#focus = SOV_Great_Purge_will_fail
+			#progress > 0.55
+		#}
+	#}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	fire_only_once = yes
+	#mean_time_to_happen = {
+		#days = 1
+	#}
 
 	option = {
 		name = more_soviet.6.a
@@ -690,6 +1625,10 @@ country_event = {     #
 		}
 
 		add_political_power = -100
+
+		hidden_effect = {
+		    country_event = { id = more_soviet.4  days = 15 }
+		}
 
 	}
 	
@@ -754,34 +1693,47 @@ country_event = {     #
 	option = {
 		name = more_soviet.8.a
 		ai_chance = {
-      base = 50
+			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = BUKHARIN
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = BUKHARIN
+				}
 			}
 		}
 
 		add_political_power = 50
 
+		set_division_template_lock = {
+			division_template = "NKVD Pogranichnaya Diviziya"
+			is_locked = no
+		}
+
+		hidden_effect = {
+			country_event = { id = more_soviet_dlc.8 days = 30 }
+		}
 
 	}
 
 	option = {
 		name = more_soviet.8.b
 		ai_chance = {
-      base = 50
+            base = 50
 		}
 
 		set_country_flag = purged_NKVD
 
 		add_political_power = -100
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    remove_ideas = nkvd
+		remove_ideas = nkvd
+
+		delete_unit_template_and_units = { 
+			division_template = "NKVD Pogranichnaya Diviziya" 
+			disband = yes
+		}
 
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = SOV_lavrentiy_beria
@@ -789,6 +1741,82 @@ country_event = {     #
 		hidden_effect = {
 			remove_ideas = SOV_lavrentiy_beria
 		}
+
+	}
+	
+}
+
+country_event = {     # 神秘的捷尔任斯基
+	id = more_soviet_dlc.8
+	title = more_soviet_dlc.8.t
+	desc = more_soviet_dlc.8.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = more_soviet_dlc.8.a
+		ai_chance = {
+            base = 100
+		}
+
+		add_political_power = -5
+
+		hidden_effect = {
+			country_event = { id = more_soviet_dlc.9 days = 10 }
+		}
+
+	}
+	
+}
+
+country_event = {     # 认罪
+	id = more_soviet_dlc.9
+	title = more_soviet_dlc.9.t
+	desc = more_soviet_dlc.9.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = more_soviet_dlc.9.a
+		ai_chance = {
+            base = 100
+		}
+
+        custom_effect_tooltip = SOV_Yezhov_Dead_tt
+
+		add_political_power = -50
+
+		add_stability = -0.10
+
+		add_war_support = -0.10
+
+		hidden_effect = {
+
+		}
+
+	}
+	
+}
+
+country_event = {     # 审判
+	id = more_soviet_dlc.11
+	title = more_soviet_dlc.11.t
+	desc = more_soviet_dlc.11.d
+	picture = GFX_report_event_soviet_purge_officers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = more_soviet_dlc.11.a
+		ai_chance = {
+            base = 100
+		}
+
+
+		add_political_power = -1
+		retire_character = SOV_nikita_khrushchev
 
 	}
 	
@@ -986,7 +2014,30 @@ country_event = {     #
 country_event = {     #中亚叛乱 
 	id = more_soviet.12
 	title = more_soviet.12.t
-	desc = more_soviet.12.d
+	desc = {
+		text = more_soviet.12.d1
+		trigger = {
+			SOV = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+		}
+	}
+	desc = {
+		text = more_soviet.12.d2
+		trigger = {
+			NOT = {
+				SOV = {
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_nikolay_yezhov
+					}
+				}
+			}
+		}
+	}
 	picture = GFX_report_event_generic_riot
 
 	is_triggered_only = yes
@@ -994,7 +2045,7 @@ country_event = {     #中亚叛乱
 	option = {
 		name = more_soviet.12.a
 		ai_chance = {
-      base = 100
+            base = 100
 		}
 
 		if = {
@@ -1012,34 +2063,78 @@ country_event = {     #中亚叛乱
 
 		if = {
 			limit = {
-			  country_exists = KAZ
+			    country_exists = KAZ
 			}
 			SOV = {
-		    end_puppet = KAZ
+		        end_puppet = KAZ
 			}
 		}
 
-    KAZ = {
+		KAZ = {
 
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
+			if = {
+				limit = {
+					SOV = {
+						has_country_leader  = {
+							ruling_only  = yes 
+							character = SOV_nikolay_yezhov
+						}
+					}
+				}
+				set_politics = {
+					ruling_party = democratic
+					elections_allowed = yes
+				}
+				hidden_effect = {
+					 load_oob = "kaz_rebel_1936"
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = communism
+					elections_allowed = no
+				}
+				KAZ_Filipp_Goloshchyokin  = {
+					promote_character = yes
+					promote_character = yezhovism
+				}
+				hidden_effect = {
+					 load_oob = "kaz_rebel_1936"
+				}
 			}
 
 
-			KAZ_Filipp_Goloshchyokin  = {
-				promote_character = yes
-				promote_character = conservatism
-			  }
+		}
 
-      hidden_effect = {
-        load_oob = "kaz_rebel_1936"
-      }
-    }
+		if = {
+			limit = {
+				or = {
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_nikolay_yezhov
+					}
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_mikhail_tukhachevsky
+					}
+				}
+				NOT = { has_country_flag = SOV_Achieving_the_Enver_Plan_flag }
+			}
+			add_political_power = -35
+			hidden_effect = {
+		        country_event = more_soviet.15
+			}
+		}
+
 
 		hidden_effect = {
-      country_event = { id = more_soviet.15 days = 2 } 
+			country_event = { id = more_soviet.14 days = 15 } 
 		}
+
+		hidden_effect = {
+			news_event = { id = more_News.34 days = 7}
+		}
+
 
 	}
 	
@@ -1075,6 +2170,114 @@ country_event = {     #乌克兰叛乱
       add_ideas = UKR_independent_Army_idea
     }
 
+	    # 忠诚步骑
+		division_template = {
+			name = "Ukrainska Gornostrelkovaya Diviziya"		# Mountain Division
+			division_names_group = SOV_MNT_01
+
+			regiments = {
+				mountaineers = { x = 0 y = 0 }	
+				mountaineers = { x = 0 y = 1 }
+				mountaineers = { x = 0 y = 2 }	
+				mountaineers = { x = 1 y = 0 }
+				mountaineers = { x = 1 y = 1 }
+				mountaineers = { x = 1 y = 2 }
+				mountaineers = { x = 2 y = 0 }	
+				mountaineers = { x = 2 y = 1 }	
+				mountaineers = { x = 2 y = 2 }	
+				mountaineers = { x = 3 y = 0 }	
+				mountaineers = { x = 3 y = 1 }	
+				mountaineers = { x = 3 y = 2 }	
+			}
+			support = {
+				engineer = { x = 0 y = 0 } 		# Engineer bn
+				artillery = { x = 0 y = 1 } 	# Heavy Arty Regiment had 2x 122mm bn
+			}
+		}
+
+		division_template = {
+			name = "Ukrainska Kavaleriyskaya Diviziya"			
+			division_names_group = SOV_CAV_01
+
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+			}
+		}
+		load_oob = "SOV_UKR_army_cav"
+
+	    # 忠诚坦克
+		division_template = {
+			name = "Ukrainska Mekhanizirovaniy Korpus" 				
+			division_names_group = UKR_MEC_01
+																											
+			regiments = {
+				light_armor = { x = 0 y = 0 }
+				light_armor = { x = 0 y = 1 }
+				light_armor = { x = 1 y = 0 }		
+				light_armor = { x = 1 y = 1 }		
+				light_armor = { x = 1 y = 2 }		
+				motorized = { x = 2 y = 0 }		
+				motorized = { x = 2 y = 1 }	
+				motorized = { x = 2 y = 2 }		
+				motorized = { x = 2 y = 3 }		
+			}
+
+			support = {
+				mot_recon = { x = 0 y = 0 }
+				artillery = { x = 0 y = 1 }
+			}
+
+		}
+
+		if = {
+			limit = {
+				UKR = { has_country_flag = UKR_Iona_Yakir_survived_flag }	 	
+			}
+			hidden_effect = {
+				load_oob = "SOV_UKR_army_tank"
+				load_oob = "SOV_UKR_army_tank_half"
+			}
+			else_if = {
+				limit = {
+					has_country_flag = UKR_Iona_Yakir_killed_flag
+				}
+				hidden_effect = {
+					load_oob = "SOV_UKR_army_tank_half"
+				}
+			}
+		}
+
+	    # 忠诚NKVD
+		division_template = {
+			name = "NKVD Ukrainska Pogranichnaya Diviziya"		
+			division_names_group = SOV_GAR_01
+
+			regiments = {
+				infantry = { x = 0 y = 0 }	
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			support = 	{
+				military_police = { x = 0 y = 0 }
+			}
+			priority = 0
+		}
+
+		if = {
+			limit = {
+				NOT = { has_country_flag = purged_NKVD }	 	
+			}
+			hidden_effect = {
+				load_oob = "SOV_UKR_army_NKVD"
+			}
+		}
+
 		hidden_effect = {
       country_event = { id = more_soviet.12 days = 2 } 
 		}
@@ -1095,84 +2298,91 @@ country_event = {     #宣战
 	option = {
 		name = more_soviet.14.a
 		ai_chance = {
-      base = 100
+		    base = 100
 		}
 
 		remove_ideas = SOV_Legacy_of_the_Great_Famine
 
-    declare_war_on = {
-      target = UKR
-      type = annex_everything
-    }
+		declare_war_on = {
+			target = UKR
+			type = annex_everything
+		}
 
-    declare_war_on = {
-      target = KAZ
-      type = annex_everything
-    }
+		activate_mission = UKRRUS_SOV_special_military_operations
+		UKR = { activate_mission = UKRRUS_UKR_still_on_earth }
 
-    declare_war_on = {
-      target = TMS
-      type = annex_everything
-    }
+		declare_war_on = {
+			target = KAZ
+			type = annex_everything
+		}
+		KAZ = {
+			add_timed_idea = {
+				idea = SOV_Passion_for_fighting
+				days = 730
+			}
+		}
 
-		hidden_effect = {
-		  TUR = {
-        add_ai_strategy = {
-          type = support
-          id = "TMS"
-          value = 200
-        }
-		  }
-		  AFG = {
+		if = {
+			limit = {
+				country_exists = TMS	 	
+				TMS = { is_subject = no }
+			}
+			declare_war_on = {
+				target = TMS
+				type = annex_everything
+			}
 
-        add_timed_idea = {
-          idea = GER_anti_communist_volunteers_idea
-          days = 365
-        }
-        
-        add_ai_strategy = {
-          type = send_volunteers_desire
-          id = "TMS"
-          value = 200
-        }
-        add_ai_strategy = {
-          type = support
-          id = "TMS"
-          value = 200
-        }
-		  }
-		  TMS = {
-        add_timed_idea = {
-          idea = SOV_Passion_for_fighting
-          days = 730
-        }
+			hidden_effect = {
+				TUR = {
+						add_ai_strategy = {
+						type = support
+						id = "TMS"
+						value = 200
+					}
+				}
+				AFG = {
+					add_timed_idea = {
+						idea = GER_anti_communist_volunteers_idea
+						days = 365
+					}
 
-        declare_war_on = {
-          target = KAZ
-          type = annex_everything
-        }
-        declare_war_on = {
-          target = SOV
-          type = annex_everything
-        }
+					add_ai_strategy = {
+						type = send_volunteers_desire
+						id = "TMS"
+						value = 200
+					}
+					add_ai_strategy = {
+						type = support
+						id = "TMS"
+						value = 200
+					}
+				}
+				TMS = {
+					add_timed_idea = {
+						idea = SOV_Passion_for_fighting
+						days = 730
+					}
 
-		  }
-		  KAZ = {
-        add_timed_idea = {
-          idea = SOV_Passion_for_fighting
-          days = 730
-        }
-		  }
-		  UKR = {
-        add_timed_idea = {
-          idea = SOV_Passion_for_fighting
-          days = 730
-        }
-		  }
-			RUS = {
-				declare_war_on = {
-				  target = TMS
-				  type = annex_everything
+					declare_war_on = {
+						target = KAZ
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = SOV
+						type = annex_everything
+					}
+				}
+				UKR = {
+					add_timed_idea = {
+						idea = SOV_Passion_for_fighting
+						days = 730
+					}
+				}
+				RUS = {
+					declare_war_on = {
+					  target = TMS
+					  type = annex_everything
+					}
 				}
 			}
 		}
@@ -1192,8 +2402,10 @@ country_event = {     #中亚叛乱2
 	option = {
 		name = more_soviet.15.a
 		ai_chance = {
-      base = 100
+		    base = 100
 		}
+
+		retire_character = SOV_Ismail_Enver
 
 		if = {
 			limit = {
@@ -1215,66 +2427,66 @@ country_event = {     #中亚叛乱2
 			  country_exists = TMS
 			}
 			SOV = {
-		    end_puppet = TMS
+		        end_puppet = TMS
 			}
 		}
 
-    if = {
-      limit = {
-        country_exists = KYR
-      }
-      TMS = {
-        annex_country = { target = KYR transfer_troops = yes }
-      }
-    }
+		if = {
+			limit = {
+				country_exists = KYR
+			}
+			TMS = {
+				annex_country = { target = KYR transfer_troops = yes }
+			}
+		}
 
-    if = {
-      limit = {
-        country_exists = TAJ
-      }
-      TMS = {
-        annex_country = { target = TAJ transfer_troops = yes }
-      }
-    }
+		if = {
+			limit = {
+			    country_exists = TAJ
+			}
+			TMS = {
+			    annex_country = { target = TAJ transfer_troops = yes }
+			}
+		}
 
-    if = {
-      limit = {
-        country_exists = UZB
-      }
-      TMS = {
-        annex_country = { target = UZB transfer_troops = yes }
-      }
-    }
+		if = {
+			limit = {
+			    country_exists = UZB
+			}
+			TMS = {
+			    annex_country = { target = UZB transfer_troops = yes }
+			}
+		}
 
-    every_state = {
-      limit = {
-        is_core_of = KYR
-      }
-      add_core_of = TMS
-    }
+		every_state = {
+			limit = {
+			    is_core_of = KYR
+			}
+			add_core_of = TMS
+		}
 
-    every_state = {
-      limit = {
-        is_core_of = TAJ
-      }
-      add_core_of = TMS
-    }
+		every_state = {
+			limit = {
+			    is_core_of = TAJ
+			}
+			add_core_of = TMS
+		}
 
-    every_state = {
-      limit = {
-        is_core_of = UZB
-      }
-      add_core_of = TMS
-    }
+		every_state = {
+			limit = {
+			    is_core_of = UZB
+			}
+		    add_core_of = TMS
+		}
 
-    every_state = {
-      limit = { 
-        is_core_of = SIK 
-      }
-      add_claim_by = TMS
-    }
+		every_state = {
+			limit = { 
+			    is_core_of = SIK 
+			}
+			add_claim_by = TMS
+		}
 
-    TMS = {
+		TMS = {
 
 			set_politics = {
 				ruling_party = fascism
@@ -1282,36 +2494,29 @@ country_event = {     #中亚叛乱2
 			}
 
 			add_popularity = { 
-        ideology = fascism 
-        popularity = 0.75 
+				ideology = fascism 
+				popularity = 0.75 
 			}
 
-      create_country_leader = {
-        name = "Enver Passha"
-        desc = "POLITICS_ENVER_PASSHA_DESC"
-        picture = "Portrait_Enver_Passha.dds"
-        expire = "1953.3.1"
-        ideology = national_populist
-        traits = {
-         Pan_Turkism_Legend
-        }
-      }
+			create_country_leader = {
+				name = "Enver Passha"
+				desc = "POLITICS_ENVER_PASSHA_DESC"
+				picture = "gfx/leaders/TMS/Portrait_Enver_Passha.png"
+				expire = "1953.3.1"
+				ideology = national_populist
+				traits = {
+				    Pan_Turkism_Legend
+				}
+			}
 
 			add_ideas = SOV_Basmachi_idea
 
-	    set_cosmetic_tag = Enver_Greater_Turkestan
-      hidden_effect = {
-        load_oob = "Enver_1936"
-      }
-    }
-
-		hidden_effect = {
-      country_event = { id = more_soviet.14 days = 15 } 
+			set_cosmetic_tag = Enver_Greater_Turkestan
+			hidden_effect = {
+			    load_oob = "Enver_1936"
+			}
 		}
 
-		hidden_effect = {
-			news_event = { id = more_News.34 days = 1}
-		}
 
 	}
 	
@@ -1480,21 +2685,31 @@ country_event = {     #NKVD新任局长
 	
 	option = {
 		name = more_soviet.18.a
+
+		trigger = {
+            always = no
+		}
+
 		ai_chance = {
 			base = 30
 		}
 
-    set_country_flag = SOV_Enable_Sudoplatov_flag
+        set_country_flag = SOV_Enable_Sudoplatov_flag
 
 	}
 	
 	option = {
 		name = more_soviet.18.b
+
+		trigger = {
+            always = no
+		}
+
 		ai_chance = {
 			base = 30
 		}
 
-    set_country_flag = SOV_Enable_Makarova_flag
+        set_country_flag = SOV_Enable_Makarova_flag
 		
 	}
 	
@@ -1504,7 +2719,7 @@ country_event = {     #NKVD新任局长
 			base = 40
 		}
 
-    set_country_flag = SOV_Enable_Savinkov_flag
+        set_country_flag = SOV_Enable_Savinkov_flag
 
 	}
 	

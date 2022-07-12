@@ -36,33 +36,11 @@ leader_traits = {
 	HUN_Attila_T = { 
 		random = no
 		sprite = 5
-	
+
+		breakthrough_factor = 0.10	
 		army_speed_factor = 0.15
 		command_cap = 25
 		experience_gain_army = 0.12
-
-		equipment_bonus = {
-			armor = {
-				breakthrough = 0.15
-				instant = yes
-			}
-
-			mechanized_equipment = {
-				breakthrough = 0.15
-				instant = yes
-			}
-
-			motorized_equipment = {
-				breakthrough = 0.15
-				instant = yes
-			}
-
-			infantry_equipment = {
-				breakthrough = 0.15
-				instant = yes
-			}
-
-		}
 
 		ai_will_do = {
 			factor = 3

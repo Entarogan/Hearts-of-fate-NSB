@@ -4968,6 +4968,169 @@ country_event = {     # Britain: French refuses
 		ai_chance = {
 			factor = 100
 		}
+
+		clr_global_flag = ENG_invite_france_flag
+        
+	}
+  
+
+}
+
+country_event = {     # France: USA invite us to join faction: Emergency
+	id = lr_france.104
+	title = lr_france.104.t
+	desc = lr_france.104.d
+	picture = GFX_report_event_generic_cross_with_blood
+
+	is_triggered_only = yes
+	
+	option = {
+		name = lr_france.104.a
+		ai_chance = {
+			factor = 100
+		}
+
+		USA = { country_event = {id = lr_france.105 hours = 3 } }
+
+		USA = { 
+			add_ai_strategy = {
+				type = befriend
+				id = "FRA"
+				value = 200
+			}
+		}
+
+		if = {
+			limit = {
+				USA = { is_faction_leader = yes }
+			}
+			every_country = {
+				limit = {
+					is_in_faction_with = USA
+				}
+				FRA = {
+					add_to_faction = PREV
+				}
+			}
+		}
+
+		FRA = { 
+			add_to_faction = USA
+			add_ai_strategy = {
+				type = befriend
+				id = "USA"
+				value = 200
+			}
+		}
+
+		random_country = {
+			limit = {
+				is_faction_leader = yes
+				is_in_faction_with = USA
+			}
+			random_enemy_country = {
+				limit = {
+				    NOT = { has_war_with = USA }
+				}
+				USA = {
+					add_to_war = {
+						targeted_alliance = PREV.PREV
+						enemy = PREV
+						hostility_reason = asked_to_join
+					}
+				}
+			}
+		}
+
+	}
+	option = {
+		name = lr_france.104.b
+		ai_chance = {
+			factor = 0
+		}
+		USA = { country_event = {id = lr_france.106 hours = 3 } }
+	}  
+}
+
+
+country_event = {     # Britain: French join us
+	id = lr_france.105
+	title = lr_france.105.t
+	desc = lr_france.105.d
+	picture = GFX_report_event_generic_cross_with_blood
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {  
+		### OK
+		name = lr_france.105.a
+		ai_chance = {
+			factor = 100
+		}
+        effect_tooltip = {
+			if = {
+				limit = {
+					USA = { is_faction_leader = yes }
+				}
+				every_country = {
+					limit = {
+						is_in_faction_with = USA
+					}
+					FRA = {
+						add_to_faction = PREV
+					}
+				}
+			}
+			FRA = {
+				add_to_faction = USA
+			}
+			random_country = {
+				limit = {
+					is_faction_leader = yes
+					is_in_faction_with = USA
+				}
+				random_enemy_country = {
+					limit = {
+						NOT = { has_war_with = USA }
+					}
+					USA = {
+						add_to_war = {
+							targeted_alliance = PREV.PREV
+							enemy = PREV
+							hostility_reason = asked_to_join
+						}
+					}
+				}
+			}
+		}
+	}
+  
+
+}
+
+
+country_event = {     # Britain: French refuses
+	id = lr_france.106
+	title = lr_france.106.t
+	desc = lr_france.106.d
+	picture = GFX_report_event_generic_cross_with_blood
+
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {  
+		### Then die
+		name = lr_france.106.a
+		ai_chance = {
+			factor = 100
+		}
         
 	}
   

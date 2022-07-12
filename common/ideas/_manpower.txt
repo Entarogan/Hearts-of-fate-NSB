@@ -41,7 +41,7 @@ ideas = {
 			}
 
 			ai_will_do = {
-   				factor = 20
+   				factor = 1
 
    				modifier = {
 					factor = 60 # being disarmed is bad in a wargame yo
@@ -106,6 +106,20 @@ ideas = {
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = BUL
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = { has_idea = BUL_army_restrictions }
+				}
 			}
 
 			modifier = {
@@ -114,6 +128,11 @@ ideas = {
 
 			ai_will_do = {
    				factor = 20
+				modifier = {
+					# Ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 5000
+				}
 				modifier = {
 					#Prio if low on manpower
 					factor = 20
@@ -188,14 +207,40 @@ ideas = {
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = BUL
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = { has_idea = BUL_army_restrictions }
+				}
 			}
 
 			ai_will_do = {
    				factor = 20
 				modifier = {
+					# Ignore if high on manpower
+					factor = 0.5
+					manpower_per_military_factory > 3000
+				}
+
+				modifier = {
 					#Prio if low on manpower
 					factor = 20
 					manpower_per_military_factory <  800
+				}
+
+				modifier = {
+					tag = TUR
+					has_dlc = "Battle for the Bosporus"
+					factor = 50
 				}
 
 				modifier = { # china relies a lot on throwing bodies at the enemy
@@ -286,6 +331,20 @@ ideas = {
 						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = BUL
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 
@@ -398,6 +457,20 @@ ideas = {
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
 				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = BUL
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = { has_idea = BUL_army_restrictions }
+				}
 			}
 
 			ai_will_do = {
@@ -507,6 +580,20 @@ ideas = {
 						#has_completed_focus = ENG_concessions_to_the_trade_unions
 					}
 					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = BUL
+						has_dlc = "Battle for the Bosporus"
+					}
+					NOT = { has_idea = BUL_army_restrictions }
 				}
 			}
 

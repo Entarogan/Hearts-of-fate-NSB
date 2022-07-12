@@ -1,5 +1,705 @@
 ideas = {
 	country = {
+
+		SOV_the_road_of_life_ns = {
+			name = SOV_the_road_of_life
+
+			picture = SOV_the_road_of_life
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				winter_attrition_factor = -0.15
+				out_of_supply_factor = -0.1
+				supply_node_range = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_eng = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_fra = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_ger = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_ita = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_usa = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_capitalist_campaign_jap = { #Comes from Propaganda Campaign
+			name = SOV_anti_capitalist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = eng_tackle_capitalism
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_eng = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_fra = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_ger = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_ita = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_usa = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = USA
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_anti_fascist_campaign_jap = { #Comes from Propaganda Campaign
+			name = SOV_anti_fascist_campaign_generic
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = generic_fascism_banned
+
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		SOV_young_builders_of_communism = { #Comes from Propaganda Campaign
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			picture = socialist_science_focus
+
+			modifier = {
+				master_ideology_drift = 0.25
+				research_speed_factor = 0.01
+			}
+		}
+
+		SOV_broken_peace_dreams_attacker = { #Comes from Propaganda Campaign
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV #Every SOV suffers from this
+			}
+
+			picture = EST_democratic_opposition
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_factor = -0.15
+				war_stability_factor = -0.15
+			}
+		}
+
+		SOV_broken_peace_dreams_defender = { #Comes from Propaganda Campaign
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV #Every SOV suffers from this
+			}
+
+			picture = EST_democratic_opposition
+
+			modifier = {
+				stability_factor = -0.1
+				political_power_factor = -0.05
+				war_stability_factor = -0.05
+			}
+		}
+
+		SOV_desperate_measures_ns = {
+			name = SOV_desperate_measures
+
+			picture = tfv_can_conscription_crisis
+			
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				mobilization_speed = 0.25
+				minimum_training_level = -0.05
+				training_time_factor = -0.1
+			}
+		}
+
+		SOV_central_headquarters_of_the_partisan_movement = {
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				operation_boost_resistance_outcome = 0.15
+				operation_make_resistance_contacts_outcome = 0.15
+				target_sabotage_factor = 0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+			}
+		}
+
+		SOV_central_headquarters_of_the_partisan_movement_no_lar = {
+			name = SOV_central_headquarters_of_the_partisan_movement
+
+			removal_cost = -1
+
+			picture = MEX_politicised_army
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				subversive_activites_upkeep = -0.15
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+			}
+		}
+
+		SOV_soviet_german_trade_agreement = {
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			cancel = {
+				has_war_with = SOV
+			}
+
+			on_remove = {
+				var:SOV_capital_for_soviet_imports = { #This is where the German capital is stored and where Soviet Imports state modifier was added 
+					if = {
+						limit = {
+							has_dynamic_modifier = { modifier = SOV_soviet_imports }
+						}
+						remove_dynamic_modifier = { modifier = SOV_soviet_imports }
+					}
+				}
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		SOV_comecon_sov_default = {
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor  = -0.03
+			}
+		}
+
+		SOV_comecon_sov_industrialization = {
+			name = SOV_comecon_sov_default
+
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor  = 0.05
+			}
+		}
+
+		SOV_comecon_sov_military = {
+			name = SOV_comecon_sov_default
+
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				command_power_gain_mult  = -0.15
+			}
+		}
+
+		SOV_comecon_puppet_default = {
+			name = SOV_comecon_sov_default
+
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+				extra_trade_to_overlord_factor = 0.25
+				master_ideology_drift = 0.05
+				autonomy_gain_trade_factor = -0.75
+				autonomy_manpower_share = -1
+			}
+		}
+
+		SOV_comecon_puppet_industrialization = {
+			name = SOV_comecon_sov_default
+
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+				extra_trade_to_overlord_factor = 0.25
+				master_ideology_drift = 0.05
+				autonomy_gain_trade_factor = -0.75
+				autonomy_manpower_share = -1
+				production_speed_buildings_factor = 0.2
+			}
+		}
+
+		SOV_comecon_puppet_military = {
+			name = SOV_comecon_sov_default
+
+			picture = generic_flexible_foreign_policy
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				cic_to_overlord_factor = 0.5
+				mic_to_overlord_factor = 0.5
+				extra_trade_to_overlord_factor = 0.25
+				master_ideology_drift = 0.05
+				autonomy_gain_trade_factor = -0.75
+				autonomy_manpower_share = -1
+				experience_gain_army = 0.5
+				experience_gain_navy = 0.5
+				experience_gain_air = 0.5
+				command_power_gain = 0.1
+				training_time_factor = 0.1
+			}
+		}
+
+		SOV_expanded_exploitation_of_gold_mines = { #NS for Sinkiang, when prospecting for resources in Dzungaria and granting resource rights to SOV
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		SOV_military_advisors_in_spain = {
+			picture = SPR_nationalist_remnants
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				experience_gain_army = 0.1
+			}
+		}
+
+		SOV_soviet_advisors_spr = {
+			picture = saf_soviet_advisers
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				experience_gain_army = 0.1
+				communism_drift = 0.05
+			}
+		}	
+
+		SOV_defense_industry_1_idea = {
+
+			name = SOV_defense_industry_idea
+
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_man_five_year_plan_tank
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor -0.05
+			}
+		}
+
+		SOV_defense_industry_2_idea = {
+
+			name = SOV_defense_industry_idea
+
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_man_five_year_plan_tank
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor -0.05
+
+				production_speed_coastal_bunker_factor = 0.05
+				production_speed_bunker_factor = 0.05
+				max_dig_in_factor = 0.05
+			}
+		}	
+
+		SOV_Update_Assault_Gear_idea = {
+
+			allowed = {
+				original_tag = SOV
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+
+			available = {
+				has_war = no
+			}
+			
+			removal_cost = -1
+
+			picture = GFX_idea_man_five_year_plan_tank
+
+			research_bonus = {
+				armor = 0.15
+				artillery = 0.15
+				air_equipment = 0.15
+			}
+
+			modifier = {
+                line_change_production_efficiency_factor = 0.3
+
+				aircraft_manufacturer_cost_factor = -0.3
+				tank_manufacturer_cost_factor = -0.3
+				materiel_manufacturer_cost_factor = -0.3
+
+
+			}
+		}	
 	
 		SOV_Torgsin = {
 
@@ -22,19 +722,126 @@ ideas = {
 			}
 		}
 
-		SOV_Simplify_production_idea = {
+		SOV_Simplify_production_1_idea = {
 
 			available = {
-				SOV = { has_war = yes }
+				has_war = yes
 			}
 
 			allowed = {
-				original_tag = SOV
 				always = no
 			}
 
 			allowed_civil_war = {
-				has_government = communism
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+
+			equipment_bonus = {
+
+				infantry_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+					instant = yes 
+
+				}
+
+				support_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+
+					instant = yes 
+				}
+
+		    }
+
+		}
+
+		SOV_Simplify_production_4_idea = {
+
+			available = {
+				has_war = yes
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_artillery_regiments
+
+			equipment_bonus = {
+
+				infantry_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+					instant = yes 
+
+				}
+
+				support_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+
+					instant = yes 
+				}
+
+				artillery_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+					instant = yes 
+				}
+
+				anti_air_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+
+					instant = yes
+				}
+
+				anti_tank_equipment = {
+					build_cost_ic = -0.10 
+					reliability = -0.05
+
+					instant = yes
+				}
+
+		    }
+
+		}
+
+		SOV_Simplify_production_2_idea = {
+
+			available = {
+				has_war = yes
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
 			}
 			
 			removal_cost = -1
@@ -44,33 +851,55 @@ ideas = {
 			equipment_bonus = {
 
 				armor = {
-					reliability = -0.15 instant = yes
-					build_cost_ic = -0.30 
+					build_cost_ic = -0.15 
+					reliability = -0.1
+
+					instant = yes 
 				}
 
-				motorized_equipment = {
-						reliability = -0.15 instant = yes
-						build_cost_ic = -0.30
-				}
+		    }
+
+		}
+
+		SOV_Simplify_production_3_idea = {
+
+			available = {
+				has_war = yes
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = man_five_year_plan_air
+
+			equipment_bonus = {
 
 				fighter_equipment = {				
-					reliability = -0.15 instant = yes
-					build_cost_ic = -0.30
+					build_cost_ic = -0.15 
+					reliability = -0.1
+
+					instant = yes 
 				}
 
 				CAS_equipment = {
-					reliability = -0.15 instant = yes
-					build_cost_ic = -0.30 
+					build_cost_ic = -0.15 
+					reliability = -0.1
+
+					instant = yes 
 				}
 
-				infantry_equipment = {
-					reliability = -0.15 instant = yes
-					build_cost_ic = -0.30 
-				}
+				tac_bomber_equipment = {				
+					build_cost_ic = -0.1
+					reliability = -0.05
 
-				artillery_equipment = {
-					reliability = -0.15 instant = yes
-					build_cost_ic = -0.30 
+					instant = yes 
 				}
 
 		    }
@@ -337,7 +1166,7 @@ ideas = {
 				intelligence_agency_defense = 0.2
 				enemy_operative_capture_chance_factor = 0.2
 				subversive_activites_upkeep = -0.2
-			  resistance_damage_to_garrison = -0.20	
+				resistance_damage_to_garrison = -0.20	
 			}
 		}
 
@@ -358,8 +1187,8 @@ ideas = {
 				intelligence_agency_defense = 0.2
 				enemy_operative_capture_chance_factor = 0.2
 				subversive_activites_upkeep = -0.2
-				land_reinforce_rate = 0.10
-		    operative_slot = 1
+				land_reinforce_rate = 0.05
+				operative_slot = 1
 			}
 		}
 
@@ -381,7 +1210,7 @@ ideas = {
 				intelligence_agency_defense = 0.5
 				enemy_operative_capture_chance_factor = 0.3
 				subversive_activites_upkeep = -0.3
-			  resistance_damage_to_garrison = -0.30	
+				resistance_damage_to_garrison = -0.30	
 			}
 		}
 
@@ -403,11 +1232,51 @@ ideas = {
 				intelligence_agency_defense = 0.5
 				enemy_operative_capture_chance_factor = 0.3
 				subversive_activites_upkeep = -0.3
-			  resistance_damage_to_garrison = -0.30
-				land_reinforce_rate = 0.15
-		    operative_slot = 1
+				resistance_damage_to_garrison = -0.30
+				land_reinforce_rate = 0.1
+				operative_slot = 1
 			}
 		}
+
+		nkvd_5 = {
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+		
+			picture = nkvd_2
+		
+			modifier = {
+				intelligence_agency_defense = 0.1
+				enemy_operative_capture_chance_factor = 0.1
+				subversive_activites_upkeep = -0.1
+				land_reinforce_rate = 0.03
+				operative_slot = 1
+			}
+		}
+
+		SOV_smersh = {
+			name = SOV_smersh
+
+			picture = smersh
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				operative_slot = 1
+				intelligence_agency_defense = 0.5
+			}
+		}
+
 		
 		comintern_influence = {
 			
@@ -540,7 +1409,6 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
-		    surrender_limit = 0.10
 			}
 			rule = {
 				can_create_factions = yes
@@ -934,53 +1802,15 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_gain = -0.1
-				army_org_factor = 0.05
-				war_support_factor = 0.10
-				conscription = 0.03
-			}
+				political_power_cost = 0.25
+	            mobilization_speed = 0.50	
+				war_support_weekly = 0.002
 
-		}
-
-		SOV_great_patriotic_war_2 = {
-			removal_cost = -1
-
-			picture = generic_intel_bonus
-			
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			available = {
-			    has_country_flag = SOV_great_patriotic_war_start_flag
-			}
-
-			modifier = {
-				political_power_gain = -0.2
-				army_org_factor = 0.05
+             	army_org_factor = 0.05
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
-				resistance_growth_on_our_occupied_states = 0.15
-				war_support_factor = 0.10
-				conscription = 0.03
-			}
 
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-
-				}
-				support_equipment = {
-					build_cost_ic = -0.10
-					reliability = -0.05
-					instant = yes
-				}
+				conscription_factor = 0.2
 			}
 
 		}
@@ -1003,100 +1833,19 @@ ideas = {
 			}
 			
 			modifier = {
-				political_power_gain = -0.3
-				army_org_factor = 0.05
+				political_power_cost = 0.25
+	            mobilization_speed = 0.50	
+				war_support_weekly = 0.002
+
+             	army_org_factor = 0.05
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
-				resistance_growth_on_our_occupied_states = 0.15
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
-				war_support_factor = 0.15
-				conscription = 0.03
-			}
 
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-				}
-				support_equipment = {
-					build_cost_ic = -0.10
-					reliability = -0.05
-					instant = yes
-				}
-			}
+				supply_combat_penalties_on_core_factor = -0.2
 
-		}
+            	industrial_capacity_factory = 0.2
 
-		SOV_great_patriotic_war_4 = {
-			removal_cost = -1
-			
-			picture = generic_intel_bonus
-
-			allowed = {
-				always = no # Added via event
-			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-
-			available = {
-			    has_country_flag = SOV_great_patriotic_war_start_flag
-			}
-			
-			modifier = {
-				political_power_gain = -0.3
-				army_org_factor = 0.05
-				army_core_defence_factor = 0.05
-				army_core_attack_factor = 0.05
-				resistance_growth_on_our_occupied_states = 0.15
-				production_factory_max_efficiency_factor = 0.10
-				production_factory_efficiency_gain_factor = 0.10
-				war_support_factor = 0.15
-				conscription = 0.03
-			}
-
-			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-
-				}
-				support_equipment = {
-					build_cost_ic = -0.10
-					reliability = -0.05
-					instant = yes
-				}
-				artillery_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-				}
-				anti_air_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-
-					instant = yes
-				}
-				anti_tank_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-
-					instant = yes
-				}
-				armor = {
-					build_cost_ic = -0.15 
-					reliability = -0.05
-					instant = yes 
-				}
-				motorized_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-				}
+				conscription_factor = 0.2
 			}
 
 		}
@@ -1119,61 +1868,26 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_cost = 0.5
+	            mobilization_speed = 0.1	
+
 				stability_weekly = -0.002
 				war_support_weekly = -0.002
-				political_power_gain = -0.5
-				army_org_factor = 0.10
-				army_core_defence_factor = 0.10
-				army_core_attack_factor = 0.10
-				resistance_growth_on_our_occupied_states = 0.30
-				production_factory_max_efficiency_factor = 0.20
-				production_factory_efficiency_gain_factor = 0.20
-				production_factory_start_efficiency_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-				production_speed_industrial_complex_factor = -0.30
-				war_support_factor = 0.30
-				conscription = 0.05
+
+             	army_org_factor = 0.1
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+
+				supply_combat_penalties_on_core_factor = -0.4
+
+            	industrial_capacity_factory = 0.4
+
+				conscription_factor = 0.4
+
 			}
 
 			equipment_bonus = {
-				infantry_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
 
-				}
-				support_equipment = {
-					build_cost_ic = -0.10
-					reliability = -0.05
-					instant = yes
-				}
-				artillery_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-				}
-				anti_air_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-
-					instant = yes
-				}
-				anti_tank_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-
-					instant = yes
-				}
-				armor = {
-					build_cost_ic = -0.15 
-					reliability = -0.05
-					instant = yes 
-				}
-				motorized_equipment = {
-					build_cost_ic = -0.10 
-					reliability = -0.05
-					instant = yes 
-				}
 			}
 
 		}

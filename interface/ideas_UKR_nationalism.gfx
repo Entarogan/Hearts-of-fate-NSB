@@ -1,0 +1,113 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_generic_major_power"
+		texturefile = "gfx/interface/ideas/generic_major_power.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_workplace_democracy"
+		texturefile = "gfx/interface/ideas/HOL_workplace_democracy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_PAL_Balfour_Declaration"
+		texturefile = "gfx/interface/ideas/PAL_Balfour_Declaration.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_death_men"
+		texturefile = "gfx/interface/ideas/death_men.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_state_economy"
+		texturefile = "gfx/interface/ideas/state_economy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_coins"
+		texturefile = "gfx/interface/ideas/generic_coins.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_ukraine_flag_idea"
+		texturefile = "gfx/interface/ideas/UKR_ukraine_flag_idea.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_general_staff"
+		texturefile = "gfx/interface/ideas/general_staff.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_negotiating_with_extremists"
+		texturefile = "gfx/interface/ideas/HOL_negotiating_with_extremists.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CZE_Sugar_industry"
+		texturefile = "gfx/interface/ideas/CZE_Sugar_industry.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_government"
+		texturefile = "gfx/interface/ideas/generic_government.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_economic_control"
+		texturefile = "gfx/interface/ideas/economic_control_icon.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_army_cooperation"
+		texturefile = "gfx/interface/ideas/army_cooperation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_advisors_ukraine"
+		texturefile = "gfx/interface/ideas/advisors_ukraine.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ukr_splitted_country"
+		texturefile = "gfx/interface/ideas/idea_ukr_splitted_country.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_Oleksandr_Udovychenko"
+		texturefile = "gfx/interface/ideas/UKR_Oleksandr_Udovychenko.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_symon_petlura"
+		texturefile = "gfx/interface/ideas/UKR_symon_petlura.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_yevhen_konovalets"
+		texturefile = "gfx/interface/ideas/UKR_yevhen_konovalets.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_pavlo_skoropadskyi"
+		texturefile = "gfx/interface/ideas/UKR_pavlo_skoropadskyi.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_andriy_melnyk"
+		texturefile = "gfx/interface/ideas/UKR_andriy_melnyk.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_Roman_Shukhevych"
+		texturefile = "gfx/interface/ideas/UKR_Roman_Shukhevych.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_Philip_Kyva"
+		texturefile = "gfx/interface/ideas/UKR_Philip_Kyva.png"
+	}
+
+}

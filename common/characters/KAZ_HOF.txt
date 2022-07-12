@@ -1,17 +1,12 @@
 KAZ_Filipp_Goloshchyokin={
-		name="Filipp Goloshchyokin"
-		portraits={
-			civilian={
-				large="gfx/leaders/KAZ/Portrait_Filipp_Goloshchyokin.png"
-			}
-			army = {
-				large="gfx/leaders/KAZ/Portrait_Filipp_Goloshchyokin.png"
-				# small="GFX_idea_yakumo_yukari"
-			}
+	name="Filipp Goloshchyokin"
+	portraits={
+		civilian={
+			large="gfx/leaders/KAZ/Portrait_Filipp_Goloshchyokin.png"
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1989.1.1.1"
-			# id=-1
+		army = {
+			large="gfx/leaders/KAZ/Portrait_Filipp_Goloshchyokin.png"
+			# small="GFX_idea_yakumo_yukari"
 		}
 	}
+}

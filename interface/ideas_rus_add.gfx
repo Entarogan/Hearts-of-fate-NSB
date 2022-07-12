@@ -145,10 +145,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/RUS_redistribute_land_idea.dds"		
 	}
 	
+	SpriteType = {#Sour Loser
+		name = "GFX_idea_rus_sour_loser"
+		texturefile = "gfx/interface/ideas/idea_rus_sour_loser.png"		
+	}
+	
 	SpriteType = {#Okhrana
 		name = "GFX_intelligence_agency_logo_RUS"
 		texturefile = "gfx/interface/operatives/agencies/agency_logo_Okhrana.dds"		
 		noOfFrames = 2
 	}
-
 }

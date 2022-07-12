@@ -98,7 +98,7 @@ armored_SWE = {
 			
 			support = {
 				engineer = 1
-				light_tank_recon = 1
+				armored_car_recon = 1
 				logistics_company = 1
 				maintenance_company = 1
 				signal_company = 1
@@ -114,7 +114,7 @@ armored_SWE = {
 			medium_armor
 			mechanized
 			engineer
-			light_tank_recon
+			armored_car_recon
 			logistics_company
 			maintenance_company
 			signal_company
@@ -137,6 +137,10 @@ armored_SWE = {
 					has_tech = main_battle_tank_chassis
 				}
 			}
+		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
 		}
 		
 		target_width = 42.0
@@ -187,7 +191,7 @@ armored_SWE = {
 			
 			support = {
 				engineer = 1
-				light_tank_recon = 1
+				armored_car_recon = 1
 				logistics_company = 1
 				maintenance_company = 1
 				signal_company = 1
@@ -204,7 +208,7 @@ armored_SWE = {
 			modern_armor
 			mechanized
 			engineer
-			light_tank_recon
+			armored_car_recon
 			logistics_company
 			maintenance_company
 			signal_company

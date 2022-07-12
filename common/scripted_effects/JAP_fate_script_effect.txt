@@ -208,32 +208,26 @@ if = {
 JAP_kizuko_disbanded = {
 if = {
 	limit = {
-	has_idea = JAP_yakumo_yukari
+		has_idea = JAP_yakumo_yukari
 	}
-	swap_ideas = {
-	remove_idea = JAP_yakumo_yukari
-	add_idea = Non
-	}
+	remove_ideas = { JAP_yakumo_yukari }
+	add_ideas = { Non }
 }
 
 if = {
 	limit = {
-	has_idea = JAP_matara_okina
+		has_idea = JAP_matara_okina
 	}
-	swap_ideas = {
-	remove_idea = JAP_matara_okina
-	add_idea = Non
-	}
+	remove_ideas = { JAP_matara_okina }
+	add_ideas = { Non }
 }
 
 if = {
 	limit = {
-	has_idea = JAP_ibaraki_kasen
+		has_idea = JAP_ibaraki_kasen
 	}
-	swap_ideas = {
-	remove_idea = JAP_ibaraki_kasen
-	add_idea = Non
-	}
+	remove_ideas = { JAP_ibaraki_kasen }
+	add_ideas = { Non }
 }
 
 }

@@ -320,7 +320,7 @@ country_event = {     # USA 1940 General Election
 		}
 		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
 		add_country_leader_role = {
-			character = "usa_muesys"
+			character = "usa_muelsyse"
 			country_leader = {
 				ideology = liberalism
 				desc = "POLITICS_MUESYS_DESC"

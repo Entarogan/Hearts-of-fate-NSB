@@ -160,6 +160,10 @@ armored_USA= {
 				}
 			}
 		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
+		}
 		
 		target_width = 42.0
 		width_weight = 3.0
@@ -216,8 +220,7 @@ armored_USA= {
 			}
 			
 			regiments = {
-				modern_armor = 3
-				medium_armor = 3
+				modern_armor = 6
 				medium_sp_artillery_brigade = 2
 				medium_tank_destroyer_brigade = 2
         medium_sp_anti_air_brigade = 1
@@ -227,8 +230,7 @@ armored_USA= {
 		
 
 		allowed_types = {
-      modern_armor
-			medium_armor
+			modern_armor
 			medium_sp_artillery_brigade
 			medium_tank_destroyer_brigade
 			medium_sp_anti_air_brigade

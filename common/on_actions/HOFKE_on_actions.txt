@@ -4,8 +4,22 @@ on_actions = {
 			if = {
 				limit = {
 					is_ai = no #是玩家吧？
-					check_variable = { num_divisions > 500 } #师怎么这么多呀？
-					check_variable = { num_of_factories < 400 } #厂怎么这么少呀？
+					AND = {
+						date < 1938.1.2
+						check_variable = { num_divisions > 250 } #师怎么这么多呀？
+						check_variable = { num_of_factories < 200 } #厂怎么这么少呀？
+					}
+					AND = {
+						date > 1938.1.1
+						date < 1940.1.2
+						check_variable = { num_divisions > 350 } #师怎么这么多呀？
+						check_variable = { num_of_factories < 300 } #厂怎么这么少呀？
+					}
+					AND = {
+						date > 1940.1.1
+						check_variable = { num_divisions > 450 } #师怎么这么多呀？
+						check_variable = { num_of_factories < 400 } #厂怎么这么少呀？
+					}
 					stockpile_ratio = { archetype = infantry_equipment ratio < 0.3 } #装备缺口怎么这么大呀？
 					NOT = { has_idea = HOFKE_Knuckles } #真不是你？
 				}

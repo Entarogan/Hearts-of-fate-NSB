@@ -42,39 +42,6 @@ characters={
 		}
 	}
 
-	FIN_carl_mannerheim={
-		name=FIN_carl_mannerheim
-		portraits={
-			army={
-				large=GFX_portrait_FIN_carl_mannerheim
-				small="GFX_idea_carl_mannerheim"
-			}
-		}
-		advisor={
-			slot = army_chief
-			idea_token = FIN_carl_mannerheim
-			allowed = {
-				original_tag = FIN
-			}
-			traits = {
-				army_chief_defensive_3
-			}
-			cost = 200
-			ai_will_do = {
-				factor = 1.000
-			}
-		}	
-		field_marshal={
-			traits={ inflexible_strategist trait_cautious war_hero trickster winter_specialist defensive_doctrine }
-			skill=5
-			attack_skill=3
-			defense_skill=5
-			planning_skill=5
-			logistics_skill=3
-			legacy_id=58
-		}
-	}
-
 	FIN_erik_heinrichs={
 		name=FIN_erik_heinrichs
 		portraits={

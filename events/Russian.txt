@@ -4,6 +4,93 @@
 
 add_namespace = russian
 add_namespace = russian_flavour
+add_namespace = more_russia_dlc
+
+country_event = {
+	id = more_russia_dlc.1
+	title = more_russia_dlc.1.t
+	desc = {
+		text = more_russia_dlc.1.d1
+		trigger = {
+			SOV = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+		}
+	}
+	desc = {
+		text = more_russia_dlc.1.d2
+		trigger = {
+			NOT = {
+				SOV = {
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_nikolay_yezhov
+					}
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_RUS_siberia1
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {	
+		name = more_russia_dlc.1.a
+
+		trigger = {
+			SOV = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+		}
+
+		ai_chance = { 
+		    base = 40 
+		}
+
+		add_war_support = 0.05
+		
+	}
+
+	option = {	
+		name = more_russia_dlc.1.b
+
+		trigger = {
+			NOT = {
+				SOV = {
+					has_country_leader  = {
+						ruling_only  = yes 
+						character = SOV_nikolay_yezhov
+					}
+				}
+			}
+		}
+
+		ai_chance = { 
+		    base = 40 
+		}
+
+		add_war_support = 0.01
+		
+	}
+
+	option = {	
+		name = more_russia_dlc.1.c
+
+		ai_chance = { 
+		    base = 40 
+		}
+
+		
+	}
+	
+}
 
 country_event = {
 	id = russian.1
@@ -12,19 +99,19 @@ country_event = {
 	picture = GFX_report_event_RUS_siberia1
 	
 	fire_only_once = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 
-	mean_time_to_happen = {
-		days = 1
-	}
+	#mean_time_to_happen = {
+		#days = 1
+	#}
 
-	trigger = {
-		date > 1937.1.1
-		tag = RUS
-		is_subject = no
-        has_war = no
-        country_exists = SOV 
-	}	
+	#trigger = {
+		#date > 1937.1.1
+		#tag = RUS
+		#is_subject = no
+        #has_war = no
+        #country_exists = SOV 
+	#}	
 	
 	option = {	
 		name = russian.1.a
@@ -36,30 +123,41 @@ country_event = {
 			value = 200
 		}
 
-    every_state = {
-		limit = { 
-			is_core_of = SOV 
+		every_state = {
+			limit = { 
+				is_core_of = SOV 
+			}
+			add_core_of = RUS
 		}
-		add_core_of = RUS
-    }
 
-    declare_war_on = {
-      target = SOV
-      type = annex_everything
-    }
+		every_state = {
+			limit = { 
+				or = { 
+					is_core_of = SOV 
+					is_core_of = RUS 
+				}
+				NOT = { is_on_continent = europe }
+			}
+			add_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
+		}
 
-    complete_national_focus = rus_continue_the_civil_war
+		declare_war_on = {
+		  target = SOV
+		  type = annex_everything
+		}
 
-    add_timed_idea = {
-      days = 180
-      idea = RUS_Kick_open_the_door
-    }
+		complete_national_focus = rus_continue_the_civil_war
 
-    activate_mission = RUS_Across_the_Urals_mission
+		add_timed_idea = {
+		  days = 180
+		  idea = RUS_Kick_open_the_door
+		}
 
-    hidden_effect = {
-		  news_event = { id = russian.51 days = 2 }
-    }
+		activate_mission = RUS_Across_the_Urals_mission
+
+		hidden_effect = {
+			  news_event = { id = russian.51 days = 2 }
+		}
 		
 	}
 	
@@ -85,7 +183,7 @@ country_event = {   ### Talk with army
 	is_triggered_only = yes
 	option = {	
 		name = russian.2.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		add_political_power = -50
 
 		hidden_effect = {
@@ -99,7 +197,7 @@ country_event = {   ### Talk with army
   
 	option = {	
 		name = russian.2.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 
 		hidden_effect = {
 		set_variable = {
@@ -112,7 +210,7 @@ country_event = {   ### Talk with army
   
 	option = {	
 		name = russian.2.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 
 		hidden_effect = {
 			set_variable = {
@@ -145,7 +243,7 @@ country_event = {   ### Talk with Navy
 	is_triggered_only = yes
 	option = {	
 		name = russian.3.a
-		ai_chance = { base = 100 }
+		ai_chance = { base = 35 }
 		add_political_power = -50
 
 		hidden_effect = {
@@ -159,7 +257,7 @@ country_event = {   ### Talk with Navy
   
 	option = {	
 		name = russian.3.b
-		ai_chance = { base = 100 }
+		ai_chance = { base = 40 }
 
     hidden_effect = {
       set_variable = {
@@ -172,7 +270,7 @@ country_event = {   ### Talk with Navy
   
   option = {	
 		name = russian.3.c
-		ai_chance = { base = 100 }
+		ai_chance = { base = 25 }
 
 		hidden_effect = {
 		  set_variable = {
@@ -259,8 +357,8 @@ country_event = {   ### Anti-Tsarina Coup
   
 	option = {	
 		name = russian.5.a
-		ai_chance = { base = 70 }
-		retire_ideology_leader = neutrality
+		ai_chance = { base = 85 }
+		#retire_ideology_leader = neutrality
 		add_country_leader_role = {
 			character = "RUS_Provisional_Military_Government"
 			country_leader = {
@@ -287,7 +385,7 @@ country_event = {   ### Anti-Tsarina Coup
 
 	option = {	
 		name = russian.5.b
-		ai_chance = { base = 30 }
+		ai_chance = { base = 15 }
 
 		add_country_leader_role = {
 			character = "RUS_anastasia_i"
@@ -339,7 +437,7 @@ country_event = {   ### Select a leader for junta
 	is_triggered_only = yes
 	option = {	
 		name = russian.6.a  ## Kadoc 
-		ai_chance = { base = 25 }
+		ai_chance = { base = 20 }
 
 		add_country_leader_role = {
 			character = "RUS_kadoc_zemiupus"
@@ -380,7 +478,7 @@ country_event = {   ### Select a leader for junta
   
   option = {	
 		name = russian.6.c    ## Kornilov
-		ai_chance = { base = 25 }
+		ai_chance = { base = 30 }
     trigger = {
       check_variable = { ROOT.RUS_Army_Obedience < 0 }
     }
@@ -404,7 +502,7 @@ country_event = {   ### Select a leader for junta
   
 	option = {	
 		name = russian.6.e    ## Wranger
-		ai_chance = { base = 20 }
+		ai_chance = { base = 15 }
     trigger = {
 		check_variable = { ROOT.RUS_Army_Obedience < 1 }
 		check_variable = { ROOT.RUS_Navy_Obedience > -1 }
@@ -428,7 +526,7 @@ country_event = {   ### Select a leader for junta
   
 	option = {	
 		name = russian.6.f    ## Kolchack
-		ai_chance = { base = 20 }
+		ai_chance = { base = 10 }
 		trigger = {
 			check_variable = { ROOT.RUS_Navy_Obedience < 0 }
 		}
@@ -451,7 +549,7 @@ country_event = {   ### Select a leader for junta
 	
 	option = {	
 		name = russian.6.g    ## Zakhaev
-		ai_chance = { base = 15 }
+		ai_chance = { base = 10 }
 		trigger = {
 			has_completed_focus = rus_negotiation_with_democrats
 		}
@@ -1064,6 +1162,13 @@ country_event = {   ### Fall of USSR
 		}
 		country_event = { id = russian.24  days = 3 }
 		
+		every_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
+			}
+			remove_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
+		}
+
 		
     }
 }
@@ -1828,26 +1933,30 @@ country_event = {
 		RUS = { surrender_progress < 0.1 }
 		SOV = { exists = yes }
 		SOV = { is_puppet = no }
-    or = {
-      AND = {
-        or = {
-          SOV = { has_completed_focus = SOV_bloody_dwarf_is_in_power }  
-          SOV = { has_country_flag = SOV_Support_compulsory_collectivization_flag }  
-        }
-        SOV = { surrender_progress > 0.5 } 
-      }
-      AND = {
-        or = {
-          SOV = { has_completed_focus = SOV_Continue_military_control }  
-          SOV = { has_country_flag = SOV_Support_resource_collectivization_flag }  
-        }
-        SOV = { surrender_progress > 0.6 } 
-      }
-      AND = {
-        SOV = { has_completed_focus = SOV_Humane_communism }  
-        SOV = { surrender_progress > 0.7 } 
-      }
-    }
+		or = {
+			AND = {
+				RUS = { has_idea = RUS_SOV_For_victory_idea }
+				date > 1938.3.1
+			}
+			AND = {
+				or = {
+					SOV = { has_completed_focus = SOV_bloody_dwarf_is_in_power }  
+					SOV = { has_country_flag = SOV_Support_compulsory_collectivization_flag }  
+				}
+				SOV = { surrender_progress > 0.5 } 
+			}
+			AND = {
+				or = {
+					SOV = { has_completed_focus = SOV_Continue_military_control }  
+					SOV = { has_country_flag = SOV_Support_resource_collectivization_flag }  
+				}
+				SOV = { surrender_progress > 0.6 } 
+			}
+			AND = {
+				SOV = { has_completed_focus = SOV_Humane_communism }  
+				SOV = { surrender_progress > 0.7 } 
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1864,46 +1973,48 @@ country_event = {
 
 		add_political_power = 50
 
-    SOV = {
-      transfer_navy = { target = RUS }
-    }
+		SOV = {
+		    transfer_navy = { target = RUS }
+		}
 
-    annex_country = { target = SOV }
+		annex_country = { target = SOV }
 
-    if = {
-      limit = {
-        tag = UKR
-		    UKR = { exists = yes }
-		    UKR = { is_puppet = no } 
-      }
+		SIK = { remove_ideas = SOV_Focus_on_the_inside_idea }
+
+		if = {
+			limit = {
+				tag = UKR
+				UKR = { exists = yes }
+				UKR = { is_puppet = no } 
+			}
 			every_state = {
 				limit = {
-          is_core_of = UKR				
+				    is_core_of = UKR				
 				}
 				UKR = { transfer_state = PREV }
 			}
-    }	
+		}	
 
-    if = {
-      limit = {
-        tag = KAZ
-		    KAZ = { exists = yes }
-        or = {
-          KAZ = { is_puppet = no } 
-          KAZ = { is_subject_of = RUS } 
-        }
-      }
+		if = {
+			limit = {
+				tag = KAZ
+				KAZ = { exists = yes }
+				or = {
+					KAZ = { is_puppet = no } 
+					KAZ = { is_subject_of = RUS } 
+				}
+			}
 			every_state = {
 				limit = {
-          is_core_of = KAZ				
+				    is_core_of = KAZ				
 				}
 				KAZ = { transfer_state = PREV }
 			}
-    }	
+		}	
 
-    hidden_effect = {
-		  news_event = { id = rus_news.2 days = 2 }
-    }
+		hidden_effect = {
+			news_event = { id = rus_news.2 days = 2 }
+		}
 
 	}
 	
@@ -4343,19 +4454,18 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-    RUS = { is_puppet = no }
+		RUS = { is_puppet = no }
 		RUS = { has_war_with = SOV }
 		SOV = { exists = yes }
 		SOV = { is_puppet = no }
 		JAP = { exists = yes }
 		JAP = { is_puppet = no }
-    or = {
-      AND = {
-        RUS = { is_ai = yes } 
-        SOV = { is_ai = yes } 
-			  date > 1938.6.1	
-      }
-      AND = {
+		or = {
+			AND = {
+				SOV = { has_idea = RUS_SOV_For_victory_idea } 
+				date > 1938.6.1	
+			}
+			AND = {
 				OR = {
 					561 = {
 						is_controlled_by = RUS
@@ -4385,9 +4495,9 @@ country_event = {
 						}
 					}
 				}
-        SOV = { is_ai = no } 
-      }
-      AND = {
+				SOV = { is_ai = no } 
+			}
+			AND = {
 				OR = {
 					563 = {
 						is_controlled_by = RUS
@@ -4408,9 +4518,9 @@ country_event = {
 						}
 					}
 				}
-        SOV = { is_ai = yes } 
-      }
-    }
+				SOV = { is_ai = yes } 
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -4528,6 +4638,13 @@ country_event = {   ### JAP傀儡RUS
 			}
 
 			puppet = FROM
+		}
+
+		every_state = {
+			limit = {
+				has_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
+			}
+			remove_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
 		}
 
     hidden_effect = {

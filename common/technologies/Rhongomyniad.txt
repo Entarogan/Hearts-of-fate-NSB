@@ -29,17 +29,17 @@ technologies = {
 		}
 	}
   
-  concentrated_fire = {	
+    concentrated_fire = {	
 		research_cost = 1000
-    start_year = 3000
+        start_year = 3000
 		allow = {
 			always = no
 		}
-    doctrine = yes	
+        doctrine = yes	
 		mot_artillery_brigade = {
 			breakthrough = 0.10
 		}
-    category_artillery = { 
+		category_artillery = { 
 			breakthrough = 0.30
 		}
 		categories = {
@@ -47,13 +47,13 @@ technologies = {
 		}
 	}
   
-  Nightingale_act = {	
+    Nightingale_act = {	
 		research_cost = 1000
-    start_year = 3000
+        start_year = 3000
 		allow = {
 			always = no
 		}
-    doctrine = yes	
+        doctrine = yes	
 		engineer = {
 			casualty_trickleback = 0.010
 			experience_loss_factor = -0.010
@@ -63,53 +63,66 @@ technologies = {
 		}
 	}
   
-  ira_desert_tank = {	
+	ira_desert_tank = {	
 		research_cost = 1000
-    start_year = 3000
-    doctrine = yes	
-    
-    category_all_armor = { 
+		start_year = 3000
+
+		allow = {
+			always = no
+		}
+
+		doctrine = yes	
+
+		category_all_armor = { 
 			marsh = {
-        attack = 0.2
-        movement = 0.15
-      }
-      desert = {
-        attack = 0.2
-        movement = 0.15
-      }
+				attack = 0.2
+				movement = 0.15
+			}
+			desert = {
+				attack = 0.2
+				movement = 0.15
+			}
 		}
-   } 
+	} 
    
-   fra_desert_warfare = {	
+    fra_desert_warfare = {	
 		research_cost = 1000
-    start_year = 3000	
-    
-    category_all_armor = { 
-      desert = {
-        attack = 0.10
-        movement = 0.20
-      }
+		start_year = 3000	
+
+		allow = {
+			always = no
 		}
-    category_artillery = {
-      desert = {
-        attack = 0.10
-        movement = 0.20
-      }
-    }
+
+		category_all_armor = { 
+			desert = {
+				attack = 0.10
+				movement = 0.20
+			}
+		}
+		category_artillery = {
+			desert = {
+				attack = 0.10
+				movement = 0.20
+			}
+		}
    } 
     
-   ira_assyrian_siege_tanks = {	
+    ira_assyrian_siege_tanks = {	
 		research_cost = 1000
-    start_year = 3000
-    doctrine = yes	
-    
-    super_heavy_armor = { 
+		start_year = 3000
+		doctrine = yes	
+ 
+		allow = {
+			always = no
+		}
+ 
+		super_heavy_armor = { 
 			urban = {
-        attack = 0.5
-        defence = 0.20
-        movement = 0.15
-      }
-      max_organisation = 0.4
+				attack = 0.5
+				defence = 0.20
+				movement = 0.15
+			}
+			max_organisation = 0.4
 		}
 
 	}

@@ -81,8 +81,8 @@ focus_tree = {
 			is_subject = no
 		}
 		bypass = {
+			date > 1936.8.1
 			OR = {
-				date > 1936.8.1
 				has_idea = idea_jap_liberals
 				has_civil_war = yes
 			}
@@ -92,7 +92,7 @@ focus_tree = {
 			add_political_power = 100
 		}
 		ai_will_do = {
-			factor = 15
+			factor = 2500
 		}
 	}
 	focus = {
@@ -1310,7 +1310,7 @@ focus_tree = {
 	focus = {
 		id = JAP_Operation_Ketsugou
 		icon = GFX_focus_operation_ketsugou
-		cost = 5
+		cost = 1
 		prerequisite = {
 			focus = JAP_Chi_Ha_Tan
 			focus = JAP_strengthen_the_divine_wind
@@ -1325,54 +1325,30 @@ focus_tree = {
 				has_government = neutrality
 				has_government = fascism
 			}
-			OR = {
-				date > 1941.6.1
-				threat > 0.79
-			}
-			OR = {
-				has_government = neutrality
-				has_government = fascism
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes
 			}
 			OR = {
 				AND = {
-					enemies_naval_strength_ratio > 1.5
-					enemies_strength_ratio > 2.5
+					enemies_naval_strength_ratio > 3
+					enemies_strength_ratio > 2
 				}
-				OR = {
-					any_enemy_country = {
-						ic_ratio = {
-							tag = JAP
-							ratio > 2
-						}
+				any_enemy_country = {
+					strength_ratio = {
+						tag = JAP
+						ratio > 1
 					}
-					any_enemy_country = {
-						strength_ratio = {
-							tag = JAP
-							ratio > 2
-						}
-						naval_strength_ratio = {
-							tag = JAP
-							ratio > 1
-						}
+					naval_strength_ratio = {
+						tag = JAP
+						ratio > 2
 					}
 				}
 				any_owned_state = {
+				    is_on_continent = home_islands
 					is_core_of = ROOT
 					CONTROLLER = {
 						has_war_with = ROOT
-					}
-				}
-				all_state = {
-					OR = {
-						is_core_of = JAP
-						CONTROLLER = {
-							NOT = {
-								tag = ROOT
-							}
-							NOT = {
-								is_subject_of = ROOT
-							}
-						}
 					}
 				}
 			}
@@ -4095,7 +4071,7 @@ focus_tree = {
 	focus = {
 		id = JAP_intervene_in_china
 		icon = GFX_umc_goal_strike_china
-		cost = 8
+		cost = 10
 		prerequisite = {
 			focus = JAP_line_of_life
 		}
@@ -4106,7 +4082,6 @@ focus_tree = {
 		will_lead_to_war_with = BEY
 		will_lead_to_war_with = SHX
 		will_lead_to_war_with = GXC
-		will_lead_to_war_with = SIK
 		will_lead_to_war_with = YUN
 		will_lead_to_war_with = XSM
 		will_lead_to_war_with = GDC
@@ -4155,7 +4130,128 @@ focus_tree = {
 				has_completed_focus = JAP_non_aggression_pact_with_china
 			}
 		}
+
+		select_effect = {
+
+			add_ai_strategy = {
+				type = antagonize
+				id = "CHI"
+				value = 5000
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = "SOV"
+				value = 100
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = "MON"
+				value = 100
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = "RUS"
+				value = 100
+			}
+
+			add_ai_strategy = {
+				type = dont_defend_ally_borders
+				id = "RUS"
+				value = 400
+			}
+
+			610 = {
+				if = {
+					limit = { 
+						OR = { 
+							is_fully_controlled_by = ROOT
+							is_fully_controlled_by = MAN
+						}
+					}
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 9873
+						instant_build = yes
+					}
+				}
+			}
+
+			610 = {
+				if = {
+					limit = { 
+						OR = { 
+							is_fully_controlled_by = ROOT
+							is_fully_controlled_by = MAN
+						}
+					}
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = 4514
+						instant_build = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					OR = {
+						has_full_control_of_state = 610 #REHE
+						MAN = { has_full_control_of_state = 610 } #REHE
+					}
+				}
+				build_railway = {
+					path = { 4514 3828 11855 3881 9873 }
+				}
+			}
+
+			743 = { #
+				if = {
+					limit = { 
+						is_fully_controlled_by = ROOT 
+					}
+					add_building_construction = {
+						type = bunker
+						level = 4
+						province = {
+							id = 10000
+						}
+						instant_build = yes
+					}
+				}
+			}
+
+		}
+
 		completion_reward = {
+
+			add_ai_strategy = {
+				type = ignore
+				id = "SOV"
+				value = -100
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = "MON"
+				value = -100
+			}
+
+			add_ai_strategy = {
+				type = ignore
+				id = "RUS"
+				value = -100
+			}
+
+			add_ai_strategy = {
+				type = dont_defend_ally_borders
+				id = "RUS"
+				value = -400
+			}
 
 			if = {
 				limit = {
@@ -4243,6 +4339,7 @@ focus_tree = {
 			if = {
 				limit = {
 					country_exists = SIK
+                    NOT = { SIK = { is_guaranteed_by = SOV } }
 					NOT = {
 						SIK = {
 							has_war_with = JAP

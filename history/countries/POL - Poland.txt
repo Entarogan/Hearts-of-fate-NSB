@@ -110,6 +110,7 @@ if = {
 		#laws
 		limited_conscription
 		partial_economic_mobilisation
+		UKR_OUN_subversion_POL
 	}
 
 	oob = "POL_1939"
@@ -210,6 +211,7 @@ add_offsite_building = {
 add_ideas = {
     POL_cud_nad_wisla
     POL_militarism_focus
+	UKR_OUN_subversion_POL
 }
 
 1939.1.1 = {

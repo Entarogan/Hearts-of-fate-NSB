@@ -253,9 +253,12 @@ characters={
 	SOV_mikhail_tukhachevsky={
 		name=SOV_mikhail_tukhachevsky
 		portraits={
+			civilian = {
+				large = "gfx/leaders/SOV/Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
+			}
 			army = {
 				small = "GFX_idea_mikhail_tukhachevsky"
-				large = "gfx/leaders/SOV/Portraits_Soviet_Mikhail_Tukhachevsky_2.dds"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Mikhail_Tukhachevsky_2.png"
 			}
 		}
 		field_marshal={
@@ -388,7 +391,7 @@ characters={
 			planning_skill = 1
 			logistics_skill = 1
 			legacy_id = 0
-			#visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			#visible = { NOT = { has_character_flag = SOV_Purged_by_Stalin_flag } }
 		}
 	}
 	SOV_kirill_meretskov={
@@ -1926,7 +1929,7 @@ characters={
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = SOV_lev_kamenev
+			idea_token = SOV_nikola_bukharin
 			allowed = {
 				original_tag = SOV
 			}
@@ -1982,7 +1985,7 @@ characters={
 			planning_skill = 4
 			logistics_skill = 2
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			visible = { NOT = { has_character_flag = SOV_Purged_by_Stalin_flag } }
 		}	
 
 
@@ -2021,7 +2024,7 @@ characters={
 			planning_skill = 3
 			logistics_skill = 4
 			legacy_id = 0
-			visible = { NOT = { has_character_flag = SOV_exiled_flag } }
+			visible = { NOT = { has_character_flag = SOV_Purged_by_Stalin_flag } }
 		}
 	}
 
@@ -2455,6 +2458,71 @@ characters={
 	}
 
 
+	### primakov
+	SOV_vitaly_primakov={
+		name=SOV_vitaly_primakov
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_vasily_primakov.png"
+			}
+		}
+		corps_commander = {
+			traits = { cavalry_officer trait_reckless war_hero cavalry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			legacy_id = 0
+		}
+	}
+
+	### Ismail_Enver
+	SOV_Ismail_Enver={
+		name=SOV_Ismail_Enver
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_SOV_Enver_Passha.png"
+			}
+		}
+		corps_commander = {
+			traits = { politically_connected trait_reckless harsh_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 0
+		}
+	}
+
+	### Dmitry_Karbyshev
+	SOV_Dmitry_Karbyshev={
+		name=SOV_Dmitry_Karbyshev
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Dmitry_Karbyshev.png"
+			}
+		}
+		corps_commander = {
+			traits = { trait_engineer }
+			skill = 3
+			attack_skill = 1
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 2
+			legacy_id = 0
+		}
+	}
 
 	###
 	SOV_alexander_fyodorovich_kerensky={

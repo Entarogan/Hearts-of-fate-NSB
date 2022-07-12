@@ -2842,7 +2842,7 @@ focus_tree = {
             factor = 50
         }
         completion_reward = {
-             add_tech_bonus = {
+            add_tech_bonus = {
                 name = industrial_bonus
                 bonus = 1.0
                 uses = 2
@@ -4697,7 +4697,7 @@ focus_tree = {
 				bonus = 1.0
 				ahead_reduction = 2.5
 				uses = 2
-				category = anti_air
+				category = cat_anti_air
 			}
         }
 

@@ -6,26 +6,26 @@ RUS_historical_plan = {
 		original_tag = RUS
 	}
 	abort = {
-    date > 1938.1.1
+        date > 1937.1.1
 	}
 
 	ai_national_focuses = {
-    rus_unite_white_movement
-    rus_prepare_for_protraction
-    rus_siberian_headquarter
-    rus_siberian_cavalry
-    rus_russian_armor_corps
-    rus_local_militia_training
-    rus_lesson_from_the_great_war
+		rus_unite_white_movement
+		rus_prepare_for_protraction
+		rus_siberian_headquarter
+		rus_siberian_cavalry
+		rus_russian_armor_corps
+		rus_local_militia_training
+		rus_lesson_from_the_great_war
 
-    RUS_entente_observe_committee
-    rus_align_japan
-    rus_expand_japanese_advisory_group
-    rus_japanese_equipments
+		RUS_entente_observe_committee
+		#rus_align_japan
+		#rus_expand_japanese_advisory_group
+		#rus_japanese_equipments
 
-    rus_siberian_air_forces_headquarter
-    rus_bomber_production
-    rus_fighter_production
+		#rus_siberian_air_forces_headquarter
+		#rus_bomber_production
+		#rus_fighter_production
 	}
 
 	research = {

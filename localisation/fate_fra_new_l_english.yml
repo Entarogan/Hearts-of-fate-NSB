@@ -15,6 +15,7 @@
  FRA_jacques_doriot_adv:0 "Jacques Doriot"
  
  emperor:0 "Emperor"
+ FRA_French_Academy_of_Sciences_idea:0 "French Academy of Science"
  
  Offensive_supremacy:0 "Offensive Supremacy"
  
@@ -625,3 +626,18 @@
  engineer_support_battalion:0 "Brigade Engineer&Support Battalion"
  MCAB:0 "Mechanized Heavy CAB"
  MCRB:0 "Medium Cavalry Squadron"
+ 
+ lr_france.104.t:0 "[USA.GetName]'s invitation"
+ lr_france.104.d:0 "In our country's isolation, [USA.GetName] has not forgotten who helped them become independent back then, and the world's most powerful superpower is ready to fight alongside us."
+ lr_france.104.a:0 "Thanks to them!"
+ lr_france.104.b:0 "Europe is Europe for Europeans."  
+ 
+ lr_france.105.t:0 "They agreed"
+ lr_france.105.d:0 "Together we will face the threats of the free world."
+ lr_france.105.a:0 "They know what's right"
+ 
+ lr_france.106.t:0 "They refused"
+ lr_france.106.d:0 "Why so stupid..."
+ lr_france.106.a:0 "Forget it" 
+ 
+ ENG_invite_france_flag:0 "Anglo-French Alliance"

@@ -5,44 +5,39 @@ ideas = {
     
     JAP_Operation_Ketsugou = {
     
-      available = {
-        has_war = yes
-        is_subject = no
-      }
-      
-      allowed = {
-				original_tag = JAP
-				always = no
-			}
+		available = {
+			has_war = yes
+			is_subject = no
+		}
 
-			allowed_civil_war = {
-				NOT = { has_government = democratic }
-        NOT = { has_government = communism }
-			}
-			
-			removal_cost = -1
+		allowed = {
+			original_tag = JAP
+			always = no
+		}
 
-			picture = FRA_army_of_aggression_focus
-      
-      modifier = {
-				army_core_attack_factor = 0.15
-        army_core_defence_factor = 0.20
-        conscription = 0.05
-        consumer_goods_factor = -0.05
-        war_support_factor = 0.10
-				surrender_limit = 0.10
-			}
-			
-			equipment_bonus = {
-        suicide_craft_equipment = {
-          naval_strike_attack = 0.20
-          naval_strike_targetting = 0.20
-          reliability = 0.15
+		allowed_civil_war = {
+			NOT = { has_government = democratic }
+			NOT = { has_government = communism }
+		}
 
-          instant = yes
+		removal_cost = -1
 
-        }
-      }
+		picture = FRA_army_of_aggression_focus
+
+		modifier = {
+			army_core_attack_factor = 0.20
+			army_core_defence_factor = 0.20
+			resistance_growth_on_our_occupied_states = 0.25
+
+			naval_strike_attack_factor = 0.20
+			naval_strike_targetting_factor = 0.20
+
+			conscription_factor = 0.2
+
+			war_support_factor = 0.10
+			surrender_limit = 0.05
+		}
+
     }
     
     
@@ -896,9 +891,9 @@ ideas = {
 			
 			modifier = {
 				supply_consumption_factor = -0.10
-				out_of_supply_factor = -0.20
-				no_supply_grace = 48
-				acclimatization_cold_climate_gain_factor = 0.15
+				out_of_supply_factor = -0.10
+				no_supply_grace = 24
+				acclimatization_cold_climate_gain_factor = 0.25
 			}
 		}
 		

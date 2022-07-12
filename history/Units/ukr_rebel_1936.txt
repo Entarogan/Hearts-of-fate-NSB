@@ -41,9 +41,10 @@ units = {
 		}
 		location = 525
 		division_template = "Ukrainska Strelkovaya" 
-		start_experience_factor = 0.9
-		start_equipment_factor = 0.9
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -52,9 +53,10 @@ units = {
 		}
 		location = 525
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -63,9 +65,10 @@ units = {
 		}
 		location = 525
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -74,9 +77,10 @@ units = {
 		}
 		location = 525
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -85,9 +89,10 @@ units = {
 		}
 		location = 488
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -96,9 +101,10 @@ units = {
 		}
 		location = 488
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -107,9 +113,10 @@ units = {
 		}
 		location = 488
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -118,9 +125,10 @@ units = {
 		}
 		location = 488
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
 	division= {	
 		division_name = {    
@@ -129,76 +137,12 @@ units = {
 		}
 		location = 11437
 		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+		force_equipment_variants = { infantry_equipment_1 = { owner = "UKR" creator = "SOV" } }
+		force_equipment_variants = { artillery_equipment_1 = { owner = "UKR" creator = "SOV" } }
 	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 10
-		}
-		location = 11437
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
 
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 11
-		}
-		location = 11437
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 12
-		}
-		location = 6429
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 13
-		}
-		location = 6429
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 14
-		}
-		location = 6429
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 15
-		}
-		location = 6429
-		division_template = "Ukrainska Strelkovaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
 	division= {	
 		division_name = {    
 			is_name_ordered = yes
@@ -206,8 +150,9 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
 	division= {	
@@ -217,8 +162,9 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
 	division= {	
@@ -228,8 +174,9 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
 	division= {	
@@ -239,8 +186,9 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
 	division= {	
@@ -250,8 +198,9 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
 	division= {	
@@ -261,31 +210,11 @@ units = {
 		}
 		location = 6429
 		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
+		force_equipment_variants = { infantry_equipment_0 = { owner = "UKR" creator = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.85
 
 	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 7
-		}
-		location = 6429
-		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.7
-		start_equipment_factor = 0.7
 
-	}
-	division= {	
-		division_name = {    
-			is_name_ordered = yes
-			name_order = 8
-		}
-		location = 6429
-		division_template = "Ukrainska Kavaleriyskaya" 	
-		start_experience_factor = 0.6
-		start_equipment_factor = 0.6
-
-	}
 }
 

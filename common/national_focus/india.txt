@@ -1146,9 +1146,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = RAJ_two_nation_theory_effect
-			swap_ideas = {
-				add_idea = RAJ_marginalized_muslim_community_happy
-				remove_idea = RAJ_marginalized_muslim_community_angry
+			if = {
+				limit = {
+					has_idea = RAJ_marginalized_muslim_community_angry
+				}
+				swap_ideas = {
+					add_idea = RAJ_marginalized_muslim_community_happy
+					remove_idea = RAJ_marginalized_muslim_community_angry
+				}
+			}
+			else = {
+				swap_ideas = {
+					add_idea = RAJ_marginalized_muslim_community_happy
+					remove_idea = RAJ_marginalized_muslim_community
+				}
 			}
 		}
 	}

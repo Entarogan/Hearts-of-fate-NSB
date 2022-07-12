@@ -923,7 +923,7 @@ focus_tree = {
         }
         add_building_construction = {
           type = infrastructure
-          level = 3
+          level = 1
           instant_build = yes
         }
       }
@@ -941,7 +941,7 @@ focus_tree = {
         }
         add_building_construction = {
           type = infrastructure
-          level = 3
+          level = 1
           instant_build = yes
         }
       }
@@ -959,7 +959,7 @@ focus_tree = {
         }
         add_building_construction = {
           type = infrastructure
-          level = 3
+          level = 1
           instant_build = yes
         }
       }
@@ -1123,7 +1123,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 8
         add_building_construction = {
 					type = infrastructure
-					level = 5
+					level = 2
 					instant_build = yes
 				}
         add_building_construction = {
@@ -1581,7 +1581,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = infrastructure
-          level = 3
+          level = 1
           instant_build = yes
         }
         add_building_construction = {
@@ -1607,7 +1607,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = infrastructure
-          level = 3
+          level = 1
           instant_build = yes
         }
         add_building_construction = {
@@ -1874,7 +1874,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = infrastructure
-          level = 5
+          level = 2
           instant_build = yes
         }
         add_building_construction = {
@@ -1887,7 +1887,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = infrastructure
-          level = 5
+          level = 2
           instant_build = yes
         }
         add_building_construction = {
@@ -1900,7 +1900,7 @@ focus_tree = {
         add_extra_state_shared_building_slots = 2
         add_building_construction = {
           type = infrastructure
-          level = 5
+          level = 2
           instant_build = yes
         }
         add_building_construction = {
@@ -3148,14 +3148,7 @@ focus_tree = {
         ahead_reduction = 2.0
         category = armor
       } 
-      if = {
-        limit = {
-          is_ai = yes
-        }
-        set_technology = {
-          super_heavy_tank = 1
-        }
-      }
+
       add_ideas = { ira_assyrian_siege_tanks }
       set_technology = {
         ira_assyrian_siege_tanks = 1

@@ -1,0 +1,129 @@
+spriteTypes = {	
+	### UKR
+	spriteType = {
+		name = "GFX_idea_UKR_oun_subversion"
+		texturefile = "gfx/interface/ideas/UKR_oun_subversion.png"
+	}
+	# company
+	spriteType = {
+		name = "GFX_idea_UKR_mykolaiv_shipbuilding"
+		texturefile = "gfx/interface/ideas/UKR_mykolaiv_shipbuilding.png"
+	}
+    spriteType = {
+		name = "GFX_idea_UKR_kharkiv_aviation_plant"
+		texturefile = "gfx/interface/ideas/UKR_kharkiv_aviation_plant.png"
+	}
+	spriteType = {
+		name = "GFX_idea_UKR_antonov_ASTC"
+		texturefile = "gfx/interface/ideas/UKR_antonov_ASTC.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_AZST"
+		texturefile = "gfx/interface/ideas/UKR_AZST.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_dniper_HES"
+		texturefile = "gfx/interface/ideas/UKR_dniper_HES.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_RUS_kyiv_polytechnic_institute"
+		texturefile = "gfx/interface/ideas/RUS_kyiv_polytechnic_institute.png"
+	}
+	
+	###person
+	spriteType = {
+		name = "GFX_idea_UKR_semyon_zelensky"
+		texturefile = "gfx/interface/ideas/UKR_semyon_zelensky.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_isaac_babel"
+		texturefile = "gfx/interface/ideas/UKR_isaac_babel.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_dmytro_dontsov"
+		texturefile = "gfx/interface/ideas/UKR_dmytro_dontsov.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_UKR_stepan_petrichenko"
+		texturefile = "gfx/interface/ideas/UKR_stepan_petrichenko.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_idea_UKR_vladimir_vernadsky"
+		texturefile = "gfx/interface/ideas/UKR_vladimir_vernadsky.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_mykhailo_hrushevsky"
+		texturefile = "gfx/interface/ideas/UKR_mykhailo_hrushevsky.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_volodymyr_kubijovych"
+		texturefile = "gfx/interface/ideas/UKR_volodymyr_kubijovych.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_andriy_livytskyi"
+		texturefile = "gfx/interface/ideas/UKR_andriy_livytskyi.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_sviatoslav_shramchenko"
+		texturefile = "gfx/interface/ideas/UKR_sviatoslav_shramchenko.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_nikolai_pavlovich_sablin"
+		texturefile = "gfx/interface/ideas/UKR_nikolai_pavlovich_sablin.png"
+	}	
+
+	spriteType = {
+		name = "GFX_idea_UKR_petro_franko"
+		texturefile = "gfx/interface/ideas/UKR_petro_franko.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_viktor_pavlenko"
+		texturefile = "gfx/interface/ideas/UKR_viktor_pavlenko.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_vladimir_savchenko_belskii"
+		texturefile = "gfx/interface/ideas/UKR_vladimir_savchenko_belskii.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_andrew_pokrovskii"
+		texturefile = "gfx/interface/ideas/UKR_andrew_pokrovskii.png"
+	}	
+
+	########
+	spriteType = {
+		name = "GFX_idea_UKR_buldrokkastee"
+		texturefile = "gfx/interface/ideas/UKR_buldrokkastee.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_sasha_faust"
+		texturefile = "gfx/interface/ideas/UKR_sasha_faust.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_W"
+		texturefile = "gfx/interface/ideas/UKR_W.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_lyudmila_crownslayer"
+		texturefile = "gfx/interface/ideas/UKR_lyudmila_crownslayer.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_yelena_frostnova"
+		texturefile = "gfx/interface/ideas/UKR_yelena_frostnova.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_eno_mephisto"
+		texturefile = "gfx/interface/ideas/UKR_eno_mephisto.png"
+	}	
+	spriteType = {
+		name = "GFX_idea_UKR_alina"
+		texturefile = "gfx/interface/ideas/UKR_alina.png"
+	}	
+}

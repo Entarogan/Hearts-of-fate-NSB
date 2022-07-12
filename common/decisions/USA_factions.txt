@@ -2,7 +2,7 @@ USA_party_factions_decisions = {
 
     USA_Place_Holder = {
       icon = generic_army_support
-
+      allowed = { tag = USA }
       visible = {
         tag = USA
         always = yes

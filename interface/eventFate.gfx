@@ -1271,4 +1271,138 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/news_event_generic_darnic.png"
 	}
 
+	spriteType = {
+		name = "GFX_report_event_RUS_moscow"
+		texturefile = "gfx/event_pictures/report_event_RUS_moscow.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_RUS_savinkov2"
+		texturefile = "gfx/event_pictures/report_event_RUS_savinkov2.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_soviet_brezhnev_01"
+		texturefile = "gfx/event_pictures/report_event_soviet_brezhnev_01.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_soviet_brezhnev_02"
+		texturefile = "gfx/event_pictures/report_event_soviet_brezhnev_02.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_soviet_brezhnev_03"
+		texturefile = "gfx/event_pictures/report_event_soviet_brezhnev_03.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_soviet_brezhnev_04"
+		texturefile = "gfx/event_pictures/report_event_soviet_brezhnev_04.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ukr_roman_shukhevych_01"
+		texturefile = "gfx/event_pictures/report_event_ukr_roman_shukhevych_01.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ukr_roman_shukhevych_02"
+		texturefile = "gfx/event_pictures/report_event_ukr_roman_shukhevych_02.png"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_ukr_roman_shukhevych_03"
+		texturefile = "gfx/event_pictures/report_event_ukr_roman_shukhevych_03.png"
+	}
+	
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_alina_dead"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_alina_dead.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_frostnova_dead"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_frostnova_dead.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_generic_frostnova"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_generic_frostnova.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_generic_patroit"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_generic_patroit.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_generic_village_burning"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_generic_village_burning.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_patriot_and_frostnova"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_patriot_and_frostnova.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_reunion_camp"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_reunion_camp.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_talula_and_alina"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_talula_and_alina.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_talula_and_reunion"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_talula_and_reunion.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_talula_arguing"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_talula_arguing.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_talula_at_her_seat"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_talula_at_her_seat.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_talula_crying"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_talula_crying.png"
+	}
+	spriteType = {
+		name = "GFX_event_import"
+		texturefile = "gfx/event_pictures/event_import.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno_1"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno_1.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno_2"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno_2.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno_3"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno_3.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno_4"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno_4.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_UKR_anarchist_makhno_5"
+		texturefile = "gfx/event_pictures/report_event_UKR_anarchist_makhno_5.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_leo_harvey"
+		texturefile = "gfx/event_pictures/report_event_generic_leo_harvey.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_generic_muelsyse"
+		texturefile = "gfx/event_pictures/report_event_generic_muelsyse.png"
+	}
+	spriteType = {
+		name = "GFX_report_event_ukrainian_famine_hidden"
+		texturefile = "gfx/event_pictures/report_event_ukrainian_famine_hidden.png"
+	}
+
 }

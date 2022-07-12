@@ -345,6 +345,44 @@ country_event = {
 
 		set_country_flag = london_incident
 
+		if = {
+			limit = { has_military_access_to = ISR }
+			diplomatic_relation = {
+				country = ISR
+				relation = military_access
+				active = no
+			}
+		}
+
+		if = {
+			limit = { has_guaranteed = ISR }
+			diplomatic_relation = {
+				country = ISR
+				relation = guarantee
+				active = no
+			}
+		}
+
+		if = {
+			limit = { has_guaranteed = PER }
+			diplomatic_relation = {
+				country = PER
+				relation = guarantee
+				active = no
+			}
+		}
+
+		remove_resource_rights = 771
+		remove_resource_rights = 542
+		remove_resource_rights = 640
+		remove_resource_rights = 288
+		remove_resource_rights = 336
+		remove_resource_rights = 672
+		remove_resource_rights = 333
+		remove_resource_rights = 691
+		remove_resource_rights = 687
+		remove_resource_rights = 413
+
 		start_civil_war = {
 				ruling_party = fascism
 				ideology = democratic

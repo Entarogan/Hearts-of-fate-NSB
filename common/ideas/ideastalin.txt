@@ -2,6 +2,33 @@ ideas = {
 
     country = {
 
+		SOV_five_year_plan_idea = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				has_war = no
+			}
+			
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {	
+				production_speed_arms_factory_factor = 0.15
+	            industrial_capacity_factory = 0.15
+				research_speed_factor = 0.05
+
+				consumer_goods_factor = 0.05
+			}
+		}
+
 		SOV_Soviet_industrial_power_idea = {
 			removal_cost = -1
 			
@@ -277,20 +304,88 @@ ideas = {
 
 			removal_cost = -1
 
-		  picture = FRA_matignon_agreements
+			picture = FRA_matignon_agreements
 
-      modifier = {	
+			modifier = {	
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
+
+				army_attack_factor = -0.20
+				army_defence_factor = -0.20
+
 				send_volunteer_factor = -1
 				generate_wargoal_tension = 0.5
-			  guarantee_tension = 0.5
+				guarantee_tension = 0.5
 				guarantee_cost = 1
-        justify_war_goal_time = 10
+				justify_war_goal_time = 10
 				enemy_justify_war_goal_time = 10
-		    ai_get_ally_desire_factor = -100
-		    ai_join_ally_desire_factor = -50
+				ai_get_ally_desire_factor = -100
+				ai_join_ally_desire_factor = -50
 			}
 
-    }
+		}
+
+		SOV_lacking_industrialization = {
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = LIB_broken_center
+
+			modifier = {	
+				production_speed_buildings_factor = -0.3
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.15
+				local_resources_factor = -0.3
+			}
+
+			research_bonus = {
+				synth_resources = -0.75
+				electronics = -0.75
+				armor = -0.75
+				naval_equipment = -0.75
+				air_equipment = -0.75
+			}
+
+		}
+
+		SOV_lacking_industrialization_0 = {
+
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = LIB_broken_center
+
+			modifier = {	
+				production_speed_buildings_factor = -0.24
+				consumer_goods_factor = 0.05
+				research_speed_factor = -0.12
+				local_resources_factor = -0.24
+			}
+
+			research_bonus = {
+				synth_resources = -0.60
+				electronics = -0.60
+				armor = -0.60
+				naval_equipment = -0.60
+				air_equipment = -0.60
+			}
+
+		}
 
 		SOV_lacking_industrialization_1 = {
 
@@ -304,25 +399,24 @@ ideas = {
 
 			removal_cost = -1
 
-		   picture = LIB_broken_center
+			picture = LIB_broken_center
 
-      modifier = {	
+			modifier = {	
 				production_speed_buildings_factor = -0.20
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.10
 				local_resources_factor = -0.20
 			}
 
 			research_bonus = {
-				industry = -0.30
-				synth_resources = -0.30
+				synth_resources = -0.50
 				electronics = -0.50
 				armor = -0.50
 				naval_equipment = -0.50
 				air_equipment = -0.50
 			}
 
-    }
+		}
 
 		SOV_lacking_industrialization_2 = {
 
@@ -340,14 +434,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.18
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.09
 				local_resources_factor = -0.18
 			}
 
 			research_bonus = {
-				industry = -0.27
-				synth_resources = -0.27
+				synth_resources = -0.45
 				electronics = -0.45
 				armor = -0.45
 				naval_equipment = -0.45
@@ -372,14 +465,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.16
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.08
 				local_resources_factor = -0.16
 			}
 
 			research_bonus = {
-				industry = -0.24
-				synth_resources = -0.24
+				synth_resources = -0.40
 				electronics = -0.40
 				armor = -0.40
 				naval_equipment = -0.40
@@ -404,14 +496,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.14
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.07
 				local_resources_factor = -0.14
 			}
 
 			research_bonus = {
-				industry = -0.21
-				synth_resources = -0.21
+				synth_resources = -0.35
 				electronics = -0.35
 				armor = -0.35
 				naval_equipment = -0.35
@@ -436,14 +527,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.12
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.06
 				local_resources_factor = -0.12
 			}
 
 			research_bonus = {
-				industry = -0.18
-				synth_resources = -0.18
+				synth_resources = -0.30
 				electronics = -0.30
 				armor = -0.30
 				naval_equipment = -0.30
@@ -468,14 +558,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.10
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.05
 				local_resources_factor = -0.10
 			}
 
 			research_bonus = {
-				industry = -0.15
-				synth_resources = -0.15
+				synth_resources = -0.25
 				electronics = -0.25
 				armor = -0.25
 				naval_equipment = -0.25
@@ -500,14 +589,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.08
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.04
 				local_resources_factor = -0.08
 			}
 
 			research_bonus = {
-				industry = -0.12
-				synth_resources = -0.12
+				synth_resources = -0.20
 				electronics = -0.20
 				armor = -0.20
 				naval_equipment = -0.20
@@ -532,14 +620,13 @@ ideas = {
 
       modifier = {	
 				production_speed_buildings_factor = -0.06
-				consumer_goods_factor = 0.10
+				consumer_goods_factor = 0.05
 				research_speed_factor = -0.03
 				local_resources_factor = -0.06
 			}
 
 			research_bonus = {
-				industry = -0.09
-				synth_resources = -0.09
+				synth_resources = -0.15
 				electronics = -0.15
 				armor = -0.15
 				naval_equipment = -0.15
@@ -595,6 +682,8 @@ ideas = {
 				experience_gain_factor = -0.05
 
 				land_doctrine_cost_factor = 0.25
+
+				naval_invasion_capacity = -10
 			}
 
 			research_bonus = {
@@ -1171,11 +1260,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        stability_weekly = 0.001
-        war_support_weekly = 0.001
-        foreign_subversive_activites = -0.10
-        weekly_manpower = -1000
-        research_speed_factor = -0.03
+				stability_weekly = 0.001
+				foreign_subversive_activites = -0.10
+				weekly_manpower = -1000
+				research_speed_factor = -0.03
 			}
 
 		}
@@ -1195,11 +1283,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        stability_weekly = 0.002
-        war_support_weekly = 0.002
-        foreign_subversive_activites = -0.20
-        weekly_manpower = -2000
-        research_speed_factor = -0.05
+				stability_weekly = 0.002
+				foreign_subversive_activites = -0.20
+				weekly_manpower = -2000
+				research_speed_factor = -0.05
 			}
 
 		}
@@ -1219,11 +1306,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        stability_weekly = 0.003
-        war_support_weekly = 0.003
-        foreign_subversive_activites = -0.30
-        weekly_manpower = -3000
-        research_speed_factor = -0.07
+				stability_weekly = 0.003
+				foreign_subversive_activites = -0.30
+				weekly_manpower = -3000
+				research_speed_factor = -0.07
 			}
 
 		}
@@ -1243,11 +1329,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-        stability_weekly = 0.003
-        war_support_weekly = 0.003
-        foreign_subversive_activites = -0.30
-        weekly_manpower = -3000
-        research_speed_factor = -0.07
+				stability_weekly = 0.005
+				foreign_subversive_activites = -0.30
+				weekly_manpower = -3000
+				research_speed_factor = -0.07
 			}
 
 		}
@@ -1859,11 +1944,25 @@ ideas = {
 			picture = generic_infantry_bonus
 			
 			modifier = {
-		        army_artillery_attack_factor = 0.20
-				army_infantry_attack_factor = 0.20
-				army_infantry_defence_factor = 0.20
-				attrition = -0.15
-				supply_consumption_factor = -0.15	
+				max_dig_in = 5
+
+		        army_artillery_attack_factor = 0.15
+				army_infantry_attack_factor = 0.15
+				army_infantry_defence_factor = 0.15
+
+				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
+				motorized_attack_factor = 0.05
+				motorized_defence_factor = 0.10
+				mechanized_attack_factor = 0.05
+				mechanized_defence_factor = 0.10
+
+				special_forces_defence_factor = 0.10
+
+				attrition = -0.10
+				supply_consumption_factor = -0.10	
+
+				cas_damage_reduction = 0.10
 			}
 		
 		}
@@ -1909,8 +2008,9 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
+				recon_factor = 0.1
 				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
 			}
 		
 		}	
@@ -1930,20 +2030,14 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
 				army_armor_attack_factor = 0.10
+				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.05
 				mechanized_attack_factor = 0.10
 				mechanized_defence_factor = 0.05
-				army_speed_factor = 0.05
-			}
-
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.1
-					instant = yes
-				}
 			}
 		
 		}	
@@ -1963,20 +2057,24 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
-				army_armor_attack_factor = 0.20
-				motorized_attack_factor = 0.20
-				motorized_defence_factor = 0.10
-				mechanized_attack_factor = 0.20
-				mechanized_defence_factor = 0.10
 				army_speed_factor = 0.05
-			}
 
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.2
-					instant = yes
-				}
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.15
+				motorized_attack_factor = 0.15
+				motorized_defence_factor = 0.10
+				mechanized_attack_factor = 0.15
+				mechanized_defence_factor = 0.10
+
+		        army_artillery_attack_factor = 0.10
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.10
+
+				special_forces_attack_factor = 0.10
+
+				cas_damage_reduction = 0.10
 			}
 		
 		}	
@@ -1996,9 +2094,11 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
+				recon_factor = 0.1
 				army_armor_attack_factor = 0.15
-		    air_cas_present_factor = 0.05
+				army_armor_defence_factor = 0.10
+
+		        air_cas_present_factor = 0.05
 			}
 		
 		}	
@@ -2018,21 +2118,16 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
 				army_armor_attack_factor = 0.15
+				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.05
 				mechanized_attack_factor = 0.10
 				mechanized_defence_factor = 0.05
-				army_speed_factor = 0.05
-		    air_cas_present_factor = 0.10
-			}
 
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.1
-					instant = yes
-				}
+				air_cas_present_factor = 0.10
 			}
 		
 		}	
@@ -2052,30 +2147,34 @@ ideas = {
 			picture = generic_acquire_tanks
 			
 			modifier = {
-				army_armor_speed_factor = 0.10
-				army_armor_attack_factor = 0.25
-				motorized_attack_factor = 0.20
-				motorized_defence_factor = 0.10
-				mechanized_attack_factor = 0.20
-				mechanized_defence_factor = 0.10
-				army_speed_factor = 0.05
-		    air_cas_present_factor = 0.20
-			}
+				army_speed_factor = 0.1
 
-			equipment_bonus = {
-				armor = {
-					breakthrough = 0.2
-					instant = yes
-				}
+				breakthrough_factor = 0.1
+				recon_factor = 0.1
+				army_armor_attack_factor = 0.20
+				army_armor_defence_factor = 0.15
+				motorized_attack_factor = 0.15
+				motorized_defence_factor = 0.10
+				mechanized_attack_factor = 0.15
+				mechanized_defence_factor = 0.10
+
+		        army_artillery_attack_factor = 0.10
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.10
+
+				special_forces_attack_factor = 0.15
+
+		        air_cas_present_factor = 0.15
+				cas_damage_reduction = 0.15
 			}
 		
 		}	
 
 		SOV_Simplify_weapons_production_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2085,17 +2184,19 @@ ideas = {
 			allowed_civil_war = {
 				has_government = communism
 			}
-			
+
 			removal_cost = -1
 
 			picture = ast_volunteer_defence_corps
 
 			equipment_bonus = {
 
-			infantry_equipment = {
-				build_cost_ic = -0.15 instant = yes
-			    reliability = -0.05
-			}
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.10
+
+					instant = yes
+				}
 
 		    }
 
@@ -2165,9 +2266,9 @@ ideas = {
 
 		SOV_Tactical_Air_Force_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2183,17 +2284,17 @@ ideas = {
 			picture = air_support_focus
 
 			modifier = {		
-        army_bonus_air_superiority_factor = 0.10
-        air_cas_present_factor = 0.10
+				army_bonus_air_superiority_factor = 0.10
+				air_cas_present_factor = 0.15
 			}
 
 		}
 
 		SOV_Tactical_Air_Force_lesson_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2209,17 +2310,47 @@ ideas = {
 			picture = air_support_focus
 
 			modifier = {		
-        army_bonus_air_superiority_factor = 0.20
-        air_cas_present_factor = 0.20
+                air_superiority_efficiency = 0.10
+				army_bonus_air_superiority_factor = 0.15
+				air_cas_present_factor = 0.25
 			}
+
+			equipment_bonus = {
+
+				fighter_equipment = {				
+					air_range = 0.15
+
+					instant = yes
+				}
+
+				heavy_fighter_equipment = {				
+					build_cost_ic = -0.1
+
+					instant = yes
+				}
+
+				tac_bomber_equipment = {				
+					build_cost_ic = -0.1
+
+					instant = yes
+				}
+
+				strat_bomber_equipment = {
+
+					build_cost_ic = -0.1
+
+					instant = yes
+				}
+
+		    }
 
 		}
 
 		SOV_Tend_to_Strategic_Air_Force_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2235,35 +2366,35 @@ ideas = {
 			picture = strategic_bombing_focus
 
 			modifier = {		
-        air_superiority_efficiency = 0.10
+                air_superiority_efficiency = 0.10
 			}
 
 			equipment_bonus = {
 
-			fighter_equipment = {				
-				air_range = 0.15
-        
-        instant = yes
-			}
+				fighter_equipment = {				
+					air_range = 0.15
 
-			heavy_fighter_equipment = {				
-				air_range = 0.3
-        
-        instant = yes
-			}
+					instant = yes
+				}
 
-			tac_bomber_equipment = {				
-				air_range = 0.3
-        
-        instant = yes
-			}
+				heavy_fighter_equipment = {				
+					build_cost_ic = -0.1
 
-			strat_bomber_equipment = {
+					instant = yes
+				}
 
-				air_range = 0.3
-        
-        instant = yes
-			}
+				tac_bomber_equipment = {				
+					build_cost_ic = -0.1
+
+					instant = yes
+				}
+
+				strat_bomber_equipment = {
+
+					build_cost_ic = -0.1
+
+					instant = yes
+				}
 
 		    }
 
@@ -2271,9 +2402,9 @@ ideas = {
 
 		SOV_Tend_to_Strategic_Air_Force_lesson_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2289,35 +2420,37 @@ ideas = {
 			picture = strategic_bombing_focus
 
 			modifier = {		
-        air_superiority_efficiency = 0.20
+                air_superiority_efficiency = 0.15
+				army_bonus_air_superiority_factor = 0.10
+				air_cas_present_factor = 0.15
 			}
 
 			equipment_bonus = {
 
-			fighter_equipment = {				
-				air_range = 0.25
-        
-        instant = yes
-			}
+				fighter_equipment = {				
+					air_range = 0.3
 
-			heavy_fighter_equipment = {				
-				air_range = 0.5
-        
-        instant = yes
-			}
+					instant = yes
+				}
 
-			tac_bomber_equipment = {				
-				air_range = 0.5
-        
-        instant = yes
-			}
+				heavy_fighter_equipment = {				
+					build_cost_ic = -0.15
 
-			strat_bomber_equipment = {
+					instant = yes
+				}
 
-				air_range = 0.5
-        
-        instant = yes
-			}
+				tac_bomber_equipment = {				
+					build_cost_ic = -0.15
+
+					instant = yes
+				}
+
+				strat_bomber_equipment = {
+
+					build_cost_ic = -0.15
+
+					instant = yes
+				}
 
 		    }
 
@@ -2520,9 +2653,9 @@ ideas = {
 
 		SOV_katyusha_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2539,9 +2672,11 @@ ideas = {
 
 			equipment_bonus = {
 
-			motorized_rocket_equipment = {
-				build_cost_ic = -0.15 instant = yes
-			}
+				motorized_rocket_equipment = {
+					build_cost_ic = -0.2 
+					
+					instant = yes
+				}
 
 		    }
 
@@ -2549,9 +2684,9 @@ ideas = {
 
 		SOV_Expand_flight_school_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2567,16 +2702,19 @@ ideas = {
 			picture = generic_air_research
 
 			modifier = {
-		        air_ace_generation_chance_factor = 0.10            
+				experience_gain_air = 0.10
+				air_training_xp_gain_factor = 0.10           
+
+				air_doctrine_cost_factor = -0.10
 			}
 
 		}
 
 		SOV_Rule_the_sky_idea = {
 
-		available = {
+			available = {
 
-		}
+			}
 
 			allowed = {
 				original_tag = SOV
@@ -2592,8 +2730,14 @@ ideas = {
 			picture = generic_air_research
 
 			modifier = {
-				war_support_factor = 0.15
+				war_support_factor = 0.1
+
+				experience_gain_air = 0.10
+				air_training_xp_gain_factor = 0.10
+
 				air_ace_generation_chance_factor = 0.20         
+
+				air_doctrine_cost_factor = -0.10
 			}
 
 		}
@@ -2629,7 +2773,7 @@ ideas = {
 			}
 
 			available = { 
-        is_subject = no 
+                is_subject = no 
 			}
 
 			removal_cost = -1
@@ -2637,7 +2781,7 @@ ideas = {
 			picture = FRA_scw_intervention_nationalists_focus
 			
 			modifier = {
-		    surrender_limit = 1
+		        surrender_limit = 0.1
 			}
 
 			rule = {

@@ -14,9 +14,12 @@ characters = {
 			civilian = {
 				large = "gfx/leaders/SOV/Portrait_Soviet_Leon_Thotsky_2.png"
 			}
+			army={
+				large= "gfx/leaders/SOV/Portrait_Soviet_Leon_Thotsky_army.png"
+			}
 		}
 	}
-	SOV_enver_passha={
+	TMS_enver_passha={
 		name = "Enver Passha"
 		portraits={
 			civilian = {

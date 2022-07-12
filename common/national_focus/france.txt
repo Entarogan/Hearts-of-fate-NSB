@@ -4916,27 +4916,79 @@ country_event = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_Industrial_Renaissance_Act
-			ai_will_do = {
-					factor = 3000
-				}
-			available = {
+		ai_will_do = {
+			factor = 3000
+		}
+		available = {
 
-				}
+		}
 
-			bypass = {
-			  has_government = communism
-				}
+		bypass = {
+			has_government = communism
+		}
 
-			completion_reward = {
-					remove_ideas = FRA_Economic_recovery_idea
-					swap_ideas = {
-							remove_idea = FRA_National_Relief_Agency_idea
-							add_idea = FRA_Unemployment_compensation_idea
-						}
-					hidden_effect = {
-							set_global_flag = FRA_Out_of_the_darkness_flag
-						}
+		completion_reward = {
+			remove_ideas = FRA_Economic_recovery_idea
+			swap_ideas = {
+				remove_idea = FRA_National_Relief_Agency_idea
+				add_idea = FRA_Unemployment_compensation_idea
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
 				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}
+
+			random_owned_controlled_state = {
+				limit = { 
+					is_core_of = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}	
+			}
+
+			hidden_effect = {
+				set_global_flag = FRA_Out_of_the_darkness_flag
+			}
+		}
 
 	}
 	focus = {
@@ -5193,16 +5245,29 @@ country_event = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_National_Economic_Amendment_Act
-			ai_will_do = {
-					factor = 750
+		ai_will_do = {
+			factor = 750
+		}
+		completion_reward = {
+
+			if = {
+				limit = { 
+					has_government = fascism
+					NOT = { has_idea = closed_economy }
 				}
-			completion_reward = {
-					swap_ideas = {
-							remove_idea = export_focus
-							add_idea = closed_economy
-						}
-					add_ideas = FRA_Imperial_Economic_Regulations_idea
+				add_idea = closed_economy
+			}
+
+			if = {
+				limit = { 
+					has_government = neutrality
+					NOT = { has_idea = export_focus }
 				}
+				add_idea = export_focus
+			}
+
+			add_ideas = FRA_Imperial_Economic_Regulations_idea
+		}
 
 	}
 	focus = {
@@ -5708,14 +5773,15 @@ country_event = {
 		x = 1
 		y = 1
 		relative_position_id = FRA_Research_Assembly_line
-			ai_will_do = {
-					factor = 750
-				}
-			completion_reward = {
+		ai_will_do = {
+			factor = 750
+		}
+		completion_reward = {
 
+			add_ideas = FRA_French_Academy_of_Sciences_idea
 
-					add_research_slot = 1
-				}
+			add_research_slot = 1
+		}
 
 	}
 	focus = {
@@ -5799,6 +5865,19 @@ country_event = {
               }
 
           }
+
+					every_owned_state = {
+						limit = {
+							or = {
+								is_core_of = MOR
+								is_core_of = ALG
+								is_core_of = TUN
+							}
+							not = { is_core_of = ROOT }
+							not = { is_on_continent = europe }
+						}
+						add_compliance = 25
+					}
 
 					custom_effect_tooltip = FRA_North_African_industry_tt
 
@@ -9379,21 +9458,21 @@ country_event = {
 			focus = FRA_disband_bank_la_France
 		}
 
-			ai_will_do = {
-					factor = 2000
-				}
+		ai_will_do = {
+			factor = 2000
+		}
 
 		x = -1
 		y = 1
 		relative_position_id = FRA_disband_unions_by_force
-    completion_reward = {
+		completion_reward = {
 
-      add_timed_idea = {
-        idea = FRA_curtail_expenditure
-        days = 400
-      }
+			add_timed_idea = {
+				idea = FRA_curtail_expenditure
+				days = 400
+			}
 
-    }
+		}
 
 	}
 	focus = {
@@ -9410,27 +9489,27 @@ country_event = {
 			focus = FRA_attract_investment
 		}
 
-			ai_will_do = {
-					factor = 2000
-				}
+		ai_will_do = {
+			factor = 2000
+		}
 
 		x = 0
 		y = 1
 		relative_position_id = FRA_curtail_expenditure
 
-			bypass = {
-			  NOT = { has_idea = FRA_Economic_crisis_idea }
-				}
+		bypass = {
+		    NOT = { has_idea = FRA_Economic_crisis_idea }
+		}
 
-    completion_reward = {
-		add_political_power = 150
-		add_stability = 0.15
-      remove_ideas = { FRA_Economic_crisis_idea }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.25
+			remove_ideas = { FRA_Economic_crisis_idea }
 
-					hidden_effect = {
-							set_global_flag = FRA_Out_of_the_darkness_flag
-						}
-    }
+			hidden_effect = {
+			    set_global_flag = FRA_Out_of_the_darkness_flag
+			}
+		}
 
 	}
 	focus = {

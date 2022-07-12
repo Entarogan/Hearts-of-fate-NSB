@@ -1111,7 +1111,9 @@ country_event = {##八云紫贪污案
 			remove_ideas = { JAP_yasaka_kanako }
 		}
 		add_ideas = { Non JAP_osakabehime  }
-		remove_unit_leader = 8030
+		JAP_yakumo_yukari = {
+			remove_unit_leader_role = yes
+		}
 	}	
 	option = {##沙条爱歌伪造证据被发现了，被立刻逮捕，
 		name = rw_jap.9.b
@@ -2893,11 +2895,14 @@ country_event = {##清洗皇道派将领
 				}
 			}
 		}
-		remove_unit_leader = 8004
-		remove_unit_leader = 8009
-		remove_unit_leader = 8020
-		remove_unit_leader = 8014
-		remove_unit_leader = 8012
+		JAP_hijikato_toshizo = { remove_unit_leader_role = yes }
+		JAP_okita_souji = { remove_unit_leader_role = yes }
+		JAP_hinanawi_tenshi = { remove_unit_leader_role = yes }
+		hidden_effect = { 
+			remove_unit_leader = 8020
+		}
+		JAP_osakabehime = { remove_unit_leader_role = yes }
+		JAP_kiyohime = { remove_unit_leader_role = yes }
 		set_country_flag = jap_hijikato_toshizo_disabled
 		set_country_flag = jap_okita_souji_disabled
 		set_country_flag = jap_hinanawi_tenshi_disabled
@@ -2993,6 +2998,8 @@ country_event = {##清洗统制派、民主派贵族
 	}
 	option = {##
 		name = jap_purge.4.a
+		retire_character = JAP_kongou_mitsuko
+		retire_character = JAP_shiba_miyuki
 		if = {
 			limit = {  
 				has_idea = JAP_yakumo_yukari
@@ -3030,10 +3037,11 @@ country_event = {##清洗统制派、民主派贵族
 			remove_ideas = { JAP_komeiji_satori }
 		}
 		###移除将领
-		remove_unit_leader = 8030
+		JAP_yakumo_yukari = { remove_unit_leader_role = yes }
 		remove_unit_leader = 8036
-		remove_unit_leader = 8031
-		remove_unit_leader = 8019
+		JAP_yasaka_kanako = { remove_unit_leader_role = yes }
+		JAP_hijiri_byakuren = { remove_unit_leader_role = yes }
+		JAP_osakabehime = { remove_unit_leader_role = yes }
 		remove_unit_leader = 8028
 		remove_unit_leader = 8027
 		###移除顾问
@@ -3135,16 +3143,19 @@ country_event = {##清洗贵族
 		}
 		remove_ideas = { JAP_yakumo_yukari JAP_yakumo_ran_political_advisor  }
 		###移除将领
-		remove_unit_leader = 8030
+		JAP_yakumo_yukari = { remove_unit_leader_role = yes }
 		remove_unit_leader = 8036
-		remove_unit_leader = 8031
-		remove_unit_leader = 8019
+		JAP_yasaka_kanako = { remove_unit_leader_role = yes }
+		JAP_hijiri_byakuren = { remove_unit_leader_role = yes }
+		JAP_osakabehime = { remove_unit_leader_role = yes }
+		hidden_effect = {
+
+		}
 		remove_unit_leader = 8021
 		remove_unit_leader = 8028
 		remove_unit_leader = 8025
 		remove_unit_leader = 8020
 		remove_unit_leader = 8027
-		remove_unit_leader = 8012
 		###移除顾问
 		set_country_flag = jap_yukari_yakumo_disabled
 		set_country_flag = jap_ran_yakumo_disabled   ##八云蓝

@@ -157,6 +157,10 @@ armored_FRA = {
 				}
 			}
 		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
+		}
 		
 		target_width = 42.0
 		width_weight = 3.0
@@ -213,8 +217,7 @@ armored_FRA = {
 			}
 			
 			regiments = {
-				modern_armor = 3
-				medium_armor = 3
+				modern_armor = 6
 				medium_sp_artillery_brigade = 3
 			    mot_anti_air_brigade = 1
 				medium_tank_destroyer_brigade = 2
@@ -230,7 +233,6 @@ armored_FRA = {
 			maintenance_company
 			logistics_company
 			modern_armor
-			medium_armor
 			medium_sp_artillery_brigade
 			mot_anti_air_brigade
 			medium_tank_destroyer_brigade

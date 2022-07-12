@@ -21,9 +21,8 @@ country = {
 				mechanized_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
-				surrender_limit = 0.10
 
-				land_doctrine_cost_factor = -0.05
+				land_doctrine_cost_factor = -0.1
 			}
 			
 			research_bonus = {

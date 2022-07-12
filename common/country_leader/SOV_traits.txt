@@ -154,27 +154,19 @@ leader_traits = {
         
     	army_morale_factor = 0.05
 		equipment_bonus = {
-			rocket_artillery = {
-				soft_attack = 0.30
+			rocket_artillery_equipment = {
+				soft_attack = 0.25
 					instant = yes
 			}
-			rocket_artillery_brigade = {
-				soft_attack = 0.30
-					instant = yes
-			}
-			mot_rocket_artillery_brigade = {
-				soft_attack = 0.30
-					instant = yes
-			}
-			motorized_rocket_brigade = {
-				soft_attack = 0.30
+			motorized_rocket_equipment_1 = {
+				soft_attack = 0.25
 					instant = yes
 			}
 	    }
 		command_cap = 20
 		experience_gain_army = 0.12
 
-}
+    }
     
 	SOV_nonna_1 = {
 		random = no

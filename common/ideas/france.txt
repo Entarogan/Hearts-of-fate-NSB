@@ -235,8 +235,9 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				weekly_manpower = 500
-				consumer_goods_factor = -0.05
+				consumer_goods_factor = -0.03
+                production_speed_buildings_factor = 0.05
+				conscription_factor = 0.10
 			}
 		}
 		FRA_dirigisme = {

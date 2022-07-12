@@ -1457,7 +1457,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = if_they_accept
 			effect_tooltip = {
-				GER = {
+				GER = { 
 					if = {
 						limit = {
 							has_dlc = "Death or Dishonor"
@@ -1474,10 +1474,10 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = improved_light_tank
-								NOT = { has_tech = advanced_light_tank }
+												
 							}
 							create_production_license = {
 								target = MEX
@@ -1487,10 +1487,10 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = basic_light_tank
-								NOT = { has_tech = improved_light_tank }
+												
 							}
 							create_production_license = {
 								target = MEX
@@ -1512,10 +1512,10 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = improved_medium_tank
-								NOT = { has_tech = advanced_medium_tank }
+												 
 							}
 							create_production_license = {
 								target = MEX
@@ -1525,10 +1525,10 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = basic_medium_tank
-								NOT = { has_tech = improved_medium_tank }
+												 
 							}
 							create_production_license = {
 								target = MEX
@@ -1550,10 +1550,10 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = improved_heavy_tank
-								NOT = { has_tech = advanced_heavy_tank }
+												
 							}
 							create_production_license = {
 								target = MEX
@@ -1563,15 +1563,123 @@ focus_tree = {
 								cost_factor = 0
 							}
 						}
-						if = {
+						else_if = {
 							limit = {
 								has_tech = basic_heavy_tank
-								NOT = { has_tech = improved_heavy_tank }
+												
 							}
 							create_production_license = {
 								target = MEX
 								equipment = {
 									type = heavy_tank_equipment_1
+								}
+								cost_factor = 0
+							}
+						}
+						if = {
+							limit = {
+								has_tech = advanced_light_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = light_tank_chassis_3
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = improved_light_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = light_tank_chassis_2
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = basic_light_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = light_tank_chassis_1
+								}
+								cost_factor = 0
+							}
+						}
+						if = {
+							limit = {
+								has_tech = advanced_medium_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = medium_tank_chassis_3
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = improved_medium_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = medium_tank_chassis_2
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = basic_medium_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = medium_tank_chassis_1
+								}
+								cost_factor = 0
+							}
+						}
+						if = {
+							limit = {
+								has_tech = advanced_heavy_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = heavy_tank_chassis_3
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = improved_heavy_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = heavy_tank_chassis_2
+								}
+								cost_factor = 0
+							}
+						}
+						else_if = {
+							limit = {
+								has_tech = basic_heavy_tank_chassis
+							}
+							create_production_license = {
+								target = MEX
+								equipment = {
+									type = heavy_tank_chassis_1
 								}
 								cost_factor = 0
 							}
@@ -3902,29 +4010,6 @@ focus_tree = {
 			
 			if = {
 				limit = {
-					has_global_flag = flag_mexico_invited_trotsky_to_government
-					NOT = { has_global_flag = flag_trotsky_dead }
-					NOT = {
-						SOV = {
-							has_country_leader = { ruling_only = yes name = "Leon Trotsky" }
-						}
-					}
-				}
-				add_country_leader_role = {
-					character = MEX_leon_trotsky
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = leninism
-						traits = {
-							exiled_revolutionary
-						}
-					}
-					promote_leader = yes
-				}
-			}
-			
-			if = {
-				limit = {
 					NOT = {
 						has_government = communism
 					}
@@ -4160,37 +4245,62 @@ focus_tree = {
 				category = land_doctrine
 				category = air_doctrine
 			} 
-			every_other_country = {
+			if = {
 				limit = {
-					original_tag = SPR
-					has_government = fascism
+					NOT = { has_dlc = "La Resistance" }
+							 
 				}
-				ROOT = {
+				every_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = fascism
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = falangist_veterans_opinion
+						}
+					}
 					add_opinion_modifier = {
-						target = PREV
+						target = ROOT
 						modifier = falangist_veterans_opinion
 					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = falangist_veterans_opinion
+				every_other_country = {
+					limit = {
+						original_tag = SPA
+						has_government = fascism
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = falangist_veterans_opinion
+						}
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = falangist_veterans_opinion
+					}
 				}
 			}
-			every_other_country = {
+			if = {
 				limit = {
-					original_tag = SPA
-					has_government = fascism
+					has_dlc = "La Resistance"
 				}
-				ROOT = {
+				add_opinion_modifier = {
+					target = SPA
+					modifier = falangist_veterans_opinion
+				}
+				SPA = {
 					add_opinion_modifier = {
-						target = PREV
+						target = ROOT
 						modifier = falangist_veterans_opinion
 					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = falangist_veterans_opinion
-				}
+							
+				  
+										  
+	 
 			}
 			if = {
 				limit = {
@@ -4244,38 +4354,63 @@ focus_tree = {
 			
 			add_war_support = 0.05
 			add_stability = 0.05
-			
-			every_other_country = {
+   
+			if = {
 				limit = {
-					original_tag = SPR
-					has_government = communism
+					NOT = { has_dlc = "La Resistance" }
+							   
 				}
-				ROOT = {
+				every_other_country = {
+					limit = {
+						original_tag = SPR
+						has_government = communism
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = loyalist_spanish_government_support_opinion
+						}
+					}
 					add_opinion_modifier = {
-						target = PREV
+						target = ROOT
 						modifier = loyalist_spanish_government_support_opinion
 					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = loyalist_spanish_government_support_opinion
+				every_other_country = {
+					limit = {
+						original_tag = SPA
+						has_government = communism
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = loyalist_spanish_government_support_opinion
+						}
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = loyalist_spanish_government_support_opinion
+					}
 				}
 			}
-			every_other_country = {
+			if = {
 				limit = {
-					original_tag = SPA
-					has_government = communism
+					has_dlc = "La Resistance"
 				}
-				ROOT = {
+				add_opinion_modifier = {
+					target = SPD
+					modifier = loyalist_spanish_government_support_opinion
+				}
+				SPD = {
 					add_opinion_modifier = {
-						target = PREV
+						target = ROOT
 						modifier = loyalist_spanish_government_support_opinion
 					}
 				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = loyalist_spanish_government_support_opinion
-				}
+							
+				  
+														   
+	 
 			}
 			MEX_decrease_church_power = yes
 		}
@@ -6660,7 +6795,7 @@ focus_tree = {
 			}
 			add_doctrine_cost_reduction = {
 				name = air_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
 			}

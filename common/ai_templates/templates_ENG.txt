@@ -298,6 +298,10 @@ armor_ENG = {
 				has_tech = main_battle_tank
 			}
 		}
+
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
+		}
 		
 		target_width = 42
 		width_weight = 3.0
@@ -354,8 +358,7 @@ armor_ENG = {
 			}
 			
 			regiments = {
-				modern_armor = 3
-				medium_armor = 4
+				modern_armor = 7
 				medium_sp_artillery_brigade = 2
 				medium_tank_destroyer_brigade = 2
 				medium_sp_anti_air_brigade = 1
@@ -366,7 +369,6 @@ armor_ENG = {
 
 		allowed_types = {
 			modern_armor
-			medium_armor
 			medium_tank_destroyer_brigade
 			medium_sp_artillery_brigade
 			medium_sp_anti_air_brigade

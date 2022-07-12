@@ -257,6 +257,57 @@ spriteTypes = {
 		texturefile = "gfx/interface/technologies/Russia/RUS_super_heavy_tank.dds"
 	}
 
+
+	### Tanks nishabi
+	SpriteType = {
+		name = "GFX_RUS_basic_light_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_improved_light_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_advanced_light_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_light_tank_chassis_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_basic_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_improved_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_advanced_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_medium_tank_chassis_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_super_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_superheavy_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_main_battle_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_main_battle_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_amphibious_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/sov_amphibious_tank_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_basic_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_improved_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_RUS_advanced_heavy_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/SOV_heavy_tank_chassis_3.dds"
+	}
+
 	### Artillery
 	SpriteType = {
 		name = "GFX_RUS_rocket_artillery4_medium"

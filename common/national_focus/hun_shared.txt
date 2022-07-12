@@ -9449,7 +9449,7 @@
         name = HUN_Air_defense_array
         bonus = 1.0
         uses = 1
-        category = anti_air
+        category = cat_anti_air
       }	
 
 			if = {
@@ -11445,12 +11445,12 @@
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 
-      add_tech_bonus = {
-        name = ENG_anti_submarine_training_school
-        bonus = 1.0
-        uses = 2
-        category = convoy_defense_tree
-      }
+			add_doctrine_cost_reduction = {
+				name = HUN_Anti_submarine_fleet
+				cost_reduction = 0.35
+				uses = 2
+				category = convoy_defense_tree
+			}
 
 		}
 	}

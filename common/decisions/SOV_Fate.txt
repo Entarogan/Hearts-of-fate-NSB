@@ -1,3 +1,422 @@
+
+operations = {
+
+	SOV_Punish_traitors_severely_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_NKVD_div
+		}
+
+		cost = 25
+
+		visible = {
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = SOV_nikolay_yezhov
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = no
+
+		complete_effect = {
+            add_war_support = -0.025			
+		}
+
+		targeted_modifier = {
+
+		}
+		modifier = {
+			army_core_attack_factor = 0.10
+			army_core_defence_factor = 0.10
+			experience_loss_factor = 0.10
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Eliminate_internal_saboteurs_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_expend_NKVD
+		}
+
+		cost = 25
+
+		visible = {
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = SOV_nikolay_yezhov
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+		}
+
+		days_remove = 60
+		fire_only_once = no
+
+		complete_effect = {
+            add_stability = -0.025			
+		}
+
+		targeted_modifier = {
+
+		}
+		modifier = {
+			industrial_capacity_factory = 0.10
+			supply_consumption_factor = -0.10	
+
+			MONTHLY_POPULATION = -0.05
+			research_speed_factor = -0.05
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Give_priority_to_Ukraine_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_Reorganizing_the_Red_Army
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			NOT = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+			NOT = { has_country_flag = SOV_Give_priority_to_Russia_flag }
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SOV_Give_priority_to_Ukraine_flag
+			hidden_effect = {
+				add_command_power = -15
+			}		
+		}
+
+		targeted_modifier = {
+			tag = UKR
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.15
+		}
+		modifier = {
+
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Give_priority_to_Ukraine_RUS_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_Reorganizing_the_Red_Army
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			NOT = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+			has_country_flag = SOV_Give_priority_to_Ukraine_flag
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}		
+		}
+
+		targeted_modifier = {
+			tag = RUS
+			defense_bonus_against = 0.10
+		}
+		modifier = {
+
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Give_priority_to_Russia_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_Reorganizing_the_Red_Army
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			NOT = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+			NOT = { has_country_flag = SOV_Give_priority_to_Ukraine_flag }
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = SOV_Give_priority_to_Russia_flag
+			hidden_effect = {
+				add_command_power = -15
+			}		
+		}
+
+		targeted_modifier = {
+			tag = RUS
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.15
+		}
+		modifier = {
+
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Give_priority_to_Russia_UKR_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_Reorganizing_the_Red_Army
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			NOT = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = SOV_nikolay_yezhov
+				}
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+			has_country_flag = SOV_Give_priority_to_Russia_flag
+		}
+
+		days_remove = 120
+		fire_only_once = yes
+
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}		
+		}
+
+		targeted_modifier = {
+			tag = UKR
+			defense_bonus_against = 0.10
+		}
+		modifier = {
+
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SOV_Trotsky_train_decisions = {
+
+		icon = generic_operation
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_Reorganizing_the_Red_Army
+			has_equipment = { train_equipment > 10 } 
+		}
+
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		visible = {
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = SOV_lev_trotsky
+			}
+			is_subject = no 
+			NOT = { has_completed_focus = SOV_finish_five_year_plan }
+			or = {
+				has_war_with = RUS
+				has_war_with = UKR
+			}
+		}
+
+		days_remove = 730
+		fire_only_once = yes
+
+		complete_effect = {
+
+			add_field_marshal_role = {
+				character = SOV_lev_trotsky
+				traits = { media_personality harsh_leader reckless organizer brilliant_strategist }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 4
+				logistics_skill = 3
+			}
+
+			hidden_effect = {
+				add_command_power = -15
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = -10
+					producer = SOV
+				}
+			}		
+		}
+
+		targeted_modifier = {
+
+		}
+		modifier = {
+			planning_speed = 0.25
+			max_planning = 0.10
+			army_morale_factor = 0.10
+			land_reinforce_rate = 0.03
+		}
+
+		remove_effect = {
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+}
+
 SOV_Export_revolution_decisions = {
 
 	SOV_Liberate_Scandinavia_decisions = {
@@ -2632,6 +3051,71 @@ SOV_War_plan_decisions = {
 		timeout_effect = {
 
 		}
+	}
+
+	UKR_Rebuilding_order_in_Ukraine_decision = {
+
+		icon = generic_army_support
+
+		state_target = yes
+
+		target_trigger = {
+			FROM = {
+				is_fully_controlled_by = ROOT
+				NOT = { is_core_of = ROOT }
+				is_on_continent = europe
+			}
+		}
+
+		targets = {
+			198 199 201 202 203 197 192 834 193 225 259 221 228 226 227 196 200 245 218 234 137 234 218
+		}
+
+		available = {
+			FROM = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+		visible = {
+			is_subject = no
+			FROM = {
+				is_core_of = UKR
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 75
+
+		days_remove = 30
+
+		fire_only_once = no
+
+		modifier = {
+
+		}
+
+		complete_effect = {
+
+
+		}
+
+        remove_effect = { 
+			FROM = {
+				limit = {
+					is_fully_controlled_by = ROOT
+				}
+				add_core_of = ROOT
+			}
+			FROM = {
+				limit = {
+					is_claimed_by = ROOT
+				}
+				remove_claim_by = ROOT
+			}
+		}
+
 	}
 
 	SOV_Integrating_Karelia_decisions = {

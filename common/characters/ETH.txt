@@ -1,4 +1,12 @@
 characters={
+	ETH_haile_selassie={
+		name=ETH_haile_selassie
+		portraits={
+			civilian={
+				large=GFX_portrait_ETH_haile_selassie
+			}
+		}
+	}
 	ETH_fitawrari_yeebio_woldai={
 		name="Fitawrari Yeebio Woldai"
 		portraits={

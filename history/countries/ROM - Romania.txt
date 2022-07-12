@@ -79,12 +79,13 @@ add_ideas = {
     ROM_iron_guard_beginning
     ROM_boyars_idea
     Yggdmillennia_idea
-		limited_conscription
-		war_economy
+	UKR_OUN_subversion_ROM
+	limited_conscription
+	war_economy
 
-		ROM_Corneliu_codreanu
-		ROM_horia_sima
-		ROM_armand_calinescu
+	ROM_Corneliu_codreanu
+	ROM_horia_sima
+	ROM_armand_calinescu
 		# ROM_Alexandru_Cantacuzino
 
 }

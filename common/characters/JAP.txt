@@ -3063,4 +3063,107 @@ characters={
 		}
 	}
 
+	JAP_NON_1 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_first
+			idea_token = Non
+			ai_will_do = {
+				factor = 0
+			}
+			traits = { chairman_of_kizuku_in }
+			removal_cost = -1
+		}
+	}
+
+	JAP_NON_2 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_second
+			idea_token = Non_1
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+	}
+
+	JAP_NON_3 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_third
+			idea_token = Non_4
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+	}
+
+	JAP_NON_4 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_fourth
+			idea_token = Non_3
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+	}
+
+	JAP_NON_5 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_fifth
+			idea_token = Non_5
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+	}
+
+	JAP_NON_6 = {
+		name=Non
+		portraits={
+			army={
+				small="GFX_idea_non"
+			}
+		}
+		advisor={
+			slot = special_sixth
+			idea_token = Non_2
+			ai_will_do = {
+				factor = 0
+			}
+			removal_cost = -1
+		}
+	}
+
 }

@@ -56,10 +56,18 @@ armored_SOV = {
 				}
 			}
 		}
+		production_prio = {
+			factor = 5
 
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+		}
 		target_width = 42.0
-		width_weight = 1.0
-		column_swap_factor = 0.1
+		width_weight = 1.5
+		column_swap_factor = 0.5
+		reinforce_prio = 2
 
 		stat_weights = {
 			0.00 #-- default_morale
@@ -154,9 +162,13 @@ armored_SOV = {
 			}
 		}
 
+		can_upgrade_in_field = {
+			has_equipment = { modern_tank_chassis > 500 }
+		}
+
 		target_width = 42.0
 		width_weight = 3.0
-		column_swap_factor = 0.1
+		column_swap_factor = 0.5
 
 		stat_weights = {
 			0.00 #-- default_morale
@@ -205,12 +217,11 @@ armored_SOV = {
 				armored_car_recon = 1
 				maintenance_company = 1
 				logistics_company = 1
-        signal_company = 1
+                signal_company = 1
 			}
 
 			regiments = {
-			  modern_armor = 3
-				medium_armor = 4
+			    modern_armor = 7
 				mechanized = 7
 				medium_sp_artillery_brigade = 3
 				medium_tank_destroyer_brigade = 2
@@ -220,8 +231,7 @@ armored_SOV = {
 
 
 		allowed_types = {
-      modern_armor
-			medium_armor
+            modern_armor
 			mechanized
 			medium_sp_artillery_brigade
 			medium_tank_destroyer_brigade
@@ -291,10 +301,10 @@ heavy_SOV = {
 					has_tech = improved_heavy_tank_chassis
 				}
 				NOT = {
-					has_tech = improved_heavy_tank
+					has_tech = main_battle_tank
 				}
 				NOT = {
-					has_tech = improved_heavy_tank_chassis
+					has_tech = main_battle_tank_chassis
 				}
 			}
 		}

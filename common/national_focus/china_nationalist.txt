@@ -949,6 +949,7 @@ focus_tree = {
 						tag = SIK
 						tag = GDC
 					}
+                    NOT = { is_guaranteed_by = SOV }
 				}
 				country_event = { id = wtt_china.1 }
 			}

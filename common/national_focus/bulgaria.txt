@@ -469,12 +469,48 @@ focus_tree = {
 					}
 				}
 				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}				
+								 
+						  
+			  
+						
+		 
 			}
+			if = {
+				limit = {
+					controls_state = 801
+					controls_state = 211
+				}
+				build_railway = {
+					path = { 949 3971 3952 3819 6842 9769 649 9783}
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 212
+				}
+				build_railway = { 
+					path = { 949 3908 3937 6923 }
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 212
+					controls_state = 211
+				}
+				build_railway = { 
+					path = { 6923 9862 9888 9902 }
+				}
+			}
+			if = {
+				limit = { 
+					has_full_control_of_state = 803 
+					has_full_control_of_state = 106
+				}
+				build_railway = {
+					level = 2
+					path = { 949 935 907 3882 }
+				}
+			}				
 		}
 	}
 
@@ -3379,7 +3415,6 @@ focus_tree = {
 					else_if = {
 						limit = {
 							has_tech = basic_medium_tank
-							NOT = { has_tech = improved_medium_tank }
 						}
 						create_production_license = {
 							target = BUL
@@ -3422,6 +3457,116 @@ focus_tree = {
 							target = BUL
 							equipment = {
 								type = heavy_tank_equipment_1
+							}
+							cost_factor = 0
+						}
+					}
+					if = {
+						limit = {
+							has_tech = advanced_light_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = light_tank_chassis_3
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_light_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = light_tank_chassis_2
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_light_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = light_tank_chassis_1
+							}
+							cost_factor = 0
+						}
+					}
+					#Latest Medium Tank license
+					if = {
+						limit = {
+							has_tech = advanced_medium_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = medium_tank_chassis_3
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_medium_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = medium_tank_chassis_2
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_medium_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = medium_tank_chassis_1
+							}
+							cost_factor = 0
+						}
+					}
+					#Latest Heavy Tank license
+					if = {
+						limit = {
+							has_tech = advanced_heavy_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = heavy_tank_chassis_3
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = improved_heavy_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = heavy_tank_chassis_2
+							}
+							cost_factor = 0
+						}
+					}
+					else_if = {
+						limit = {
+							has_tech = basic_heavy_tank_chassis
+						}
+						create_production_license = {
+							target = BUL
+							equipment = {
+								type = heavy_tank_chassis_1
 							}
 							cost_factor = 0
 						}
@@ -4803,6 +4948,9 @@ focus_tree = {
 				}
 				set_politics = {
 					ruling_party = democratic
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = yes	
 				}
 			}
 
@@ -8743,7 +8891,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						infrastructure < 9
+						infrastructure < 3
 					}
 					add_building_construction = {
 						type = infrastructure
@@ -8753,7 +8901,7 @@ focus_tree = {
 				}
 				else_if = {
 					limit = {
-						infrastructure < 10
+						infrastructure < 5
 					}
 					add_building_construction = {
 						type = infrastructure
@@ -8789,7 +8937,7 @@ focus_tree = {
 					}
 					if = {
 						limit = {
-							infrastructure < 10
+							infrastructure < 5
 						}
 						add_building_construction = {
 							type = infrastructure
@@ -8818,7 +8966,7 @@ focus_tree = {
 					}
 					if = {
 						limit = {
-							infrastructure < 10
+							infrastructure < 5
 						}
 						add_building_construction = {
 							type = infrastructure
@@ -8846,7 +8994,7 @@ focus_tree = {
 					}
 					if = {
 						limit = {
-							infrastructure < 10
+							infrastructure < 5
 						}
 						add_building_construction = {
 							type = infrastructure

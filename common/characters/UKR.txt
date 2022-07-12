@@ -1,21 +1,45 @@
 characters={
 	UKR_symon_petlura={
-		name="Symon Petlura"
+		name="UKR_symon_petlura"
 		portraits={
 			civilian={
-				large="gfx/leaders/UKR/Portrait_Symon_Petlura.dds"
+				large="gfx/leaders/UKR/Portrait_Symon_Petlura.png"
 			}
 			army = {
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_symon_petlura"
 			}
 		}
 		country_leader={
 			ideology=socialism
-			traits={ popular_figurehead }
+			traits={ otaman }
 			expire="1953.3.1.1"
 			id=-1
 		}
-		corps_commander={
+		advisor={
+			slot = army_chief
+			idea_token = UKR_symon_petlura
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# 陆军防御（大师
+				army_chief_defensive_2 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+		}
+		field_marshal={
 			traits={ politically_connected trickster }
 			skill=3
 			attack_skill=1
@@ -25,6 +49,16 @@ characters={
 			legacy_id=5005
 		}
 	}
+
+	UKR_Lesia_Petliura={
+		name="UKR_Lesia_Petliura"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Portrait_UKR_Lesia_Petliura.png"
+			}
+		}
+	}
+
 	UKR_nikita_khrushchev={
 		name = SOV_nikita_khrushchyov
 		portraits={
@@ -42,16 +76,47 @@ characters={
 		}
 	}
 	UKR_yevhen_konovalets={
-		name="Yevhen Konovalets"
+		name="UKR_yevhen_konovalets"
 		portraits={
 			civilian={
 				large="gfx/leaders/UKR/yevhen_konovalets.png"
 			}
 			army = {
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_yevhen_konovalets"
 			}
 		}
-		corps_commander={
+		country_leader={
+			ideology=fascism_ideology
+			traits={ fascist_militia_leader }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_yevhen_konovalets
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# 陆军进攻（大师
+				army_chief_offensive_2
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
+		}
+		field_marshal={
 			traits={ politically_connected winter_specialist hill_fighter }
 			skill=4
 			attack_skill=4
@@ -60,26 +125,20 @@ characters={
 			logistics_skill=3
 			legacy_id=5006
 		}
-		country_leader={
-			ideology=fascism_ideology
-			traits={ fascist_militia_leader }
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 
 	UKR_Stepan_Bandera={
-		name="Stepan Bandera"
+		name="UKR_Stepan_Bandera"
 		portraits={
 			civilian={
-				large="gfx/leaders/UKR/Portrait_Stepan_Bandera.dds"
+				large="gfx/leaders/UKR/Portrait_Stepan_Bandera.png"
 			}
 			army = {
 				small="GFX_idea_advisor_unknown"
 			}
 		}
 		corps_commander={
-			traits={ politically_connected urban_assault_specialist commando }
+			traits={ politically_connected urban_assault_specialist }
 			skill=1
 			attack_skill=1
 			defense_skill=1
@@ -89,17 +148,42 @@ characters={
 	}
 
 	UKR_pavlo_skoropadskyi={
-		name="Pavlo Skoropadskyi"
+		name="UKR_pavlo_skoropadskyi"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_pavlo_skoropadskyi"
 			}
 			army={
 				large="gfx/leaders/UKR/Skoropadsky.png"
 			}
 		}
-		field_marshal={
-			traits={ old_guard cavalry_officer organizer thorough_planner }
+		advisor={
+			slot = high_command
+			idea_token = UKR_pavlo_skoropadskyi
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# 盖特曼
+				hetman 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
+		}
+		corps_commander={
+			traits={ old_guard cavalry_officer organizer }
 			skill=4
 			attack_skill=4
 			defense_skill=3
@@ -108,58 +192,83 @@ characters={
 			legacy_id=5004
 		}
 	}
-	UKR_konstantin_prisovsky={
-		name="Konstantin Prisovsky"
+	#UKR_konstantin_prisovsky={
+		#name="Konstantin Prisovsky"
+		#portraits={
+			#army={
+				#small="GFX_idea_advisor_unknown"
+			#}
+			#army={
+				#large="gfx/leaders/UKR/Portrait_UKR_Konstantin_Prisovsky.tga"
+			#}
+		#}
+		#corps_commander={
+			#traits={ old_guard }
+			#skill=3
+			#attack_skill=3
+			#defense_skill=3
+			#planning_skill=2
+			#logistics_skill=2
+			#legacy_id=-1
+		#}
+	#}
+	UKR_hnat_stefaniv={
+		name="UKR_hnat_stefaniv"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_UKR_Konstantin_Prisovsky.tga"
+				large="gfx/leaders/UKR/Portrait_UKR_Hnat_Stefaniv.png"
 			}
 		}
-		field_marshal={
-			traits={ old_guard }
+		corps_commander={
+			traits={ infantry_officer commando }
 			skill=3
-			attack_skill=4
-			defense_skill=3
-			planning_skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
 			logistics_skill=3
 			legacy_id=-1
 		}
 	}
-	UKR_hnat_stefaniv={
-		name="Hnat Stefaniv"
-		portraits={
-			army={
-				small="GFX_idea_advisor_unknown"
-			}
-			army={
-				large="gfx/leaders/UKR/Portrait_UKR_Hnat_Stefaniv.tga"
-			}
-		}
-		corps_commander={
-			traits={ organizer commando }
-			skill=2
-			attack_skill=2
-			defense_skill=2
-			planning_skill=2
-			logistics_skill=1
-			legacy_id=-1
-		}
-	}
 	UKR_andriy_melnyk={
-		name="Andriy Melnyk"
+		name="UKR_andriy_melnyk"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_andriy_melnyk"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_UKR_Andriy_Melnyk.tga"
+				large="gfx/leaders/UKR/Portrait_UKR_Andriy_Melnyk.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_andriy_melnyk
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# “梅尔尼克勋爵”
+				lord_melnyk 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 2.000
 			}
 		}
 		corps_commander={
-			traits={ organizer trait_engineer thorough_planner }
+			traits={ organizer trait_engineer }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -169,27 +278,27 @@ characters={
 		}
 	}
 	UKR_mykhailo_omelianovychpavlenko={
-		name="Mykhailo Omelianovych-Pavlenko"
+		name="UKR_mykhailo_omelianovychpavlenko"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.tga"
+				large="gfx/leaders/UKR/Portrait_UKR_Mykhailo_Omelianovych_Pavlenko.png"
 			}
 		}
 		corps_commander={
 			traits={ fortress_buster }
-			skill=2
-			attack_skill=2
-			defense_skill=1
-			planning_skill=3
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
 			logistics_skill=1
 			legacy_id=-1
 		}
 	}
 	UKR_mykola_kapustyanskyi={
-		name="Mykola Kapustyanskyi"
+		name="UKR_mykola_kapustyanskyi"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -208,13 +317,13 @@ characters={
 		}
 	}
 	UKR_Nestor_Makhno={
-		name="Nestor Makhno"
+		name="UKR_Nestor_Makhno"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/UKR/Portrait_Nestor_Makhno.tga"
+				large="gfx/leaders/UKR/Portrait_UKR_Nestor_Makhno_2.png"
 			}
 		}
 		corps_commander={
@@ -223,16 +332,17 @@ characters={
 				media_personality
 				winter_specialist
 				cavalry_leader
+				trickster
 			}
 			skill = 4
 			attack_skill = 4
 			defense_skill = 3
 			planning_skill = 3
-			logistics_skill = 3
+			logistics_skill = 4
 		}
 	}
 	UKR_Makhnovshchina={
-		name="Ukrainian Soviet"
+		name="UKR_Makhnovshchina"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -245,18 +355,19 @@ characters={
 
 	#####
 	SOV_leonid_brezhnev={
-		name = "Leonid Brezhnev"
+		name = "SOV_leonid_brezhnev"
 		portraits={
 			civilian = {
 				large = "gfx/leaders/UKR/Portrait_Leonid_Brezhnev.dds"
 			}
 		}
 	}
-
-
 	#####
+
+	##### Reunionist
+
 	UKR_Talulah_Artorius={
-		name = "Talulah Artorius"
+		name = UKR_Talulah_Artorius
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -265,88 +376,315 @@ characters={
 				large="gfx/leaders/UKR/Portrait_Talulah_Artorius.dds"
 			}
 		}
+		field_marshal={
+			traits={ brilliant_strategist aggressive_assaulter inspirational_leader infantry_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
 	}
 
 	UKR_Alina={
-		name = "Alina"
+		name = UKR_alina
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_alina"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Alina.dds"
 			}
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_alina
+			allowed  = {
+				original_tag  = UKR
+			}
+			# ledger  = navy 
+			available  = {
+				NOT = {
+					has_country_flag = UKR_anarchist_alina_dead_flag
+				}
+				has_country_flag = UKR_anarchist_alina_join_flag
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				# 沉默的实干家，金融专家
+				silent_workhorse 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
 	}
 
 	UKR_Yelena_Frostnova={
-		name = "Yelena Frostnova"
+		name = UKR_yelena_frostnova
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_yelena_frostnova"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Yelena_Frostnova.dds"
 			}
 		}
+		corps_commander={
+			traits={ winter_specialist winter_expert brilliant_strategist commando guerilla_fighter infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=3
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_yelena_frostnova
+			allowed  = {
+				original_tag  = UKR
+			}
+			# ledger  = navy 
+			available  = {
+				has_completed_focus = UKR_Anarchist_Yeti_squadron
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				yeti_squad 
+				# 冬季损耗-35%，特种部队上限+30，
+				# 寒冷适应度+30%，max_planning_factor 10%， 陆军经验+0.12
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
 	}
 
 	UKR_Buldrokkastee={
-		name = "Buldrokkas'tee"
+		name = UKR_buldrokkastee
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_buldrokkastee"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Buldrokkastee.dds"
 			}
 		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist infantry_leader trait_cautious unyielding_defender war_hero }
+			skill=3
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_buldrokkastee
+			allowed  = {
+				original_tag  = UKR
+			}
+			ledger  = army
+			available  = {
+				NOT = {
+					has_completed_focus = UKR_Anarchist_remove_Buldrokkastee
+				}
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				the_patriot 
+				# 堑壕上限 +7， 陆军防御10%，陆军组织度10%， 陆军经验+0.15
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
 	}
 
 	UKR_W={
-		name = "W"
+		name = UKR_W
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_W"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_W.png"
 			}
 		}
+		corps_commander={
+			traits={ winter_specialist trickster commando cavalry_officer ambusher }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_W
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			ledger  = army 
+			available  = {
+				has_completed_focus = UKR_Anarchist_Jewish_combat_regiments
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				modern_warfare 
+				# 机械化和装甲攻击+15%，防御+10% 陆军经验+0.08
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
 	}
 
 	UKR_Mephisto={
-		name = "Mephisto"
+		name = UKR_eno_mephisto
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_eno_mephisto"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Mephisto.png"
 			}
 		}
+		corps_commander={
+			traits={ harsh_leader cavalry_officer trait_engineer trait_reckless }
+			skill=1
+			attack_skill=3
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_eno_mephisto
+			allowed  = {
+				original_tag  = UKR
+			}
+			available  = {
+				has_completed_focus = UKR_Anarchist_pistol_and_speaker
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				singer 
+				# 陆军组织度恢复+10%，炮兵装备对人员杀伤+15%（立刻）陆军经验+0.08
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
 	}
 
 	UKR_Crownsplayer={
-		name = "Crownsplayer"
+		name = UKR_lyudmila_crownslayer
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_lyudmila_crownslayer"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Crownslayer.png"
 			}
 		}
+		corps_commander={
+			traits={  infantry_officer commando organizer }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
 	}
 
 	UKR_Faust={
-		name = "Faust"
+		name = UKR_sasha_faust
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_sasha_faust"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Faust.png"
+			}
+		}
+		corps_commander={
+			traits={  infantry_officer commando organizer ranger }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_sasha_faust
+			allowed  = {
+				original_tag  = UKR
+			}
+			ledger  = army 
+			available  = {
+
+			}
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+			traits  = {
+				sniper
+				# 步兵武器对人员杀伤+10%（立刻）， 陆军经验+0.08
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
 			}
 		}
 	}
@@ -361,6 +699,865 @@ characters={
 				large="gfx/leaders/UKR/Portrait_Ines.png"
 			}
 		}
+		corps_commander={
+			traits={ brilliant_strategist infantry_officer commando engineer_officer }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
 	}
+
+	##### Reunionist
+	##### 3D Anarchist
+
+	UKR_Stepan_Petrichenko={
+		name = "UKR_Stepan_Petrichenko"
+		portraits={
+			army={
+				small="GFX_idea_UKR_stepan_petrichenko"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_Stepan_Petrichenko.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = UKR_stepan_petrichenko
+			allowed  = {
+				original_tag  = UKR
+			}
+			available  = {
+				#仅安那其可用
+				has_completed_focus = UKR_Anarchist_all_power_to_soviet
+			}
+			traits  = {
+				navy_amphibious_assault_2 
+			}
+			modifier = {
+				war_support_factor = 0.05
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		corps_commander={
+			traits={ politically_connected naval_invader }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+	}
+
+	UKR_Aron_Baron={
+		name = "UKR_Aron_Baron"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Aron_Baron.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+	}
+
+	UKR_Pavel_Dybenko={
+		name = "UKR_Pavel_Dybenko"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Pavel_Dybenko.png"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected media_personality cavalry_officer}
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+
+	}
+
+	UKR_Viktor_Belash={
+		name = "UKR_Viktor_Belash"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Viktor_Belash.png"
+			}
+		}
+		corps_commander={
+			traits={ trait_cautious }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+	}
+
+	UKR_Vsevolod_Eikhenbaum={
+		name = "UKR_Vsevolod_Eikhenbaum"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Vsevolod_Eikhenbaum.png"
+			}
+		}
+		corps_commander={
+			traits={  }
+			skill=1
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			visible = {
+				has_country_flag = UKR_Anarchist_flag
+			}
+		}
+	}
+
+	##### 3D Anarchist
+
+	##### Nationalist
+
+	UKR_Oleksandr_Udovychenko={
+		name="UKR_Oleksandr_Udovychenko"
+		portraits={
+			army={
+				small="GFX_idea_UKR_Oleksandr_Udovychenko"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Oleksandr_Udovychenko.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_Oleksandr_Udovychenko
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# 步兵部队（大师
+				army_infantry_2
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 3.000
+			}
+		}
+		corps_commander={
+			traits = {
+				politically_connected
+				infantry_officer
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 3
+		}
+	}
+
+	UKR_Volodymyr_Salsky={
+		name="UKR_Volodymyr_Salsky"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Volodymyr_Salsky.png"
+			}
+		}
+		corps_commander={
+			traits = {
+                cavalry_officer
+			}
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+
+	UKR_Vsevolod_Petriv={
+		name="UKR_Vsevolod_Petriv"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Vsevolod_Petriv.png"
+			}
+		}
+		corps_commander={
+			traits = {
+				politically_connected
+				cavalry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+
+	UKR_Ivan_Turkenich={
+		name="UKR_Ivan_Turkenich"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Ivan_Turkenich.png"
+			}
+		}
+		corps_commander={
+			traits = {
+				armor_officer
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UKR_Vasyl_Vyshyvany={
+		name="UKR_Vasyl_Vyshyvany"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Vasyl_Vyshyvany.png"
+			}
+		}
+		corps_commander={
+			traits = {
+				politically_connected
+                career_officer
+				infantry_officer
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+
+	UKR_Roman_Shukhevych={
+		name="UKR_Roman_Shukhevych"
+		portraits={
+			army={
+				small="GFX_idea_UKR_Roman_Shukhevych"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Roman_Shukhevych.png"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_Roman_Shukhevych
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+
+			traits  = {
+				# 不败者
+				Neskorenyj
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 4.000
+			}
+		}
+		corps_commander={
+			traits = {
+				infantry_officer
+				commando
+				trickster
+				ranger
+			}
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id=5008
+		}
+	}
+
+	UKR_Philip_Kyva={
+		name="UKR_Philip_Kyva"
+		portraits={
+			army={
+				small="GFX_idea_UKR_Philip_Kyva"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Philip_Kyva.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_Philip_Kyva
+			allowed  = {
+				original_tag  = UKR
+			}
+
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+
+			}
+
+			traits  = {
+				# 陆军抗炸（奇才
+				army_concealment_3
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 2.000
+			}
+		}
+		corps_commander={
+			traits = {
+				brilliant_strategist
+				trickster
+			}
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+
+	UKR_Seymon_Zelensky={
+		name="UKR_Seymon_Zelensky"
+		portraits={
+			army={
+				small="GFX_idea_advisor_unknown"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Seymon_Zelensky.png"
+			}
+		}
+		corps_commander={
+			traits = {
+				brilliant_strategist
+				bearer_of_artillery
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_semyon_zelensky
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+
+			}
+			traits  = {
+				head_of_intelligence
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+
+	##### Nationalist
+
+
+	####political_advisor
+	UKR_vladimir_vernadsky={
+		name = UKR_vladimir_vernadsky
+		portraits={
+			army = {
+				small="GFX_idea_UKR_vladimir_vernadsky"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_vladimir_vernadsky
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+
+			}
+			available  = {
+
+			}
+			traits  = {
+				geologist
+				# 建造速度10%，全局资源+15%
+			}
+			modifier = {
+				# 资源开发研究+10%
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	UKR_mykhailo_hrushevsky={
+		name = UKR_mykhailo_hrushevsky
+		portraits={
+			army = {
+				small="GFX_idea_UKR_mykhailo_hrushevsky"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_mykhailo_hrushevsky
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				has_government = democratic
+			}
+			traits  = { 
+				silent_workhorse
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	
+	UKR_isaac_babel={
+		# 伊萨克·巴别尔
+		name = UKR_isaac_babel
+		portraits={
+			army = {
+				small="GFX_idea_UKR_isaac_babel"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_isaac_babel
+			allowed  = {
+				original_tag  = UKR
+			}
+			available  = {
+
+			}
+			traits  = {
+				realist_writer
+				# 稳定度+7.5%，战争支持度+5%，生产效率增长+5%
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	UKR_volodymyr_kubijovych={
+		name = UKR_volodymyr_kubijovych
+		portraits={
+			army = {
+				small="GFX_idea_UKR_volodymyr_kubijovych"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_volodymyr_kubijovych
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				has_government = fascism
+			}
+			traits  = {
+				nationalist_geographer 
+				# 适役人口修正+15%，工厂产出+5%
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	UKR_dmytro_dontsov={
+		name = UKR_dmytro_dontsov
+		portraits={
+			army = {
+				small="GFX_idea_UKR_dmytro_dontsov"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_dmytro_dontsov
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				has_government = fascism
+			}
+			traits  = {
+				nationalist_theologist
+				# 法西斯主义增长+0.075，核心领土攻击+10%，我方领土对敌人的游击+15%
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	UKR_andriy_livytskyi={
+		name = UKR_andriy_livytskyi
+		portraits={
+			army = {
+				small="GFX_idea_UKR_andriy_livytskyi"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_andriy_livytskyi
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			traits  = {
+				# 人民联络家 
+				connected_citizen
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+
+	#####
+
+	###NAVY
+	UKR_sviatoslav_shramchenko={
+		name = UKR_sviatoslav_shramchenko
+		portraits={
+			army = {
+				small="GFX_idea_UKR_sviatoslav_shramchenko"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Sviatoslav_Shramchenko.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = UKR_sviatoslav_shramchenko
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				NOT = { has_government = communism }
+			}
+			traits  = {
+				navy_amphibious_assault_2 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		navy_leader={
+			traits={ }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+	}
+
+
+	UKR_nikolai_pavlovich_sablin={
+		name = UKR_nikolai_pavlovich_sablin
+		portraits={
+			army = {
+				small="GFX_idea_UKR_nikolai_pavlovich_sablin"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Nikolai_Sablin.png"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = UKR_nikolai_pavlovich_sablin
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = UKR_Vasyl_Vyshyvany
+				}
+			}
+			traits  = {
+				army_chief_maneuver_2 
+			}
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = -0.05
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		navy_leader={
+			traits={ gentlemanly navy_career_officer naval_lineage }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
+		}
+	}
+
+
+
+	###air
+	UKR_petro_franko={
+		name = UKR_petro_franko
+		portraits={
+			army = {
+				small="GFX_idea_UKR_petro_franko"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = UKR_petro_franko
+			allowed  = {
+				original_tag  = UKR
+			}
+			available  = {
+
+			}
+			traits  = {
+				air_air_combat_training_2 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+	UKR_viktor_pavlenko={
+		name = UKR_viktor_pavlenko
+		portraits={
+			army = {
+				small="GFX_idea_UKR_viktor_pavlenko"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = UKR_viktor_pavlenko
+			allowed  = {
+				original_tag  = UKR
+			}
+			available  = {
+
+			}
+			traits  = {
+				air_chief_reform_2 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+
+	###理论家
+	UKR_vladimir_savchenko_belskii={
+		name = UKR_vladimir_vernadsky
+		portraits={
+			army = {
+				small="GFX_idea_UKR_vladimir_savchenko_belskii"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = UKR_vladimir_vernadsky
+			cost = 100
+			ledger  = navy 
+			allowed  = {
+				original_tag  = UKR
+			}
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+
+			}
+			traits  = {
+				naval_theorist 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
+
+	###high_command
+	UKR_andrew_pokrovskii={
+		name = UKR_andrew_pokrovskii
+		portraits={
+			army = {
+				small="GFX_idea_UKR_andrew_pokrovskii"
+			}
+			army={
+				large="gfx/leaders/UKR/Portrait_UKR_Andrew_Pokrovskii.png"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_andrew_pokrovskii
+			allowed  = {
+				original_tag  = UKR
+			}
+			ledger  = navy 
+			visible = {
+				NOT = { has_idea = UKR_no_army_idea }
+			}
+			available  = {
+
+			}
+			traits  = {
+				navy_capital_ship_2 
+			}
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy navy_career_officer battleship_adherent naval_lineage }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=3
+		}
+	}
+
+	#####
 
 }

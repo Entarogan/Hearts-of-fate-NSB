@@ -27,6 +27,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	SOV_Focus_on_the_inside_idea
 	CHI_warlord_idea
 	CHI_army_corruption_1
     CHI_incompetent_officers

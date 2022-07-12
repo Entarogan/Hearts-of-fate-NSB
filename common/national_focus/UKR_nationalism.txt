@@ -1,12 +1,18 @@
 shared_focus = {
 	id = UKR_SDP_win_election
 	icon = GFX_focus_ideology_social_democrat
-	cost = 3.00
+	cost = 5.00
 	x = 10
 	y = 0
 	available = {
         always = no
 	}
+
+	mutually_exclusive = { 
+		focus = UKR_Indefinite_ruling_cabinet
+		focus = UKR_OUN_win_election
+	}
+	
 
 	bypass = {
 		has_country_flag = UKR_Bandera_has_failed_flag
@@ -21,7 +27,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Empower_the_Verkhovna_Rada
 	icon = GFX_focus_generic_parliament2
-	cost = 3.00
+	cost = 5.00
 	x = -2
 	y = 1
 
@@ -54,7 +60,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_full_deradicalization
 	icon = GFX_focus_spr_crush_the_revolution
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -81,16 +87,12 @@ shared_focus = {
 shared_focus = {
 	id = UKR_East_and_West_unite
 	icon = GFX_focus_UKR_stabilise_west
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
 	prerequisite = {
-		focus = UKR_SDP_win_election
-	}
-
-	prerequisite = {
-		focus = UKR_Indefinite_ruling_cabinet
+		focus = UKR_SDP_win_election focus = UKR_Indefinite_ruling_cabinet
 	}
 
 	available = {
@@ -117,7 +119,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_foundation_of_freedom
 	icon = GFX_focus_hol_the_foundations_of_defense
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -141,6 +143,11 @@ shared_focus = {
 
 	completion_reward = {
 
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+
 		swap_ideas = {
 			remove_idea = UKR_Verkhovna_Rada_1_idea
 			add_idea = UKR_Verkhovna_Rada_2_idea
@@ -153,7 +160,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_the_price_of_independence
 	icon = GFX_goal_generic_dangerous_deal
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -176,15 +183,92 @@ shared_focus = {
 	relative_position_id = UKR_full_deradicalization
 
 	completion_reward = {
+
+		set_division_template_lock = {
+			division_template = "Nightingale Battalion Group"
+			is_locked = no
+		}
+
+		set_division_template_lock = {
+			division_template = "Otaman Strelkovaya"
+			is_locked = no
+		}
+
+		set_division_template_lock = {
+			division_template = "Sich Riflemen"
+			is_locked = no
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Call_for_civilians_flag
+			}
+			delete_unit_template_and_units = { 
+				division_template = "militia" 
+				disband = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Extremist_forces_flag
+			}
+			set_division_template_lock = {
+				division_template = "OUN"
+				is_locked = no
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Assemble_the_Cossacks_flag
+			}
+			delete_unit_template_and_units = { 
+				division_template = "Cossacks" 
+				disband = yes
+			}
+		}
+
 		if = {
 			limit = {
 				has_country_flag = UKR_full_deradicalization_flag
 			}
-		    add_political_power = 100
-			add_ideas = UKR_national_reconciliation_idea
+			add_timed_idea = {
+				idea = UKR_the_price_of_independence_real_idea
+				days = 120
+			}
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.33
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = GER_enigma
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
 		}
 		else = {
-		    add_stability = 0.1
+			add_timed_idea = {
+				idea = UKR_the_price_of_independence_idea
+				days = 60
+			}
+			army_experience = 30
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.33
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 
@@ -193,7 +277,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_The_birth_of_democracy
 	icon = GFX_goal_support_democracy
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -223,15 +307,15 @@ shared_focus = {
 
 		add_popularity = {
 			ideology = democratic
-			popularity = 0.15
+			popularity = 0.10
 		}
 
-		if = {
-			limit = { NOT = { has_government = democratic } }
-			set_politics = {
-				ruling_party = democratic
-				elections_allowed = no
-			}
+		remove_country_leader_trait = otaman
+		add_country_leader_trait = popular_figurehead
+
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
 		}
 
 	}
@@ -241,15 +325,21 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Indefinite_ruling_cabinet
 	icon = GFX_focus_ideology_paternal_autocrat
-	cost = 3.00
+	cost = 5.00
 	x = 14
 	y = 0
 	available = {
         always = no
 	}
 
+	mutually_exclusive = { 
+		focus = UKR_SDP_win_election
+		focus = UKR_OUN_win_election
+	}
+
 	bypass = {
-		has_country_flag = UKR_Continuation_of_the_ruling_cabinet_flag
+		NOT = { has_country_flag = UKR_Bandera_has_failed_flag }
+		NOT = { has_country_flag = UKR_Bandera_has_succeeded_flag }
 	}
 
 	completion_reward = {
@@ -261,7 +351,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_National_Security_Act
 	icon = GFX_focus_generic_strike_at_democracy2
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -288,16 +378,12 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Military_and_political_integration
 	icon = GFX_goal_generic_political_pressure
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
 	prerequisite = {
-		focus = UKR_Indefinite_ruling_cabinet
-	}
-
-	prerequisite = {
-		focus = UKR_OUN_win_election
+		focus = UKR_Indefinite_ruling_cabinet focus = UKR_OUN_win_election
 	}
 
 	available = {
@@ -311,6 +397,8 @@ shared_focus = {
 	relative_position_id = UKR_Indefinite_ruling_cabinet
 
 	completion_reward = {
+		add_political_power = -50
+
 		add_ideas = UKR_Military_and_political_integration_1_idea
 	}
 
@@ -318,8 +406,8 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_Big_two_system
-	icon = GFX_goal_unknown
-	cost = 3.00
+	icon = GFX_focus_UKR_Big_two_system
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -352,7 +440,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Reinstatement_of_military_power
 	icon = GFX_focus_generic_paramilitary
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -375,6 +463,28 @@ shared_focus = {
 	relative_position_id = UKR_National_Security_Act
 
 	completion_reward = {
+		add_political_power = -50
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Call_for_civilians_flag
+			}
+			delete_unit_template_and_units = { 
+				division_template = "militia" 
+				disband = yes
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Assemble_the_Cossacks_flag
+			}
+			delete_unit_template_and_units = { 
+				division_template = "Cossacks" 
+				disband = yes
+			}
+		}
+
 		swap_ideas = {
 			remove_idea = UKR_Military_and_political_integration_1_idea
 			add_idea = UKR_Military_and_political_integration_2_idea
@@ -386,7 +496,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Bipartisan_Illusion
 	icon = GFX_goal_generic_neutrality_focus
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -427,15 +537,20 @@ shared_focus = {
 shared_focus = {
 	id = UKR_OUN_win_election
 	icon = GFX_focus_ideology_national_populist
-	cost = 3.00
+	cost = 5.00
 	x = 18
 	y = 0
 	available = {
         always = no
 	}
 
+	mutually_exclusive = { 
+		focus = UKR_Indefinite_ruling_cabinet
+		focus = UKR_OUN_win_election
+	}
+
 	bypass = {
-		has_country_flag = UKR_Bandera_has_succeeded_flag
+        has_country_flag = UKR_Bandera_has_succeeded_flag
 	}
 
 	completion_reward = {
@@ -447,7 +562,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Bolshevik_purge_plan
 	icon = GFX_focus_broken_red_star
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -483,7 +598,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Promote_Ukrainian
 	icon = GFX_focus_generic_military_academy
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
@@ -514,7 +629,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_condemned_the_Polish_colonists
 	icon = GFX_focus_generic_military_academy
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -553,7 +668,7 @@ shared_focus = {
 				has_idea = UKR_Cleaning_the_Imperial_Russian_Clown_1_idea
 			}
 			swap_ideas = {
-				remove_idea = UKR_Bolshevik_purge_plan_idea
+				remove_idea = UKR_Cleaning_the_Imperial_Russian_Clown_1_idea
 				add_idea = UKR_Cleaning_the_Imperial_Russian_Clown_2_idea
 			}
 		}
@@ -569,7 +684,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Cleaning_the_Imperial_Russian_Clown
 	icon = GFX_focus_MON_we_dont_need_russia
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -621,7 +736,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_one_party_dictatorship
 	icon = GFX_goal_support_fascism
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -645,12 +760,35 @@ shared_focus = {
 
 	completion_reward = {
 
-		add_political_power = 150
+		if = {
+			limit = {
+				has_country_flag = UKR_Call_for_civilians_flag
+			}
+			set_division_template_lock = {
+				division_template = "militia"
+				is_locked = no
+			}
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Assemble_the_Cossacks_flag
+			}
+			set_division_template_lock = {
+				division_template = "Cossacks"
+				is_locked = no
+			}
+		}
+
+		add_political_power = 300
 
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.15
 		}
+
+		remove_country_leader_trait = fascist_militia_leader
+		add_country_leader_trait = Providnyk
 
 		add_ideas = UKR_one_state_one_nation_one_vozhd_idea
 	}
@@ -660,7 +798,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_promises_second_general_election
 	icon = GFX_focus_generic_elections
-	cost = 3.00
+	cost = 5.00
 	x = -4
 	y = 1
 
@@ -700,7 +838,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_grassroots_government_reform
 	icon = GFX_focus_generic_government_deals
-	cost = 3.00
+	cost = 5.00
 	x = -1
 	y = 1
 
@@ -725,8 +863,11 @@ shared_focus = {
 			add_idea = UKR_Verkhovna_Rada_3_idea
 		}
 
-		hidden_effect = {
-			country_event = { id = ukr_nationalism.4 days = 30 } 
+		if = {
+			limit = { NOT = { has_completed_focus = UKR_Second_election } }
+			hidden_effect = {
+				country_event = { id = ukr_nationalism.4 days = 1 } 
+			}
 		}
 
 	}
@@ -736,7 +877,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_rural_literacy_education
 	icon = GFX_focus_usa_guarantee_the_american_dream
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -757,8 +898,11 @@ shared_focus = {
 	completion_reward = {
 		add_ideas = UKR_Rural_education_idea
 
-		hidden_effect = {
-			country_event = { id = ukr_nationalism.5 days = 30 } 
+		if = {
+			limit = { NOT = { has_completed_focus = UKR_Second_election } }
+			hidden_effect = {
+				country_event = { id = ukr_nationalism.5 days = 1 } 
+			}
 		}
 
 	}
@@ -768,7 +912,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Second_election
 	icon = GFX_focus_DOM_Call_Special_Election
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -799,7 +943,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_unity_against_foreign_aggression
 	icon = GFX_goal_generic_national_unity
-	cost = 3.00
+	cost = 5.00
 	x = -4
 	y = 1
 
@@ -834,7 +978,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_corporatism
 	icon = GFX_focus_generic_corporatism
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -868,7 +1012,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Reduced_redundancy
 	icon = GFX_focus_SAF_reform_voting_law
-	cost = 3.00
+	cost = 5.00
 	x = -2
 	y = 1
 
@@ -910,7 +1054,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Social_Security_System
 	icon = GFX_goal_generic_improve_relations
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -951,7 +1095,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_new_era_in_Ukraine
 	icon = GFX_focus_UKR_iron_republic
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -983,19 +1127,19 @@ shared_focus = {
 			limit = {
 				has_country_flag = UKR_Reduced_redundancy_flag
 			}
-		    add_ideas = UKR_Social_Security_System_2_idea
+		    add_ideas = UKR_new_era_in_Ukraine_2_idea
 		}
 		else_if = {
 			limit = {
 				has_country_flag = UKR_help_farmers_flag
 			}
-		    add_ideas = UKR_Social_Security_System_3_idea
+		    add_ideas = UKR_new_era_in_Ukraine_3_idea
 		}
 		else_if = {
 			limit = {
 				has_country_flag = UKR_unity_against_foreign_aggression_flag
 			}
-		    add_ideas = UKR_Social_Security_System_4_idea
+		    add_ideas = UKR_new_era_in_Ukraine_4_idea
 		}
 	}
 
@@ -1004,7 +1148,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_reconcile_conflict
 	icon = GFX_focus_bag_of_money
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -1037,7 +1181,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_help_farmers
 	icon = GFX_focus_SZC_improvised_farming_machinery
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
@@ -1076,7 +1220,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_local_self_government
 	icon = GFX_focus_generic_self_management
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -1109,7 +1253,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Ukrainian_cultural_identity
 	icon = GFX_focus_UKR_flag
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
@@ -1137,6 +1281,12 @@ shared_focus = {
 		else_if = {
 		    add_ideas = UKR_unite_country_1_idea
 		}
+		add_tech_bonus = {
+			name = UKR_Ukrainian_cultural_identity
+			bonus = 1
+			uses = 1
+			category = construction_tech
+		}
 	}
 
 }
@@ -1144,7 +1294,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_emerging_industrial_countries
 	icon = GFX_focus_factory_complex
-	cost = 3.00
+	cost = 5.00
 	x = -1
 	y = 1
 
@@ -1155,7 +1305,7 @@ shared_focus = {
 	mutually_exclusive = { focus = UKR_Europe_granary }
 
 	available = {
-
+		has_government = democratic
 	}
 
 	bypass = {
@@ -1182,6 +1332,13 @@ shared_focus = {
 			}
 		}
 
+		add_tech_bonus = {
+			name = UKR_emerging_industrial_countries
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
+
 		swap_ideas = {
 			remove_idea = UKR_Developed_agriculture_idea
 			add_idea = UKR_emerging_industrial_countries_idea
@@ -1194,7 +1351,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_continue_to_nationalize
 	icon = GFX_focus_manage_industries
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -1230,6 +1387,20 @@ shared_focus = {
 			}
 		}
 
+		add_tech_bonus = {
+			name = UKR_continue_to_nationalize
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+		}
+
+		add_tech_bonus = {
+			name = UKR_continue_to_nationalize
+			bonus = 1.0
+			uses = 1
+			category = artillery
+		}
+
 		swap_ideas = {
 			remove_idea = UKR_emerging_industrial_countries_idea
 			add_idea = UKR_continue_to_nationalize_idea
@@ -1241,7 +1412,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Europe_granary
 	icon = GFX_focus_agriculture
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1252,7 +1423,7 @@ shared_focus = {
 	mutually_exclusive = { focus = UKR_emerging_industrial_countries }
 
 	available = {
-
+		has_government = neutrality
 	}
 
 	bypass = {
@@ -1273,7 +1444,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_food_export_trade
 	icon = GFX_goal_generic_positive_trade_relations
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -1292,6 +1463,12 @@ shared_focus = {
 	relative_position_id = UKR_Europe_granary
 
 	completion_reward = {
+
+		add_offsite_building = {
+			type = industrial_complex
+			level = 2
+		}
+
         unlock_decision_tooltip = UKR_food_export_trade_decision
 	}
 
@@ -1300,7 +1477,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Expansion_of_Kyiv_University
 	icon = GFX_focus_UKR_Expand_the_Kyiv_Officer_School
-	cost = 3.00
+	cost = 10.00
 	x = 2
 	y = 1
 
@@ -1313,7 +1490,7 @@ shared_focus = {
 	}
 
 	available = {
-
+		NOT = { has_completed_focus = UKR_Open_a_national_academy }
 	}
 
 	bypass = {
@@ -1337,7 +1514,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_urban_industrialization
 	icon = GFX_focus_ITA_urban
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1360,51 +1537,127 @@ shared_focus = {
 	relative_position_id = UKR_Expansion_of_Kyiv_University
 
 	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				OR = {
-					has_state_category = city
-					has_state_category = large_city
-					has_state_category = megalopolis
-					has_state_category = metropolis
+
+		202 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
 				}
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
 			}
 		}
 
-		random_owned_controlled_state = {
-			limit = {
-				is_fully_controlled_by = ROOT
-				OR = {
-					has_state_category = city
-					has_state_category = large_city
-					has_state_category = megalopolis
-					has_state_category = metropolis
+		192 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
 				}
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
 				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+
 			}
 		}
+
+		226 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+
+		200 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+
+		221 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+
+		227 = {
+			if = {
+				limit = { 
+					is_controlled_by = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+
+			}
+		}
+
 	}
 
 }
@@ -1412,7 +1665,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Support_chaebol_expansion
 	icon = GFX_focus_collaborate_local_elites
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1421,7 +1674,7 @@ shared_focus = {
 	}
 
 	available = {
-
+		has_government = neutrality
 	}
 
 	bypass = {
@@ -1431,10 +1684,34 @@ shared_focus = {
 	relative_position_id = UKR_continue_to_nationalize
 
 	completion_reward = {
-		swap_ideas = {
-			remove_idea = UKR_Europe_granary_idea
-			add_idea = UKR_Europe_granary_1_idea
+
+		add_political_power = 50
+
+		if = { 
+			limit = {
+				has_idea = UKR_Europe_granary_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Europe_granary_idea
+				add_idea = UKR_Europe_granary_1_idea
+			}
+			add_tech_bonus = {
+				name = UKR_Support_chaebol_expansion
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
 		}
+		else_if = {
+			limit = {
+				has_idea = UKR_continue_to_nationalize_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_continue_to_nationalize_idea
+				add_idea = UKR_Europe_granary_2_idea
+			}
+		}
+
 	}
 
 }
@@ -1442,7 +1719,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Open_a_national_academy
 	icon = GFX_focus_research
-	cost = 3.00
+	cost = 5.00
 	x = 0
 	y = 1
 
@@ -1451,7 +1728,7 @@ shared_focus = {
 	}
 
 	available = {
-
+		NOT = { has_completed_focus = UKR_Expansion_of_Kyiv_University }
 	}
 
 	bypass = {
@@ -1469,7 +1746,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Expanded_Security_Agency
 	icon = GFX_focus_secret_agents
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
@@ -1488,6 +1765,11 @@ shared_focus = {
 	relative_position_id = UKR_Bipartisan_Illusion
 
 	completion_reward = {
+		if = {
+			limit = { has_intelligence_agency = no }
+			create_intelligence_agency = yes
+		}
+
 		add_ideas = UKR_intelligence_agency_1
 	}
 
@@ -1496,7 +1778,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Threats_from_foreign_powers
 	icon = GFX_focus_LEP_selective_enforcement
-	cost = 3.00
+	cost = 5.00
 	x = -1
 	y = 1
 
@@ -1517,7 +1799,17 @@ shared_focus = {
 	relative_position_id = UKR_Expanded_Security_Agency
 
 	completion_reward = {
+		add_tech_bonus = {
+			name = UKR_Threats_from_foreign_powers
+			bonus = 1.0
+			uses = 1
+			category = electronics
+		}
 
+		swap_ideas = {
+			remove_idea = UKR_intelligence_agency_1
+			add_idea = UKR_intelligence_agency_2
+		}
 	}
 
 }
@@ -1525,7 +1817,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_foreign_intelligence_network
 	icon = GFX_focus_conspiracy
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1546,7 +1838,12 @@ shared_focus = {
 	relative_position_id = UKR_Expanded_Security_Agency
 
 	completion_reward = {
+		gain_random_agency_upgrade = yes
 
+		swap_ideas = {
+			remove_idea = UKR_intelligence_agency_1
+			add_idea = UKR_intelligence_agency_3
+		}
 	}
 
 }
@@ -1554,7 +1851,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Natsionalna_hvardiya_Ukrayiny
 	icon = GFX_focus_UKR_shield
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1573,7 +1870,7 @@ shared_focus = {
 	relative_position_id = UKR_Threats_from_foreign_powers
 
 	completion_reward = {
-
+		add_ideas = UKR_Natsionalna_hvardiya_Ukrayiny_1_idea
 	}
 
 }
@@ -1581,7 +1878,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_more_reservists
 	icon = GFX_focus_UKR_48_Hour_Plan
-	cost = 3.00
+	cost = 5.00
 	x = -1
 	y = 1
 
@@ -1602,7 +1899,10 @@ shared_focus = {
 	relative_position_id = UKR_Natsionalna_hvardiya_Ukrayiny
 
 	completion_reward = {
-
+		swap_ideas = {
+			remove_idea = UKR_Natsionalna_hvardiya_Ukrayiny_1_idea
+			add_idea = UKR_Natsionalna_hvardiya_Ukrayiny_2_idea
+		}
 	}
 
 }
@@ -1610,7 +1910,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_elite_troops
 	icon = GFX_focus_UKR_coat_of_arms_hetman
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1632,6 +1932,24 @@ shared_focus = {
 
 	completion_reward = {
 
+        unlock_decision_tooltip = UKR_elite_troops_Nightingale_decision
+        unlock_decision_tooltip = UKR_elite_troops_Sich_decision
+
+		swap_ideas = {
+			remove_idea = UKR_Natsionalna_hvardiya_Ukrayiny_1_idea
+			add_idea = UKR_Natsionalna_hvardiya_Ukrayiny_3_idea
+		}
+		add_tech_bonus = {
+			name = special_forces_bonus
+			bonus = 1.0
+			uses = 1
+			technology = paratroopers
+			technology = paratroopers2
+			technology = marines
+			technology = marines2
+			technology = tech_mountaineers
+			technology = tech_mountaineers2
+		}
 	}
 
 }
@@ -1639,7 +1957,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_We_were_born_in_great_times
 	icon = GFX_focus_flames_of_rebellion
-	cost = 3.00
+	cost = 5.00
 	x = 2
 	y = 1
 
@@ -1648,7 +1966,7 @@ shared_focus = {
 	}
 
 	available = {
-
+        has_idea = UKR_unite_country_idea
 	}
 
 	bypass = {
@@ -1658,7 +1976,9 @@ shared_focus = {
 	relative_position_id = UKR_one_party_dictatorship
 
 	completion_reward = {
+		add_political_power = 25
 
+		add_ideas = UKR_We_were_born_in_great_times_idea
 	}
 
 }
@@ -1666,7 +1986,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_indestructible_as_rock
 	icon = GFX_focus_GRE_a_land_of_mountains
-	cost = 3.00
+	cost = 5.00
 	x = -1
 	y = 1
 
@@ -1685,7 +2005,27 @@ shared_focus = {
 	relative_position_id = UKR_We_were_born_in_great_times
 
 	completion_reward = {
+		add_political_power = 25
 
+		if = {
+			limit = {
+				has_idea = UKR_We_were_born_in_great_times_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_We_were_born_in_great_times_idea
+				add_idea = UKR_indestructible_as_rock_1_idea
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = UKR_Tears_do_not_bring_freedom_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Tears_do_not_bring_freedom_1_idea
+				add_idea = UKR_indestructible_as_rock_2_idea
+			}
+		}
 	}
 
 }
@@ -1693,7 +2033,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Tears_do_not_bring_freedom
 	icon = GFX_focus_graveyard
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1712,6 +2052,27 @@ shared_focus = {
 	relative_position_id = UKR_We_were_born_in_great_times
 
 	completion_reward = {
+		add_political_power = 25
+
+		if = {
+			limit = {
+				has_idea = UKR_We_were_born_in_great_times_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_We_were_born_in_great_times_idea
+				add_idea = UKR_Tears_do_not_bring_freedom_1_idea
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = UKR_indestructible_as_rock_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_indestructible_as_rock_1_idea
+				add_idea = UKR_Tears_do_not_bring_freedom_2_idea
+			}
+		}
 
 	}
 
@@ -1720,7 +2081,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Warriors_bring_victory
 	icon = GFX_focus_liberty
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1743,7 +2104,27 @@ shared_focus = {
 	relative_position_id = UKR_indestructible_as_rock
 
 	completion_reward = {
+		add_political_power = 50
 
+		if = {
+			limit = {
+				has_idea = UKR_indestructible_as_rock_2_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_indestructible_as_rock_2_idea
+				add_idea = UKR_Warriors_bring_victory_idea
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = UKR_Tears_do_not_bring_freedom_2_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Tears_do_not_bring_freedom_2_idea
+				add_idea = UKR_Warriors_bring_victory_idea
+			}
+		}
 	}
 
 }
@@ -1751,7 +2132,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_all_one_heart
 	icon = GFX_focus_brain
-	cost = 3.00
+	cost = 10.00
 	x = -1
 	y = 1
 
@@ -1770,6 +2151,29 @@ shared_focus = {
 	relative_position_id = UKR_Warriors_bring_victory
 
 	completion_reward = {
+		add_research_slot = 1
+
+        remove_ideas = UKR_Developed_agriculture_idea
+
+		if = {
+			limit = {
+				has_idea = UKR_Warriors_bring_victory_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Warriors_bring_victory_idea
+				add_idea = UKR_all_one_heart_1_idea
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = UKR_Ukraine_is_above_all_things_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Ukraine_is_above_all_things_1_idea
+				add_idea = UKR_all_one_heart_2_idea
+			}
+		}
 
 	}
 
@@ -1778,7 +2182,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Ukraine_is_above_all_things
 	icon = GFX_focus_flag_ukraine
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1798,6 +2202,28 @@ shared_focus = {
 
 	completion_reward = {
 
+		add_political_power = 25
+
+		if = {
+			limit = {
+				has_idea = UKR_Warriors_bring_victory_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_Warriors_bring_victory_idea
+				add_idea = UKR_Ukraine_is_above_all_things_1_idea
+			}
+		}
+
+		if = {
+			limit = {
+				has_idea = UKR_all_one_heart_1_idea
+			}
+			swap_ideas = {
+				remove_idea = UKR_all_one_heart_1_idea
+				add_idea = UKR_Ukraine_is_above_all_things_2_idea
+			}
+		}
+
 	}
 
 }
@@ -1805,7 +2231,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_From_the_San_to_the_Caucasus
 	icon = GFX_focus_agrarian_soldiers
-	cost = 3.00
+	cost = 5.00
 	x = 1
 	y = 1
 
@@ -1828,6 +2254,35 @@ shared_focus = {
 	relative_position_id = UKR_all_one_heart
 
 	completion_reward = {
+
+		if = {
+			limit = {
+				NOT = { has_global_flag = UKR_still_on_earth_flag }
+			}
+			add_state_claim = 137
+			add_state_claim = 218
+			add_state_claim = 234
+		}
+
+		add_state_claim = 245
+		add_state_claim = 217
+		add_state_claim = 236
+		add_state_claim = 238
+		add_state_claim = 237
+		add_state_claim = 235
+
+		add_state_claim = 233
+		add_state_claim = 826
+		add_state_claim = 231
+		add_state_claim = 827
+		add_state_claim = 828
+		add_state_claim = 821
+
+		add_state_claim = 232
+		add_state_claim = 229
+		add_state_claim = 230
+
+        unlock_decision_tooltip = UKR_Greater_Ukraine_fasicm_decision
 
 	}
 

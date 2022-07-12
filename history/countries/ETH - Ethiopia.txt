@@ -80,7 +80,7 @@ set_politics = {
 }
 
 
-recruit_character = ETH_fitawrari_yeebio_woldai
+#recruit_character = ETH_fitawrari_yeebio_woldai
 recruit_character = ETH_seyoum_mengesha
 recruit_character = ETH_amare_makonnen
 recruit_character = ETH_queen_of_sheba

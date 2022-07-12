@@ -14,4 +14,16 @@ opinion_modifiers = {
 		value = 50
 	}
 
+	UKR_GER_ENGFRA_hostility = {
+		value = -30
+	}
+
+	UKR_POL_hostility = {
+		value = -30
+	}
+
+	UKR_POL_rapprochement = {
+		value = 30
+	}
+
 }

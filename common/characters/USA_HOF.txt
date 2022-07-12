@@ -75,8 +75,8 @@ characters={
 			}
 		}
 	}
-	usa_muesys={
-		name = "Muesys"
+	usa_muelsyse={
+		name = "Muelsyse"
 		portraits={
 			civilian={
 				large="gfx/leaders/USA/Portrait_Muesys.png"

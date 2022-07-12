@@ -326,6 +326,7 @@ all_china_must_prosper_in_my_prosperity_sphere_SIK = {
 			}
 		}
 		country_exists = SIK
+        NOT = { SIK = { is_guaranteed_by = SOV } }
 		NOT = { 
 			SIK = {
 				OR = {
@@ -1132,7 +1133,7 @@ jap_early_invasions_are_risky_and_best_wait_for_later = {
 	
 	abort = {
 		OR = {
-			date < 1939.1.1
+			date > 1939.1.1
 			BEY = { has_capitulated = yes }
 			BEY = { is_subject_of = JAP }
 			NOT = { country_exists = BEY }		
@@ -1507,5 +1508,82 @@ CHI_accept_JAP_access_DAME = {
 		id = JAP
 		target = military_access
 		value = 1000
+	}
+}
+
+JAP_intervene_in_china_important_base_qingdao = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		controls_state = 743
+	}
+
+	abort = { 
+		OR = {
+			has_war_with = ENG 
+			has_war_with = FRA 
+			has_war_with = USA 
+			NOT = { country_exists = CHI }
+			CHI = { surrender_progress > 0.3 }
+			CHI = { has_capitulated = yes }
+			CHI = { is_in_faction_with = JAP }
+			CHI = { is_subject = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# asia
+		states = {
+			743 #qingdao
+		}
+
+		ratio = 0.1
+
+		area = asia
+
+		subtract_invasions_from_need = no
+	}
+}
+
+JAP_intervene_in_china_important_base_rehe = {
+	allowed = {
+		tag = JAP
+	}
+	enable = {
+		OR = {
+			controls_state = 610
+			MAN = { controls_state = 610 }
+		}
+	}
+
+	abort = { 
+		OR = {
+			has_war_with = ENG 
+			has_war_with = FRA 
+			has_war_with = USA 
+			NOT = { country_exists = CHI }
+			CHI = { surrender_progress > 0.3 }
+			CHI = { has_capitulated = yes }
+			CHI = { is_in_faction_with = JAP }
+			CHI = { is_subject = yes }
+		}
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		# asia
+		states = {
+			610 #rehe
+		}
+
+		ratio = 0.1
+
+		area = asia
+
+		subtract_invasions_from_need = no
 	}
 }

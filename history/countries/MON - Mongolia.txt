@@ -8,6 +8,7 @@ set_technology = {
 }
 
 add_ideas = {
+	SOV_Focus_on_the_inside_idea
 	limited_conscription
 }
 set_popularities = {
