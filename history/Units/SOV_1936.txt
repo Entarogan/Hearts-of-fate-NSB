@@ -1713,8 +1713,9 @@ instant_effect = {
 
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_1
+			type = light_tank_chassis_1
 			creator = "SOV" 
+			version_name = "BT-5"
 		}
 		requested_factories = 3
 		progress = 0.4

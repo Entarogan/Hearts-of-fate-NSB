@@ -1,7 +1,7 @@
 characters={
 
 	FIN_luviagelita_edefelt={
-		name="Luviagelita Edefelt"
+		name="FIN_luviagelita_edefelt"
 		portraits={
 			civilian={
 				large="gfx/leaders/FIN/Portrait_Luviagelita_Edefelt.dds"

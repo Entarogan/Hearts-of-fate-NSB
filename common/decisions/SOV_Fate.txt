@@ -122,6 +122,8 @@ operations = {
 			command_power > 14.9
 		}
 
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
 		visible = {
 			NOT = {
 				has_country_leader  = {
@@ -138,7 +140,7 @@ operations = {
 			NOT = { has_country_flag = SOV_Give_priority_to_Russia_flag }
 		}
 
-		days_remove = 120
+		days_remove = 180
 		fire_only_once = yes
 
 		complete_effect = {
@@ -151,7 +153,7 @@ operations = {
 		targeted_modifier = {
 			tag = UKR
 			attack_bonus_against = 0.15
-			breakthrough_bonus_against = 0.15
+			breakthrough_bonus_against = 0.20
 		}
 		modifier = {
 
@@ -161,7 +163,7 @@ operations = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 300
 		}
 	}
 
@@ -182,6 +184,8 @@ operations = {
 			command_power > 14.9
 		}
 
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
 		visible = {
 			NOT = {
 				has_country_leader  = {
@@ -198,7 +202,7 @@ operations = {
 			has_country_flag = SOV_Give_priority_to_Ukraine_flag
 		}
 
-		days_remove = 120
+		days_remove = 180
 		fire_only_once = yes
 
 		complete_effect = {
@@ -240,6 +244,8 @@ operations = {
 			command_power > 14.9
 		}
 
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
 		visible = {
 			NOT = {
 				has_country_leader  = {
@@ -256,7 +262,7 @@ operations = {
 			NOT = { has_country_flag = SOV_Give_priority_to_Ukraine_flag }
 		}
 
-		days_remove = 120
+		days_remove = 180
 		fire_only_once = yes
 
 		complete_effect = {
@@ -269,7 +275,7 @@ operations = {
 		targeted_modifier = {
 			tag = RUS
 			attack_bonus_against = 0.15
-			breakthrough_bonus_against = 0.15
+			breakthrough_bonus_against = 0.20
 		}
 		modifier = {
 
@@ -300,6 +306,8 @@ operations = {
 			command_power > 14.9
 		}
 
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
 		visible = {
 			NOT = {
 				has_country_leader  = {
@@ -316,7 +324,7 @@ operations = {
 			has_country_flag = SOV_Give_priority_to_Russia_flag
 		}
 
-		days_remove = 120
+		days_remove = 180
 		fire_only_once = yes
 
 		complete_effect = {
@@ -358,6 +366,8 @@ operations = {
 		custom_cost_trigger = {
 			command_power > 14.9
 		}
+
+		custom_cost_text = TUR_decision_cost_kurd_rebels
 
 		visible = {
 			has_country_leader  = {
@@ -3008,6 +3018,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 		is_good = yes 
 		activation = {
+			always = no
 			OR = {
 				TAG = RUS
 				TAG = SOV
@@ -3682,6 +3693,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 		is_good = yes 
 		activation = {
+			always = no
 			OR = {
 				TAG = SOV
 				TAG = RUS
@@ -5856,7 +5868,7 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 60
 
 		visible = {
 			has_completed_focus = SOV_Continue_to_enforce_collectivization
@@ -5939,7 +5951,7 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 60
 
 		visible = {
       or = {
@@ -6021,7 +6033,7 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 60
 
 		visible = {
 			has_completed_focus = SOV_Continue_to_enforce_collectivization
@@ -6103,49 +6115,50 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 30
 
 		visible = {
-      or = {
-        has_completed_focus = SOV_Continue_to_enforce_collectivization
-        has_completed_focus = SOV_Voluntary_collectivization
-        has_country_flag = SOV_Support_resource_collectivization_flag
-        has_country_flag = SOV_Support_compulsory_collectivization_flag
-      }
+			or = {
+				has_completed_focus = SOV_Continue_to_enforce_collectivization
+				has_completed_focus = SOV_Voluntary_collectivization
+				has_country_flag = SOV_Support_resource_collectivization_flag
+				has_country_flag = SOV_Support_compulsory_collectivization_flag
+			}
 		}
 		available = {
-      or = {
-        has_idea = SOV_agricultural_collectivization_5
-        has_idea = SOV_Voluntary_collectivization_idea
-      }
+			num_of_factories > 100
+			or = {
+				has_idea = SOV_agricultural_collectivization_5
+				has_idea = SOV_Voluntary_collectivization_idea
+			}
 		}		
 
-			modifier = {
-		    research_speed_factor = -0.05
-				consumer_goods_factor = 0.03
-			}
+		modifier = {
+			research_speed_factor = -0.05
+			consumer_goods_factor = 0.03
+		}
 
 		remove_effect = {
 
-      if = {
-        limit = {
-          has_idea = SOV_agricultural_collectivization_5
-        }
-        swap_ideas = {
-          remove_idea = SOV_agricultural_collectivization_5
-          add_idea = SOV_agricultural_collectivization_6
-        }
-      }
+			if = {
+				limit = {
+				  has_idea = SOV_agricultural_collectivization_5
+				}
+				swap_ideas = {
+				  remove_idea = SOV_agricultural_collectivization_5
+				  add_idea = SOV_agricultural_collectivization_6
+				}
+			}
 
-      if = {
-        limit = {
-          has_idea = SOV_Voluntary_collectivization_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_Voluntary_collectivization_idea
-          add_idea = SOV_Voluntary_collectivization_idea_1
-        }
-      }
+			if = {
+				limit = {
+				  has_idea = SOV_Voluntary_collectivization_idea
+				}
+				swap_ideas = {
+				  remove_idea = SOV_Voluntary_collectivization_idea
+				  add_idea = SOV_Voluntary_collectivization_idea_1
+				}
+			}
 
 		}
 		ai_will_do = {
@@ -6161,7 +6174,7 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 150
 
 		visible = {
       or = {
@@ -6210,7 +6223,7 @@ SOV_agricultural_collectivization = {
 
     fire_only_once = no
 
-    days_remove = 30
+    days_remove = 10
 
     modifier = {
       political_power_gain = -0.20
@@ -6242,7 +6255,7 @@ SOV_agricultural_collectivization = {
 
     fire_only_once = no
 
-    days_remove = 30
+    days_remove = 10
 
     modifier = {
       political_power_gain = -0.20
@@ -6435,7 +6448,7 @@ SOV_agricultural_collectivization = {
 
 		fire_only_once = yes
 
-		days_remove = 120
+		days_remove = 90
 
 		visible = {
 		    has_country_flag = SOV_Support_compulsory_collectivization_flag

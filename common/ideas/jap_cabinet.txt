@@ -484,83 +484,83 @@ ideas = {
   
   }
   
-  kizoku_in = {
+	special_first = {
 
-    JAP_yakumo_yukari = {
-      picture = yakumo_yukari
+		JAP_yakumo_yukari = {
+			picture = yakumo_yukari
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
+
 			removal_cost = -1
-      
+
 			traits = { the_hand_behind_the_scenes veteran }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_matara_okina = {
-      picture = matara_okina
+		}
+
+		JAP_matara_okina = {
+			picture = matara_okina
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+
+			removal_cost = -1
+
 			traits = { low_profile_schemer veteran }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_ibaraki_kasen = {
-      picture = ibaraki_kasen
+		}
+
+		JAP_ibaraki_kasen = {
+			picture = ibaraki_kasen
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+
+			removal_cost = -1
+
 			traits = { reform_supporter veteran }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    Non = {
-		picture = non
-		allowed_to_remove = {
-			always = no
 		}
-		default = yes
-		removal_cost = -1
 
-		traits = {  }
+		Non = {
+			picture = non
+			allowed_to_remove = {
+				always = no
+			}
+			default = yes
+			removal_cost = -1
 
-		ai_will_do = {
-			factor = 5
+			traits = {  }
+
+			ai_will_do = {
+				factor = 5
+			}
 		}
-    }
 
-  }
+	}
   
   
-  sumitsu_in = {
+	special_second = {
 
-    JAP_yasaka_kanako = {
+		JAP_yasaka_kanako = {
 			picture = yasaka_kanako
 			allowed_to_remove = {
 				always = no
@@ -574,9 +574,9 @@ ideas = {
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_hinanawi_tenshi = {
+		}
+
+		JAP_hinanawi_tenshi = {
 			picture = hinanawi_tenshi
 			allowed_to_remove = {
 				always = no
@@ -590,9 +590,9 @@ ideas = {
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_hijiri_byakuren = {
+		}
+
+		JAP_hijiri_byakuren = {
 			picture = hijiri_byakuren
 			allowed_to_remove = {
 				always = no
@@ -606,10 +606,10 @@ ideas = {
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_osakabehime = {
-      picture = osakabehime
+		}
+
+		JAP_osakabehime = {
+			picture = osakabehime
 			allowed_to_remove = {
 				always = no
 			}
@@ -622,86 +622,86 @@ ideas = {
 			ai_will_do = {
 				factor = 5
 			}
-    }   
-    
-    Non_1 = {
-      picture = non
-      name = Non
-      allowed_to_remove = {
+		}   
+
+		Non_1 = {
+			picture = non
+			name = Non
+			allowed_to_remove = {
 				always = no
 			}
 			default = yes
-      removal_cost = -1
-      
+			removal_cost = -1
+
 			traits = {  }
 			
 			ai_will_do = {
 				factor = 5
 			}
-    }
+		}
 
-    
-  }
+
+	}
   
-  gaimu_daijin = {
+	special_third = {
 
-    JAP_kirisame_marisa = {
-      picture = kirisame_marisa
+		JAP_kirisame_marisa = {
+			picture = kirisame_marisa
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+
+			removal_cost = -1
+
 			traits = { kirisame_diplomacy  robber }
-      
-      targeted_modifier = {
-        tag = CHI
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = PRC
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = SHX
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = GXC
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = GDC
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = YUN
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = XSM
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = SIK
-        generate_wargoal_tension_against = 0.75
-      }
-      targeted_modifier = {
-        tag = FTC
-        generate_wargoal_tension_against = 0.75
-      }
-      
-			
+
+			targeted_modifier = {
+			tag = CHI
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = PRC
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = SHX
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = GXC
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = GDC
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = YUN
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = XSM
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = SIK
+			generate_wargoal_tension_against = 0.75
+			}
+			targeted_modifier = {
+			tag = FTC
+			generate_wargoal_tension_against = 0.75
+			}
+
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_akechi_mitsuhide = { # 明智光秀
+		}
+
+		JAP_akechi_mitsuhide = { # 明智光秀
 			#ledger = military
 			#name = JAP_akechi_mitsuhide
 			picture = JAP_akechi_mitsuhide
@@ -709,32 +709,32 @@ ideas = {
 				tag = JAP
 			}
 			available = {
-        
+
 			}
-      removal_cost = -1
-      
+			removal_cost = -1
+
 			traits = { crafty_strategist }
 		}
-    
-    JAP_komeiji_satori = {
-      picture = komeiji_satori
+
+		JAP_komeiji_satori = {
+			picture = komeiji_satori
 			allowed_to_remove = {
 				always = no
 			}
 			allowed = {
 				original_tag = JAP
 			}
-      
-      removal_cost = -1
-      
+
+			removal_cost = -1
+
 			traits = { mind_reader }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
-    
-    JAP_kotomine_kirei = {
+		}
+
+		JAP_kotomine_kirei = {
 
 
 			allowed = {
@@ -744,9 +744,9 @@ ideas = {
 				always = no
 			}
 			picture = kotomine_kirei
-			
+
 			removal_cost = -1
-			
+
 			traits = { back_stacker }
 
 			ai_will_do = {
@@ -754,26 +754,26 @@ ideas = {
 			}
 		}
 
-    Non_4 = {
-      picture = non
-      name = Non
-	  default = yes
-      allowed_to_remove = {
+		Non_4 = {
+			picture = non
+			name = Non
+			default = yes
+			allowed_to_remove = {
 				always = no
 			}
-      removal_cost = -1
-      
+			removal_cost = -1
+
 			traits = {  }
-			
+
 			ai_will_do = {
 				factor = 5
 			}
-    }
+		}
+
+	}
   
-  }
   
-  
-  rikugun_daijin = {
+  special_fourth = {
 
     JAP_oda_nobunaga = {
       picture = oda_nobunaga
@@ -919,7 +919,7 @@ ideas = {
   
   }
   
-  kaigun_daijin = {
+  special_fifth = {
 
     JAP_mikasa = {
       picture = mikasa
@@ -957,8 +957,8 @@ ideas = {
 			}
     }
     
-    JAP_shoukaku = {
-      picture = shoukaku
+    JAP_Mutsu = {
+      picture = JAP_Mutsu
 			allowed_to_remove = {
 				always = no
 			}
@@ -1011,7 +1011,7 @@ ideas = {
 
   }
   
-  jinja_kyoku = {
+  special_sixth = {
 
     JAP_hakurei_reimu = {
       picture = hakurei_reimu

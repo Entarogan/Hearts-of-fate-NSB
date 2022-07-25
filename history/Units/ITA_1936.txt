@@ -616,10 +616,11 @@ instant_effect = {
 		} 
 
 		add_equipment_production = { 
-			equipment = { 
-				type = light_tank_equipment_1 
+			equipment = {
+				type = light_tank_chassis_1
 				creator = "ITA" 
-			} 
+				version_name = "L3/35"
+			}
 
 			requested_factories = 1 
 			progress = 0.4 

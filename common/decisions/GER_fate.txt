@@ -38,110 +38,6 @@ GER_war_plan = {
 			}
 			activate_mission = GER_barbarossa_mission
 			set_country_flag = GER_barbarossa_start_flag
-			if = {
-				limit = {
-		      always = no
-					tag = GER
-					is_ai = yes
-					any_enemy_country = {
-						is_ai = no
-						or = {
-							tag = SOV
-							tag = RUS
-						}
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment
-					amount = 750
-					producer = GER
-				}
-				if = {
-					limit = {
-						has_tech = mechanised_infantry
-					}
-					add_equipment_to_stockpile = {
-						type = mechanized_equipment
-						amount = 1000
-						producer = GER
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = armored_car_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_chassis
-					amount = 750
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_destroyer_equipment
-					amount = 200
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_artillery_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_aa_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis
-					amount = 250
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = CAS_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment
-					amount = 100
-					producer = GER
-				}
-			}
 		}
 		targeted_modifier = {
 			tag = SOV
@@ -194,110 +90,6 @@ GER_war_plan = {
 			}
 			activate_mission = GER_barbarossa_mission
 			set_country_flag = GER_barbarossa_start_flag
-			if = {
-				limit = {
-		      always = no
-					tag = GER
-					is_ai = yes
-					any_enemy_country = {
-						is_ai = no
-						or = {
-							tag = SOV
-							tag = RUS
-						}
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = infantry_equipment
-					amount = 10000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = support_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = artillery_equipment
-					amount = 1000
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_air_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = anti_tank_equipment
-					amount = 500
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = motorized_equipment
-					amount = 750
-					producer = GER
-				}
-				if = {
-					limit = {
-						has_tech = mechanised_infantry
-					}
-					add_equipment_to_stockpile = {
-						type = mechanized_equipment
-						amount = 1000
-						producer = GER
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = armored_car_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_chassis
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_chassis
-					amount = 750
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_destroyer_equipment
-					amount = 200
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_artillery_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_aa_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = heavy_tank_chassis
-					amount = 250
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = fighter_equipment
-					amount = 300
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = CAS_equipment
-					amount = 150
-					producer = GER
-				}
-				add_equipment_to_stockpile = {
-					type = tac_bomber_equipment
-					amount = 100
-					producer = GER
-				}
-			}
 		}
 		targeted_modifier = {
 			tag = RUS
@@ -328,7 +120,7 @@ GER_war_plan = {
 					is_ai = yes
 					SOV = {
 						is_ai = yes
-			      is_subject = no
+						is_subject = no
 					}
 				}
 			}
@@ -383,7 +175,7 @@ GER_war_plan = {
 					is_ai = yes
 					RUS = {
 						is_ai = yes
-			      is_subject = no
+						is_subject = no
 					}
 				}
 			}
@@ -460,7 +252,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    army_core_attack_factor = 0.10
+		    army_core_attack_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -515,7 +307,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    army_core_attack_factor = 0.10
+		    army_core_attack_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -570,7 +362,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    army_core_attack_factor = 0.10
+		    army_core_attack_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -630,7 +422,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    air_cas_present_factor = 0.1
+		    air_cas_present_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -685,7 +477,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    air_cas_present_factor = 0.1
+		    air_cas_present_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -779,8 +571,8 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-			army_core_attack_factor = 0.10
-			army_core_defence_factor = 0.10
+			army_core_attack_factor = 0.05
+			army_core_defence_factor = 0.05
 		}
 		remove_effect = {
 		}
@@ -821,7 +613,7 @@ GER_war_plan = {
 			breakthrough_bonus_against = 0.15
 		}
 		modifier = {
-		    air_cas_present_factor = 0.1
+		    air_cas_present_factor = 0.05
 		}
 		remove_effect = {
 
@@ -875,7 +667,7 @@ GER_war_plan = {
 		modifier = {
 			invasion_preparation = -0.15
 			amphibious_invasion = 0.15
-		  navy_submarine_detection_factor = 0.1
+			navy_submarine_detection_factor = 0.1
 			naval_strike_attack_factor = 0.05
 			naval_strike_targetting_factor = 0.05
 		}

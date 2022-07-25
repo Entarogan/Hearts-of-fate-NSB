@@ -955,7 +955,7 @@
  
  Silent_workaholic:0 "Silent Workaholic"
  
- GER_adolf_hitler:0 "Adolf Hitler"
+ #GER_adolf_hitler:0 "Adolf Hitler"
  
  Instigator:0 "Instigator"
  
@@ -991,7 +991,7 @@
  
  Elitist_advocate:0 "Elistist Advocate"
  
- GER_Herbert_Gille:0 "Herbert Otto Gille"
+ #GER_Herbert_Gille:0 "Herbert Otto Gille"
  
  Field_commander:0 "Field Commander"
  
@@ -1631,21 +1631,21 @@
  more_ger.86.b:0 "Heidegger, a pro-national socialist professor, was appointed. "
  more_ger.86.c:0 "Darnic can do better. "
 
- GER_graf_zeppelin:0 "Graf Zeppelin"
- GER_vivi_schweinsteiger_strasserism:0 "Vivi Schweinsteiger"
- GER_otto_von_bismark:0 "Otto von Bismark"
- GER_rusalka_schwagerin:0 "Rusalka Schwägerin"
- GER_franz_von_hipper:0 "Franz von Hipper"
- GER_fritz_schneewind:0 "Fritz Schneewind "
- GER_gertrud_barkhorn:0 "Gertrud Barkhorn"
- GER_minna_dietlinde_wilcke:0 "Minna-Dietlinde Wilcke"
- GER_heinrike_sayn_wittgenstein:0 "Heinrich-Say Wittgenstein"
- GER_schmeisser_gewehr:0 "Schmeisser Gewehr"
- GER_gretel_jeckeln_strasserism:0 "Gretel Jacklin"
- GER_peter_strasser:0 "Peter Strasser"
- GER_maho_nishizumi:0 "Maho Nishizumi"
- GER_prince_eugen:0 "Prinz Eugen"
- GER_erica_hartmann:0 "Erica Hartmann"
+ #GER_graf_zeppelin:0 "Graf Zeppelin"
+ #GER_vivi_schweinsteiger_strasserism:0 "Vivi Schweinsteiger"
+ #GER_otto_von_bismark:0 "Otto von Bismark"
+ #GER_rusalka_schwagerin:0 "Rusalka Schwägerin"
+ #GER_franz_von_hipper:0 "Franz von Hipper"
+ #GER_fritz_schneewind:0 "Fritz Schneewind "
+ #GER_gertrud_barkhorn:0 "Gertrud Barkhorn"
+ #GER_minna_dietlinde_wilcke:0 "Minna-Dietlinde Wilcke"
+ #GER_heinrike_sayn_wittgenstein:0 "Heinrich-Say Wittgenstein"
+ #GER_schmeisser_gewehr:0 "Schmeisser Gewehr"
+ #GER_gretel_jeckeln_strasserism:0 "Gretel Jacklin"
+ #GER_peter_strasser:0 "Peter Strasser"
+ #GER_maho_nishizumi:0 "Maho Nishizumi"
+ #GER_prince_eugen:0 "Prinz Eugen"
+ #GER_erica_hartmann:0 "Erica Hartmann"
 
  naval_aircraft_amrs_organizer:0 "Naval Aircraft Arms Organizer"
  people_industry_committee:0 "Volksindustrieausschuss"

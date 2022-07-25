@@ -13,7 +13,7 @@ characters={
 		}
 	}
 	ALB_enver_hoxha={
-		name="Enver Hoxha"
+		name="ALB_enver_hoxha"
 		portraits={
 			civilian={
 				large="gfx/leaders/ALB/Portrait_Albania_Enver_Hoxha.tga"

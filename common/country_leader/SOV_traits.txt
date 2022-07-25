@@ -164,7 +164,7 @@ leader_traits = {
 			}
 	    }
 		command_cap = 20
-		experience_gain_army = 0.12
+		experience_gain_army = 0.09
 
     }
     
@@ -179,7 +179,7 @@ leader_traits = {
 		army_morale_factor = 0.05
 		land_reinforce_rate = 0.05
 
-		command_cap = 20
+		command_cap = 10
 		experience_gain_army = 0.12
 
 	}
@@ -190,13 +190,11 @@ leader_traits = {
 
 		ai_will_do = { factor = 1 }
 		
-		army_speed_factor = 0.05
-        breakthrough_factor = 0.05
+		army_speed_factor = 0.10
         org_loss_when_moving = -0.10
 
-		command_cap = 15
+		command_cap = 20
 		experience_gain_army = 0.09
-
 
 	}
 	
@@ -209,7 +207,8 @@ leader_traits = {
 		dig_in_speed_factor = 0.20
 		recon_factor_while_entrenched = 0.10
 		max_dig_in = 5
-		command_cap = 15
+
+		command_cap = 20
 		experience_gain_army = 0.09
 
 	}
@@ -222,39 +221,38 @@ leader_traits = {
 		
 		army_attack_factor = 0.1
 		no_supply_grace = 24
-    experience_loss_factor = -0.1
+		experience_loss_factor = -0.1
 		land_reinforce_rate = 0.03
 
-		command_cap = 15
+		command_cap = 20
 		experience_gain_army = 0.09
 
 	}
 	
 	SOV_inia_sestina_T = {
-	random = no
+		random = no
 		sprite = 13
 
 		ai_will_do = { factor = 1 }
 		
 		army_infantry_attack_factor = 0.25
-	  army_morale_factor = 0.1
+		army_infantry_defence_factor = -0.1	
 
-		org_loss_when_moving = -0.05
 
-		command_cap = 15
+		army_morale_factor = 0.1
+
+		command_cap = 20
 		experience_gain_army = 0.09
-
-
 	}
 	
 	SOV_konstantin_rokossovsky_T = {
-	random = no
+		random = no
 		sprite = 8
 
 		ai_will_do = { factor = 1 }
 		
-    max_command_power = 15  
-    
+		max_command_power = 15  
+
 		max_planning = 0.10
 
 		army_armor_attack_factor = 0.20
@@ -264,13 +262,13 @@ leader_traits = {
 		mechanized_attack_factor = 0.10
 		mechanized_defence_factor = 0.10
 
-		command_cap = 20
+		command_cap = 10
 		experience_gain_army = 0.12
 
-}
+	}
 
-    SOV_cryska_barchenowa_T = {
-	random = no
+	SOV_cryska_barchenowa_T = {
+		random = no
 		sprite = 5
 
 		ai_will_do = { factor = 1 }
@@ -280,36 +278,37 @@ leader_traits = {
 		mobilization_speed = 0.2
 
 		command_cap = 20
-		experience_gain_army = 0.12
-}
+		experience_gain_army = 0.09
+	}
 
-    SOV_ivan_konev_T = {
-	random = no
+	SOV_ivan_konev_T = {
+		random = no
 		sprite = 8
 
 		ai_will_do = { factor = 1 }
-		
+
 		enemy_army_bonus_air_superiority_factor = -0.10
-		army_artillery_attack_factor = 0.1
+		army_artillery_attack_factor = 0.2
+		army_artillery_defence_factor = 0.1
 		army_infantry_attack_factor = 0.1
-		army_morale_factor = 0.1
+
 		command_cap = 20
-		experience_gain_army = 0.12
+		experience_gain_army = 0.09
 
-}
+	}
 
-    SOV_vasily_chapayev_T = {
-	random = no
-	sprite = 6
+	SOV_vasily_chapayev_T = {
+		random = no
+		sprite = 6
 
 		ai_will_do = { factor = 1 }
 		naval_speed_factor = 0.09
 		navy_anti_air_attack_factor = 0.09
-		navy_submarine_detection_factor = 0.2
+		navy_submarine_detection_factor = 0.1
 		command_cap = 20
-		experience_gain_navy = 0.12
+		experience_gain_navy = 0.09
 
-}
+	}
 
     SOV_sanya_litvyak_T = {
 	random = no
@@ -320,26 +319,28 @@ leader_traits = {
 		air_air_superiority_attack_factor = 0.07
 		air_interception_attack_factor = 0.07
 		air_weather_penalty = -0.1
-		command_cap = 20
+
+		command_cap = 10
 		experience_gain_air = 0.12
 		
 }
 
-    SOV_aleksandr_vasilevsky_T = {
-	random = no
+	SOV_aleksandr_vasilevsky_T = {
+		random = no
 		sprite = 5
 
 		ai_will_do = { factor = 1 }
-	winter_attrition_factor = -0.15
-	attrition = -0.1
-	army_infantry_attack_factor = 0.1
-	army_infantry_defence_factor = 0.15
-	command_cap = 20
-		experience_gain_army = 0.12
-}
+		winter_attrition_factor = -0.15
+		attrition = -0.1
+		army_infantry_attack_factor = 0.1
+		army_infantry_defence_factor = 0.15
+
+		command_cap = 20
+		experience_gain_army = 0.09
+	}
     
 	SOV_sovetskaya_rossiya_T = {
-	random = no
+		random = no
 		sprite = 3
 
 		ai_will_do = { factor = 1 }
@@ -348,23 +349,24 @@ leader_traits = {
 		navy_screen_attack_factor = 0.15
 		navy_screen_defence_factor = 0.15
 		navy_max_range_factor = 0.15
-		command_cap = 20
+
+		command_cap = 10
 		experience_gain_navy = 0.12
 
-}
+	}
 
-    deep_battle_expert = {
-	random = no
+	deep_battle_expert = {
+		random = no
 		sprite = 14
 
 		ai_will_do = { factor = 1 }
-	experience_gain_army = 0.05
-	max_planning = -0.05
-  army_attack_factor = 0.05
-	army_speed_factor = 0.05
-	command_cap = 20
-		experience_gain_navy = 0.12
-}
+
+		army_attack_factor = 0.05
+		army_speed_factor = 0.05
+
+		cat_mass_assault_cost_factor = -0.15
+
+	}
 
     SOV_industrial_concern = {
 	random = no

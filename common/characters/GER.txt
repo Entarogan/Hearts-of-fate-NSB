@@ -63,18 +63,6 @@ characters={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
 			}
-		}
-		advisor={
-			slot = special_first
-			idea_token = GER_erwin_rommel
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Active_minded_general }			
 		}	
 		advisor={
 			slot = high_command
@@ -89,7 +77,7 @@ characters={
 			traits = {
 				GER_rommel_T
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 50.000
 			}
@@ -113,29 +101,13 @@ characters={
 			}
 		}
 		advisor={
-			slot = special_third
-			idea_token = GER_manstein
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Master_of_Strategy }
-
-			ai_will_do = {
-				factor = 5.000
-			}
-		}
-		advisor={
 			slot = theorist
 			idea_token = manstein
 			allowed = {
 				original_tag = GER
 			}
 
-			cost = 100
+			cost = 200
 			research_bonus = {
 				armor = 0.1
 			}
@@ -172,7 +144,7 @@ characters={
 				original_tag = GER
 			}
 
-			cost = 100
+			cost = 150
 			research_bonus = {
 				#land_doctrine = 0.10
 				armor = 0.1
@@ -258,22 +230,6 @@ characters={
 			army={
 				small="gfx/interface/ideas/idea_GER_walter_model.dds"
 				large="gfx/leaders/GER/Portrait_Germany_Walter_Model.dds"
-			}
-		}
-		advisor={
-			slot = special_third
-			idea_token = GER_Walter_Model
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Firefighter }
-
-			ai_will_do = {
-				factor = 5.000
 			}
 		}
 		corps_commander={
@@ -764,21 +720,7 @@ characters={
 			army={
 				large="gfx/leaders/GER/Portrait_GER_Herbert_Gille_TST.dds"
 			}
-		}
-		advisor={
-			slot = special_fourth
-			idea_token = GER_Herbert_Gille
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Field_commander
-			}
-			removal_cost = -1
-			ai_will_do = {
-				factor = 5.000
-			}
-		}		
+		}	
 		corps_commander={
 			traits={ bearer_of_artillery brilliant_strategist cavalry_officer armor_officer politically_connected }
 			skill=4
@@ -873,7 +815,7 @@ characters={
 		name=GER_siegfried
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/Portrait_Siegfried.dds"
+				large="gfx/leaders/GER/Portrait_Siegfried_2.png"
 			}
 		}
 		country_leader={
@@ -882,6 +824,17 @@ characters={
 			traits={ Wachter_des_Vaterlandes Das_Rheingold }
 			expire="1965.1.1.1"
 			id=-1
+		}
+	}
+	GER_Kriemhild={
+		name=GER_Kriemhild
+		portraits={
+			civilian={
+				large="gfx/leaders/GER/Portrait_Kriemhild.png"
+			}
+			army={
+				large="gfx/leaders/GER/Portrait_Kriemhild.png"
+			}
 		}
 	}
 	GER_arcueid_brunestud={
@@ -1000,9 +953,9 @@ characters={
 			traits = {
 				GER_donitz_T
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
-				factor = 20.000
+				factor = 15.000
 			}
 		}
 		navy_leader={
@@ -1323,6 +1276,7 @@ characters={
 				small="GFX_idea_walther_funk"
 			}
 		}
+
 		advisor={
 			slot = political_advisor
 			idea_token = walther_funk
@@ -1330,29 +1284,19 @@ characters={
 				original_tag = GER
 			}
 			available = {
-        or = {
-          has_completed_focus = GER_Goring_Project
-          has_country_flag = arrest_Strasser
-        }
-        custom_trigger_tooltip = {
-          tooltip = GER_Bring_in_foreign_workers_tt
-          any_state = {
-            NOT = { is_core_of = ROOT }
-            or = {
-              is_controlled_by = ROOT
-              any_country = {
-                is_subject_of = ROOT
-                controls_state = PREV
-              }
-            }
-          }
-        }
+				NOT = { has_country_flag = arrest_goering }
+				or = {
+					has_completed_focus = GER_Goring_Project
+					has_country_flag = arrest_Strasser
+				}
+				NOT = { has_completed_focus = GER_Authorize_the_new_armaments_minister }
 			}
 			traits = {
 				GER_funk_T
 			}
+			cost = 75
 			ai_will_do = {
-				factor = 50.000
+				factor = 100.000
 			}
 		}		
 	}
@@ -1530,40 +1474,19 @@ characters={
 			}
 		}
 		advisor={
-			slot = political_advisor
-			idea_token = herman_Goring_advisor
-			allowed = {
-				original_tag = GER
-			}
-			available = {
-				NOT = { has_idea = goering }	
-        NOT = { has_country_flag = arrest_goering }
-				has_completed_focus = GER_Goring_Project
-				NOT = { has_completed_focus = GER_Authorize_the_new_armaments_minister }
-			}
-			traits = {
-				Corrupt_bureaucracy Military_builders
-			}
-			cost = 75
-			ai_will_do = {
-				factor = 100.000
-			}
-		}
-		advisor={
 			slot = air_chief
 			idea_token = goering
 			allowed = {
 				original_tag = GER
 			}
 			available = {
-				NOT = { has_idea = herman_Goring_advisor }	
-        NOT = { has_country_flag = arrest_goering }
-        has_government = fascism
+				NOT = { has_country_flag = arrest_goering }
+				has_government = fascism
 			}
 			traits = {
 				GER_goring_T
 			}
-			cost = 100
+			cost = 50
 			ai_will_do = {
 				factor = 30.000
 			}
@@ -1715,7 +1638,7 @@ characters={
 			traits = {
 				GER_shutze_T
 			}
-			cost =  50
+			cost =  100
 			ai_will_do = {
 				factor = 0.000
 			}
@@ -1862,18 +1785,6 @@ characters={
 			army={
 				small="GFX_idea_Anton_Drexler"
 			}
-		}
-		advisor={
-			slot = special_first
-			idea_token = GER_Anton_Drexler
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Happy_amateur_politician }			
 		}	
 	}
 
@@ -1894,7 +1805,7 @@ characters={
 				original_tag = GER
 			}
 			available = {
-        NOT = { has_country_flag = arrest_Strasser }
+				NOT = { has_country_flag = arrest_Strasser }
 				has_completed_focus = GER_Strasser_Project
 			}
 			traits = {
@@ -1904,18 +1815,6 @@ characters={
 			ai_will_do = {
 				factor = 100.000
 			}
-		}
-		advisor={
-			slot = special_first
-			idea_token = GER_otto_strasser
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { dream_come_true_careerist }			
 		}	
 	}
 
@@ -1932,30 +1831,6 @@ characters={
 				large="gfx/leaders/GER/Portrait_Germany_Reinhard_Heydrich.dds"
 			}
 		}
-		advisor={
-			slot = special_first
-			idea_token = GER_Reinhard_Heydrich_leader
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Silent_workaholic }			
-		}	
-		advisor={
-			slot = special_fifth
-			idea_token = GER_Reinhard_Heydrich
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { heart_of_iron }
-		}
 	}
 
 	GER_Hohenheim_Paracelsus={
@@ -1963,22 +1838,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_Hohenheim_Paracelsus"
-			}
-		}
-		advisor={
-			slot = special_sixth
-			idea_token = GER_Hohenheim_Paracelsus
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Pharmaceutical_experts }
-			
-			ai_will_do = {
-				factor = 5.000
 			}
 		}
 	}
@@ -1990,22 +1849,6 @@ characters={
 				small="GFX_idea_ubstacheit_von_Einzbern"
 			}
 		}
-		advisor={
-			slot = special_sixth
-			idea_token = GER_ubstacheit_von_Einzbern
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Quirky_nobleman }
-			
-			ai_will_do = {
-				factor = 5.000
-			}
-		}
 	}
 
 	GER_Darnic_Prestone={ 
@@ -2015,37 +1858,11 @@ characters={
 				small="GFX_idea_Darnic_Prestone"
 			}
 			army={
-				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.dds"
+				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.png"
 			}
 			civilian={
-				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.dds"
+				large="gfx/leaders/GER/Portrait_Darnic_Prestone_Yggdmillennia_ss.png"
 			}
-		}
-		advisor={
-			slot = special_second
-			idea_token = GER_Darnic_Prestone_2
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Real_politics
-			}
-			removal_cost = -1
-			ai_will_do = {
-				factor = 5.000
-			}
-		}
-		advisor={
-			slot = special_sixth
-			idea_token = GER_Darnic_Prestone
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Nuclear_fanatic }			
 		}	
 	}
 
@@ -2054,20 +1871,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ernst_thalmann"
-			}
-		}
-		advisor={
-			slot = special_first
-			idea_token = GER_ernst_thalmann
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				GER_thalmann_T
-			}
-			removal_cost = -1
-			ai_will_do = {
-				factor = 5.000
 			}
 		}
 	}
@@ -2079,21 +1882,6 @@ characters={
 				small="GFX_idea_Alfred_Rosenberg"
 			}
 		}
-		advisor={
-			slot = special_second
-			idea_token = GER_Alfred_Rosenberg
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Liberator_rosenberg
-			}
-			removal_cost = -1
-
-			ai_will_do = {
-				factor = 5.000
-			}
-		}
 	}
 
 	GER_Martin_Heidegger={
@@ -2102,22 +1890,6 @@ characters={
 			army={
 				small="GFX_idea_Martin_Heidegger"
 			}
-		}
-		advisor={
-			slot = special_second
-			idea_token = GER_Martin_Heidegger
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				National_Socialist_Philosophy
-			}
-
-			ai_will_do = {
-				factor = 5.000
-			}
-
-			removal_cost = -1
 		}
 	}
 
@@ -2128,22 +1900,6 @@ characters={
 				small="GFX_idea_Ernst_Junger"
 			}
 		}
-		advisor={
-			slot = special_second
-			idea_token = GER_Ernst_Junger
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Steel_storm
-			}
-
-			ai_will_do = {
-				factor = 5.000
-			}
-
-			removal_cost = -1
-		}
 	}
 
 	GER_wilhelm_keitel={
@@ -2152,20 +1908,6 @@ characters={
 			army={
 				small="GFX_idea_wilhelm_keitel"
 			}
-		}
-		advisor={
-			slot = special_third
-			idea_token = wilhelm_keitel
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				GER_keitel_T
-			}
-			ai_will_do = {
-				factor = 5.000
-			}
-			removal_cost = -1
 		}		
 	}
 
@@ -2178,20 +1920,6 @@ characters={
 			civilian = {
 				large="gfx/leaders/GER/Portrait_Germany_Himmler.dds"
 			}
-		}
-		advisor={
-			slot = special_fourth
-			idea_token = GER_Heinrich_Himmler
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Reichsfuhrer_SS Mystic
-			}
-			ai_will_do = {
-				factor = 5.000
-			}
-			removal_cost = -1
 		}		
 	}
 
@@ -2201,20 +1929,6 @@ characters={
 			army={
 				small="GFX_idea_Ernst_Rohm"
 			}
-		}
-		advisor={
-			slot = special_fourth
-			idea_token = GER_Ernst_Rohm
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Radical_militia_organizer
-			}
-			ai_will_do = {
-				factor = 5.000
-			}
-			removal_cost = -1
 		}		
 	}
 
@@ -2224,21 +1938,7 @@ characters={
 			army={
 				small="GFX_idea_rudolf_von_sebottendorf"
 			}
-		}
-		advisor={
-			slot = special_fourth
-			idea_token = GER_rudolf_von_sebottendorf
-			allowed = {
-				original_tag = GER
-			}
-			traits = {
-				Elitist_advocate
-			}
-			ai_will_do = {
-				factor = 5.000
-			}
-			removal_cost = -1
-		}		
+		}	
 	}
 
 	GER_wilhelm_canaris={
@@ -2246,22 +1946,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_ger_wilhelm_canaris"
-			}
-		}
-		advisor={
-			slot = special_fifth
-			idea_token = GER_wilhelm_canaris
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Gloomy_mystery }
-			
-			ai_will_do = {
-				factor = 5.000
 			}
 		}
 	}
@@ -2595,6 +2279,9 @@ characters={
 			traits = {
 				navy_chief_naval_aviation_2 
 			}
+
+			cost = 100
+
 		}		
 	}
 
@@ -2618,6 +2305,9 @@ characters={
 			traits = {
 				Nishizumi_style 
 			}
+
+			cost = 200
+
 		}		
 	}
 
@@ -2640,6 +2330,9 @@ characters={
 			traits = {
 				disobedient_talent
 			}
+
+			cost = 200
+
 		}		
 		ai_will_do = {
 			factor = 1.000

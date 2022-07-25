@@ -1,11 +1,11 @@
 idea_categories = {
 	special_politics = {
-		character_slot  = special_first
-		character_slot  = special_second
-		character_slot  = special_third
-		character_slot  = special_fourth
-		character_slot  = special_fifth
-		character_slot  = special_sixth
+		slot = special_first
+		slot = special_second
+		slot = special_third
+		slot = special_fourth
+		slot = special_fifth
+		slot = special_sixth
 		ledger = all
 		
 		cost = 0

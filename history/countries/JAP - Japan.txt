@@ -1,6 +1,6 @@
 ﻿capital = 282
 oob = "JAP_1936"
-set_stability = 0.4#baseline, THE EMPEROR PROTECTS
+set_stability = 0.5#baseline, THE EMPEROR PROTECTS
 set_war_support = 0.5
 set_research_slots = 4
 starting_train_buffer = 3
@@ -24,7 +24,7 @@ add_ideas = {
 	JAP_kirisame_marisa
 	JAP_yasaka_kanako
 	JAP_hakurei_reimu
-	JAP_shoukaku
+	JAP_Mutsu
 }
 
 add_equipment_to_stockpile = {
@@ -75,6 +75,8 @@ set_technology = {
 	fuel_refining = 1
 	armored_car1 = 1
 	basic_train = 1
+
+	bushido = 1
 }
 
 if = {
@@ -977,6 +979,9 @@ recruit_character = JAP_rgouyi_shiki
 recruit_character = JAP_asagami_fujino
 recruit_character = JAP_sizuki_sojyuro
 
+recruit_character = JAP_Akizuki
+recruit_character = JAP_Kitakami
+recruit_character = JAP_Akashi
 
 add_ideas = {
 	JAP_yakumo_yukari

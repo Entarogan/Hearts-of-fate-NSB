@@ -1,5 +1,26 @@
 spriteTypes = {	
 	### UKR
+
+	spriteType = {
+		name = "GFX_idea_UKR_Cossack_tradition"
+		texturefile = "gfx/interface/ideas/UKR_Cossack_tradition.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_DniproHES_damaged"
+		texturefile = "gfx/interface/ideas/UKR_DniproHES_damaged.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_DniproHES"
+		texturefile = "gfx/interface/ideas/UKR_DniproHES.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_UKR_anarchist_guerrilla"
+		texturefile = "gfx/interface/ideas/UKR_anarchist_guerrilla.png"
+	}
+
 	spriteType = {
 		name = "GFX_idea_UKR_oun_subversion"
 		texturefile = "gfx/interface/ideas/UKR_oun_subversion.png"

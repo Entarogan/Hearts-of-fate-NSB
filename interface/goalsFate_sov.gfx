@@ -74,5 +74,12 @@ spriteTypes = {
     name = "GFX_SOV_Expansionism"
     texturefile = "gfx/interface/goals/SOV_Expansionism.png"
   }
+  
+  spriteType = {
+    name = "GFX_focus_SOV_Enver_Plan"
+    texturefile = "gfx/interface/goals/focus_SOV_Enver_Plan.png"
+  }
+  
+  
 
 }

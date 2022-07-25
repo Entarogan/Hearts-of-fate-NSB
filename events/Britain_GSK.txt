@@ -532,37 +532,44 @@ country_event = {
 	desc = gsk_britain.12.d
 	picture = GFX_report_event_refuse_allies
 
+	fire_only_once = yes
+
 	trigger = {
 		has_government = democratic
 		original_tag = ENG
 		has_completed_focus = ENG_steady_as_she_goes
 		date > 1937.1.1
 	}
-	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
 	option = {
 		name = gsk_britain.12.a
 		ai_chance = {
 			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ENG_ai_behavior
-          option = DEMOCRATIC_ANIMUSPHERE
-        }
+				has_game_rule = {
+				  rule = ENG_ai_behavior
+				  option = DEMOCRATIC_ANIMUSPHERE
+				}
 			}
 		}
 
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Lord El Melloi II"
-			desc = "POLITICS_WAVER_DESC"
-			picture = "gfx//leaders//ENG//Portrait_Waver.dds"
-			expire = "1965.1.1"
-			ideology = liberalism
-			traits = {
-        strategy_educator				
+		add_country_leader_role = {
+			character = ENG_Waver
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = liberalism
+				traits = {
+                    strategy_educator
+				}
 			}
+			promote_leader = yes
 		}
+
 	}
 	
 	option = {
@@ -571,27 +578,24 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ENG_ai_behavior
-          option = DEMOCRATIC_EL_MELLOI
-        }
+				has_game_rule = {
+				  rule = ENG_ai_behavior
+				  option = DEMOCRATIC_EL_MELLOI
+				}
 			}
 		}
 
-
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Olga Marie Animusphere"
-			desc = "POLITICS_ANIMUSPHERE_DESC"
-			picture = "gfx//leaders//ENG//Portrait_Olga_Marie_Animusphere.dds"
-			expire = "1940.1.1"
-			ideology = conservatism
-			traits = {
-				elite_action
+		add_country_leader_role = {
+			character = ENG_Olga_Marie_Animusphere
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = conservatism
+				traits = {
+                    elite_action
+				}
 			}
-		}
-		
-		
-		
+			promote_leader = yes
+		}	
+			
 	}
 }

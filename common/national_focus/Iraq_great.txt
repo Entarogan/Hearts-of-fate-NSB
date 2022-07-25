@@ -2537,30 +2537,29 @@ focus_tree = {
 		prerequisite = {
 			focus = ire_tablet_of_destiny
 		}
-    ai_will_do = {
-      factor = 6
-    }
-    available = {
-      threat > 0.29
-    }
+		ai_will_do = {
+		  factor = 6
+		}
+		available = {
+			has_war = yes
+		}
 		x = 1
 		y = 1
 		relative_position_id = ire_tablet_of_destiny
-    completion_reward = {
-      if = {
-        limit = {
-          OR = {
-            has_idea = tot_economic_mobilisation
-            has_idea = war_economy
-          }
-          
-        }
-        add_political_power = 150
-      }
-      else = {
-        add_ideas =  { war_economy }
-      }
-    }
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						has_idea = tot_economic_mobilisation
+						has_idea = war_economy
+					}
+				}
+				add_political_power = 150
+			}
+			else = {
+			    add_ideas =  { war_economy }
+			}
+		}
 
 	}
 	focus = {

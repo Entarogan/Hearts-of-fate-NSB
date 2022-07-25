@@ -352,7 +352,7 @@ shared_focus = {
 					}
 				}
 			}
-			country_event = { id = ukr_reunion.8  days = 50 }
+			country_event = { id = ukr_reunion.8  days = 20 }
 		}
 	}
 
@@ -456,7 +456,7 @@ shared_focus = {
 	completion_reward = {
 		if = {
 			limit = { 
-				check_variable = { talula_san > 0.20 }
+				check_variable = { talula_san > 20 }
 			}
 			hidden_effect = {
 				set_country_flag = UKR_anarchist_normal_flag
@@ -509,6 +509,9 @@ shared_focus = {
 		add_popularity = {
 			ideology = communism
 			popularity = 0.05
+		}
+		hidden_effect = {
+			activate_mission = UKR_Reunion_Patroit_COUP
 		}
 	}
 
@@ -1048,10 +1051,23 @@ shared_focus = {
 	}
 	available = {
 		has_government = communism
+		OR = {
+			SOV = { has_full_control_of_state = 219 }
+			RUS = { has_full_control_of_state = 219 }
+			SOV = { has_full_control_of_state = 195 }
+			RUS = { has_full_control_of_state = 195 }
+			SOV = { has_full_control_of_state = 217 }
+			RUS = { has_full_control_of_state = 217 }
+		}
 	}
+	will_lead_to_war_with = SOV
+	will_lead_to_war_with = RUS
 	x = -2
 	y = 1
 	relative_position_id = UKR_Anarchist_War_Sorelism
+	completion_reward = {
+		country_event = { id = ukr_reunion.16 hours = 6 }
+	}
 
 }
 shared_focus = {

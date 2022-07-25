@@ -1746,6 +1746,14 @@ GER_reichskommissariats = {
 				RKM = { transfer_state = PREV }
 			}
 
+			if = {
+				limit = { 
+					UKR = { is_in_faction_with = GER }
+					UKR = { is_subject = no }
+				}
+				UKR = { transfer_state = 218 }
+			}
+
 		}
 	}
 
@@ -1886,6 +1894,14 @@ GER_reichskommissariats = {
 					
 				}
 				RKA = { transfer_state = PREV }
+			}
+
+			if = {
+				limit = { 
+					UKR = { is_in_faction_with = GER }
+					UKR = { is_subject = no }
+				}
+				UKR = { transfer_state = 234 }
 			}
 
 		}

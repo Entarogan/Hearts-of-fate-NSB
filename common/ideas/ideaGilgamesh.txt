@@ -1103,14 +1103,13 @@ ideas = {
     ira_legion_of_dead = {
 		allowed = {
 			original_tag = IRQ
-					always = no
+			always = no
 		}
       	allowed_civil_war = {
 			always = no
 		}
 		available = {
 			is_subject = no
-			has_country_leader = { name = "Ereshkigal" ruling_only = yes }
 		}
       
 		removal_cost = -1

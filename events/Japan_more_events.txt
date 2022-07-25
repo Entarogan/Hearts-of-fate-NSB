@@ -52,11 +52,10 @@ country_event = {    # 血盟团事件 -- 暗杀海军大臣翔鹤
       ideology = fascism
       popularity = 0.03
     }
-    remove_ideas = { JAP_shoukaku }
+    remove_ideas = { JAP_Mutsu }
     add_ideas = { JAP_nagato }
     hidden_effect = {
-      set_country_flag = jap_shoukaku_disabled
-      retire_character = JAP_shoukaku
+      retire_character = JAP_Mutsu
     }
 	}
   

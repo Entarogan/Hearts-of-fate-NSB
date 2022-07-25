@@ -1054,13 +1054,10 @@ KAZ_prepare_for_SOV = {
 
 }
 
-SOV_RUS_wants_civ = {
+ONLY_SOV_wants_civ = {
 
 	allowed = {
-		or = {
-			original_tag = SOV
-			original_tag = RUS
-		}
+		original_tag = SOV
 	}
 
 	enable = {
@@ -1079,6 +1076,37 @@ SOV_RUS_wants_civ = {
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
+		value = 89
+	}
+}
+
+ONLY_RUS_wants_arms = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
+	enable = {
+		date > 1938.8.1
+		date < 1939.11.1
+		has_war = no
+	}
+
+	abort = {
+		OR = {
+		  date > 1939.11.1
+		  has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
 		value = 89
 	}
 }
@@ -1246,4 +1274,215 @@ SOV_RUS_AI_landed_in_Ukraine_to_die = {
 		value = -500
 	}
 
+	ai_strategy = {
+		type = put_unit_buffers
+
+		states = {
+			227
+			228
+			218
+		}
+
+		ratio = 0.10
+
+		area = europe
+
+		subtract_invasions_from_need = no
+	}
+
+}
+
+SOV_Defend_East_Ukraine_for_player = {
+
+	allowed = {
+		tag = SOV
+	}
+
+	enable = {
+		has_war_with = UKR
+		UKR = { is_ai = no }
+	}
+	
+	abort = {
+		OR = {
+			date > 1938.1.1
+			UKR = { has_capitulated = yes }
+			UKR = { is_subject_of = SOV }
+			NOT = { country_exists = UKR }		
+		}
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		states = {
+			227
+			228
+			218
+		}
+
+		ratio = 0.20
+
+		area = europe
+
+		subtract_invasions_from_need = no
+	}
+
+}
+
+
+SOV_Give_priority_to_Ukraine = {
+
+	allowed = {
+		tag = SOV
+	}
+
+	enable = {
+		has_war_with = UKR
+		has_war_with = RUS
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio > 0.7
+		}
+		has_country_flag = SOV_Give_priority_to_Ukraine_flag
+	}
+	
+	abort = {
+		date > 1938.1.1
+	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = "UKR"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = UKR
+
+		ratio = 0.5
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = UKR
+
+		value = 75
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = RUS
+
+		value = 25
+	}
+
+}
+
+SOV_Give_priority_to_Russia = {
+
+	allowed = {
+		tag = SOV
+	}
+
+	enable = {
+		has_war_with = UKR
+		has_war_with = RUS
+		stockpile_ratio = {
+			archetype = infantry_equipment
+			ratio > 0.7
+		}
+		has_country_flag = SOV_Give_priority_to_Russia_flag
+	}
+	
+	abort = {
+		date > 1938.1.1
+	}
+
+	ai_strategy = {
+		type = front_armor_score
+		id = "RUS"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		tag = RUS
+
+		ratio = 0.5
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = RUS
+
+		value = 75
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+
+		tag = UKR
+
+		value = 25
+	}
+
+}
+
+UKR_wants_arms = {
+
+	allowed = {
+		original_tag = UKR
+	}
+
+	enable = {
+		date < 1937.1.2
+		has_war = no
+	}
+
+	abort = { 
+		OR = {
+		  date > 1937.1.1 
+		  has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 59
+	}
+}
+
+UKR_some_safer_places_to_build = {
+	allowed = { original_tag = UKR }
+	enable = {
+		always = yes
+	}
+
+	abort = {
+		date > 1938.1.1
+	}
+
+	ai_strategy = {
+        type = factory_build_score_factor
+        target =  203
+        value = 300
+    }
 }

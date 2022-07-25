@@ -58,9 +58,7 @@ set_technology = {
     tactical_bomber1 = 1
     # improved_light_tank = 1 
 	# basic_heavy_tank = 1
-    gw_artillery = 1
-    interwar_artillery = 1
-    infantry_weapons2 = 1
+
     support_weapons = 1
 	basic_train = 1
     #doctrines
@@ -69,6 +67,8 @@ set_technology = {
     fighter_baiting = 1
     low_echelon_support = 1
     armored_car1 = 1
+
+    Thule = 1
         
 }
 if = {

@@ -32,8 +32,9 @@ set_technology = {
 
 	mobile_warfare = 1
 	basic_train = 1
-  armored_car1 = 1
+	armored_car1 = 1
 
+	on_ogur = 1
 }
 
 if = {

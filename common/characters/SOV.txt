@@ -31,6 +31,11 @@ characters={
 			traits = {
 				mass_assault_expert
 			}
+
+			modifier = {
+		        out_of_supply_factor = -0.1
+			}
+
 			ai_will_do = {
 				factor = 100
 			}
@@ -65,11 +70,14 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_konstantin_rokossovsky_T }
+
+			cost = 200
+
 			ai_will_do = {
 				factor = 100
 				modifier = { 
 					factor = 0
-					date < 1938.1.1
+					date < 1937.6.1
 				}
 			}
 		}
@@ -104,6 +112,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_aleksandr_vasilevsky_T }
+
+			cost = 100
+
 			ai_will_do = {
 				factor = 3
 				modifier = { 
@@ -174,6 +185,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_ivan_konev_T }
+
+			cost = 100
 			
 			ai_will_do = {
 				factor = 3
@@ -209,6 +222,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { army_chief_reform_2 }
+
+			cost = 100
 			
 			ai_will_do = {
 				factor = 1
@@ -244,6 +259,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { army_chief_drill_1 }
+
+			cost = 50
 			
 			ai_will_do = {
 				factor = 1
@@ -271,7 +288,7 @@ characters={
 			legacy_id=401
 		}
 		advisor = {
-			cost = 150
+			cost = 200
 			slot = theorist
 			idea_token = mikhail_tukhachevsky
 			ledger = army
@@ -749,6 +766,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { navy_submarine_2 }
+
+			cost = 100
 			
 			ai_will_do = {
 				factor = 0.2
@@ -801,6 +820,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_nonna_1 }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 3
@@ -835,6 +856,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_trista_sestina_T }
+
+			cost = 100
+
 		}
 	}
 	SOV_alina={
@@ -864,6 +888,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_alina_T }
+
+			cost = 100
+
 		}
 	}
 	SOV_klara={
@@ -893,6 +920,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_klara_T }
+
+			cost = 100
+
 			ai_will_do = {
 				factor = 2
 			}
@@ -929,6 +959,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_inia_sestina_T }
+
+			cost = 100
+
 		}
 
 		
@@ -963,6 +996,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_katyusha_T }
+
+			cost = 100
+
 			ai_will_do = {
 				factor = 2
 			}
@@ -1015,6 +1051,8 @@ characters={
 			}
 			traits = { SOV_sovetskaya_rossiya_T }
 
+			cost = 200
+
 		}
 	}
 	SOV_cryska_barchenowa={
@@ -1042,6 +1080,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_cryska_barchenowa_T }
+
+			cost = 100
 
 		}
 	}
@@ -1108,7 +1148,7 @@ characters={
 				small="GFX_idea_advisor_unknown"
 			}
 			army={
-				large="gfx/leaders/SOV/Portrait_SOV_mazhongying.dds"
+				large="gfx/leaders/SOV/Portrait_SOV_mazhongying.png"
 			}
 		}
 		corps_commander={
@@ -1439,6 +1479,8 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_vasily_chapayev_T }
+
+			cost = 100
 			
 		}
 	}
@@ -1597,6 +1639,9 @@ characters={
 				original_tag = SOV
 			}
 			traits = { SOV_sanya_litvyak_T }
+
+			cost = 200
+
 			ai_will_do = {
 				factor = 2
 			}
@@ -2145,7 +2190,7 @@ characters={
 			traits = {
 				air_chief_reform_3
 			}
-			cost = 200
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}

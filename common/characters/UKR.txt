@@ -3,7 +3,7 @@ characters={
 		name="UKR_symon_petlura"
 		portraits={
 			civilian={
-				large="gfx/leaders/UKR/Portrait_Symon_Petlura.png"
+				large="gfx/leaders/UKR/Portrait_UKR_Symon_Petlura.png"
 			}
 			army = {
 				small="GFX_idea_UKR_symon_petlura"
@@ -32,6 +32,9 @@ characters={
 				# 陆军防御（大师
 				army_chief_defensive_2 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -109,6 +112,9 @@ characters={
 				# 陆军进攻（大师
 				army_chief_offensive_2
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -175,6 +181,9 @@ characters={
 				# 盖特曼
 				hetman 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -243,7 +252,7 @@ characters={
 			}
 		}
 		advisor={
-			slot = high_command
+			slot = theorist
 			idea_token = UKR_andriy_melnyk
 			allowed  = {
 				original_tag  = UKR
@@ -260,6 +269,9 @@ characters={
 				# “梅尔尼克勋爵”
 				lord_melnyk 
 			}
+
+			cost = 150
+
 			modifier = {
 
 			}
@@ -358,7 +370,7 @@ characters={
 		name = "SOV_leonid_brezhnev"
 		portraits={
 			civilian = {
-				large = "gfx/leaders/UKR/Portrait_Leonid_Brezhnev.dds"
+				large = "gfx/leaders/UKR/Portrait_Leonid_Brezhnev.png"
 			}
 		}
 	}
@@ -464,9 +476,12 @@ characters={
 			}
 			traits  = {
 				yeti_squad 
-				# 冬季损耗-35%，特种部队上限+30，
-				# 寒冷适应度+30%，max_planning_factor 10%， 陆军经验+0.12
+				# 冬季损耗-20%，特种部队上限+30，
+				# 寒冷适应度+20%，max_planning_factor 10%， 陆军经验+0.12
 			}
+
+			cost = 200
+
 			modifier = {
 
 			}
@@ -514,8 +529,11 @@ characters={
 			}
 			traits  = {
 				the_patriot 
-				# 堑壕上限 +7， 陆军防御10%，陆军组织度10%， 陆军经验+0.15
+				# 堑壕上限 +5， 陆军防御5%，陆军组织度10%， 陆军经验+0.12
 			}
+
+			cost = 200
+
 			modifier = {
 
 			}
@@ -562,8 +580,11 @@ characters={
 			}
 			traits  = {
 				modern_warfare 
-				# 机械化和装甲攻击+15%，防御+10% 陆军经验+0.08
+				# 机械化和装甲攻击+15%，防御+10% 陆军经验+0.09
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -608,8 +629,11 @@ characters={
 			}
 			traits  = {
 				singer 
-				# 陆军组织度恢复+10%，炮兵装备对人员杀伤+15%（立刻）陆军经验+0.08
+				# 陆军组织度恢复+10%，炮兵装备对人员杀伤+15%（立刻）陆军经验+0.09
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -678,8 +702,11 @@ characters={
 			}
 			traits  = {
 				sniper
-				# 步兵武器对人员杀伤+10%（立刻）， 陆军经验+0.08
+				# 步兵武器对人员杀伤+20%（立刻）， 陆军经验+0.09
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -738,6 +765,9 @@ characters={
 			traits  = {
 				navy_amphibious_assault_2 
 			}
+
+			cost = 100
+
 			modifier = {
 				war_support_factor = 0.05
 			}
@@ -883,6 +913,9 @@ characters={
 				# 步兵部队（大师
 				army_infantry_2
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -1022,6 +1055,9 @@ characters={
 				# 不败者
 				Neskorenyj
 			}
+
+			cost = 150
+
 			modifier = {
 
 			}
@@ -1073,6 +1109,9 @@ characters={
 				# 陆军抗炸（奇才
 				army_concealment_3
 			}
+
+			cost = 150
+
 			modifier = {
 
 			}
@@ -1097,7 +1136,7 @@ characters={
 		name="UKR_Seymon_Zelensky"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_UKR_semyon_zelensky"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Seymon_Zelensky.png"
@@ -1358,6 +1397,9 @@ characters={
 			traits  = {
 				navy_amphibious_assault_2 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -1402,8 +1444,11 @@ characters={
 				}
 			}
 			traits  = {
-				army_chief_maneuver_2 
+				navy_chief_maneuver_2
 			}
+
+			cost = 100
+
 			modifier = {
 				political_power_gain = 0.10
 				stability_factor = -0.05
@@ -1444,6 +1489,9 @@ characters={
 			traits  = {
 				air_air_combat_training_2 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -1471,6 +1519,9 @@ characters={
 			traits  = {
 				air_chief_reform_2 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}
@@ -1502,6 +1553,9 @@ characters={
 			available  = {
 
 			}
+
+			cost = 100
+
 			traits  = {
 				naval_theorist 
 			}
@@ -1541,6 +1595,9 @@ characters={
 			traits  = {
 				navy_capital_ship_2 
 			}
+
+			cost = 100
+
 			modifier = {
 
 			}

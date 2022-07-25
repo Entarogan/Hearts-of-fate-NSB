@@ -2015,7 +2015,9 @@ ideas = {
         }
         
         modifier = {				
-          conscription = 0.03
+			stability_weekly = 0.001
+			war_support_weekly = 0.002
+			conscription = 0.01
         }
     }
 

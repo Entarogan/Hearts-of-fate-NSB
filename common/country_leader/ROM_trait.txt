@@ -2,13 +2,13 @@ leader_traits = {
 
 	Red_dog = { 
 		sprite = 7
+
 		army_attack_factor = 0.10
-
 		army_morale_factor = 0.1
-
 		experience_loss_factor = 0.05
+
 		command_cap = 20
-		experience_gain_army = 0.12
+		experience_gain_army = 0.09
 		
 		ai_will_do = {
 			factor = 3
@@ -32,17 +32,17 @@ leader_traits = {
 
 		political_power_gain = 0.10
 
-    war_support_factor = 0.10
+		war_support_factor = 0.10
 
 		army_attack_factor = 0.05
-		
-    mobilization_speed = 0.05
+
+		mobilization_speed = 0.05
 		conscription_factor = 0.05
 
-    production_factory_max_efficiency_factor = 0.05		
+		production_factory_max_efficiency_factor = 0.05		
 
 		fascism_drift = 0.05
-		
+
 		justify_war_goal_time = -0.05
 
 		experience_loss_factor = 0.05
@@ -58,7 +58,9 @@ leader_traits = {
 		research_speed_factor = 0.05
 		political_power_gain = -0.1
 		max_planning_factor = 0.2
-		##trait效果是研究速度+5%，计划上限+20%，政治点数-10%
+		planning_speed = -0.2
+
+		##trait效果是研究速度+5%，计划上限+20%，计划速度-20%，政治点数-10%
 		ai_will_do = {
 			factor = 1
 		}

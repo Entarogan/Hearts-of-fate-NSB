@@ -791,6 +791,7 @@ Unify_Russian = {
 		}
 
 		visible = {
+			always = no
 			is_subject = no
 			has_completed_focus = rus_no_compromise_on_united_russia
 			UKR = { exists = yes  }

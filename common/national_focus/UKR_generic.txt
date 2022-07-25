@@ -33,6 +33,10 @@ shared_focus  = {
 		}
 	}
 
+	ai_will_do = {
+		factor = 2000
+	}
+
 }
 shared_focus  = {
 	id = UKR_generic_Ukraine_is_not_yet_lost
@@ -40,11 +44,21 @@ shared_focus  = {
 	cost = 5.00
 	available = {
 		has_global_flag = UKR_still_on_earth_flag
+		GER = { 
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes
+			}
+		}
 	}
 	x = 36
 	y = 12
 	completion_reward = {
 		add_political_power = 100
+	}
+
+	ai_will_do = {
+		factor = 1000
 	}
 
 }
@@ -655,8 +669,18 @@ shared_focus  = {
 		focus = UKR_generic_Antonov_STC 
 	}
 	available = {
-		has_stability > 0.49
-		num_of_civilian_factories > 29
+		OR = {
+			AND = {
+				has_stability > 0.49
+				num_of_civilian_factories > 29
+			}
+			AND = {
+				has_war = yes
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
 	}
 	x = 0
 	y = 1
@@ -976,6 +1000,10 @@ shared_focus  = {
 	relative_position_id = UKR_generic_Ukraine_is_not_yet_lost
 	completion_reward = {
 		unlock_decision_tooltip = UKR_join_GER_faction
+	}
+
+	ai_will_do = {
+		factor = 1000
 	}
 
 }
@@ -1509,6 +1537,7 @@ shared_focus  = {
 	}
 	available = {
 		NOT = { has_idea = UKR_generic_prepare_for_next_war }
+		date > 1940.1.1
 		234 = { OWNER = { has_full_control_of_state = 234 } }
 		218 = { OWNER = { has_full_control_of_state = 218 } }
 		245 = { OWNER = { has_full_control_of_state = 245 } }

@@ -12,18 +12,6 @@ characters={
 			civilian={
 				large="gfx/leaders/GER/Portrait_Adolf_Hitler_pol.png"
 			}
-		}
-		advisor={
-			slot = special_first
-			idea_token = GER_adolf_hitler
-			allowed_to_remove = {
-				always = no
-			}
-			allowed = {
-				original_tag = GER
-			}
-			removal_cost = -1
-			traits = { Instigator }			
 		}	
 		corps_commander={
 			traits = {
@@ -39,69 +27,6 @@ characters={
 			planning_skill = 2
 			logistics_skill = 1
 			legacy_id = 2051
-		}
-	}
-
-	AUS_lothar_rendulic={
-		name=AUS_lothar_rendulic
-		portraits={
-			army={
-				large="gfx/leaders/AUS/Portrait_Austria_Lothar_Rendulic.dds"
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits = {
-				trait_mountaineer
-				infantry_officer
-			}
-			skill = 3
-			attack_skill = 2
-			defense_skill = 4
-			planning_skill = 1
-			logistics_skill = 3
-			legacy_id = 1938
-		}
-	}
-
-	AUS_Erhard_Raus={
-		name=AUS_Erhard_Raus
-		portraits={
-			army={
-				large="gfx/leaders/AUS/Portrait_Austria_Erhard_Raus.dds"
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits = {
-				armor_officer
-				trickster
-			}
-			skill = 3
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 2
-			legacy_id = 1937
-		}
-	}
-
-	AUS_karl_eglseer={
-		name=AUS_karl_eglseer
-		portraits={
-			army={
-				large="gfx/leaders/AUS/Portrait_Austria_Karl_Eglseer.dds"
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits={ trickster trait_mountaineer commando }
-			skill=3
-			attack_skill=3
-			defense_skill=3
-			planning_skill=2
-			logistics_skill=2
-			legacy_id=1936
 		}
 	}
 
@@ -138,15 +63,6 @@ characters={
 			ideology = authoritarian_democracy
 			expire="1965.1.1.1"
 			id=-1
-		}
-		corps_commander={
-			traits={ trickster trait_mountaineer infantry_officer }
-			skill = 4
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id=1940
 		}
 	}
 
@@ -268,30 +184,22 @@ characters={
 			logistics_skill = 3
 			legacy_id=1938
 		}
-	}
-
-	AUS_Adolf_Hitler={
-		name=AUS_Adolf_Hitler
-		portraits={
-			army={
-				large="gfx/leaders/AUS/Portrait_Austria_Adolf_Hitler.dds"
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-		}
-		corps_commander={
-			traits={ politically_connected	old_guard trait_reckless harsh_leader trickster }
-			skill = 2
-			attack_skill = 3
-			defense_skill = 1
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id=2051
+		advisor={	
+			slot = high_command
+			idea_token = AUS_lothar_rendulic
+			ledger = army
+				allowed = {
+					original_tag = AUS
+				}
+				traits = {
+					army_infantry_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
 		}
 	}
-
-
-
-
 
 	AUS_arthur_seyss-inquart={
 		name=AUS_arthur_seyss-inquart
@@ -511,29 +419,7 @@ characters={
 			}
 		}
 	}
-	AUS_lothar_rendulic={
-		advisor={	
-			slot = high_command
-			idea_token = AUS_lothar_rendulic
-			ledger = army
-				allowed = {
-					original_tag = AUS
-				}
-				traits = {
-					army_infantry_2
-				}
-				cost = 100
-				ai_will_do = {
-					factor = 1.000
-				}
-		}
-		name=AUS_lothar_rendulic
-		portraits={
-			army={
-				small="GFX_idea_generic_army_europe_1"
-			}
-		}
-	}
+
 	AUS_ernst_kaltenbrunner={
 		advisor={
 			slot = army_chief

@@ -5059,7 +5059,10 @@ political_actions = {
 
 		available = {
 			has_completed_focus = ENG_steady_as_she_goes
-			has_country_leader = {  name = "Olga Marie Animusphere" ruling_only = yes }
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
+			}
 		}
 
 		cost = 25
@@ -5077,15 +5080,16 @@ political_actions = {
 			add_stability = -0.15
 			add_political_power = -150
 			retire_country_leader = yes
-			create_country_leader = {
-				name = "Lord El Melloi II"
-				desc = "POLITICS_WAVER_DESC"
-				picture = "gfx//leaders//ENG//Portrait_Waver.dds"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					
+			add_country_leader_role = {
+				character = ENG_Waver
+				country_leader = {
+					expire="1965.1.1.1"
+					ideology = liberalism
+					traits = {
+						strategy_educator
+					}
 				}
+				promote_leader = yes
 			}
 		}
 
@@ -5101,7 +5105,10 @@ political_actions = {
 		available = {
 			has_completed_focus = ENG_steady_as_she_goes
 			OR = {
-				has_country_leader = {  name = "Lord El Melloi II" ruling_only = yes }
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
+				}
 				has_country_leader = {  name = "Reines El Melloi Archisorte" ruling_only = yes }
 			}		
 		}
@@ -5121,15 +5128,16 @@ political_actions = {
 			add_stability = -0.15
 			add_political_power = -150
 			retire_country_leader = yes
-			create_country_leader = {
-				name = "Olga Marie Animusphere"
-				desc = "POLITICS_ANIMUSPHERE_DESC"
-				picture = "gfx//leaders//ENG//Portrait_Olga_Marie_Animusphere.dds"
-				expire = "1940.1.1"
-				ideology = conservatism
-				traits = {
-					
+			add_country_leader_role = {
+				character = ENG_Olga_Marie_Animusphere
+				country_leader = {
+					expire="1965.1.1.1"
+					ideology = conservatism
+					traits = {
+						elite_action
+					}
 				}
+				promote_leader = yes
 			}
 		}
 

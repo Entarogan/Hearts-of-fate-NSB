@@ -982,21 +982,6 @@ country_event = {     # France: Military unrest for Communists
 			logistics_skill = 3
 		}
 
-		add_corps_commander_role = {
-			Character = FRA_nestor_makhno
-			traits = {
-				war_hero
-				media_personality
-				winter_specialist
-				cavalry_leader
-			}
-			skill = 4
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 3
-		}
-
 
 		hidden_effect = {
 			country_event = { id = lr_france.7  days = 20 }
@@ -1947,13 +1932,31 @@ country_event = {
 	option = {
 		name = lr_france.28.a
 
-  hidden_effect = {
-    FRA = { annex_country = { target = RHI transfer_troops = no } }
-    GER = {  
-      transfer_state = 42
-      transfer_state = 51
-    }
-  }
+		hidden_effect = {
+			FRA = { annex_country = { target = RHI transfer_troops = no } }
+			GER = {  
+			transfer_state = 42
+			transfer_state = 51
+			}
+
+			if = {
+				limit = { has_military_access_to = BEL }
+				diplomatic_relation = {
+					country = BEL
+					relation = military_access
+					active = no
+				}
+			}
+
+			if = {
+				limit = { has_military_access_to = LUX }
+				diplomatic_relation = {
+					country = LUX
+					relation = military_access
+					active = no
+				}
+			}
+		}
 
                     set_global_flag = FRA_civil_war_start_flag  
 

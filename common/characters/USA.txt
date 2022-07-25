@@ -133,7 +133,7 @@ characters={
 			}
 		}
 		advisor={
-			cost = 150
+			cost = 100
 			
 			slot = high_command
 			idea_token = george_patton
@@ -143,7 +143,7 @@ characters={
 			}
 			
 			traits = {
-				armored_Vanguard
+				modern_warfare
 			}
 
 			ai_will_do = {
@@ -184,6 +184,9 @@ characters={
 			
 			traits = {
 				superior_firepower_expert
+			}
+			ai_will_do  = {
+				factor  = 4.000
 			}
 		}
 
@@ -1681,6 +1684,9 @@ characters={
 			traits  = {
 				silent_workhorse 
 			}
+			ai_will_do  = {
+				factor  = 10.000
+			}
 		}
 	}
 
@@ -1765,6 +1771,9 @@ characters={
 			traits  = {
 				financial_expert 
 			}
+			ai_will_do  = {
+				factor  = 8.000
+			}
 		}
 	}
 
@@ -1783,6 +1792,9 @@ characters={
 			}
 			traits  = {
 				war_industrialist 
+			}
+			ai_will_do  = {
+				factor  = 5.000
 			}
 		}
 	}

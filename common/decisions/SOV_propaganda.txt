@@ -2211,7 +2211,7 @@ SOV_propaganda_campaigns = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_finish_five_year_plan
+				has_completed_focus = SOV_found_the_comecon
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 		}
@@ -2286,7 +2286,7 @@ SOV_propaganda_campaigns = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_finish_five_year_plan
+				has_completed_focus = SOV_found_the_comecon
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 			NOT = { has_country_flag = SOV_punished_for_breaking_flag }
@@ -2378,7 +2378,7 @@ SOV_propaganda_campaigns = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_finish_five_year_plan
+				has_completed_focus = SOV_found_the_comecon
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 		}

@@ -65,7 +65,8 @@ leader_traits = {
   air_chief_ground_support_Ishtar = {  # Air superiority impact on land units improved by 20%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.20
-    experience_gain_air = 0.15
+
+		experience_gain_air = 0.15
 		command_cap = 25
 		ai_will_do = {
 			factor = 3

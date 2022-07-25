@@ -501,7 +501,7 @@ instant_effect = {
 			type = infantry_equipment_1
 			creator = "ROM"
 		}
-		requested_factories = 2
+		requested_factories = 3
 		progress = 0.87
 		efficiency = 100
 	}
@@ -521,15 +521,6 @@ instant_effect = {
 		}
 		requested_factories = 1
 		progress = 0.24
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
-			type = light_tank_equipment_1
-			creator = "ROM" 
-		}
-		requested_factories = 1
-		progress = 0.4
 		efficiency = 100
 	}
 }

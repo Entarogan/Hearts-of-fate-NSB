@@ -31,139 +31,135 @@ ideas = {
 
     RUS_Japanese_economic_control_1_idea = {
 
-			allowed = {
-				always = no
-			}
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-
-			}
-		
-			available = {
-        country_exists = JAP
-        JAP = { is_subject = no }
-        NOT = { has_war_with = JAP }
-			}
-    
-			removal_cost = -1
-
-			picture = SPR_relocate_the_gold_reserves
-
-			modifier = {
-        political_power_gain = -0.05
-				stability_factor = -0.05
-				production_factory_max_efficiency_factor = 0.05
-        production_factory_efficiency_gain_factor = 0.05
-			}
-
-			targeted_modifier = { 
-				tag = JAP
-        cic_to_target_factor = 0.10
-			}
+		allowed_civil_war = {
 
 		}
+	
+		available = {
+			country_exists = JAP
+			JAP = { is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+
+		removal_cost = -1
+
+		picture = SPR_relocate_the_gold_reserves
+
+		modifier = {
+			political_power_gain = -0.05
+			stability_factor = -0.05
+			production_factory_max_efficiency_factor = 0.05
+		}
+
+		targeted_modifier = { 
+			tag = JAP
+			cic_to_target_factor = 0.10
+		}
+
+	}
 
     RUS_Japanese_economic_control_2_idea = {
 
-			allowed = {
-				always = no
-			}
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-
-			}
-	
-			available = {
-        country_exists = JAP
-        JAP = { is_subject = no }
-        NOT = { has_war_with = JAP }
-			}
-  
-			removal_cost = -1
-
-			picture = SPR_relocate_the_gold_reserves
-
-			modifier = {
-        political_power_gain = -0.1
-				stability_factor = -0.1
-				production_factory_max_efficiency_factor = 0.10
-        production_factory_efficiency_gain_factor = 0.10
-			}
-
-			targeted_modifier = { 
-				tag = JAP
-        cic_to_target_factor = 0.20
-			}
+		allowed_civil_war = {
 
 		}
+
+		available = {
+			country_exists = JAP
+			JAP = { is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+
+		removal_cost = -1
+
+		picture = SPR_relocate_the_gold_reserves
+
+		modifier = {
+			political_power_gain = -0.1
+			stability_factor = -0.1
+			production_factory_max_efficiency_factor = 0.10
+		}
+
+		targeted_modifier = { 
+			tag = JAP
+			cic_to_target_factor = 0.20
+		}
+
+	}
 
     RUS_Japanese_economic_control_3_idea = {
 
-			allowed = {
-				always = no
-			}
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-
-			}
-		
-			available = {
-        country_exists = JAP
-        JAP = { is_subject = no }
-        NOT = { has_war_with = JAP }
-			}
-    
-			removal_cost = -1
-
-			picture = SPR_relocate_the_gold_reserves
-
-			modifier = {
-        political_power_gain = -0.15
-				stability_factor = -0.15
-				production_factory_max_efficiency_factor = 0.15
-        production_factory_efficiency_gain_factor = 0.15
-			}
-
-			targeted_modifier = { 
-				tag = JAP
-        cic_to_target_factor = 0.30
-			}
+		allowed_civil_war = {
 
 		}
+	
+		available = {
+			country_exists = JAP
+			JAP = { is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+
+		removal_cost = -1
+
+		picture = SPR_relocate_the_gold_reserves
+
+		modifier = {
+			political_power_gain = -0.15
+			stability_factor = -0.15
+			production_factory_max_efficiency_factor = 0.15
+		}
+
+		targeted_modifier = { 
+			tag = JAP
+			cic_to_target_factor = 0.30
+		}
+
+	}
 
     RUS_Japanese_economic_control_4_idea = {
 
-			allowed = {
-				always = no
-			}
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-
-			}
-
-			available = {
-        country_exists = JAP
-        JAP = { is_subject = no }
-        NOT = { has_war_with = JAP }
-			}
-			
-			removal_cost = -1
-
-			picture = SPR_relocate_the_gold_reserves
-
-			modifier = {
-        political_power_gain = -0.2
-				stability_factor = -0.2
-				production_factory_max_efficiency_factor = 0.2
-        production_factory_efficiency_gain_factor = 0.2
-			}
-
-			targeted_modifier = { 
-				tag = JAP
-        cic_to_target_factor = 0.40
-			}
+		allowed_civil_war = {
 
 		}
+
+		available = {
+			country_exists = JAP
+			JAP = { is_subject = no }
+			NOT = { has_war_with = JAP }
+		}
+		
+		removal_cost = -1
+
+		picture = SPR_relocate_the_gold_reserves
+
+		modifier = {
+			political_power_gain = -0.2
+			stability_factor = -0.2
+			production_factory_max_efficiency_factor = 0.2
+		}
+
+		targeted_modifier = { 
+			tag = JAP
+			cic_to_target_factor = 0.40
+		}
+
+	}
 
 		RUS_Ural_armor_production_idea = {
 
@@ -242,13 +238,27 @@ ideas = {
 			picture = generic_exploit_mines
 
 			modifier = {
-				production_speed_buildings_factor = 0.15
+				production_speed_rail_way_factor = 0.2
+				production_speed_supply_node_factor = 0.2
+
+				production_speed_buildings_factor = 0.1
 				local_resources_factor = 0.15
 				global_building_slots_factor = 0.20
-				research_speed_factor = 0.05
 
 				fuel_gain_factor = 0.3
 			}
+
+			equipment_bonus = {
+
+				train_equipment = {
+					build_cost_ic = -0.15
+					reliability = 0.1
+
+					instant = yes
+				}
+
+			}
+
 		}
 
     RUS_SOV_fall_idea = {  ### Ai
@@ -274,7 +284,7 @@ ideas = {
 
 		RUS_SOV_For_victory_idea = {  ### Ai
 			allowed = {
-			    always = no
+			    always = yes
 			}
 
 			allowed_civil_war = {
@@ -289,8 +299,6 @@ ideas = {
 			picture = FRA_army_of_aggression_focus   
 
 			modifier = {
-				industrial_capacity_factory = 0.50
-
 				army_org_factor = 0.50
 				army_morale_factor = 0.50
 				org_loss_when_moving = -0.50
@@ -698,8 +706,8 @@ ideas = {
 			picture = SPR_seize_the_gold_reserves
 
 			modifier = {
-				political_power_gain = 0.15
-				production_factory_max_efficiency_factor = 0.25
+				political_power_gain = 0.10
+				production_factory_max_efficiency_factor = 0.2
 			}
     }
 
@@ -808,20 +816,20 @@ ideas = {
 			picture = chi_war_of_resistance3
 			
 			modifier = {
-				political_power_gain = -0.30
+
 			}
 
 			equipment_bonus = {
 
 				infantry_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
 				}
 
 				artillery_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
@@ -856,20 +864,20 @@ ideas = {
 			picture = chi_war_of_resistance3
 			
 			modifier = {
-				political_power_gain = -0.10
+				political_power_gain = 0.15
 			}
 
 			equipment_bonus = {
 
 				infantry_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
 				}
 
 				artillery_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
@@ -905,20 +913,20 @@ ideas = {
 			picture = chi_war_of_resistance3
 			
 			modifier = {
-				political_power_gain = -0.20
+
 			}
 
 			equipment_bonus = {
 
 				infantry_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
 				}
 
 				artillery_equipment = {
-					build_cost_ic = -0.2
+					build_cost_ic = -0.1
 			        reliability = -0.1
 
 					instant = yes
@@ -983,7 +991,7 @@ ideas = {
 				enemy_partisan_effect = -0.25
 				foreign_subversive_activites = -0.10
 				equipment_capture_factor = 0.10
-				special_forces_min = 80
+				special_forces_min = 20
 				conscription_factor = 0.02
 			}
 		}	
@@ -1583,14 +1591,22 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
+
+			available = {
+				has_war = no
+			}
 			
 			removal_cost = -1
 
 			picture = generic_production_bonus
 	
 			modifier = {
+				industrial_capacity_factory = 0.10
+
 				industry_repair_factor = 0.30
 				industry_free_repair_factor = 0.30
+
+				consumer_goods_factor = -0.07
 			}
 		}
 
@@ -2292,7 +2308,7 @@ ideas = {
 			}
 
 			modifier = {
-				experience_gain_army_factor = 0.10
+				experience_gain_army_factor = 0.05
 				max_command_power_mult = 0.10
 				land_doctrine_cost_factor = -0.05
 			}
@@ -2325,7 +2341,7 @@ ideas = {
 			}
 
 			modifier = {
-				experience_gain_army_factor = 0.15
+				experience_gain_army_factor = 0.1
 				max_command_power_mult = 0.15
 				land_doctrine_cost_factor = -0.1
 			}
@@ -2358,12 +2374,12 @@ ideas = {
 			}
 
 			modifier = {
-        army_org_factor = -0.15
-        army_morale_factor = -0.15
+				army_org_factor = -0.15
+				army_morale_factor = -0.15
 				army_attack_factor = 0.10
 				army_defence_factor = 0.10
 				experience_gain_army_factor = 0.15
-				max_command_power_mult = 0.15
+				max_command_power_mult = 0.20
 				land_doctrine_cost_factor = -0.15
 			}
 

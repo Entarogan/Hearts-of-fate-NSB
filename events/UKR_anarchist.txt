@@ -224,7 +224,7 @@ country_event = {
 		ai_chance = {
 			base = 100
 		}
-		
+		add_war_support = -0.05
 	}
 
 	### Sentence them at here
@@ -512,6 +512,22 @@ country_event = {
 			#remove_idea = UKR_Developed_agriculture_idea
 			#add_idea = UKR_Promote_industrialization_idea
 		#}
+
+		set_division_template_lock = {
+			division_template = "Nightingale Battalion Group"
+			is_locked = no
+		}
+
+		set_division_template_lock = {
+			division_template = "Otaman Strelkovaya"
+			is_locked = no
+		}
+
+		set_division_template_lock = {
+			division_template = "Sich Riflemen"
+			is_locked = no
+		}
+
 		delete_unit_template_and_units = { 
 			division_template = "Nightingale Battalion Group" 
 			disband = yes
@@ -524,9 +540,10 @@ country_event = {
 			division_template = "Sich Riflemen" 
 			disband = yes
 		}
+
 		if = {
 			limit = {
-				has_completed_focus = UKR_Call_for_civilians
+				has_country_flag = UKR_Call_for_civilians_flag
 			}
 			delete_unit_template_and_units = { 
 				division_template = "militia" 
@@ -536,17 +553,17 @@ country_event = {
 
 		if = {
 			limit = {
-				has_completed_focus = UKR_Extremist_forces
+				has_country_flag = UKR_Extremist_forces_flag
 			}
-			delete_unit_template_and_units = { 
-				division_template = "OUN" 
-				disband = yes
+			set_division_template_lock = {
+				division_template = "OUN"
+				is_locked = no
 			}
 		}
 
 		if = {
 			limit = {
-				has_completed_focus = UKR_Assemble_the_Cossacks
+				has_country_flag = UKR_Assemble_the_Cossacks_flag
 			}
 			delete_unit_template_and_units = { 
 				division_template = "Cossacks" 
@@ -556,7 +573,7 @@ country_event = {
 
 		if = {
 			limit = {
-				has_completed_focus = UKR_Unite_anarchists
+				has_country_flag = UKR_Unite_anarchists_flag
 			}
 			delete_unit_template_and_units = { 
 				division_template = "anarchists" 
@@ -568,5 +585,277 @@ country_event = {
 		}
 		
 
+	}
+}
+
+country_event = {   ### Operation Chernobog
+	id = ukr_reunion.16
+	title = ukr_reunion.16.t
+	desc = ukr_reunion.16.d
+	picture = GFX_report_event_UKR_anarchist_generic_frostnova
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukr_reunion.16.a  ### Moscow
+		trigger = {
+			OR = {
+				SOV = { has_full_control_of_state = 219 }
+				RUS = { has_full_control_of_state = 219 }
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		if = {
+			limit = { SOV = { has_full_control_of_state = 219 } }
+			hidden_effect = {
+				SOV = { set_country_flag = Reunion_Moscow_attacked_tt }
+			}
+			SOV = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				RUS = { set_country_flag = Reunion_Moscow_attacked_tt }
+			}
+			RUS = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+		}
+		
+	}
+
+	option = {
+		name = ukr_reunion.16.b  ### Leninglad
+		trigger = {
+			OR = {
+				SOV = { has_full_control_of_state = 195 }
+				RUS = { has_full_control_of_state = 195 }
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		if = {
+			limit = { SOV = { has_full_control_of_state = 195 } }
+			hidden_effect = {
+				SOV = { set_country_flag = Reunion_Leninglad_attacked_tt }
+			}
+			SOV = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				RUS = { set_country_flag = Reunion_Leninglad_attacked_tt }
+			}
+			RUS = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	option = {
+		name = ukr_reunion.16.c  ### Volgograd
+		trigger = {
+			OR = {
+				SOV = { has_full_control_of_state = 217 }
+				RUS = { has_full_control_of_state = 217 }
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+		add_political_power = -50
+		if = {
+			limit = { SOV = { has_full_control_of_state = 217 } }
+			hidden_effect = {
+				SOV = { set_country_flag = Reunion_Volgograd_attacked_tt }
+			}
+			SOV = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				RUS = { set_country_flag = Reunion_Volgograd_attacked_tt }
+			}
+			RUS = { country_event = { id = ukr_reunion.17  hours = 12 } }
+			effect_tooltip = {
+				declare_war_on = {
+					target = RUS
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {   ### Operation Chelnobog
+	id = ukr_reunion.17
+	title = ukr_reunion.17.t
+	desc = ukr_reunion.17.d
+	picture = GFX_report_event_UKR_anarchist_talula_at_her_seat
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukr_reunion.17.a  ### Moscow
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = { has_country_flag = Reunion_Moscow_attacked_tt }
+			219 = {
+				add_manpower = -5216
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 2
+				}
+				remove_building = {
+					type = arms_factory
+					level = 2
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 2
+				}
+			}
+		}
+		if = {
+			limit = { has_country_flag = Reunion_Leninglad_attacked_tt }
+			195 = {
+				add_manpower = -4652
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 2
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 2
+				}
+			}
+		}
+
+		if = {
+			limit = { has_country_flag = Reunion_Volgograd_attacked_tt }
+			217 = {
+				add_manpower = -4854
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 2
+				}
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 2
+				}
+			}
+		}
+		FROM = {
+			declare_war_on = {
+				target = ROOT
+				type = annex_everything
+			}
+		}
+	}
+}
+
+
+country_event = {   
+	#### Flavour: Is FrostNova the real Anastasia?
+	id = ukr_reunion.18
+	title = ukr_reunion.18.t
+	desc = ukr_reunion.18.d
+	picture = GFX_report_event_UKR_anarchist_generic_patroit
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukr_reunion.18.a
+
+		ai_chance = {
+			base = 100
+		}
+		if = {
+			limit = {
+				SOV = {
+					is_subject = no
+					exists = yes
+				}
+			}
+			SOV = { 
+				country_event = { id = ukr_reunion.18 days = 7 }
+				annex_country = {
+					target = ROOT
+					transfer_troops = yes
+				} 
+			}
+			else = {
+				RUS = { 
+					annex_country = {
+						target = ROOT
+						transfer_troops = yes
+					} 
+				}
+			}
+		}
+		add_political_power = 10
 	}
 }

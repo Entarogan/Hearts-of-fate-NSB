@@ -1,6 +1,33 @@
 ideas = {
 	country = {
 
+		SOV_the_rush_for_berlin = {
+
+			picture = SPR_anti_fascist_crusade
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via decision
+			}
+
+			allowed_civil_war = {
+				tag = SOV
+			}
+
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+				defense_bonus_against = -0.05
+			}
+			
+			modifier = {
+				army_speed_factor = 0.1
+				war_support_factor = 0.1
+				army_org_regain = -0.05
+			}
+		}
+
 		SOV_the_road_of_life_ns = {
 			name = SOV_the_road_of_life
 
@@ -628,7 +655,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = GFX_idea_man_five_year_plan_tank
+			picture = man_five_year_plan_tank
 
 			modifier = {
 				conversion_cost_civ_to_mil_factor = -0.2
@@ -652,7 +679,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = GFX_idea_man_five_year_plan_tank
+			picture = man_five_year_plan_tank
 
 			modifier = {
 				conversion_cost_civ_to_mil_factor = -0.2
@@ -682,7 +709,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = GFX_idea_man_five_year_plan_tank
+			picture = man_five_year_plan_tank
 
 			research_bonus = {
 				armor = 0.15
@@ -1878,11 +1905,11 @@ ideas = {
 				army_core_defence_factor = 0.1
 				army_core_attack_factor = 0.1
 
-				supply_combat_penalties_on_core_factor = -0.4
+				supply_combat_penalties_on_core_factor = -0.3
 
-            	industrial_capacity_factory = 0.4
+            	industrial_capacity_factory = 0.3
 
-				conscription_factor = 0.4
+				conscription_factor = 0.5
 
 			}
 

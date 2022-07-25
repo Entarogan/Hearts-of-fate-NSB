@@ -335,13 +335,13 @@ country_event = {     # GER_Obligations_of_Youth_League
 	option = {
 		name = more_ger.9.a
 		ai_chance = {
-			base = 0
+			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_CONSERVATIVE_RIGHT
-        }
+				has_game_rule = {
+				  rule = GER_ai_behavior
+				  option = VALKIST_CONSERVATIVE_RIGHT
+				}
 			}
 		}
 
@@ -356,7 +356,7 @@ country_event = {     # GER_Obligations_of_Youth_League
 		
 		add_ideas = GER_Jugend_soldiers_idea
 
-    set_country_flag = GER_Jugend_soldiers_flag 
+		set_country_flag = GER_Jugend_soldiers_flag 
 		
 	}
 
@@ -366,10 +366,10 @@ country_event = {     # GER_Obligations_of_Youth_League
 			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_RADICAL_LEFT
-        }
+				has_game_rule = {
+				  rule = GER_ai_behavior
+				  option = VALKIST_RADICAL_LEFT
+				}
 			}
 		}
 
@@ -377,8 +377,8 @@ country_event = {     # GER_Obligations_of_Youth_League
 			flag = ger_right
 			value = 1
 		}
-		
-	  add_ideas = GER_Jugend_support_idea
+
+		add_ideas = GER_Jugend_support_idea
 		
 	}
 	
@@ -395,13 +395,13 @@ country_event = {     # GER_Reconstruction_of_faith
 	option = {
 		name = more_ger.10.a
 		ai_chance = {
-			base = 0
+			base = 20
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_CONSERVATIVE_RIGHT
-        }
+				has_game_rule = {
+				  rule = GER_ai_behavior
+				  option = VALKIST_CONSERVATIVE_RIGHT
+				}
 			}
 		}
 
@@ -447,13 +447,13 @@ country_event = {     # GER_TST_position
 		name = more_ger.11.a
 
 		ai_chance = {
-			base = 0
+			base = 70
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_CONSERVATIVE_RIGHT
-        }
+				has_game_rule = {
+					rule = GER_ai_behavior
+					option = VALKIST_CONSERVATIVE_RIGHT
+				}
 			}
 		}
 		
@@ -462,14 +462,14 @@ country_event = {     # GER_TST_position
 			value = 1
 		}
 
-    add_political_power = -50
+		add_political_power = -50
 
 		add_war_support = 0.05
 
-    swap_ideas = {
-      remove_idea = GER_TST_idea
-      add_idea = GER_TST_Waffen_idea
-    }
+		swap_ideas = {
+			remove_idea = GER_TST_idea
+			add_idea = GER_TST_Waffen_idea
+		}
 		
 	}
 
@@ -480,10 +480,10 @@ country_event = {     # GER_TST_position
 			base = 30
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_RADICAL_LEFT
-        }
+				has_game_rule = {
+				  rule = GER_ai_behavior
+				  option = VALKIST_RADICAL_LEFT
+				}
 			}
 		}
 		
@@ -670,7 +670,7 @@ country_event = {     # GER_Preventive_arrest
 	option = {
 		name = more_ger.18.a
 		ai_chance = {
-			base = 0
+			base = 50
 		}
 
 		modify_country_flag = {
@@ -678,17 +678,17 @@ country_event = {     # GER_Preventive_arrest
 			value = 1
 		}
 
-	  add_political_power = -50
+		add_political_power = -50
 
-    if = {
-      limit = {
-        has_idea = GER_Intricate_intelligence_agency
-      }
-    swap_ideas = {
-      remove_idea = GER_Intricate_intelligence_agency
-      add_idea = GER_Intricate_intelligence_agency_1
-    }
-    }		
+		if = {
+			limit = {
+			    has_idea = GER_Intricate_intelligence_agency
+			}
+			swap_ideas = {
+				remove_idea = GER_Intricate_intelligence_agency
+				add_idea = GER_Intricate_intelligence_agency_1
+			}
+		}		
 		
 	}
 
@@ -698,10 +698,10 @@ country_event = {     # GER_Preventive_arrest
 			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = GER_ai_behavior
-          option = VALKIST_RADICAL_LEFT
-        }
+				has_game_rule = {
+				  rule = GER_ai_behavior
+				  option = VALKIST_RADICAL_LEFT
+				}
 			}
 		}
 
@@ -1145,50 +1145,38 @@ country_event = {     # 地下军工厂计划
 			base = 100
 		}
 
-    random_owned_state = {
-      limit = {
-        is_fully_controlled_by = ROOT
-        arms_factory > 1
-      }
-      remove_building = {
-        type = arms_factory
-        level = 2
-      }
-      add_offsite_building = {
-        type = arms_factory
-        level = 2
-      }
-    }
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 1
+			}
+			remove_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
 
-    random_owned_state = {
-      limit = {
-        is_fully_controlled_by = ROOT
-        arms_factory > 1
-      }
-      remove_building = {
-        type = arms_factory
-        level = 2
-      }
-      add_offsite_building = {
-        type = arms_factory
-        level = 2
-      }
-    }
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 1
+			}
+			remove_building = {
+				type = arms_factory
+				level = 2
+			}
+		}
 
-    random_owned_state = {
-      limit = {
-        is_fully_controlled_by = ROOT
-        arms_factory > 1
-      }
-      remove_building = {
-        type = arms_factory
-        level = 2
-      }
-      add_offsite_building = {
-        type = arms_factory
-        level = 2
-      }
-    }		
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 1
+			}
+			remove_building = {
+				type = arms_factory
+				level = 2
+			}
+		}		
     
 	}
 
@@ -2000,7 +1988,7 @@ country_event = {     # 大清洗
 
 		add_political_power = -75
 
-    remove_unit_leader = 2024
+		retire_character = GER_kurt_von_schleicher
 		
 	}
 
@@ -2010,8 +1998,9 @@ country_event = {     # 大清洗
 			base = 80
 		}
 
-    remove_unit_leader = 2024
-    remove_unit_leader = 17
+		retire_character = GER_kurt_von_schleicher
+		retire_character = GER_erwin_von_witzleben
+		retire_character = GER_ludwig_beck
 
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = ludwig_beck
@@ -2056,6 +2045,10 @@ country_event = {     # 大清洗继续
 
 		add_stability = -0.10
 		add_war_support = -0.10 
+
+		retire_character = GER_kurt_von_schleicher
+		retire_character = GER_erwin_von_witzleben
+		retire_character = GER_ludwig_beck
 
 		remove_unit_leader = 1
 		remove_unit_leader = 2
@@ -2345,12 +2338,13 @@ country_event = {     # 阿尔卑斯战略
 	option = {
 		name = more_ger.53.a
 		trigger = { 
-        NOT = { is_in_faction_with = FRA }
-        NOT = { is_in_faction_with = ENG }
-        NOT = { GER = { is_in_faction_with = FRA } }
-        NOT = { GER = { is_in_faction_with = ENG } }
-        NOT = { ITA = { has_idea = FRA_ITA_non_agression } }
+			NOT = { is_in_faction_with = FRA }
+			NOT = { is_in_faction_with = ENG }
+			NOT = { GER = { is_in_faction_with = FRA } }
+			NOT = { GER = { is_in_faction_with = ENG } }
+			NOT = { ITA = { has_idea = FRA_ITA_non_agression } }
 		}
+
 		ai_chance = {
 			factor = 65
 			modifier = {
@@ -2361,11 +2355,15 @@ country_event = {     # 阿尔卑斯战略
 				factor = 0.5
 				NOT = { FRA = { has_government = democratic } }
 			}
+			modifier = {
+				factor = 3
+				FRA = { is_ai = no }
+			}
 		}
 
-			GER = {
-				country_event = { id = more_ger.54 days = 2}
-			}
+		GER = {
+			country_event = { id = more_ger.54 days = 2}
+		}
 
 	}
 
@@ -2755,12 +2753,16 @@ country_event = {
 	trigger = {
 		tag = GER
 		has_country_leader = { ruling_only = yes character = GER_siegfried }
-    is_subject = no 
-    has_war = yes
-    or = {
-      has_completed_focus = GER_General_Mobilization_Act
-      has_completed_focus = GER_Power_of_the_people
-    }
+		is_subject = no 
+		has_war = yes
+		or = {
+			has_completed_focus = GER_General_Mobilization_Act
+			has_completed_focus = GER_Power_of_the_people
+		}
+		or = {
+			casualties > 1000000
+			surrender_progress > 0.10
+		}
 	}
 
 	mean_time_to_happen = {
@@ -2778,9 +2780,9 @@ country_event = {
 
 		set_country_flag = GER_Siegfried_against_war_1_flag
 
-	  add_country_leader_trait = Does_not_support_war_1
+		add_country_leader_trait = Does_not_support_war_1
 
-	  activate_mission_tooltip = GER_Siegfried_against_war_1_dec
+		activate_mission_tooltip = GER_Siegfried_against_war_1_dec
 	}
 
 }
@@ -2796,39 +2798,39 @@ country_event = {
 	trigger = {
 		tag = GER
 		has_country_leader = { ruling_only = yes character = GER_siegfried }
-    is_subject = no 
-    has_war = yes
-    or = {
-      has_country_flag = GER_Siegfried_against_war_5_flag
-      AND = {
-        has_country_flag = GER_Siegfried_against_war_4_flag
-        or = {
-          casualties > 1400000
-          surrender_progress > 0.14
-        }
-      }
-      AND = {
-        has_country_flag = GER_Siegfried_against_war_3_flag
-        or = {
-          casualties > 1600000
-          surrender_progress > 0.16
-        }
-      }
-      AND = {
-        has_country_flag = GER_Siegfried_against_war_2_flag
-        or = {
-          casualties > 1800000
-          surrender_progress > 0.18
-        }
-      }
-      AND = {
-        has_country_flag = GER_Siegfried_against_war_1_flag
-        or = {
-          casualties > 2000000
-          surrender_progress > 0.20
-        }
-      }
-    }
+		is_subject = no 
+		has_war = yes
+		or = {
+			has_country_flag = GER_Siegfried_against_war_5_flag
+			AND = {
+				has_country_flag = GER_Siegfried_against_war_4_flag
+				or = {
+					casualties > 1400000
+					surrender_progress > 0.14
+				}
+			}
+			AND = {
+				has_country_flag = GER_Siegfried_against_war_3_flag
+				or = {
+					casualties > 1600000
+					surrender_progress > 0.16
+				}
+			}
+			AND = {
+				has_country_flag = GER_Siegfried_against_war_2_flag
+				or = {
+					casualties > 1800000
+					surrender_progress > 0.18
+				}
+			}
+			AND = {
+				has_country_flag = GER_Siegfried_against_war_1_flag
+				or = {
+					casualties > 2000000
+					surrender_progress > 0.20
+				}
+			}
+		}
 	}
 
 	mean_time_to_happen = {
@@ -2942,7 +2944,7 @@ country_event = {     # 解职帕拉塞尔苏斯
 			remove_ideas = { GER_Hohenheim_Paracelsus }
 		}
 		retire_character = GER_Hohenheim_Paracelsus
-    	add_ideas = { GER_special_sixth_nein }
+    	add_ideas = { Non_2 }
 		
 	}
 
@@ -3091,7 +3093,7 @@ country_event = {     # 干掉罗森伯格
 			remove_ideas = { GER_Alfred_Rosenberg }
 		}
 		retire_character = GER_Alfred_Rosenberg
-    	add_ideas = { GER_special_second_nein }
+    	add_ideas = { Non_1 }
 	}
  
 	option = {
@@ -3406,56 +3408,59 @@ country_event = {     # 长刀之夜
 		name = more_ger.78.a
 
 		trigger = { 
-      NOT = { 
-        has_country_flag = GER_panzer_panzer_flag
-        has_country_flag = GER_Heydrich_Strasser_Union_flag
-        has_country_flag = GER_Military_intervention_flag
-      }
-    }
+			NOT = { 
+				has_country_flag = GER_panzer_panzer_flag
+				has_country_flag = GER_Heydrich_Strasser_Union_flag
+				has_country_flag = GER_Military_intervention_flag
+			}
+		}
 
-    add_political_power = -100
+		add_political_power = -100
 
-    create_country_leader = {
-      name = "Hermann Goring"
-      desc = "POLITICS_GORING_DESC"
-      picture = "Portrait_Germany_Hermann_Goring.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        Meyer
-      }
-    }
+		add_country_leader_role = {
+			character = GER_hermann_goring
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = valkist
+				traits = {
+					Meyer
+				}
+			}
+			promote_leader = yes
+		}
 
-    add_ideas = { GER_adolf_hitler }
+		add_ideas = { GER_adolf_hitler }
 
-    if = {
+		if = {
 			limit = {
-				has_country_flag = GER_Dismissal_Rosenberg_flag
+			    has_country_flag = GER_Dismissal_Rosenberg_flag
 			}
 			add_political_power = -50
-      add_ideas = { GER_Ernst_Junger }
+			add_ideas = { GER_Ernst_Junger }
 		}
 
 		if = {
 			limit = {
-				has_country_flag = GER_Dismissal_Himmler_flag
+			    has_country_flag = GER_Dismissal_Himmler_flag
 			}
 			add_political_power = -50
-      add_ideas = { GER_rudolf_von_sebottendorf }
+			add_ideas = { GER_rudolf_von_sebottendorf }
 		}
 
+		retire_character = GER_otto_strasser
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = otto_Strasser_advisor
 		set_country_flag = arrest_Strasser
 		hidden_effect = {
-			remove_ideas = otto_Strasser_advisor
+		    remove_ideas = otto_Strasser_advisor
 		}
 
-    remove_unit_leader = 2041
-    remove_unit_leader = 2042
-    remove_unit_leader = 2043
+		retire_character = GER_gretel_jeckeln_strasserism
+		retire_character = GER_Inghild_Bronikowski
+		retire_character = GER_vivi_schweinsteiger_strasserism
 
-    country_event = { id = more_ger.82 days = 3 }
+
+		country_event = { id = more_ger.82 days = 3 }
 
 		ai_chance = {
 			base = 33
@@ -3467,42 +3472,43 @@ country_event = {     # 长刀之夜
 		name = more_ger.78.b
 
 		trigger = { 
-      NOT = { 
-        has_country_flag = GER_Military_intervention_flag
-      }
-      or = { 
-        has_country_flag = GER_panzer_panzer_flag
-        has_country_flag = GER_Heydrich_Strasser_Union_flag
-      }
-    }
+			NOT = { 
+			    has_country_flag = GER_Military_intervention_flag
+			}
+			or = { 
+				has_country_flag = GER_panzer_panzer_flag
+				has_country_flag = GER_Heydrich_Strasser_Union_flag
+			}
+		}
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    create_country_leader = {
-      name = "Otto Strasser"
-      desc = "POLITICS_STRASSER_DESC"
-      picture = "Portrait_Germany_Otto_Strasser.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        economic_reformer
-      }
-    }
+		add_country_leader_role = {
+			character = GER_otto_strasser
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = valkist
+				traits = {
+					economic_reformer
+				}
+			}
+			promote_leader = yes
+		}
 
 		custom_effect_tooltip = remove_chief_of_airforce
 		show_ideas_tooltip = goering
 		set_country_flag = arrest_goering
 		hidden_effect = {
-			remove_ideas = goering
+		    remove_ideas = goering
 		}
 
 		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = herman_Goring_advisor
 		hidden_effect = {
-			remove_ideas = herman_Goring_advisor
+		    remove_ideas = herman_Goring_advisor
 		}
 
-    country_event = { id = more_ger.83 days = 3 }
+		country_event = { id = more_ger.83 days = 3 }
 
 		ai_chance = {
 			base = 33
@@ -3684,103 +3690,105 @@ country_event = {     # 斯特拉瑟掌权？
 	option = {
 		name = more_ger.83.a
 
-    set_country_flag = GER_Heydrich_becomes_the_leader_flag
+		set_country_flag = GER_Heydrich_becomes_the_leader_flag
 
-    kill_country_leader = yes
+		kill_country_leader = yes
 
-    create_country_leader = {
-      name = "Reinhard Heydrich"
-      desc = ""
-      picture = "Portrait_Germany_Reinhard_Heydrich.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        grim_Reaper
-      }
-    }
+		add_country_leader_role = {
+			character = GER_Reinhard_Heydrich
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = valkist
+				traits = {
+					grim_Reaper
+				}
+			}
+			promote_leader = yes
+		}
 
-    add_ideas = { GER_Reinhard_Heydrich_leader }
+		add_ideas = { GER_Reinhard_Heydrich_leader }
 
-    add_ideas = { GER_Herbert_Gille }
+		add_ideas = { GER_Herbert_Gille }
 
-    custom_effect_tooltip = remove_political_advisor
+		retire_character = GER_otto_strasser
+		custom_effect_tooltip = remove_political_advisor
 		show_ideas_tooltip = otto_Strasser_advisor
 		set_country_flag = arrest_Strasser
 		hidden_effect = {
 			remove_ideas = otto_Strasser_advisor
 		}
 
-    remove_unit_leader = 2041
-    remove_unit_leader = 2042
-    remove_unit_leader = 2043
+		retire_character = GER_gretel_jeckeln_strasserism
+		retire_character = GER_Inghild_Bronikowski
+		retire_character = GER_vivi_schweinsteiger_strasserism
 
 		hidden_effect = {
-      if = {
-        limit = {
-          RKN = { exists = yes }
-        }
-        RKN = {
-          create_country_leader = {
-            name = "Josef Terboven"
-            desc = ""
-            picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
-            expire = "1965.1.1"
-            ideology = nazism
-            traits = {
-              Unwelcome_commissioner
-            }
-          }
-        }
-      }
-      if = {
-        limit = {
-          RKP = { exists = yes }
-        }
-        RKP = {
-          create_country_leader = {
-            name = "Hans Frank"
-            desc = "POLITICS_HANS_FRANK_DESC"
-            picture = "Portrait_General_Gouvernment_Hans_Frank.dds"
-            expire = "1974.4.4"
-            ideology = nazism
-            traits = {
-              Unwelcome_commissioner
-            }
-          }
-        }
-      }
-      if = {
-        limit = {
-          RKU = { exists = yes }
-        }
-        RKU = {
-          create_country_leader = {
-            name = "Erich Koch"
-            desc = "POLITICS_HINRICH_LOHSE_DESC"
-            picture = "gfx/leaders/RKU/leader_UKR_Erich_Koch.dds"
-            expire = "1965.1.1"
-            ideology = nazism
-            traits = {
-              Unwelcome_commissioner
-            }
-          }
-        }
-      }
+			if = {
+				limit = {
+				    RKN = { exists = yes }
+				}
+				RKN = {
+					create_country_leader = {
+						name = "Josef Terboven"
+						desc = ""
+						picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						    Unwelcome_commissioner
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+				    RKP = { exists = yes }
+				}
+				RKP = {
+					create_country_leader = {
+						name = "Hans Frank"
+						desc = "POLITICS_HANS_FRANK_DESC"
+						picture = "Portrait_General_Gouvernment_Hans_Frank.dds"
+						expire = "1974.4.4"
+						ideology = nazism
+						traits = {
+						    Unwelcome_commissioner
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+				    RKU = { exists = yes }
+				}
+				RKU = {
+					create_country_leader = {
+						name = "Erich Koch"
+						desc = "POLITICS_HINRICH_LOHSE_DESC"
+						picture = "gfx/leaders/RKU/leader_UKR_Erich_Koch.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+							Unwelcome_commissioner
+						}
+					}
+				}
+			}
 		}
 
 		ai_chance = {
 			base = 50
 			modifier = {
 				factor = 0
-        NOT = { country_exists = SOV }
+				NOT = { country_exists = SOV }
 			}
 			modifier = {
 				factor = 0
-        has_war_with = SOV
+				has_war_with = SOV
 			}
 			modifier = {
 				factor = 0
-        SOV = { is_subject = yes }
+				SOV = { is_subject = yes }
 			}
 		}
 		
@@ -3791,91 +3799,92 @@ country_event = {     # 斯特拉瑟掌权？
 
 		trigger = { NOT = { has_country_flag = GER_Heydrich_Strasser_Union_flag } }
 
-    set_country_flag = GER_Strasser_becomes_the_leader_flag
+		set_country_flag = GER_Strasser_becomes_the_leader_flag
 
-    remove_unit_leader = 2044
+		retire_character = GER_rusalka_schwagerin
 
-    if = {
-      limit = {
-        has_war_with = FRA
-        NOT = { FRA = { has_government = communism } }
-        NOT = { FRA = { has_government = fascism } }
-      or = {
-        FRA = { has_capitulated = no }
-        NOT = { has_global_flag = fall_of_france }
-      }
-      }
-      FRA = {
-        country_event = { id = germany.610 days = 10 random = 5 } 
-      }
-    }
 
-    if = {
-      limit = {
-        has_war_with = ENG
-        NOT = { ENG = { has_government = communism } }
-        NOT = { ENG = { has_government = fascism } }
-      or = {
-        FRA = { has_capitulated = yes }
-        has_global_flag = fall_of_france
-      }
-      }
-      ENG = {
-        country_event = { id = germany.610 days = 10 random = 5 } 
-      }
-    }
+		if = {
+			limit = {
+				has_war_with = FRA
+				NOT = { FRA = { has_government = communism } }
+				NOT = { FRA = { has_government = fascism } }
+				or = {
+					FRA = { has_capitulated = no }
+					NOT = { has_global_flag = fall_of_france }
+				}
+			}
+			FRA = {
+			    country_event = { id = germany.610 days = 10 random = 5 } 
+			}
+		}
+
+		if = {
+			limit = {
+				has_war_with = ENG
+				NOT = { ENG = { has_government = communism } }
+				NOT = { ENG = { has_government = fascism } }
+				or = {
+					FRA = { has_capitulated = yes }
+					has_global_flag = fall_of_france
+				}
+			}
+			ENG = {
+			    country_event = { id = germany.610 days = 10 random = 5 } 
+			}
+		}
 
 		hidden_effect = {
-      if = {
-        limit = {
-          RKN = { exists = yes }
-        }
-        RKN = {
-          create_country_leader = {
-            name = "Sven Olov Lindholm"
-            desc = ""
-            picture = "gfx/leaders/GER/Portrait_Sven_Olov_Lindholm.dds"
-            expire = "1965.1.1"
-            ideology = nazism
-            traits = {
-            }
-          }
-        }
-      }
-      if = {
-        limit = {
-          RKP = { exists = yes }
-        }
-        RKP = {
-          create_country_leader = {
-            name = "Hans Frank"
-            desc = "POLITICS_HANS_FRANK_DESC"
-            picture = "Portrait_General_Gouvernment_Hans_Frank.dds"
-            expire = "1974.4.4"
-            ideology = nazism
-            traits = {
-              Unwelcome_commissioner
-            }
-          }
-        }
-      }
-      if = {
-        limit = {
-          RKU = { exists = yes }
-        }
-        RKU = {
-          create_country_leader = {
-            name = "Erich Koch"
-            desc = "POLITICS_HINRICH_LOHSE_DESC"
-            picture = "gfx/leaders/RKU/leader_UKR_Erich_Koch.dds"
-            expire = "1965.1.1"
-            ideology = nazism
-            traits = {
-              Unwelcome_commissioner
-            }
-          }
-        }
-      }
+			if = {
+				limit = {
+					RKN = { exists = yes }
+					}
+					RKN = {
+					create_country_leader = {
+						name = "Sven Olov Lindholm"
+						desc = ""
+						picture = "gfx/leaders/GER/Portrait_Sven_Olov_Lindholm.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+				    RKP = { exists = yes }
+				}
+				RKP = {
+					create_country_leader = {
+						name = "Hans Frank"
+						desc = "POLITICS_HANS_FRANK_DESC"
+						picture = "Portrait_General_Gouvernment_Hans_Frank.dds"
+						expire = "1974.4.4"
+						ideology = nazism
+						traits = {
+						Unwelcome_commissioner
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+				    RKU = { exists = yes }
+				}
+				RKU = {
+					create_country_leader = {
+						name = "Erich Koch"
+						desc = "POLITICS_HINRICH_LOHSE_DESC"
+						picture = "gfx/leaders/RKU/leader_UKR_Erich_Koch.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						Unwelcome_commissioner
+						}
+					}
+				}
+			}
 		}
 
 		ai_chance = {
@@ -4468,16 +4477,16 @@ country_event = {     # 还有谁呢
 			base = 33
 		}
 
-    create_country_leader = {
-      name = "Adolf Hitler"
-      desc = ""
-      picture = "Portrait_Adolf_Hitler.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        dictator
-      }
-    }
+		create_country_leader = {
+			name = "Adolf Hitler"
+			desc = ""
+			picture = "Portrait_Adolf_Hitler.dds"
+			expire = "1965.1.1"
+			ideology = valkist
+			traits = {
+			    dictator
+			}
+		}
 		
 	}
 
@@ -4488,23 +4497,23 @@ country_event = {     # 还有谁呢
 
 		ai_chance = {
 			base = 33
-      modifier = {
-        factor = 1.5
-        is_ai = yes
-      }
+			modifier = {
+				factor = 1.5
+				is_ai = yes
+			}
 		}
 
-    create_country_leader = {
-      name = "Prince Eugen"
-      desc = ""
-      picture = "Portrait_Prince_Eugen.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        Eugen_of_Savoy
-        Navy_connection
-      }
-    }
+		create_country_leader = {
+			name = "Prince Eugen"
+			desc = ""
+			picture = "Portrait_Prince_Eugen.dds"
+			expire = "1965.1.1"
+			ideology = valkist
+			traits = {
+				Eugen_of_Savoy
+				Navy_connection
+			}
+		}
 		
 	}
 
@@ -4515,22 +4524,22 @@ country_event = {     # 还有谁呢
 
 		ai_chance = {
 			base = 34
-      modifier = {
-        factor = 1.5
-        is_ai = yes
-      }
+			modifier = {
+				factor = 1.5
+				is_ai = yes
+			}
 		}
 
-    create_country_leader = {
-      name = "Darnic Prestone Yggdmillennia"
-      desc = ""
-      picture = "Portrait_Darnic_Prestone_Yggdmillennia_ss.dds"
-      expire = "1965.1.1"
-      ideology = valkist
-      traits = {
-        Realpolitik
-      }
-    }
+		create_country_leader = {
+			name = "Darnic Prestone Yggdmillennia"
+			desc = ""
+			picture = "Portrait_Darnic_Prestone_Yggdmillennia_ss.png"
+			expire = "1965.1.1"
+			ideology = valkist
+			traits = {
+			    Realpolitik
+			}
+		}
 		
 	}
 	
@@ -5563,8 +5572,8 @@ country_event = {     # NSOAP
 	
 	trigger = {
 		tag = AUS
-    is_subject = no
-  }
+		is_subject = no
+    }
 
 	mean_time_to_happen = {
 		days = 30
@@ -5577,16 +5586,16 @@ country_event = {     # NSOAP
 			base = 65
 		}
 
-	  add_political_power = -100
+		add_political_power = -100
 
-    remove_unit_leader = 1940
+		retire_character = AUS_Steyr_Mannlicher
 
-    set_politics = {
-      ruling_party = fascism
-      elections_allowed = no
-    }		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}		
 
-    set_cosmetic_tag = AUS_coup
+		set_cosmetic_tag = AUS_coup
 
 		add_equipment_to_stockpile = { 
 			type = infantry_equipment
@@ -5594,9 +5603,9 @@ country_event = {     # NSOAP
 			producer = GER
 		}
 
-    hidden_effect = {
-      news_event = { hours = 1 id = ger_news.17 }
-    }
+		hidden_effect = {
+		    news_event = { hours = 1 id = ger_news.17 }
+		}
 		
 	}
 
@@ -5607,7 +5616,7 @@ country_event = {     # NSOAP
 			base = 35
 		}
 
-	  add_political_power = -50
+	    add_political_power = -50
 		
 	}
 	

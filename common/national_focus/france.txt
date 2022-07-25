@@ -4939,14 +4939,14 @@ country_event = {
 					is_core_of = ROOT
 					free_building_slots = {
 						building = arms_factory
-						size > 0
+						size > 1
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}	
 			}
@@ -6384,54 +6384,69 @@ country_event = {
 			focus = FRA_army_command_focus
 		}
 
-    ai_will_do = {
-					factor = 1000
-            modifier = {
-                factor = 2
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 2
 				has_war = yes
-            }
-				}
+			}
+		}
 
 		x = 0
 		y = 2
 		relative_position_id = FRA_army_command_focus
-			available = {
-					FRA = {
-							is_puppet = no
-						}
-					or = {
-							GER = {
-                  has_added_tension_amount > 5
-								}
-							ITA = {
-                  has_added_tension_amount > 5
-								}
-							ENG = {
-									has_government = fascism
-								}
-							has_war = yes
-						}
+		available = {
+			FRA = {
+				is_puppet = no
+			}
+			or = {
+				GER = {
+				    has_added_tension_amount > 5
 				}
-			bypass = {
-					has_civil_war = yes
+				ITA = {
+				    has_added_tension_amount > 5
 				}
-			completion_reward = {
+				ENG = {
+					has_government = fascism
+				}
+				has_war = yes
+			}
+		}
+		bypass = {
+			has_civil_war = yes
+		}
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
+			army_experience = 15
 
-					swap_ideas = {
-							remove_idea = FRA_shadow_of_World_War_I_idea_II
-							add_idea = FRA_shadow_of_World_War_I_idea_III
-						}
+			if = {
+				limit = {
+				   or = {
+						 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+						 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			if = {
+				limit = { RHI = { is_subject_of = FRA }  }
+				RHI = { 
+					army_experience = 10
+					add_manpower = 12000
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 3000
+						producer = FRA
+					}
+				}
+			}
+
+			swap_ideas = {
+				remove_idea = FRA_shadow_of_World_War_I_idea_II
+				add_idea = FRA_shadow_of_World_War_I_idea_III
+			}
+		}
 
 	}
 	focus = {
@@ -10188,7 +10203,7 @@ country_event = {
 					set_country_flag = FRA_strengthen_government_support_focus_flag
 					add_timed_idea = {
 							idea = FRA_strengthen_government_support_focus
-							days = 365
+							days = 500
 						}
 				}
 
@@ -10617,7 +10632,7 @@ country_event = {
 				}
 			available_if_capitulated = yes
 			ai_will_do = {
-				factor = 400
+				factor = 1000
 				modifier = {
 					factor = 2
 					FRA = { has_war = yes }
@@ -10625,7 +10640,7 @@ country_event = {
 			}
 			search_filters = { FOCUS_FILTER_POLITICAL }
 			completion_reward = {
-					add_ideas = { tot_economic_mobilisation }
+					add_ideas = { war_economy }
 				}
 
 	}

@@ -61,6 +61,9 @@ set_technology = {
 	fuel_refining = 1
 
     armored_car1 = 1
+
+	british_professionalism = 1
+
 }
 if = {
 	limit = {

@@ -12,10 +12,13 @@
 
 
 FIC_unit_production = {
-	enable = {
-	
+
+	allowed = {
 		original_tag = FIC
-		
+	}
+
+	enable = {
+		always = yes
 	}
 	abort = { 
 		always = no
@@ -68,17 +71,21 @@ FIC_unit_production = {
 		value = 10 
 	} 
 
-	ai_strategy = {
-		type = equipment_production_min_factories
-		id = artillery
-		value = 1
-	}
+	#ai_strategy = {
+		#type = equipment_production_min_factories
+		#id = artillery
+		#value = 1
+	#}
 
 }
 
 FIC_share_borders_with_JAP = {
+
+	allowed = {
+		original_tag = FIC
+	}
+
 	enable = {
-		tag = FIC
 		OR = {
 		is_in_faction_with = EGY
 		is_in_faction_with = ENG

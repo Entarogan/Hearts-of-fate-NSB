@@ -24,7 +24,7 @@ characters = {
 		}
 	}
 	AST_George_V={
-		name = "George V"
+		name = "AST_George_V"
 		portraits={
 			civilian={
 				large = "gfx/leaders/AST/Portrait_George_V.dds"
@@ -52,7 +52,7 @@ characters = {
 		}
 	}
 	AST_George_VI={
-		name = "George VI"
+		name = "AST_George_VI"
 		portraits={
 			army = {
 				large = "gfx/leaders/AST/Portrait_George_VI.dds"
@@ -68,7 +68,7 @@ characters = {
 		}
 	}
 	AST_Edward_VIII={
-		name = "Edward VIII"
+		name = "AST_Edward_VIII"
 		portraits={
 			civilian={
 				large = "gfx/leaders/AST/Portrait_Edward_VIII.dds"
@@ -96,7 +96,7 @@ characters = {
 		}
 	}
 	AST_Arc_Royal={
-		name = "Arc Royal"
+		name = "AST_Arc_Royal"
 		portraits={
 			army = {
 				large = "gfx/leaders/AST/Portrait_Arc_Royal.dds"

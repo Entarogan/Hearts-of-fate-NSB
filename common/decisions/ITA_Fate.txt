@@ -1,3 +1,84 @@
+ITA_Ethiopia_cate = {
+
+	ITA_Ethiopia_decision = {
+
+		icon = generic_army_support
+
+		available = {
+			has_full_control_of_state = 550
+			has_full_control_of_state = 271
+			has_full_control_of_state = 559
+		}
+
+		cost = 0
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			is_subject = no
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+
+		complete_effect = {
+			ETH = {
+				transfer_state = 550
+				transfer_state = 271
+				transfer_state = 559
+
+				every_owned_state = {
+					add_compliance = 80
+				}
+
+				ITA = {
+				    puppet = ETH
+				}
+
+				add_equipment_to_stockpile = {
+					type = infantry_equipment
+					amount = 2000
+					producer = ITA
+				}
+
+				add_offsite_building = {
+					type = arms_factory
+					level = 1
+				}
+
+				add_country_leader_role = {
+					character = ETH_haile_selassie
+					country_leader = {
+						expire="1965.1.1.1"
+						ideology = stratocracy
+						traits = {
+
+						}
+					}
+					promote_leader = yes
+				}
+
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}  
+
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.65
+				}  
+
+			}
+		}
+	}
+
+}
+
+
 ITA_army_reform = {
 
 	ITA_army_reform = {
@@ -97,7 +178,7 @@ ITA_army_reform = {
 		days_remove = 60
 
 		visible = {
-      has_completed_focus = ITA_Legacy_of_the_Punic_War
+      has_completed_focus = ITA_Invest_in_naval_construction
 			OR = {
 				has_idea = ITA_inadequte_navy_1_idea
 				has_idea = ITA_inadequte_navy_2_idea
@@ -155,7 +236,7 @@ ITA_army_reform = {
 		days_remove = 60
 
 		visible = {
-      has_completed_focus = ITA_The_experience_of_the_colonial_war
+      has_completed_focus = ITA_Continue_to_expand_the_air_force
 			OR = {
 				has_idea = ITA_inadequte_airforce_1_idea
 				has_idea = ITA_inadequte_airforce_2_idea

@@ -17,11 +17,15 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				stability_factor = -0.25
-				war_support_factor = -0.25
-				conscription_factor = -0.50
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.3
+
+				conscription_factor = -0.8
+
 				fascism_drift = 0.1
 			}
+
 		}
 
 		RHI_Military_occupation = {
@@ -39,13 +43,32 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
+
+				weekly_manpower = 50
+				conscription = 0.05
+
 				army_org_Factor = 0.10
-				stability_factor = 0.15
-				neutrality_drift = 0.15
-        surrender_limit = 0.15
+				army_core_defence_factor = 0.15
+
+				max_dig_in = 5
+
+				production_factory_max_efficiency_factor = 0.15
+
+				local_resources_factor = 0.15
+
+				neutrality_drift = 0.2
+
+				surrender_limit = 0.15
 			}
+
+			targeted_modifier = { 
+				tag = FRA
+				cic_to_target_factor = 0.70
+				mic_to_target_factor = 0.35
+			}
+
 		}
 	
-		}
+	}
 		
 }		

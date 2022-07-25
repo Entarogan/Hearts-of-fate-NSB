@@ -194,58 +194,58 @@ focus_tree = {
 
 			add_political_power = 50
 
-      if = {
-        limit = {
-          has_country_flag = {
-            flag = ger_left
-            value > 2
-          }
-        }
-        hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = ger_left
+						value > 2
+					}
+				}
+				hidden_effect = {
 
-          if = {
-            limit = {
-              has_idea = GER_Intricate_intelligence_agency
-            }
-				    country_event = { id = more_ger.28 days = 7 }
-          }		
+					if = {
+						limit = {
+						    has_idea = GER_Intricate_intelligence_agency
+						}
+						country_event = { id = more_ger.28 days = 7 }
+					}		
 
-				  country_event = { id = more_ger.21 days = 90 }
+					country_event = { id = more_ger.21 days = 90 }
 
-		      set_country_flag = GER_otto_strasser_in_power_flag
+					set_country_flag = GER_otto_strasser_in_power_flag
 
-          add_ideas = { GER_otto_strasser }
+					add_ideas = { GER_otto_strasser }
 
-          add_ideas = GER_Black_revolution_Valkist_idea
-        }
-      }
+					add_ideas = GER_Black_revolution_Valkist_idea
+				}
+			}
 
-      if = {
-        limit = {
-          has_country_flag = {
-            flag = ger_right
-            value > 2
-          }
-        }
-        hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = ger_right
+						value > 2
+					}
+				}
+				hidden_effect = {
 
-          if = {
-            limit = {
-              has_idea = GER_Intricate_intelligence_agency
-            }
-				    country_event = { id = more_ger.30 days = 90 }
-          }		
+					if = {
+						limit = {
+						    has_idea = GER_Intricate_intelligence_agency
+						}
+						country_event = { id = more_ger.30 days = 90 }
+					}		
 
-          if = {
-            limit = {
-              has_idea = GER_Intricate_intelligence_agency_1
-            }
-				    country_event = { id = more_ger.29 days = 90 }
-          }		
+					if = {
+						limit = {
+						    has_idea = GER_Intricate_intelligence_agency_1
+						}
+						country_event = { id = more_ger.29 days = 90 }
+					}		
 
-          add_ideas = GER_vor_das_vaterland_Valkist_idea
-        }
-      }
+					add_ideas = GER_vor_das_vaterland_Valkist_idea
+				}
+			}
 
 		}
 	}
@@ -616,11 +616,18 @@ focus_tree = {
 		
 		completion_reward = {
 
-	    add_political_power = 50
+			add_political_power = 25
 
 			swap_ideas = {
 				remove_idea = GER_DAF_idea
 				add_idea = GER_DAF_goring_idea
+			}
+
+			add_tech_bonus = {
+				name = GER_four_year_plan
+				bonus = 0.75
+				uses = 2
+				category = industry
 			}
 
 		}
@@ -1099,10 +1106,10 @@ focus_tree = {
 				limit = {
 					has_idea = relaxed_Corrupt_industry
 				}
-        swap_ideas = {
-          remove_idea = relaxed_Corrupt_industry
-          add_idea = relaxed_industry
-        }
+				swap_ideas = {
+					remove_idea = relaxed_Corrupt_industry
+					add_idea = relaxed_industry
+				}
 			}
 
 		}
@@ -1126,8 +1133,8 @@ focus_tree = {
 			}
 		}
 
-    cancel_if_invalid = no
-    continue_if_invalid = yes
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -1144,108 +1151,88 @@ focus_tree = {
 
 			if = {
 				limit = {
-					has_idea = limited_conscription
+				    has_idea = active_industry
 				}
-        swap_ideas = {
-          remove_idea = limited_conscription
-          add_idea = service_by_requirement
-        }
+				swap_ideas = {
+					remove_idea = active_industry
+					add_idea = active_industry_EX
+				}
 			}
 
 			if = {
 				limit = {
-					has_idea = extensive_conscription
+				    has_idea = limited_conscription
 				}
-        swap_ideas = {
-          remove_idea = extensive_conscription
-          add_idea = service_by_requirement
-        }
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = service_by_requirement
+				}
 			}
 
-      random_owned_state = {
-        limit = {
-          is_fully_controlled_by = ROOT
-          industrial_complex > 1
-        }
-        remove_building = {
-          type = industrial_complex
-          level = 2
-        }
-				add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 4
-          instant_build = yes
-        }
-      }
-      
-      random_owned_state = {
-        limit = {
-          is_fully_controlled_by = ROOT
-          industrial_complex > 1
-        }
-        remove_building = {
-          type = industrial_complex
-          level = 2
-        }
-				add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 4
-          instant_build = yes
-        }
-      }
+			if = {
+				limit = {
+				    has_idea = extensive_conscription
+				}
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = service_by_requirement
+				}
+			}
 
-      random_owned_state = {
-        limit = {
-          is_fully_controlled_by = ROOT
-          industrial_complex > 1
-        }
-        remove_building = {
-          type = industrial_complex
-          level = 2
-        }
-				add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 4
-          instant_build = yes
-        }
-      }
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 
-      random_owned_state = {
-        limit = {
-          is_fully_controlled_by = ROOT
-          industrial_complex > 1
-        }
-        remove_building = {
-          type = industrial_complex
-          level = 2
-        }
-				add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 4
-          instant_build = yes
-        }
-      }
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 
-      random_owned_state = {
-        limit = {
-          is_fully_controlled_by = ROOT
-          industrial_complex > 1
-        }
-        remove_building = {
-          type = industrial_complex
-          level = 2
-        }
-				add_extra_state_shared_building_slots = 2
-        add_building_construction = {
-          type = arms_factory
-          level = 4
-          instant_build = yes
-        }
-      }
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+			}
 
 		}
 	}
@@ -2557,14 +2544,15 @@ focus_tree = {
 				limit = {
 					has_idea = relaxed_Corrupt_industry
 				}
-			swap_ideas = {
-				remove_idea = relaxed_Corrupt_industry
-				add_idea = relaxed_industry
-			}
+				swap_ideas = {
+					remove_idea = relaxed_Corrupt_industry
+					add_idea = active_industry
+				}
 			}
 
 			if = {
 				limit = {
+					has_war = yes
 					NOT = { has_idea = war_economy }
 					NOT = { has_idea = tot_economic_mobilisation }
 				}
@@ -2588,11 +2576,11 @@ focus_tree = {
 			any_enemy_country = {
 				is_major = yes
 			}
-      or = {
-        date > 1942.1.1
-        casualties > 500000
-        surrender_progress > 0.20
-      }
+			or = {
+				date > 1942.1.1
+				casualties > 500000
+				surrender_progress > 0.20
+			}
 		}
 
     cancel_if_invalid = no
@@ -2605,36 +2593,26 @@ focus_tree = {
 		
 		completion_reward = {
 
-			if = {
-				limit = {
-					has_idea = relaxed_industry
-				}
-        swap_ideas = {
-          remove_idea = relaxed_industry
-          add_idea = active_industry
-        }
-			}
-
-		  add_ideas = tot_economic_mobilisation
+			add_ideas = tot_economic_mobilisation
 
 			if = {
 				limit = {
 					has_idea = limited_conscription
 				}
-        swap_ideas = {
-          remove_idea = limited_conscription
-          add_idea = service_by_requirement
-        }
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = service_by_requirement
+				}
 			}
 
 			if = {
 				limit = {
 					has_idea = extensive_conscription
 				}
-        swap_ideas = {
-          remove_idea = extensive_conscription
-          add_idea = service_by_requirement
-        }
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = service_by_requirement
+				}
 			}
 
 		}
@@ -2940,19 +2918,24 @@ focus_tree = {
 				limit = {
 					has_tech = tech_recon2
 				}
-			add_tech_bonus = {
-				name = GER_Surprise_preparation
-				bonus = 1.0
-				uses = 1
-				category = recon_tech
-			}
+				add_tech_bonus = {
+					name = GER_Surprise_preparation
+					bonus = 1.0
+					uses = 1
+					category = recon_tech
+				}
 			}
 
 			if = {
 				limit = {
 					NOT = { has_tech = tech_recon2 }
 				}
-			  set_technology = { tech_recon2 = 1 }
+				add_tech_bonus = {
+					name = GER_Surprise_preparation
+					bonus = 3.0
+					uses = 1
+					category = recon_tech
+				}
 			}
 
 		}
@@ -3324,18 +3307,18 @@ focus_tree = {
 			factor = 150
 			modifier = {
 				factor = 3
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+				  date > 1942.1.1
+				  casualties > 500000
+				  has_defensive_war = yes
+				  surrender_progress > 0.10
+				}
 			}
 		}	
 
-    available = {
+		available = {
 			has_tech = rocket_engines
-    }
+		}
 
 		available_if_capitulated = yes
 
@@ -3345,26 +3328,26 @@ focus_tree = {
 				limit = {
 					has_tech = jet_fighter1
 				}
-        add_tech_bonus = {
-          name = GER_Jet_prototype
-          bonus = 1.0
-          uses = 1
-          category = jet_technology
-        }
+				add_tech_bonus = {
+					name = GER_Jet_prototype
+					bonus = 1.0
+					uses = 1
+					category = jet_technology
+				}
 			}
 
 			if = {
 				limit = {
 					NOT = { has_tech = jet_engines }
 				}
-			  set_technology = { jet_engines = 1 }
+				set_technology = { jet_engines = 1 }
 			}
 
 			if = {
 				limit = {
 					NOT = { has_tech = jet_fighter1 }
 				}
-			  set_technology = { jet_fighter1 = 1 }
+				set_technology = { jet_fighter1 = 1 }
 			}
 
 			add_tech_bonus = {
@@ -4478,12 +4461,12 @@ focus_tree = {
 			factor = 100
 			modifier = {
 				factor = 5
-        or = {
-          date > 1942.1.1
-          casualties > 500000
-          has_defensive_war = yes
-          surrender_progress > 0.10
-        }
+				or = {
+					date > 1942.1.1
+					casualties > 500000
+					has_defensive_war = yes
+					surrender_progress > 0.10
+				}
 			}
 		}
 		
@@ -4496,14 +4479,54 @@ focus_tree = {
 
 			set_technology = { GER_Fallschirmjager_tech = 1 }
 
-      add_tech_bonus = {
-        name = GER_Fallschirmjager
-        bonus = 2
-        uses = 1
-        category = para_tech
-      }	
+			add_tech_bonus = {
+				name = GER_Fallschirmjager
+				bonus = 2
+				uses = 1
+				category = para_tech
+			}	
 
-      GER_increase_Special_Forces = yes
+			GER_increase_Special_Forces = yes
+
+            hidden_effect = {
+                division_template = {
+                    name = "Fallschirmjäger-Division"			# 
+                    division_names_group = GER_PAR_01
+
+                    regiments = {
+                        paratrooper = { x = 0 y = 0 }
+                        paratrooper = { x = 0 y = 1 }
+                        paratrooper = { x = 0 y = 2 }
+                        
+                        paratrooper = { x = 1 y = 0 }
+                        paratrooper = { x = 1 y = 1 }
+                        paratrooper = { x = 1 y = 2 }
+                        
+                        paratrooper = { x = 2 y = 0 }
+                        paratrooper = { x = 2 y = 1 }
+                        paratrooper = { x = 2 y = 2 }
+                        
+                        paratrooper = { x = 3 y = 0 }
+                    }
+                    support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_tank = { x = 0 y = 3 }
+						anti_air = { x = 0 y = 4 }
+                    }
+                }
+            }
+
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Fallschirmjäger-Division\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 2
+					}
+				}
+			}
 
 		}
 	}
@@ -6122,12 +6145,13 @@ focus_tree = {
 
 		available = {
 			is_puppet = no
+			NOT = { has_country_flag = GER_production_mobilization_flag }
 		}
 
 		available_if_capitulated = yes
 
 		bypass = {
-      has_completed_focus = GER_Expedited_production
+
 		}
 
 		ai_will_do = {
@@ -6144,96 +6168,39 @@ focus_tree = {
 
 			add_timed_idea = { idea = GER_Preparing_Great_Europa_War_idea days = 120 }
 
-      if = {
-        limit = {
-		      always = no
-          is_ai = yes
-        }
-        add_equipment_to_stockpile = {
-          type = infantry_equipment
-          amount = 5000
-          producer = GER
-        }
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
 
-        add_equipment_to_stockpile = {
-          type = support_equipment
-          amount = 500
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = artillery_equipment
-          amount = 1000
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = anti_air_equipment
-          amount = 500
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = anti_tank_equipment
-          amount = 500
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = motorized_equipment
-          amount = 500
-          producer = GER
-        }
-
-        if = {
-          limit = {
-            has_tech = mechanised_infantry
-          }
-
-          add_equipment_to_stockpile = {
-            type = mechanized_equipment
-            amount = 350
-            producer = GER
-          }
-
-        }
-
-        add_equipment_to_stockpile = {
-          type = armored_car_equipment
-          amount = 150
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = light_tank_equipment
-          amount = 100
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = fighter_equipment
-          amount = 300
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = CAS_equipment
-          amount = 150
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = nav_bomber_equipment
-          amount = 100
-          producer = GER
-        }
-
-        add_equipment_to_stockpile = {
-          type = tac_bomber_equipment
-          amount = 100
-          producer = GER
-        }
-      }
+			random_owned_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					industrial_complex > 1
+				}
+				remove_building = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
 
 		}
 	}  
@@ -6817,17 +6784,17 @@ focus_tree = {
 		prerequisite = { focus = GER_Preparing_for_the_Great_Europa_War }
 
 		available = {
-      has_full_control_of_state = 50
-      has_full_control_of_state = 55
-      has_full_control_of_state = 57
+			has_full_control_of_state = 50
+			has_full_control_of_state = 55
+			has_full_control_of_state = 57
 		}
 
 		bypass = {
-      or = {
-        NOT = { has_full_control_of_state = 50 }
-        NOT = { has_full_control_of_state = 55 }
-        NOT = { has_full_control_of_state = 57 }
-      }
+			or = {
+				NOT = { has_full_control_of_state = 50 }
+				NOT = { has_full_control_of_state = 55 }
+				NOT = { has_full_control_of_state = 57 }
+			}
 		}
 
 		x = -1
@@ -6836,111 +6803,111 @@ focus_tree = {
 		cost = 8
 		ai_will_do = {
 			factor = 100
-      modifier = {
-        factor = 10
-        date > 1939.1.1
-        any_home_area_neighbor_country = {
-          NOT = { has_war_with = GER }
-        }
-      }
+			modifier = {
+				factor = 10
+				date > 1939.1.1
+				any_home_area_neighbor_country = {
+					NOT = { has_war_with = GER }
+				}
+			}
 		}
 			
 		completion_reward = {
 
-      57 = {
-        add_building_construction = {
-          type = bunker
-          province = 11346
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 6622
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 495
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 3398
-          level = 3
-          instant_build = yes
-        }
-      }			
+			57 = {
+				add_building_construction = {
+					type = bunker
+					province = 11346
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6622
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 495
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3398
+					level = 4
+					instant_build = yes
+				}
+			}			
 
-      55 = {
-        add_building_construction = {
-          type = bunker
-          province = 9547
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 9486
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 6444
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 11560
-          level = 4
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 589
-          level = 3
-          instant_build = yes
-        }
-      }
+			55 = {
+				add_building_construction = {
+					type = bunker
+					province = 9547
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9486
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6444
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11560
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 589
+					level = 4
+					instant_build = yes
+				}
+			}
 
-      50 = {
-        add_building_construction = {
-          type = bunker
-          province = 6568
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 3530
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 6542
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 6712
-          level = 3
-          instant_build = yes
-        }
-        add_building_construction = {
-          type = bunker
-          province = 11640
-          level = 3
-          instant_build = yes
-        }
-      }
+			50 = {
+				add_building_construction = {
+					type = bunker
+					province = 6568
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3530
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6542
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 6712
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11640
+					level = 4
+					instant_build = yes
+				}
+			}
 
-      GER_increase_propaganda = yes
+			GER_increase_propaganda = yes
 
 		}
 	}  
@@ -11455,12 +11422,13 @@ focus_tree = {
 		
 		available = {
 			is_puppet = no
+			NOT = { has_country_flag = GER_production_mobilization_flag }
 		}
 
 		available_if_capitulated = yes
 
 		bypass = {
-      has_completed_focus = GER_Preparing_for_the_Great_Europa_War
+
 		}
 
 		completion_reward = {

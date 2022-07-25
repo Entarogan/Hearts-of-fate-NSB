@@ -230,6 +230,11 @@ country_event = { # 降落伞
 
 		add_stability = -0.01
 
+		add_autonomy_ratio = {
+			value = 0.03
+			localization = more_ukraine_dlc.9.t
+		}
+
 		hidden_effect = {
 			country_event = { id = more_ukraine_dlc.10 days = 3 }
 		}
@@ -314,6 +319,11 @@ country_event = { # 破坏集体农庄
 
 		add_stability = -0.05
 
+		add_autonomy_ratio = {
+			value = 0.1
+			localization = more_ukraine_dlc.11.t
+		}
+
 		add_popularity = {
 			ideology = fascism
 			popularity = 0.05
@@ -359,6 +369,11 @@ country_event = { # 煽动驻军反叛
 
 	option = {
 		name = more_ukraine_dlc.12.a
+
+		add_autonomy_ratio = {
+			value = 0.15
+			localization = more_ukraine_dlc.12.t
+		}
 
 		add_equipment_to_stockpile = {
 			type = infantry_equipment
@@ -717,6 +732,23 @@ country_event = { # 为了乌克兰！
 	
 	option = {
 		name = ukr.2.a
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "SOV"
+			value = 50
+		}
+
+		add_ai_strategy = {
+			type = antagonize
+			id = "RUS"
+			value = 50
+		}
+
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
 
 		add_stability = -0.15
 
@@ -1910,6 +1942,11 @@ country_event = {  ### Bandera's coup against Petlura
 
 	option = {  ### The government has been brought into Chaos...
 		name = ukr.17.c
+
+		trigger = {	
+			has_completed_focus = UKR_Unite_anarchists
+		}
+
 		add_stability = -0.25
 
 		add_popularity = {
@@ -2008,6 +2045,10 @@ country_event = {  ### Anarchist Triumph
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = no
+		}
+
+		UKR_Nestor_Makhno = {
+			promote_leader = yes
 		}
 
 		add_country_leader_role = {

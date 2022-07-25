@@ -207,5 +207,21 @@ areas = {
 			160 #Phillipines - we care about these too!
 		}
 	}
+
+	just_philippines = {
+		strategic_regions = {
+			160 #Phillipines
+		}
+	}
+	
+	east_indies = {
+		strategic_regions = {
+			167 #Papua
+			93
+			158
+			159 #Brunei
+			187
+		}
+	}
 	
 }

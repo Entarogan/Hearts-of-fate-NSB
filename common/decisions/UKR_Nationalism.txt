@@ -3,13 +3,18 @@ UKR_elite_troops_cate = {
 	UKR_elite_troops_Nightingale_decision = {
 
 		available = {
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes
+			}
+
 			num_of_civilian_factories_available_for_projects > 5
 			has_army_experience > 14
 			NOT = { has_idea = UKR_factory_rerouted_1_idea }
 			has_tech = paratroopers
 			has_tech = interwar_antiair
 			has_tech = interwar_antitank
-			219 = {
+			202 = {
 				CONTROLLER = {
 					original_tag = UKR
 				}
@@ -18,11 +23,6 @@ UKR_elite_troops_cate = {
 
 		visible = {
 			is_subject = no
-			219 = {
-				CONTROLLER = {
-					original_tag = UKR
-				}
-			}
 		}
 
 		cost = 25
@@ -93,7 +93,7 @@ UKR_elite_troops_cate = {
 			}
 
 			random_owned_controlled_state = {
-				prioritize = { 219 }
+				prioritize = { 202 }
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				create_unit = {
 				  division = "name = \"Special Operations Detachment "Nightingale"\" division_template = \"Nightingale Division\" start_experience_factor = 0.9" 
@@ -108,6 +108,11 @@ UKR_elite_troops_cate = {
 	UKR_elite_troops_Sich_decision = {
 
 		available = {
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes
+			}
+
 			num_of_civilian_factories_available_for_projects > 5
 			has_army_experience > 14
 			NOT = { has_idea = UKR_factory_rerouted_1_idea }
@@ -118,7 +123,7 @@ UKR_elite_troops_cate = {
 			has_tech = tech_field_hospital
 			has_tech = tech_maintenance_company
 			has_tech = tech_signal_company
-			219 = {
+			202 = {
 				CONTROLLER = {
 					original_tag = UKR
 				}
@@ -127,11 +132,6 @@ UKR_elite_troops_cate = {
 
 		visible = {
 			is_subject = no
-			219 = {
-				CONTROLLER = {
-					original_tag = UKR
-				}
-			}
 		}
 
 		cost = 25
@@ -210,7 +210,7 @@ UKR_elite_troops_cate = {
 			}
 
 			random_owned_controlled_state = {
-				prioritize = { 219 }
+				prioritize = { 202 }
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				create_unit = {
 				  division = "name = \"Sich Strelkovaya\" division_template = \"Sich Division\" start_experience_factor = 0.7" 
@@ -225,6 +225,11 @@ UKR_elite_troops_cate = {
 	UKR_elite_troops_Otaman_decision = {
 
 		available = {
+			has_war = yes 
+			any_enemy_country = {
+				is_major = yes
+			}
+
 			num_of_civilian_factories_available_for_projects > 10
 			has_army_experience > 14
 			NOT = { has_idea = UKR_factory_rerouted_2_idea }
@@ -235,7 +240,7 @@ UKR_elite_troops_cate = {
 			has_tech = tech_field_hospital
 			has_tech = tech_maintenance_company
 			has_tech = tech_signal_company
-			219 = {
+			202 = {
 				CONTROLLER = {
 					original_tag = UKR
 				}
@@ -245,11 +250,6 @@ UKR_elite_troops_cate = {
 		visible = {
 			is_subject = no
 		    NOT = { has_country_flag = UKR_Bandera_has_succeeded_flag }
-			219 = {
-				CONTROLLER = {
-					original_tag = UKR
-				}
-			}
 		}
 
 		cost = 25
@@ -318,7 +318,7 @@ UKR_elite_troops_cate = {
 			}
 
 			random_owned_controlled_state = {
-				prioritize = { 219 }
+				prioritize = { 202 }
 				limit = { ROOT = { has_full_control_of_state = PREV } }
 				create_unit = {
 				  division = "name = \"Otaman Strelkovaya\" division_template = \"Otaman Division\" start_experience_factor = 0.7" 
@@ -379,10 +379,6 @@ UKR_Greater_Ukraine_cate = {
 			consumer_goods_factor = 0.3
 		}
 
-		ai_will_do = {
-			factor = 100
-		}
-
 		complete_effect = {
 			set_country_flag = {
 				value = 1
@@ -405,6 +401,10 @@ UKR_Greater_Ukraine_cate = {
 				add_core_of = ROOT
 			}
 		
+		}
+
+		ai_will_do = {
+			factor = 1000
 		}
 
 	}
@@ -432,18 +432,18 @@ UKR_Greater_Ukraine_cate = {
         fire_only_once = yes
 		cost = 100
 
-		ai_will_do = {
-			factor = 100
-		}
-
 		complete_effect = {
-			FROM = {
+			every_state = {
 				limit = {
 					is_claimed_by = ROOT
 				}
 				set_compliance = 50
 				set_resistance = 0
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -577,7 +577,7 @@ UKR_OUN_policy_cate = {
 		}
 
 		targets = {
-			203 197 192 834 193 225 259 221 228 226 227 196 200 245 218 234 137 234 218
+			203 197 192 834 193 225 259 221 228 226 227 196 200 218 234 137
 		}
 
 		available = {
@@ -666,9 +666,6 @@ UKR_OUN_policy_cate = {
 			NOT = { 227 = { is_core_of = SOV } }
 			NOT = { 196 = { is_core_of = SOV } }
 			NOT = { 200 = { is_core_of = SOV } }
-			NOT = { 245 = { is_core_of = SOV } }
-			NOT = { 218 = { is_core_of = SOV } }
-			NOT = { 234 = { is_core_of = SOV } }
 		}
 		visible = {
 			is_subject = no

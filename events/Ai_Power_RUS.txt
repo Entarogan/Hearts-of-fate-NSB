@@ -309,6 +309,11 @@ country_event = {
 			base = 100
 		}
 
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
 		if = {
 			limit = { NOT = { has_tech = radio_detection } }
 

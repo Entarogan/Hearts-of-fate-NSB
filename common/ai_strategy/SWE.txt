@@ -15,8 +15,13 @@
 
 
 SWE_unit_production = {
-	enable = {
+
+	allowed = {
 		original_tag = SWE
+	}
+
+	enable = {
+		always = yes
 	}
 	abort = {
 		always = no
@@ -149,8 +154,13 @@ SWE_unit_production = {
 }	
 
 SWE_template_design_1 = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		original_tag = SWE			
+		always = yes		
 	}
 	abort = { 
 		always = no
@@ -206,8 +216,13 @@ SWE_template_design_1 = {
 }
 
 SWE_area_priority = {
-	enable = {
+
+	allowed = {
 		original_tag = SWE
+	}
+
+	enable = {
+		always = yes
 	}
 
 	ai_strategy = {
@@ -271,14 +286,25 @@ SWE_area_priority = {
 }
 
 SWE_invading_france_is_pointless_because_we_go_through_benelux_soon = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
-		NOT = { has_tech = landing_craft }
+		if = {
+			limit = { NOT = { has_dlc = "Man the Guns" } }
+			NOT = { has_tech = landing_craft }
+		}
+		else = {
+			NOT = { has_tech = mtg_landing_craft }
+		}
 		date < 1940.1.1
 	}
 	abort = {
 		OR = {
 			has_tech = landing_craft
+			has_tech = mtg_landing_craft
 			date > 1940.1.1
 		}
 	}
@@ -298,9 +324,12 @@ SWE_invading_france_is_pointless_because_we_go_through_benelux_soon = {
 }
 
 SWE_worry_about_barbarossa_before_africa = {
-	enable = {
-		tag = SWE
 
+	allowed = {
+		original_tag = SWE
+	}
+
+	enable = {
 		country_exists = SOV
 		NOT = {	is_in_faction_with = SOV }
 		has_war_with = ENG
@@ -322,8 +351,12 @@ SWE_worry_about_barbarossa_before_africa = {
 }
 
 SWE_want_to_invade_FRA_without_ITA = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		is_historical_focus_on = yes
 		date < 1940.1.1
 		FRA = {
@@ -355,6 +388,11 @@ SWE_want_to_invade_FRA_without_ITA = {
 }
 
 SWE_stay_away_from_the_royal_navy = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
 		has_war_with = ENG
 		date < 1942.1.1
@@ -403,8 +441,12 @@ SWE_stay_away_from_the_royal_navy = {
 }
 
 SWE_dont_take_claims_on_POL_we_got_focus = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		country_exists = POL
 		has_war = no
 	}
@@ -425,9 +467,13 @@ SWE_dont_take_claims_on_POL_we_got_focus = {
 }
 
 SWE_dont_mess_with_volunteers = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
 		date < 1941.6.1
-			tag = SWE
 	}
 	abort = {
 		date > 1941.6.1
@@ -461,8 +507,12 @@ SWE_dont_mess_with_volunteers = {
 }
 
 SWE_industry_we_are_the_baddies = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		date < 1940.1.1
 		date > 1937.1.1
 	}
@@ -481,8 +531,12 @@ SWE_industry_we_are_the_baddies = {
 }
 
 SWE_industry_we_are_the_baddies_2 = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		date > 1940.1.1
 	}
 
@@ -493,8 +547,12 @@ SWE_industry_we_are_the_baddies_2 = {
 }
 
 SWE_industry_we_are_the_baddies_but_not_yet = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		date < 1937.8.1
 	}
 	abort={
@@ -509,6 +567,10 @@ SWE_industry_we_are_the_baddies_but_not_yet = {
 }
 
 SWE_care_less_about_making_friends = {
+
+	allowed = {
+		original_tag = SWE
+	}
 
 	enable = {
 		has_government = fascism
@@ -533,8 +595,12 @@ SWE_care_less_about_making_friends = {
 }
 
 SWE_wants_panzer = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		has_government = fascism
 		date > 1937.10.20
 		has_war = yes
@@ -553,28 +619,32 @@ SWE_wants_panzer = {
 }
 
 SWE_wants_ship = {
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		has_government = fascism
 		date > 1937.10.20
 		has_war = yes
 		AND = {
-		OR = {
-		NOT = { country_exists = FRA }
-        FRA = { has_capitulated = yes }
-        FRA = { is_in_faction_with = SWE }
+			OR = {
+				NOT = { country_exists = FRA }
+				FRA = { has_capitulated = yes }
+				FRA = { is_in_faction_with = SWE }
+			}
+			OR = {
+				NOT = { country_exists = ITA }
+				ITA = { has_capitulated = yes }
+				ITA = { is_in_faction_with = SWE }
+			}
+			OR = {
+				NOT = { country_exists = SOV }
+				SOV = { has_capitulated = yes }
+				SOV = { is_in_faction_with = SWE }
+			}
 		}
-		OR = {
-		NOT = { country_exists = ITA }
-        ITA = { has_capitulated = yes }
-        ITA = { is_in_faction_with = SWE }
-		}
-		OR = {
-		NOT = { country_exists = SOV }
-        SOV = { has_capitulated = yes }
-        SOV = { is_in_faction_with = SWE }
-		}
-	}
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -585,8 +655,12 @@ SWE_wants_ship = {
 }
 
 SWE_we_like_GER = { # :O
+
+	allowed = {
+		original_tag = SWE
+	}
+
 	enable = {
-		tag = SWE
 		has_government = fascism
 		GER = {
 			has_government = fascism
@@ -620,6 +694,7 @@ SWE_we_like_GER = { # :O
 }
 
 SWE_we_anti_communist = { 
+
 	enable = {
         has_idea = GER_anti_communist_volunteers_idea
 	    SWE = { has_war_with = SOV }
@@ -627,14 +702,14 @@ SWE_we_anti_communist = {
 	abort = {
 		NOT = { SWE = { has_war_with = SOV } }
 	}
-		add_ai_strategy = {
-			type = send_volunteers_desire
-			id = "SWE"
-			value = 200
-		}
-		add_ai_strategy = {
-			type = support
-			id = "SWE"
-			value = 200
-		}
+	add_ai_strategy = {
+		type = send_volunteers_desire
+		id = "SWE"
+		value = 200
+	}
+	add_ai_strategy = {
+		type = support
+		id = "SWE"
+		value = 200
+	}
 }

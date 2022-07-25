@@ -884,6 +884,10 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
+		hidden_effect = {
+			set_country_flag = UKR_Unite_anarchists_flag
+		}
+		
 		custom_effect_tooltip = UKR_Unite_anarchists_tt
 		division_template = {
 			name = "anarchists"

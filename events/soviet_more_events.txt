@@ -1703,6 +1703,8 @@ country_event = {     #
 			}
 		}
 
+		set_country_flag = new_NKVD
+
 		add_political_power = 50
 
 		set_division_template_lock = {
@@ -1720,6 +1722,20 @@ country_event = {     #
 		name = more_soviet.8.b
 		ai_chance = {
             base = 50
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TROTSKY
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TUKHACHEVSKI
+				}
+			}
 		}
 
 		set_country_flag = purged_NKVD
@@ -1833,13 +1849,13 @@ country_event = {     #
 	option = {
 		name = more_soviet.9.a
 		ai_chance = {
-      base = 50
+			base = 50
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = TROTSKY
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TROTSKY
+				}
 			}
 		}
 
@@ -1851,33 +1867,57 @@ country_event = {     #
 	option = {
 		name = more_soviet.9.b
 		ai_chance = {
-      base = 50
+			base = 50
+			modifier = {
+				factor = 0 #We paid enough
+				has_country_flag = purged_NKVD 
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = BUKHARIN
+				}
+			}
+			modifier = {
+				factor = 0
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TUKHACHEVSKI
+				}
+			}
 		}
 
 		set_country_flag = purged_stalinist
 
 		add_political_power = -100
 
-    add_war_support = -0.05
+		add_war_support = -0.05
 
-		remove_ideas = ivan_konev
-		remove_unit_leader = 408
-		remove_ideas = arseniy_golovko
-		remove_unit_leader = 409
-		remove_ideas = sergey_gorshkov
-		remove_unit_leader = 411
-		remove_ideas = pavel_zhigarev
-		remove_ideas = stepan_krasovsky
-		remove_ideas = sergei_rudenko
+		retire_character = SOV_ivan_konev
+		retire_character = SOV_arseniy_golovko
+		retire_character = pavel_zhigarev
+		retire_character = SOV_stepan_krasovsky
+		custom_effect_tooltip = remove_high_command
+		show_ideas_tooltip = ivan_konev
+		show_ideas_tooltip = arseniy_golovko
+		show_ideas_tooltip = pavel_zhigarev
+		show_ideas_tooltip = stepan_krasovsky
 
-    add_timed_idea = {
-      idea = officers_purged_5
-      days = 730
-    }
+		retire_character = SOV_sergey_gorshkov
+		retire_character = SOV_sergey_rudenko
+		custom_effect_tooltip = remove_theorist
+		show_ideas_tooltip = sergey_gorshkov
+		show_ideas_tooltip = sergei_rudenko
 
-    hidden_effect = {
-      country_event = { id = soviet.41 days = 146 }				
-    }
+		add_timed_idea = {
+		  idea = officers_purged_5
+		  days = 730
+		}
+
+		hidden_effect = {
+		  country_event = { id = soviet.41 days = 146 }				
+		}
 
 	}
 	
@@ -1893,81 +1933,90 @@ country_event = {     #
 
 	option = {
 		name = more_soviet.10.a
-	  trigger = {	has_country_flag = purged_NKVD }
+		trigger = {	
+		    has_country_flag = purged_NKVD
+		}
 		ai_chance = {
-      base = 40
+			base = 40
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = TROTSKY
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TROTSKY
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = TUKHACHEVSKI
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TUKHACHEVSKI
+				}
 			}
 		}
 
 		add_political_power = 100
 
-    set_country_flag = Bukharin_becomes_general_secretary_flag
+		set_country_flag = Bukharin_becomes_general_secretary_flag
 
 	}
 
 	option = {
 		name = more_soviet.10.b
+		trigger = {	
+			has_country_flag = new_NKVD
+			NOT = {	has_country_flag = purged_stalinist }
+		}
 		ai_chance = {
-      base = 30
+			base = 30
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = TROTSKY
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TROTSKY
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = BUKHARIN
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = BUKHARIN
+				}
 			}
 		}
 
 		add_political_power = 50
 
-    set_country_flag = Tukhachevsky_consolidated_his_position_flag
+		set_country_flag = Tukhachevsky_consolidated_his_position_flag
 
 	}
 
 	option = {
 		name = more_soviet.10.c
-	  trigger = {	has_country_flag = purged_stalinist }
+		trigger = {	
+			has_country_flag = new_NKVD
+		    has_country_flag = purged_stalinist 
+		}
 		ai_chance = {
-      base = 40
+			base = 40
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = BUKHARIN
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = BUKHARIN
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = SOV_ai_behavior
-          option = TUKHACHEVSKI
-        }
+				has_game_rule = {
+					rule = SOV_ai_behavior
+					option = TUKHACHEVSKI
+				}
 			}
 		}
 
 		add_political_power = -50
 
-    set_country_flag = Trotsky_is_invited_back_flag
+		set_country_flag = Trotsky_is_invited_back_flag
 
 	}
 	
@@ -2094,9 +2143,16 @@ country_event = {     #中亚叛乱
 					ruling_party = communism
 					elections_allowed = no
 				}
-				KAZ_Filipp_Goloshchyokin  = {
-					promote_character = yes
-					promote_character = yezhovism
+				add_country_leader_role = {
+					character = KAZ_Filipp_Goloshchyokin
+					country_leader = {
+						expire="1965.1.1.1"
+						ideology = yezhovism
+						traits = {
+
+						}
+					}
+					promote_leader = yes
 				}
 				hidden_effect = {
 					 load_oob = "kaz_rebel_1936"
@@ -2142,8 +2198,24 @@ country_event = {     #中亚叛乱
 
 country_event = {     #乌克兰叛乱 
 	id = more_soviet.13
-	title = more_soviet.13.t
-	desc = more_soviet.13.d
+	desc = {
+		text = more_soviet.13.d1
+		trigger = {
+			UKR = { has_country_flag = UKR_total_rebellion_flag	}
+		}
+	}
+	desc = {
+		text = more_soviet.13.d2
+		trigger = {
+			UKR = { has_country_flag = UKR_Iona_Yakir_killed_flag	}
+		}
+	}
+	desc = {
+		text = more_soviet.13.d3
+		trigger = {
+			UKR = { has_country_flag = UKR_Iona_Yakir_survived_flag	}
+		}
+	}
 	picture = GFX_report_event_generic_riot
 
 	is_triggered_only = yes
@@ -3324,6 +3396,7 @@ country_event = {     #萨文科夫还是捷尔任斯基
 			base = 50
 		}
 		hidden_effect = {
+			set_country_flag = SOV_Savinkov_in_reign_flag
 			country_event = { id = more_soviet.34  days = 100 }
 		}
 	}
@@ -3348,6 +3421,7 @@ country_event = {     #萨文科夫还是捷尔任斯基
 		}
 		
 		hidden_effect = {
+			set_country_flag = SOV_Savinkov_in_reign_flag
 			country_event = { id = more_soviet.34  days = 100 }
 		}
 	}

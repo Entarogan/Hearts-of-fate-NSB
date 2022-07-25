@@ -38,18 +38,10 @@ technologies = {
 
 		#If you change these
 
-		infantry = {
-			breakthrough = 0.10
-		}		
-		mountaineers = {
+		category_light_infantry = {
 			breakthrough = 0.10
 		}
-		paratrooper = {
-			breakthrough = 0.10
-		}
-		marine = {
-			breakthrough = 0.10
-		}
+
 	}
 	
 }	

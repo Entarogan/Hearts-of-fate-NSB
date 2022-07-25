@@ -9,6 +9,7 @@ shared_focus = {
 			has_completed_focus = UKR_Second_election
 			has_completed_focus = UKR_Bipartisan_Illusion
 			has_completed_focus = UKR_one_party_dictatorship
+			has_completed_focus = UKR_Anarchist_all_power_to_soviet
 		}
 	}
 
@@ -41,6 +42,23 @@ shared_focus = {
 			category = land_doctrine
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
 	}
 
 }

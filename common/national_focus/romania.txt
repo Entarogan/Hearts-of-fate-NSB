@@ -3873,6 +3873,7 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					has_war = yes
 					NOT = {
 						has_idea = war_economy
 					}

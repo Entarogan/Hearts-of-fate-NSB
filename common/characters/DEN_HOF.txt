@@ -1,6 +1,6 @@
 characters={
 	DEN_Hans_Christian_Andersen={
-		name="Hans Christian Andersen"
+		name="DEN_Hans_Christian_Andersen"
 		portraits={
 			civilian={
 				large="gfx/leaders/DEN/Portrait_Hans_Christian_Andersen.dds"

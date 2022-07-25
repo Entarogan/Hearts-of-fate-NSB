@@ -2114,7 +2114,7 @@ SOV_great_patriotic_war = {
 			}
 
 			swap_ideas = {
-				remove_idea = SOV_great_patriotic_war_4
+				remove_idea = SOV_great_patriotic_war_3
 				add_idea = SOV_great_patriotic_war_5
 			}
 

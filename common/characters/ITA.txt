@@ -44,7 +44,7 @@ characters={
 			traits = {
 				army_chief_defensive_2
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -96,6 +96,8 @@ characters={
 
 			}
 			traits = { ITA_Mobile_Combat_Master }
+
+			cost = 100
 			
 			ai_will_do = {
 				factor = 3
@@ -163,13 +165,13 @@ characters={
 				original_tag = ITA
 			}
 			traits = {
-				air_chief_all_weather_2
+				air_chief_all_weather_3
 			}
 			available = {
 				NOT = {	has_government = communism }
 				NOT = {	has_government = democratic }
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -236,7 +238,7 @@ characters={
 			traits = {
 				navy_chief_decisive_battle_2
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -374,6 +376,8 @@ characters={
 				NOT = { has_government = communism }
 			}
 			traits = { army_chief_organizational_3 }
+
+			cost = 150
 			
 			ai_will_do = {
 				factor = 1
@@ -434,7 +438,7 @@ characters={
 				large = "gfx/leaders/ITA/Portrait_Nero.dds"
 			}
 			civilian={
-				large="gfx/leaders/ITA/Portrait_Nero_Neutrality.dds"
+				large="gfx/leaders/ITA/Portrait_Nero_Neutrality.png"
 			}
 		}
 		field_marshal={
@@ -465,6 +469,8 @@ characters={
 			}
 			picture = nero_admiral
 			traits = { navy_chief_decisive_battle_3 }
+
+			cost = 200
 
 			modifier = {
 				army_artillery_attack_factor = 0.15
@@ -506,7 +512,7 @@ characters={
 			on_add = {				
 			}
 			ai_will_do = {
-				factor = 5
+				factor = 10
 			}
 		}
 	}
@@ -546,7 +552,7 @@ characters={
 			legacy_id=841
 		}
 		advisor = {
-			slot = high_command
+			slot = army_chief
 			idea_token = romulus
 			allowed = {
 				original_tag = ITA
@@ -554,15 +560,17 @@ characters={
 			
 			available = {
 				NOT = { has_government = communism }
+				OR = {
+					has_idea = Roman_spirit_idea
+					has_idea = Roman_spirit_defence_idea
+				}
 			}
-			traits = { army_chief_morale_3 }
+			traits = { ROMA }
 
-			modifier = {
-				experience_gain_factor = 0.1
-			}
+			cost = 100
 			
 			ai_will_do = {
-				factor = 2
+				factor = 50
 			}
 		}
 	}
@@ -597,6 +605,8 @@ characters={
 			}
 			
 			traits = { caesar }
+
+			cost = 250
 
 			ai_will_do = {
 				factor = 4
@@ -1326,6 +1336,8 @@ characters={
 			picture = st_georges
 						
 			traits = { army_chief_defensive_3 }
+
+			cost = 150
 			
 			ai_will_do = {
 				factor = 1
@@ -1359,6 +1371,8 @@ characters={
 				has_government = neutrality
 			}
 			traits = { army_chief_maneuver_3 }
+
+			cost = 150
 			
 			ai_will_do = {
 				factor = 1
@@ -1392,6 +1406,8 @@ characters={
 				has_government = fascism
 			}
 			traits = { army_chief_offensive_3 }
+
+			cost = 150
 			
 			ai_will_do = {
 				factor = 1

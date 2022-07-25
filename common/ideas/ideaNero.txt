@@ -604,7 +604,7 @@ ideas = {
 
 			allowed = {
 				always = no
-        original_tag = ITA
+				original_tag = ITA
 			}
 
 			allowed_civil_war = {
@@ -626,9 +626,11 @@ ideas = {
 				recon_factor = 0.06
 
 				special_forces_min = 5
-        acclimatization_cold_climate_gain_factor = 0.10
-        acclimatization_hot_climate_gain_factor = 0.10
-				out_of_supply_factor = -0.2
+				special_forces_cap = 0.1
+
+				acclimatization_cold_climate_gain_factor = 0.10
+				acclimatization_hot_climate_gain_factor = 0.10
+				out_of_supply_factor = -0.1
 			}
 		}
 
@@ -686,7 +688,7 @@ ideas = {
 
 			allowed = {
 				always = no
-        original_tag = ITA
+				original_tag = ITA
 			}
 
 			allowed_civil_war = {
@@ -708,7 +710,9 @@ ideas = {
 				recon_factor = 0.03
 
 				special_forces_min = 3
-        acclimatization_cold_climate_gain_factor = 0.10
+				special_forces_cap = 0.05
+
+				acclimatization_cold_climate_gain_factor = 0.10
 			}
 		}
 
@@ -1067,7 +1071,7 @@ ideas = {
 
 			modifier = {
 				stability_factor = 0.05
-				monthly_population = 0.10
+				monthly_population = 0.25
 				consumer_goods_factor = 0.02
 			}
 		}

@@ -670,7 +670,7 @@ ideas = {
 			removal_cost = -1
     
 			modifier = {
-	      monthly_population = 0.05
+	      monthly_population = 0.1
 				consumer_goods_factor = 0.05
 			}
 			
@@ -695,7 +695,7 @@ ideas = {
 			removal_cost = -1
     
 			modifier = {
-	      monthly_population = 0.10
+	      monthly_population = 0.20
 				consumer_goods_factor = 0.03
 			}
 			
@@ -752,7 +752,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.10
+				MONTHLY_POPULATION = 0.20
 			}
 
 			targeted_modifier = { 

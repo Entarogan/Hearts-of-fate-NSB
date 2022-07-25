@@ -1936,7 +1936,7 @@ country_event = {
 		or = {
 			AND = {
 				RUS = { has_idea = RUS_SOV_For_victory_idea }
-				date > 1938.3.1
+				date > 1938.1.1
 			}
 			AND = {
 				or = {
@@ -1975,6 +1975,17 @@ country_event = {
 
 		SOV = {
 		    transfer_navy = { target = RUS }
+			transfer_units_fraction= {
+				target = RUS
+				size = 0
+				stockpile_ratio = 0
+				army_ratio = 0.5
+				navy_ratio = 0
+				air_ratio = 0
+				keep_unit_leaders_trigger = {
+					always = yes 
+				}
+			}
 		}
 
 		annex_country = { target = SOV }
@@ -4463,7 +4474,7 @@ country_event = {
 		or = {
 			AND = {
 				SOV = { has_idea = RUS_SOV_For_victory_idea } 
-				date > 1938.6.1	
+				date > 1938.3.1	
 			}
 			AND = {
 				OR = {
@@ -4567,32 +4578,44 @@ country_event = {   ### JAP傀儡RUS
 
 		add_war_support = 0.10
 
-    add_state_claim = 637
+		add_state_claim = 637
 		transfer_state = 637
 
-    SOV = {
-      transfer_state = 516
-      transfer_state = 577
-      transfer_state = 578
-      transfer_state = 570
-      transfer_state = 576
-      transfer_state = 569
-      transfer_state = 568
-      transfer_state = 40
-      transfer_state = 654
-      transfer_state = 329
+		SOV = {
+			transfer_state = 516
+			transfer_state = 577
+			transfer_state = 578
+			transfer_state = 570
+			transfer_state = 576
+			transfer_state = 569
+			transfer_state = 568
+			transfer_state = 40
+			transfer_state = 654
+			transfer_state = 329
 
-      transfer_state = 567
-      transfer_state = 575
-      transfer_state = 566
-      transfer_state = 564
-      transfer_state = 563
-      transfer_state = 574
-      transfer_state = 565
-      transfer_state = 562
-      transfer_state = 644
-      white_peace = RUS
+			transfer_state = 567
+			transfer_state = 575
+			transfer_state = 566
+			transfer_state = 564
+			transfer_state = 563
+			transfer_state = 574
+			transfer_state = 565
+			transfer_state = 562
+			transfer_state = 644
+			white_peace = RUS
 			puppet = MON
+
+			every_state = {
+				limit = {
+					is_owned_by = RUS
+					OR = {
+						is_core_of = KAZ
+						is_core_of = UZB
+						is_core_of = TMS
+					}
+				}
+				SOV = { transfer_state = PREV }
+			}
 
 			if = {
 				limit = { 
@@ -4603,24 +4626,38 @@ country_event = {   ### JAP傀儡RUS
 
 			if = {
 				limit = { 
+					UZB = { is_subject_of = RUS }
+				}
+				annex_country = { target = UZB }
+			}
+
+			if = {
+				limit = { 
+					TMS = { is_subject_of = RUS }
+				}
+				annex_country = { target = TMS }
+			}
+
+			if = {
+				limit = { 
 					UKR = { is_subject_of = RUS }
 				}
 				annex_country = { target = UKR }
 			}
 
 			country_event = { id = russian.203 days = 1 }
-    }
+		}
 
-    RUS = {
-		  set_country_flag = RUS_is_Japanese_puppet_ever_flag
-		  set_country_flag = RUS_Japanese_puppet_flag
-		  set_capital = { state = 408 }
+		RUS = {
+			set_country_flag = RUS_is_Japanese_puppet_ever_flag
+			set_country_flag = RUS_Japanese_puppet_flag
+			set_capital = { state = 408 }
 
 			give_resource_rights = { receiver = JAP state = 560 }
 			give_resource_rights = { receiver = JAP state = 657 }
 
 			country_event = { id = russian.204 days = 1 }
-    }
+		}
 
 
 		if = {
@@ -4647,13 +4684,13 @@ country_event = {   ### JAP傀儡RUS
 			remove_dynamic_modifier = { modifier = SOV_RUS_Siberia_war_zone }
 		}
 
-    hidden_effect = {
-		  news_event = { id = rus_news.1 days = 2 }
-    }
+		hidden_effect = {
+		    news_event = { id = rus_news.1 days = 2 }
+		}
 
-    hidden_effect = {
-      news_event = { id = jap_news.3 days = 7 }
-    }
+		hidden_effect = {
+		    news_event = { id = jap_news.3 days = 7 }
+		}
 
   }
 

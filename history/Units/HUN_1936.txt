@@ -535,15 +535,6 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = light_tank_equipment_1
-			creator = "HUN" 
-		}
-		requested_factories = 2
-		progress = 0.6
-		efficiency = 100
-	}
-	add_equipment_production = {
-		equipment = {
 			type = fighter_equipment_0
 			creator = "HUN" 
 		}

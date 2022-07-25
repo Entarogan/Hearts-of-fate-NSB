@@ -4,7 +4,7 @@ characters = {
 		name = SOV_nikolay_yezhov
 		portraits={
 			civilian = {
-				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolai_Yezhov_2.dds"
+				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolai_Yezhov.png"
 			}
 		}
 	}

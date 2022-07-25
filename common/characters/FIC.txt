@@ -1,9 +1,12 @@
 characters={
-	FIC_françois_de_la_rocque={
-		name="François de La Rocque"
+	FIC_francois_de_la_Rocque={
+		name="FIC_francois_de_la_Rocque"
 		portraits={
 			civilian={
 				large="gfx/leaders/FIC/Portrait_France_Francois_de_la_Rocque.dds"
+			}
+			army={
+				small="GFX_idea_Francois_de_la_Rocque"
 			}
 		}
 		country_leader={
@@ -12,9 +15,29 @@ characters={
 			expire="1965.1.1.1"
 			id=-1
 		}
+		advisor={
+			slot = political_advisor
+			idea_token = francois_de_la_Rocque
+			allowed  = {
+					original_tag  = FIC
+				}
+				available  = {
+				}
+				traits  = {
+					retired_officer_1 
+				}
+				do_effect  = {
+				}
+				on_add  = {
+				}
+				ai_will_do  = {
+					factor  = 100.000
+				}
+		}
 	}
 	FIC_duc_de_richelieu={
-		name="Duc de Richelieu"
+		name="FIC_duc_de_richelieu"
+		#name="Duc de Richelieu"
 		portraits={
 			civilian={
 				large="gfx/leaders/FIC/Portrait_Duc_de_Richelieu.dds"
@@ -38,8 +61,9 @@ characters={
 			id=-1
 		}
 	}
-	FIC_marcel_déat={
-		name="Marcel Déat"
+	FIC_marcel_deat={
+		name="FIC_marcel_deat"
+		#name="Marcel Déat"
 		advisor={
 			slot = political_advisor
 			idea_token = marcel_Deat
@@ -74,8 +98,9 @@ characters={
 			id=-1
 		}
 	}
-	FIC_philippe_pétain={
-		name="Philippe Pétain"
+	FIC_philippe_petain={
+		name="FIC_philippe_petain"
+		#name="Philippe Pétain"
 		portraits={
 			civilian={
 				large="gfx/leaders/FIC/Portrait_France_Philippe_Petain.dds"
@@ -200,6 +225,9 @@ characters={
 			traits  = {
 				air_chief_ground_support_1 
 			}
+
+			cost = 50
+
 			ai_will_do  = {
 				factor  = 1.000
 			}
@@ -250,6 +278,9 @@ characters={
 				traits  = {
 					navy_chief_naval_aviation_1 
 				}
+
+			cost =  50
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -272,6 +303,9 @@ characters={
 				traits  = {
 					army_logistics_1 
 				}
+
+			cost =  50
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -294,6 +328,9 @@ characters={
 				traits  = {
 					air_air_combat_training_2 
 				}
+
+				cost = 100
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -315,6 +352,9 @@ characters={
 				traits  = {
 					army_chief_defensive_1 
 				}
+
+				cost = 50
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -336,6 +376,9 @@ characters={
 				traits  = {
 					air_chief_all_weather_1 
 				}
+
+				cost = 50
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -344,33 +387,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_robert_odic"
-			}
-		}
-	}
-	FIC_francois_de_la_Rocque={
-		advisor={
-			slot = political_advisor
-			idea_token = francois_de_la_Rocque
-			allowed  = {
-					original_tag  = FIC
-				}
-				available  = {
-				}
-				traits  = {
-					retired_officer_1 
-				}
-				do_effect  = {
-				}
-				on_add  = {
-				}
-				ai_will_do  = {
-					factor  = 100.000
-				}
-		}
-		name="francois_de_la_Rocque"
-		portraits={
-			army={
-				small="GFX_idea_Francois_de_la_Rocque"
 			}
 		}
 	}
@@ -384,6 +400,9 @@ characters={
 				traits  = {
 					navy_chief_commerce_raiding_2 
 				}
+
+				cost = 100
+
 				ai_will_do  = {
 					factor  = 1.000
 				}
@@ -406,6 +425,9 @@ characters={
 				traits  = {
 					navy_fleet_logistics_2 
 				}
+
+				cost = 100
+
 				ai_will_do  = {
 					factor  = 1.000
 				}

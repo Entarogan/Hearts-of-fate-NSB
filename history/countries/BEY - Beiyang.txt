@@ -18,6 +18,8 @@ set_technology = {
 	gw_artillery = 1
 	trench_warfare = 1
 	basic_train = 1
+
+	renminzhanzheng = 1
 }
 
 add_opinion_modifier = {

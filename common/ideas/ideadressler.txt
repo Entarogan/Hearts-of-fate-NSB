@@ -933,16 +933,16 @@ ideas = {
 
 			removal_cost = -1
 		
-      picture = ger_daf
-    
+			picture = ger_daf
+
 			research_bonus = {
 				industry = 0.05
 			}
 			modifier = {
-				consumer_goods_factor = 0.02
+				consumer_goods_factor = 0.03
 				production_factory_efficiency_gain_factor = 0.05
-        production_factory_start_efficiency_factor = 0.05
-        production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
 			}
 		}
 
@@ -1017,7 +1017,7 @@ ideas = {
 
 			removal_cost = -1
 
-      picture = man_five_year_plan_tank
+			picture = man_five_year_plan_tank
 
 			equipment_bonus = {
 				motorized_equipment = {
@@ -1025,6 +1025,11 @@ ideas = {
 				}              
 				mechanized_equipment = {
 					build_cost_ic = -0.1 instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.10
+					
+					instant = yes
 				}
 				armor = {
 					build_cost_ic = -0.10 instant = yes
@@ -1048,18 +1053,18 @@ ideas = {
 
 			removal_cost = -1
 
-      picture = ger_daf
-			
+			picture = ger_daf
+
 			research_bonus = {
-				industry = -0.05
+				industry = -0.1
 			}
 			modifier = {
-	      industrial_capacity_factory = 0.10
-		    line_change_production_efficiency_factor = 0.10
-	      production_factory_efficiency_gain_factor = 0.10
-        production_factory_start_efficiency_factor = 0.10
+				industrial_capacity_factory = 0.10
+				line_change_production_efficiency_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
 				experience_gain_factor = 0.05
-		    conscription = 0.01
+				conscription = 0.01
 			}
 		}
 
@@ -1075,57 +1080,63 @@ ideas = {
 
 			removal_cost = -1
 
-      picture = generic_license_production
+			picture = generic_license_production
 
 			equipment_bonus = {
 
-        infantry_equipment = {
-					build_cost_ic = -0.10 instant = yes
-        }
+				infantry_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
 
-        artillery_equipment = {
-					build_cost_ic = -0.10 instant = yes
-        }
+				anti_air_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
 
-        anti_air_equipment = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-        anti_tank_equipment = {
-          build_cost_ic = -0.10
-
-          instant = yes
-        }
+				anti_tank_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
 
 				motorized_equipment = {
-					build_cost_ic = -0.1 instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
 				}              
 
 				mechanized_equipment = {
-          build_cost_ic = -0.15
-          reliability = -0.05
-          instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
+
+				armored_car_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
 				}
 
 				armor = {
-          build_cost_ic = -0.15
-          reliability = -0.05
-          instant = yes
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
 				}
 
-        fighter_equipment = {
-          build_cost_ic = -0.15
-          reliability = -0.05
-          instant = yes
-        }
+				fighter_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
 
-        jet_fighter_equipment = {
-          build_cost_ic = -0.15
-          reliability = -0.05
-          instant = yes
-        }
+				jet_fighter_equipment = {
+					build_cost_ic = -0.15
+					reliability = -0.05
+					instant = yes
+				}
 
 			}
 		}
@@ -1163,8 +1174,8 @@ ideas = {
 			}
 
 			available = {
-		    has_war = no
-		    has_country_flag = GER_Armaments_payment_promissory_note_flag
+				has_war = no
+				has_country_flag = GER_Armaments_payment_promissory_note_flag
 			}
 
 			removal_cost = -1
@@ -1172,11 +1183,11 @@ ideas = {
 			picture = ger_mefo_bills
 
 			modifier = {
-				political_power_cost = 0.5
+				political_power_cost = 0.25
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
 				research_speed_factor = 0.05
 			}
 		}
@@ -1192,8 +1203,8 @@ ideas = {
 			}
 
 			available = {
-		    has_war = no
-		    has_country_flag = GER_Armaments_payment_promissory_note_flag
+				has_war = no
+				has_country_flag = GER_Armaments_payment_promissory_note_flag
 			}
 
 			removal_cost = -1
@@ -1201,11 +1212,11 @@ ideas = {
 			picture = ger_mefo_bills
 
 			modifier = {
-				political_power_cost = 0.3
+				political_power_cost = 0.15
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.1
-				production_factory_max_efficiency_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.15
 				research_speed_factor = 0.05
 			}
 		}
@@ -1221,8 +1232,8 @@ ideas = {
 			}
 
 			available = {
-		    has_war = no
-		    has_country_flag = GER_Armaments_payment_promissory_note_flag
+				has_war = no
+				has_country_flag = GER_Armaments_payment_promissory_note_flag
 			}
 
 			removal_cost = -1
@@ -1230,11 +1241,10 @@ ideas = {
 			picture = ger_mefo_bills
 
 			modifier = {
-				political_power_cost = 0.1
 				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_factory = 0.1
 				production_factory_max_efficiency_factor = 0.15
-				production_factory_efficiency_gain_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.2
 				research_speed_factor = 0.05
 			}
 		}
@@ -1273,45 +1283,45 @@ ideas = {
 
 			removal_cost = -1
 
-      picture = man_five_year_plan_air
+			picture = man_five_year_plan_air
 
-      equipment_bonus = {
-        fighter_equipment = {
+			equipment_bonus = {
+				fighter_equipment = {
 
-          build_cost_ic = -0.1
-          
-          instant = yes
-        }
+					build_cost_ic = -0.1
 
-        heavy_fighter_equipment = {
+					instant = yes
+				}
 
-          build_cost_ic = -0.1
-          
-          instant = yes
-        }
+				heavy_fighter_equipment = {
 
-        CAS_equipment = {
+					build_cost_ic = -0.1
 
-          build_cost_ic = -0.1
-          
-          instant = yes
-        }
+					instant = yes
+				}
 
-        tac_bomber_equipment = {
+				CAS_equipment = {
 
-          build_cost_ic = -0.1
-          
-          instant = yes
-        }        
+					build_cost_ic = -0.1
 
-        strat_bomber_equipment = {
+					instant = yes
+				}
 
-          build_cost_ic = -0.05
-          
-          instant = yes
-        }
+				tac_bomber_equipment = {
 
-      }
+					build_cost_ic = -0.1
+
+					instant = yes
+				}        
+
+				strat_bomber_equipment = {
+
+					build_cost_ic = -0.05
+
+					instant = yes
+				}
+
+			}
 		}
 
 		GER_foreign_workers_subject_idea = {
@@ -1337,7 +1347,7 @@ ideas = {
 				industrial_capacity_factory = -0.10
 				production_speed_buildings_factor = -0.10
 				industrial_capacity_dockyard = -0.10
-		    conscription_factor = -0.1
+				conscription_factor = -0.1
 			}
 		}
 
@@ -1353,7 +1363,7 @@ ideas = {
 
 			available = {
 				is_subject = no
-			  has_war = yes
+				has_war = yes
 			}
 
 			removal_cost = -1
@@ -1364,7 +1374,7 @@ ideas = {
 				stability_factor = -0.10
 				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.10
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.05
 				industry_repair_factor = 0.10
 				required_garrison_factor = 0.1
 				resistance_damage_to_garrison = 0.1
@@ -1392,15 +1402,15 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.20
-				stability_factor = -0.15
-			  stability_weekly = -0.001
+				stability_factor = -0.10
+				stability_weekly = -0.001
 				industrial_capacity_factory = 0.10
 				industrial_capacity_dockyard = 0.10
-				production_speed_buildings_factor = 0.10
-        production_factory_start_efficiency_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = -0.10
 				production_factory_efficiency_gain_factor = -0.10
-		    line_change_production_efficiency_factor = -0.10
-        production_factory_max_efficiency_factor = 0.30
+				line_change_production_efficiency_factor = -0.20
+				production_factory_max_efficiency_factor = 0.20
 				industry_repair_factor = 0.20
 				required_garrison_factor = 0.2
 				resistance_damage_to_garrison = 0.2
@@ -1419,20 +1429,20 @@ ideas = {
 
 			available = {
 				is_subject = no
-        has_war = yes
-      }
+				has_war = yes
+			}
 
 			removal_cost = -1
 
 			picture = FRA_army_of_aggression_focus
 
 			modifier = {
-				consumer_goods_factor = -0.05
-		    conscription_factor = 0.2
-        army_core_attack_factor = 0.1
-        army_core_defence_factor = 0.1
-				resistance_growth_on_our_occupied_states = 0.15
-		    surrender_limit = 0.05
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.25
+				surrender_limit = 0.05
 			}
 		}
 
@@ -1451,12 +1461,12 @@ ideas = {
 			picture = relaxed_industry
 			
 			modifier = {
-				political_power_gain = 0.10
-				stability_factor = 0.10
-				MONTHLY_POPULATION = 0.10
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.40
 				consumer_goods_factor = 0.03
-				production_factory_efficiency_gain_factor = -0.10
-        production_factory_max_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = -0.05
 			}
 		}
 
@@ -1476,8 +1486,8 @@ ideas = {
 			
 			modifier = {
 				stability_factor = 0.05
-				production_factory_efficiency_gain_factor = -0.05
-        production_factory_max_efficiency_factor = -0.05
+				MONTHLY_POPULATION = 0.20
+				production_factory_efficiency_gain_factor = -0.10
 			}
 		}
 
@@ -1494,11 +1504,44 @@ ideas = {
 			removal_cost = -1
 
 			picture = active_industry
+
+			research_bonus = {
+				industry = 0.1
+			}
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.10
+				line_change_production_efficiency_factor = 0.20
 				production_factory_efficiency_gain_factor = 0.10
-        production_factory_max_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+
+		active_industry_EX = {
+
+			name = active_industry
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = active_industry
+
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			modifier = {
+				line_change_production_efficiency_factor = 0.20
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_max_efficiency_factor = 0.10
+
+				military_factory_donations = 25
 			}
 		}
 
@@ -1589,14 +1632,16 @@ ideas = {
 			picture = blitzkrieg
 			
 			modifier = {
-		    army_speed_factor = 0.05
+				army_speed_factor = 0.05
 				recon_factor = 0.1
+				coordination_bonus = 0.03
+
 				army_armor_attack_factor = 0.15
 				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
-		    mechanized_attack_factor = 0.10
-		    mechanized_defence_factor = 0.10
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.10
 				org_loss_when_moving = -0.10
 				land_reinforce_rate = 0.05
 			}
@@ -1684,12 +1729,12 @@ ideas = {
 			picture = generic_air_bonus
 		
 			research_bonus = {
-				battlefield_support_tree = 0.10
 				jet_technology = 0.10
 			}
 
 			modifier = {
-		    experience_gain_air_factor = 0.10
+				cat_battlefield_support_cost_factor = -0.10
+				experience_gain_air_factor = 0.10
 			}
 		}
 
@@ -1712,9 +1757,9 @@ ideas = {
 			}
 
 			modifier = {
-		    war_support_factor = 0.15
+				air_night_penalty = -0.15
 				air_ace_generation_chance_factor = 0.30
-		    experience_gain_air_factor = -0.05
+				experience_gain_air_factor = -0.05
 			}
 		}
 
@@ -1733,10 +1778,10 @@ ideas = {
 			picture = air_support_focus
 
 			modifier = {
-        air_mission_efficiency = 0.05 
-        air_superiority_efficiency = 0.10
-        air_bombing_targetting = 0.10
-        air_superiority_detect_factor = 0.05
+				air_mission_efficiency = 0.05 
+				air_superiority_efficiency = 0.10
+				air_cas_present_factor = 0.10
+				air_superiority_detect_factor = 0.05
 			}
 		}
 
@@ -1755,23 +1800,24 @@ ideas = {
 			picture = blitzkrieg
 
 			modifier = {		
-		    army_speed_factor = 0.05
+				army_speed_factor = 0.05
 				recon_factor = 0.1
-				breakthrough_factor = 0.1
+				coordination_bonus = 0.05
+
 				army_armor_attack_factor = 0.15
 				army_armor_defence_factor = 0.10
 				motorized_attack_factor = 0.10
 				motorized_defence_factor = 0.10
-		    mechanized_attack_factor = 0.10
-		    mechanized_defence_factor = 0.10
+				mechanized_attack_factor = 0.10
+				mechanized_defence_factor = 0.10
 				org_loss_when_moving = -0.10
 				land_reinforce_rate = 0.05
-        air_mission_efficiency = 0.05 
-        air_superiority_efficiency = 0.10
-        air_bombing_targetting = 0.10
-        air_superiority_detect_factor = 0.05
-        army_bonus_air_superiority_factor = 0.05
-        air_cas_present_factor = 0.10
+				air_mission_efficiency = 0.05 
+				air_superiority_efficiency = 0.10
+				air_cas_present_factor = 0.10
+				air_superiority_detect_factor = 0.05
+				army_bonus_air_superiority_factor = 0.05
+				air_bombing_targetting = 0.10
 			}
 
 		}
@@ -1964,8 +2010,8 @@ ideas = {
 			picture = a_Berlin
 
 			modifier = {
-        political_power_gain = 0.10
-				monthly_population = 0.10
+				political_power_gain = 0.10
+				monthly_population = 0.20
 				non_core_manpower = 0.01
 				consumer_goods_factor = 0.03
 			}
@@ -1989,9 +2035,9 @@ ideas = {
 			picture = a_Berlin
 
 			modifier = {
-        political_power_gain = 0.10
+				political_power_gain = 0.10
 				research_speed_factor = 0.05
-				monthly_population = 0.10
+				monthly_population = 0.50
 				non_core_manpower = 0.02
 				conscription = 0.005
 				consumer_goods_factor = 0.03
@@ -2533,13 +2579,13 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-        production_factory_efficiency_gain_factor = 0.25
-        industrial_capacity_factory = 0.2
-        production_factory_max_efficiency_factor = 0.2	
-        training_time_factor = -0.2
-        mobilization_speed = 0.2
-        political_power_gain = -0.75
-	    }
+				industrial_capacity_factory = 0.15
+
+				training_time_factor = -0.3
+				mobilization_speed = 0.3
+
+				political_power_gain = -0.3
+			}
 		}
 
 		GER_Preparing_end_sieg_idea = {
@@ -2556,11 +2602,10 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-        production_factory_efficiency_gain_factor = 0.4
-        industrial_capacity_factory = 0.3
-        production_factory_max_efficiency_factor = 0.3	
-        political_power_gain = -0.75
-	    }
+				industrial_capacity_factory = 0.25
+
+				political_power_gain = -0.3
+			}
 		}
 
 		GER_Special_Forces_1 = {
@@ -3027,6 +3072,11 @@ ideas = {
 				}              
 				mechanized_equipment = {
 					build_cost_ic = -0.1 instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.10
+					
+					instant = yes
 				}
 			}
 		}	

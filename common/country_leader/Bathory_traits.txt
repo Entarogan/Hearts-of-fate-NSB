@@ -3,12 +3,13 @@ leader_traits = {
 	HUN_bathory_T = { 
 		sprite = 5
 
-		political_power_gain = 0.05
+		political_power_gain = 0.15
 
 		army_org_factor = 0.10
-		army_morale_factor = 0.10	
+		army_morale_factor = 0.05	
+
 		command_cap = 20
-		experience_gain_army = 0.10
+		experience_gain_army = 0.09
 
 		ai_will_do = {
 			factor = 3
@@ -19,12 +20,13 @@ leader_traits = {
 		random = no
 		sprite = 3
 
-    political_power_gain = 0.15
-	
+		political_power_gain = 0.15
+
 		naval_speed_factor = 0.1
 
 		experience_gain_navy_factor = 0.1
-		command_cap = 20
+
+		command_cap = 10
 		experience_gain_navy = 0.12
 
 		ai_will_do = {
@@ -37,10 +39,10 @@ leader_traits = {
 		random = no
 		sprite = 5
 
-		breakthrough_factor = 0.10	
+		army_attack_factor = 0.1
 		army_speed_factor = 0.15
-		command_cap = 25
-		experience_gain_army = 0.12
+
+		experience_gain_army = 0.15
 
 		ai_will_do = {
 			factor = 3
@@ -138,8 +140,6 @@ leader_traits = {
 		cavalry_attack_factor = 0.05
 		motorized_attack_factor = 0.05
 		mechanized_attack_factor = 0.05
-		command_cap = 15
-		experience_gain_army = 0.10
 
   }
 

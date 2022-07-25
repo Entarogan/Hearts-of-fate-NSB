@@ -8,10 +8,9 @@ USA_Interference_in_the_World_War_desicsions = {
 		original_tag = USA
 	}
     
-  visible = {
-    is_puppet = no
-    is_in_faction = no
-  }
+	visible = {
+	    is_puppet = no
+	}
 }
 
 USA_party_factions_decisions = {

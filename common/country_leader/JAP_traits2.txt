@@ -13,22 +13,24 @@ leader_traits = {
 		production_factory_max_efficiency_factor = 0.15
 		consumer_goods_factor = -0.15
 
+		production_lack_of_resource_penalty_factor = -0.50
+
 		research_speed_factor = 0.05
 
 		surrender_limit = 0.15
 
 		stability_weekly = -0.005
-		command_cap = 20
 	}
 
 	Air_defense_cover = {
 
 		random = no
-
 		sprite = 3
+
 		navy_anti_air_attack_factor = 0.25
 		navy_capital_ship_defence_factor = 0.15
-		experience_gain_navy = 0.10
+
+		experience_gain_navy = 0.09
 		command_cap = 20
 		
 		ai_will_do = {
@@ -39,11 +41,12 @@ leader_traits = {
 	Torpedo_attack = {
 
 		random = no
-
 		sprite = 4
-			naval_torpedo_screen_penetration_factor = 0.2
-			experience_gain_navy = 0.10
-			command_cap = 20
+
+		naval_torpedo_screen_penetration_factor = 0.2
+
+		experience_gain_navy = 0.12
+		command_cap = 10
 		
 		ai_will_do = {
 			factor = 3
@@ -62,8 +65,9 @@ leader_traits = {
 		repair_speed_factor = 0.15
 
 		navy_max_range_factor = 0.15
-		experience_gain_navy = 0.10
-		command_cap = 20
+
+		experience_gain_navy = 0.12
+		command_cap = 10
 		
 		ai_will_do = {
 			factor = 3
@@ -79,8 +83,9 @@ leader_traits = {
 		navy_capital_ship_defence_factor = 0.20
 		navy_screen_attack_factor = 0.20
 		navy_screen_defence_factor = 0.15
-		experience_gain_navy = 0.10
-		command_cap = 20
+
+		experience_gain_navy = 0.12
+		command_cap = 10
 		
 		ai_will_do = {
 			factor = 3
@@ -93,15 +98,11 @@ leader_traits = {
 
 		sprite = 3
 
-    political_power_gain = 0.15
+        political_power_gain = 0.15
 
 		experience_gain_navy_factor = 0.12
 
-		targeted_modifier = {
-			tag = RUS
-			attack_bonus_against = 0.10
-		}
-
+		experience_gain_navy = 0.09
 		command_cap = 20
 		
 		ai_will_do = {
@@ -118,9 +119,10 @@ leader_traits = {
 		navy_carrier_air_attack_factor = 0.15
 		navy_carrier_air_targetting_factor = 0.15
 		navy_carrier_air_agility_factor = 0.15
-		command_cap = 20
+
 		experience_gain_navy = 0.075
 		experience_gain_air = 0.075
+		command_cap = 10
 		
 		ai_will_do = {
 			factor = 3
@@ -184,9 +186,9 @@ leader_traits = {
 		random = no
 		sprite = 10
 		industrial_capacity_factory = 0.05
-    production_factory_efficiency_gain_factor = 0.05
-    production_factory_start_efficiency_factor = 0.05
-    line_change_production_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+		line_change_production_efficiency_factor = 0.05
 	}
 	hermit = {
 		random = no

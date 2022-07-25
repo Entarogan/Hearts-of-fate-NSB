@@ -214,22 +214,20 @@ leader_traits = {
 
 
 
-  heart_of_iron = {
+	heart_of_iron = {
 
 		random = no
 		sprite = 15
 
-    political_power_gain = 0.10
+		political_power_gain = 0.10
 
 		operative_slot = 1
-		agency_upgrade_time = -0.20
+		agency_upgrade_time = -0.05
 
-    foreign_subversive_activites = -0.15
-    resistance_damage_to_garrison = -0.15
+		foreign_subversive_activites = -0.1
+		resistance_damage_to_garrison = -0.1
 
-    non_core_manpower = -0.005
-
-    ai_focus_aggressive_factor = 0.2
+		non_core_manpower = -0.005
 	}
 
     Political_connection = {
@@ -252,28 +250,29 @@ leader_traits = {
 		random = no
 		sprite = 13
 	
-		political_power_gain = -0.05
+		political_power_gain = -0.1
 
-		stability_factor = -0.15
+		stability_factor = -0.1
 	
 		communism_drift = 0.01
 		production_factory_efficiency_gain_factor = 0.15
-		conscription = 0.01
 	}
 
 	Field_commander = {
 		random = no
 		sprite = 6
 		
-    army_morale_factor = 0.10
-    org_loss_when_moving = -0.05
+		army_morale_factor = 0.05
+
+		army_artillery_attack_factor = 0.1
+		army_artillery_defence_factor = 0.05
 	}
 
 	Instigator = {
 		random = no
 		sprite = 13
 		
-		political_power_gain = 0.50
+		political_power_gain = 0.25
 
 	}
 
@@ -282,20 +281,18 @@ leader_traits = {
 		sprite = 13
 		
 		political_power_gain = 0.15
-    production_factory_max_efficiency_factor = 0.05
-    local_resources_factor = 0.05
-    global_building_slots_factor = 0.05
-    conscription_factor = -0.03
+		local_resources_factor = 0.05
+		conscription_factor = -0.03
 	}
 
 	Elitist_advocate = { 
 		random = no
 		sprite = 7
 
-    experience_gain_army_unit_factor = 0.10
-    special_forces_cap = 0.05
-    training_time_army_factor = 0.10
-    conscription_factor = -0.05
+		experience_gain_army_unit_factor = 0.05
+		experience_loss_factor = -0.05
+		training_time_army_factor = 0.05
+		conscription_factor = -0.05
 	}
 
 	Master_of_Strategy = { 
@@ -303,24 +300,23 @@ leader_traits = {
 		sprite = 7
 		
 		planning_speed = 0.10
-    max_planning = 0.05
-
+		max_planning = 0.05
 	}
+
 	Firefighter = {
 		random = no
 		sprite = 9
 		
 		army_defence_factor = 0.05
-		attrition = -0.05
-    supply_consumption_factor = -0.05
+		supply_consumption_factor = -0.05
 	}
 
 	Steel_storm = {
 		random = no
 		sprite = 13
 
-		land_night_attack = 0.1
-		attrition = 0.05
+		land_night_attack = 0.05
+		experience_loss_factor = 0.02
 	}
 
 	Active_minded_general = {
@@ -328,8 +324,7 @@ leader_traits = {
 		sprite = 13
 
 		political_power_gain = -0.10
-    experience_gain_army = 0.05
-    experience_gain_army_factor = 0.10
+		experience_gain_army_factor = 0.10
 	}
 
 	Representative_of_the_Wehrmacht = {
@@ -352,28 +347,24 @@ leader_traits = {
 		random = no
 		sprite = 13
 
-		research_speed_factor = 0.03
-    experience_loss_factor = -0.10
-    land_night_attack = 0.10
-
+		research_speed_factor = 0.02
+		experience_loss_factor = -0.10
 	}
 
 	Quirky_nobleman = {
 		random = no
 		sprite = 13
 
-		research_speed_factor = 0.05
+		research_speed_factor = 0.03
 
-		weekly_manpower = 150
-
+		weekly_manpower = 750
 	}
 
 	Nuclear_fanatic = {
 		random = no
 		sprite = 13
 
-    production_speed_nuclear_reactor_factor = 0.20
-
+        production_speed_nuclear_reactor_factor = 0.20
 	}
 
 	Gloomy_mystery = {
@@ -381,28 +372,25 @@ leader_traits = {
 		sprite = 15
 
 		operative_slot = 1
-		agency_upgrade_time = -0.35
+		agency_upgrade_time = -0.25
 	}
 
 	Mystic = {
 		random = no
 		sprite = 13
 
-		political_power_gain = -0.15
-		research_speed_factor = 0.05
-		consumer_goods_factor = 0.02
-
+		political_power_gain = -0.05
+		research_speed_factor = 0.02
+		consumer_goods_factor = 0.01
 	}
 
 	Reichsfuhrer_SS = {
 		random = no
 		sprite = 13
 
-		political_power_gain = 0.20	
+		political_power_gain = 0.10	
 		resistance_damage_to_garrison = -0.10		
-		foreign_subversive_activites = -0.20
 		non_core_manpower = -0.01
-
 	}
 
   Radical_militia_organizer = {
@@ -410,11 +398,10 @@ leader_traits = {
 		sprite = 13
 
 		planning_speed = 0.10
-    max_planning = -0.10
+		max_planning = -0.05
 
-		army_core_attack_factor = 0.10
-		army_core_defence_factor = 0.10
-
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
 	}
 
   ambitious_general = {
@@ -429,31 +416,28 @@ leader_traits = {
 		random = no
 		sprite = 13
 		
-		opinion_gain_monthly_same_ideology_factor = 0.5
+		opinion_gain_monthly_same_ideology_factor = 0.25
 		subjects_autonomy_gain = 0.10
-		resistance_damage_to_garrison = -0.10		
-		foreign_subversive_activites = 0.15
 		non_core_manpower = 0.01
-    compliance_gain = 0.01
+		compliance_gain = 0.01
 	}
 
-  National_Socialist_Philosophy = {
+	National_Socialist_Philosophy = {
 		random = no
 		sprite = 13
 		
-		political_power_gain = 0.10
-		opinion_gain_monthly_same_ideology_factor = -0.5
+		opinion_gain_monthly_same_ideology_factor = -0.25
 		subjects_autonomy_gain = -0.10
 	}
 
-  Real_politics = {
+	Real_politics = {
 		random = no
 		sprite = 13
 
 		justify_war_goal_time = -0.50
-		opinion_gain_monthly_same_ideology_factor = 0.10
-		opinion_gain_monthly_factor = 0.20
-		improve_relations_maintain_cost_factor = -0.40			
+		opinion_gain_monthly_same_ideology_factor = 0.50
+		opinion_gain_monthly_factor = 0.25
+		improve_relations_maintain_cost_factor = -0.25			
 	}
 
 	Happy_amateur_politician = {
@@ -468,8 +452,8 @@ leader_traits = {
 		random = no
 		sprite = 13
 		
-		political_power_gain = 0.25
-		stability_factor = -0.10		
+		political_power_gain = 0.15
+		stability_factor = -0.05		
 	}
 
 	Corrupt_bureaucracy = {
@@ -546,9 +530,10 @@ leader_traits = {
 	GER_funk_T = {
 		random = no
 		sprite = 10
-		
-		consumer_goods_factor = -0.07
-		required_garrison_factor = 0.10
+
+		production_speed_arms_factory_factor = 0.15
+		local_resources_factor = 0.10		
+		consumer_goods_factor = -0.02
 
 		ai_will_do = {
 			factor = 10
@@ -561,12 +546,12 @@ leader_traits = {
 
 		political_power_gain = -0.15
 		
-		production_speed_buildings_factor = 0.10
+		production_speed_buildings_factor = 0.05
 		conversion_cost_civ_to_mil_factor = -0.15
-    production_factory_max_efficiency_factor = 0.15
+		production_factory_max_efficiency_factor = 0.15
 		local_resources_factor = 0.10
 
-    ai_focus_production_factor = 0.1
+		ai_focus_production_factor = 0.1
 
 		ai_will_do = {
 			factor = 20
@@ -644,9 +629,11 @@ leader_traits = {
 		army_org_factor = 0.10
 		army_morale_factor = 0.05
 		land_reinforce_rate = 0.01
+
+		max_planning = 0.05
+
 		command_cap = 20
 		experience_gain_army = 0.09
-		max_planning = 0.05
 
 		ai_will_do = {
 			factor = 7
@@ -664,10 +651,11 @@ leader_traits = {
 		army_attack_factor = 0.05
 		army_defence_factor = 0.05
 		supply_consumption_factor = -0.05
-		command_cap = 20
-		experience_gain_army = 0.09
 
 		max_planning = 0.05
+
+		command_cap = 20
+		experience_gain_army = 0.09
 
 		ai_will_do = {
 			factor = 5
@@ -683,9 +671,7 @@ leader_traits = {
 		sprite = 9
 		
 		planning_speed = -0.10
-		training_time_army_factor = -0.20
-		command_cap = 20
-		experience_gain_army = 0.09
+		training_time_army_factor = -0.10
 	}
 	GER_brauchitsch_T = { 
 		random = no
@@ -693,10 +679,11 @@ leader_traits = {
 		
 		max_planning = 0.05
 		planning_speed = 0.10
-		command_cap = 20
-		experience_gain_army = 0.09
 		
 		army_speed_factor = 0.10
+
+		command_cap = 20
+		experience_gain_army = 0.09
 
 		ai_will_do = {
 			factor = 7
@@ -754,8 +741,8 @@ leader_traits = {
 		navy_max_range_factor = 0.10
 
         ai_focus_naval_factor = 0.1
-		command_cap = 20
-		experience_gain_navy = 0.09
+		command_cap = 10
+		experience_gain_navy = 0.12
 
 		ai_will_do = {
 			factor = 5
@@ -782,8 +769,9 @@ leader_traits = {
 		air_cas_present_factor = 0.05
 		
 		consumer_goods_factor = 0.02
+
 		command_cap = 20
-		experience_gain_air = 0.09
+		experience_gain_air = 0.1
 
 		ai_will_do = {
 			factor = 5
@@ -858,16 +846,19 @@ leader_traits = {
 		random = no
 		sprite = 8
 
-		command_power_gain = 0.15
-		command_power_gain_mult = 0.15
+		command_power_gain = 0.1
+		command_power_gain_mult = 0.1
 			
-    army_armor_attack_factor = 0.15
-    army_armor_defence_factor = 0.10
+		army_armor_attack_factor = 0.15
+		army_armor_defence_factor = 0.10
 		mechanized_attack_factor = 0.15
 		mechanized_defence_factor = 0.10
 		motorized_attack_factor = 0.15
 		motorized_defence_factor = 0.10
-		command_cap = 25
+
+		army_artillery_defence_factor = 0.1
+
+		command_cap = 10
 		experience_gain_army = 0.12
 
 		ai_will_do = {
@@ -884,8 +875,6 @@ leader_traits = {
 		random = no
 		sprite = 5
 		
-		max_command_power = 5
-		
 		army_infantry_attack_factor = 0.15
 		army_infantry_defence_factor = 0.15
 		army_morale_factor = 0.05
@@ -893,7 +882,7 @@ leader_traits = {
 
 		attrition = 0.01
 		command_cap = 20
-		experience_gain_army = 0.10
+		experience_gain_army = 0.09
 
 		ai_will_do = {
 			factor = 5
@@ -908,7 +897,7 @@ leader_traits = {
 	GER_fritsh_T = {
 		random = no
 		sprite = 6
-		
+
 		max_command_power = 5
 		
 		experience_gain_army_factor = -0.05
@@ -916,7 +905,7 @@ leader_traits = {
 		supply_consumption_factor = -0.10
 		attrition = -0.10
 		command_cap = 20
-		experience_gain_army = 0.10
+		experience_gain_army = 0.09
 
 
 		ai_will_do = {
@@ -932,8 +921,6 @@ leader_traits = {
 		random = no
 		sprite = 5
 		
-		max_command_power = 5
-		
 		dig_in_speed_factor = 0.15
 		
 		army_infantry_defence_factor = 0.10
@@ -945,8 +932,8 @@ leader_traits = {
 		
 		out_of_supply_factor = -0.25
 		no_supply_grace = 48
-		command_cap = 20
-		experience_gain_army = 0.10
+		command_cap = 10
+		experience_gain_army = 0.12
 
 
 		ai_will_do = {
@@ -962,11 +949,10 @@ leader_traits = {
 		random = no
 		sprite = 1
 		
-		max_command_power = 5
-		
 		air_paradrop_attack_factor = 0.1
 		air_paradrop_defence_factor = 0.1
 		air_paradrop_agility_factor = 0.1
+
 		command_cap = 20
 		experience_gain_army = 0.06
 		experience_gain_air = 0.06
@@ -975,14 +961,12 @@ leader_traits = {
 		random = no
 		sprite = 1
 		
-		max_command_power = 5
-		
 		air_interception_attack_factor = 0.05
 		air_interception_defence_factor = 0.05
 		air_interception_agility_factor = 0.05
 		air_ace_generation_chance_factor = 0.05
 		command_cap = 20
-		experience_gain_air = 0.10
+		experience_gain_air = 0.09
 
 		ai_will_do = {
 			factor = 1
@@ -997,14 +981,12 @@ leader_traits = {
 		random = no
 		sprite = 1
 		
-		max_command_power = 5
-		
 		air_close_air_support_attack_factor = 0.05
 		air_close_air_support_defence_factor = 0.05
 		air_close_air_support_agility_factor = 0.05
 		air_cas_present_factor = 0.05
 		command_cap = 20
-		experience_gain_air = 0.10
+		experience_gain_air = 0.09
 
 		ai_will_do = {
 			factor = 1
@@ -1019,36 +1001,30 @@ leader_traits = {
 		random = no
 		sprite = 6
 		
-		max_command_power = 5
-		
 		ships_at_battle_start = 0.10
 		naval_hit_chance = 0.10
 		navy_max_range_factor = 0.10
 		command_cap = 20
-		experience_gain_navy = 0.10
+		experience_gain_navy = 0.09
 	}
 	GER_bey_T = {
 		random = no
 		sprite = 3
 		
-		max_command_power = 5
-		
 		spotting_chance = 0.10
 		naval_retreat_speed = 0.10
 		navy_anti_air_attack_factor = 0.10
 		command_cap = 20
-		experience_gain_navy = 0.10
+		experience_gain_navy = 0.09
 	}
 	GER_shutze_T = {
 		random = no
 		sprite = 4
 		
-		max_command_power = 5
-		
 		spotting_chance = 0.10
 		navy_submarine_detection_factor = 0.1
 		command_cap = 20
-		experience_gain_navy = 0.10
+		experience_gain_navy = 0.09
 	}
 	
 	
@@ -1664,17 +1640,17 @@ leader_traits = {
 				
 				instant = yes
 			}
-      anti_air_equipment = {
+			anti_air_equipment = {
 				build_cost_ic = -0.10
 				
 				instant = yes
 			}
 
-      anti_tank_equipment = {
+			anti_tank_equipment = {
 				build_cost_ic = -0.10
 
-        instant = yes
-      }
+				instant = yes
+			}
 			motorized_equipment = {
 
 				build_cost_ic = -0.10
@@ -1688,6 +1664,13 @@ leader_traits = {
 				
 				instant = yes
 			}
+
+			armored_car_equipment = {
+				build_cost_ic = -0.10
+				
+				instant = yes
+			}
+
 		}
 
 		ai_will_do = {
@@ -1788,6 +1771,12 @@ leader_traits = {
 			mechanized_equipment = {
 			
 				reliability = 0.15
+				
+				instant = yes
+			}
+
+			armored_car_equipment = {
+				build_cost_ic = -0.10
 				
 				instant = yes
 			}
@@ -1912,9 +1901,6 @@ leader_traits = {
 		
 		planning_speed = 0.05
 
-		land_doctrine_cost_factor = -0.1
-
-		#experience_gain_army = 0.10
 	}
 	
 	GER_manstein_T = {
@@ -1926,8 +1912,6 @@ leader_traits = {
 		planning_speed = 0.15
 
         cat_mobile_warfare_cost_factor = -0.15
-		
-		experience_gain_army = 0.15
 
 		ai_will_do = {
 			factor = 10
@@ -1945,8 +1929,9 @@ leader_traits = {
 		
 		air_close_air_support_attack_factor = 0.05
 		air_close_air_support_defence_factor = 0.05
-		
-		experience_gain_air = 0.1
+
+		cat_battlefield_support_cost_factor = -0.15
+
 	}
 	
 	GER_wever_T = {
@@ -1955,19 +1940,28 @@ leader_traits = {
 		
 		air_air_superiority_attack_factor = 0.03
 		air_air_superiority_defence_factor = 0.03
-		
-		experience_gain_air = 0.1
+
+		air_doctrine_cost_factor = -0.10
+
 	}
 	
 	GER_udet_T = {
 		random = no
 		sprite = 14
 
+		equipment_bonus = {
+			CAS_equipment = {
+				instant = yes
+				air_ground_attack = 0.1 
+			}
+		}
+
 		air_close_air_support_attack_factor = 0.03
 		air_close_air_support_defence_factor = 0.03
 		air_close_air_support_agility_factor = 0.03
-		
-		experience_gain_air = 0.10
+
+		air_doctrine_cost_factor = -0.10
+
 	}
 	
 	GER_saalwachter_T = {
@@ -1976,8 +1970,8 @@ leader_traits = {
 		
 		navy_submarine_attack_factor = 0.1
 		navy_submarine_defence_factor = 0.1
-		
-		experience_gain_navy = 0.10
+
+		cat_trade_interdiction_cost_factor = -0.15
 	}
 	
 	GER_ciliax_T = {
@@ -1985,8 +1979,8 @@ leader_traits = {
 		sprite = 14
 		
 		naval_coordination = 0.1
-		
-		experience_gain_navy = 0.10
+
+		naval_doctrine_cost_factor = -0.1
 	}
 	
 	

@@ -973,9 +973,9 @@ focus_tree = {
 			factor = 4
 		}
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -1014,9 +1014,9 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -4975,9 +4975,9 @@ focus_tree = {
 				country_exists = VEN
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -5295,9 +5295,9 @@ focus_tree = {
 			is_subject = no
 			date > 1938.6.1
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -5433,9 +5433,9 @@ focus_tree = {
 				ENG_focus_available_embargo_sanction = yes
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -5779,9 +5779,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_enforce_animusphere
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		ai_will_do = {
@@ -8911,9 +8911,9 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -8942,9 +8942,9 @@ focus_tree = {
 		relative_position_id = uk_el_melloi_classroom
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -8985,9 +8985,9 @@ focus_tree = {
 		}
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9204,9 +9204,9 @@ focus_tree = {
 				}
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9243,9 +9243,9 @@ focus_tree = {
 				is_in_faction = no
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9288,9 +9288,9 @@ focus_tree = {
 				has_war_with = CHI
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9351,9 +9351,9 @@ focus_tree = {
 				is_in_faction = no
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9389,9 +9389,9 @@ focus_tree = {
 				is_fully_controlled_by = ROOT
 			}
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9430,9 +9430,9 @@ focus_tree = {
 		relative_position_id = uk_el_melloi_classroom
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9464,9 +9464,9 @@ focus_tree = {
 		relative_position_id = ENG_secure_the_oil_imports
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9496,9 +9496,9 @@ focus_tree = {
 		relative_position_id = uk_modernized_lab
 		available = {
 			OR = {
-				has_country_leader = {
-					name = "Lord El Melloi II"
-					ruling_only = yes
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = ENG_Waver
 				}
 				has_country_leader = {
 					name = "Reines El Melloi Archisorte"
@@ -9533,9 +9533,9 @@ focus_tree = {
 			factor = 4
 		}
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9555,9 +9555,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_prepare_for_the_inevitable
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9584,9 +9584,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_prepare_for_the_inevitable
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9623,9 +9623,9 @@ focus_tree = {
 			factor = 3
 		}
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9651,9 +9651,9 @@ focus_tree = {
 			factor = 15
 		}
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 			is_subject = no
 			has_full_control_of_state = 659
@@ -9914,9 +9914,9 @@ focus_tree = {
 			factor = 3
 		}
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9947,9 +9947,9 @@ focus_tree = {
 		available = {
 			has_government = democratic
 			has_full_control_of_state = 299
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -9989,9 +9989,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = uk_elite_appealling
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -10014,9 +10014,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_chaledean
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -10039,9 +10039,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = uk_enhance_overseas_territory
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {
@@ -10074,9 +10074,9 @@ focus_tree = {
 					has_government = democratic
 				}
 			}
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 			NOT = {
 				has_war_with = ITA
@@ -10113,9 +10113,9 @@ focus_tree = {
 					has_government = democratic
 				}
 			}
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 			NOT = {
 				has_war_with = JAP
@@ -10142,9 +10142,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_imperial_special_service
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		completion_reward = {

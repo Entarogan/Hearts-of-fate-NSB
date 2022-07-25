@@ -71,23 +71,23 @@ ideas = {
   
     JAP_supportive_rural_economics = {
     # 支持乡村经济o
-      allowed = {
-				always = no
-			}
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			removal_cost = -1
+		allowed_civil_war = {
+			always = yes
+		}
 
-			picture = generic_agrarian_reform
-			
-			modifier = {
-				production_speed_industrial_complex_factor = 0.15
-        production_speed_infrastructure_factor = 0.2
-        stability_factor = 0.05
-			}
+		removal_cost = -1
+
+		picture = generic_agrarian_reform
+
+		modifier = {
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_infrastructure_factor = 0.15
+			MONTHLY_POPULATION = 0.30
+		}
     }
   
     JAP_zaibatsus_bureaucrat_2 = {
@@ -994,7 +994,9 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				conscription = 0.025
+				stability_weekly = 0.001
+				war_support_weekly = 0.002
+				conscription = 0.005
 			}
 		}
 
@@ -1754,7 +1756,7 @@ ideas = {
 			picture = jap_intervene_in_china
 		
 			modifier = {
-				invasion_preparation = 0.5
+				invasion_preparation = 0.25
 				naval_invasion_capacity = 10
 			}
 		

@@ -1,6 +1,6 @@
 characters={
     CAN_Karin={
-		name="Karin"
+		name="CAN_Karin"
 		portraits={
 			civilian={
 				large="gfx/leaders/CAN/Portrait_Karin.dds"
@@ -13,7 +13,7 @@ characters={
 		}
 	}
 	CAN_Elizard_I={
-		name="Elizard I"
+		name="CAN_Elizard_I"
 		portraits={
 			civilian={
 				large="gfx/leaders/CAN/Portrait_Elizard_I.dds"
@@ -26,7 +26,7 @@ characters={
 		}
 	}
 	CAN_Carissa={
-		name="Carissa"
+		name="CAN_Carissa"
 		portraits={
 			civilian={
 				large="gfx/leaders/CAN/Portrait_Carissa.dds"

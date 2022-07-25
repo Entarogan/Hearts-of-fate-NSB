@@ -402,29 +402,29 @@ ideas = {
     }
     
     FRA_Let_them_eat_Cake = {
-      allowed = {
-				original_tag = FRA
-				always = no
-				NOT = {
-				    has_government = fascism
-					has_government = communism
-				}
+		allowed = {
+			original_tag = FRA
+			always = no
+			NOT = {
+				has_government = fascism
+				has_government = communism
 			}
+		}
 
-			allowed_civil_war = {
-				has_government = neutrality
-			}
-			
-			removal_cost = -1
-      
-      picture = generic_goods_red_bonus
-      
-      modifier = {
-        stability_weekly = 0.002
-	      monthly_population = 0.15
-        consumer_goods_factor = 0.05
-        neutrality_drift = 0.07
-			}
+		allowed_civil_war = {
+		    has_government = neutrality
+		}
+
+		removal_cost = -1
+
+		picture = generic_goods_red_bonus
+
+		modifier = {
+			stability_weekly = 0.002
+			monthly_population = 0.3
+			consumer_goods_factor = 0.05
+			neutrality_drift = 0.07
+		}
     }
     
     FRA_Mediterranean_Affairs_Committee = {
@@ -1324,8 +1324,7 @@ ideas = {
 			picture = ast_all_in
 
 			modifier = {
-				stability_weekly = 0.003
-				production_speed_buildings_factor = 0.05
+				stability_weekly = 0.005
 			}
 		}
 		

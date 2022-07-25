@@ -71,6 +71,9 @@ characters={
         		has_completed_focus = ira_ally_the_militias
 			}
 			traits = { army_chief_maneuver_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 10
 			}
@@ -105,6 +108,9 @@ characters={
         		has_completed_focus = ira_ally_the_militias
 			}
 			traits = { air_chief_ground_support_Ishtar }
+
+			cost = 250
+
 			ai_will_do = {
 				factor = 10
 			}
@@ -150,6 +156,9 @@ characters={
         		NOT = { has_country_flag = GILGAMESH_DIED }
 			}
 			traits = { army_artillery_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 10
 			}
@@ -185,6 +194,9 @@ characters={
         		NOT = { has_country_flag = GILGAMESH_DIED }
 			}
 			traits = { air_strategic_bombing_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 5
 			}
@@ -231,7 +243,11 @@ characters={
 
 			modifier = {
 				max_dig_in = 15
+
+				experience_gain_army = 0.15
 			}
+
+			cost = 250
 
 			ai_will_do = {
 				factor = 20
@@ -341,6 +357,9 @@ characters={
         		has_completed_focus = ira_Ziusudra
 			}
 			traits = { navy_capital_ship_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 10
 			}
@@ -371,6 +390,9 @@ characters={
         		has_completed_focus = ira_wake_tiamat
 			}
 			traits = { navy_amphibious_assault_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 5
 			}

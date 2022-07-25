@@ -675,13 +675,7 @@
  SOV_North_Sea_Escort_desc:0 "Going to the Atlantic Ocean from Murmansk is a more convenient option than from Leningrad, so where possible we must ensure the safety of the waters surrounding this ice-free port. " 
 
  SOV_Conquer_the_East:0 "Conquer the East"
- SOV_Conquer_the_East_desc:0 "Vladivostok , namely "Conquer the East", finally returned to our hands. Let the Pacific Fleet start from then on. " 
- 
- SOV_Underwater_attack:0 "Underwater Attack"
- SOV_Underwater_attack_desc:0 "The strength of the Red Navy may lag behind naval powers for a long time, so it must be prepared for asymmetric naval warfare! "
-
- SOV_Offshore_defense:0 "Offshore Defense"
- SOV_Offshore_defense_desc:0 "For example, important coastal cities like Leningrad need to be tightly protected. In addition to coastal fortresses, torpedo bombers must be deployed to ensure safety. "  
+ SOV_Conquer_the_East_desc:0 "Vladivostok , namely "Conquer the East", finally returned to our hands. Let the Pacific Fleet start from then on. "
  
  SOV_Open_more_arsenals:0 "Open More Arsenals"
  SOV_Open_more_arsenals_desc:0 "Our research on artillery has been very rapid... Compared with the progress in light weapons, it is really pitiful. Then in the unity of Russia, we should consider replacing the old Mosin in the hands of the soldiers. The general secretary has already Order to mobilize more talents into the Light Weapons Design Bureau and allocate more funds to build an arsenal. "
@@ -927,7 +921,7 @@
  
  more_ukraine_dlc.9.t:0 "Parachute!"
  more_ukraine_dlc.9.d:0 "Brezhnev received very bad news today! A garrison patrolling the outskirts of Kiev found buried Italian... Roman-made parachute! It was obvious that this could not be some aviation club activity nor some airborne exercise. The First Secretary immediately ordered the police to investigate and to his surprise, parachutes were found hidden all over Ukraine! Based on the traces of dirt extrapolated from the fact that they landed about a week ago, counting the parachutes that may not have been found yet, the criminal investigators extrapolated that at least about three battalions of enemy agents had infiltrated."
- more_ukraine_dlc.9.a:0 ""Hurry up and give me a search!""   
+ more_ukraine_dlc.9.a:0 ""Hurry up and search!""   
 
  more_ukraine_dlc.10.t:0 "Necessary preparations for the uprising"
  more_ukraine_dlc.10.d:0 "With a smile on his face, Roman Shukhovich handed the Red Army soldier who came to check him out a fine cigarette that only officers could have, and the latter did not see it as an overstep; even in the tightly controlled Soviet society, one could still get these hard currencies through the underground black market to get through the deeply flawed centralized system. The Russian-speaking soldier didn't ask any more questions and let the wagon full of "cargo" pass through, expecting that the black-market grain wagon would "help" the folks nearby. \n\nAs the advance commander of the Ukrainian insurgency, Shukhovich thought it was necessary to dismantle the Bolshevik grassroots, and that it would be feasible to use the famine caused by the authorities to push people against the Red bandits, but the further east you go, the more people will think they are the "bandits," and it will take a lot of time to prove the legitimacy of your side."

@@ -1,0 +1,15 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_idea_JAP_Mutsu"
+		texturefile = "gfx/interface/ideas/JAP_Mutsu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_Asparagus"
+		textureFile = "gfx/interface/ideas/FRA_Asparagus.png"
+	}
+	spriteType = {
+		name = "GFX_idea_FRA_Pauline_Bonaparte"
+		textureFile = "gfx/interface/ideas/FRA_Pauline_Bonaparte.png"
+	}
+}

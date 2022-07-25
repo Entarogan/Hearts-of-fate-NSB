@@ -37,6 +37,11 @@ foreign_politics = {
 		complete_effect = {
 			GER = { country_event = { id = ukr_diplo.1 days = 5 } }
 		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+
 	}
 
 

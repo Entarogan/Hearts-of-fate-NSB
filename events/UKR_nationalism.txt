@@ -247,7 +247,9 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		complete_national_focus = UKR_Second_election
+		hidden_effect = {
+			complete_national_focus = UKR_Second_election
+		}
 	}
 
 	option = {

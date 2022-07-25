@@ -1,14 +1,14 @@
 characters={
 	ENG_ARTURIA_PENDRAGON={
-		name = "Arturia Pendragon"
+		name = "ENG_ARTURIA_PENDRAGON"
 		desc = "POLITICS_ARTURIA_PENDRAGON_DESC"
 		portraits={
 			army = {
-				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.dds"
+				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.png"
 				small="GFX_idea_inorai"
 			}
 			civilian={
-				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.dds"
+				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.png"
 			}
 		}
 		country_leader={
@@ -29,7 +29,7 @@ characters={
 		}
 	}
 	ENG_Reines_El_Melloi_Archisorte={
-		name = "Reines El Melloi Archisorte"
+		name = "ENG_Reines_El_Melloi_Archisorte"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Reines_El_Melloi_Archisorte.dds"
@@ -94,13 +94,15 @@ characters={
 			
 			traits = { military_theorist }
 
+			cost = 100
+
 			ai_will_do = {
 				factor = 0
 			}
 		}
 	}
 	ENG_Waver={
-		name = ENG_elmelloi
+		name = "ENG_Waver"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Waver.dds"
@@ -142,7 +144,7 @@ characters={
 		
 	}
 	ENG_Olga_Marie_Animusphere={
-		name = "Olga Marie Animusphere"
+		name = "ENG_Olga_Marie_Animusphere"
 		portraits={
 			civilian={
 				large="gfx/leaders/ENG/Portrait_Olga_Marie_Animusphere.dds"
@@ -172,6 +174,8 @@ characters={
 			}
 			
 			traits = { elite_action }
+
+			cost = 150
 
 			ai_will_do = {
 				factor = 5
@@ -240,7 +244,7 @@ characters={
 		}
 	}
 	ENG_Barthomeloi_Lorelei={
-		name = "Barthomeloi Lorelei"
+		name = "ENG_Barthomeloi_Lorelei"
 		portraits={
 			civilian={
 				large="gfx/leaders/ENG/Portrait_Barthomeloi_Lorelei.dds"
@@ -255,7 +259,7 @@ characters={
 		}
 	}
 	ENG_Gawain={
-		name = gawain
+		name = "ENG_Gawain"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_gawain.dds"
@@ -279,6 +283,8 @@ characters={
 			}
 			
 			traits = { Boost_morale }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 3
@@ -286,7 +292,7 @@ characters={
 		}
 	}
 	ENG_Lancelot={
-		name = lancelot
+		name = "ENG_Lancelot"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_lancelot.dds"
@@ -310,6 +316,8 @@ characters={
 			}
 			
 			traits = { Fierce_general }
+
+			cost = 250
 			
 			ai_will_do = {
 				factor = 5
@@ -317,7 +325,7 @@ characters={
 		}
 	}
 	ENG_Agravain={
-		name = "Agravain"
+		name = "ENG_Agravain"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_agravain.dds"
@@ -334,7 +342,7 @@ characters={
 			legacy_id = 806
 		}
 		advisor={
-			slot = political_advisor
+			slot = high_command
 			idea_token = ENG_agravain
 			available = {
 				OR = {
@@ -348,15 +356,17 @@ characters={
 				original_tag = ENG
 			}
 			
-			traits = { princess_of_terror }
+			traits = { Butcher_1 }
+
+			cost = 200
 
 			ai_will_do = {
-				factor = 1
+				factor = 3
 			}
 		}
 	}
 	ENG_Tristan={
-		name = tristan
+		name = "ENG_Tristan"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_tristan.dds"
@@ -378,6 +388,8 @@ characters={
 				original_tag = ENG
 			}
 			traits = { Joint_operations }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 3
@@ -385,7 +397,7 @@ characters={
 		}
 	}
 	ENG_mash={
-		name = mash_kyrielight
+		name = "ENG_mash"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_mash.dds"
@@ -409,6 +421,8 @@ characters={
 			}
 			
 			traits = { lord_camelot }
+
+			cost = 200
 			
 			available = {
 				NOT = { has_government = fascism }
@@ -421,7 +435,7 @@ characters={
 	}
 
 	ENG_Mordred={
-		name = mordred
+		name = "ENG_Mordred"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_mordred.dds"
@@ -452,6 +466,8 @@ characters={
 			}
 			
 			traits = { navy_chief_maneuver_3 }
+
+			cost = 150
 			
 			ai_will_do = {
 				factor = 1
@@ -470,6 +486,8 @@ characters={
 			
 			
 			traits = { charge_1 }
+
+			cost = 100
 			
 			ai_will_do = {
 				factor = 3
@@ -477,7 +495,7 @@ characters={
 		}
 	}
 	ENG_Nightingale={
-		name = "Florence Nightingale"
+		name = "ENG_Nightingale"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Nightingale.dds"
@@ -493,7 +511,7 @@ characters={
 		}
 	}
 	ENG_Boudica={
-		name = "Boudica"
+		name = "ENG_Boudica"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Boudica.dds"
@@ -509,7 +527,7 @@ characters={
 		}
 	}
 	ENG_robin_hood={
-		name = "Robin Hood"
+		name = "ENG_robin_hood"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_robin_hood.dds"
@@ -525,7 +543,7 @@ characters={
 		}
 	}
 	ENG_Jekyll={
-		name = "Henry Jekyll"
+		name = "ENG_Henry_Jekyll"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Jekyll.dds"
@@ -557,7 +575,7 @@ characters={
 		}
 	}
 	ENG_Gray={
-		name = eng_gray
+		name = "ENG_Gray"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Gray.dds"
@@ -591,7 +609,7 @@ characters={
 		}
 	}
 	ENG_Edward_Teach={
-		name = "Edward Teach"
+		name = "ENG_Edward_Teach"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_edward.dds"
@@ -607,7 +625,8 @@ characters={
 		}
 	}
 	ENG_twin={
-		name = "Anne Bonny & Mary Read"
+		name = "ENG_twin"
+		#name = "Anne Bonny & Mary Read"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_twin.dds"
@@ -623,7 +642,7 @@ characters={
 		}
 	}
 	ENG_Frankenstein={
-		name = frankstein
+		name = "ENG_Frankenstein"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Frankenstein.dds"
@@ -646,13 +665,16 @@ characters={
 				original_tag = ENG
 			}
 			traits = { navy_chief_decisive_battle_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 1
 			}
 		}
 	}
 	ENG_Bartholomew_Roberts={
-		name = "Bartholomew Roberts"
+		name = "ENG_Bartholomew_Roberts"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Bartholomew_Roberts.dds"
@@ -667,24 +689,9 @@ characters={
 			coordination_skill = 4
 		}
 	}
-	ENG_Bartholomew_Roberts={
-		name = "Bartholomew Roberts"
-		portraits={
-			army={
-				large="gfx/leaders/ENG/Portrait_Bartholomew_Roberts.dds"
-			}
-		}
-		navy_leader = {
-			traits = { navy_career_officer bold cuts_corners gentlemanly blockade_runner superior_tactician spotter blue_water_expert inshore_fighter }
-			skill = 5
-			attack_skill = 5
-			defense_skill = 3
-			maneuvering_skill = 4
-			coordination_skill = 4
-		}
-	}
+
 	ENG_Fransic_Drake = {
-		name = drake
+		name = "ENG_Fransic_Drake"
 		portraits = {
 			civilian = {
 				large = "gfx//leaders//ENG//Portrait_drake.dds"
@@ -704,15 +711,17 @@ characters={
 				original_tag = ENG
 			}
 			traits = { navy_chief_commerce_raiding_drake }
+
+			cost = 200
 			
 			ai_will_do = {
-				factor = 0.2
+				factor = 2
 			}
 		}
 	}
 
 	ENG_merlin = {
-		name = ENG_merlin
+		name = "ENG_merlin"
 		portraits = {
 			army = {
 				small = "GFX_idea_advisor_merlin"
@@ -741,7 +750,7 @@ characters={
 		}
 	}
 	ENG_charles_babbage = {
-		name = ENG_charles_babbage
+		name = "ENG_charles_babbage"
 		portraits = {
 			army = {
 				small = "GFX_idea_advisor_babbage"
@@ -758,13 +767,23 @@ characters={
 			
 			research_bonus = {
 				electronics = 0.20
-				armor = 0.15
+				armor = 0.1
+				motorized_equipment = 0.1
 			}
+
+			ai_will_do = {
+				factor = 7
+				modifier = {
+					factor = 2
+					has_war = no
+				}
+			}
+
 		}
 	}
 
 	ENG_holmes = {
-		name = ENG_holmes
+		name = "ENG_holmes"
 		portraits = {
 			army = {
 				small = "GFX_idea_advisor_holmes"
@@ -795,7 +814,7 @@ characters={
 	}
 
 	ENG_moriarty = {
-		name = ENG_moriarty
+		name = "ENG_moriarty"
 		portraits = {
 			army = {
 				small = "GFX_idea_advisor_moriarty"
@@ -825,7 +844,7 @@ characters={
 	}
 
 	ENG_kay = {
-		name = arturia_kay
+		name = "ENG_kay"
 		portraits = {
 			army = {
 				small = "GFX_idea_command_kay"
@@ -841,6 +860,8 @@ characters={
             picture = command_kay
 			
 			traits = { Logistics_support }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 1
@@ -849,7 +870,7 @@ characters={
 	}
 
 	ENG_Sion = {
-		name = ENG_Sion
+		name = "ENG_Sion"
 		portraits = {
 			army = {
 				small = "GFX_idea_sion_eltnam_atlasia"
@@ -878,11 +899,14 @@ characters={
 			}
 			
 			traits = { all_in_plan }
+
+			cost = 200
+
 		}
 	}
 
 	ENG_Samuel_Lewis ={
-		name= "Samuel Lewis"
+		name= "ENG_Samuel_Lewis"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Lewis_1.dds"
@@ -899,7 +923,7 @@ characters={
 	}
 
 	ENG_Enfield_Bren ={
-		name= "Enfield Bren"
+		name= "ENG_Enfield_Bren"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_BrenMKMod.dds"
@@ -916,7 +940,7 @@ characters={
 	}
 
 	ENG_Sheffield_Turpin ={
-		name= "Sheffield Turpin"
+		name= "ENG_Sheffield_Turpin"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_StenMK2.dds"
@@ -933,7 +957,7 @@ characters={
 	}
 
 	ENG_Welrod_Reeves ={
-		name= "Welrod Reeves"
+		name= "ENG_Welrod_Reeves"
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_WelrodMod.dds"

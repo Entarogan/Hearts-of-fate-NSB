@@ -11,8 +11,13 @@
 # influence
 
 RUS_unit_production = {
-	enable = {
+
+	allowed = {
 		original_tag = RUS
+	}
+
+	enable = {
+		always = yes
 	}
 	abort = {
 		always = no
@@ -172,8 +177,12 @@ RUS_unit_production = {
 }
 
 southern_thrust = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_prepare_for_war_middle_east_flag
 		OR = {
 			country_exists = IRQ
@@ -209,20 +218,20 @@ southern_thrust = {
 ENG_southern_thrust = {
 	enable = {
 		OR = {
-		tag = ENG
-		tag = ITA
-		tag = GER
-		tag = JAP
-		tag = USA
+			tag = ENG
+			tag = ITA
+			tag = GER
+			tag = JAP
+			tag = USA
 		}
-       has_war = yes
-	   NOT = { has_war_with = RUS }
-	   RUS = {
-		OR = {
-			has_war_with = IRQ
-			has_war_with = PER
-			has_war_with = AFG
-		}
+		has_war = yes
+		NOT = { has_war_with = RUS }
+		RUS = {
+			OR = {
+				has_war_with = IRQ
+				has_war_with = PER
+				has_war_with = AFG
+			}
 		}
 	}
 	abort = {
@@ -250,8 +259,12 @@ ENG_southern_thrust = {
 }
 
 claims_on_poland = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_claim_poland_flag
 		country_exists = POL
 	}
@@ -269,8 +282,12 @@ claims_on_poland = {
 }
 
 claims_on_baltic = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_claim_baltic_flag
 		OR = {
 			country_exists = LAT
@@ -297,8 +314,12 @@ claims_on_baltic = {
 }
 
 claims_on_finland = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_claim_finland_flag
 		country_exists = FIN
 	}
@@ -322,8 +343,12 @@ claims_on_finland = {
 }
 
 claims_on_turkey = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_claim_straits_flag
 		country_exists = TUR
 	}
@@ -341,8 +366,12 @@ claims_on_turkey = {
 }
 
 claims_on_romania = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		has_country_flag = SOV_claim_romannia_flag
 		country_exists = ROM
 	}
@@ -359,96 +388,14 @@ claims_on_romania = {
 	}	
 }
 
-claims_on_sinkiang = {
-	enable = {
-		tag = RUS
-		has_completed_focus = SOV_claim_on_sinkiang
-		country_exists = CHI
-	}
-	abort = {
-		NOT = {
-			country_exists = CHI
-		}
-	}
-	
-	ai_strategy = {
-		type = antagonize
-		id = "CHI"			
-		value = 200
-	}	
-}
-
-japan_ally = {
-	enable = {
-		tag = RUS
-		has_completed_focus = SOV_reconcile_japan
-		country_exists = JAP
-	}
-	abort = {
-		NOT = { country_exists = JAP }
-	}
-	
-	ai_strategy = {
-		type = befriend
-		id = "JAP"			
-		value = 200
-	}
-	ai_strategy = {
-		type = alliance
-		id = "JAP"			
-		value = 200
-	}	
-}
-
-germany_ally = {
-	enable = {
-		tag = RUS
-		OR = { 
-			has_completed_focus = SOV_anti_capitalist_diplomacy
-			GER = { has_completed_focus = GER_soviet_ally }
-		}
-		country_exists = GER
-	}
-	abort = {
-		NOT = { country_exists = GER }
-	}
-	
-	ai_strategy = {
-		type = befriend
-		id = "GER"			
-		value = 200
-	}
-	ai_strategy = {
-		type = alliance
-		id = "GER"			
-		value = 200
-	}	
-}
-
-germany_enemy = {
-	enable = {
-		tag = SOV
-		has_completed_focus = SOV_anti_fascist_diplomacy
-		country_exists = GER
-		OR = {
-			date > 1942.1.1
-			has_war_with = GER 
-		}
-	}
-	abort = {
-		NOT = { country_exists = GER }
-	}
-	
-	ai_strategy = {
-		type = antagonize
-		id = "GER"			
-		value = 200
-	}	
-}
-
 RUS_template_design_1 = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		original_tag = RUS			
+		always = yes		
 	}
 	abort = { 
 		always = no
@@ -503,31 +450,14 @@ RUS_template_design_1 = {
 	}
 }
 
-RUS_pp_spending = {
-	enable = {
-		original_tag = RUS
-		has_manpower < 100000
-		has_political_power < 200
-	}
-	abort = {
-		OR = {
-			has_manpower > 100000
-			has_political_power > 200
-			date > 1944.1.1
-		}
-	}
-
-	ai_strategy = { # dont burn PP on admirals if you need manpower laws
-		type = pp_spend_priority
-		id = admiral
-		value = -100
-	}
-}
-
 RUS_naval_role_ratios_historical = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
 		has_dlc = "Man the Guns"
-		original_tag = RUS
 	}
 
 	ai_strategy = {
@@ -586,8 +516,13 @@ RUS_naval_role_ratios_historical = {
 }
 
 RUS_home_land_is_safe = {
-	enable = {
+
+	allowed = {
 		original_tag = RUS
+	}
+
+	enable = {
+		always = yes
 	}
 	
 	ai_strategy = {
@@ -597,8 +532,13 @@ RUS_home_land_is_safe = {
 }
 
 RUS_dont_like_asia = { # :O
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
+		always = yes
 	}
 	abort = {
 		always = no
@@ -606,7 +546,7 @@ RUS_dont_like_asia = { # :O
 
 	ai_strategy = {
 		type = alliance
-		id = "PRC"
+		id = "BEY"
 		value = -1000
 	}
 
@@ -648,7 +588,7 @@ RUS_dont_like_asia = { # :O
 
 	ai_strategy = {
 		type = send_volunteers_desire
-		id = "PRC"
+		id = "BEY"
 		value = -1000
 	}
 
@@ -687,8 +627,12 @@ RUS_dont_like_asia = { # :O
 }
 
 dont_take_claims_on_ROM_we_got_focus = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		country_exists = ROM
 		has_war = no
 	}
@@ -709,8 +653,12 @@ dont_take_claims_on_ROM_we_got_focus = {
 }
 
 dont_take_claims_on_LIT_we_got_focus = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		country_exists = LIT
 		has_war = no
 	}
@@ -730,8 +678,12 @@ dont_take_claims_on_LIT_we_got_focus = {
 }
 
 dont_take_claims_on_LAT_we_got_focus = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		country_exists = LAT
 		has_war = no
 	}
@@ -751,8 +703,12 @@ dont_take_claims_on_LAT_we_got_focus = {
 }
 
 dont_take_claims_on_EST_we_got_focus = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		country_exists = EST
 		has_war = no
 	}
@@ -772,8 +728,12 @@ dont_take_claims_on_EST_we_got_focus = {
 }
 
 dont_take_claims_on_FIN_we_got_focus = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		country_exists = FIN
 		has_war = no
 	}
@@ -795,18 +755,18 @@ dont_take_claims_on_FIN_we_got_focus = {
 RUS_300_million_marks = {
 	enable = {
 		NOT = { tag = RUS }
-    NOT = { RUS = { is_faction_leader = yes } }
+		NOT = { RUS = { is_faction_leader = yes } }
 		is_in_faction_with = RUS
 	}
+
 	abort = {
-    RUS = {
-      any_home_area_neighbor_country = {
-        NOT = { has_war_with = RUS }
-      }
-    }
+		RUS = {
+			any_home_area_neighbor_country = {
+			    NOT = { has_war_with = RUS }
+			}
+		}
 	}
 	
-	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = dont_defend_ally_borders
 		id = "RUS"
@@ -815,17 +775,21 @@ RUS_300_million_marks = {
 }
 
 RUS_wants_arms = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
 	enable = {
-		tag = RUS
 		date < 1937.6.1
 		has_war = no
 	}
 
 	abort = { 
-    OR = {
-      date > 1937.6.1 
-      has_war = yes
-    }
+		OR = {
+		  date > 1937.6.1 
+		  has_war = yes
+		}
 	}
 
 	ai_strategy = {
@@ -833,4 +797,139 @@ RUS_wants_arms = {
 		id = arms_factory
 		value = 59
 	}
+}
+
+RUS_blitzkrieg_SOV  = { 
+	allowed = {
+		original_tag = RUS
+	}
+
+	enable = {
+		has_war_with = SOV
+		has_idea = RUS_Kick_open_the_door
+		SOV = { has_war_with = UKR }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_control
+
+		tag = SOV
+
+		ratio = 0.5
+
+		priority = 100
+		ordertype = front
+		execution_type = balanced
+		execute_order = yes
+	}
+
+}
+
+dont_defend_RUS = {
+
+	enable = {
+		NOT = { original_tag = RUS }
+		is_in_faction_with = RUS
+		RUS = {
+			surrender_progress < 0.3
+			has_capitulated = no
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RUS"
+		value = 100
+	}
+}
+
+RUS_share_borders_with_ENG_FRA_GER = {
+
+	allowed = {
+		original_tag = RUS
+	}
+
+	enable = {
+		OR = {
+			is_in_faction_with = CHI
+			is_in_faction_with = JAP
+			is_in_faction_with = ENG
+			is_in_faction_with = FRA
+		}
+		RUS = { has_war_with = GER }
+
+	}
+	abort = {
+		OR = {
+			GER = { has_capitulated = yes }
+			NOT = { country_exists = GER }
+			GER = { is_subject = yes }
+		}
+	}
+	
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "CHI"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "SIA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MEN"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "MAN"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "FRA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "FIC"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ENG"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "USA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ITA"
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "ETH"
+		value = 100
+	}
+
 }

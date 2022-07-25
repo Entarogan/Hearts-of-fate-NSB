@@ -71,6 +71,8 @@ set_technology = {
 	marines = 1
     armored_car1 = 1
 	basic_train = 1
+
+	USA_overwhelming_firepower = 1
 }
 
 if = {

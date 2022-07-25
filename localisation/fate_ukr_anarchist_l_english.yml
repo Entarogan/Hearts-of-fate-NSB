@@ -250,7 +250,7 @@
  ukr_reunion.3.d:0 "As the Black Army seizes leadership of the Ukrainian Revolutionary War, the forces of opposition and sabotage against the Black Army's Gestapo Néstor Makhno are seizing the opportunity to undermine our revolution. The Bolsheviks and their intelligence agency, the NKVD, were pressing ahead with their assassination campaign against Makhno, and Ukrainian nationalist organizations were sparing no effort to unleash their brutal sabotage on the fellow Ukrainians they claimed to be protecting. Just when the Black Army was at the peak of its power for the first time and was caught up in the most tense of conflicts, bad news spread throughout Ukraine. Our dear old dad, Néstor Makhno, had been assassinated! [SOV.GetName], the Ukrainian nationalist organizations, and the Polish government all deny the assassination, no one knows who really did it, and we can only pray that the Black Army, as a decentralized resistance movement, will not fall into collapse."
  ukr_reunion.3.a:0 "Oh my God."     
 
- ukr_reunion.4.t:0 "Talula Artorius is elected as the new Black Army Gaitman"
+ ukr_reunion.4.t:0 "Talula Artorius is elected as the new Black Army Hetman"
  ukr_reunion.4.d:0 "An emergency meeting of the Soviet of Workers' and Peasants' Deputies of Ukraine discussed the repercussions of the assassination of Makhno and how to deal with it. Since time was running out for a vote in the various local soviets, a simple emergency vote was taken by the soviet deputies still on standby in the Kiev suburbs. The result was that Talula Artorius, a deputy from the Kharkov region, won the vote and was elected as the new Black Army Gaitman. \n\nTalula Artorius was once the adopted daughter of a notorious old Russian nobleman, who ran away in anger because she could not stand the family's control over her and the cruel plundering of the poor peasants. During the Civil War in 1920, Artorius briefly joined the Bolsheviks and the Red Army, becoming a Bolshevik cadre in the local soviet in Kharkov, before being expelled for publicly criticizing Trotsky in the newspapers. Artorius then led some of her loyal cadres to join the Black Army under Makhno, and in the 1921 offensive against the White Army led by Peter Wrangel showed great leadership skills and charisma, and was widely praised by the local peasants. In Finland in 1930, she met Yelena Frostnova, a former comrade who was ready to return to the Ukraine first to start the resistance, and Alina, the editor of a local left-wing newspaper, and the three formed a friendship. \n\nWith the outbreak of the Ukrainian War of Independence again, Artorius and Makhno and others returned to Ukraine in succession to try to re-establish the Black Army. After the fall of Petliura's regime, Artorius gave a very successful speech in Kiev and persuaded some of the officers loyal to Petliura to join the Black Army. This greatly increased her prestige. Today, Talula Artorius has been elected as the new Gestapo of the Black Army and has become the new Batko ("Father") among many Ukrainian peasants. Talula Artorius was a little uncomfortable after being called "Papa," but she was ready to lead the whole anarchist movement to victory."
  ukr_reunion.4.a:0 "Unite, then we can win!" 
  
@@ -302,4 +302,16 @@
  ukr_reunion.15.d:0 "The war is over, and now we can finally take a breath to ponder the fate of Reunion."
  ukr_reunion.15.a:0 "Hooray!"
  
+ ukr_reunion.16.t:0 "Operation Chernobog"
+ ukr_reunion.16.d:0 "Our war with the Russian Empire is still undoubtedly not over, and we are well aware that our forces are still slightly less than those of the huge northern bears. This situation calls for an asymmetrical military campaign to create a first-mover advantage. According to Talulah's plan, we will launch a massive attack against a major Russian city to open the battle for our ultimate victory over the Russian Empire. But to which city should we deliver the bombs?"
+ ukr_reunion.16.a:0 "[219.GetName]"
+ ukr_reunion.16.b:0 "[195.GetName]"
+ ukr_reunion.16.c:0 "[217.GetName]"
  
+ ukr_reunion.17.t:0 "Reunion Terrorist Attack!"
+ ukr_reunion.17.d:0 "Who would have thought that the Ukrainian "anarchists" we failed to defeat in one fell swoop would become a group of real terrorists! They used a special bomb to attack one of our major cities and claimed that it was the first step in their "war of liberation". What a "liberation"! Most of those killed in this attack were unarmed civilians. Now it's time to put this mob out of business!"
+ ukr_reunion.17.a:0 "Eradicate them!"
+ 
+ ukr_reunion.18.t:0 "Patriot's Coup!"
+ ukr_reunion.18.d:0 "The "Patriot" Buldroks'tee has had enough of Talulah's atrocities. He has decided to stage a mutiny and surrender to the Moscow side."
+ ukr_reunion.18.a:0 "It's over."

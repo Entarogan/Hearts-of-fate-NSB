@@ -7,12 +7,9 @@ leader_traits = {
 		planning_speed = 0.10
 		army_armor_attack_factor = 0.15
 		army_armor_defence_factor = 0.1
-		mechanized_attack_factor = 0.1
-		mechanized_defence_factor = 0.1
-		motorized_attack_factor = 0.1
-		motorized_defence_factor = 0.1
 		army_armor_speed_factor = 0.05
-		experience_gain_army = 0.10
+
+		experience_gain_army = 0.09
 		command_cap = 20
 
 		
@@ -25,19 +22,15 @@ leader_traits = {
 		random = no
 		sprite = 7
 
-		breakthrough_factor = 0.15
+		motorized_attack_factor = 0.15
+		motorized_defence_factor = 0.15
+		mechanized_attack_factor = 0.2
+		mechanized_defence_factor = 0.2
 
-		equipment_bonus = {
-			heavy_tank_chassis = {
-				armor_value = 0.15
-				reliability = 0.15				
-				build_cost_ic = 0.1
-				
-				instant = yes
-			}
-		}
+		supply_consumption_factor = -0.1
+
 		experience_gain_army = 0.12
-		command_cap = 20
+		command_cap = 10
 		
 		ai_will_do = {
 			factor = 4
@@ -46,37 +39,26 @@ leader_traits = {
 
 	Old_genius = { 
 		random = no
-		sprite = 5
+		sprite = 16
 
 
 		max_command_power = 30
-		army_artillery_attack_factor = 0.20
+		command_power_gain = 0.15
+
+		army_artillery_attack_factor = 0.25
 		army_artillery_defence_factor = 0.15
 		army_infantry_attack_factor = 0.15
-		army_infantry_defence_factor = 0.10
-		cavalry_attack_factor = 0.15
+		army_infantry_defence_factor = 0.15
+		cavalry_attack_factor = 0.10
 		cavalry_defence_factor = 0.10
 
 		attrition = -0.05
-		supply_consumption_factor = -0.05
 		army_speed_factor = 0.05
+		recon_factor = 0.05
+
 		experience_gain_army = 0.12
-		command_cap = 25
+		command_cap = 10
 
-		ai_will_do = {
-			factor = 4
-		}
-	}
-
-	army_artillery_napolean = { # +12 artillery efficiency
-		random = no
-		sprite = 8
-
-		army_artillery_attack_factor = 0.25
-		army_artillery_defence_factor = 0.20
-		experience_gain_army = 0.12
-		command_cap = 25
-		
 		ai_will_do = {
 			factor = 4
 		}
@@ -93,7 +75,7 @@ leader_traits = {
 		land_reinforce_rate = 0.03
 		conscription = 0.01
 		experience_gain_army = 0.12
-		command_cap = 20
+		command_cap = 10
 
 		ai_will_do = {
 			factor = 5
@@ -108,8 +90,9 @@ leader_traits = {
 		army_speed_factor = 0.15
 		army_attack_factor = 0.05
 		org_loss_when_moving = -0.05
-		experience_gain_army = 0.10
-		command_cap = 20
+
+		experience_gain_army = 0.12
+		command_cap = 10
 
 		ai_will_do = {
 			factor = 5
@@ -127,8 +110,9 @@ leader_traits = {
 
 		experience_loss_factor = 0.05
 		attrition = 0.05
-		experience_gain_army = 0.10
-		command_cap = 20
+
+		experience_gain_army = 0.12
+		command_cap = 10
 
 		ai_will_do = {
 			factor = 5
@@ -219,9 +203,9 @@ leader_traits = {
   emperor = {
 		random = no
 
-		experience_gain_factor = 0.10
-    offensive_war_stability_factor = 0.30
-    defensive_war_stability_factor = 0.30
+		experience_gain_army_unit_factor = 0.10
+		offensive_war_stability_factor = 0.30
+		defensive_war_stability_factor = 0.30
 		high_command_cost_factor = -0.30
 		air_chief_cost_factor = -0.30
 		army_chief_cost_factor = -0.30
@@ -360,6 +344,9 @@ leader_traits = {
 		production_speed_dockyard_factor = 0.10
 		production_speed_nuclear_reactor_factor = 0.10
 		production_speed_radar_station_factor = 0.10
+
+		production_factory_max_efficiency_factor = 0.10
+
 		production_factory_start_efficiency_factor = 0.15
 		
 		ai_will_do = {
@@ -600,9 +587,6 @@ leader_traits = {
     Armored_torrent = { #装甲洪流
 		random = no
 		sprite = 13
-		
-		experience_gain_army = 0.10
-		command_cap = 20
 
 		cat_mobile_warfare_cost_factor = -0.15
 		
@@ -614,9 +598,6 @@ leader_traits = {
 	The_superior_firepower = { #至高火力
 		random = no
 		sprite = 13
-		
-		experience_gain_army = 0.10
-		command_cap = 20
 
 		cat_superior_firepower_cost_factor = -0.25
 		

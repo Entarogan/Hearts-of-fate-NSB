@@ -1,9 +1,9 @@
 characters={
 	BEY_li_shuwen={
-		name="Li Shuwen"
+		name="BEY_li_shuwen"
 		portraits={
 			civilian={
-				large="gfx/leaders/BEY/Portrait_Li_Shuwen.dds"
+				large="gfx/leaders/BEY/Portrait_Li_Shuwen.png"
 			}
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -26,10 +26,13 @@ characters={
 		}
 	}
 	BEY_gao_changgong={
-		name="Gao Changgong"
+		name="BEY_gao_changgong"
 		portraits={
 			civilian={
-				large="gfx/leaders/BEY/Portrait_Gao_Changgong.dds"
+				large="gfx/leaders/BEY/Portrait_Gao_Changgong_civ.png"
+			}
+			army={
+				large="gfx/leaders/BEY/Portrait_Gao_Changgong.png"
 			}
 		}
 		corps_commander={
@@ -48,7 +51,7 @@ characters={
 		}
 	}
 	BEY_huo_qinge={
-		name="Huo Qing'e"
+		name="BEY_huo_qinge"
 		portraits={
 			civilian={
 				large="gfx/leaders/BEY/Portrait_Huo_Qinge.dds"
@@ -70,7 +73,7 @@ characters={
 		}
 	}
 	BEY_hong_meiling={
-		name="Hong Meiling"
+		name="BEY_hong_meiling"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -89,7 +92,7 @@ characters={
 		}
 	}
 	BEY_chen_tiaoyuan={
-		name="Chen Tiaoyuan"
+		name="BEY_chen_tiaoyuan"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -109,7 +112,7 @@ characters={
 		}
 	}
 	BEY_jiang_baili={
-		name="Jiang Baili"
+		name="BEY_jiang_baili"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -129,7 +132,7 @@ characters={
 		}
 	}
 	BEY_li_jinglin={
-		name="Li Jinglin"
+		name="BEY_li_jinglin"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -149,7 +152,7 @@ characters={
 		}
 	}
 	BEY_liu_menggeng={
-		name="Liu Menggeng"
+		name="BEY_liu_menggeng"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -169,7 +172,7 @@ characters={
 		}
 	}
 	BEY_ma_zhanshan={
-		name="Ma Zhanshan"
+		name="BEY_ma_zhanshan"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -189,7 +192,7 @@ characters={
 		}
 	}
 	BEY_qi_xieyuan={
-		name="Qi Xieyuan"
+		name="BEY_qi_xieyuan"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -209,7 +212,7 @@ characters={
 		}
 	}
 	BEY_shi_yousan={
-		name="Shi Yousan"
+		name="BEY_shi_yousan"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -229,7 +232,7 @@ characters={
 		}
 	}
 	BEY_sun_chuanfang={
-		name="Sun Chuanfang"
+		name="BEY_sun_chuanfang"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -249,7 +252,7 @@ characters={
 		}
 	}
 	BEY_sun_dianying={
-		name="Sun Dianying"
+		name="BEY_sun_dianying"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -269,7 +272,7 @@ characters={
 		}
 	}
 	BEY_wu_peifu={
-		name="Wu Peifu"
+		name="BEY_wu_peifu"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -289,7 +292,7 @@ characters={
 		}
 	}
 	BEY_yan_xishan={
-		name="Yan Xishan"
+		name="BEY_yan_xishan"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -309,7 +312,7 @@ characters={
 		}
 	}
 	BEY_yang_yuting={
-		name="Yang Yuting"
+		name="BEY_yang_yuting"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -329,7 +332,7 @@ characters={
 		}
 	}
 	BEY_zhang_jinghui={
-		name="Zhang Jinghui"
+		name="BEY_zhang_jinghui"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -349,7 +352,7 @@ characters={
 		}
 	}
 	BEY_zhang_xueliang={
-		name="Zhang Xueliang"
+		name="BEY_zhang_xueliang"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -369,7 +372,7 @@ characters={
 		}
 	}
 	BEY_zhang_zizhong={
-		name="Zhang Zizhong"
+		name="BEY_zhang_zizhong"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -389,7 +392,7 @@ characters={
 		}
 	}
 	BEY_zhang_zongchang={
-		name="Zhang Zongchang"
+		name="BEY_zhang_zongchang"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -409,7 +412,7 @@ characters={
 		}
 	}
 	BEY_zhang_zuoxiang={
-		name="Zhang Zuoxiang"
+		name="BEY_zhang_zuoxiang"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -429,7 +432,7 @@ characters={
 		}
 	}
 	BEY_wan_fulin={
-		name="Wan Fulin"
+		name="BEY_wan_fulin"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -449,7 +452,7 @@ characters={
 		}
 	}
 	BEY_wang_lingyun={
-		name="Wang Lingyun"
+		name="BEY_wang_lingyun"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -469,7 +472,7 @@ characters={
 		}
 	}
 	BEY_wu_junsheng={
-		name="Wu Junsheng"
+		name="BEY_wu_junsheng"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"
@@ -489,7 +492,7 @@ characters={
 		}
 	}
 	BEY_shangguan_yunxiang={
-		name="Shangguan Yunxiang"
+		name="BEY_shangguan_yunxiang"
 		portraits={
 			army={
 				small="GFX_idea_advisor_unknown"

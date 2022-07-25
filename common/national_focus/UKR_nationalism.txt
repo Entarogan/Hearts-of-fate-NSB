@@ -55,6 +55,10 @@ shared_focus = {
 		add_ideas = UKR_Verkhovna_Rada_1_idea
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -80,6 +84,10 @@ shared_focus = {
 
 	completion_reward = {
 		country_event = { id = ukr_nationalism.1 days = 1 } 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -112,6 +120,10 @@ shared_focus = {
 			add_idea = UKR_splitted_country_2
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -153,6 +165,10 @@ shared_focus = {
 			add_idea = UKR_Verkhovna_Rada_2_idea
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -272,6 +288,10 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -318,6 +338,10 @@ shared_focus = {
 			elections_allowed = yes
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -373,6 +397,10 @@ shared_focus = {
 		add_ideas = UKR_National_Security_Act_idea
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -400,6 +428,10 @@ shared_focus = {
 		add_political_power = -50
 
 		add_ideas = UKR_Military_and_political_integration_1_idea
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -433,6 +465,10 @@ shared_focus = {
 		add_stability = 0.10
 
 		remove_ideas = UKR_splitted_country_2
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -491,6 +527,10 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -532,6 +572,10 @@ shared_focus = {
 		country_event = { id = ukr_nationalism.2 days = 1 } 
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -555,6 +599,10 @@ shared_focus = {
 
 	completion_reward = {
 		custom_effect_tooltip = UKR_OUN_win_election_tooltip
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -593,6 +641,10 @@ shared_focus = {
 
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -622,6 +674,10 @@ shared_focus = {
 			days = 365
 		}
         unlock_decision_tooltip = UKR_Promote_Ukrainian_decision
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -679,6 +735,10 @@ shared_focus = {
 
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -729,6 +789,10 @@ shared_focus = {
 
         unlock_decision_tooltip = UKR_Cleaning_Russian_decision
 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -791,6 +855,13 @@ shared_focus = {
 		add_country_leader_trait = Providnyk
 
 		add_ideas = UKR_one_state_one_nation_one_vozhd_idea
+
+        set_cosmetic_tag = UKR_OUN_B
+
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }

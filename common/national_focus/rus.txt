@@ -314,11 +314,16 @@ focus_tree = {
 		prerequisite = {
 			focus = rus_no_compromise_on_united_russia
 		}
+
+		will_lead_to_war_with = UKR
+
 		available = {
 			is_subject = no
 			has_completed_focus = rus_fall_of_ussr
-			has_army_manpower = { size > 1499999 }
-			date > 1940.1.1
+
+			has_army_manpower = { size > 999999 }
+			date > 1939.1.1
+
 			custom_trigger_tooltip = {
 				tooltip = SOV_has_not_lacking_industrialization_tt
 				NOT = { has_idea = SOV_lacking_industrialization_1 }			
@@ -388,6 +393,29 @@ focus_tree = {
 				add_claim_by = ROOT
 			}
 
+			if = {
+				limit = {
+					country_exists = UKR
+					UKR = { is_subject = no }
+					NOT = { is_in_faction_with = UKR }
+				}
+
+				add_political_power = 150
+
+				add_war_support = 0.1
+
+				add_ai_strategy = {
+					type = antagonize
+					id = "UKR"
+					value = 5000
+				}
+
+				declare_war_on = {
+					target = UKR
+					type = annex_everything
+				}
+			}
+
 			custom_effect_tooltip = rus_redeem_our_territory_tt
 			unlock_decision_tooltip = SOV_claim_Karelia_decisions
 			unlock_decision_tooltip = SOV_claim_baltic_decisions
@@ -398,8 +426,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				date > 1942.1.1
-				factor = 20
+				GER = { is_in_faction_with = UKR }
+				GER = { has_war_with = FRA }
+				FRA = { surrender_progress < 0.2 }
+				factor = 2
+			}
+			modifier = {
+				date > 1939.1.1
+				factor = 1000
 			}
 			modifier = {
 				or = {
@@ -411,7 +445,7 @@ focus_tree = {
 						FRA = { surrender_progress < 0.5 }
 					}
 				}
-				factor = 100
+				factor = 1.5
 			}
 		}
 
@@ -1056,6 +1090,10 @@ focus_tree = {
 			add_country_leader_trait = Freezing_Charisma
 		}
 
+		ai_will_do = {
+			factor = 3000
+		}
+
 	}
 	focus = {
 		id = rus_Romanov_cruise
@@ -1071,7 +1109,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_romanov_foundation
 		completion_reward = {
-			add_political_power = -150
+			add_political_power = -50
 			add_stability = 0.05
 			add_war_support = 0.05
 		}
@@ -1119,21 +1157,46 @@ focus_tree = {
 			}
 			has_completed_focus = rus_fall_of_ussr
 			NOT = { has_idea = RUS_political_uncertainty }
-      or = {
-        RUS = { is_ai = yes }
-        FRA = {
-          has_opinion = {
-            target = RUS
-            value > 0
-          }
-        }
-      }
+			or = {
+				RUS = { is_ai = yes }
+				FRA = {
+					has_opinion = {
+						target = RUS
+						value > 0
+					}
+				}
+			}
 		}
 		x = -2
 		y = 1
 		relative_position_id = rus_align_japan
 		completion_reward = {
 			FRA = { country_event = { id = rus_diplo.1 days = 3 } }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FRA = { surrender_progress > 0 }
+			}
+			modifier = {
+				factor = 10
+				date > 1939.1.1
+				FRA = { has_war_with = GER }
+				GER = { surrender_progress > 0 }
+			}
+			modifier = {
+				factor = 200
+				NOT = { has_idea = SOV_lacking_industrialization_1 }			
+				NOT = { has_idea = SOV_lacking_industrialization_2 }			
+				NOT = { has_idea = SOV_lacking_industrialization_3 }			
+				NOT = { has_idea = SOV_lacking_industrialization_4 }			
+				NOT = { has_idea = SOV_lacking_industrialization_5 }			
+				NOT = { has_idea = SOV_lacking_industrialization_6 }			
+				NOT = { has_idea = SOV_lacking_industrialization_7 }			
+				NOT = { has_idea = SOV_lacking_industrialization_8 }	
+			}	
 		}
 
 	}
@@ -1356,10 +1419,13 @@ focus_tree = {
 				FRA = { is_in_faction_with = ENG }
 				NOT = { has_idea = russian_french_alliance }
 			}
-			ENG = {
-				has_opinion = {
-					target = RUS
-					value > 0
+			or = {
+				RUS = { is_ai = yes }
+				ENG = {
+					has_opinion = {
+						target = RUS
+						value > 0
+					}
 				}
 			}			
 		}
@@ -1368,6 +1434,31 @@ focus_tree = {
 		relative_position_id = rus_rekindle_old_alliance
 		completion_reward = {
 			ENG = { country_event = { id = rus_diplo.7 days = 3 } }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				FRA = { surrender_progress > 0 }
+			}
+			modifier = {
+				factor = 10
+				date > 1939.1.1
+				FRA = { has_war_with = GER }
+				GER = { surrender_progress > 0 }
+			}
+			modifier = {
+				factor = 200
+				NOT = { has_idea = SOV_lacking_industrialization_1 }			
+				NOT = { has_idea = SOV_lacking_industrialization_2 }			
+				NOT = { has_idea = SOV_lacking_industrialization_3 }			
+				NOT = { has_idea = SOV_lacking_industrialization_4 }			
+				NOT = { has_idea = SOV_lacking_industrialization_5 }			
+				NOT = { has_idea = SOV_lacking_industrialization_6 }			
+				NOT = { has_idea = SOV_lacking_industrialization_7 }			
+				NOT = { has_idea = SOV_lacking_industrialization_8 }	
+			}	
 		}
 
 	}
@@ -1871,6 +1962,10 @@ focus_tree = {
 				limit = { amount_research_slots < 6 }
 				add_research_slot = 1
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -2500,14 +2595,14 @@ focus_tree = {
 			is_in_faction = no
 			NOT = { has_idea = RUS_political_uncertainty }
 			JAP = { 
-        exists = yes
-        is_subject = no 
-        is_faction_leader = yes 
-        NOT = { has_war_with = ROOT has_government = communism }  
-        NOT = { has_idea = ger_cooperate_with_japan }  
-        NOT = { has_idea = idea_jap_kodoha }
-        NOT = { has_idea = idea_jap_revolutionaries }
-      }
+				exists = yes
+				is_subject = no 
+				is_faction_leader = yes 
+				NOT = { has_war_with = ROOT has_government = communism }  
+				NOT = { has_idea = ger_cooperate_with_japan }  
+				NOT = { has_idea = idea_jap_kodoha }
+				NOT = { has_idea = idea_jap_revolutionaries }
+			}
 			OR = {
 				NOT = { JAP = { has_government = democratic } }
 				has_government = democratic
@@ -2522,6 +2617,25 @@ focus_tree = {
 		relative_position_id = rus_align_japan
 		completion_reward = {
 			JAP = { country_event = { id = rus_diplo.9  days = 3 } }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 250
+				JAP = { has_idea = idea_jap_liberals }
+			}
+			modifier = {
+				factor = 100
+				NOT = { has_idea = SOV_lacking_industrialization_1 }			
+				NOT = { has_idea = SOV_lacking_industrialization_2 }			
+				NOT = { has_idea = SOV_lacking_industrialization_3 }			
+				NOT = { has_idea = SOV_lacking_industrialization_4 }			
+				NOT = { has_idea = SOV_lacking_industrialization_5 }			
+				NOT = { has_idea = SOV_lacking_industrialization_6 }			
+				NOT = { has_idea = SOV_lacking_industrialization_7 }			
+				NOT = { has_idea = SOV_lacking_industrialization_8 }	
+			}	
 		}
 
 	}
@@ -2662,6 +2776,10 @@ focus_tree = {
 		relative_position_id = rus_Kadoc_the_vozhd
 		completion_reward = {
 			add_ideas = { rus_Yunarmia }
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -2807,29 +2925,31 @@ focus_tree = {
 		relative_position_id = rus_siberian_cavalry
 		completion_reward = {
 
-      add_equipment_to_stockpile = {
-        type = light_tank_equipment_1 
-        amount = 100
-        producer = GER
-      }
+			add_equipment_to_stockpile = { 
+				type = light_tank_chassis_1 
+				amount = 100 
+				producer = GER  
+				variant_name = "Panzer I Ausf. A"
+			} 
 
-      add_equipment_to_stockpile = {
-        type = gw_tank_equipment
-        amount = 400
-        producer = FRA
-      }
+			add_equipment_to_stockpile = {
+				type = light_tank_chassis_0
+				amount = 400
+				producer = FRA
+				variant_name = "FT mod. 31"
+			}
 
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 200
-        producer = ENG
-      }
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 200
+				producer = ENG
+			}
 
-      add_equipment_to_stockpile = {
-        type = motorized_equipment
-        amount = 200
-        producer = USA
-      }
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = 200
+				producer = USA
+			}
 
 		}
 
@@ -3206,6 +3326,10 @@ focus_tree = {
 
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_science_of_war
@@ -3228,6 +3352,10 @@ focus_tree = {
 			}
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_siberian_cavalry
@@ -3243,6 +3371,10 @@ focus_tree = {
 			add_ideas = { rus_siberian_cavalry }
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_russian_armor
@@ -3255,46 +3387,53 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_rise_of_russian_industry
 		completion_reward = {
+
+			SOV_increase_industrialization = yes
+
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Kursk
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Yaroslavl
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Tsaritsyn
 
-      add_ideas = RUS_Ural_armor_production_idea
+			add_ideas = RUS_Ural_armor_production_idea
 
-      random_owned_controlled_state = {
-        limit = { 
-          free_building_slots = {
-            building = arms_factory
-            size > 2
-            include_locked = yes
-          }
-        }
-        add_extra_state_shared_building_slots = 3
-        add_building_construction = {
-          type = arms_factory
-          level = 3
-          instant_build = yes
-        }							
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}							
 
-      }
+			}
 
-      random_owned_controlled_state = {
-        limit = { 
-          free_building_slots = {
-            building = arms_factory
-            size > 2
-            include_locked = yes
-          }
-        }
-        add_extra_state_shared_building_slots = 3
-        add_building_construction = {
-          type = arms_factory
-          level = 3
-          instant_build = yes
-        }							
+			random_owned_controlled_state = {
+				limit = { 
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}							
 
-      }
+			}
 
+		}
+
+		ai_will_do = {
+			factor = 500
 		}
 
 	}
@@ -3762,14 +3901,14 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 1000
+			factor = 100
 		}
 
 	}
 	focus = {
 		id = rus_purge_diehards
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 7.00
+		cost = 3.00
 		prerequisite = {
 			focus = rus_fall_of_ussr
 		}
@@ -3792,7 +3931,7 @@ focus_tree = {
 	focus = {
 		id = rus_repress_partisan
 		icon = GFX_goal_generic_major_war
-		cost = 8.00
+		cost = 5.00
 		prerequisite = {
 			focus = rus_purge_diehards
 		}
@@ -4371,6 +4510,10 @@ focus_tree = {
 			remove_ideas = { RUS_political_uncertainty }
 		}
 
+		ai_will_do = {
+			factor = 1000
+		}
+
 	}
 	focus = {
 		id = rus_Empower_Russian_Senate
@@ -4392,6 +4535,10 @@ focus_tree = {
 		relative_position_id = rus_reestablish_authority
 		completion_reward = {
 			add_ideas = { rus_Empower_Russian_Senate  }
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -4423,6 +4570,10 @@ focus_tree = {
 			}
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_militarize_aristocrats
@@ -4449,6 +4600,10 @@ focus_tree = {
 					remove_idea = RUS_aristocrats
 				}
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -4479,6 +4634,10 @@ focus_tree = {
 					remove_idea = RUS_aristocrats
 				}
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -4640,6 +4799,10 @@ focus_tree = {
 			
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_the_Empire_strikes_back
@@ -4665,6 +4828,10 @@ focus_tree = {
 			}
 		}
 
+		ai_will_do = {
+			factor = 1000
+		}
+
 	}
 	focus = {
 		id = rus_revere_the_heroes
@@ -4683,6 +4850,10 @@ focus_tree = {
 		relative_position_id = rus_the_Empire_strikes_back
 		completion_reward = {
 			country_event = { id = russian_flavour.8 days = 3 }
+		}
+
+		ai_will_do = {
+			factor = 1000
 		}
 
 	}
@@ -4705,6 +4876,10 @@ focus_tree = {
 			country_event = { id = russian_flavour.6  days = 3 }
 		}
 
+		ai_will_do = {
+			factor = 1000
+		}
+
 	}
 	focus = {
 		id = rus_fix_winter_palace
@@ -4723,6 +4898,10 @@ focus_tree = {
 		relative_position_id = rus_the_Empire_strikes_back
 		completion_reward = {
 			country_event = { id = russian_flavour.7  days = 3 }
+		}
+
+		ai_will_do = {
+			factor = 1000
 		}
 
 	}
@@ -5020,6 +5199,10 @@ focus_tree = {
 			add_political_power = 75
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_crumble_aristocrats
@@ -5163,6 +5346,10 @@ focus_tree = {
 			}
 		}
 
+		ai_will_do = {
+			factor = 100
+		}
+
 	}
 	focus = {
 		id = rus_europe_political_refugee
@@ -5225,6 +5412,10 @@ focus_tree = {
 				limit = { amount_research_slots < 6 }
 				add_research_slot = 1
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -5436,7 +5627,7 @@ focus = {   ###土地分给农民
 	focus = {
 		id = rus_restore_local_government
 		icon = GFX_focus_generic_self_management
-		cost = 7.00
+		cost = 5.00
 		prerequisite = {
 			focus = rus_repress_partisan
 		}
@@ -5445,7 +5636,7 @@ focus = {   ###土地分给农民
 		relative_position_id = rus_repress_partisan
 		completion_reward = {
 			RUS_purge_down_communist = yes
-			add_political_power = 100
+			add_political_power = 200
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = RUS_boris_vasilchikov
 		}
@@ -5688,6 +5879,10 @@ focus = {   ###土地分给农民
 				}
 				add_research_slot = 1
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 	}
@@ -6107,6 +6302,15 @@ focus = {   ###土地分给农民
 				category = land_doctrine
 			} 
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6144,6 +6348,14 @@ focus = {   ###土地分给农民
 			add_ideas = { RUS_Trench_warfare_idea }
 		}
 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6167,7 +6379,7 @@ focus = {   ###土地分给农民
 
 			add_tech_bonus = {
 				bonus = 1.0
-			  ahead_reduction = 1
+				ahead_reduction = 1
 				uses = 1
 				name = rus_Summary_of_the_Russian_Civil_War
 				technology = armored_car2
@@ -6175,6 +6387,14 @@ focus = {   ###土地分给农民
 			}
 
 			add_ideas = { RUS_Mobile_warfare_idea }
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
 		}
 
 	}
@@ -6219,6 +6439,14 @@ focus = {   ###土地分给农民
 
 		}
 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6247,6 +6475,14 @@ focus = {   ###土地分给农民
 
 		}
 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6263,18 +6499,26 @@ focus = {   ###土地分给农民
 
 			add_tech_bonus = {
 				name = SOV_Ural_armor_production
-        bonus = 1.0
-        uses = 1
+				bonus = 1.0
+				uses = 1
 				category = cat_heavy_armor
 			}
 
 			add_tech_bonus = {
 				name = SOV_Ural_armor_production
-        bonus = 1.0
-        uses = 1
+				bonus = 1.0
+				uses = 1
 				category = cat_medium_armor
 			}
 
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
 		}
 
 	}
@@ -6300,20 +6544,28 @@ focus = {   ###土地分给农民
 		relative_position_id = rus_In_the_trenches
 		completion_reward = {
 
-      remove_ideas = RUS_Trench_warfare_idea
-      remove_ideas = RUS_Mobile_warfare_idea
+			remove_ideas = RUS_Trench_warfare_idea
+			remove_ideas = RUS_Mobile_warfare_idea
 
-      add_tech_bonus = {
-        name = GER_Brandenburger
-        bonus = 1
-        uses = 2
+			add_tech_bonus = {
+				name = GER_Brandenburger
+				bonus = 1
+				uses = 2
 				category = mountaineers_tech
-        category = para_tech
+				category = para_tech
 				category = marine_tech
-      }	
+			}	
 
-      add_ideas = RUS_Brusilov_legacy_idea
+			add_ideas = RUS_Brusilov_legacy_idea
 
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 100
+				has_war = yes
+			}
 		}
 
 	}
@@ -6357,6 +6609,10 @@ focus = {   ###土地分给农民
 
 		}
 
+		ai_will_do = {
+			factor = 0
+		}
+
 	}
 
 	focus = {
@@ -6387,6 +6643,14 @@ focus = {   ###土地分给农民
 			}
 		}
 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6401,10 +6665,6 @@ focus = {   ###土地分给农民
 		relative_position_id = rus_Formally_established_the_Air_Force
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
 
 		available = {
 
@@ -6422,6 +6682,15 @@ focus = {   ###土地分给农民
 		completion_reward = {
 			add_ideas = HUN_indigenous_designs
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6435,10 +6704,6 @@ focus = {   ###土地分给农民
 		relative_position_id = rus_Formally_established_the_Air_Force
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
 
 		available = {
 
@@ -6455,6 +6720,15 @@ focus = {   ###土地分给农民
 		completion_reward = {
 			add_ideas = HUN_license_foreign
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6467,10 +6741,6 @@ focus = {   ###土地分给农民
 		relative_position_id = RUS_indigenous_designs
 
 		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
 
 		available = {
 
@@ -6499,6 +6769,15 @@ focus = {   ###土地分给农民
 				category = cas_bomber			
 			}
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -6511,16 +6790,13 @@ focus = {   ###土地分给农民
 		y = 1
 		relative_position_id = RUS_indigenous_designs
 		cost = 5
-		ai_will_do = {
-			factor = 1
+
+		available = {
+
 		}
+		bypass = {
 
-    available = {
-
-    }
-    bypass = {
-
-    }
+		}
 
 		available_if_capitulated = yes
 
@@ -6529,6 +6805,15 @@ focus = {   ###土地分给农民
 		  add_ideas = RUS_Expand_flight_school_idea
 
 		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+
 	}
 
 	focus = {
@@ -7421,7 +7706,7 @@ focus = {   ###土地分给农民
 	focus = {
 		id = rus_great_patriotic_war
 		icon = GFX_goal_liberty
-		cost = 5.00
+		cost = 3.00
 		x = 5
 		y = 8
 
@@ -7436,6 +7721,18 @@ focus = {   ###土地分给农民
 				is_major = yes
 			}
 			or = {
+				AND = {
+					has_war_with = UKR
+					202 = { #Kiev
+						NOT = { is_owned_by = ROOT }
+					}
+					226 = { #
+						NOT = { is_owned_by = ROOT }
+					}
+					198 = { #
+						NOT = { is_owned_by = ROOT }
+					}
+				}
 				surrender_progress > 0.10
 				casualties > 1000000
 			}
@@ -7452,12 +7749,9 @@ focus = {   ###土地分给农民
 
 			if = {
 				limit = {
-					or = {
-						has_idea = limited_conscription
-						has_idea = extensive_conscription
-					}
+					has_idea = limited_conscription
 				}
-				add_ideas = service_by_requirement
+				add_ideas = extensive_conscription
 			}
 
 			if = {
@@ -7501,12 +7795,15 @@ focus = {   ###土地分给农民
 		cost = 1
 
 		ai_will_do = {
-			factor = 2500
+			factor = 2700
 		}
 
 		available = {
 			has_full_control_of_state = 219 #MOSCOW
-			has_equipment = { train_equipment > 119 } #20 trains per factory
+			OR = {
+				has_equipment = { train_equipment > 119 } #20 trains per factory
+				is_ai = yes
+			}
 			any_enemy_country = {
 				SOV_is_major_not_original_sov = yes
 				capital_scope = {
@@ -7515,7 +7812,19 @@ focus = {   ###土地分给农民
 			}
 		}
 
+		bypass = {
+			NOT = { has_full_control_of_state = 219 }
+		}
+
 		select_effect = {
+			if = {
+				limit = { is_ai = yes }
+				add_equipment_to_stockpile = {
+					type = train_equipment
+					amount = 150
+					producer = RUS
+				}
+			}
 			add_equipment_to_stockpile = {
 				type = train_equipment
 				amount = SOV_industrial_relocation_trains_focus_negative
@@ -7710,7 +8019,7 @@ focus = {   ###土地分给农民
 		relative_position_id = RUS_move_industry_to_the_urals
 		cost = 10
 		ai_will_do = {
-			factor = 2000
+			factor = 2500
 		}
 
 		available = {
@@ -7773,20 +8082,12 @@ focus = {   ###土地分给农民
 			}
 
 			249 = {
-				if = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 2
-						}
-					}
-				    add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					} 
-				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				} 
 			}
 
 			249 = {
@@ -7826,20 +8127,12 @@ focus = {   ###土地分给农民
 			}
 
 			251 = {
-				if = {
-					limit = {
-						free_building_slots = {
-							building = arms_factory
-							size > 2
-						}
-					}
-				    add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = arms_factory
-						level = 3
-						instant_build = yes
-					} 
-				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				} 
 			}
 
 			251 = {
@@ -7934,7 +8227,7 @@ focus = {   ###土地分给农民
 		x = -2
 		y = 1
 		relative_position_id = rus_great_patriotic_war
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 2500
@@ -7997,7 +8290,7 @@ focus = {   ###土地分给农民
 		x = 0
 		y = 1
 		relative_position_id = RUS_the_road_of_life
-		cost = 5
+		cost = 3
 
 		ai_will_do = {
 			factor = 2500
@@ -8188,6 +8481,18 @@ focus = {   ###土地分给农民
 			or = {
 				NOT = { has_idea = SOV_desperate_measures_ns }
 				casualties > 1000000
+				AND = {
+					surrender_progress > 0.10
+					202 = { #Kiev
+						NOT = { is_owned_by = ROOT }
+					}
+					226 = { #
+						NOT = { is_owned_by = ROOT }
+					}
+					198 = { #
+						NOT = { is_owned_by = ROOT }
+					}
+				}
 				surrender_progress > 0.20
 			}
 			or = {
@@ -8235,13 +8540,6 @@ focus = {   ###土地分给农民
 				category = mountaineers_tech
 				category = para_tech
 				category = marine_tech
-			}	
-
-			add_doctrine_cost_reduction = {
-				name = RUS_lessons_of_war
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
 			}
 
 			add_tech_bonus = {
@@ -8256,47 +8554,6 @@ focus = {   ###土地分给农民
 				cost_reduction = 0.5
 				uses = 2
 				category = cat_mass_assault
-			} 
-
-            custom_effect_tooltip = SOV_create_unit_vdv_tt
-            hidden_effect = {
-                division_template = {
-                    name = "Vozdushno-Desantnaya Diviziya"			# Airborne Brigade
-                    division_names_group = RUS_PAR_01
-
-                    regiments = {
-                        paratrooper = { x = 0 y = 0 }
-                        paratrooper = { x = 0 y = 1 }
-                        paratrooper = { x = 0 y = 2 }
-                        
-                        paratrooper = { x = 1 y = 0 }
-                        paratrooper = { x = 1 y = 1 }
-                        paratrooper = { x = 1 y = 2 }
-                        
-                        paratrooper = { x = 2 y = 0 }
-                        paratrooper = { x = 2 y = 1 }
-                        paratrooper = { x = 2 y = 2 }
-                        
-                        paratrooper = { x = 3 y = 0 }
-                    }
-                    support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-						anti_tank = { x = 0 y = 3 }
-						anti_air = { x = 0 y = 4 }
-                    }
-                }
-            }
-
-			hidden_effect = {
-				capital_scope = {
-					create_unit = {
-						division = "division_template = \"Vozdushno-Desantnaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
-					}
-				}
 			}
 
 			if = {
@@ -8316,26 +8573,6 @@ focus = {   ###土地分给农民
 				swap_ideas = {
 					remove_idea = RUS_Tukhachevski_legacy_idea
 					add_idea = RUS_Tukhachevski_legacy_1_idea
-				}
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Tactical_Air_Force_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Tactical_Air_Force_idea
-					add_idea = SOV_Tactical_Air_Force_lesson_idea
-				}
-			}	
-
-			if = {
-				limit = {
-				    has_idea = SOV_Tend_to_Strategic_Air_Force_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Tend_to_Strategic_Air_Force_idea
-					add_idea = SOV_Tend_to_Strategic_Air_Force_lesson_idea
 				}
 			}
 

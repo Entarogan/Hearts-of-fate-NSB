@@ -11,7 +11,11 @@ set_technology = {
 	CAS1 = 1
 }
 
-
+# Oil export foreign exchange
+add_offsite_building = {
+	type = industrial_complex
+	level = 3
+}
 
 set_convoys = 10
 set_politics = {

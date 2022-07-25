@@ -262,7 +262,7 @@ characters={
 			traits = {
 				army_logistics_3
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 3
 			}
@@ -563,7 +563,12 @@ characters={
 			traits = {
 				army_chief_planning_3
 			}
-			cost = 100
+
+			modifier = {
+				max_planning_factor = 0.05
+			}
+
+			cost = 200
 			ai_will_do = {
 				factor = 3
 			}
@@ -597,8 +602,9 @@ characters={
 			
 			available = {
 				has_completed_focus = ROM_expand_Zugzwang
+				NOT = { has_idea = rom_celenike }
 			}
-			traits = { prince_of_terror head_of_intelligence }
+			traits = { head_of_intelligence }
 		}	
 		advisor={
 			slot = high_command
@@ -617,7 +623,7 @@ characters={
 				# has_completed_focus = ROM_expand_Zugzwang
 			}
 			traits = {
-				army_chief_morale_2 prince_of_terror
+				army_chief_morale_2
 			}
 			cost = 100
 			ai_will_do = {
@@ -715,7 +721,7 @@ characters={
 			traits = {
 				air_air_combat_training_3
 			}
-			cost = 100
+			cost = 150
 			ai_will_do = {
 				factor = 3
 			}
@@ -854,6 +860,7 @@ characters={
 					is_country_leader = no
 				}
 				has_completed_focus = ROM_new_leader_group
+				NOT = { has_idea = rom_patchouli_knowledge_theorist }
 			}
 			traits = { unmovable_library }
 		}	
@@ -865,12 +872,16 @@ characters={
 			}
 			available = {
 				has_completed_focus = ROM_new_leader_group
+				NOT = { has_idea = rom_patchouli_knowledge }
 			}
 			research_bonus = {
 				rocketry = 0.15
 				#cat_grand_battle_plan = 0.15
 			}	
 			traits = { grand_battle_plan_expert rocket_scientist }
+
+			cost = 200
+
 		}	
 	}
 	rom_nicolae_radescu = {
@@ -1043,6 +1054,9 @@ characters={
 			}
 
 			traits = { Quirky_nobleman }
+
+			cost = 50
+
 		}
 	}
 	ROM_gheorghe_potopeanu={
@@ -1124,7 +1138,7 @@ characters={
 				
 			traits = { doll_controller }
 			ai_will_do = {
-				factor = 100
+				factor = 200
 			}
 		}
 
@@ -1223,9 +1237,8 @@ characters={
 			}
 			traits = {
 				army_chief_maneuver_3
-				head_of_intelligence
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 1.000
 			}

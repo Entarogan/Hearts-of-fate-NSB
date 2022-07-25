@@ -14,7 +14,7 @@ focus_tree = {
 	focus = {
 		id = HUN_New_legend
 		icon = GFX_HUN_Greater_Hungary
-		cost = 2
+		cost = 1
 		mutually_exclusive = {
 			focus = HUN_Glory_is_not_there
 		}
@@ -214,7 +214,7 @@ focus_tree = {
 		x = 2
 		y = 0
 		relative_position_id = HUN_New_legend
-		cost = 2
+		cost = 1
     ai_will_do = {
       factor = 1
     }

@@ -61,7 +61,10 @@ leader_traits = {
 		#堑壕速度+15%，半个石壕吏，支援率+5%
 		dig_in_speed_factor = 0.15
 		max_dig_in = 5
-		land_reinforce_rate = 0.05
+		land_reinforce_rate = 0.03
+
+		experience_gain_army = 0.12
+		command_cap = 10
 	}
 	rus_siberian_ace = { #
 		random = no
@@ -69,24 +72,33 @@ leader_traits = {
 		#王牌机师产生概率+20%，air_agility_factor +20%
 		air_ace_generation_chance_factor = 0.2
 		air_agility_factor = 0.2
+
+		experience_gain_air = 0.12
+		command_cap = 10
 	}
 	
 	
 	trait_terrorist = { #
 		random = no
-		#夜战攻击+10%，对占领抵抗-15%，breakthrough_factor+15%，
+		#夜战攻击+10%，对占领抵抗-15%，侦查+15%，
 		sprite = 7
 		land_night_attack = 0.10
 		resistance_decay = 0.10
-		breakthrough_factor = 0.10
+		recon_factor = 0.10
+
+		experience_gain_air = 0.09
+		command_cap = 20
 	}
 	RUS_observer_committee = { #
 		random = no
 		#sprite = 13
-		#计划上限+30%，计算速度-20%，政治点数-10%
-		max_planning = 0.3
-		planning_speed = -0.2
+		#计划上限+20%，计算速度-30%，政治点数-10%
+		max_planning = 0.2
+		planning_speed = -0.3
 		political_power_factor = -0.1
+
+		command_cap = 30
+		experience_gain_army = 0.06
 	}
 	RUS_modern_Catherine = {
 		random = no

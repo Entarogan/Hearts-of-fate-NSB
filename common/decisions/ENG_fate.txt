@@ -1,36 +1,198 @@
 
 Please_don_improve_the_relationship_anymore_ai_Strategy = {
 
+	AI_keep_fighting = {
+
+		icon = generic_operation
+
+        available = {
+
+        }
+
+        visible = {
+        	is_ai = yes
+			is_subject = no
+        }
+
+        cost = 0
+        days_remove = 100000
+        fire_only_once = yes
+
+        remove_trigger = {
+        	is_ai = no
+        }
+
+        modifier = {
+			political_advisor_cost_factor = -0.15
+			army_chief_cost_factor = -0.15
+			navy_chief_cost_factor = -0.15
+			air_chief_cost_factor = -0.15
+			high_command_cost_factor = -0.15
+			theorist_cost_factor = -0.15
+
+			economy_cost_factor = -0.15
+			mobilization_laws_cost_factor = -0.15
+			trade_laws_cost_factor = -0.15
+			industrial_concern_cost_factor = -0.15
+			materiel_manufacturer_cost_factor = -0.15
+			tank_manufacturer_cost_factor = -0.15
+			naval_manufacturer_cost_factor = -0.15
+			aircraft_manufacturer_cost_factor = -0.15
+        }
+
+        ai_will_do = {
+			factor = 150
+		}
+
+		complete_effect = {
+        }
+	}
+
+	AI_keeps_reassigning_generals = {
+
+		icon = generic_operation
+
+        available = {
+
+        }
+
+        visible = {
+        	is_ai = yes
+			is_subject = no
+        }
+
+        cost = 0
+        days_remove = 100000
+        fire_only_once = yes
+
+        remove_trigger = {
+        	is_ai = no
+        }
+
+        modifier = {
+        	reassignment_duration_factor = -1
+        }
+
+        ai_will_do = {
+			factor = 150
+		}
+
+		complete_effect = {
+        }
+	}
+
+	AI_keeps_building_railways = {
+
+		icon = generic_operation
+
+        allowed = {
+            always = yes
+        }
+
+        available = {
+
+        }
+
+        visible = {
+        	is_ai = yes
+			is_major = yes
+			is_subject = no
+        }
+
+        cost = 0
+        days_remove = 100000
+        fire_only_once = yes
+
+        remove_trigger = {
+        	is_ai = no
+        }
+
+        modifier = {
+			production_speed_rail_way_factor = 0.5
+			production_speed_naval_base_factor = 0.5
+        }
+
+        ai_will_do = {
+			factor = 150
+		}
+
+		complete_effect = {
+        }
+	}
+
+	AI_is_a_big_idiot_and_wont_adjust_production_capacity = {
+
+		icon = eng_trade_unions_demand
+
+		visible = {
+			is_ai = yes
+			is_major = yes
+			is_subject = no
+		}
+
+		available = {
+
+		}
+
+		cancel_if_not_visible = yes
+
+		modifier = {
+            production_factory_efficiency_gain_factor = 0.25
+		    line_change_production_efficiency_factor = 0.25
+		}
+
+		cost = 0
+		
+		complete_effect = {
+
+
+		}
+
+		cancel_trigger = {
+
+		}
+		
+		days_remove = 1460
+		
+		remove_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+
 	Please_don_improve_the_relationship_anymore = {
 
 		icon = eng_trade_unions_demand
 
 		visible = {
-      is_ai = yes
-      is_major = yes
+			is_ai = yes
+			is_major = yes
 			is_subject = no
 		}
 
-    available = {
+		available = {
 
-    }
+		}
 
 		cancel_if_not_visible = yes
 
-    modifier = {
-		  improve_relations_maintain_cost_factor = -1
-    }
+		modifier = {
+			  improve_relations_maintain_cost_factor = -1
+		}
 
 		cost = 0
 		
-    complete_effect = {
+		complete_effect = {
 
 
-    }
+		}
 
-    cancel_trigger = {
+		cancel_trigger = {
 
-    }
+		}
 		
 		days_remove = 1460
 		
@@ -53,35 +215,85 @@ ENG_Need_more_boats_ai_Strategy = {
 		icon = eng_trade_unions_demand
 
 		visible = {
-      is_ai = yes
+			is_ai = yes
 			is_subject = no
-		  has_war = yes
+			has_war = yes
 			any_enemy_country = {
 				is_ai = no
 				is_major = yes
 			}
 		}
 
-    available = {
+		available = {
 
-    }
+		}
 
 		cancel_if_not_visible = yes
 
-    modifier = {
+		modifier = {
 			industrial_capacity_dockyard = 0.20
-    }
+		}
 
 		cost = 0
 		
-    complete_effect = {
+		complete_effect = {
 
 
-    }
+		}
 
-    cancel_trigger = {
+		cancel_trigger = {
 
-    }
+		}
+		
+		days_remove = 1460
+		
+		remove_effect = {
+
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+
+	ai_want_a_lot_of_new_boats = {
+
+		icon = eng_trade_unions_demand
+
+		visible = {
+			is_ai = yes
+			is_subject = no
+			has_war = yes
+			any_enemy_country = {
+				NOT = { TAG = CHI }
+				NOT = { TAG = BEY }
+				is_major = yes
+			}
+		}
+
+		available = {
+
+		}
+
+		cancel_if_not_visible = yes
+
+		modifier = {
+				ship_hull_carrier_design_cost_factor = -0.6
+				ship_hull_heavy_design_cost_factor = -0.6
+				ship_hull_cruiser_design_cost_factor = -0.6
+				ship_hull_light_design_cost_factor = -0.6
+		}
+
+		cost = 0
+		
+		complete_effect = {
+
+
+		}
+
+		cancel_trigger = {
+
+		}
 		
 		days_remove = 1460
 		
@@ -105,27 +317,28 @@ ENG_biesongle_ai_Strategy = {
 
 		visible = {
 			is_ai = yes
-
+			NOT = {
+				TAG = RUS
+			}
 			OR = {
 				is_in_faction_with = ENG # anyone in allies
 				original_tag = ENG
 			}
-
-			date < 1942.1.1
-			has_army_manpower = { size < 1699999 }
-
+			date < 1942.6.1
+			OR = {
+				GER = { surrender_progress < 0.05 }
+				GER = { casualties < 1500000 }
+			}
+			has_army_manpower = { size < 1500000 }
 			OR = {
 				has_war_with = GER 
 				has_war_with = FRA
 			}
-
-
 			NOT = {
 				GER = { 
 				    has_country_flag = GER_barbarossa_fall_flag
 				}
 			}
-
 			any_other_country = {
 				or = {
 					TAG = SOV
@@ -144,47 +357,37 @@ ENG_biesongle_ai_Strategy = {
 					}
 					AND = {
 						is_ai = no
-						NOT = { has_war_with = GER  }
+						OR = {
+							NOT = { has_war_with = GER }
+							NOT = { surrender_progress > 0 }
+						}
 					}
 				}
 			}
-
-			#NOT = {
-			#  SOV = { 
-			#    has_war_with = GER 
-			#    surrender_progress > 0.15
-			#  }
-			#}
-			#NOT = {
-			#  RUS = { 
-			#    has_war_with = GER 
-			#    surrender_progress > 0.15
-			#  }
-			#}
 		}
 
-    available = {
+		available = {
 
-    }
+		}
 
 		cancel_if_not_visible = yes
 
-    modifier = {
-      invasion_preparation = 5.00
-	  naval_invasion_capacity = -8
-      industrial_capacity_factory = 0.03
-    }
+		modifier = {
+			invasion_preparation = 5.00
+			naval_invasion_capacity = -8
+			industrial_capacity_factory = 0.05
+		}
 
 		cost = 0
 		
-    complete_effect = {
+		complete_effect = {
 
 
-    }
+		}
 
-    cancel_trigger = {
+		cancel_trigger = {
 
-    }
+		}
 		
 		days_remove = 730
 		

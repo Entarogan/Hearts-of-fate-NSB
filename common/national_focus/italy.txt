@@ -756,6 +756,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			unlock_decision_tooltip = ITA_navy_reform
+
 			random_owned_controlled_state = {
 				prioritize = { 115 }
 				limit = {
@@ -1120,8 +1123,6 @@ focus_tree = {
 				uses = 2
 				category = naval_doctrine
 			}
-
-      unlock_decision_tooltip = ITA_navy_reform
 
 		}
 	}
@@ -1637,17 +1638,19 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_equipment_to_stockpile = {
-        type = fighter_equipment_0
-        amount = 400
-        producer = ITA
-      }
+			unlock_decision_tooltip = ITA_air_reform
 
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment_0
-        amount = 200
-        producer = ITA
-      }
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 400
+				producer = ITA
+			}
+
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 200
+				producer = ITA
+			}
 
 		}
 	}
@@ -2042,9 +2045,7 @@ focus_tree = {
 				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
-			} 	
-
-      unlock_decision_tooltip = ITA_air_reform
+			}
 
 		}
 	}
@@ -2185,8 +2186,12 @@ focus_tree = {
 		x = -5
 		y = 0
 			ai_will_do = {
+				factor = 10
+				modifier = {
 					factor = 10
+					has_war = yes
 				}
+			}
 			available_if_capitulated = yes
 			bypass = {
 					550 = {
@@ -2608,26 +2613,75 @@ focus_tree = {
 		x = 2
 		y = 1
 		relative_position_id = ITA_ethiopian_war_logistics
-			ai_will_do = {
-					factor = 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+		available_if_capitulated = yes
+		bypass = {
+			custom_trigger_tooltip = {
+					tooltip = construction_effort_tt
+					NOT = {
+							any_owned_state = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+											building = industrial_complex
+											size > 2
+											include_locked = yes
+										}
+								}
+						}
 				}
-			available_if_capitulated = yes
-			bypass = {
-					custom_trigger_tooltip = {
-							tooltip = construction_effort_tt
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+							free_building_slots = {
+									building = industrial_complex
+									size > 1
+									include_locked = yes
+								}
+							is_on_continent = europe
+						}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					limit = {
+							free_building_slots = {
+									building = industrial_complex
+									size > 1
+									include_locked = yes
+								}
+							is_on_continent = europe
+						}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = industrial_complex
+							level = 2
+							instant_build = yes
+						}
+				}
+			if = {
+					limit = {
 							NOT = {
 									any_owned_state = {
-											is_controlled_by = ROOT
 											free_building_slots = {
 													building = industrial_complex
-													size > 2
+													size > 1
 													include_locked = yes
 												}
+											is_on_continent = europe
 										}
 								}
 						}
-				}
-			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
 									free_building_slots = {
@@ -2635,7 +2689,6 @@ focus_tree = {
 											size > 1
 											include_locked = yes
 										}
-									is_on_continent = europe
 								}
 							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
@@ -2651,7 +2704,6 @@ focus_tree = {
 											size > 1
 											include_locked = yes
 										}
-									is_on_continent = europe
 								}
 							add_extra_state_shared_building_slots = 2
 							add_building_construction = {
@@ -2660,51 +2712,8 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					if = {
-							limit = {
-									NOT = {
-											any_owned_state = {
-													free_building_slots = {
-															building = industrial_complex
-															size > 1
-															include_locked = yes
-														}
-													is_on_continent = europe
-												}
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											free_building_slots = {
-													building = industrial_complex
-													size > 1
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = industrial_complex
-											level = 2
-											instant_build = yes
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											free_building_slots = {
-													building = industrial_complex
-													size > 1
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = industrial_complex
-											level = 2
-											instant_build = yes
-										}
-								}
-						}
 				}
+		}
 
 	}
 	focus = {
@@ -2718,26 +2727,80 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_industrial_effort
-			ai_will_do = {
-					factor = 1
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+		bypass = {
+			custom_trigger_tooltip = {
+					tooltip = production_effort_tt
+					NOT = {
+							any_owned_state = {
+									is_controlled_by = ROOT
+									free_building_slots = {
+											building = arms_factory
+											size > 2
+											include_locked = yes
+										}
+								}
+						}
 				}
-			available_if_capitulated = yes
-			bypass = {
-					custom_trigger_tooltip = {
-							tooltip = production_effort_tt
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+					limit = {
+							arms_factory > 0
+							free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+							is_on_continent = europe
+						}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			random_owned_controlled_state = {
+					limit = {
+							arms_factory > 0
+							free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+							is_on_continent = europe
+						}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+				}
+			if = {
+					limit = {
 							NOT = {
 									any_owned_state = {
-											is_controlled_by = ROOT
+											arms_factory > 0
 											free_building_slots = {
 													building = arms_factory
-													size > 2
+													size > 1
 													include_locked = yes
 												}
+											is_on_continent = europe
 										}
 								}
 						}
-				}
-			completion_reward = {
 					random_owned_controlled_state = {
 							limit = {
 									arms_factory > 0
@@ -2772,100 +2835,52 @@ focus_tree = {
 									instant_build = yes
 								}
 						}
-					if = {
-							limit = {
-									NOT = {
-											any_owned_state = {
-													arms_factory > 0
-													free_building_slots = {
-															building = arms_factory
-															size > 1
-															include_locked = yes
-														}
-													is_on_continent = europe
-												}
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											arms_factory > 0
+				}
+			if = {
+					limit = {
+							NOT = {
+									any_owned_state = {
 											free_building_slots = {
 													building = arms_factory
 													size > 1
 													include_locked = yes
 												}
 											is_on_continent = europe
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = arms_factory
-											level = 2
-											instant_build = yes
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											arms_factory > 0
-											free_building_slots = {
-													building = arms_factory
-													size > 1
-													include_locked = yes
-												}
-											is_on_continent = europe
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = arms_factory
-											level = 2
-											instant_build = yes
 										}
 								}
 						}
-					if = {
+					random_owned_controlled_state = {
 							limit = {
-									NOT = {
-											any_owned_state = {
-													free_building_slots = {
-															building = arms_factory
-															size > 1
-															include_locked = yes
-														}
-													is_on_continent = europe
-												}
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
 										}
 								}
-							random_owned_controlled_state = {
-									limit = {
-											free_building_slots = {
-													building = arms_factory
-													size > 1
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = arms_factory
-											level = 2
-											instant_build = yes
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+						}
+					random_owned_controlled_state = {
+							limit = {
+									free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
 										}
 								}
-							random_owned_controlled_state = {
-									limit = {
-											free_building_slots = {
-													building = arms_factory
-													size > 1
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = arms_factory
-											level = 2
-											instant_build = yes
-										}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
 								}
 						}
 				}
+		}
 
 	}
 
@@ -3103,13 +3118,19 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_industrial_effort_2
-			ai_will_do = {
-					factor = 1
-				}
-			available_if_capitulated = yes
-			completion_reward = {
-					add_research_slot = 1
-				}
+
+		available_if_capitulated = yes
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 
 	}
 	focus = {
@@ -3902,8 +3923,12 @@ focus_tree = {
 		relative_position_id = ita_reform_bureau
 		available = { NOT = { has_government = fascism } }
 		ai_will_do = {
-					factor = 2
-				}
+			factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
+		}
 			
 			completion_reward = {
 				ITA_tyrant_level_down = yes
@@ -6309,6 +6334,10 @@ focus_tree = {
 		relative_position_id = ita_march_into_rome
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			add_ideas = { ita_stop_strike  }
@@ -6326,6 +6355,10 @@ focus_tree = {
 		relative_position_id = ita_stop_strike
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			add_ideas = { ita_guide_capitalists  }
@@ -6362,6 +6395,10 @@ focus_tree = {
 		relative_position_id = ita_guide_the_capital
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
 		}
 		completion_reward = {
 
@@ -6418,6 +6455,10 @@ focus_tree = {
 		relative_position_id = ita_nova_syndicalisme
 		ai_will_do = {
 			factor = 10
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			add_ideas = { ita_corporativism_parliment }
@@ -6728,10 +6769,9 @@ focus_tree = {
 				uses = 1
 				category = dd_tech
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = ita_joint_fleet_mid
-				bonus = 1.0
-				ahead_reduction = 1.0
+				cost_reduction = 0.60
 				uses = 1
 				category = convoy_defense_tree
 			}
@@ -6754,7 +6794,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = ita_mid_naval_doctrine
-				bonus = 0.60
+				cost_reduction = 0.60
 				uses = 2
 				category = naval_doctrine
 			}
@@ -7570,6 +7610,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 2
@@ -8103,6 +8147,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 1
@@ -8133,6 +8181,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = -2
 		y = 2
@@ -8174,6 +8226,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 1
@@ -8200,6 +8256,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = -2
 		y = 1
@@ -8271,6 +8331,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 1
@@ -8313,6 +8377,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 5
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 1
@@ -9015,6 +9083,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		prerequisite = {
 			focus = ita_renaissance
@@ -9036,6 +9108,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 1
@@ -9054,6 +9130,10 @@ focus_tree = {
 		}
         ai_will_do = {
             factor = 2
+			modifier = {
+				factor = 10
+				has_war = yes
+			}
         }
 		x = 0
 		y = 2
@@ -9071,7 +9151,7 @@ focus_tree = {
 			focus = ita_towards_republic
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 1
 		y = 1
@@ -9097,7 +9177,7 @@ focus_tree = {
 			focus = ita_radio_of_liberty
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 0
 		y = 1
@@ -9139,7 +9219,7 @@ focus_tree = {
 			focus = ita_elect_local_government
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 0
 		y = 1
@@ -9209,7 +9289,7 @@ focus_tree = {
 			focus = ita_renaissance
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 1
 		y = 2
@@ -9228,7 +9308,7 @@ focus_tree = {
 			focus = ita_found_rome_parliment
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = -1
 		y = 2
@@ -9246,7 +9326,7 @@ focus_tree = {
 			focus = ita_cultural_relics
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 0
 		y = 2
@@ -9292,7 +9372,7 @@ focus_tree = {
 			focus = ita_social_security
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 0
 		y = 2
@@ -9310,7 +9390,7 @@ focus_tree = {
 			focus = ita_law_on_labor
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = -1
 		y = 1
@@ -9999,7 +10079,7 @@ focus_tree = {
 			focus = ita_cultural_relics
 		}
         ai_will_do = {
-            factor = 2
+            factor = 20
         }
 		x = 1
 		y = 1

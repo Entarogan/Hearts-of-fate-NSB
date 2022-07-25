@@ -431,7 +431,7 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.002
-				MONTHLY_POPULATION = 0.20
+				MONTHLY_POPULATION = 0.40
 				consumer_goods_factor = 0.05
 			}
 		}
@@ -454,7 +454,7 @@ ideas = {
 			
 			modifier = {
 				stability_weekly = 0.001
-				MONTHLY_POPULATION = 0.10
+				MONTHLY_POPULATION = 0.20
 				consumer_goods_factor = 0.03
 			}
 		}
@@ -919,12 +919,8 @@ ideas = {
 			picture = HOL_negotiating_with_extremists
 			
 			modifier = {
-				political_power_gain = -0.1
-
-				production_factory_max_efficiency_factor = 0.1
-				army_morale_factor = 0.1
-
-				stability_factor = 0.15
+                stability_weekly = 0.002
+                war_support_weekly = 0.002
 			}
 		}
 
@@ -982,7 +978,7 @@ ideas = {
 				original_tag = UKR
 			}
 
-			picture = SPR_political_violence
+			picture = UKR_anarchist_guerrilla
 			
 			allowed_civil_war = {
 				always = yes
@@ -1197,7 +1193,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.10
+				MONTHLY_POPULATION = 0.20
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = -0.05
 				industrial_capacity_factory = -0.05
@@ -1242,7 +1238,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.3
 				consumer_goods_factor = -0.1
 				production_speed_buildings_factor = -0.05
 				industrial_capacity_factory = -0.05
@@ -1267,7 +1263,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.3
 				consumer_goods_factor = -0.1
 			}
 
@@ -1309,7 +1305,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.05
+				MONTHLY_POPULATION = 0.1
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
@@ -1515,7 +1511,7 @@ ideas = {
 			}
 			picture = rus_Natsgvardia
 			modifier = {
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.01
 			}
@@ -1541,7 +1537,7 @@ ideas = {
 			modifier = {
 				army_defence_factor = 0.1
 
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.02
 			}
@@ -1570,7 +1566,7 @@ ideas = {
 				offensive_war_stability_factor = 0.20
 				defensive_war_stability_factor = 0.20
 
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.03
 			}
@@ -1598,7 +1594,7 @@ ideas = {
 				offensive_war_stability_factor = 0.20
 				defensive_war_stability_factor = 0.20
 
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.02
 			}
@@ -1628,7 +1624,7 @@ ideas = {
 				offensive_war_stability_factor = 0.20
 				defensive_war_stability_factor = 0.20
 
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.03
 			}
@@ -1659,7 +1655,7 @@ ideas = {
 				defensive_war_stability_factor = 0.20
 
 				conscription_factor = 0.15
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.04
 			}
@@ -1690,7 +1686,7 @@ ideas = {
 				defensive_war_stability_factor = 0.20
 
 				conscription_factor = 0.15
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 			}
 		}
@@ -1720,7 +1716,7 @@ ideas = {
 				defensive_war_stability_factor = 0.20
 
 				conscription_factor = 0.15
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = -0.05
 			}
@@ -1751,7 +1747,7 @@ ideas = {
 				defensive_war_stability_factor = 0.20
 
 				conscription_factor = 0.15
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 
 				consumer_goods_factor = 0.05
 			}
@@ -1782,7 +1778,7 @@ ideas = {
 				defensive_war_stability_factor = 0.20
 
 				conscription_factor = 0.15
-				MONTHLY_POPULATION = 0.15
+				MONTHLY_POPULATION = 0.25
 			}
 		}
 
@@ -1801,10 +1797,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.05
+				MONTHLY_POPULATION = 0.15
 				consumer_goods_factor = -0.03
 				production_speed_buildings_factor = 0.10
-		    industrial_capacity_factory = 0.10
+				industrial_capacity_factory = 0.10
 			}
 
 		}
@@ -2361,13 +2357,12 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = UKR_Cossack_tradition
 			
 			modifier = {
-				war_support_factor = 0.10
-				cavalry_attack_factor = 0.15
-				cavalry_defence_factor = 0.15
-				conscription_factor = 0.15
+				war_support_factor = 0.1
+				cavalry_attack_factor = 0.1
+				conscription_factor = 0.1
 			}
 		}
 
@@ -2387,14 +2382,13 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = UKR_Cossack_tradition
 			
 			modifier = {
 				war_support_factor = 0.10
 				planning_speed = 0.20
 				army_morale_factor = 0.15
 				cavalry_attack_factor = 0.15
-				cavalry_defence_factor = 0.15
 				conscription_factor = 0.15
 			}
 		}
@@ -2415,16 +2409,15 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = UKR_Cossack_tradition
 			
 			modifier = {
 				war_support_factor = 0.10
 				planning_speed = 0.20
 				army_morale_factor = 0.15
-				army_attack_factor = 0.10
-				army_defence_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 				cavalry_attack_factor = 0.15
-				cavalry_defence_factor = 0.15
 				conscription_factor = 0.15
 			}
 		}
@@ -2445,17 +2438,16 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = rus_siberian_cavalry
+			picture = UKR_Cossack_tradition
 			
 			modifier = {
 				war_support_factor = 0.10
 				planning_speed = 0.20
 				army_morale_factor = 0.15
-				army_core_attack_factor = 0.15
-				army_core_attack_factor = 0.15
+				army_core_attack_factor = 0.1
+				army_core_attack_factor = 0.1
 				production_speed_arms_factory_factor = 0.05
 				cavalry_attack_factor = 0.15
-				cavalry_defence_factor = 0.15
 				conscription_factor = 0.20
 			}
 		}
@@ -2503,10 +2495,10 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = por_hydroelectric_power
+			picture = UKR_DniproHES
 			
 			modifier = {
-				production_speed_buildings_factor = 0.10
+				production_speed_buildings_factor = 0.05
 				production_factory_max_efficiency_factor = 0.10
 			}
 		}
@@ -2527,11 +2519,11 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = por_hydroelectric_power
+			picture = UKR_DniproHES_damaged
 			
 			modifier = {
 				production_speed_buildings_factor = -0.05
-				production_factory_max_efficiency_factor = -0.05
+				production_factory_max_efficiency_factor = -0.10
 			}
 		}
 
@@ -2551,11 +2543,11 @@ ideas = {
 
 			removal_cost = -1
 
-			picture = por_hydroelectric_power
+			picture = UKR_DniproHES
 			
 			modifier = {
-				production_speed_buildings_factor = 0.10
-				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				production_factory_max_efficiency_factor = 0.10
 				production_factory_start_efficiency_factor = 0.20
 			}
 		}
@@ -2821,7 +2813,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.10
+				MONTHLY_POPULATION = 0.25
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = 0.05
 				research_speed_factor = -0.015
@@ -2844,7 +2836,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				MONTHLY_POPULATION = 0.10
+				MONTHLY_POPULATION = 0.25
 				consumer_goods_factor = -0.05
 				production_speed_buildings_factor = -0.05
 				production_speed_arms_factory_factor = 0.05

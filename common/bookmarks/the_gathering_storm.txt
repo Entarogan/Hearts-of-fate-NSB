@@ -137,6 +137,21 @@ bookmarks = {
 				SOV_Democratic_alliance
 			}	
 		}
+		"UKR"={
+			minor = yes
+			history = "UKR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				UKR_Legacy_of_the_Great_Famine_idea_1
+				UKR_DniproHES_idea
+				UKR_no_army_idea
+			}
+			focuses = {
+				UKR_Great_stick
+				UKR_Consolidate_the_Dnieper_Gang
+				UKR_carrot
+			}	
+		}
 		"RUS"={
 			minor = yes
 			history = "RUS_GATHERING_STORM_DESC"

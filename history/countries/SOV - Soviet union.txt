@@ -44,6 +44,8 @@ set_technology = {
 	fuel_refining = 1
   armored_car1 = 1
 	basic_train = 1
+
+	masterful_deep_battle = 1
 }
 if = {
 	limit = {

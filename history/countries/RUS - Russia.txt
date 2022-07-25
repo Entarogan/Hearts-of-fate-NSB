@@ -20,7 +20,7 @@ add_ideas = {
 	RUS_democrats_opposition
     RUS_Death_of_red_bandits
 	partial_economic_mobilisation
-	SOV_lacking_industrialization_1
+	SOV_lacking_industrialization_3
 	RUS_entente_observe_committee
 	RUS_political_uncertainty
 	rus_japanese_advisory_group
@@ -59,9 +59,11 @@ set_technology = {
 	basic_train = 1
 	mass_assault = 1
 
-  fleet_in_being
+	fleet_in_being
 
-  armored_car1 = 1
+	armored_car1 = 1
+
+	masterful_deep_battle = 1
 
 }
 if = {

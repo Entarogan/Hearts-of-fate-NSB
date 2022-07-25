@@ -56,6 +56,9 @@ set_technology = {
   construction1 = 1
 
     armored_car1 = 1
+
+	memories_of_verdun = 1
+
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
@@ -262,6 +265,9 @@ recruit_character = FRA_jean_fontenoy
 recruit_character = FRA_marcel_petiot
 recruit_character = FRA_kurt_daluege
 recruit_character = FRA_paul_carbone
+
+recruit_character = FRA_Asparagus
+recruit_character = FRA_Pauline_Bonaparte
 
 ### VARIANTS ###
 # 1936 Start #

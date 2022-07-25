@@ -24,7 +24,7 @@ characters={
 			traits = {
 				Madahan
 			}
-			cost = 150
+			cost = 100
 			ai_will_do = {
 				factor = 3.000
 			}
@@ -58,6 +58,9 @@ characters={
 			traits  = {
 				fanatic_monarchist 
 			}
+
+			cost = 200
+
 			ai_will_do  = {
 				factor  = 4.000
 			}
@@ -99,6 +102,9 @@ characters={
 				traits  = {
 					stalin 
 				}
+
+				cost = 100
+
 				ai_will_do  = {
 					factor  = 3.000
 				}
@@ -137,6 +143,9 @@ characters={
 				traits  = {
 					army_chief_defensive_2 
 				}
+
+				cost = 100
+
 		}
 		portraits={
 			army={
@@ -172,6 +181,9 @@ characters={
 			traits  = {
 				rus_Mass_mobilization 
 			}
+
+			cost = 100
+
 			ai_will_do  = {
 				factor  = 3.000
 			}
@@ -210,6 +222,9 @@ characters={
 				traits  = {
 					army_chief_offensive_3 
 				}
+
+			    cost = 150
+
 				ai_will_do  = {
 					factor  = 3.000
 				}
@@ -256,6 +271,9 @@ characters={
 			traits  = {
 				army_chief_reform_2 
 			}
+
+			cost = 100
+
 		}
 		corps_commander={
 			traits={ infantry_officer armor_officer trickster winter_specialist }
@@ -280,6 +298,9 @@ characters={
 			traits  = {
 				navy_chief_maneuver_2 
 			}
+
+			cost = 100
+
 		}
 		portraits={
 			army={
@@ -314,6 +335,9 @@ characters={
 			traits  = {
 				navy_chief_decisive_battle_2 
 			}
+
+			cost = 100
+
 		}
 		portraits={
 			army={
@@ -355,6 +379,9 @@ characters={
 				traits  = {
 					army_logistics_3 
 				}
+
+			    cost = 150
+
 		}
 		portraits={
 			army={
@@ -391,6 +418,9 @@ characters={
 				traits  = {
 					army_infantry_3 
 				}
+
+			    cost = 150
+
 				ai_will_do  = {
 					factor  = 4.000
 				}
@@ -441,6 +471,9 @@ characters={
 			traits  = {
 				Ural_Silver_Wolf 
 			}
+
+			cost = 100
+
 			ai_will_do  = {
 				factor  = 3.000
 			}
@@ -472,6 +505,9 @@ characters={
 				research_bonus  = {
 					nuclear  = 0.150
 				}
+
+				cost = 100
+
 				ai_will_do  = {
 					factor  = 3.000
 				}
@@ -571,6 +607,9 @@ characters={
 			traits  = {
 				black_baron 
 			}
+
+			cost = 100
+
 			ai_will_do  = {
 				factor  = 3.000
 			}
@@ -1069,6 +1108,9 @@ characters={
 			traits  = {
 				army_armored_2 
 			}
+
+			cost = 100
+
 			ai_will_do  = {
 				factor  = 3.000
 			}
@@ -1133,6 +1175,9 @@ characters={
 			traits  = {
 				Predator 
 			}
+
+			cost = 50
+
 			ai_will_do  = {
 				factor  = 2.000
 			}
@@ -1171,6 +1216,9 @@ characters={
 			traits  = {
 				navy_fleet_logistics_3 
 			}
+
+			cost = 150
+
 		}
 		navy_leader={
 			traits={ superior_tactician }
@@ -1211,6 +1259,9 @@ characters={
 			traits  = {
 				navy_chief_commerce_raiding_2 
 			}
+
+			cost = 100
+
 		}
 
 	}
@@ -1305,6 +1356,9 @@ characters={
 				traits  = {
 					army_commando_3 
 				}
+
+			    cost = 150
+
 				ai_will_do  = {
 					factor  = 2.000
 				}
@@ -1339,6 +1393,9 @@ characters={
 				traits  = {
 					rus_warfare_engineer 
 				}
+
+			    cost = 200
+
 				ai_will_do  = {
 					factor  = 3.000
 				}
@@ -1349,6 +1406,11 @@ characters={
 				small="GFX_idea_RUS_nataliya_andreyevich_rostova"
 				large="gfx/leaders/RUS/Portrait_Nataliya_Andreyevich_Rostova.dds"
 			}
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 	RUS_tatenashi_sarashiki={
@@ -1381,6 +1443,9 @@ characters={
 				traits  = {
 					Head_of_Advisor_to_Japan 
 				}
+
+			    cost = 50
+
 				ai_will_do  = {
 					factor  = 3.000
 				}
@@ -1440,6 +1505,9 @@ characters={
 				traits  = {
 					strategy_innovator 
 				}
+
+			    cost = 200
+
 		}
 		name="RUS_anti_entropy"
 		portraits={
@@ -1556,6 +1624,9 @@ characters={
 				traits  = {
 					air_cooridination 
 				}
+
+				cost = 100
+
 		}
 		name="RUS_nyto_isomer"
 		portraits={
@@ -1603,6 +1674,9 @@ characters={
 			traits  = {
 				prince_of_terror head_of_intelligence 
 			}
+
+			cost = 200
+
 			ai_will_do  = {
 				factor  = 2.000
 			}
@@ -1634,6 +1708,9 @@ characters={
 			traits  = {
 				RUS_observer_committee 
 			}
+
+			cost = 300
+
 		}
 		name="RUS_entente_observe_committee"
 		portraits={
@@ -1700,6 +1777,9 @@ characters={
 				traits  = {
 					air_chief_ground_support_2 
 				}
+
+				cost = 100
+
 		}
 		name="RUS_aleksandr_kazakov"
 		portraits={
@@ -1720,6 +1800,9 @@ characters={
 			traits  = {
 				air_airborne_2 
 			}
+
+			cost = 100
+
 		}
 		name="RUS_evgeniy_miller"
 		portraits={
@@ -1742,6 +1825,9 @@ characters={
 				traits  = {
 					rus_siberian_ace 
 				}
+
+				cost = 200
+
 				ai_will_do  = {
 					factor  = 2.000
 				}
@@ -1845,6 +1931,9 @@ characters={
 			traits  = {
 				safety_contractor 
 			}
+
+			cost = 200
+
 		}
 		name="RUS_g_k"
 		portraits={

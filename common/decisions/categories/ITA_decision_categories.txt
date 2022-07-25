@@ -1,3 +1,14 @@
+ITA_Ethiopia_cate = {
+	icon = border_conflicts
+	allowed = {
+		original_tag = ITA
+	}
+
+	visible = {
+	    NOT = { country_exists = ETH }
+	}
+}
+
 ITA_army_reform = {
 	icon = army_reform
 	allowed = {

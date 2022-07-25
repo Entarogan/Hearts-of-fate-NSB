@@ -24,7 +24,7 @@ leader_traits = {
 			}
 		}
 		ai_will_do = { factor = 1 }
-		command_cap = 20
+		# command_cap = 20
 		# experience_gain_navy = 0.10
 		# experience_gain_air = 0.05
 		# Politcal Advisor should not make experience growth
@@ -51,7 +51,7 @@ leader_traits = {
 		industrial_capacity_factory = 0.05
 		stability_factor = -0.075
 		political_power_factor = 0.1
-		experience_gain_navy = 0.05
+
 		ai_will_do = { factor = 1 }
 	}
 
@@ -75,8 +75,10 @@ leader_traits = {
 		naval_torpedo_hit_chance_factor = 0.25 
 		naval_torpedo_screen_penetration_factor = 0.25
 		experience_gain_navy = 0.12
+		command_cap = 10
+
 		ai_will_do = { factor = 1 }
-		command_cap = 15
+
 
 	}
 
@@ -86,7 +88,10 @@ leader_traits = {
 		sprite = 1
 		air_air_superiority_attack_factor = 0.10
 		air_air_superiority_agility_factor = 0.15
+
 		experience_gain_airs = 0.12
+		command_cap = 10
+
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -94,7 +99,6 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 10
 	}
 	comprehensive_arranger = {
 		#全面的组织者
@@ -102,7 +106,9 @@ leader_traits = {
 		sprite = 1
 		air_escort_efficiency = 0.15 
 		air_fuel_consumption_factor = -0.15  
+
 		experience_gain_air = 0.12
+		command_cap = 10
 
 		ai_will_do = {
 			factor = 4
@@ -111,7 +117,6 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 10
 
 	}
 
@@ -121,7 +126,9 @@ leader_traits = {
 		sprite = 1
 		army_bonus_air_superiority_factor = 0.15 
 		air_accidents_factor = -0.10 
+
 		experience_gain_air = 0.12
+		command_cap = 10
 
 		ai_will_do = {
 			factor = 5
@@ -130,18 +137,21 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 15
 	}
 	infantry_strike = {
 		#步兵突击
 		random = no
 		sprite = 7
-		army_infantry_attack_factor = 0.20
-    special_forces_attack_factor = 0.10
-		land_night_attack = 0.05
-		experience_gain_army = 0.10
+		army_infantry_attack_factor = 0.2
 
-    recon_factor = 0.05
+		special_forces_attack_factor = 0.1
+		motorized_attack_factor = 0.1
+		mechanized_attack_factor = 0.1
+
+		recon_factor = 0.1
+
+		experience_gain_army = 0.09
+		command_cap = 20
 
 		ai_will_do = {
 			factor = 8
@@ -150,7 +160,6 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 15
 	}
 
 	people_war_committee = {
@@ -161,7 +170,9 @@ leader_traits = {
 		org_loss_when_moving = -0.1
 		army_morale_factor = 0.1
 		experience_loss_factor = 0.05
-		experience_gain_army = 0.05
+
+		experience_gain_army = 0.09
+		command_cap = 20
 		
 		ai_will_do = { factor = 1 }
 
@@ -170,19 +181,17 @@ leader_traits = {
 		#“西住流”
 		random = no
 		sprite = 8
-		#装甲+20%攻击，-10%防御，陆军消耗+10%
-		army_armor_attack_factor = 0.2
+		#装甲+25%攻击，-10%防御
+		army_armor_attack_factor = 0.25
 		army_armor_defence_factor = -0.1
-		experience_gain_army = 0.12
-		attrition = 0.1
-		ai_will_do = { factor = 1 }
+
 		equipment_bonus = {
 			medium_tank_equipment = {
 				breakthrough = 0.25
 				hard_attack = 0.2
 				defense = -0.1
 
-        instant = yes
+				instant = yes
 
 			}
 			heavy_tank_equipment = {
@@ -190,12 +199,17 @@ leader_traits = {
 				hard_attack = 0.2
 				defense = -0.1
 
-        instant = yes
+				instant = yes
 
 			}
-			#中型坦克 重型坦克 突破+20%，硬攻+15%，防御-10%
+			#中型坦克 重型坦克 突破+25%，硬攻+20%，防御-10%
 		}
-		command_cap = 20
+
+		command_cap = 10
+		experience_gain_army = 0.12
+
+		ai_will_do = { factor = 1 }
+
 	}
 
 	fight_in_land_and_sea = {
@@ -211,6 +225,8 @@ leader_traits = {
 		amphibious_invasion = 0.05 
 		amphibious_invasion_defence = 0.05
 		naval_coordination = 0.05
+
+		command_cap = 10
 		experience_gain_army = 0.08
 		experience_gain_navy = 0.08
 
@@ -221,7 +237,7 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 15
+
 	}	
 	disobedient_talent = {
 		#不听话的天才
@@ -231,7 +247,10 @@ leader_traits = {
 		air_ace_generation_chance_factor = 0.15
 		command_power_gain_mult = -0.1
 		political_power_factor = -0.05
+
 		experience_gain_air = 0.12
+		command_cap = 10
+
 		#空军经验+15%，王牌机师产生概率+20%， 指挥点数增长乘数-10% 政治点数-5%
 
 		ai_will_do = {
@@ -241,6 +260,5 @@ leader_traits = {
 				has_war = yes
 			}
 		}
-		command_cap = 15
 	}	
 }

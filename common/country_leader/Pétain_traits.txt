@@ -11,8 +11,6 @@ leader_traits = {
 		foreign_subversive_activites = -0.10
 		operative_slot = 1
 
-		command_cap = 20
-		experience_gain_army = 0.12
 		ai_will_do = {
 			factor = 20
 		}
@@ -25,15 +23,11 @@ leader_traits = {
 		planning_speed = 0.10
 		army_armor_attack_factor = 0.15
 	  	army_armor_defence_factor = 0.1
-		mechanized_attack_factor = 0.1
-		mechanized_defence_factor = 0.1
-		motorized_attack_factor = 0.1
-		motorized_defence_factor = 0.1
 		army_armor_speed_factor = 0.05
 		heat_attrition_factor = -0.10
 
 		command_cap = 20
-		experience_gain_army = 0.12
+		experience_gain_army = 0.09
 		
 		ai_will_do = {
 			factor = 20

@@ -185,7 +185,7 @@ characters={
 			traits = {
 				HUN_Attila_T
 			}
-			cost = 100
+			cost = 250
 			ai_will_do = {
 				factor = 50
 			}
@@ -440,7 +440,7 @@ characters={
 			traits = {
 				army_armored_2
 			}
-			cost =  50
+			cost = 100
 			ai_will_do = {
 				factor = 1.000
 			}
@@ -477,8 +477,8 @@ characters={
 			skill=4
 			attack_skill=5
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=556
 		}
 		advisor={
@@ -496,7 +496,7 @@ characters={
 			traits = {
 				HUN_Horthy_Miklos_T
 			}
-			cost = 100
+			cost = 200
 			ai_will_do = {
 				factor = 4
 			}

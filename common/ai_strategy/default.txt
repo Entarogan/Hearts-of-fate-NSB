@@ -184,6 +184,7 @@ default_role_ratios = {
 				original_tag = USA
 				original_tag = JAP
 				original_tag = SOV
+				original_tag = RUS
 				original_tag = ITA
 				original_tag = FRA
 			}
@@ -391,6 +392,7 @@ default_garrison_production = {
 		NOT = { 
 			original_tag = GER 
 			original_tag = SOV
+			original_tag = RUS
 			original_tag = USA
 			original_tag = CHI
 			original_tag = FRA
@@ -632,6 +634,8 @@ default_area_priority = {
 	enable = {
 		NOT = { original_tag = GER } 
 		NOT = { original_tag = FRA }
+		NOT = { original_tag = JAP }
+		NOT = { original_tag = SWE }
 	}
 
 	ai_strategy = {
@@ -746,7 +750,7 @@ default_stockpile_management = {
 
 DEFAULT_template_design = {
 	enable = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = SWE } }	
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = RUS tag = ITA tag = JAP tag = USA tag = SWE } }	
 		date < 1940.1.1				
 	}
 	abort = { 
@@ -798,7 +802,7 @@ DEFAULT_template_design = {
 
 DEFAULT_template_design = {
 	enable = {
-		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = ITA tag = JAP tag = USA tag = SWE } }
+		NOT = { OR = { tag = GER tag = ENG tag = SOV tag = RUS tag = ITA tag = JAP tag = USA tag = SWE } }
 		date > 1940.1.1				
 	}
 

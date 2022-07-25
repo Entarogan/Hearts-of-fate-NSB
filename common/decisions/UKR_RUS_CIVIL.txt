@@ -3,6 +3,7 @@ operations = {
 		allowed = { tag = UKR }
 		visible = {
 			is_debug = yes
+			always = no
 		}
 		cost = 1
 		complete_effect = {
@@ -50,7 +51,7 @@ operations = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 210
+		days_mission_timeout = 250
 		timeout_effect = { #ceasefire
 
 			set_global_flag = UKR_still_on_earth_flag
@@ -170,7 +171,7 @@ operations = {
 			}
 		}
 		is_good = no
-		days_mission_timeout = 210
+		days_mission_timeout = 250
 		timeout_effect = { #ceasefire
 
 			effect_tooltip = { 
@@ -259,4 +260,69 @@ operations = {
 	}
 
 
+	UKR_Reunion_Patroit_COUP = {
+		allowed = { tag = UKR }
+		available = {
+			always = no
+		}
+		activation = {
+			always = no #triggered by event
+		}
+		cancel_trigger = {
+			OR = {
+				has_completed_focus = UKR_Anarchist_remove_Buldrokkastee
+				is_subject = yes
+			}
+			
+		}
+		is_good = no
+		days_mission_timeout = 150
+		timeout_effect = { 
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.45
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			if = {
+				limit = { NOT = { UKR_Buldrokkastee = { is_country_leader = yes } } }
+				add_country_leader_role = {
+					Character = UKR_Buldrokkastee
+					Promote_leader = yes
+					Country_leader = {
+						ideology = stratocracy
+						traits = {
+							
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						OR = {
+							SOV = {
+								is_subject = no
+								exists = yes
+							}
+							RUS = {
+								is_subject = no
+								exists = yes
+							}
+						}
+					}
+					country_event = { id = ukr_reunion.18 days = 12 }
+				}
+			}
+			
+		}
+		complete_effect = { 
+
+		}
+		cancel_effect = { #UKR WIN
+			add_stability = 0.05
+			add_political_power = 150
+		}
+	}
 }

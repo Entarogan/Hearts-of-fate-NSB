@@ -265,7 +265,7 @@ leader_traits = {
 
 		research_speed_factor = 0.03
 
-		MONTHLY_POPULATION = 0.15
+		MONTHLY_POPULATION = 0.35
 		
 	}
 	

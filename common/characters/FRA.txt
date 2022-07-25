@@ -130,7 +130,7 @@ characters={
 
 			army={
 				small="GFX_idea_chief_gilles"
-				large="gfx/leaders/FRA/Portrait_Giless.dds"
+				large="gfx/leaders/FRA/Portrait_Giless.png"
 			}
 		}
 		corps_commander={
@@ -158,6 +158,8 @@ characters={
 			}      
 			
 			traits = { saint_war_order }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 3
@@ -203,7 +205,7 @@ characters={
 				small="GFX_idea_marie_admiral"
 			}
 			civilian={
-				large="gfx//leaders//FRA//Portrait_Marie.dds"
+				large="gfx//leaders//FRA//Portrait_Marie.png"
 			}
 		}
 		field_marshal={
@@ -233,6 +235,9 @@ characters={
 				NOT = { has_government = communism }
 			}
 			traits = { navy_fleet_logistics_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 0
 			}
@@ -274,6 +279,9 @@ characters={
 				NOT = { has_country_flag = jeanne_oppose }
 			}
 			traits = { navy_chief_decisive_battle_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 0
 			}
@@ -408,6 +416,9 @@ characters={
 				NOT = { has_completed_focus = FRA_the_path_of_avenger }
 			}
 			traits = { Hammer }
+
+			cost = 200
+
 			ai_will_do = {
 				factor = 20
 			}
@@ -443,13 +454,24 @@ characters={
 				NOT = { has_country_flag = napoleon_oppose }
 			}
 			traits = { Old_genius }
+
+			cost = 200
+
 			ai_will_do = {
 				factor = 30
 			}
 		}
+	}
+	FRA_Pauline_Bonaparte={
+		name=Pauline
+		portraits={
+			army={
+				small="GFX_idea_FRA_Pauline_Bonaparte"
+			}
+		}
 		advisor={
 			slot = theorist
-			idea_token = Napoleon_2
+			idea_token = Pauline
 			allowed = {
 				original_tag = FRA
 			}
@@ -457,7 +479,7 @@ characters={
 			available = {
 				NOT = { has_country_flag = napoleon_oppose }
 			}
-			cost = 150
+			cost = 200
 			research_bonus = {
 				infantry_weapons = 0.1
 				artillery = 0.15
@@ -508,6 +530,9 @@ characters={
 				NOT = { has_country_flag = martha_oppose }
 			}
 			traits = { navy_amphibious_assault_3 }
+
+			cost = 150
+
 			ai_will_do = {
 				factor = 3
 			}
@@ -542,7 +567,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_chief_beadamante"
-				large="gfx/leaders/FRA/Portrait_Beadamante.dds"
+				large="gfx/leaders/FRA/Portrait_Beadamante.png"
 			}
 		}
 		corps_commander={
@@ -561,6 +586,8 @@ characters={
 				original_tag = FRA
 			}
 			traits = { High_speed_assault }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 3
@@ -597,6 +624,12 @@ characters={
 				NOT = { has_country_flag = astolfo_oppose }
 			}
 			traits = { air_chief_ground_support_3 }
+
+			cost = 200
+
+			modifier = {
+		        army_bonus_air_superiority_factor = 0.05
+			}
 			
 			ai_will_do = {
 				factor = 10
@@ -608,7 +641,7 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_advisor_deon"
-				large="gfx/leaders/FRA/Portrait_Chevalier.dds"
+				large="gfx/leaders/FRA/Portrait_Chevalier.png"
 			}
 		}
 		corps_commander={
@@ -657,6 +690,8 @@ characters={
 			}
 			
 			traits = { Offensive_supremacy }
+
+			cost = 200
 			
 			ai_will_do = {
 				factor = 1
@@ -685,17 +720,6 @@ characters={
 			legacy_id=821
 		}
 		advisor={
-			slot = high_command
-			idea_token = Jeanne_Darc_lily
-			allowed = {
-				original_tag = FRA
-			}
-			traits = { armored_Vanguard }
-			ai_will_do = {
-				factor = 10
-			}
-		}
-		advisor={
 			slot = theorist
 			idea_token = Jeanne_Darc_lily_2
 			allowed = {
@@ -715,6 +739,28 @@ characters={
 			}
 			ai_will_do = {
 				factor = 15
+			}
+		}
+	}
+	FRA_Asparagus={
+		name=FRA_Asparagus
+		portraits={
+			army={
+				small="GFX_idea_FRA_Asparagus"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = FRA_Asparagus
+			allowed = {
+				original_tag = FRA
+			}
+			traits = { armored_Vanguard }
+
+			cost = 100
+
+			ai_will_do = {
+				factor = 10
 			}
 		}
 	}
@@ -997,6 +1043,7 @@ characters={
 			}
 			available = {
 				has_global_flag = FRA_Recruiting_collaborators_flag
+				NOT = { has_idea = FRA_jacques_doriot }
 			}
 			traits = { eager_collaborator }
 			ai_will_do = {
@@ -1016,6 +1063,7 @@ characters={
 				}
 			}
 			available = {
+				NOT = { has_idea = FRA_jacques_doriot_adv }
 			}
 			traits = { army_infantry_2 }
 			ai_will_do = {
@@ -1334,7 +1382,6 @@ characters={
 			}
 			available = {
 				NOT = { has_idea = Napoleon }
-				NOT = { has_idea = Jeanne_Darc_lily }
 			}
 			traits = {
 				army_cavalry_2
