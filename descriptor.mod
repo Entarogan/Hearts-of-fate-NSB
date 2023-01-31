@@ -1,4 +1,4 @@
-name="Hearts of Fate: dev - 2"
+name="Hearts of Fate: dev"
 version="1.8"
 tags={
 	"Alternative History"
@@ -6,4 +6,5 @@ tags={
 	"Map"
 	"National Focuses"
 }
-supported_version="1.11.*"
+supported_version="1.12.*"
+remote_file_id="1533160035"
