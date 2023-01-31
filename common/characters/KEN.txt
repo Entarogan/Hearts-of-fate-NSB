@@ -35,7 +35,7 @@ characters={
 			id=-1
 		}
 		country_leader={
-			ideology=authoritarian_democracy
+			ideology=stratocracy
 			expire="1965.1.1.1"
 			id=-1
 		}

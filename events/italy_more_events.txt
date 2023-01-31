@@ -133,10 +133,13 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_DANNUNZIO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_DANNUNZIO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_DANNUNZIO
+					}
+				}
 			}
 		}
 
@@ -162,10 +165,13 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = SPARTACUS
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_SPARTACUS
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = SPARTACUS
+					}
+				}
 			}
 		}
 
@@ -201,39 +207,51 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = SPARTACUS
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_SPARTACUS
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = SPARTACUS
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = RESTORE_THE_REPUBLIC
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_RESTORE_THE_REPUBLIC
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = RESTORE_THE_REPUBLIC
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_BALBO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_BALBO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_BALBO
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_DANNUNZIO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_DANNUNZIO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_DANNUNZIO
+					}
+				}
 			}
 		}
 
 		hidden_effect = {
-        country_event = {
-	           id = more_italy.8
-	           days = 30
-        }
+			country_event = {
+				id = more_italy.8
+				days = 30
+			}
 		}
 
 	}
@@ -244,31 +262,43 @@ country_event = {
 			base = 20
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = SPARTACUS
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_SPARTACUS
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = SPARTACUS
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = COMPROMISE_WITH_THE_SENATE
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_COMPROMISE_WITH_THE_SENATE
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = COMPROMISE_WITH_THE_SENATE
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_BALBO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_BALBO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_BALBO
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_DANNUNZIO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_DANNUNZIO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_DANNUNZIO
+					}
+				}
 			}
 			modifier = {
 				factor = 0
@@ -277,10 +307,10 @@ country_event = {
 		}
 
 		hidden_effect = {
-        country_event = {
-	           id = more_italy.11
-	           days = 30
-        }
+			country_event = {
+				id = more_italy.11
+				days = 30
+			}
 		}
 
 
@@ -292,17 +322,23 @@ country_event = {
 			base = 40
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = COMPROMISE_WITH_THE_SENATE
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_COMPROMISE_WITH_THE_SENATE
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = COMPROMISE_WITH_THE_SENATE
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = RESTORE_THE_REPUBLIC
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_RESTORE_THE_REPUBLIC
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = RESTORE_THE_REPUBLIC
+					}
+				}
 			}
 			modifier = {
 				factor = 0
@@ -311,10 +347,10 @@ country_event = {
 		}
 
 		hidden_effect = {
-        country_event = {
-	           id = more_italy.15
-	           days = 30
-        }
+			country_event = {
+				id = more_italy.15
+				days = 30
+			}
 		}
 
 	}
@@ -563,18 +599,21 @@ country_event = {
 			base = 75
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_BALBO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_BALBO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_BALBO
+					}
+				}
 			}
 		}
 
 		hidden_effect = {
-        country_event = {
-	           id = more_italy.16
-	           days = 3
-        }
+			country_event = {
+				   id = more_italy.16
+				   days = 3
+			}
 		}
 
 	}
@@ -586,17 +625,23 @@ country_event = {
 			base = 25
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = SPARTACUS
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_SPARTACUS
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = SPARTACUS
+					}
+				}
 			}
 			modifier = {
 				factor = 0
-        has_game_rule = {
-          rule = ITA_ai_behavior
-          option = MARCH_INTO_ROME_DANNUNZIO
-        }
+				OR = {
+					has_country_flag = ITA_AI_RANDOM_MARCH_INTO_ROME_DANNUNZIO
+					has_game_rule = {
+						rule = ITA_ai_behavior
+						option = MARCH_INTO_ROME_DANNUNZIO
+					}
+				}
 			}
 		}
 

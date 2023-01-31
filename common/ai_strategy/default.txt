@@ -462,6 +462,12 @@ default_marines_production = {
 default_mobile_production = {
 	enable = {
 		NOT = { original_tag = GER }
+		NOT = { original_tag = ENG }
+		NOT = { original_tag = FRA }
+		NOT = { original_tag = SOV }
+		NOT = { original_tag = RUS }
+		NOT = { original_tag = ROM }
+		NOT = { original_tag = HUN }
 		ai_wants_divisions > 49
 		has_tech = mechanised_infantry
 	}
@@ -472,13 +478,13 @@ default_mobile_production = {
 	ai_strategy = {
 		type = role_ratio
 		id = mechanized
-		value = 2
+		value = 5
 	}
 
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = -2
+		value = -5
 	}
 
 }
@@ -487,7 +493,14 @@ default_armored_production = {
 	enable = {
 		NOT = { original_tag = GER }
 		not = { original_tag = CZE }
+		NOT = { original_tag = ENG }
+		NOT = { original_tag = FRA }
+		NOT = { original_tag = SOV }
+		NOT = { original_tag = RUS }
+		NOT = { original_tag = ROM }
+		NOT = { original_tag = HUN }
 		ai_wants_divisions > 49
+		has_tech = mechanised_infantry
 	}
 	abort = {
 		ai_wants_divisions < 50
@@ -509,7 +522,14 @@ default_armored_production = {
 highered_armored_production = {
 	enable = {
 		NOT = { original_tag = GER }
+		NOT = { original_tag = ENG }
+		NOT = { original_tag = FRA }
+		NOT = { original_tag = SOV }
+		NOT = { original_tag = RUS }
+		NOT = { original_tag = ROM }
+		NOT = { original_tag = HUN }
 		num_of_military_factories > 99
+		has_tech = mechanised_infantry
 	}
 	abort = {
 		num_of_military_factories < 100
@@ -1079,13 +1099,13 @@ default_spyplanes_production = {
 	ai_strategy = {
 		type = unit_ratio
 		id = scout_plane
-		value = -99
+		value = -199
 	}
 
 	ai_strategy = {
 		type = equipment_production_factor
 		id = scout_plane
-		value = -99
+		value = -199
 	}
 
 	ai_strategy = {
@@ -1106,7 +1126,7 @@ minors_dont_spy = {
 	ai_strategy = {
 		type = unit_ratio
 		id = scout_plane
-		value = -10
+		value = -190
 	}
 }
 

@@ -158,7 +158,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = motorized_bonus
-				bonus = 2.0
+				bonus = 1.0
 				uses = 1
 				category = motorized_equipment
 			}

@@ -12,7 +12,7 @@ local_supplies=0.0
 		victory_points = {
 			3288 1
 		}
-		owner = POL
+		owner = BAT
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -22,11 +22,9 @@ local_supplies=0.0
 			}
 		}
 		add_core_of = LIT
+		add_core_of = BAT
+		add_claim_by = POL
 
-		1939.3.22 = {
-			owner = GER
-			controller = GER
-		}
 	}
 	provinces={
 		3288 	

@@ -27,10 +27,7 @@ state={
 
 		}
 		add_core_of = GER
-		1938.3.12 = {
-			add_claim_by = POL
-
-		}
+		add_claim_by = POL
 
 	}
 

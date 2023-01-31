@@ -25,8 +25,32 @@ country_event = {
 
 		add_ai_strategy = {
 			type = build_army
+			id = garrison
+			value = 12
+		}
+
+		add_ai_strategy = {
+			type = build_army
 			id = infantry
-			value = 300
+			value = 50
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = marines
+			value = 15
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = motorized
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = mountaineers
+			value = 0
 		}
 
 			if = {
@@ -345,14 +369,14 @@ country_event = {
 					motorized = { x = 1 y = 1 }
 					motorized = { x = 1 y = 2 }
 
-					motorized = { x = 2 y = 0 }
+					armored_car = { x = 2 y = 0 }
 					mot_artillery_brigade = { x = 2 y = 1 }
 					mot_anti_tank_brigade = { x = 2 y = 2 }
 					mot_anti_air_brigade = { x = 2 y = 3 }	
 				}
 			 support = {
 					engineer = { x = 0 y = 0 }
-					recon = { x = 0 y = 1 }
+					armored_car_recon = { x = 0 y = 1 }
 					artillery = { x = 0 y = 2 }
 					anti_tank = { x = 0 y = 3 }
 					anti_air = { x = 0 y = 4 }
@@ -382,8 +406,8 @@ country_event = {
 					motorized = { x = 2 y = 3 }
 					mot_artillery_brigade = { x = 2 y = 4 }
 
-					motorized = { x = 3 y = 0 }
-					motorized = { x = 3 y = 1 }
+					armored_car = { x = 3 y = 0 }
+					armored_car = { x = 3 y = 1 }
 					mot_anti_tank_brigade = { x = 3 y = 2 }
 					mot_anti_tank_brigade = { x = 3 y = 3 }
 					mot_anti_air_brigade = { x = 3 y = 4 }
@@ -447,9 +471,9 @@ country_event = {
 
 	trigger = {
 		tag = ENG
-    is_ai = yes
-    is_subject = no
-		date > 1939.6.1
+		is_ai = yes
+		is_subject = no
+		date > 1939.1.1
 	}
 
 	option = { 
@@ -465,14 +489,16 @@ country_event = {
 
 		add_ai_strategy = {
 			type = build_army
-			id = infantry
-			value = 300
+			id = armor
+			value = 50
 		}
+
 		add_ai_strategy = {
 			type = build_army
-			id = armor
-			value = 300
+			id = heavy
+			value = 5
 		}
+
 
 		if = {
 			limit = { NOT = { has_tech = basic_medium_tank_chassis } }
@@ -677,18 +703,87 @@ country_event = {
 		}
 
 			division_template = {
+				name = "mechanized 21" 
+				priority = 1
+			  division_names_group = ENG_MEC_01
+				regiments = {
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }		
+					mechanized = { x = 0 y = 3 }
+
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+
+					armored_car = { x = 2 y = 0 }
+					mot_artillery_brigade = { x = 2 y = 1 }
+					mot_anti_tank_brigade = { x = 2 y = 2 }
+					mot_anti_air_brigade = { x = 2 y = 3 }	
+				}
+			 support = {
+					engineer = { x = 0 y = 0 }
+					armored_car_recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+					anti_tank = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
+				}
+			}
+
+			division_template = {
+				name = "mechanized" 
+				priority = 1
+			  division_names_group = ENG_MEC_01
+				regiments = {
+					mechanized = { x = 0 y = 0 }
+					mechanized = { x = 0 y = 1 }
+					mechanized = { x = 0 y = 2 }
+					mot_artillery_brigade = { x = 0 y = 3 }				
+					mot_artillery_brigade = { x = 0 y = 4 }	
+
+					mechanized = { x = 1 y = 0 }
+					mechanized = { x = 1 y = 1 }
+					mechanized = { x = 1 y = 2 }
+					mot_artillery_brigade = { x = 1 y = 3 }				
+					mot_artillery_brigade = { x = 1 y = 4 }	
+
+					mechanized = { x = 2 y = 0 }
+					mechanized = { x = 2 y = 1 }
+					mechanized = { x = 2 y = 2 }
+					mechanized = { x = 2 y = 3 }
+					mot_artillery_brigade = { x = 2 y = 4 }
+
+					armored_car = { x = 3 y = 0 }
+					armored_car = { x = 3 y = 1 }
+					mot_anti_tank_brigade = { x = 3 y = 2 }
+					mot_anti_tank_brigade = { x = 3 y = 3 }
+					mot_anti_air_brigade = { x = 3 y = 4 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					armored_car_recon = { x = 0 y = 1 }
+					logistics_company = { x = 0 y = 2 }
+					maintenance_company = { x = 0 y = 3 }
+					signal_company = { x = 0 y = 4 }
+				}
+			}
+
+			division_template = {
 				name = "mechanized heavy armor" 
 				priority = 1
-			  division_names_group = ENG_Arm_01
+			  division_names_group = ENG_Arm_03
 				regiments = {
 					heavy_armor = { x = 0 y = 0 }
 					heavy_armor = { x = 0 y = 1 }
 					heavy_armor = { x = 0 y = 2 }		
 					heavy_armor = { x = 0 y = 3 }	
+					heavy_armor = { x = 0 y = 4 }
 
 					heavy_armor = { x = 1 y = 0 }
 					heavy_armor = { x = 1 y = 1 }
 					heavy_armor = { x = 1 y = 2 }
+					heavy_armor = { x = 1 y = 3 }
+					heavy_armor = { x = 1 y = 4 }
 
 					mechanized = { x = 2 y = 0 }
 					mechanized = { x = 2 y = 1 }
@@ -696,15 +791,13 @@ country_event = {
 					mechanized = { x = 2 y = 3 }
 					mechanized = { x = 2 y = 4 }
 
-					medium_sp_artillery_brigade = { x = 3 y = 0 }
-					medium_sp_artillery_brigade = { x = 3 y = 1 }
-					medium_tank_destroyer_brigade = { x = 3 y = 2 }
-					medium_tank_destroyer_brigade = { x = 3 y = 3 }
-					medium_sp_anti_air_brigade = { x = 3 y = 4 }
+					medium_sp_anti_air_brigade = { x = 3 y = 0 }
 
 					mechanized = { x = 4 y = 0 }
 					mechanized = { x = 4 y = 1 }
 					mechanized = { x = 4 y = 2 }
+					mechanized = { x = 4 y = 3 }
+					mechanized = { x = 4 y = 4 }
 				}
 			  support = {
 					engineer = { x = 0 y = 0 }
@@ -717,7 +810,7 @@ country_event = {
 
 			division_template = {
 				name = "mechanized medium armor" 
-				priority = 1
+				priority = 2
 			  division_names_group = ENG_Arm_01
 				regiments = {
 					medium_armor = { x = 0 y = 0 }

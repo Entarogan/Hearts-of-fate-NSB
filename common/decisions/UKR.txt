@@ -16,6 +16,8 @@ foreign_politics = {
 			}
 		}
 
+		fire_only_once = yes
+
 		ai_will_do = {
 			factor = 2000
 		}
@@ -32,7 +34,7 @@ foreign_politics = {
 			NOT = { has_government = communism }
 		}
 
-		cost = 50
+		cost = 25
 
 		complete_effect = {
 			GER = { country_event = { id = ukr_diplo.1 days = 5 } }
@@ -63,6 +65,8 @@ foreign_politics = {
 			}
 		}
 
+		fire_only_once = yes
+
 		target_trigger = {
 			FROM = { tag = ENG }
 		}
@@ -79,7 +83,7 @@ foreign_politics = {
 			has_government = democratic
 		}
 
-		cost = 50
+		cost = 25
 
 		complete_effect = {
 			ENG = { country_event = { id = ukr_diplo.4 days = 5 } }
@@ -112,6 +116,8 @@ foreign_politics = {
 			}
 		}
 
+		fire_only_once = yes
+
 		target_trigger = {
 			FROM = { tag = FRA }
 		}
@@ -128,7 +134,7 @@ foreign_politics = {
 			has_government = democratic
 		}
 
-		cost = 50
+		cost = 25
 
 		complete_effect = {
 			FRA = { country_event = { id = ukr_diplo.4 days = 5 } }
@@ -152,6 +158,8 @@ foreign_politics = {
 			}
 		}
 
+		fire_only_once = yes
+
 		target_trigger = {
 			FROM = { tag = FRA }
 		}
@@ -168,7 +176,7 @@ foreign_politics = {
 			has_government = communism
 		}
 
-		cost = 50
+		cost = 25
 
 		complete_effect = {
 			FRA = { country_event = { id = ukr_diplo.5 days = 5 } }
@@ -200,6 +208,8 @@ foreign_politics = {
 			}
 		}
 
+		fire_only_once = yes
+
 		target_trigger = {
 			OR = {
 				FROM = { tag = POL }
@@ -220,7 +230,7 @@ foreign_politics = {
 			has_government = communism
 		}
 
-		cost = 50
+		cost = 25
 
 		complete_effect = {
 			FROM = { country_event = { id = ukr_diplo.5 days = 5 } }

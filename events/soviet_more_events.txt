@@ -2383,6 +2383,13 @@ country_event = {     #宣战
 		activate_mission = UKRRUS_SOV_special_military_operations
 		UKR = { activate_mission = UKRRUS_UKR_still_on_earth }
 
+		UKR = {
+			add_timed_idea = {
+				idea = SOV_Passion_for_fighting
+				days = 1095
+			}
+		}
+
 		declare_war_on = {
 			target = KAZ
 			type = annex_everything
@@ -2406,7 +2413,7 @@ country_event = {     #宣战
 
 			hidden_effect = {
 				TUR = {
-						add_ai_strategy = {
+					add_ai_strategy = {
 						type = support
 						id = "TMS"
 						value = 200
@@ -2438,16 +2445,6 @@ country_event = {     #宣战
 					declare_war_on = {
 						target = KAZ
 						type = annex_everything
-					}
-					declare_war_on = {
-						target = SOV
-						type = annex_everything
-					}
-				}
-				UKR = {
-					add_timed_idea = {
-						idea = SOV_Passion_for_fighting
-						days = 730
 					}
 				}
 				RUS = {

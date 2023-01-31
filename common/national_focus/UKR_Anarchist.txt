@@ -454,6 +454,18 @@ shared_focus = {
 	y = 1
 	relative_position_id = UKR_Anarchist_defend_NKVD
 	completion_reward = {
+
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 80
+		}
+
 		if = {
 			limit = { 
 				check_variable = { talula_san > 20 }

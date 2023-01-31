@@ -4336,7 +4336,6 @@ focus_tree = {
 	focus = {
 		id = HOL_taking_back_our_old_colonies
 		available = {
-			NOT = { is_in_faction_with = FRA }
 			NOT = { is_in_faction_with = ENG }
 			NOT = { is_in_faction_with = SAF }
 		}
@@ -4375,12 +4374,7 @@ focus_tree = {
 			add_state_claim = 275
 			add_state_claim = 719
 			add_state_claim = 422
-			create_wargoal = {
-			    type = take_state_focus
-			    generator = { 694 310 }
-			    expire = 0
-			    target = FRA
-			}
+
 			create_wargoal = {
 			    type = take_state_focus
 			    generator = { 308 691 687 274 422 }

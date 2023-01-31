@@ -763,14 +763,14 @@ country_event = {
 
 		set_country_flag = GER_pre_attack_FLAG
 
-      every_country = {
-        limit = {
-          is_in_faction_with = ITA
-        }
-        country_event = { id = ror.19  hours = 1 }
-      }
+		every_country = {
+			limit = {
+			    has_war_with = ITA
+			}
+			country_event = { id = ror.19  hours = 1 }
+		}
 
-    ITA = { country_event = { id = ror.17  days = 2 } }
+		ITA = { country_event = { id = ror.17  days = 2 } }
 	}
 
 	option = {
@@ -779,7 +779,7 @@ country_event = {
 			factor = 1
 		}
 
-    ITA = { country_event = { id = ror.18  days = 2 } }
+        ITA = { country_event = { id = ror.18  days = 2 } }
 
 	}  
 
@@ -805,31 +805,41 @@ country_event = {
 			limit = {
 				ITA = { has_war_with = ENG }
 			}
-		GER = { add_to_war = { targeted_alliance = ITA enemy = ENG } }
+		    GER = { add_to_war = { targeted_alliance = ITA enemy = ENG } }
 		}
 
 		if = {
 			limit = {
 				ITA = { has_war_with = FRA }
 			}
-		GER = { add_to_war = { targeted_alliance = ITA enemy = FRA } }
+		    GER = { add_to_war = { targeted_alliance = ITA enemy = FRA } }
 		}
 
 		if = {
 			limit = {
 				ITA = { has_war_with = HUN }
 			}
-		GER = { add_to_war = { targeted_alliance = ITA enemy = HUN } }
+		    GER = { add_to_war = { targeted_alliance = ITA enemy = HUN } }
 		}
 
-      every_country = {
-        limit = {
-          is_in_faction_with = ITA
-        }
-        GER = {
-          add_to_faction = PREV
-        }
-      }
+		if = {
+			limit = {
+				ROOT = { is_faction_leader = yes }
+			}
+			every_other_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					is_subject = no
+				}
+				leave_faction = yes
+				GER = {
+					add_to_faction = PREV
+				}
+			}
+			ROOT = {
+				dismantle_faction = yes
+			}
+		}
 
         GER = { 
           add_to_faction = ROOT 

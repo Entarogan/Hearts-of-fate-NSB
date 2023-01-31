@@ -20,6 +20,8 @@ state={
 		}
 		# add_core_of = POL
 		add_core_of = UKR
+		# set_compliance = 30
+		# set_resistance = 50
 	}
 
 	provinces={

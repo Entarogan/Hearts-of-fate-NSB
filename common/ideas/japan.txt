@@ -610,55 +610,63 @@ ideas = {
     
     JAP_mind_exercise = {
     # 精神训练√
-      allowed = {
-				always = no
-			}
-      
-      picture = JAP_mind_exercise
+		allowed = {
+		    always = no
+		}
 
-			allowed_civil_war = {
-				
-			}
-      
-      available = {
-       has_government = fascism
-       is_subject = no
-      }
-      
-			removal_cost = -1
+		picture = JAP_mind_exercise
+
+		allowed_civil_war = {
+
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		removal_cost = -1
 	
 
-			modifier = {
-				conscription_factor = 0.20
-        training_time_factor = -0.1
-        resistance_damage_to_garrison = -0.15
-        army_morale_factor = 0.10
-			}
+		modifier = {
+			stability_weekly = 0.001
+			war_support_weekly = 0.001
+
+			offensive_war_stability_factor = 0.10
+			defensive_war_stability_factor = 0.10
+
+			conscription_factor = 0.10
+
+			training_time_factor = -0.1
+			army_morale_factor = 0.10
+
+			resistance_damage_to_garrison = -0.10	
+		}
     }
   
     JAP_rebuild_Japan = {
     # 改造日本 √
-      allowed = {
-				always = no
-			}
-      
-      picture = JAP_rebuild_Japan
+		allowed = {
+			always = no
+		}
 
-			allowed_civil_war = {
-				
-			}
-      
-      available = {
-       has_government = fascism
-       is_subject = no
-      }
-      
-			removal_cost = -1
-	
+		picture = JAP_rebuild_Japan
 
-			modifier = {
-				production_speed_buildings_factor = 0.20
-			}
+		allowed_civil_war = {
+			
+		}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+		}
+
+		removal_cost = -1
+
+
+		modifier = {
+			production_speed_buildings_factor = 0.20
+		}
     }
   
     JAP_japanese_national_socialism = {
@@ -1756,7 +1764,9 @@ ideas = {
 			picture = jap_intervene_in_china
 		
 			modifier = {
-				invasion_preparation = 0.25
+				pocket_penalty = -0.2
+				out_of_supply_factor = -0.1
+				no_supply_grace = 24
 				naval_invasion_capacity = 10
 			}
 		
@@ -1825,6 +1835,9 @@ ideas = {
 			picture = jap_ichi_go
 
 			modifier = {
+				pocket_penalty = -0.2
+				out_of_supply_factor = -0.1
+				no_supply_grace = 24
 				invasion_preparation = 5.00
 				naval_invasion_capacity = -8
 			}
@@ -1902,11 +1915,14 @@ ideas = {
 			picture = jap_ichi_go
 
 			modifier = {
-        industrial_capacity_factory = 0.10
-		    production_factory_efficiency_gain_factor = 0.15
-				attrition = -0.15
-				resistance_target = -0.15
-        consumer_goods_factor = 0.10
+				pocket_penalty = -0.5
+				out_of_supply_factor = -0.2
+				no_supply_grace = 48
+
+				industrial_capacity_factory = 0.10
+
+				resistance_target = -0.2
+				consumer_goods_factor = 0.10
 			}
 			
 			targeted_modifier = {

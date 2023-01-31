@@ -349,7 +349,7 @@ mechanized_generic = {
 	upgrade_prio = {
 		factor = 2
 		modifier = {
-			factor = 5
+			factor = 0
 			NOT = { has_tech = mechanised_infantry }
 		}
 		modifier = {

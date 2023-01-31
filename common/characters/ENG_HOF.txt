@@ -153,10 +153,6 @@ characters={
 				small = "GFX_idea_animusphere"
 			}
 		}
-		country_leader={
-			ideology=conservatism
-			expire="1938.1.1.1"
-		}
 		advisor={
 			slot = theorist
 			allowed = {

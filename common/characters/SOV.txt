@@ -9,7 +9,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ media_personality armor_officer war_hero winter_specialist }
+			traits={ media_personality inflexible_strategist infantry_officer armor_officer war_hero winter_specialist }
 			skill=5
 			attack_skill=5
 			defense_skill=2
@@ -52,7 +52,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ brilliant_strategist trait_cautious armor_officer }
+			traits={ brilliant_strategist trait_cautious armor_officer trickster }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -93,7 +93,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ armor_officer politically_connected }
+			traits={ organizer infantry_officer armor_officer politically_connected }
 			skill=4
 			attack_skill=4
 			defense_skill=4
@@ -165,7 +165,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ harsh_leader armor_officer politically_connected }
+			traits={ harsh_leader infantry_officer bearer_of_artillery armor_officer politically_connected }
 			skill=5
 			attack_skill=4
 			defense_skill=5
@@ -279,7 +279,7 @@ characters={
 			}
 		}
 		field_marshal={
-			traits={ brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine }
+			traits={ brilliant_strategist career_officer trait_reckless infantry_officer armor_officer offensive_doctrine }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -522,7 +522,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer winter_specialist }
+			traits={ organizer infantry_officer cavalry_officer winter_specialist }
 			skill=3
 			attack_skill=3
 			defense_skill=3
@@ -685,8 +685,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=2
 			legacy_id=411
 		}
 		advisor = {
@@ -719,7 +719,7 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
+			maneuvering_skill=2
 			coordination_skill=1
 			legacy_id=406
 		}
@@ -754,7 +754,7 @@ characters={
 			skill=2
 			attack_skill=1
 			defense_skill=2
-			maneuvering_skill=1
+			maneuvering_skill=3
 			coordination_skill=1
 			legacy_id=403
 		}
@@ -1017,8 +1017,8 @@ characters={
 			skill=4
 			attack_skill=4
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=4
 			legacy_id=-1
 		}
 		advisor={
@@ -1426,8 +1426,8 @@ characters={
 			skill=4
 			attack_skill=3
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=2
+			coordination_skill=4
 			legacy_id=409
 		}
 		advisor = {
@@ -1465,8 +1465,8 @@ characters={
 			skill=4
 			attack_skill=4
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=4
+			coordination_skill=3
 			legacy_id=-1
 		}
 		advisor={

@@ -1,7 +1,7 @@
 shared_focus = {
 	id = UKR_SDP_win_election
 	icon = GFX_focus_ideology_social_democrat
-	cost = 5.00
+	cost = 3.00
 	x = 10
 	y = 0
 	available = {
@@ -27,7 +27,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Empower_the_Verkhovna_Rada
 	icon = GFX_focus_generic_parliament2
-	cost = 5.00
+	cost = 3.00
 	x = -2
 	y = 1
 
@@ -64,7 +64,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_full_deradicalization
 	icon = GFX_focus_spr_crush_the_revolution
-	cost = 5.00
+	cost = 3.00
 	x = 0
 	y = 1
 
@@ -95,7 +95,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_East_and_West_unite
 	icon = GFX_focus_UKR_stabilise_west
-	cost = 5.00
+	cost = 3.00
 	x = 2
 	y = 1
 
@@ -131,7 +131,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_foundation_of_freedom
 	icon = GFX_focus_hol_the_foundations_of_defense
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -176,7 +176,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_the_price_of_independence
 	icon = GFX_goal_generic_dangerous_deal
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -321,6 +321,17 @@ shared_focus = {
 
 	completion_reward = {
 
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 80
+		}
+
 		add_political_power = 50
 
 		add_stability = 0.05
@@ -349,7 +360,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Indefinite_ruling_cabinet
 	icon = GFX_focus_ideology_paternal_autocrat
-	cost = 5.00
+	cost = 3.00
 	x = 14
 	y = 0
 	available = {
@@ -375,7 +386,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_National_Security_Act
 	icon = GFX_focus_generic_strike_at_democracy2
-	cost = 5.00
+	cost = 3.00
 	x = 0
 	y = 1
 
@@ -406,7 +417,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Military_and_political_integration
 	icon = GFX_goal_generic_political_pressure
-	cost = 5.00
+	cost = 3.00
 	x = 2
 	y = 1
 
@@ -439,7 +450,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Big_two_system
 	icon = GFX_focus_UKR_Big_two_system
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -476,7 +487,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Reinstatement_of_military_power
 	icon = GFX_focus_generic_paramilitary
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -560,6 +571,17 @@ shared_focus = {
 
 	completion_reward = {
 
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 80
+		}
+
 		add_political_power = 100
 
 		add_stability = 0.1
@@ -581,7 +603,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_OUN_win_election
 	icon = GFX_focus_ideology_national_populist
-	cost = 5.00
+	cost = 3.00
 	x = 18
 	y = 0
 	available = {
@@ -610,7 +632,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Bolshevik_purge_plan
 	icon = GFX_focus_broken_red_star
-	cost = 5.00
+	cost = 3.00
 	x = 0
 	y = 1
 
@@ -650,7 +672,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Promote_Ukrainian
 	icon = GFX_focus_generic_military_academy
-	cost = 5.00
+	cost = 3.00
 	x = 2
 	y = 1
 
@@ -685,7 +707,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_condemned_the_Polish_colonists
 	icon = GFX_focus_generic_military_academy
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -744,7 +766,7 @@ shared_focus = {
 shared_focus = {
 	id = UKR_Cleaning_the_Imperial_Russian_Clown
 	icon = GFX_focus_MON_we_dont_need_russia
-	cost = 5.00
+	cost = 3.00
 	x = 1
 	y = 1
 
@@ -823,6 +845,17 @@ shared_focus = {
 	relative_position_id = UKR_condemned_the_Polish_colonists
 
 	completion_reward = {
+
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 80
+		}
 
 		if = {
 			limit = {
@@ -904,6 +937,10 @@ shared_focus = {
 
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -943,6 +980,10 @@ shared_focus = {
 
 	}
 
+	ai_will_do = {
+		factor = 10
+	}
+
 }
 
 shared_focus = {
@@ -976,6 +1017,10 @@ shared_focus = {
 			}
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 10
 	}
 
 }
@@ -1376,7 +1421,7 @@ shared_focus = {
 	mutually_exclusive = { focus = UKR_Europe_granary }
 
 	available = {
-		has_government = democratic
+		NOT = { has_government = neutrality }
 	}
 
 	bypass = {
@@ -2328,7 +2373,11 @@ shared_focus = {
 
 		if = {
 			limit = {
-				NOT = { has_global_flag = UKR_still_on_earth_flag }
+				234 = {
+					NOT = {
+						is_owned_by = ROOT
+					}
+				}
 			}
 			add_state_claim = 137
 			add_state_claim = 218

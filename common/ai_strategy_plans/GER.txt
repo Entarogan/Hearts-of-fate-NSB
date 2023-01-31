@@ -6,63 +6,73 @@ GER_historical_plan = {
 		original_tag = GER
 	}
 	abort = {
-    has_completed_focus = GER_Reiterate_Greater_Germany
-    date > 1938.3.1
-    or = {
-      casualties > 500000
-      AND = {
-        has_war = yes
-        any_enemy_country = {
-          is_major = yes
-        }
-        surrender_progress > 0.20
-      }
-      GER = { has_war_with = SWE }
-      GER = { has_war_with = ITA }
-      AND = {
-        FRA = { has_war_with = ITA }
-        NOT = { FRA = { is_in_faction_with = GER } }  
-      }
-      AND = {
-        FRA = { has_war_with = ENG }
-        NOT = { FRA = { is_in_faction_with = GER } }  
-      }
-      AND = {
-        CZE = { has_war = yes }
-        CZE = { 
-          any_enemy_country = {
-            NOT = { tag = GER }
-            NOT = { is_in_faction_with = GER }
-            is_major = yes
-          }
-        }
-      }
-      AND = {
-        POL = { has_war = yes }
-        POL = { 
-          any_enemy_country = {
-            NOT = { tag = GER }
-            NOT = { is_in_faction_with = GER }
-            is_major = yes
-          }
-        }
-      }
-      AND = {
-        NOT = { ITA = { is_in_faction_with = GER } }  
-        or = {
-          ITA = { has_full_control_of_state = 4 }
-          AUS = { is_subject_of = ITA }
-        }
-        ITA = { has_war = yes }
-        ITA = { 
-          any_enemy_country = {
-            NOT = { tag = GER }
-            NOT = { is_in_faction_with = GER }
-            is_major = yes
-          }
-        }
-      }
-    }
+		has_completed_focus = GER_Reiterate_Greater_Germany
+		date > 1938.3.1
+		or = {
+			casualties > 500000
+			AND = {
+				has_war = yes
+				any_enemy_country = {
+				    is_major = yes
+				}
+				surrender_progress > 0.10
+			}
+			AND = {
+				has_global_flag = UKR_still_on_earth_flag
+				is_in_faction_with = UKR
+				UKR = { is_subject = no }
+				has_war_with = FRA
+				FRA = { is_subject = no }
+				FRA = { surrender_progress < 0.5 }
+				var:219.owner = { has_war_with = GER }
+				var:219.owner = { is_subject = no }
+			}
+			GER = { has_war_with = SWE }
+			GER = { has_war_with = ITA }
+			AND = {
+				FRA = { has_war_with = ITA }
+				NOT = { FRA = { is_in_faction_with = GER } }  
+			}
+			AND = {
+				FRA = { has_war_with = ENG }
+				NOT = { FRA = { is_in_faction_with = GER } }  
+			}
+			AND = {
+				CZE = { has_war = yes }
+				CZE = { 
+					any_enemy_country = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+						is_major = yes
+					}
+				}
+			}
+			AND = {
+				POL = { has_war = yes }
+				POL = { 
+					any_enemy_country = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+						is_major = yes
+					}
+				}
+			}
+			AND = {
+				NOT = { ITA = { is_in_faction_with = GER } }  
+				or = {
+					ITA = { has_full_control_of_state = 4 }
+					AUS = { is_subject_of = ITA }
+				}
+				ITA = { has_war = yes }
+				ITA = { 
+					any_enemy_country = {
+						NOT = { tag = GER }
+						NOT = { is_in_faction_with = GER }
+						is_major = yes
+					}
+				}
+			}
+		}
 	}
 
 	ai_national_focuses = {
@@ -410,25 +420,25 @@ GER_historical_plan_Conquer_Europa = {
 
 	enable = {
 		original_tag = GER
-    any_home_area_neighbor_country = {
-      NOT = { has_war_with = GER }
-    }
-    has_completed_focus = GER_Reiterate_Greater_Germany
-    date > 1939.1.1
-    OR = {
-      AND = {
-        NOT = { FRA = { controls_state = 16 } }
-        NOT = { FRA = { controls_state = 26 } }
-      }
-      GER = { controls_state = 16 }
-      any_other_country = {
-        is_in_faction_with = GER
-        controls_state = 16
-      }
-    }
+		any_home_area_neighbor_country = {
+		    NOT = { has_war_with = GER }
+		}
+		has_completed_focus = GER_Reiterate_Greater_Germany
+		date > 1939.1.1
+		OR = {
+			AND = {
+				NOT = { FRA = { controls_state = 16 } }
+				NOT = { FRA = { controls_state = 26 } }
+			}
+			GER = { controls_state = 16 }
+			any_other_country = {
+				is_in_faction_with = GER
+				controls_state = 16
+			}
+		}
 	}
 	abort = {
-    or = {
+		or = {
 			OR = {
 				date > 1940.10.1
 				AND = {
@@ -444,21 +454,31 @@ GER_historical_plan_Conquer_Europa = {
 					RUS = { owns_state = 217 }
 				}
 			}
-      any_home_area_neighbor_country = {
-        has_war_with = GER
-      }
-      AND = {
-        NOT = { has_idea = tot_economic_mobilisation }
-        has_war = yes
-        any_enemy_country = {
-          is_major = yes
-        }
-        or = {
-          surrender_progress > 0.20
-          casualties > 500000
-        }
-      }
-    }
+			any_home_area_neighbor_country = {
+			    has_war_with = GER
+			}
+			AND = {
+				NOT = { has_idea = tot_economic_mobilisation }
+				has_war = yes
+				any_enemy_country = {
+				    is_major = yes
+				}
+				or = {
+					surrender_progress > 0.10
+					casualties > 500000
+					AND = {
+						has_global_flag = UKR_still_on_earth_flag
+						is_in_faction_with = UKR
+						UKR = { is_subject = no }
+						has_war_with = FRA
+						FRA = { is_subject = no }
+						FRA = { surrender_progress < 0.5 }
+						var:219.owner = { has_war_with = GER }
+						var:219.owner = { is_subject = no }
+					}
+				}
+			}
+		}
 	}
 
 	ai_national_focuses = {
@@ -616,21 +636,31 @@ GER_historical_tot_economic_mobilisation = {
 
 	enable = {
 		original_tag = GER
-    has_war = yes
-    any_enemy_country = {
-      is_major = yes
-    }
-    or = {
-      date > 1942.1.1
-      casualties > 500000
-      surrender_progress > 0.20
-    }
+		has_war = yes
+		any_enemy_country = {
+		    is_major = yes
+		}
+		or = {
+			date > 1942.1.1
+			casualties > 500000
+			surrender_progress > 0.10
+			AND = {
+				has_global_flag = UKR_still_on_earth_flag
+				is_in_faction_with = UKR
+				UKR = { is_subject = no }
+				has_war_with = FRA
+				FRA = { is_subject = no }
+				FRA = { surrender_progress < 0.5 }
+				var:219.owner = { has_war_with = GER }
+				var:219.owner = { is_subject = no }
+			}
+		}
 	}
 	abort = {
-    or = {
-      has_completed_focus = GER_General_Mobilization_Act
-      has_completed_focus = GER_Overall_war
-    }
+		or = {
+		  has_completed_focus = GER_General_Mobilization_Act
+		  has_completed_focus = GER_Overall_war
+		}
 	}
 
 	ai_national_focuses = {

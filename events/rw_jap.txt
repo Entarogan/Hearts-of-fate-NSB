@@ -1536,7 +1536,6 @@ country_event = {##鬼人正邪用炸弹袭击天皇
             desc = "POLITICS_SEIJA_DESC"
             picture = "gfx//leaders//JAP//Portrait_Kijin_Seija.dds"
             expire = "1965.1.1"
-            id = 9800
             ideology = anarchism
             traits = {
             }
@@ -1547,7 +1546,6 @@ country_event = {##鬼人正邪用炸弹袭击天皇
         FRA = {
           create_field_marshal = {
             name = "Kijin Seija"
-            id = 9800
             picture = "Portrait_Kijin_Seija.dds"
             traits = { offensive_doctrine }
             skill = 3
@@ -1600,25 +1598,25 @@ country_event = {##雾社事件
 		name = rw_jap.17.a
 		add_stability = -0.10
 		#引咎辞职，首相变更为圣白莲，贵族院态度加1
-    trigger = {
-      OR = {
-        has_country_leader = { name = "Tohsaka Tokiomi" ruling_only = yes }
-        has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
-      }
-    }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Hijiri Byakuren"
-			desc = "POLITICS_HIJIRI_BYAKUREN_DESC"
-			picture = "Portrait_Hijiri_Byakuren.dds"
-			expire = "1965.1.1"
-			ideology =  socialism
-			traits = {
-			}		
+		trigger = {
+		OR = {
+			has_country_leader = { name = "Tohsaka Tokiomi" ruling_only = yes }
+			has_country_leader = { name = "Aozaki Touko" ruling_only = yes }
 		}
-    JAP_set_party_name_global = yes
+		}
+		retire_country_leader = yes
+		add_country_leader_role = {
+			character = "JAP_hijiri_byakuren"
+			country_leader = {
+				ideology = socialism
+				traits = { }
+				expire = "1965.1.1"
+			}
+			promote_leader = yes 
+		}
+		JAP_set_party_name_global = yes
 		add_to_variable = { ROOT.Kizuko_attitude = 1 } 
-    JAP_skip_next_election = yes
+		JAP_skip_next_election = yes
 	}	
 	option = {##拒绝辞职
 		name = rw_jap.17.b
@@ -1765,23 +1763,9 @@ country_event = {##日本关东军入侵
 
     add_stability = -0.08
     
-    if = {
-      limit = {
-        tag = BEY
-        BEY = { is_ai = yes }
-        CHI = { is_ai = yes }
-        NOT = { has_war_with = CHI }
-      }
-      CHI = {
-        country_event = {
-          id = china.210
-        }
-      }
-    }
-    
 		JAP = {
       if = {
-        limit = { has_country_leader = { name = "Hijiri Byakuren"  ruling_only = yes } }
+        limit = { has_country_leader = { character = JAP_hijiri_byakuren  ruling_only = yes } }
         country_event = {
           id = rw_jap.21
         }
@@ -1909,7 +1893,7 @@ country_event = {##中日战争全面爆发
     }
     OR = {
       has_idea = JAP_kirisame_marisa
-      has_country_leader = { name = "Hijiri Byakuren"  ruling_only = yes }
+      has_country_leader = { character = JAP_hijiri_byakuren ruling_only = yes }
     }
   }
   mean_time_to_happen = { days = 5 }
@@ -1917,29 +1901,31 @@ country_event = {##中日战争全面爆发
 		name = rw_jap.20.a
 		##魔理沙辞职，外交大臣变更为古明地觉，如果首相是圣白莲则圣白莲辞职，首相变更为化野凌里
     # add_political_power = 500
-    if = {
-      limit = {
-        714 = { CONTROLLER = { has_war_with = JAP } }
-        715 = { CONTROLLER = { has_war_with = JAP } }
-        716 = { CONTROLLER = { has_war_with = JAP } }
-      }
-      JAP_man_railway_destroyed = yes
-    }
-    if = {
-      limit = { has_idea = JAP_kirisame_marisa }
-      remove_ideas = { JAP_kirisame_marisa }
-      add_ideas = { JAP_komeiji_satori }
-    }
+		if = {
+			limit = {
+				714 = { CONTROLLER = { has_war_with = JAP } }
+				715 = { CONTROLLER = { has_war_with = JAP } }
+				716 = { CONTROLLER = { has_war_with = JAP } }
+			}
+			JAP_man_railway_destroyed = yes
+		}
+		if = {
+			limit = { has_idea = JAP_kirisame_marisa }
+			remove_ideas = { JAP_kirisame_marisa }
+			add_ideas = { JAP_komeiji_satori }
+		}
 		if = {
 			limit = {
 				has_country_leader = {
-					name = "Hijiri Byakuren"
+					character = JAP_hijiri_byakuren
 					ruling_only = yes
 				}
 
 			}
-
-				retire_country_leader = yes
+			remove_country_leader_role = {
+				character = JAP_hijiri_byakuren
+				ideology = socialism
+			}
 				create_country_leader = {
 					name = "Adashino Hishiri"
 					desc = "POLITICS_ADASHINO_HISHIRI_DESC"
@@ -1947,10 +1933,10 @@ country_event = {##中日战争全面爆发
 					expire = "1965.1.1"
 					ideology = conservatism
 					traits = {
-            Realpolitik
+						Realpolitik
 					}
 				}			
-        JAP_set_party_name_global = yes
+				JAP_set_party_name_global = yes
 			}
 
 	}	
@@ -1958,42 +1944,46 @@ country_event = {##中日战争全面爆发
 		name = rw_jap.20.b
     trigger = {
       has_country_leader = {
-					name = "Hijiri Byakuren"
+					character = JAP_hijiri_byakuren
 					ruling_only = yes
 				}
     }
     # add_political_power = 500
 		##魔理沙辞职，外交大臣变更为古明地觉，如果首相是圣白莲则圣白莲辞职，首相变更为沙条爱歌（进入革新派路线）
 		if = {
-      limit = { has_idea = JAP_kirisame_marisa }
-      remove_ideas = { JAP_kirisame_marisa }
-      add_ideas = { JAP_komeiji_satori }
-    }
+		limit = { has_idea = JAP_kirisame_marisa }
+		remove_ideas = { JAP_kirisame_marisa }
+		add_ideas = { JAP_komeiji_satori }
+		}
 		if = {
 			limit = {
 				has_country_leader = {
-					name = "Hijiri Byakuren"
+					character = JAP_hijiri_byakuren
 					ruling_only = yes
 				}
+			
 
 		}
+		add_popularity = { 
+			ideology = fascism 
+			popularity = 0.30 
+		}
 
-      add_popularity = { 
-        ideology = fascism 
-        popularity = 0.30 
-      }
-
-				retire_country_leader = yes
-        create_country_leader = {
+			remove_country_leader_role = {
+				character = JAP_hijiri_byakuren
+				ideology = socialism
+			}
+        		create_country_leader = {
 					name = "Sajyou Manaka"
 					desc = "POLITICS_ADASHINO_HISHIRI_DESC"
 					picture = "Portrait_Sajyou_Manaka.dds"
 					expire = "1965.1.1"
 					ideology = conservatism
 					traits = {
-            unscrupulous_genius
+            				unscrupulous_genius
 					}
 				}
+		
         JAP_set_party_name_global = yes
         JAP_switch_to_reformist = yes
 
@@ -2015,103 +2005,31 @@ country_event = {##圣白莲方案
 	option = {##圣白莲方案得到了贵族院支持	
 		name = rw_jap.21.a
 		trigger = {
-      always = no
+			always = no
 			check_variable = { ROOT.Kizuko_attitude > 5 }
 		}
-    ai_chance = {
-      base = 50
-    }
-    if = {
-      limit = { FTC = { is_subject_of = PRC } }
-      FTC = {
-        transfer_state = 714
-        transfer_state = 715
-        transfer_state = 716
-        transfer_state = 717
-        transfer_state = 761
-        transfer_state = 328       
-      }
-      PRC = {
-        set_autonomy = {
-            target = FTC
-            autonomy_state = autonomy_free
-        }
-      }
-      FTC = {
-        set_politics = {
-          ruling_party = democratic
-          elections_allowed = no
-        }
-        hidden_effect = {
-          set_popularities = {
-            neutrality = 20
-            democratic = 60
-            fascism = 20
-            communism = 0
-          }
-          create_country_leader = {
-            name = "Huo Qing'e"
-            desc = ""
-            picture = "Portrait_Huo_Qinge.dds"
-            expire = "1965.1.1"
-            ideology = conservatism
-            traits = {
-            
-            }
-          }
-
-        }
-      }
-      PRC = { give_guarantee = FTC }
-      JAP = { give_guarantee = FTC }
-      FTC = { give_military_access = JAP
-              give_military_access = PRC }
-    }
-    if = {
-      limit = { FTC = { exists = no } }
-      FTC = {
-        transfer_state = 714
-        transfer_state = 715
-        transfer_state = 716
-        transfer_state = 717
-        transfer_state = 761
-        transfer_state = 328       
-      }
-      FTC = {
-        set_politics = {
-          ruling_party = democratic
-          elections_allowed = no
-        }
-        hidden_effect = {
-          set_popularities = {
-            neutrality = 20
-            democratic = 60
-            fascism = 20
-            communism = 0
-          }
-          create_country_leader = {
-            name = "Huo Qing'e"
-            desc = ""
-            picture = "Portrait_Huo_Qinge.dds"
-            expire = "1965.1.1"
-            ideology = conservatism
-            traits = {
-            
-            }
-          }
-        }
-      }
-    }
+		ai_chance = {
+			base = 50
+		}
+		BEY = {
+			transfer_state = 714
+			transfer_state = 715
+			transfer_state = 716
+			transfer_state = 717
+			transfer_state = 761
+			transfer_state = 328       
+		}
+    
 	}	
 	option = {##圣白莲方案没有得到支持反而激怒了军队
 		name = rw_jap.21.b
-    ai_chance = {
-      base = 40
-      modifier = {
-        factor = 3
-        check_variable = { ROOT.IJA_influence > 5 }
-      }
-    }
+		ai_chance = {
+		base = 40
+		modifier = {
+			factor = 3
+			check_variable = { ROOT.IJA_influence > 5 }
+		}
+		}
 		country_event = rw_jap.22
 	}
 }
@@ -2127,12 +2045,16 @@ country_event = {##圣白莲被刺杀
 		if = {
 			limit = {
 				has_country_leader = {
-					name = "Hijiri Byakuren"
+					character = JAP_hijiri_byakuren
 					ruling_only = yes
 				}
 				
 			}
-			kill_country_leader = yes
+			remove_country_leader_role = {
+				character = JAP_hijiri_byakuren
+				ideology = socialism
+			}
+			retire_character = JAP_hijiri_byakuren
 				create_country_leader = {
 					name = "Adashino Hishiri"
 					desc = "POLITICS_ADASHINO_HISHIRI_DESC"
@@ -2140,58 +2062,63 @@ country_event = {##圣白莲被刺杀
 					expire = "1965.1.1"
 					ideology = conservatism
 					traits = {
-            Realpolitik
+            			Realpolitik
 					}
 				}			
         	JAP_set_party_name_global = yes
 		}
-		if = {
-      limit = { has_idea = JAP_kirisame_marisa }
-      remove_ideas = { JAP_kirisame_marisa }
-      add_ideas = { JAP_komeiji_satori }
-    }	
+			if = {
+				limit = { has_idea = JAP_kirisame_marisa }
+				remove_ideas = { JAP_kirisame_marisa }
+				add_ideas = { JAP_komeiji_satori }
+			}	
 	}	
 	option = {##圣白莲被刺杀，首相变更为沙条爱歌，转入革新派路线，魔理沙辞职，外交大臣变更为古明地觉
 		name = rw_jap.22.b
 		if = {
-      limit = { has_idea = JAP_kirisame_marisa }
-      remove_ideas = { JAP_kirisame_marisa }
-      add_ideas = { JAP_komeiji_satori }
-    }
-		if = {
-			limit = {
-				has_country_leader = {
-					name = "Hijiri Byakuren"
-					ruling_only = yes
-				}
-			
+			limit = { has_idea = JAP_kirisame_marisa }
+			remove_ideas = { JAP_kirisame_marisa }
+			add_ideas = { JAP_komeiji_satori }
 			}
-
-      add_popularity = { 
-        ideology = fascism 
-        popularity = 0.30 
-      }
-
-			kill_country_leader = yes
-			create_country_leader = {
-						name = "Sajyou Manaka"
-						desc = "POLITICS_ADASHINO_HISHIRI_DESC"
-						picture = "Portrait_Sajyou_Manaka.dds"
-						expire = "1965.1.1"
-						ideology = conservatism
-						traits = {
-				unscrupulous_genius
-						}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = JAP_hijiri_byakuren
+						ruling_only = yes
 					}
-			JAP_set_party_name_global = yes
-			JAP_switch_to_reformist = yes
+				
+				}
 
-      unlock_national_focus = JAP_reformist_win
-			unlock_national_focus = JAP_exclude_koziku_opposition
-			unlock_national_focus = JAP_eradicate_barriers
-			unlock_national_focus = JAP_Honno_ji_incident
+				add_popularity = { 
+					ideology = fascism 
+					popularity = 0.30 
+				}
 
-		}	
+				# kill_country_leader = yes
+				remove_country_leader_role = {
+					character = JAP_hijiri_byakuren
+					ideology = socialism
+				}
+				retire_character = JAP_hijiri_byakuren
+				create_country_leader = {
+							name = "Sajyou Manaka"
+							desc = "POLITICS_ADASHINO_HISHIRI_DESC"
+							picture = "Portrait_Sajyou_Manaka.dds"
+							expire = "1965.1.1"
+							ideology = conservatism
+							traits = {
+								unscrupulous_genius
+							}
+						}
+				JAP_set_party_name_global = yes
+				JAP_switch_to_reformist = yes
+
+				unlock_national_focus = JAP_reformist_win
+				unlock_national_focus = JAP_exclude_koziku_opposition
+				unlock_national_focus = JAP_eradicate_barriers
+				unlock_national_focus = JAP_Honno_ji_incident
+
+			}	
 	}
 }
 country_event = {##统一战线
@@ -2202,15 +2129,18 @@ country_event = {##统一战线
 	#picture = GFX_news_event_002
 	trigger = {
 		tag = CHI
-    is_subject = no
-    OR = {
-      is_in_faction = no
-      is_faction_leader = yes
-    }
-    NOT = { has_war_with = BEY }
+		is_subject = no
+		OR = {
+			is_in_faction = no
+			is_faction_leader = yes
+		}
+		NOT = { has_war_with = BEY }
 		JAP = {
-			has_offensive_war_with = BEY
-      NOT = { is_in_faction_with = CHI }
+			OR = {
+				has_offensive_war_with = BEY
+				has_global_flag = jap_manchuria_occupied
+			}
+			NOT = { is_in_faction_with = CHI }
 		}
 	}
 	option = {  ##统一战线阵营形成，向直系发出邀请generic.5	

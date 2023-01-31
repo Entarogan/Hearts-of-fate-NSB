@@ -185,6 +185,11 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 
 			}
+
+			ai_will_do = {
+				factor = 100
+			}
+
 		}
     
 	}
@@ -213,6 +218,11 @@ ideas = {
 
 			}
 			traits = { comprehensive_polytechnic_institute }
+
+			ai_will_do = {
+				factor = 50
+			}
+
 		}
 
  

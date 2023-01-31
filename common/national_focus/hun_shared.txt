@@ -344,93 +344,92 @@
 		x = -2
 		y = 1
 		relative_position_id = HUN_reaffirm_territorial_claims
-			will_lead_to_war_with = ROM
-			ai_will_do = {
+		will_lead_to_war_with = ROM
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				surrender_progress > 0
+			}
+			modifier = {
 				factor = 10
-				modifier = {
-					factor = 0
-					surrender_progress > 0
+				ROM = { has_war = yes }
+			}
+			modifier = {
+				factor = 50
+				date > 1938.1.1
+			}
+			modifier = {
+				factor = 0
+				is_in_faction = yes
+				is_faction_leader = no
+				date < 1939.1.1
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = HUN_lost_the_war_flag
+				or = {
+					is_in_faction = no
+					is_faction_leader = yes
 				}
-				modifier = {
-					factor = 10
-					ROM = { has_war = yes }
-				}
-				modifier = {
-					factor = 50
-					date > 1938.1.1
-				}
-				modifier = {
-					factor = 0
-					is_in_faction = yes
+				ROM = { has_war = no }
+				ROM = { is_in_faction = yes }
+				ROM = { is_faction_leader = no }
+			}
+		}
+		available = {
+			ROM = {
+				controls_state = 76
+				controls_state = 83
+				controls_state = 84
+			}
+			is_puppet = no
+			NOT = {
+				is_in_faction_with = ROM
+			}
+			NOT = {
+				has_war_with = ROM
+			}
+			NOT = { has_global_flag = HUN_ROM_RAPPROCHEMENT_flag }
+			or = {
+				AND = {
 					is_faction_leader = no
-					date < 1939.1.1
+					is_in_faction = yes
 				}
-				modifier = {
-					factor = 0
-          has_global_flag = HUN_lost_the_war_flag
-					or = {
-						is_in_faction = no
-						is_faction_leader = yes
-					}
-					ROM = { has_war = no }
-					ROM = { is_in_faction = yes }
-					ROM = { is_faction_leader = no }
+				strength_ratio = {
+					tag = ROM
+					ratio > 0.66
 				}
 			}
-			available = {
+			has_army_manpower = {
+				size > 200000
+			}
+		}
+		bypass = {
+			OR = {
+				84 = {
+					OWNER = {
+						has_war_with = ROOT
+					}
+				}
+				NOT = {
 					ROM = {
-							controls_state = 76
-							controls_state = 83
-							controls_state = 84
-						}
-					is_puppet = no
-					NOT = {
-							is_in_faction_with = ROM
-						}
-					NOT = {
-							has_war_with = ROM
-						}
-          NOT = { has_global_flag = HUN_ROM_RAPPROCHEMENT_flag }
-					strength_ratio = {
-							tag = ROM
-							ratio > 0.66
-						}
-					has_army_manpower = {
-							size > 200000
-						}
+						controls_state = 76
+						controls_state = 83
+						controls_state = 84
+					}
 				}
-			bypass = {
-					OR = {
-							84 = {
-									OWNER = {
-											has_war_with = ROOT
-										}
-								}
-							NOT = {
-									ROM = {
-											controls_state = 76
-											controls_state = 83
-											controls_state = 84
-										}
-								}
-						}
-				}
+			}
+		}
 			
 			
 			
-			completion_reward = {
-					custom_effect_tooltip = HUN_demands_tt
-					ROM = {
-							country_event = {
-									id = DOD_hungary.50
-								}
-						}
-					hidden_effect = {
-							news_event = {
-									id = news.300
-								}
-						}
-				}
+		completion_reward = {
+			declare_war_on = {
+				target = ROM
+				type = puppet_wargoal_focus
+			}
+		}
 
 	}
 	shared_focus = {
@@ -3346,40 +3345,40 @@
 			factor = 10
 			modifier = {
 				factor = 200
-        date > 1938.3.1
+				date > 1938.3.1
 			}
 		}
 
 		available = {
-      has_country_flag = HUN_Hungary_stands_tall_in_the_Balkans_flag
+			has_country_flag = HUN_Hungary_stands_tall_in_the_Balkans_flag
 			OR = {
 				has_government = fascism
 				has_government = neutrality
 			}
-      GER = { has_government = fascism } 
-      GER = {
-        OR = {
-          is_in_faction = no
-          is_faction_leader = yes
-        }
-      }
-      is_subject = no
-      is_in_faction = no
-      NOT = { has_war_with = GER }
+			GER = { has_government = fascism } 
+			GER = {
+				OR = {
+					is_in_faction = no
+					is_faction_leader = yes
+				}
+			}
+			is_subject = no
+			is_in_faction = no
+			NOT = { has_war_with = GER }
 			NOT = {
 				any_other_country = {
 					is_in_faction_with = GER
 					has_war_with = HUN	
 				}
 			}
-      NOT = { has_country_flag = HUN_only_good_civilization_in_the_world_flag }
-      NOT = { has_country_flag = HUN_decided_direction_of_diplomacy_flag }
+			NOT = { has_country_flag = HUN_only_good_civilization_in_the_world_flag }
+			NOT = { has_country_flag = HUN_decided_direction_of_diplomacy_flag }
 		}
 
 		bypass = {
-      GER = { is_subject = no }
-      is_in_faction_with = GER
-      is_subject = no
+			GER = { is_subject = no }
+			is_in_faction_with = GER
+			is_subject = no
 		}
 
 		
@@ -3388,7 +3387,12 @@
 
 
 		completion_reward = {
-      if = { limit = { GER = { is_faction_leader = yes } } GER = { country_event = { id = more_hun.81 hours = 3 } } }
+            if = { 
+				limit = { 
+					GER = { is_faction_leader = yes } 
+				} 
+				GER = { country_event = { id = more_hun.81 hours = 3 } } 
+			}
 		}
 	}
 
@@ -3407,23 +3411,23 @@
 			factor = 10
 			modifier = {
 				factor = 20
-        date > 1938.6.1
+				date > 1938.6.1
 			}
 		}
 
 		available = {
-      or = {
-        AND = {
-          GER = { is_subject = no }
-          is_in_faction_with = GER
-          is_subject = no
-        }
-        AND = {
-          ITA = { is_subject = no }
-          is_in_faction_with = ITA
-          is_subject = no
-        }
-      }
+			or = {
+				AND = {
+					GER = { is_subject = no }
+					is_in_faction_with = GER
+					is_subject = no
+				}
+				AND = {
+					ITA = { is_subject = no }
+					is_in_faction_with = ITA
+					is_subject = no
+				}
+			}
 		}
 
 		bypass = {
@@ -3466,80 +3470,75 @@
 			factor = 10
 			modifier = {
 				factor = 20
-        date > 1938.6.1
+				date > 1938.6.1
 			}
 		}
 
 		available = {
-      or = {
-        AND = {
-          GER = { is_subject = no }
-          is_in_faction_with = GER
-          is_subject = no
-        }
-        AND = {
-          ITA = { is_subject = no }
-          is_in_faction_with = ITA
-          is_subject = no
-        }
-      }
+			or = {
+				AND = {
+					GER = { is_subject = no }
+					is_in_faction_with = GER
+					is_subject = no
+				}
+				AND = {
+					ITA = { is_subject = no }
+					is_in_faction_with = ITA
+					is_subject = no
+				}
+			}
 		}
 
 		bypass = {
 
 		}
 
-		
-		
-		
-
-
 		completion_reward = {
 
 			add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
 			add_doctrine_cost_reduction = {
-        name = HUN_Joint_air_command
-        cost_reduction = 0.75
-        uses = 1
-        category = air_doctrine
-      }
+				name = HUN_Joint_air_command
+				cost_reduction = 0.75
+				uses = 1
+				category = air_doctrine
+			}
 
-      if = { 
-        limit = { 
-          GER = { is_faction_leader = yes } 
-          is_in_faction_with = GER
-        }        
-        GER = { 
+			if = { 
+				limit = { 
+					GER = { is_faction_leader = yes } 
+					is_in_faction_with = GER
+				}        
+				GER = { 
 
-			    add_to_tech_sharing_group = HUN_Joint_air_command_exchange
+					add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
-          add_doctrine_cost_reduction = {
-			name = air_doc_bonus
-			cost_reduction = 0.5
-			uses = 1
-			category = air_doctrine
-		} 	
-        }
-      }
+					add_doctrine_cost_reduction = {
+					name = air_doc_bonus
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+					} 	
+				}
+			}
 
-      if = { 
-        limit = { 
-          ITA = { is_faction_leader = yes } 
-          is_in_faction_with = ITA
-        }        
-        ITA = { 
+			if = { 
+				limit = { 
+					ITA = { is_faction_leader = yes } 
+					is_in_faction_with = ITA
+				}        
+				ITA = { 
 
-			    add_to_tech_sharing_group = HUN_Joint_air_command_exchange
+					add_to_tech_sharing_group = HUN_Joint_air_command_exchange
 
-          add_doctrine_cost_reduction = {
-			name = air_doc_bonus
-			cost_reduction = 0.33
-			uses = 1
-			category = air_doctrine
-		} 	
-        }
-      }
+					add_doctrine_cost_reduction = {
+						name = air_doc_bonus
+						cost_reduction = 0.33
+						uses = 1
+						category = air_doctrine
+					} 	
+				}
+			}
 
 		}
 	}
@@ -3558,14 +3557,14 @@
 			factor = 10
 			modifier = {
 				factor = 20
-        date > 1938.6.1
+				date > 1938.6.1
 			}
 		}
 
 		available = {
-      GER = { is_subject = no }
-      is_in_faction_with = GER
-      is_subject = no
+			GER = { is_subject = no }
+			is_in_faction_with = GER
+			is_subject = no
 		}
 
 		bypass = {
@@ -3578,8 +3577,8 @@
 
 
 		completion_reward = {
-      add_ideas = { HUN_GER_Resource_Import_and_Export_Agreement_idea }
-      GER = { add_ideas = { GER_HUN_Resource_Import_and_Export_Agreement_idea } }
+			add_ideas = { HUN_GER_Resource_Import_and_Export_Agreement_idea }
+			GER = { add_ideas = { GER_HUN_Resource_Import_and_Export_Agreement_idea } }
 		}
 	}
 
@@ -3597,14 +3596,14 @@
 			factor = 10
 			modifier = {
 				factor = 20
-        date > 1938.6.1
+				date > 1938.6.1
 			}
 		}
 
 		available = {
-      GER = { is_subject = no }
-      is_in_faction_with = GER
-      is_subject = no
+			GER = { is_subject = no }
+			is_in_faction_with = GER
+			is_subject = no
 		}
 
 		bypass = {
@@ -3625,18 +3624,16 @@
 				uses = 1
 				category = land_doctrine
 			} 
-      GER = { 
+			GER = { 
+				add_to_tech_sharing_group = HUN_Joint_Army_Staff_exchange
 
-			  add_to_tech_sharing_group = HUN_Joint_Army_Staff_exchange
-
-			add_doctrine_cost_reduction = {
-				name = HUN_Joint_Army_Staff
-				cost_reduction = 0.33
-				uses = 1
-				category = land_doctrine
-			} 
-		
-      }
+				add_doctrine_cost_reduction = {
+					name = HUN_Joint_Army_Staff
+					cost_reduction = 0.33
+					uses = 1
+					category = land_doctrine
+				} 
+			}
 		}
 	}
 
@@ -3663,13 +3660,13 @@
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+					has_war_with = ROOT
+				}
 			}
 			modifier = {
 				factor = 20
-        date > 1938.3.1
+				date > 1938.3.1
 			}
 			modifier = {
 				factor = 0
@@ -3680,19 +3677,19 @@
 		}
 
 		available = {
-      is_subject = no
-      or = {
-        threat > 0.40
-        date > 1938.7.15
-      }
-      has_country_flag = HUN_GREATER_flag
+			is_subject = no
+			or = {
+				threat > 0.40
+				date > 1938.7.15
+			}
+			has_country_flag = HUN_GREATER_flag
 		}
 
 		bypass = {
 			or = {
-        ROM = { exists = no	}
-        has_war_with = ROM
-        ROM = { is_in_faction_with = ROOT }
+				ROM = { exists = no	}
+				has_war_with = ROM
+				ROM = { is_in_faction_with = ROOT }
 			}
 		}
 
@@ -3702,10 +3699,10 @@
 
 
 		completion_reward = {
-      declare_war_on = {
-        target = ROM
-        type = puppet_wargoal_focus
-      }
+			declare_war_on = {
+				target = ROM
+				type = puppet_wargoal_focus
+			}
 		}
 	}
 
@@ -4480,17 +4477,18 @@
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 			modifier = {
 				factor = 0
+				GER = { has_war = no } 
 				has_army_manpower = { size < 449999 } 
 			}
 			modifier = {
 				factor = 70
-        date > 1938.1.1
+				date > 1938.1.1
 			}
 		}
 
@@ -6586,40 +6584,38 @@
 		y = 1
 		relative_position_id = HUN_National_Military_Control
 		cost = 5
-    ai_will_do = {
-      factor = 200
-    }
-    available = {
-		HUN_elizabeth_bathory = {
-			is_country_leader = yes
+		ai_will_do = {
+		    factor = 200
 		}
-    }
+		available = {
+			HUN_elizabeth_bathory = {
+				is_country_leader = yes
+			}
+		}
 
 
-    bypass = {
-    }
+		bypass = {
+		}
     
     
     
-    completion_reward = {
-      add_ideas = HUN_I_am_a_soldier_in_Batori_idea
+		completion_reward = {
+			add_ideas = HUN_I_am_a_soldier_in_Batori_idea
 
-      create_field_marshal = {
-        name = "Elizabeth Báthory"
-        picture = "Portrait_Elizabathe_Bathory_General.dds"
-        traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist }
-        skill = 4
-        attack_skill = 4
-        defense_skill = 3
-        planning_skill = 3
-        logistics_skill = 3
-        id = 888
-      }
+			add_field_marshal_role = {
+				character = HUN_elizabeth_bathory
+				traits = { politically_connected war_hero media_personality harsh_leader trickster urban_assault_specialist }
+				skill = 4
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 3
+			}
 
 			set_country_flag = HUN_Unlock_military_policy_flag
 			custom_effect_tooltip = HUN_Unlock_military_policy_tooltip
 
-    }
+		}
 
 	}
   

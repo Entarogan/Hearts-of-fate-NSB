@@ -334,7 +334,7 @@ units = {
 		division_template = "Tenkovski Bataljon"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "YUG" creator = "SOV" version_name = "BT-5" } }
 
 	}
 	
@@ -344,7 +344,7 @@ units = {
 		division_template = "Tenkovski Bataljon"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "YUG" creator = "SOV" version_name = "BT-5" } }
 
 	}
 	
@@ -354,30 +354,11 @@ units = {
 		division_template = "Tenkovski Bataljon"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		force_equipment_variants = { gw_tank_equipment = { owner = "YUG" creator = "SOV" } }
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "YUG" creator = "SOV" version_name = "BT-5" } }
 
 	}
 	
 }  # Neboja if we get font support
-
-
-###### Vazduhoplovstvo Vojske Kraljevine Jugoslavije (VVKJ) ######
-air_wings = {
-	105 = {
-		# 1. Vazduhoplovna Brigada -- Dewotine D.1/9/27 fighters
-		fighter_equipment_0 = {
-			owner = "YUG" 
-			amount = 80
-		}
-	}
-	104 = {
-		# 2. Vazduhoplovna Brigada  -- Hawker Fury and Ikarus IK-2 fighters
-		fighter_equipment_0 = {
-			owner = "YUG" 
-			amount = 80
-		}
-	}
-}
 
 ### Starting Production ###
 instant_effect = {

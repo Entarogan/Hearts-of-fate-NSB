@@ -1829,8 +1829,9 @@ ideas = {
 			}
 
 			modifier = {
-				political_power_cost = 0.25
 	            mobilization_speed = 0.50	
+
+				stability_factor = 0.2
 				war_support_weekly = 0.002
 
              	army_org_factor = 0.05
@@ -1862,6 +1863,8 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.25
 	            mobilization_speed = 0.50	
+
+				stability_factor = 0.2
 				war_support_weekly = 0.002
 
              	army_org_factor = 0.05
@@ -1898,6 +1901,7 @@ ideas = {
 				political_power_cost = 0.5
 	            mobilization_speed = 0.1	
 
+				stability_factor = 0.4
 				stability_weekly = -0.002
 				war_support_weekly = -0.002
 

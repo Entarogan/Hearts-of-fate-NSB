@@ -1061,9 +1061,10 @@ ONLY_SOV_wants_civ = {
 	}
 
 	enable = {
-		date > 1938.8.1
+		date > 1938.3.1
 		date < 1939.11.1
 		has_war = no
+		NOT = { has_global_flag = UKR_still_on_earth_flag }
 	}
 
 	abort = {
@@ -1080,6 +1081,38 @@ ONLY_SOV_wants_civ = {
 	}
 }
 
+ONLY_SOV_wants_civ_BUT = {
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	enable = {
+		date > 1938.3.1
+		date < 1939.11.1
+		has_war = no
+		has_global_flag = UKR_still_on_earth_flag
+	}
+
+	abort = {
+		OR = {
+		  date > 1939.11.1
+		  has_war = yes
+		}
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+
+	ai_strategy = {
+		type = building_target
+		id = arms_factory
+		value = 89
+	}
+}
+
 ONLY_RUS_wants_arms = {
 
 	allowed = {
@@ -1087,7 +1120,7 @@ ONLY_RUS_wants_arms = {
 	}
 
 	enable = {
-		date > 1938.8.1
+		date > 1938.3.1
 		date < 1939.11.1
 		has_war = no
 	}
@@ -1152,7 +1185,17 @@ SOV_RUS_Kaiserreich_Trench_warfare = {
 	enable = {
 		date > 1939.1.1
 		surrender_progress > 0.1
-		has_army_manpower = { size < 2499999 }
+		surrender_progress < 0.3
+		or = {
+			AND = {
+				has_army_manpower = { size < 1999999 }
+				NOT = { has_global_flag = UKR_still_on_earth_flag }
+			}
+			AND = {
+				has_army_manpower = { size < 1399999 }
+				has_global_flag = UKR_still_on_earth_flag
+			}
+		}
 		has_war = yes
 		any_enemy_country = {
 			is_major = yes
@@ -1344,7 +1387,6 @@ SOV_Give_priority_to_Ukraine = {
 			archetype = infantry_equipment
 			ratio > 0.7
 		}
-		has_country_flag = SOV_Give_priority_to_Ukraine_flag
 	}
 	
 	abort = {
@@ -1366,7 +1408,7 @@ SOV_Give_priority_to_Ukraine = {
 
 		priority = 100
 		ordertype = front
-		execution_type = balanced
+		execution_type = rush_weak
 		execute_order = yes
 	}
 
@@ -1452,15 +1494,16 @@ UKR_wants_arms = {
 	}
 
 	enable = {
-		date < 1937.1.2
-		has_war = no
+		date < 1939.1.2
 	}
 
 	abort = { 
-		OR = {
-		  date > 1937.1.1 
-		  has_war = yes
-		}
+		date > 1939.1.1 
+	}
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
 	}
 
 	ai_strategy = {
@@ -1485,4 +1528,144 @@ UKR_some_safer_places_to_build = {
         target =  203
         value = 300
     }
+}
+
+SOV_RUS_AI_landed_in_Germany_to_die = {
+
+	allowed = {
+		OR = {
+			tag = SOV
+			tag = RUS
+		}
+	}
+
+	enable = {
+		has_war_with = GER
+	}
+	
+	abort = {
+		OR = {
+			date > 1944.1.1
+			GER = { has_capitulated = yes }
+			GER = { is_subject_of = SOV }
+			GER = { is_subject_of = RUS }
+			NOT = { country_exists = GER }		
+		}
+	}
+
+	ai_strategy = {
+		type = invade
+		id = "GER"			
+		value = -500
+	}
+
+}
+
+SOV_RUS_want_a_plane = {
+
+	allowed = {
+		OR = {
+			tag = SOV
+			tag = RUS
+		}
+	}
+
+	enable = {
+		date > 1938.5.1
+	}
+	
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_production_min_factories 
+		id = fighter 
+		value = 14
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories 
+		id = cas 
+		value = 3
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories 
+		id = tactical_bomber 
+		value = 3 
+	}
+
+}
+
+SOV_RUS_want_a_improved_tank = {
+
+	allowed = {
+		OR = {
+			tag = SOV
+			tag = RUS
+		}
+	}
+
+	enable = {
+		has_tech = mechanised_infantry
+		has_tech = improved_medium_tank_chassis
+	}
+	
+	abort = {
+		has_tech = main_battle_tank_chassis
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = -10
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = motorized            
+		value = 5
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = mechanized            
+		value = 4
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor       
+		id = mechanized_equipment                
+		value = 30 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_chassis 
+		value = 50 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = heavy_tank_chassis 
+		value = 10
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_artillery_chassis
+		value = 25 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_destroyer_chassis
+		value = 25
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = anti_air_equipment 
+		value = 15
+	}
+
 }

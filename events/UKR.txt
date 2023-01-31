@@ -165,9 +165,10 @@ country_event = { # OUN停止活动
 
 	option = {
 		name = more_ukraine_dlc.7.a
-
-
-
+		swap_ideas = {
+			remove_idea = UKR_OUN_subversion_POL
+			add_idea = UKR_OUN_subversion_POL_2
+		}
 	}
 }
 
@@ -446,17 +447,6 @@ country_event = { # 爆破第聂伯水电站
 
 	option = {
 		name = more_ukraine_dlc.14.a
-
-		random_army_leader = {
-			limit = { 
-				has_id = 5008
-				NOT = { has_trait = trait_engineer }
-			}
-			
-			add_planning = 1
-			
-			add_unit_leader_trait = trait_engineer
-		}
 
 	}
 }
@@ -1114,9 +1104,49 @@ country_event = {
 		        NOT = { has_country_flag = UKR_Bandera_has_succeeded_flag }
 				FRA = { has_government = communism }
 			}
+			FRA = { set_country_flag = KR_Makhno_flag }
 			UKR_Nestor_Makhno = {
 				set_nationality = FRA
 				unit_leader_event = ukr.21
+			}
+			UKR_Talulah_Artorius = {
+				set_nationality = FRA
+			}
+			UKR_Alina = {
+				set_nationality = FRA
+			}
+			UKR_Yelena_Frostnova = {
+				set_nationality = FRA
+			}
+			UKR_Buldrokkastee = {
+				set_nationality = FRA
+			}
+			UKR_W = {
+				set_nationality = FRA
+			}
+			UKR_Mephisto = {
+				set_nationality = FRA
+			}
+			UKR_Crownsplayer = {
+				set_nationality = FRA
+			}
+			UKR_Faust = {
+				set_nationality = FRA
+			}
+			UKR_Ines = {
+				set_nationality = FRA
+			}
+			UKR_Stepan_Petrichenko = {
+				set_nationality = FRA
+			}
+			UKR_Aron_Baron = {
+				set_nationality = FRA
+			}
+			UKR_Viktor_Belash = {
+				set_nationality = FRA
+			}
+			UKR_Vsevolod_Eikhenbaum = {
+				set_nationality = FRA
 			}
 		}
 		else_if = {
@@ -1140,47 +1170,6 @@ country_event = {
 
 		hidden_effect = {
 		    load_focus_tree = ukr_focus_nationalism
-
-			if = {
-				limit = {
-					has_completed_focus = UKR_Call_for_civilians
-				}
-				delete_unit_template_and_units = { 
-					division_template = "militia" 
-					disband = yes
-				}
-			}
-
-			if = {
-				limit = {
-					has_completed_focus = UKR_Extremist_forces
-				}
-				delete_unit_template_and_units = { 
-					division_template = "OUN" 
-					disband = yes
-				}
-			}
-
-			if = {
-				limit = {
-					has_completed_focus = UKR_Assemble_the_Cossacks
-				}
-				delete_unit_template_and_units = { 
-					division_template = "Cossacks" 
-					disband = yes
-				}
-			}
-
-			if = {
-				limit = {
-					has_completed_focus = UKR_Unite_anarchists
-				}
-				delete_unit_template_and_units = { 
-					division_template = "anarchists" 
-					disband = yes
-				}
-			}
-
 		}
 
 
@@ -1604,7 +1593,7 @@ country_event = {   #### Assassinate Konovalets
 		name = ukr.11.a
 
 		ai_chance = {
-			base = 40
+			base = 60
 		}
 		remove_country_leader_role = {
 			character = UKR_yevhen_konovalets
@@ -1631,7 +1620,7 @@ country_event = {   #### Assassinate Konovalets
 		name = ukr.11.b
 
 		ai_chance = {
-			base = 60
+			base = 40
 		}
 
 		add_political_power = -100
@@ -1797,6 +1786,10 @@ country_event = {  ### Bandera's coup against Petlura
 	option = {  ### Bandera has succeeded
 		name = ukr.17.a
 
+		ai_chance = {
+			factor = 25
+		}
+
 		set_country_flag = UKR_Bandera_has_succeeded_flag
 
 		add_stability = -0.15
@@ -1857,9 +1850,49 @@ country_event = {  ### Bandera's coup against Petlura
 			limit = {
 				FRA = { has_government = communism }
 			}
+			FRA = { set_country_flag = KR_Makhno_flag }
 			UKR_Nestor_Makhno = {
 				set_nationality = FRA
 				unit_leader_event = ukr.21
+			}
+			UKR_Talulah_Artorius = {
+				set_nationality = FRA
+			}
+			UKR_Alina = {
+				set_nationality = FRA
+			}
+			UKR_Yelena_Frostnova = {
+				set_nationality = FRA
+			}
+			UKR_Buldrokkastee = {
+				set_nationality = FRA
+			}
+			UKR_W = {
+				set_nationality = FRA
+			}
+			UKR_Mephisto = {
+				set_nationality = FRA
+			}
+			UKR_Crownsplayer = {
+				set_nationality = FRA
+			}
+			UKR_Faust = {
+				set_nationality = FRA
+			}
+			UKR_Ines = {
+				set_nationality = FRA
+			}
+			UKR_Stepan_Petrichenko = {
+				set_nationality = FRA
+			}
+			UKR_Aron_Baron = {
+				set_nationality = FRA
+			}
+			UKR_Viktor_Belash = {
+				set_nationality = FRA
+			}
+			UKR_Vsevolod_Eikhenbaum = {
+				set_nationality = FRA
 			}
 		}
 		else_if = {
@@ -1880,6 +1913,10 @@ country_event = {  ### Bandera's coup against Petlura
 
 	option = {  ### Bandera's coup failed,  Melnyk turned to cooperation
 		name = ukr.17.b
+
+		ai_chance = {
+			factor = 25
+		}
 
 		set_country_flag = UKR_Bandera_has_failed_flag
 
@@ -2005,7 +2042,7 @@ country_event = {  ### Bandera's coup against Petlura
 		}
 
 		ai_chance = {
-			factor = 0
+			factor = 25
 		}
 
 		set_party_name = {
@@ -2075,17 +2112,28 @@ country_event = {  ### Anarchist Triumph
 			set_country_flag = UKR_Anarchist_flag
 		}
 		
-		retire_character = UKR_pavlo_skoropadskyi
-		retire_character = UKR_hnat_stefaniv
-		retire_character = UKR_andriy_melnyk
-		retire_character = UKR_mykhailo_omelianovychpavlenko
-		retire_character = UKR_mykola_kapustyanskyi
-		retire_character = UKR_Oleksandr_Udovychenko
-		retire_character = UKR_Volodymyr_Salsky
-		retire_character = UKR_Vsevolod_Petriv
-		retire_character = UKR_Ivan_Turkenich
-		retire_character = UKR_Vasyl_Vyshyvany
-		retire_character = UKR_Roman_Shukhevych
+		delete_unit_template_and_units = { 
+			division_template = "Nightingale Battalion Group" 
+			disband = no
+		}
+		delete_unit_template_and_units = { 
+			division_template = "Otaman Strelkovaya" 
+			disband = no
+		}
+		delete_unit_template_and_units = { 
+			division_template = "Sich Riflemen" 
+			disband = no
+		}
+
+		if = {
+			limit = {
+				has_country_flag = UKR_Extremist_forces_flag
+			}
+			set_division_template_lock = {
+				division_template = "OUN"
+				is_locked = no
+			}
+		}
 
 		hidden_effect = {
 			country_event = { id = ukr_reunion.1 days = 10 }
@@ -2143,6 +2191,11 @@ unit_leader_event = {
 	}
 	option = {
 		name = ukr.21.b
+
+		trigger = {
+            always = no
+		}
+
 		ai_chance = { base = 0 }
 		add_political_power = 15
 		hidden_effect = {
@@ -2332,6 +2385,8 @@ country_event = {  ### UKR: FROM agreed
 		name = ukr_diplo.2.a
 		FROM = { add_to_faction = ROOT }
 		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
 			news_event = { id = news.289 hours = 12 }
 		}
 	}
@@ -2525,6 +2580,8 @@ country_event = {  ### ROM: UKR wants us to join faction
 		name = ukr_diplo.9.a
 		POL = { add_to_faction = ROOT }
 		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
 			news_event = { id = news.289 hours = 12 }
 		}
 	}

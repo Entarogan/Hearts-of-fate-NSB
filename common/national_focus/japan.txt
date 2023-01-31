@@ -421,7 +421,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -431,26 +431,78 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_political_power = 100
-			}
 			add_political_power = 50
 			JAP_navy_focus_activated = yes
-			add_tech_bonus = {
-				name = JAP_supremacy_of_the_battlefleet
-				bonus = 1
-				uses = 1
-				category = bb_tech
+
+			navy_experience = 50
+
+			if = {
+				limit = {
+					NOT = { has_tech = improved_ship_hull_carrier }
+				}
+				hidden_effect = {
+					set_technology = {
+						improved_ship_hull_carrier = 1
+					}
+				}
 			}
+
+			create_equipment_variant = {
+				name = "Shokaku Class"
+				type = ship_hull_carrier_2
+				name_group = JAP_CV_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_engine_slot = carrier_ship_engine_3
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_2
+					creator = "JAP"
+					version_name = "Shokaku Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_2
+					creator = "JAP"
+					version_name = "Shokaku Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_1
+					creator = "JAP"
+					version_name = "Kongo Class"
+				}
+				requested_factories = 1
+				progress = 0.90
+				amount = 1
+			}
+
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = {
@@ -466,14 +518,14 @@ focus_tree = {
 					}
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY1
@@ -493,14 +545,14 @@ focus_tree = {
 					}
 					free_building_slots = {
 						building = dockyard
-						size > 1
+						size > 2
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 				set_state_flag = JAP_new_naval_estimates_DY2
@@ -570,7 +622,7 @@ focus_tree = {
 			}
 			modifier = {
 				has_war = yes
-				factor = 4
+				factor = 10
 			}
 		}
 	}
@@ -715,12 +767,12 @@ focus_tree = {
 				id = "SIA"
 				value = 100
 			}
-			ai_strategy = {
+			add_ai_strategy = {
 				type = befriend
 				id = "SIA"			
 				value = 200
 			}
-			ai_strategy = {
+			add_ai_strategy = {
 				type = alliance
 				id = "SIA"			
 				value = 200
@@ -987,12 +1039,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 30
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_political_power = 100
-			}
+
 			add_political_power = 50
 			JAP_army_focus_activated = yes
 			if = {
@@ -1345,7 +1392,6 @@ focus_tree = {
 					}
 				}
 				any_owned_state = {
-				    is_on_continent = home_islands
 					is_core_of = ROOT
 					CONTROLLER = {
 						has_war_with = ROOT
@@ -1425,12 +1471,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = JAP_supremacy_of_technology
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_political_power = 100
-			}
+
 			add_political_power = 50
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = Konoji
@@ -4255,13 +4296,6 @@ focus_tree = {
 
 			if = {
 				limit = {
-					is_ai = yes
-				}
-				add_political_power = 150
-			}
-
-			if = {
-				limit = {
 					country_exists = CHI
 					NOT = {
 						CHI = {
@@ -6850,12 +6884,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_political_power = 100
-			}
+
 			add_political_power = 50
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = fujyou
@@ -6884,6 +6913,14 @@ focus_tree = {
 			modifier = {
 				has_war = no
 				factor = 2
+			}
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
 			}
 		}
 	}
@@ -7274,7 +7311,7 @@ focus_tree = {
 			}
 			modifier = {
 				has_war = yes
-				factor = 4
+				factor = 10
 			}
 		}
 	}
@@ -7616,12 +7653,7 @@ focus_tree = {
 		bypass = {
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					is_ai = yes
-				}
-				add_political_power = 100
-			}
+
 			add_political_power = 50
 			add_ideas = JAP_army_training
 			JAP_army_focus_activated = yes
@@ -7881,9 +7913,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_new_naval_estimates
 		}
-		mutually_exclusive = {
-			focus = JAP_supremacy_of_the_battlefleet
-		}
+
 		x = 64
 		y = 3
 		available = {
@@ -7899,9 +7929,44 @@ focus_tree = {
 				uses = 4
 				category = cat_base_strike
 			}
+
+			random_navy_leader = {
+				limit = { 
+					has_id = 8108 
+				}
+				
+				add_skill_level = 1
+				
+				add_attack = 1
+				add_defense = 1
+				add_maneuvering = 1
+				add_coordination = 1
+			}
+
+			random_navy_leader = {
+				limit = { 
+					has_id = 8110
+				}
+				
+				add_skill_level = 1
+				
+				add_attack = 1
+				add_defense = 1
+				add_maneuvering = 1
+				add_coordination = 1
+			}
+
 		}
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
 			modifier = {
 				OR = {
 					has_completed_focus = JAP_smaller_japan
@@ -7982,6 +8047,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
+			modifier = {
 				factor = 3
 				has_war = yes
 			}
@@ -8026,9 +8099,7 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_new_naval_estimates
 		}
-		mutually_exclusive = {
-			focus = JAP_carrier_warfare_experiments
-		}
+
 		x = -1
 		y = 1
 		relative_position_id = JAP_new_naval_estimates
@@ -8044,6 +8115,49 @@ focus_tree = {
 				uses = 2
 				category = bb_tech
 			}
+
+			create_equipment_variant = {
+				name = "Amagi Class"
+				type = ship_hull_heavy_2
+				name_group = JAP_BC_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+					fixed_ship_radar_slot = empty
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bc_2
+					front_1_custom_slot = ship_heavy_battery_2
+					mid_1_custom_slot = ship_anti_air_2
+					mid_2_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_airplane_launcher_1
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "JAP"
+					version_name = "Amagi Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_2
+					creator = "JAP"
+					version_name = "Amagi Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = kure_naval_arsenal
 		}
@@ -8094,15 +8208,72 @@ focus_tree = {
 				coordination_skill = 4
 			}
 
-			add_tech_bonus = {
-				name = JAP_the_ultimate_battleship
-				bonus = 3
-				uses = 1
-				category = shbb_tech
+			if = {
+				limit = {
+					NOT = { has_tech = ship_hull_super_heavy }
+				}
+				hidden_effect = {
+					set_technology = {
+						ship_hull_super_heavy = 1
+					}
+				}
 			}
+
+			create_equipment_variant = { 
+				name = "Yamato Class"
+				type = ship_hull_super_heavy_1
+				name_group = JAP_BB_HISTORICAL
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_super_heavy_battery_1
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_engine_slot = heavy_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_shbb
+					front_1_custom_slot = ship_super_heavy_battery_1
+					front_2_custom_slot = ship_secondaries_2
+					mid_1_custom_slot = ship_secondaries_2
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_anti_air_2
+					rear_2_custom_slot = ship_airplane_launcher_1
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "JAP"
+					version_name = "Yamato Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_super_heavy_1
+					creator = "JAP"
+					version_name = "Yamato Class"
+				}
+				requested_factories = 1
+				progress = 0.25
+				amount = 1
+			}
+
 		}
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
 			modifier = {
 				factor = 3
 				has_war = yes
@@ -9768,7 +9939,7 @@ focus_tree = {
 			focus = JAP_seek_sympathizer
 		}
 		ai_will_do = {
-			factor = 10000
+			factor = 2000
 		}
 		x = -1
 		y = 1
@@ -10568,7 +10739,15 @@ focus_tree = {
 			JAP_navy_focus_activated = yes
 		}
 		ai_will_do = {
-			factor = 15
+			factor = 20
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
 		}
 	}
 	focus = {
@@ -10607,6 +10786,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 30
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
 		}
 	}
 	focus = {
@@ -10833,6 +11020,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
+			modifier = {
 				factor = 3
 				has_war = yes
 			}
@@ -10856,6 +11051,14 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 5
+			modifier = {
+				OR = {
+					has_war_with = ENG
+					has_war_with = FRA
+					has_war_with = USA
+				}
+				factor = 20
+			}
 			modifier = {
 				factor = 3
 				has_war = yes

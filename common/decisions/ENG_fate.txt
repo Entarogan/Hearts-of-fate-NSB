@@ -23,15 +23,15 @@ Please_don_improve_the_relationship_anymore_ai_Strategy = {
         }
 
         modifier = {
-			political_advisor_cost_factor = -0.15
+			political_advisor_cost_factor = -0.30
 			army_chief_cost_factor = -0.15
 			navy_chief_cost_factor = -0.15
 			air_chief_cost_factor = -0.15
 			high_command_cost_factor = -0.15
-			theorist_cost_factor = -0.15
+			theorist_cost_factor = -0.50
 
-			economy_cost_factor = -0.15
-			mobilization_laws_cost_factor = -0.15
+			economy_cost_factor = -0.30
+			mobilization_laws_cost_factor = -0.30
 			trade_laws_cost_factor = -0.15
 			industrial_concern_cost_factor = -0.15
 			materiel_manufacturer_cost_factor = -0.15
@@ -108,8 +108,8 @@ Please_don_improve_the_relationship_anymore_ai_Strategy = {
         }
 
         modifier = {
-			production_speed_rail_way_factor = 0.5
-			production_speed_naval_base_factor = 0.5
+			production_speed_rail_way_factor = 5
+			production_speed_naval_base_factor = 5
         }
 
         ai_will_do = {
@@ -137,8 +137,9 @@ Please_don_improve_the_relationship_anymore_ai_Strategy = {
 		cancel_if_not_visible = yes
 
 		modifier = {
-            production_factory_efficiency_gain_factor = 0.25
-		    line_change_production_efficiency_factor = 0.25
+			production_factory_start_efficiency_factor = 0.30
+            production_factory_efficiency_gain_factor = 0.30
+		    line_change_production_efficiency_factor = 0.50
 		}
 
 		cost = 0
@@ -311,6 +312,75 @@ ENG_Need_more_boats_ai_Strategy = {
 
 ENG_biesongle_ai_Strategy = {
 
+	ENG_Dont_Land_Without_America_ai = {
+
+		icon = eng_trade_unions_demand
+
+		visible = {
+			is_ai = yes
+			NOT = {
+				TAG = USA
+			}
+			NOT = {
+				is_in_faction_with = USA
+			}
+			OR = {
+				is_in_faction_with = ENG # anyone in allies
+				original_tag = ENG
+			}
+
+			if = {
+				limit = { NOT = { has_dlc = "Man the Guns"} }
+				has_tech = landing_craft
+			}
+			else = {
+				has_tech = mtg_landing_craft
+			}
+
+			date < 1943.1.1
+			has_war_with = GER
+			OR = {
+				GER = { is_ai = no }
+				GER = { surrender_progress < 0.05 }
+				GER = { has_army_manpower = { size > 1499999 } }
+			}
+		}
+
+		available = {
+
+		}
+
+		cancel_if_not_visible = yes
+
+		modifier = {
+			invasion_preparation = 5.00
+			naval_invasion_capacity = -38
+			industrial_capacity_factory = 0.05
+		}
+
+		cost = 0
+		
+		complete_effect = {
+
+
+		}
+
+		cancel_trigger = {
+
+		}
+		
+		days_remove = 730
+		
+		remove_effect = {
+
+
+		}
+
+		ai_will_do = {
+			factor = 2000
+		}
+	}
+
 	ENG_Does_not_land_unless_we_have_the_troops_or_russia_is_dying_ai = {
 
 		icon = eng_trade_unions_demand
@@ -351,7 +421,7 @@ ENG_biesongle_ai_Strategy = {
 						is_ai = yes
 						OR = {
 							NOT = { has_war_with = GER  }
-							NOT = { surrender_progress > 0.2 }
+							NOT = { surrender_progress > 0.3 }
                             NOT = { casualties > 2000000 }
 						}
 					}
@@ -416,13 +486,21 @@ ENG_European_Equilibrium_Strategy = {
 			ENG = { is_subject = no }
 			ENG = { NOT = { is_in_faction_with = FRA } }
 			ENG = { NOT = { has_war_with = FRA } }
+
 			OR = {
-				ENG = { NOT = { is_in_faction_with = GER } }
-				FRA = { NOT = { has_war_with = GER } }
+				GER = { is_subject = yes }
+				OR = {
+					ENG = { NOT = { is_in_faction_with = GER } }
+					FRA = { NOT = { has_war_with = GER } }
+				}
 			}
+
 			OR = {
-				ENG = { NOT = { is_in_faction_with = ITA } }
-				FRA = { NOT = { has_war_with = ITA } }
+				ITA = { is_subject = yes }
+				OR = {
+					ENG = { NOT = { is_in_faction_with = ITA } }
+					FRA = { NOT = { has_war_with = ITA } }
+				}
 			}
 
 			country_exists = FRA
@@ -439,10 +517,10 @@ ENG_European_Equilibrium_Strategy = {
 				factor = 0
 				surrender_progress > 0.15 
 			}
-			#modifier = {
-				#factor = 0
-				#FRA = { is_ai = no }
-			#}
+			modifier = {
+				factor = 0
+				FRA = { is_ai = no }
+			}
 		}
 
 		available = {

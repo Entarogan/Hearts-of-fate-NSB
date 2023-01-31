@@ -22,7 +22,7 @@ characters={
 				original_tag  = UKR
 			}
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -50,6 +50,9 @@ characters={
 			planning_skill=2
 			logistics_skill=4
 			legacy_id=5005
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -102,7 +105,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -130,6 +133,9 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=5006
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -150,6 +156,9 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -171,7 +180,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -199,6 +208,9 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			legacy_id=5004
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 	#UKR_konstantin_prisovsky={
@@ -239,6 +251,9 @@ characters={
 			planning_skill=2
 			logistics_skill=3
 			legacy_id=-1
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 	UKR_andriy_melnyk={
@@ -259,7 +274,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -287,6 +302,9 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			legacy_id=5007
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 	UKR_mykhailo_omelianovychpavlenko={
@@ -307,6 +325,9 @@ characters={
 			planning_skill=4
 			logistics_skill=1
 			legacy_id=-1
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 	UKR_mykola_kapustyanskyi={
@@ -326,16 +347,38 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=-1
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 	UKR_Nestor_Makhno={
 		name="UKR_Nestor_Makhno"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_nestor_makhno"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Nestor_Makhno_2.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_nestor_makhno
+			allowed = {
+				original_tag = FRA
+			}
+			visible = {
+				has_country_flag = KR_Makhno_flag
+				has_government = communism
+			}
+			available = {
+				has_country_flag = KR_Makhno_flag
+				has_government = communism
+			}
+			traits = { Anarchist_pioneer }
+			ai_will_do = {
+				factor = 5
 			}
 		}
 		corps_commander={
@@ -388,15 +431,18 @@ characters={
 				large="gfx/leaders/UKR/Portrait_Talulah_Artorius.dds"
 			}
 		}
-		field_marshal={
-			traits={ brilliant_strategist aggressive_assaulter inspirational_leader infantry_leader }
+		corps_commander={
+			traits={ brilliant_strategist infantry_officer }
 			skill=3
 			attack_skill=2
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -458,21 +504,36 @@ characters={
 			planning_skill=3
 			logistics_skill=3
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 		advisor={
 			slot = army_chief
 			idea_token = UKR_yelena_frostnova
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 			# ledger  = navy 
 			available  = {
-				has_completed_focus = UKR_Anarchist_Yeti_squadron
+				OR = {
+					has_completed_focus = UKR_Anarchist_Yeti_squadron
+					AND = {
+						has_country_flag = KR_Makhno_flag
+						has_government = communism
+					}
+				}
 			}
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 			traits  = {
 				yeti_squad 
@@ -501,31 +562,42 @@ characters={
 				large="gfx/leaders/UKR/Portrait_Buldrokkastee.dds"
 			}
 		}
-		field_marshal={
-			traits={ old_guard inflexible_strategist infantry_leader trait_cautious unyielding_defender war_hero }
+		corps_commander={
+			traits={ old_guard inflexible_strategist infantry_officer trait_cautious war_hero }
 			skill=3
 			attack_skill=1
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=4
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 		advisor={
 			slot = high_command
 			idea_token = UKR_buldrokkastee
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 			ledger  = army
 			available  = {
 				NOT = {
 					has_completed_focus = UKR_Anarchist_remove_Buldrokkastee
 				}
+				has_government = communism
 			}
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				has_government = communism
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 			traits  = {
 				the_patriot 
@@ -538,7 +610,7 @@ characters={
 
 			}
 			ai_will_do  = {
-				factor  = 1
+				factor  = 15
 			}
 		}
 	}
@@ -561,22 +633,34 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 		advisor={
 			slot = high_command
 			idea_token = UKR_W
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 
 			ledger  = army 
 			available  = {
-				has_completed_focus = UKR_Anarchist_Jewish_combat_regiments
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_completed_focus = UKR_Anarchist_Jewish_combat_regiments
+				}
 			}
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 			traits  = {
 				modern_warfare 
@@ -589,7 +673,7 @@ characters={
 
 			}
 			ai_will_do  = {
-				factor  = 1
+				factor  = 15
 			}
 		}
 	}
@@ -612,20 +696,32 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 		advisor={
 			slot = army_chief
 			idea_token = UKR_eno_mephisto
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 			available  = {
-				has_completed_focus = UKR_Anarchist_pistol_and_speaker
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_completed_focus = UKR_Anarchist_pistol_and_speaker
+				}
 			}
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 			traits  = {
 				singer 
@@ -661,7 +757,10 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -684,21 +783,30 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 		advisor={
 			slot = high_command
 			idea_token = UKR_sasha_faust
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 			ledger  = army 
 			available  = {
-
+                has_government = communism
 			}
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 			traits  = {
 				sniper
@@ -711,7 +819,7 @@ characters={
 
 			}
 			ai_will_do  = {
-				factor  = 1
+				factor  = 5
 			}
 		}
 	}
@@ -734,7 +842,10 @@ characters={
 			planning_skill=3
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -756,11 +867,17 @@ characters={
 			slot = navy_chief
 			idea_token = UKR_stepan_petrichenko
 			allowed  = {
-				original_tag  = UKR
+				OR = {
+					original_tag = UKR
+					original_tag = FRA
+				}
 			}
 			available  = {
 				#仅安那其可用
-				has_completed_focus = UKR_Anarchist_all_power_to_soviet
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_completed_focus = UKR_Anarchist_all_power_to_soviet
+				}
 			}
 			traits  = {
 				navy_amphibious_assault_2 
@@ -783,7 +900,10 @@ characters={
 			planning_skill=1
 			logistics_skill=2
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -806,7 +926,10 @@ characters={
 			planning_skill=2
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -829,7 +952,10 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 
@@ -853,7 +979,10 @@ characters={
 			planning_skill=2
 			logistics_skill=2
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -876,7 +1005,10 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			visible = {
-				has_country_flag = UKR_Anarchist_flag
+				OR = {
+					has_country_flag = KR_Makhno_flag
+					has_country_flag = UKR_Anarchist_flag
+				}
 			}
 		}
 	}
@@ -903,7 +1035,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -921,6 +1053,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 3.000
+				modifier = {
+					factor = 25
+					date < 1937.6.1
+					has_war = yes
+				}
 			}
 		}
 		corps_commander={
@@ -933,6 +1070,9 @@ characters={
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -955,6 +1095,9 @@ characters={
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -978,6 +1121,9 @@ characters={
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 2
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -1024,6 +1170,9 @@ characters={
 			defense_skill = 1
 			planning_skill = 3
 			logistics_skill = 2
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -1045,7 +1194,7 @@ characters={
 			}
 
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -1063,11 +1212,16 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 4.000
+				modifier = {
+					factor = 25
+					date < 1937.6.1
+					has_war = yes
+				}
 			}
 		}
 		corps_commander={
 			traits = {
-				infantry_officer
+				inflexible_strategist
 				commando
 				trickster
 				ranger
@@ -1075,9 +1229,12 @@ characters={
 			skill = 4
 			attack_skill = 3
 			defense_skill = 4
-			planning_skill = 3
+			planning_skill = 4
 			logistics_skill = 3
 			legacy_id=5008
+			visible = {
+				NOT = { has_government = communism }
+			}
 		}
 	}
 
@@ -1144,7 +1301,7 @@ characters={
 		}
 		corps_commander={
 			traits = {
-				brilliant_strategist
+				inflexible_strategist
 				bearer_of_artillery
 			}
 			skill = 1
@@ -1173,6 +1330,10 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 50
+					is_major = yes
+				}
 			}
 		}
 	}
@@ -1209,6 +1370,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 50
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1239,6 +1405,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 50
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1258,7 +1429,10 @@ characters={
 				original_tag  = UKR
 			}
 			available  = {
-
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
 			}
 			traits  = {
 				realist_writer
@@ -1269,6 +1443,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 25
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1300,6 +1479,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 50
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1331,6 +1515,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 50
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1365,6 +1554,11 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1
+				modifier = {
+					factor = 25
+					date > 1937.6.1
+					has_war = no
+				}
 			}
 		}
 	}
@@ -1389,7 +1583,7 @@ characters={
 				original_tag  = UKR
 			}
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				NOT = { has_government = communism }
@@ -1435,7 +1629,7 @@ characters={
 				original_tag  = UKR
 			}
 			visible = {
-				NOT = { has_idea = UKR_no_army_idea }
+				NOT = { has_government = communism }
 			}
 			available  = {
 				has_country_leader  = {

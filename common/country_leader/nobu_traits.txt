@@ -155,7 +155,7 @@ leader_traits = {
 		guarantee_tension = -0.50
 		guarantee_cost = -0.50
 		enemy_justify_war_goal_time = 0.25
-		surrender_limit = 0.50
+		surrender_limit = 0.10
 	     		
 		ai_will_do = {
 			factor = 1

@@ -1486,7 +1486,7 @@ news_event = { #王室紧急拨款III
 }
 
 news_event = { #巴黎会议结束
-	id = news.181n
+	id = news.1812
 	title = news.181n.t
 	desc = news.181n.d
 	

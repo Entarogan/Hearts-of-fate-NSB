@@ -525,9 +525,9 @@ ideas = {
 
 			targeted_modifier = { 
 				tag = GER
-				trade_opinion_factor = 0.50
-				extra_trade_to_target_factor = 0.80
-				trade_cost_for_target_factor = -0.80
+				trade_opinion_factor = 0.30
+				extra_trade_to_target_factor = 0.30
+				trade_cost_for_target_factor = -0.30
 			}
 
 		}

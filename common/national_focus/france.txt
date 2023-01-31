@@ -492,8 +492,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Old_Glory
             }
 		}
 		x = 3
@@ -1977,14 +1978,19 @@ focus_tree = {
 		x = -3
 		y = 1
 
-			ai_will_do = {
-					factor = 500
-				}
+		ai_will_do = {
+			factor = 500
+		}
 
 		relative_position_id = FRA_avenge_waterloo
-    completion_reward = {
-      add_ideas = {  FRA_cross_the_channel }
-    }
+		completion_reward = {
+
+			add_timed_idea = {
+				idea = FRA_cross_the_channel
+				days = 510
+			}
+
+		}
 
 	}
 	focus = {
@@ -4405,41 +4411,37 @@ country_event = {
 		x = 0
 		y = 2
 		relative_position_id = FRA_Expand_military_cooperation_with_Germany
-			available = {
-					has_government = fascism
-					is_puppet = no
+		available = {
+			has_government = fascism
+			is_puppet = no
+		}
 
-				}
+		ai_will_do = {
+			factor = 750
+		}
 
-			ai_will_do = {
-					factor = 750
-				}
+		bypass = {
 
-			bypass = {
+		}
+		completion_reward = {
 
-}
-			completion_reward = {
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.33
+			uses = 2
+			category = land_doctrine
+		} # REVISIT May use modifier?
 
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.33
-				uses = 2
-				category = land_doctrine
-			} # REVISIT May use modifier?
+		add_tech_bonus = {
+			bonus = 1.0
+			ahead_reduction = 1
+			uses = 1
+			name = mech_army_bonus
+			category = cat_mechanized_equipment
+		}
 
-			add_tech_bonus = {
-				bonus = 1.0
-			    ahead_reduction = 1
-				uses = 1
-				name = mech_army_bonus
-				technology = basic_medium_tank
-				technology = improved_medium_tank
-				technology = advanced_medium_tank
-				technology = mechanised_infantry
-			}
-
-				add_ideas = FRA_French_Volkssturm_idea
-				}
+		add_ideas = FRA_French_Volkssturm_idea
+		}
 
 	}
 
@@ -6183,18 +6185,22 @@ country_event = {
 		mutually_exclusive = {
 			focus = FRA_Old_Glory
 		}
-    available = {
-		
-      NOT = { has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes  } }
-    }
 
-    ai_will_do = {
-					factor = 200
-			        modifier = {
-			        has_country_flag = napoleon_oppose
-				        factor = 3
-			        }
-				}
+		available = {
+		    NOT = { has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes  } }
+		}
+
+		ai_will_do = {
+			factor = 400
+			modifier = {
+				factor = 3
+				has_country_flag = napoleon_oppose
+			}
+			modifier = {
+				factor = 0
+				NOT = { has_country_flag = napoleon_oppose }
+			}
+		}
 
 		x = -1
 		y = 1
@@ -6233,7 +6239,7 @@ country_event = {
 		}
 
     ai_will_do = {
-					factor = 600
+					factor = 1200
 				}
 
 		x = 1
@@ -6305,8 +6311,8 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
-				has_war = yes
+                factor = 150
+				is_in_faction_with = ENG
             }
 		}
 
@@ -6353,33 +6359,39 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Strategies_for_New_Era
             }
 		}
 
-			completion_reward = {
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
-
-					add_ideas = FRA_Armor_Large_scale_production_idea
-					custom_effect_tooltip = available_designer
-					show_ideas_tooltip = FRA_GIAT
+			if = {
+				limit = {
+					or = {
+						has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+						has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			add_ideas = FRA_Armor_Large_scale_production_idea
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = FRA_GIAT
+		}
 
 	}
 	focus = {
 		id = FRA_Eve_of_the_storm
 		icon = GFX_goal_generic_propaganda
 		cost = 5.00
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
 		prerequisite = {
 			focus = FRA_army_command_focus
 		}
@@ -6608,7 +6620,7 @@ country_event = {
 				}
 
 			ai_will_do = {
-			 factor = 500
+			 factor = 1500
 			}
 
 			completion_reward = {
@@ -6664,51 +6676,43 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Strategies_for_New_Era
             }
 		}
 
-			completion_reward = {
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
-
-					add_ideas = FRA_Mechanized_equipments_production_idea
-
-          if = {
-            limit = {
-              or = {
-                has_government = communism
-                has_government = fascism
-              }
-            }
-            add_tech_bonus = {
-              name = FRA_Mechanized_Army
-              bonus = 1.0
-							ahead_reduction = 1.0
-							uses = 1
-              technology = mechanised_infantry
-              technology = mechanised_infantry2
-            }
-          }
-
-          add_tech_bonus = {
-            bonus = 1.0
-            uses = 1
-            name = FRA_Mechanized_Army
-            technology = mechanised_infantry
-            technology = mechanised_infantry2
-          }
-
+			if = {
+				limit = {
+					or = {
+						has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+						has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			add_ideas = FRA_Mechanized_equipments_production_idea
+
+			add_tech_bonus = {
+				name = FRA_Mechanized_Army
+				bonus = 1.0
+				uses = 1
+				technology = mechanised_infantry
+				technology = mechanised_infantry2
+			}
+
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				name = FRA_Mechanized_Army
+				technology = mechanised_infantry
+				technology = mechanised_infantry2
+			}
+
+		}
 
 	}
 	focus = {
@@ -6725,8 +6729,9 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Strategies_for_New_Era
             }
 		}
 
@@ -6768,56 +6773,48 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Strategies_for_New_Era
             }
 		}
 
-			completion_reward = {
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
-
-
-							if = {
-                limit = {
-                  or = {
-                    has_government = communism
-                    has_government = fascism
-                  }
-                }
-                add_tech_bonus = {
-                  name = armor_bonus
-                  bonus = 1.0
-									ahead_reduction = 1.0
-                  uses = 1
-                  category = armor
-                }
-              }
-
-              add_tech_bonus = {
-                name = armor_bonus
-                bonus = 1.0
-                uses = 1
-                category = armor
-              }
-
-              add_tech_bonus = {
-                bonus = 1.0
-                uses = 1
-                name = armor_bonus
-                technology = armored_car2
-                technology = armored_car3
-              }
-
+			if = {
+				limit = {
+					or = {
+						has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+						has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				ahead_reduction = 1.0
+				uses = 1
+				category = armor
+			}
+
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				name = armor_bonus
+				technology = armored_car2
+				technology = armored_car3
+			}
+
+		}
 
 	}
 	focus = {
@@ -6834,8 +6831,9 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Old_Glory
             }
 		}
 
@@ -6874,39 +6872,40 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Old_Glory
             }
 		}
 
-			completion_reward = {
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
-
-					add_ideas = FRA_Cannon_doctrine_idea
-
-          add_tech_bonus = {
-            name = FRA_Cannon_doctrine
-            bonus = 1.0
-            uses = 1
-            category = artillery
-          }		
-          add_tech_bonus = {
-            name = FRA_Cannon_doctrine
-            bonus = 1.0
-            uses = 1
-            category = cat_anti_tank
-          }	
-
+			if = {
+				limit = {
+					or = {
+						 has_country_leader = { character = FRA_napoléon_bonaparte  ruling_only = yes }
+						 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			add_ideas = FRA_Cannon_doctrine_idea
+
+			add_tech_bonus = {
+				name = FRA_Cannon_doctrine
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}		
+			add_tech_bonus = {
+				name = FRA_Cannon_doctrine
+				bonus = 1.5
+				uses = 1
+				category = cat_anti_tank
+			}	
+
+		}
 
 	}
 	focus = {
@@ -6920,29 +6919,79 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_Cannon_doctrine
 
-			ai_will_do = {
-			 factor = 5
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 200
+				has_war = yes
+				has_completed_focus = FRA_Old_Glory
+			}
+		}
+
+		completion_reward = {
+
+			if = {
+				limit = {
+					or = {
+						 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+						 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
+				}
+				add_political_power = 50
 			}
 
-			completion_reward = {
+			if = {
+				limit = { NOT = { has_tech = paratroopers } }
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
+				set_technology = { paratroopers = 1 }
 
-					add_tech_bonus = {
-							name = para_bonus
-							bonus = 1.0
-							uses = 2
-							category = para_tech
-						}
+				division_template = {
+					name = "Parachutiste"
+					division_names_group = FRA_PAR_01
+
+                    regiments = {
+                        paratrooper = { x = 0 y = 0 }
+                        paratrooper = { x = 0 y = 1 }
+                        paratrooper = { x = 0 y = 2 }
+                        
+                        paratrooper = { x = 1 y = 0 }
+                        paratrooper = { x = 1 y = 1 }
+                        paratrooper = { x = 1 y = 2 }
+                        
+                        paratrooper = { x = 2 y = 0 }
+                        paratrooper = { x = 2 y = 1 }
+                        paratrooper = { x = 2 y = 2 }
+                        
+                        paratrooper = { x = 3 y = 0 }
+                    }
+                    support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_tank = { x = 0 y = 3 }
+						anti_air = { x = 0 y = 4 }
+                    }
 				}
+
+				hidden_effect = {
+					capital_scope = {
+						create_unit = {
+							division = "division_template = \"Parachutiste\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
+							owner = ROOT
+							count = 2
+						}
+					}
+				}
+
+			}
+
+			add_tech_bonus = {
+				name = para_bonus
+				bonus = 1.0
+				uses = 2
+				category = para_tech
+			}
+		}
 
 	}
 	focus = {
@@ -6962,31 +7011,39 @@ country_event = {
 		ai_will_do = {
 			factor = 10
             modifier = {
-                factor = 3
+                factor = 200
 				has_war = yes
+				has_completed_focus = FRA_Old_Glory
             }
 		}
 
-			completion_reward = {
+		completion_reward = {
 
-							if = {
-									limit = {
-									   or = {
-											 has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
-											 has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
-										}
-										}
-									add_political_power = 50
-								}
-
-					add_ideas = FRA_Three-dimensional_war_idea
-					add_doctrine_cost_reduction = {
-						name = FRA_Three_dimensional_war
-						cost_reduction = 0.5
-						uses = 2
-						category = air_doctrine
-					} 
+			if = {
+				limit = {
+					or = {
+						has_country_leader = { character = FRA_napoléon_bonaparte ruling_only = yes }
+						has_country_leader = { character = FRA_charlemagne  ruling_only = yes }
+					}
 				}
+				add_political_power = 50
+			}
+
+			add_ideas = FRA_Three-dimensional_war_idea
+			add_doctrine_cost_reduction = {
+				name = FRA_Three_dimensional_war
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			} 
+			add_tech_bonus = {
+				name = FRA_Three_dimensional_war
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+
+		}
 
 	}
 	focus = {
@@ -7446,16 +7503,13 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					every_navy_leader = {
-							add_skill_level = 2
-							add_attack = 2
-							add_defense = 2
-							add_unit_leader_trait = superior_tactician
-							add_unit_leader_trait = spotter
-						}
-					add_ideas = FRA_Ocean_Operational_Theory_idea
-				}
+		completion_reward = {
+			every_navy_leader = {
+				add_attack = 1
+				add_defense = 1
+			}
+			add_ideas = FRA_Ocean_Operational_Theory_idea
+		}
 
 	}
 	focus = {
@@ -7623,7 +7677,7 @@ country_event = {
 	focus = {
 		id = FRA_CL_programme
 		icon = GFX_focus_generic_cruiser2
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_BSEB
 		}
@@ -7644,17 +7698,77 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					country_event = {
-							id = fn.48
-						}
+		select_effect = {
+			country_event = {
+				id = fn.48
+			}
+		}
+
+		completion_reward = {
+
+			hidden_effect = { 
+				country_event = { id = fn.50 }
+			}
+
+			create_equipment_variant = {
+				name = "De Grasse Class"
+				type = ship_hull_cruiser_2
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_medium_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = cruiser_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_anti_air_2
+					mid_1_custom_slot = ship_torpedo_2
+					mid_2_custom_slot = ship_secondaries_2
+					rear_1_custom_slot = ship_light_medium_battery_2
 				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_2
+					creator = "FRA"
+					version_name = "De Grasse Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_2
+					creator = "FRA"
+					version_name = "De Grasse Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_2
+					creator = "FRA"
+					version_name = "De Grasse Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+		}
 
 	}
 	focus = {
 		id = FRA_Fantasme_programme
 		icon = GFX_focus_generic_destroyer
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_BSEB
 		}
@@ -7675,17 +7789,112 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					country_event = {
-							id = fn.60
-						}
+		select_effect = {
+			country_event = {
+				id = fn.60
+			}
+		}
+
+		completion_reward = {
+			hidden_effect = { 
+				country_event = { id = fn.65 }
+			}
+
+			enable_equipments = {
+				ship_hull_light_4
+			}
+
+			create_equipment_variant = {
+				name = "Le Fantasque Class"
+				type = ship_hull_light_4
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_light_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_sonar_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_torpedo_slot = ship_torpedo_2
+					fixed_ship_engine_slot = light_ship_engine_2
+					front_1_custom_slot = ship_depth_charge_2
+					mid_1_custom_slot = ship_torpedo_2
+					mid_2_custom_slot = ship_anti_air_2
+					rear_1_custom_slot = ship_light_battery_2
 				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_light_4
+					creator = "FRA"
+					version_name = "Le Fantasque Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+		}
 
 	}
 	focus = {
 		id = FRA_C5_programme
 		icon = GFX_focus_generic_cruiser2
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_BSEB
 		}
@@ -7706,17 +7915,70 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					country_event = {
-							id = fn.40
-						}
+		select_effect = {
+			country_event = {
+				id = fn.40
+			}
+		}
+
+		completion_reward = {
+			hidden_effect = { 
+				country_event = { id = fn.45 }
+			}
+
+			enable_equipments = {
+				ship_hull_cruiser_3
+			}
+
+			create_equipment_variant = {
+				name = "Saint Louis Class"
+				type = ship_hull_cruiser_3
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_medium_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = cruiser_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_medium_battery_2
+					mid_1_custom_slot = ship_torpedo_2
+					mid_2_custom_slot = ship_anti_air_2
+					rear_1_custom_slot = ship_medium_battery_2
+					rear_2_custom_slot = ship_airplane_launcher_2
 				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_3
+					creator = "FRA"
+					version_name = "Saint Louis Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_cruiser_3
+					creator = "FRA"
+					version_name = "Saint Louis Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+		}
 
 	}
 	focus = {
 		id = FRA_Joffre_programme
 		icon = GFX_goal_generic_navy_carrier
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_BSEB
 		}
@@ -7737,17 +7999,67 @@ country_event = {
             }
 		}
 
-		completion_reward = {
+		select_effect = {
 			country_event = {
 				id = fn.26
 			}
+		}
+
+		completion_reward = {
+			hidden_effect = { 
+				country_event = { id = fn.29 }
+			}
+
+			enable_equipments = {
+				ship_hull_carrier_2
+			}
+
+			create_equipment_variant = {
+				name = "Joffre Class"
+				type = ship_hull_carrier_2
+				parent_version = 0
+				modules = {
+					fixed_ship_deck_slot_1 = ship_deck_space
+					fixed_ship_deck_slot_2 = ship_deck_space
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_engine_slot = carrier_ship_engine_2
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_cruiser_2
+					front_1_custom_slot = ship_deck_space
+					mid_1_custom_slot = ship_deck_space
+				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_2
+					creator = "FRA"
+					version_name = "Joffre Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_carrier_2
+					creator = "FRA"
+					version_name = "Joffre Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
 		}
 
 	}
 	focus = {
 		id = FRA_PN-196_programme
 		icon = GFX_focus_generic_navy_battleship2
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_BSEB
 		}
@@ -7768,11 +8080,53 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					country_event = {
-							id = fn.1
-						}
+		select_effect = {
+			country_event = {
+				id = fn.1
+			}
+		}
+
+		completion_reward = {
+			hidden_effect = { 
+				country_event = { id = fn.9 }
+			}
+
+			enable_equipments = {
+				ship_hull_heavy_3
+			}
+
+			create_equipment_variant = {
+				name = "Richelieu Class"
+				type = ship_hull_heavy_3
+				parent_version = 0
+				modules = {
+					fixed_ship_battery_slot = ship_heavy_battery_2
+					fixed_ship_anti_air_slot = ship_anti_air_2
+					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+					fixed_ship_radar_slot = ship_radar_1
+					fixed_ship_engine_slot = heavy_ship_engine_3
+					fixed_ship_secondaries_slot = ship_secondaries_2
+					fixed_ship_armor_slot = ship_armor_bb_3
+					front_1_custom_slot = ship_heavy_battery_2
+					mid_1_custom_slot = ship_anti_air_1
+					mid_2_custom_slot = ship_secondaries_2
+					mid_3_custom_slot = empty
+					rear_1_custom_slot = ship_airplane_launcher_2
 				}
+			}
+
+			add_equipment_production = {
+				equipment = {
+					type = ship_hull_heavy_3
+					creator = "FRA"
+					version_name = "Richelieu Class"
+				}
+				requested_factories = 1
+				progress = 0.50
+				amount = 1
+			}
+
+		}
 
 	}
 	focus = {
@@ -7841,7 +8195,7 @@ country_event = {
 	focus = {
 		id = FRA_Glory_of_French
 		icon = GFX_goal_generic_navy_battleship
-		cost = 2.00
+		cost = 5.00
 		prerequisite = {
 			focus = FRA_Fury_of_Ocean
 		}
@@ -7849,7 +8203,7 @@ country_event = {
 		y = 1
 		relative_position_id = FRA_Fury_of_Ocean
 		available = {
-			has_country_flag = FRA_Alsace_Enable
+
 		}
 		ai_will_do = {
 			factor = 3
@@ -7859,29 +8213,14 @@ country_event = {
             }
 		}
 
-			completion_reward = {
-					custom_effect_tooltip = FRA_Glory_of_French_tt
-					hidden_effect = {
-							if = {
-									limit = {
-											NOT = {
-													has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-												}
-										}
-									country_event = {
-											id = fn.103
-										}
-								}
-							if = {
-									limit = {
-											has_country_flag = FRA_Quadruple_turret_of_main_gun_Enable
-										}
-									country_event = {
-											id = fn.100
-										}
-								}
-						}
-				}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_Glory_of_French
+				bonus = 1
+				uses = 2
+				category = bb_tech
+			}
+		}
 
 	}
 	focus = {
@@ -9766,8 +10105,6 @@ country_event = {
 							target = ENG
 							type = topple_government
 						}
-					custom_effect_tooltip = unlocks_espionage_operation_tt
-					custom_effect_tooltip = FRA_instigate_workers_revolution_britain
 				}
 
 	}
@@ -9830,8 +10167,6 @@ country_event = {
 										}
 								}
 						}
-					custom_effect_tooltip = unlocks_espionage_operation_tt
-					custom_effect_tooltip = FRA_instigate_workers_revolution_spain
 				}
 
 	}
@@ -9900,8 +10235,6 @@ country_event = {
 							target = GER
 							type = topple_government
 						}
-					custom_effect_tooltip = unlocks_espionage_operation_tt
-					custom_effect_tooltip = FRA_instigate_workers_revolution_germany
 				}
 
 	}
@@ -9966,8 +10299,6 @@ country_event = {
 							target = ITA
 							type = topple_government
 						}
-					custom_effect_tooltip = unlocks_espionage_operation_tt
-					custom_effect_tooltip = FRA_instigate_workers_revolution_italy
 				}
 
 	}
@@ -10056,28 +10387,29 @@ country_event = {
 		x = 0
 		y = 1
 		relative_position_id = FRA_invite_romania
-			available = {
-					is_subject = no
-					is_faction_leader = yes
+		available = {
+			is_subject = no
+			is_faction_leader = yes
+		}
+		bypass = {
+			YUG = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = ROOT
+					is_in_faction = yes
+					has_government = communism
 				}
-			bypass = {
-					YUG = {
-							OR = {
-									exists = no
-									is_puppet = yes
-									has_war_with = ROOT
-									is_in_faction = yes
-								}
-						}
-				}
-			ai_will_do = {
-					factor = 500
-				}
-			completion_reward = {
-					YUG = {
-							country_event = france.17
-						}
-				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+		completion_reward = {
+			YUG = {
+				country_event = france.17
+			}
+		}
 
 	}
 	focus = {
@@ -10107,6 +10439,13 @@ country_event = {
 		}
 		ai_will_do = {
 			factor = 500
+			modifier = {
+				factor = 3
+				OR = {
+					is_in_faction_with = POL
+					is_in_faction_with = CZE
+				}
+			}
 		}
 		completion_reward = {
 			ROM = {
@@ -10324,34 +10663,41 @@ country_event = {
 		prerequisite = {
 			focus = FRA_viva_la_france
 		}
-    available = { 
-      is_faction_leader = yes
-      NOT = { has_war_with = CZE }
-	  
-      NOT = { has_country_leader = { character = FRA_charlemagne  ruling_only = yes } }
-    }
-			bypass = {
-					CZE = {
-							OR = {
-									exists = no
-									is_puppet = yes
-									has_war_with = ROOT
-									is_in_faction = yes
-								}
-						}
+		available = { 
+			is_faction_leader = yes
+			NOT = { has_war_with = CZE }
+			date > 1937.6.1
+			NOT = { has_country_leader = { character = FRA_charlemagne  ruling_only = yes } }
+		}
+		bypass = {
+			CZE = {
+				OR = {
+					exists = no
+					is_puppet = yes
+					has_war_with = ROOT
+					is_in_faction = yes
 				}
+			}
+		}
 
 		x = 2
 		y = 1
 		relative_position_id = FRA_viva_la_france
 
-    ai_will_do = {
-      factor = 500
-    }
+		ai_will_do = {
+		    factor = 500
+			modifier = {
+				factor = 3
+				OR = {
+					is_in_faction_with = POL
+					is_in_faction_with = ROM
+				}
+			}
+		}
 
-    completion_reward = {
-      CZE = { country_event = { id = generic.5  hours = 5 } }
-    }
+		completion_reward = {
+		    CZE = { country_event = { id = generic.5  hours = 5 } }
+		}
 
 	}
 	focus = {

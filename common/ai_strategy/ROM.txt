@@ -55,14 +55,8 @@ CZE_unit_production = {
 
 	ai_strategy = {
 		type = role_ratio
-		id = motorized
-		value = 5 #because doctrine this = 2
-	}
-
-	ai_strategy = {
-		type = role_ratio
 		id = mechanized
-		value = -5 #because doctrine this = 0
+		value = 5
 	}
 
 	ai_strategy = {

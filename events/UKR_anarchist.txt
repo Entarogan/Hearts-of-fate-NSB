@@ -513,34 +513,6 @@ country_event = {
 			#add_idea = UKR_Promote_industrialization_idea
 		#}
 
-		set_division_template_lock = {
-			division_template = "Nightingale Battalion Group"
-			is_locked = no
-		}
-
-		set_division_template_lock = {
-			division_template = "Otaman Strelkovaya"
-			is_locked = no
-		}
-
-		set_division_template_lock = {
-			division_template = "Sich Riflemen"
-			is_locked = no
-		}
-
-		delete_unit_template_and_units = { 
-			division_template = "Nightingale Battalion Group" 
-			disband = yes
-		}
-		delete_unit_template_and_units = { 
-			division_template = "Otaman Strelkovaya" 
-			disband = yes
-		}
-		delete_unit_template_and_units = { 
-			division_template = "Sich Riflemen" 
-			disband = yes
-		}
-
 		if = {
 			limit = {
 				has_country_flag = UKR_Call_for_civilians_flag

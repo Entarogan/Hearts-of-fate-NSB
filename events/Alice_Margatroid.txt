@@ -403,10 +403,10 @@ country_event = {
 	option = {	 ### The Judgement
 		name = alice_event.11.a
 		ai_chance = { base = 10 }
-		remove_unit_leader = 5604
-		remove_unit_leader = 5605
-		remove_unit_leader = 5606
-		remove_unit_leader = 5610
+		retire_character = ROM_ion_antonescu
+		retire_character = ROM_ion_mota
+		retire_character = ROM_vasile_marin
+		retire_character = ROM_darnic_prestone_yggdmillennia
 		add_popularity = {
 			ideology = fascism
 			popularity = -0.15

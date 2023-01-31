@@ -317,8 +317,8 @@ characters={
 			skill=3
 			attack_skill=2
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=2
 			legacy_id=-1
 		}
 	}
@@ -354,8 +354,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
 			legacy_id=-1
 		}
 	}
@@ -1225,8 +1225,8 @@ characters={
 			skill=4
 			attack_skill=4
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=4
 			legacy_id=50001
 		}
 	}
@@ -1244,8 +1244,8 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=-1
 		}
 		advisor={
@@ -1434,6 +1434,7 @@ characters={
 						is_subject_of  = JAP
 					}
 					or  = {
+						is_in_faction_with = JAP
 						has_idea  = RUS_Japanese_economic_control_1_idea 
 						has_idea  = RUS_Japanese_economic_control_2_idea 
 						has_idea  = RUS_Japanese_economic_control_3_idea 
@@ -1444,7 +1445,7 @@ characters={
 					Head_of_Advisor_to_Japan 
 				}
 
-			    cost = 50
+			    cost = 25
 
 				ai_will_do  = {
 					factor  = 3.000

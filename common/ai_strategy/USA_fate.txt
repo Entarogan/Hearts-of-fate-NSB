@@ -139,3 +139,241 @@ USA_wants_synthetic_2 = {
 		value = 59
 	}
 }
+
+USA_Doolittle_1_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 99
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 2
+	}
+
+}
+
+USA_Doolittle_2_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 124
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 2
+	}
+
+}
+
+USA_Doolittle_3_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 149
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 3
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 5
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 2
+	}
+
+}
+
+USA_LeMay_1_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 174
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 2
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 7
+	}
+
+}
+
+USA_LeMay_2_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 199
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 2
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 7
+	}
+
+}
+
+USA_LeMay_3_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 224
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 2
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 7
+	}
+
+}
+
+USA_LeMay_4_production = {
+	allowed = {
+		original_tag = USA
+	}
+	enable = {
+		num_of_military_factories > 249
+		surrender_progress < 0.05
+		is_in_faction = yes
+		is_faction_leader = no
+		has_army_manpower = { size > 999999 }
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = fighter
+		value = 2
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = tactical_bomber
+		value = 1
+	}
+
+	ai_strategy = {
+		type = equipment_production_min_factories
+		id = strategic_bomber
+		value = 7
+	}
+
+}

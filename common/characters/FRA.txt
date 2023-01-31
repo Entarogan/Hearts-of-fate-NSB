@@ -100,8 +100,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=-1
 		}
 	}
@@ -119,7 +119,7 @@ characters={
 			skill=2
 			attack_skill=3
 			defense_skill=1
-			maneuvering_skill=1
+			maneuvering_skill=2
 			coordination_skill=1
 			legacy_id=-1
 		}
@@ -755,6 +755,11 @@ characters={
 			allowed = {
 				original_tag = FRA
 			}
+
+			available  = {
+                NOT = { has_country_flag = KR_Makhno_flag }
+			}
+
 			traits = { armored_Vanguard }
 
 			cost = 100
@@ -868,8 +873,8 @@ characters={
 			skill=5
 			attack_skill=6
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=-1
 		}
 	}
@@ -886,8 +891,8 @@ characters={
 			skill=5
 			attack_skill=5
 			defense_skill=4
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=4
 			legacy_id=-1
 		}
 	}
@@ -906,7 +911,7 @@ characters={
 			attack_skill=2
 			defense_skill=2
 			maneuvering_skill=1
-			coordination_skill=1
+			coordination_skill=2
 			legacy_id=-1
 		}
 	}
@@ -1094,34 +1099,6 @@ characters={
 			}
 			cost = 75
 			traits = { fast_speed }
-			ai_will_do = {
-				factor = 5
-			}
-		}
-	}
-
-
-	FRA_nestor_makhno={
-		name=FRA_nestor_makhno
-		portraits={
-			army={
-				large="gfx/leaders/FRA/Portrait_France_Nestor_Makhno.tga"
-				small="GFX_idea_nestor_makhno"
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = FRA_nestor_makhno
-			allowed = {
-				original_tag = FRA
-			}
-			visible = {
-				has_government = communism
-			}
-			available = {
-				has_government = communism
-			}
-			traits = { Anarchist_pioneer }
 			ai_will_do = {
 				factor = 5
 			}
@@ -1389,6 +1366,11 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 0
+					NOT = { date > 1937.9.1 }
+					has_government = communism
+				}
 			}
 		}
 	}
@@ -1413,6 +1395,11 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 0
+					NOT = { date > 1937.9.1 }
+					has_government = communism
+				}
 			}
 		}		
 	}
@@ -1437,6 +1424,11 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 0
+					NOT = { date > 1937.9.1 }
+					has_government = communism
+				}
 			}
 		}
 	}
@@ -1461,6 +1453,11 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 0
+					NOT = { date > 1937.9.1 }
+					has_government = communism
+				}
 			}
 		}
 	}
@@ -1485,6 +1482,11 @@ characters={
 			cost = 100
 			ai_will_do = {
 				factor = 1.000
+				modifier = {
+					factor = 0
+					NOT = { date > 1937.9.1 }
+					has_government = communism
+				}
 			}
 		}
 	}

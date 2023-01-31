@@ -25,9 +25,9 @@ set_technology = {
   interwar_artillery = 1
   interwar_antitank = 1
   interwar_antiair = 1
-	early_fighter = 1
-  early_bomber = 1
-	CAS1 = 1
+	# early_fighter = 1
+  # early_bomber = 1
+	# CAS1 = 1
 	fuel_silos = 1
 
 	mobile_warfare = 1
@@ -36,7 +36,33 @@ set_technology = {
 
 	on_ogur = 1
 }
-
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "HUN_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			iw_medium_airframe = 1
+			iw_large_airframe = 1
+		}
+	else = {
+		set_air_oob = "HUN_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			naval_bomber1 = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			CAS1 = 1
+		}
+	}
+}
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -66,6 +92,20 @@ if = {
 		}
 }
 
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "WM-16"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+	}
+}
 
 1939.1.1 = {
 	remove_ideas = HUN_treaty_of_triannon
@@ -123,7 +163,7 @@ if = {
 	oob = "HUN_1939"
 	set_technology = {
 		fighter1 = 1
-		early_bomber = 1
+		# early_bomber = 1
 		tactical_bomber1 = 1
 		# gwtank = 1
 		# basic_light_tank = 1
@@ -276,19 +316,19 @@ recruit_character = HUN_Bela_Kun
 recruit_character = HUN_vilmos_nagy
 recruit_character = HUN_elizabeth_bathory
 recruit_character = HUN_attila
-recruit_character = HUN_Árpád_szakasits
-recruit_character = HUN_géza_lakatos
-recruit_character = HUN_iván_hindy
-recruit_character = HUN_károly_beregfy
-recruit_character = HUN_döme_sztójay
+recruit_character = HUN_arpad_szakasits
+recruit_character = HUN_geza_lakatos
+recruit_character = HUN_ivan_hindy
+recruit_character = HUN_karoly_beregfy
+recruit_character = HUN_Dome_Sztojay
 recruit_character = HUN_jeno_ratz
-recruit_character = HUN_alajos_béldy
-recruit_character = HUN_béla_miklós
+recruit_character = HUN_alajos_beldy
+recruit_character = HUN_bela_miklos
 recruit_character = HUN_dezso_laszlo
 recruit_character = HUN_ferenc_farkas
 recruit_character = HUN_gusztav_jany
-recruit_character = HUN_zoltán_szügyi
-recruit_character = HUN_miklós_horthy
+recruit_character = HUN_Zoltan_Szugyi
+recruit_character = HUN_miklos_horthy
 
 
 recruit_character = HUN_kalman_kanya
@@ -319,7 +359,6 @@ recruit_character = HUN_vattay_theory
 
 recruit_character = HUN_pal_pronay
 recruit_character = HUN_imre_kemeri_nagy
-recruit_character = HUN_karoly_beregfy
 
 
 

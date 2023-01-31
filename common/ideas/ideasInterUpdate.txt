@@ -279,39 +279,54 @@ ideas = {
         }
       }
       
-      uk_Gringolet = {
+    uk_Gringolet = {
         allowed = {
-          original_tag = ENG
-          always = no
+			original_tag = ENG
+			always = no
         }
 
         allowed_civil_war = {
-          always = yes
+            always = yes
         }
         
         removal_cost = -1
 
         picture = generic_acquire_tanks
 
+		modifier = {
+			
+		}
+
         equipment_bonus = {
 
-          armor = {
-            maximum_speed = 0.10
-            breakthrough = 0.10
-		    armor_value = 0.1
+			armor = {
+				maximum_speed = 0.10
+				breakthrough = 0.10
+				defense = 0.10
+				armor_value = 0.1
 
-			instant = yes
-          }
+				instant = yes
+			}
 
-          mechanized_equipment = {
-            maximum_speed = 0.10
-            defense = 0.10
-		    armor_value = 0.1
+			armored_car_equipment = {
+				maximum_speed = 0.10
+				breakthrough = 0.10
+				defense = 0.10
+				armor_value = 0.1
 
-			instant = yes
-          }
+				instant = yes
+			}
+
+			mechanized_equipment = {
+				maximum_speed = 0.10
+				breakthrough = 0.10
+				defense = 0.10
+				armor_value = 0.1
+
+				instant = yes
+			}
         }
-      }
+    }
       
       uk_air_raid_precautions = {
         allowed = {
@@ -348,14 +363,18 @@ ideas = {
         picture = HUN_treaty_of_triannon
 
         modifier = {
-          political_power_gain = 0.15
-          stability_factor = 0.10
-          stability_weekly = 0.001
-          fascism_drift = -0.03
-          communism_drift = -0.03
-          foreign_subversive_activites = -0.25
+			political_power_gain = 0.15
+
+			offensive_war_stability_factor = 0.20
+			defensive_war_stability_factor = 0.20
+
+			stability_weekly = 0.001
+
+			fascism_drift = -0.03
+			communism_drift = -0.03
+			foreign_subversive_activites = -0.25
         }
-      }
+    }
     
     
     uk_imperial_defence_insititute = {
@@ -425,20 +444,30 @@ ideas = {
         removal_cost = -1
 
         picture = FRA_motorized_focus
+
+		modifier = {
+			supply_node_range = 0.15
+		}
         
         equipment_bonus = {
 
-          motorized_equipment = {
-            build_cost_ic = -0.15 
+			motorized_equipment = {
+				build_cost_ic = -0.15 
 
-            instant = yes
-          }
-     
-					mechanized_equipment = {
-						build_cost_ic = -0.10 
-            
-            instant = yes
-					}     
+				instant = yes
+			}
+
+			armored_car_equipment = {
+				build_cost_ic = -0.10
+
+				instant = yes
+			}
+
+			mechanized_equipment = {
+				build_cost_ic = -0.10 
+
+				instant = yes
+			}     
           
         }
     }

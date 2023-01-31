@@ -2,6 +2,46 @@ ideas = {
 
   country = {
 
+		UKR_great_patriotic_war = {
+
+			name = SOV_great_patriotic_war
+
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+			
+			allowed = {
+				always = no # Added via event
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+			    has_war = yes
+			}
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.50
+				economy_cost_factor = -0.50
+
+             	army_org_factor = 0.1
+				army_core_defence_factor = 0.3
+
+				supply_combat_penalties_on_core_factor = -0.3
+
+            	industrial_capacity_factory = 0.2
+
+				mobilization_speed = 0.5
+				minimum_training_level = -0.1
+				training_time_factor = -0.2
+
+				surrender_limit = 0.1
+			}
+
+		}
+
 		UKR_factory_rerouted_1_idea = {
 			allowed = {
 				original_tag = UKR
@@ -539,7 +579,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				non_core_manpower = 0.002
+				non_core_manpower = 0.02
 				conscription_factor = 0.2
 			}
 		}
@@ -1038,7 +1078,7 @@ ideas = {
 		}
 
 		UKR_OUN_subversion_POL = {
-			name = UKR_OUN_subversion
+			name = UKR_OUN_subversion_POL
 				
 			allowed = {
 				original_tag = UKR
@@ -1054,6 +1094,28 @@ ideas = {
 			
 			modifier = {
 				stability_factor = -0.10
+				resistance_damage_to_garrison = 0.10
+			}
+		}
+
+		UKR_OUN_subversion_POL_2 = {
+			name = UKR_OUN_subversion_POL
+				
+			allowed = {
+				original_tag = UKR
+			}
+
+			picture = UKR_oun_subversion
+			
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				resistance_damage_to_garrison = 0.05
 			}
 		}
 
@@ -2182,6 +2244,7 @@ ideas = {
 				army_core_attack_factor = 0.10
 				army_core_defence_factor = 0.10
 				resistance_growth_on_our_occupied_states = 0.15
+				surrender_limit = 0.1
 			}
 		}
 

@@ -2799,7 +2799,10 @@ technologies = {
 				tag = SOV
 				factor = 2
 			}
-
+			modifier = {
+				tag = RUS
+				factor = 2
+			}
 			modifier = {
 				factor = 0.4
 

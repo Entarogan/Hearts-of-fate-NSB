@@ -3,7 +3,6 @@ state={
 	id=354
 	name="STATE_354"
 	manpower = 1031129
-local_supplies=0.0
 	
 	state_category = town
 
@@ -29,6 +28,8 @@ local_supplies=0.0
 	}
 
 	provinces={
-		789 3714 3979 6976 6991 7454 9886 9932 10403 10472 11753 
+		789 3714 3979 6976 6991 7454 9886 9932 10403 10472 11753 11853
 	}
+
+	local_supplies=0.0 
 }

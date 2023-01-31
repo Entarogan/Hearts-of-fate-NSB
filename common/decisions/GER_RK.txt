@@ -1300,12 +1300,10 @@ GER_reichskommissariats = {
 
 		available = {
 			has_government = fascism
-			NOT = {
-				is_in_faction_with = UKR
-				OR = {
-					UKR = { is_subject = no }
-					UKR = { owns_state = 202 }
-				}
+			OR = {
+				NOT = { is_in_faction_with = UKR }
+				UKR = { is_subject = yes }
+				NOT = { UKR = { owns_state = 202 } }
 			}
 			OR = {
 				GER = { controls_state = 199 }

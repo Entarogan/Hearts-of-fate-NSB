@@ -17,13 +17,4 @@ characters={
 			}
 		}
 	}
-	HUN_karoly_beregfy={
-		name="Károly Beregfy"
-		portraits={
-			army={
-				small="GFX_idea_advisor_unknown"
-				large="GFX_Portrait_hungary_karoly_beregfy"
-			}
-		}
-	}
 }

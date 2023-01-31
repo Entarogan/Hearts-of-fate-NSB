@@ -151,12 +151,6 @@ ENG_unit_production = {
 		id = infantry
 		value = 10
 	}
-  
-    ai_strategy = {
-		type = equipment_production_factor
-		id = motorised_infantry
-		value = 30
-	}
 	
 	ai_strategy = {
 		type = equipment_production_factor
@@ -239,9 +233,16 @@ royal_air_force = {
 
 	enable = {
 		date > 1939.4.1
+		has_deployed_air_force_size = {
+			type = fighter
+			size < 2500
+		}
 	}
 	abort = {
-		date < 1939.4.1
+		has_deployed_air_force_size = {
+			type = fighter
+			size > 3000
+		}
 	}
 	
 	ai_strategy = {
@@ -811,12 +812,18 @@ ENG_growing_confidence_in_the_air = {
 			has_government = neutrality
 		}
 		date > 1938.1.1
+
+		has_deployed_air_force_size = {
+			type = fighter
+			size < 3750
+		}
+
 	}
 	abort_when_not_enabled = yes
  
 	ai_strategy = {
 		type = air_factory_balance
-		value = 60
+		value = 100
 	} 
 }
 

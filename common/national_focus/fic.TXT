@@ -15,37 +15,40 @@ focus_tree = {
 	continuous_focus_position = { x = 20 y = 1500 }	
 
   ##########总督上任#########
-  focus = {
-      id = FIC_New_governor
-      icon = GFX_focus_hol_the_foundations_of_defense
-      cost = 5
-      x = 6
-      y = 0
+	focus = {
+		id = FIC_New_governor
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 5
+		x = 6
+		y = 0
 
-      available ={
-         always = no
-      }
+		available ={
+			always = no
+		}
 
-      bypass = {
-      or = {
-          has_country_leader = { name = "St. Martha"  ruling_only = yes }
-          has_country_leader = { name = "Duc de Richelieu"  ruling_only = yes }      
-          has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }    
-      }
-      }
+		bypass = {
+			or = {
+				has_country_leader = { name = "St. Martha"  ruling_only = yes }
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = FIC_duc_de_richelieu
+				}   
+				has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }    
+			}
+		}
 
-      completion_reward = {
-         custom_effect_tooltip = FIC_New_governor_tt
-      }
+		completion_reward = {
+			custom_effect_tooltip = FIC_New_governor_tt
+		}
 
-      ai_will_do = {
-        factor = 10
-      }
+		ai_will_do = {
+			factor = 10
+		}
 
-      
-      
-      
-  }
+	  
+	  
+	  
+	}
 
   focus = {
       id = FIC_Frenchization_policy
@@ -263,7 +266,10 @@ focus_tree = {
 
       available ={
       or ={
-          has_country_leader = { name = "Duc de Richelieu"  ruling_only = yes }
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = FIC_duc_de_richelieu
+			}
           has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }  
       }
       }
@@ -905,7 +911,10 @@ focus_tree = {
 
       available ={
       or ={
-          has_country_leader = { name = "Duc de Richelieu"  ruling_only = yes }
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = FIC_duc_de_richelieu
+				}
           has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }  
       }
       has_completed_focus = FIC_Restore_order
@@ -2924,7 +2933,10 @@ focus_tree = {
 
       available ={
       or ={
-          has_country_leader = { name = "Duc de Richelieu"  ruling_only = yes }
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = FIC_duc_de_richelieu
+				}
           has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }  
       }
       }
@@ -3222,7 +3234,10 @@ focus_tree = {
 
       available ={
       or ={
-          has_country_leader = { name = "Duc de Richelieu"  ruling_only = yes }
+				has_country_leader  = {
+					ruling_only  = yes 
+					character = FIC_duc_de_richelieu
+				}
           has_country_leader = { name = "Marie Antoinette"  ruling_only = yes }  
       }
           FIC = { is_subject_of = FRA }

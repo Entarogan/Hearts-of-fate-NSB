@@ -164,19 +164,19 @@ ideas = {
 
 		}
 
-    GER_fear_idea = {
+		GER_fear_idea = {
 
-      picture = man_low_legitimacy
+			picture = man_low_legitimacy
 
-      modifier = {
+			modifier = {
 				political_power_gain = -0.50
 				stability_factor = -0.50
-        war_support_factor = -0.50
-        surrender_limit = -0.50
+				war_support_factor = -0.50
+				surrender_limit = -0.50
 			}
 		}
 
-    GER_Versailles_Young_idea = {
+		GER_Versailles_Young_idea = {
 			picture = HUN_treaty_of_triannon
 
 			allowed = {
@@ -188,67 +188,67 @@ ideas = {
 			}
 
 			available = {
-        NOT = { GER = { has_war_with = FRA } }
-        NOT = { GER = { has_war_with = ENG } }
-        NOT = { GER = { has_war_with = USA } }
+				NOT = { GER = { has_war_with = FRA } }
+				NOT = { GER = { has_war_with = ENG } }
+				NOT = { GER = { has_war_with = USA } }
 			}
 
 			modifier = {
-        generate_wargoal_tension = 0.5
-        stability_factor = -0.30
-        production_speed_arms_factory_factor = -0.50
-        industrial_capacity_dockyard = -0.50
-        training_time_factor = 0.10
+				generate_wargoal_tension = 0.5
+				stability_factor = -0.30
+				production_speed_arms_factory_factor = -0.50
+				industrial_capacity_dockyard = -0.50
+				training_time_factor = 0.10
 			}
-    }
+		}
 
-    FRA_Versailles_Young_idea = {
-      picture = HUN_treaty_of_triannon
+		FRA_Versailles_Young_idea = {
+			picture = HUN_treaty_of_triannon
 
-      allowed = {
-        always = no
-      }
+			allowed = {
+			    always = no
+			}
 
-      allowed_civil_war = {
-        always = yes
-      }
+			allowed_civil_war = {
+			    always = yes
+			}
 
-      available = {
-        GER = { has_idea = GER_Versailles_Young_idea }
-      }
+			available = {
+			    GER = { has_idea = GER_Versailles_Young_idea }
+			}
 
-      modifier = {
-                stability_factor = 0.10
-        industrial_capacity_factory = 0.10
-        industrial_capacity_dockyard = 0.20
-      }
+			modifier = {
+				stability_factor = 0.10
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.20
+			}
 
-      targeted_modifier = {
-        tag = GER
-        generate_wargoal_tension_against = 0.50
-      }
-    }
+			targeted_modifier = {
+				tag = GER
+				generate_wargoal_tension_against = 0.50
+			}
+		}
 	
 		GER_CHI_chinese_three_year_plan_I = {
 
 			picture = generic_fascism_drift_2
 
-      allowed = {
-        always = no
-      }
+			allowed = {
+			    always = no
+			}
 
-      allowed_civil_war = {
-        always = no
-      }
+			allowed_civil_war = {
+			    always = no
+			}
 
-      available = {
-        CHI = {
-          OR = {
-            is_subject = no
-            NOT = { has_war_with = GER }
-          }
-        }
-      }
+			available = {
+				CHI = {
+					OR = {
+						is_subject = no
+						NOT = { has_war_with = GER }
+					}
+				}
+			}
 
 			removal_cost = -1
 			
@@ -303,14 +303,14 @@ ideas = {
 			picture = soviet_german_friendship
 
 			available = {
-			  NOT = { GER = { has_war_with = ITA } }
-        NOT = { ITA = { is_in_faction_with = FRA } }
-        NOT = { ITA = { is_in_faction_with = ENG } }
-        NOT = { GER = { is_in_faction_with = FRA } }
-        NOT = { GER = { is_in_faction_with = ENG } }
-      }
+				NOT = { GER = { has_war_with = ITA } }
+				NOT = { ITA = { is_in_faction_with = FRA } }
+				NOT = { ITA = { is_in_faction_with = ENG } }
+				NOT = { GER = { is_in_faction_with = FRA } }
+				NOT = { GER = { is_in_faction_with = ENG } }
+			}
 
-      allowed = {
+			allowed = {
 				always = no
 			}
 
@@ -350,7 +350,7 @@ ideas = {
 				armor = {
 					reliability = 0.05 
 					build_cost_ic = -0.05 
-          instant = yes
+					instant = yes
 				}
 			}
 		}
@@ -370,8 +370,8 @@ ideas = {
 			picture = generic_air_bonus
 
 			modifier = {
-        naval_strike_targetting_factor = 0.25
-        naval_strike_agility_factor = 0.15                
+				naval_strike_targetting_factor = 0.25
+				naval_strike_agility_factor = 0.15                
 			}
            
 		}
@@ -488,12 +488,12 @@ ideas = {
 			}
 
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			available = {
 				NOT = { has_completed_focus = GER_Complete_the_20_ton_tank_project }
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+				NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -513,11 +513,11 @@ ideas = {
 			}
 
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			available = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -538,12 +538,12 @@ ideas = {
 			}
 	
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
   
 			available = {
 				has_completed_focus = GER_Complete_the_20_ton_tank_project
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+				NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			picture = GER_MAN
@@ -574,12 +574,12 @@ ideas = {
 			}
 		
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
     
 			available = {
 				has_completed_focus = GER_messerschmitt_1
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+				NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 	
 			picture = messerschmitt
@@ -605,12 +605,12 @@ ideas = {
 			}
 
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			available = {
 				has_completed_focus = GER_focke
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+				NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -630,11 +630,11 @@ ideas = {
 			}
 
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 
 			available = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -654,11 +654,11 @@ ideas = {
 			}
 			
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 
 			available = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -678,11 +678,11 @@ ideas = {
 			}
 
 			visible = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			available = {
-		    NOT = { has_country_flag = GER_End_monopoly_flag }
+		        NOT = { has_country_flag = GER_End_monopoly_flag }
 			}
 			
 			research_bonus = {
@@ -942,7 +942,7 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
-        ai_call_ally_desire_factor = 30
+				ai_call_ally_desire_factor = 30
 			}
 
 			targeted_modifier = {
@@ -1067,10 +1067,11 @@ ideas = {
 
 			modifier = {
 				production_speed_infrastructure_factor = 0.10
-				production_speed_rail_way_factor = 0.10
+				production_speed_rail_way_factor = 0.20
 				production_speed_supply_node_factor = 0.10
 
 				local_resources_factor = 0.10
+				global_building_slots_factor = 0.10
 			}
 		}
 
@@ -1079,10 +1080,10 @@ ideas = {
 			picture = generic_foreign_capital
 
 			available = {
-        NOT = { GER = { has_war_with = FRA } }
-        NOT = { GER = { has_war_with = ENG } }
-        NOT = { CHI = { has_war_with = FRA } }
-        NOT = { CHI = { has_war_with = ENG } }
+				NOT = { GER = { has_war_with = FRA } }
+				NOT = { GER = { has_war_with = ENG } }
+				NOT = { CHI = { has_war_with = FRA } }
+				NOT = { CHI = { has_war_with = ENG } }
 			}
 
 	    	allowed = {
@@ -1814,25 +1815,25 @@ ideas = {
 			targeted_modifier = {
 				tag = ENG
 				attack_bonus_against = 0.20
-        breakthrough_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
 			}
 
 			targeted_modifier = {
 				tag = FRA
 				attack_bonus_against = 0.20
-        breakthrough_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
 			}
 
 			targeted_modifier = {
 				tag = BEL
 				attack_bonus_against = 0.20
-        breakthrough_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
 			}
 
 			targeted_modifier = {
 				tag = LUX
 				attack_bonus_against = 0.20
-        breakthrough_bonus_against = 0.10
+				breakthrough_bonus_against = 0.10
 			}
 
 		}

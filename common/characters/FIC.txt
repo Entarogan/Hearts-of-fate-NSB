@@ -48,11 +48,11 @@ characters={
 		}
 		navy_leader={
 			traits={ fleet_protector superior_tactician spotter }
-			skill=4
+			skill=5
 			attack_skill=4
 			defense_skill=3
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=4
+			coordination_skill=5
 			legacy_id=-1
 		}
 		country_leader={

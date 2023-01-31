@@ -965,14 +965,7 @@ jap_early_part_beware_allies = {
 
 	enable = {
 		USA = { is_in_faction = no }
-		or = { 
-        set_global_flag = JAP_toratoratora
-		focus_progress = {
-			focus = JAP_secure_the_philippines
-			progress > 0
-		}
-        }
-		PHI = {	is_subject_of = USA }
+		has_global_flag = JAP_toratoratora
 		NOT = { has_war_together_with = ENG }
 	}
 	
@@ -1096,22 +1089,6 @@ JAP_USA_we_love_islands = {
 		type = area_priority
 		id = pacific
 		value = 80
-	}
-}
-
-JAP_we_will_mostly_fight_on_subjects = {
-
-	allowed = {
-		original_tag = JAP
-	}
-
-	enable = {
-		always = yes
-	}
-	
-	ai_strategy = {
-		type = produce_unit_for_subject_supply_chunks
-		value = 50
 	}
 }
 

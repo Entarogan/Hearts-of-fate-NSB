@@ -631,6 +631,13 @@ shared_focus = {
 
 		add_command_power = 50
 
+		if = {
+			limit = {
+				NOT = { has_idea = partial_economic_mobilisation }
+			}
+			add_ideas = partial_economic_mobilisation
+		}
+
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.33
@@ -757,6 +764,7 @@ shared_focus = {
 	available = {
 	}
 	bypass = {
+		has_country_flag = UKR_Anarchist_flag
 	}
 	available_if_capitulated = yes
 	completion_reward = {
@@ -875,7 +883,7 @@ shared_focus = {
 	relative_position_id = UKR_Fight_for_Ukraine
 	cost = 2
 	ai_will_do = {
-		factor = 400
+		factor = 650
 	}
 	available = {
 	}

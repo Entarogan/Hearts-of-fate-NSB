@@ -197,6 +197,11 @@ country_event = {
 	option = {
 		name = rus_diplo.4.b
 		#拒绝结盟
+
+		ai_chance = {
+			factor = 0
+		}
+
 		FROM = {
 			country_event = rus_diplo.6
 		}
@@ -217,6 +222,14 @@ country_event = {
 			limit = {
 				FROM = {
 					is_faction_leader = yes
+				}
+			}
+			every_country = {
+				limit = {
+				    is_in_faction_with = RUS
+				}
+				FROM = {
+				    add_to_faction = PREV
 				}
 			}
 			FROM = {

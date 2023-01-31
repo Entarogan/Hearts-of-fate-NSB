@@ -1211,14 +1211,14 @@ country_event = {
 		is_puppet = no
 
 		or = {
-      AND = { 
-        has_war_with = CZE
-        CZE = { controls_state = 74 }
-      }
-      AND = { 
-        has_war_with = HUN
-        HUN = { controls_state = 74 }
-      }
+			AND = { 
+				has_war_with = CZE
+				CZE = { controls_state = 74 }
+			}
+			AND = { 
+				has_war_with = HUN
+				HUN = { controls_state = 74 }
+			}
 		}
 
 	}
@@ -1233,8 +1233,8 @@ country_event = {
 
 		if = {
 			limit = {
-        has_war_with = CZE
-        CZE = { controls_state = 74 }
+				has_war_with = CZE
+				CZE = { controls_state = 74 }
 			}
 			CZE = {
 				country_event = { id = germany.541 days = 1}
@@ -1244,8 +1244,8 @@ country_event = {
 
 		if = {
 			limit = {
-        has_war_with = HUN
-        HUN = { controls_state = 74 }
+				has_war_with = HUN
+				HUN = { controls_state = 74 }
 			}
 			HUN = {
 				country_event = { id = germany.541 days = 1}
@@ -1253,57 +1253,57 @@ country_event = {
 
 		}
 
-    hidden_effect = {
-      division_template = {
-        name = "Sudetenland Freikorps"				
-        division_names_group = GER_INF_01
-        regiments = {
-          infantry = { x = 0 y = 0 }
-          infantry = { x = 0 y = 1 }
-          infantry = { x = 0 y = 2 }
-          infantry = { x = 0 y = 3 }
-          infantry = { x = 0 y = 4 }
-        }
-        support = {
-          engineer = { x = 0 y = 0 }
-          recon = { x = 0 y = 1 }
-          artillery = { x = 0 y = 2 }
-        }	
-        priority = 1
-      }
-
-      load_oob = "GER_CZE_Freikorps"
-    }
-
-			if = {
-			limit = {
-        or = {
-          CZE = { controls_state = 74 }
-          HUN = { controls_state = 74 }
-        }
+		hidden_effect = {
+			division_template = {
+				name = "Sudetenland Freikorps"				
+				division_names_group = GER_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 0 y = 4 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}	
+				priority = 1
 			}
-				74 = {
-          damage_building = { type = bunker damage = 2.1 province = 421 }
-          damage_building = { type = bunker damage = 4.3 province = 6485 }
-          damage_building = { type = bunker damage = 3.2 province = 3414 }
-          damage_building = { type = bunker damage = 2.7 province = 3583 }
+
+			load_oob = "GER_CZE_Freikorps"
+		}
+
+		if = {
+			limit = {
+				or = {
+					CZE = { controls_state = 74 }
+					HUN = { controls_state = 74 }
 				}
 			}
-
-			if = {
-			limit = {
-        or = {
-          CZE = { controls_state = 72 }
-          HUN = { controls_state = 72 }
-        }
+			74 = {
+				damage_building = { type = bunker damage = 2.1 province = 421 }
+				damage_building = { type = bunker damage = 4.3 province = 6485 }
+				damage_building = { type = bunker damage = 3.2 province = 3414 }
+				damage_building = { type = bunker damage = 2.7 province = 3583 }
 			}
-				72 = {
-          damage_building = { type = bunker damage = 5.2 province = 9567 }
-          damage_building = { type = bunker damage = 3.6 province = 9551 }
+		}
+
+		if = {
+			limit = {
+				or = {
+					CZE = { controls_state = 72 }
+					HUN = { controls_state = 72 }
 				}
 			}
+			72 = {
+				damage_building = { type = bunker damage = 5.2 province = 9567 }
+				damage_building = { type = bunker damage = 3.6 province = 9551 }
+			}
+		}
 
-      GER_increase_propaganda = yes
+		GER_increase_propaganda = yes
 
 	}
 }
@@ -4039,54 +4039,6 @@ if = {
 			news_event = { hours = 1 id = ger_news.6 }
 		}
 
-	}
-
-}
-
-news_event = {
-	id = ger_news.6
-	title = ger_news.6.t
-	desc = ger_news.6.desc
-	picture = GFX_news_event_polish_tanks
-
-	major = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = ger_news.6.a
-		trigger = {
-			is_in_faction = yes
-			NOT = {
-				is_in_faction_with = JAP
-			}
-			NOT = {
-				is_in_faction_with = ENG
-			}
-		}
-	}
-
-	#
-	option = {
-		name = ger_news.6.b
-		trigger = {
-			is_in_faction_with = JAP
-		}
-
-	}
-
-	option = {
-		name = ger_news.6.c
-		trigger = {
-			is_in_faction_with = ENG
-		}
-	}
-
-	option = {
-		name = ger_news.6.e
-		trigger = {
-			is_in_faction = no
-		}
 	}
 
 }

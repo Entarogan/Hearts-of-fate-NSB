@@ -71,7 +71,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 
 		available = {
@@ -109,10 +109,10 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal }
 		relative_position_id = USA_continue_the_new_deal
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 
@@ -130,19 +130,6 @@ focus_tree = {
 			add_stability = -0.05
 			custom_effect_tooltip = available_political_advisor
 		    show_ideas_tooltip = earl_browder
-		    if = {
-		    	limit = {
-		    		is_ai = yes
-		    		OR = {
-						has_country_flag = USA_AI_RANDOM_COMMUNIST
-						has_game_rule = {
-							rule = USA_ai_behavior
-							option = COMMUNIST
-						}
-					}
-		    	}
-		    	add_ideas = earl_browder
-		    }
 		}
 	}
 	focus = {
@@ -155,7 +142,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -183,7 +170,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -448,7 +435,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -478,7 +465,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 200
 		}
 
 		available = {
@@ -527,7 +514,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -556,7 +543,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -604,7 +591,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 200
 		}
 
 		available = {
@@ -635,7 +622,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -721,7 +708,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -758,7 +745,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 25
 		}
 
 		available = {
@@ -1160,9 +1147,9 @@ focus_tree = {
 		x = -4
 		y = 1
 		cost = 10
-		#ai_will_do = {
-		#	factor = 10
-		#}
+		ai_will_do = {
+			factor = 100
+		}
 
 		available_if_capitulated = yes
 		search_filters = {FOCUS_FILTER_POLITICAL}
@@ -1180,7 +1167,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -1220,7 +1207,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -1260,7 +1247,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -1281,7 +1268,7 @@ focus_tree = {
 				limit = {
 					has_state_flag = USA_federal_housing_act
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 		}
 		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
@@ -1299,7 +1286,7 @@ focus_tree = {
 						}
 						is_core_of = ROOT
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = USA_federal_housing_act
 				}
 				random_owned_controlled_state = {
@@ -1312,7 +1299,7 @@ focus_tree = {
 						is_core_of = ROOT
 						not = { has_state_flag = USA_federal_housing_act }
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = USA_federal_housing_act
 				}
 				random_owned_controlled_state = {
@@ -1325,7 +1312,7 @@ focus_tree = {
 						is_core_of = ROOT
 						not = { has_state_flag = USA_federal_housing_act }
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = USA_federal_housing_act
 				}
 				random_owned_controlled_state = {
@@ -1338,7 +1325,7 @@ focus_tree = {
 						is_core_of = ROOT
 						not = { has_state_flag = USA_federal_housing_act }
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = USA_federal_housing_act
 				}
 				random_owned_controlled_state = {
@@ -1351,7 +1338,7 @@ focus_tree = {
 						is_core_of = ROOT
 						not = { has_state_flag = USA_federal_housing_act }
 					}
-					add_extra_state_shared_building_slots = 1
+					add_extra_state_shared_building_slots = 2
 					set_state_flag = USA_federal_housing_act
 				}
 			}
@@ -1367,7 +1354,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 300
 		}
 
 		available = {
@@ -1399,16 +1386,16 @@ focus_tree = {
 		relative_position_id = USA_wpa
 		cost = 10
 		ai_will_do = {
-			factor = 1000
+			factor = 200
 		}
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 
-      modify_building_resources = {
-         building = synthetic_refinery
-         resource = rubber
-         amount = 2
-      }
+			modify_building_resources = {
+				building = synthetic_refinery
+				resource = rubber
+				amount = 2
+			}
 
 			add_tech_bonus = {
 				name = USA_rubber_reserve_company
@@ -1431,7 +1418,7 @@ focus_tree = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-		mutually_exclusive = { focus = USA_neutrality_act }
+		
 		continue_if_invalid = yes
 		x = 0
 		y = 1
@@ -1537,7 +1524,7 @@ focus_tree = {
 		x = -1
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
-		mutually_exclusive = { focus = USA_focus_on_asia }
+		
 		relative_position_id = USA_limited_intervention
 		cost = 10
 
@@ -1620,7 +1607,7 @@ focus_tree = {
 		x = 1
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
-		mutually_exclusive = { focus = USA_focus_on_europe }
+		
 		relative_position_id = USA_limited_intervention
 		cost = 10
 
@@ -1721,9 +1708,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_black_chamber
 		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 300
+		}
 
 		available_if_capitulated = yes
 		available = {
@@ -1771,12 +1758,12 @@ focus_tree = {
 		x = 4
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
-		mutually_exclusive = { focus = USA_limited_intervention }
+		
 		relative_position_id = USA_continue_the_new_deal
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 300
 		}
 
 		available = {
@@ -1903,10 +1890,10 @@ focus_tree = {
 		relative_position_id = USA_neutrality_act
 		cost = 7
 		ai_will_do = {
-			factor = 100
+			factor = 300
 		}
 		available = {
-			democratic > 0.95
+			# democratic > 0.95
 		}
 		bypass = {
 			AND = {
@@ -2033,7 +2020,7 @@ focus_tree = {
 				has_war = yes
 				has_war_support > 0.3
 			}
-			democratic > 0.95
+			# democratic > 0.95
 		}
 		continue_if_invalid = yes
 		x = 0
@@ -2041,7 +2028,7 @@ focus_tree = {
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 5
 		ai_will_do = {
-			factor = 100
+			factor = 300
 		}
 
 		available_if_capitulated = yes
@@ -2081,11 +2068,11 @@ focus_tree = {
 		relative_position_id = USA_the_giant_wakes
 		cost = 10
 		ai_will_do = {
-			factor = 100
+			factor = 300
 		}
 		available_if_capitulated = yes
 		available = {
-			democratic > 0.95
+			# democratic > 0.95
 		}
 		completion_reward = {
 
@@ -2121,6 +2108,10 @@ focus_tree = {
 				has_war = yes
 				has_war_support > 0.3
 			}
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 
 		continue_if_invalid = yes
@@ -2188,7 +2179,7 @@ focus_tree = {
 								is_owned_and_controlled_by = USA
 								free_building_slots = {
 									building = infrastructure
-									size < 4
+									size < 2
 								}
 							}
 						}
@@ -2198,7 +2189,7 @@ focus_tree = {
 					limit = { 
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 						OR = {
 							region = 117
@@ -2209,7 +2200,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2221,12 +2212,12 @@ focus_tree = {
 						is_owned_and_controlled_by = USA
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2241,7 +2232,7 @@ focus_tree = {
 								is_owned_and_controlled_by = USA
 								free_building_slots = {
 									building = infrastructure
-									size < 4
+									size < 2
 								}
 							}
 						}
@@ -2251,7 +2242,7 @@ focus_tree = {
 					limit = { 
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 						OR = {
 							region = 117
@@ -2262,7 +2253,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2274,12 +2265,12 @@ focus_tree = {
 						is_owned_and_controlled_by = USA
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2294,7 +2285,7 @@ focus_tree = {
 								is_owned_and_controlled_by = USA
 								free_building_slots = {
 									building = infrastructure
-									size < 4
+									size < 2
 								}
 							}
 						}
@@ -2304,7 +2295,7 @@ focus_tree = {
 					limit = { 
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 						OR = {
 							region = 117
@@ -2315,7 +2306,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2327,12 +2318,12 @@ focus_tree = {
 						is_owned_and_controlled_by = USA
 						free_building_slots = {
 							building = infrastructure
-							size > 3
+							size > 1
 						}
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 					set_state_flag = USA_military_construction_3Inf
@@ -2358,9 +2349,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_military_construction
 		cost = 7
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 100
+		}
 		complete_tooltip = {
 			every_state = {
 				limit = { has_state_flag = USA_USACE_projects_3AF }
@@ -2483,7 +2474,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		mutually_exclusive = { focus = USA_continue_the_new_deal }
 
@@ -2511,7 +2502,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -2547,7 +2538,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -2585,7 +2576,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -2620,7 +2611,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 100
 		}
 
 		available = {
@@ -2651,7 +2642,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 200
 		}
 
 		available = {
@@ -2686,7 +2677,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 		available = {
 
@@ -2703,7 +2694,7 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 		    show_ideas_tooltip = charles_coughlin
-		    add_popularity = { ideology = fascism popularity = 0.05 }
+		    # add_popularity = { ideology = fascism popularity = 0.05 }
 		     if = {
 		    	limit = {
 		    		is_ai = yes
@@ -2737,7 +2728,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		cancel_if_invalid = no
@@ -2766,7 +2757,7 @@ focus_tree = {
 		}
 
 		available = {
-
+			always = no
 		}
 		
 		bypass = {
@@ -2885,7 +2876,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -2913,11 +2904,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
+			factor = 100
 		}
 		
 		bypass = {
@@ -2945,11 +2932,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
+			factor = 100
 		}
 		
 		bypass = {
@@ -2975,7 +2958,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -3178,7 +3161,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 
 		available = {
@@ -3275,7 +3258,7 @@ focus_tree = {
 		relative_position_id = USA_war_powers_act
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 		completion_reward = {
 			add_ideas = USA_world_police
@@ -3948,7 +3931,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -3968,8 +3951,8 @@ focus_tree = {
 		relative_position_id = USA_intervention_in_the_americas
 		cost = 5
 
-		ai_will_do = {
-			factor = 1
+		bypass = {
+			always = yes
 		}
 
 		available = {
@@ -3997,7 +3980,10 @@ focus_tree = {
 		relative_position_id = USA_intervention_in_the_americas
 		cost = 5
 		ai_will_do = {
-			factor = 2
+			factor = 50
+		}
+		available = {
+			date > 1942.1.1
 		}
 		completion_reward = {
 			custom_effect_tooltip = USA_reinforce_monroe_doctrine_tt
@@ -4046,7 +4032,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -4178,7 +4164,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -4208,7 +4194,7 @@ focus_tree = {
 		}
 			
 		bypass = {
-	
+			always = yes
 		}
 
 		
@@ -4225,7 +4211,9 @@ focus_tree = {
 		prerequisite = { focus = USA_intervention_in_europe }
 		available = {
 		}
-
+		bypass = {
+			always = yes
+		}
 		continue_if_invalid = yes
 		available_if_capitulated = yes
 
@@ -4276,9 +4264,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_war_plan_black
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 		completion_reward = {
 			ENG = {
@@ -4309,9 +4297,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_intervention_in_europe
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		bypass = {
+			always = yes
+		}
 
 		available_if_capitulated = yes
 
@@ -4362,9 +4350,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_intervention_in_europe
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		bypass = {
+			always = yes
+		}
 
 		available_if_capitulated = yes
 
@@ -4393,7 +4381,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -4422,7 +4410,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -4484,9 +4472,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = USA_intervention_in_asia
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		bypass = {
+			always = yes
+		}
 
 
 		completion_reward = {
@@ -4514,7 +4502,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-
+			always = yes
 		}
 
 		
@@ -4541,9 +4529,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_intervention_in_asia
 		cost = 5
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 1
+		}
 		completion_reward = {
 			650 = {
 				#Fortify naval bases
@@ -4635,10 +4623,10 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		x = 58
 		y = 0
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 300
 		}
 
 		available = {
@@ -4717,7 +4705,7 @@ focus_tree = {
 		relative_position_id = USA_selective_training_act
 		cost = 10
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available_if_capitulated = yes
@@ -4751,7 +4739,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -4815,7 +4803,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 
 		available = {
@@ -4844,7 +4832,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
 
 		available = {
@@ -5037,10 +5025,10 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -5071,10 +5059,10 @@ focus_tree = {
 		y = 2
 		prerequisite = { focus = USA_build_the_pentagon }
 		relative_position_id = USA_war_department
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
-			factor = 1
+			factor = 100
 		}
 
 		available = {
@@ -5111,9 +5099,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 300
+		}
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
 		available_if_capitulated = yes
@@ -5135,7 +5123,7 @@ focus_tree = {
 		id = USA_air_support
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = USA_air_war_plans_division }
-		mutually_exclusive = { focus = USA_strategic_bombing }
+		
 		x = -1
 		y = 1
 		relative_position_id = USA_air_war_plans_division
@@ -5155,7 +5143,7 @@ focus_tree = {
 		id = USA_strategic_bombing
 		icon = GFX_goal_generic_occupy_start_war
 		prerequisite = { focus = USA_air_war_plans_division }
-		mutually_exclusive = { focus = USA_air_support }
+		
 		x = 1
 		y = 1
 		relative_position_id = USA_air_war_plans_division
@@ -5380,7 +5368,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
+			factor = 300
 		}
 
 		available = {
@@ -5517,9 +5505,9 @@ focus_tree = {
 		x = 2
 		y = 1
 		cost = 10
-		#ai_will_do = {
-		#	factor = 1
-		#}
+		ai_will_do = {
+			factor = 300
+		}
 		prerequisite = { focus = USA_two_ocean_navy_act }
 		relative_position_id = USA_two_ocean_navy_act
 		available_if_capitulated = yes
@@ -5534,7 +5522,7 @@ focus_tree = {
 		id = USA_battleship_primacy
 		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = USA_bureau_of_ships }
-		mutually_exclusive = { focus = USA_carrier_primacy }
+		
 		x = -3
 		y = 1
 		relative_position_id = USA_bureau_of_ships
@@ -5639,7 +5627,7 @@ focus_tree = {
 		id = USA_carrier_primacy
 		icon = GFX_goal_generic_navy_carrier
 		prerequisite = { focus = USA_bureau_of_ships }
-		mutually_exclusive = { focus = USA_battleship_primacy }
+		
 		x = -1
 		y = 1
 		relative_position_id = USA_bureau_of_ships

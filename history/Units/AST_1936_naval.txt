@@ -8,10 +8,6 @@
 			name = "Australian Squadron"
 			location = 12406 # Sydney
       ship = { name = "HMAS Australasia" definition = carrier start_experience_factor = 0.25 equipment = { ship_hull_carrier_conversion_bb = { amount = 1 owner = AST version_name = "Courageous Class" } } 
-				air_wings = {
-					cv_fighter_equipment_0 =  { owner = "ENG" amount = 18 }
-					cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 12 }
-				}
 			}
       ship = { name = "HMAS Geroge V" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = AST version_name = "KGV Class" } } }
 			ship = { name = "HMAS Prince of Wales" definition = battleship start_experience_factor = 0.25 equipment = { ship_hull_heavy_1 = { amount = 1 owner = AST version_name = "KGV Class" } } }

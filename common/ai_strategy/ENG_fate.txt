@@ -199,7 +199,7 @@ careful_with_early_invasions = {
 					is_ai = yes
 					OR = {
 						NOT = { has_war_with = GER  }
-						NOT = { surrender_progress > 0.2 }
+						NOT = { surrender_progress > 0.3 }
 						NOT = { casualties > 2000000 }
 					}
 				}
@@ -474,7 +474,7 @@ ENG_wants_arms = {
 		  has_government = neutrality
 		}
 		date > 1937.6.1
-		date < 1939.1.1
+		date < 1939.4.1
 		has_war = no
 	}
 
@@ -490,6 +490,12 @@ ENG_wants_arms = {
 		id = arms_factory
 		value = 59
 	}
+
+	ai_strategy = {
+		type = air_factory_balance
+		value = 30
+	}
+
 }
 
 ENG_balance_of_power_GER = {
@@ -1062,6 +1068,403 @@ ENG_blockade_Mediterranean = {
 	ai_strategy = {
 		type = strike_force_home_base
 		id = 68 # ！！！！！
+	}
+
+}
+
+ENG_protect_your_island_please = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = britain_hof
+		value = 55 
+	}
+
+	ai_strategy = {
+		type = put_unit_buffers
+
+		ratio = 0.2
+
+		states = {
+			127
+			123
+			126
+			338
+			125
+			129
+			128
+			122
+			130
+			132
+			131
+			121
+			133			
+		}
+
+		area = suez
+
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+
+}
+
+ENG_protect_malaya = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = malaya_hof
+		value = 10
+	}
+}
+
+ENG_not_get_involved_in_tibet_please = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = area_priority
+		id = indian_north_hof
+		value = -20
+	}
+}
+
+We_can_conquer_it_from_the_land = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		date < 1940.6.1
+		
+		is_in_faction_with = FRA
+		FRA = { has_capitulated = no }
+
+		has_war_with = GER 
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = invade
+		id = "GER"			
+		value = -500
+	}
+	
+}
+
+ENG_armored_production = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		has_idea = tot_economic_mobilisation
+		threat > 0.6
+		has_war = yes
+		has_tech = mechanised_infantry
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -30
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = -5
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 25
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = armor
+		value = 10
+	}
+
+	ai_strategy = {
+		type = equipment_production_factor
+		id = infantry
+		value = -5
+	}
+	
+	ai_strategy = {
+		type = equipment_production_factor
+		id = artillery
+		value = -5
+	}
+
+}
+
+ENG_more_mech = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		has_idea = tot_economic_mobilisation
+		threat > 0.6
+		has_war = yes
+		has_tech = mechanised_infantry
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor 
+		id = mechanized_equipment 
+		value = 50
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor 
+		id = medium_tank_artillery_chassis 
+		value = 30
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor 
+		id = medium_tank_artillery_chassis 
+		value = 10
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor 
+		id = medium_tank_destroyer_chassis
+		value = 10
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor 
+		id = medium_tank_aa_chassis
+		value = 4
+	}
+
+}
+
+ENG_motorized_10_factory = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		num_of_military_factories > 10
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = motorized            
+		value = 2 
+	}
+
+}
+
+ENG_motorized_25_factory = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		num_of_military_factories > 25
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = motorized            
+		value = 2 
+	}
+
+}
+
+ENG_motorized_40_factory = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		num_of_military_factories > 40
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = motorized            
+		value = 1
+	}
+
+}
+
+ENG_mechanized_40_factory = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		has_tech = mechanised_infantry
+		num_of_military_factories > 40
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = { 
+		type = equipment_production_min_factories 
+		id = infantry 
+		value = 8 
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories 
+		id = support 
+		value = 6 
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = mechanized            
+		value = 12 
+	}
+
+}
+
+ENG_retreat_to_the_isles = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		any_home_area_neighbor_country = { has_war_with = ROOT } #ENG has no home_area neighbours unless invaded
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		country_trigger = {
+			ROOT = { any_home_area_neighbor_country = { tag = PREV.PREV } }
+		}
+		value = 100
+	}
+	ai_strategy = {
+		type = garrison
+		value = 70
+	}
+}
+
+ENG_want_a_improved_tank = {
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		has_tech = mechanised_infantry
+		has_tech = improved_medium_tank_chassis
+
+		has_army_manpower = { size > 1199999 }
+		has_deployed_air_force_size = {
+			type = fighter
+			size > 4000
+		}
+	}
+	
+	abort = {
+		has_tech = main_battle_tank_chassis
+	}
+
+	ai_strategy = { 
+		type = equipment_production_min_factories       
+		id = mechanized            
+		value = 4
+	}
+
+	ai_strategy = { 
+		type = equipment_variant_production_factor       
+		id = mechanized_equipment                
+		value = 30 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_chassis 
+		value = 50 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = heavy_tank_chassis 
+		value = 30
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_artillery_chassis
+		value = 20 
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_destroyer_chassis
+		value = 20
+	}
+
+    ai_strategy = { 
+		type = equipment_variant_production_factor      
+		id = medium_tank_aa_chassis
+		value = 20
 	}
 
 }

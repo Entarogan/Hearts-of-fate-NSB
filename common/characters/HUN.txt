@@ -1,6 +1,6 @@
 characters={
 	HUN_lajos_veress={
-		name="Lajos Veress"
+		name=HUN_lajos_veress
 		portraits={
 			army={
 				small="GFX_Portrait_hungary_lajos_veress_small"
@@ -18,7 +18,7 @@ characters={
 		}
 	}
 	HUN_ferenc_feketehalmyczeydner={
-		name="Ferenc Feketehalmy-Czeydner"
+		name=HUN_ferenc_feketehalmyczeydner
 		portraits={
 
 			army={
@@ -88,6 +88,11 @@ characters={
 			planning_skill=4
 			logistics_skill=4
 			legacy_id=4030
+			visible = {
+				NOT = { has_country_flag = HUN_Lakatos_Arrested_flag }
+				NOT = { has_country_flag = HUN_Bartoli_died_flag }
+				NOT = { has_country_flag = HUN_Bartoli_Arrested_flag }
+			}
 		}
 		advisor={
 			slot = high_command
@@ -99,6 +104,7 @@ characters={
 			available = {
 				NOT = { has_country_flag = HUN_Lakatos_Arrested_flag }
 				NOT = { has_country_flag = HUN_Bartoli_died_flag }
+				NOT = { has_country_flag = HUN_Bartoli_Arrested_flag }
 			}
 			traits = {
 				army_infantry_2
@@ -110,7 +116,7 @@ characters={
 		}
 	}
 	HUN_elizabeth_bathory={
-		name=hun_bathory
+		name=HUN_elizabeth_bathory
 		portraits={
 			civilian={
 				large="gfx/leaders/HUN/Portrait_Elizabathe_Bathory_General.dds"
@@ -148,7 +154,7 @@ characters={
 		}
 	}
 	HUN_attila={
-		name=HUN_Attila_army_chief
+		name=HUN_attila
 		portraits={
 			civilian={
 				large="gfx/leaders/HUN/Portrait_Attila.dds"
@@ -166,6 +172,9 @@ characters={
 			planning_skill=4
 			logistics_skill=4
 			legacy_id=4032
+			visible = {
+				NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+			}
 		}
 		country_leader={
 			ideology=valkist
@@ -191,8 +200,8 @@ characters={
 			}
 		}
 	}
-	HUN_Árpád_szakasits={
-		name="Árpád Szakasits"
+	HUN_arpad_szakasits={
+		name=HUN_arpad_szakasits
 		portraits={
 			civilian={
 				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
@@ -205,8 +214,8 @@ characters={
 			id=-1
 		}
 	}
-	HUN_géza_lakatos={
-		name="Géza Lakatos"
+	HUN_geza_lakatos={
+		name=HUN_geza_lakatos
 		portraits={
 			army={
 				small="GFX_Portrait_hungary_geza_lakatos_small"
@@ -221,10 +230,13 @@ characters={
 			planning_skill=3
 			logistics_skill=2
 			legacy_id=4015
+			visible = {
+				NOT = { has_country_flag = HUN_Lakatos_Arrested_flag }
+			}
 		}
 	}
-	HUN_iván_hindy={
-		name="Iván Hindy"
+	HUN_ivan_hindy={
+		name=HUN_ivan_hindy
 		portraits={
 			army={
 				small="GFX_Portrait_hungary_ivan_hindy_small"
@@ -241,8 +253,8 @@ characters={
 			legacy_id=4016
 		}
 	}
-	HUN_károly_beregfy={
-		name="Károly Beregfy"
+	HUN_karoly_beregfy={
+		name=HUN_karoly_beregfy
 		portraits={
 			army={
 				small="GFX_Portrait_hungary_karoly_beregfy_small"
@@ -256,10 +268,13 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=4017
+			visible = {
+				NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+			}
 		}
 	}
-	HUN_döme_sztójay={
-		name="Döme Sztójay"
+	HUN_Dome_Sztojay={
+		name=HUN_Dome_Sztojay
 		portraits={
 			army={
 				large="gfx/leaders/HUN/Portrait_Dome_Sztojay.dds"
@@ -274,6 +289,9 @@ characters={
 			planning_skill=1
 			logistics_skill=1
 			legacy_id=4020
+			visible = {
+				NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+			}
 		}
 		advisor={
 			slot = political_advisor
@@ -326,8 +344,8 @@ characters={
 			}
 		}
 	}
-	HUN_alajos_béldy={
-		name="Alajos Béldy"
+	HUN_alajos_beldy={
+		name=HUN_alajos_beldy
 		portraits={
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_alajos_beldy.png"
@@ -344,8 +362,8 @@ characters={
 			legacy_id=4022
 		}
 	}
-	HUN_béla_miklós={
-		name="Béla Miklós"
+	HUN_bela_miklos={
+		name=HUN_bela_miklos
 		portraits={
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_bela_miklos.png"
@@ -396,7 +414,7 @@ characters={
 		}
 	}
 	HUN_ferenc_farkas={
-		name="Ferenc Farkas"
+		name=HUN_ferenc_farkas
 		portraits={
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_Ferenc_Farkas.png"
@@ -446,8 +464,8 @@ characters={
 			}
 		}
 	}
-	HUN_zoltán_szügyi={
-		name="Zoltán Szügyi"
+	HUN_Zoltan_Szugyi={
+		name=HUN_Zoltan_Szugyi
 		portraits={
 			army={
 				large="gfx/leaders/HUN/Portrait_HUN_Zoltan_Szugyi.png"
@@ -464,8 +482,8 @@ characters={
 			legacy_id=4031
 		}
 	}
-	HUN_miklós_horthy={
-		name=HUN_Horthy_Miklos
+	HUN_miklos_horthy={
+		name=HUN_miklos_horthy
 		portraits={
 			army={
 				large="GFX_Portrait_hungary_miklos_horthy_admiral"
@@ -480,6 +498,12 @@ characters={
 			maneuvering_skill=3
 			coordination_skill=3
 			legacy_id=556
+			visible = {
+				NOT = {
+					has_country_flag = HUN_Horty_Arrested_flag
+					has_country_flag = HUN_Horty_died_flag
+				}
+			}
 		}
 		advisor={
 			slot = navy_chief

@@ -2254,6 +2254,17 @@ SOV_propaganda_campaigns = {
 		ai_will_do = {
 			base = 2
 			modifier = {
+				factor = 5
+				date < 1938.7.2
+				NOT = { has_completed_focus = SOV_Humane_communism }
+			}
+			modifier = {
+				factor = 0
+				date > 1938.7.1
+				date < 1939.9.1
+				has_global_flag = UKR_still_on_earth_flag
+			}
+			modifier = {
 				factor = 0
 				any_country = {
 					SOV = { is_justifying_wargoal_against = PREV }
@@ -2286,7 +2297,7 @@ SOV_propaganda_campaigns = {
 
 		visible = {
 			OR = {
-				has_completed_focus = SOV_found_the_comecon
+				has_completed_focus = SOV_finish_five_year_plan
 				has_country_flag = SOV_debug_unlock_propaganda_campaigns_flag #debug
 			}
 			NOT = { has_country_flag = SOV_punished_for_breaking_flag }
@@ -2299,11 +2310,11 @@ SOV_propaganda_campaigns = {
 		cost = SOV_propaganda_peace_cost
 
 		modifier = {
-			stability_weekly = 0.005
+			stability_weekly = 0.01
 			consumer_goods_factor = -0.03
 			opinion_gain_monthly_factor = 0.25
 			enemy_justify_war_goal_time = 0.50
-			war_support_weekly = -0.005
+			war_support_weekly = -0.01
 			industrial_capacity_factory = -0.05
 		}
 

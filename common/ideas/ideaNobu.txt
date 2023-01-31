@@ -890,10 +890,10 @@ ideas = {
 			picture = FRA_motorized_focus
 			
 			modifier = {
-				supply_consumption_factor = -0.10
-				out_of_supply_factor = -0.10
+				supply_consumption_factor = -0.05
+				out_of_supply_factor = -0.1
 				no_supply_grace = 24
-				acclimatization_cold_climate_gain_factor = 0.25
+				acclimatization_cold_climate_gain_factor = 0.3
 			}
 		}
 		

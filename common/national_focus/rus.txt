@@ -29,6 +29,10 @@ focus_tree = {
 		y = 6
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 		available = {
       is_subject = no
@@ -55,6 +59,7 @@ focus_tree = {
 		available = {
 			or = {
 				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = rus_great_patriotic_war
 				has_completed_focus = RUS_Japan_Research_Permit
 			}
 			has_full_control_of_state = 409
@@ -113,6 +118,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			army_experience = 40
+
+			add_doctrine_cost_reduction = {
+				name = RUS_entente_observe_committee
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+
+		ai_will_do = {
+			factor = 1500
 		}
 
 	}
@@ -197,6 +213,12 @@ focus_tree = {
 		relative_position_id = rus_unite_white_movement
 		completion_reward = {
 			army_experience = 25
+
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+
 			add_timed_idea = {
 				idea = rus_prepare_for_protraction
 				days = 800
@@ -285,7 +307,7 @@ focus_tree = {
 	focus = {
 		id = rus_no_compromise_on_united_russia
 		icon = GFX_goal_generic_territory_or_war
-		cost = 5.00
+		cost = 2.00
 		prerequisite = {
 			focus = rus_fight_for_russia
 		}
@@ -324,29 +346,32 @@ focus_tree = {
 			has_army_manpower = { size > 999999 }
 			date > 1939.1.1
 
-			custom_trigger_tooltip = {
-				tooltip = SOV_has_not_lacking_industrialization_tt
-				NOT = { has_idea = SOV_lacking_industrialization_1 }			
-				NOT = { has_idea = SOV_lacking_industrialization_2 }			
-				NOT = { has_idea = SOV_lacking_industrialization_3 }			
-				NOT = { has_idea = SOV_lacking_industrialization_4 }			
-				NOT = { has_idea = SOV_lacking_industrialization_5 }			
-				NOT = { has_idea = SOV_lacking_industrialization_6 }			
-				NOT = { has_idea = SOV_lacking_industrialization_7 }			
-				NOT = { has_idea = SOV_lacking_industrialization_8 }				
-			}
-			custom_trigger_tooltip = {
-				tooltip = SOV_has_not_officers_purged_tt
-				NOT = { has_idea = officers_purged }			
-				NOT = { has_idea = officers_purged_2 }			
-				NOT = { has_idea = officers_purged_3 }			
-				NOT = { has_idea = officers_purged_4 }			
-				NOT = { has_idea = officers_purged_5 }			
-				NOT = { has_idea = officers_purged_6 }			
-				NOT = { has_idea = officers_purged_7 }			
-				NOT = { has_idea = officers_purged_8 }			
-				NOT = { has_idea = officers_purged_9 }			
-				NOT = { has_idea = officers_purged_10 }			
+			OR = {
+				has_global_flag = UKR_still_on_earth_flag
+				custom_trigger_tooltip = {
+					tooltip = SOV_has_not_lacking_industrialization_tt
+					NOT = { has_idea = SOV_lacking_industrialization_1 }			
+					NOT = { has_idea = SOV_lacking_industrialization_2 }			
+					NOT = { has_idea = SOV_lacking_industrialization_3 }			
+					NOT = { has_idea = SOV_lacking_industrialization_4 }			
+					NOT = { has_idea = SOV_lacking_industrialization_5 }			
+					NOT = { has_idea = SOV_lacking_industrialization_6 }			
+					NOT = { has_idea = SOV_lacking_industrialization_7 }			
+					NOT = { has_idea = SOV_lacking_industrialization_8 }				
+				}
+				custom_trigger_tooltip = {
+					tooltip = SOV_has_not_officers_purged_tt
+					NOT = { has_idea = officers_purged }			
+					NOT = { has_idea = officers_purged_2 }			
+					NOT = { has_idea = officers_purged_3 }			
+					NOT = { has_idea = officers_purged_4 }			
+					NOT = { has_idea = officers_purged_5 }			
+					NOT = { has_idea = officers_purged_6 }			
+					NOT = { has_idea = officers_purged_7 }			
+					NOT = { has_idea = officers_purged_8 }			
+					NOT = { has_idea = officers_purged_9 }			
+					NOT = { has_idea = officers_purged_10 }			
+				}
 			}
 		}
 		x = 0
@@ -414,6 +439,25 @@ focus_tree = {
 					target = UKR
 					type = annex_everything
 				}
+
+				every_other_country = {
+					limit = {
+						NOT = { TAG = UKR }
+						is_neighbor_of = ROOT
+						NOT = { has_war_with = ROOT }
+						or = {
+							is_in_faction_with = UKR
+							is_subject_of = UKR
+						}
+					}
+					ROOT = {
+						declare_war_on = {
+							target = PREV
+							type = puppet_wargoal_focus
+						}
+					}
+				}
+
 			}
 
 			custom_effect_tooltip = rus_redeem_our_territory_tt
@@ -432,7 +476,7 @@ focus_tree = {
 				factor = 2
 			}
 			modifier = {
-				date > 1939.1.1
+				date > 1939.3.1
 				factor = 1000
 			}
 			modifier = {
@@ -467,6 +511,11 @@ focus_tree = {
 		x = 13
 		y = 1
 		completion_reward = {
+
+			add_political_power = 150
+
+			add_command_power = 50
+
 			add_ideas = { rus_siberian_headquarter }
 
 			custom_effect_tooltip = available_military_high_command
@@ -477,7 +526,7 @@ focus_tree = {
 	focus = {
 		id = rus_local_militia_training
 		icon = GFX_goal_generic_military_sphere
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = rus_siberian_headquarter
 		}
@@ -496,7 +545,7 @@ focus_tree = {
 	focus = {
 		id = rus_promise_autonomy
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 5.00
+		cost = 2.00
 		prerequisite = {
 			focus = rus_fight_for_russia
 		}
@@ -507,7 +556,8 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_fight_for_russia
 		available = {
-      is_subject = no
+			always = no
+            is_subject = no
 		}
 		completion_reward = {
 			custom_effect_tooltip = rus_minorities_will_help_us_tt
@@ -533,21 +583,21 @@ focus_tree = {
 	focus = {
 		id = rus_diplomacy_turnover
 		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = RUS_entente_observe_committee
 		}
 		available = {
-      is_subject = no
-      or = {
-        RUS = { is_ai = yes }
-        GER = {
-          has_opinion = {
-            target = RUS
-            value > 0
-          }
-        }
-      }
+			is_subject = no
+			or = {
+				RUS = { is_ai = yes }
+				GER = {
+					has_opinion = {
+						target = RUS
+						value > 0
+					}
+				}
+			}
 			NOT = { has_government = democratic }
 			date > 1936.8.1	
 		}
@@ -706,6 +756,20 @@ focus_tree = {
 		y = 1
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = DEMOCRATIC_MONARCH
+					}
+				}
+			}
 		}
 		relative_position_id = rus_negotiation_with_democrats
 		completion_reward = {
@@ -769,6 +833,25 @@ focus_tree = {
 		
 		x = 7
 		y = 1
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_DEMOCRATIC_MONARCH
+					}
+				}
+			}
+		}
+
 		relative_position_id = rus_negotiation_with_democrats
 		completion_reward = {
 			add_political_power = 50
@@ -969,11 +1052,24 @@ focus_tree = {
 			is_subject = no
 			NOT = { has_government = fascism }
 		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
 		x = -1
 		y = 1
 		relative_position_id = rus_strengthen_tie_with_the_west
 		completion_reward = {
 			custom_effect_tooltip = RUS_seek_usa_support_tt
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 
 	}
@@ -1091,7 +1187,7 @@ focus_tree = {
 		}
 
 		ai_will_do = {
-			factor = 3000
+			factor = 2500
 		}
 
 	}
@@ -1109,7 +1205,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_romanov_foundation
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = 50
 			add_stability = 0.05
 			add_war_support = 0.05
 		}
@@ -1118,7 +1214,7 @@ focus_tree = {
 	focus = {
 		id = rus_strengthen_tie_with_the_west
 		icon = GFX_goal_support_democracy
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = RUS_entente_observe_committee
 		}
@@ -1131,7 +1227,18 @@ focus_tree = {
 		y = 1
 		relative_position_id = RUS_entente_observe_committee
 		completion_reward = {
-			add_ideas = { rus_strengthen_tie_with_the_west }
+			add_timed_idea = {
+				idea = rus_strengthen_tie_with_the_west
+				days = 365
+			}
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 
 	}
@@ -1708,7 +1815,7 @@ focus_tree = {
 			add_doctrine_cost_reduction = {
 				name = rus_lesson_from_the_great_war
 				cost_reduction = 0.33
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			} 
 		}
@@ -1913,6 +2020,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 0
+				has_war_with = SOV
+			}
 		}
 
 	}
@@ -2649,6 +2760,11 @@ focus_tree = {
 		available = {
 			JAP_will_support = yes
 		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
 		x = 0
 		y = 2
 		relative_position_id = rus_expand_japanese_advisory_group
@@ -2695,48 +2811,56 @@ focus_tree = {
 
 			add_equipment_to_stockpile = {
 				type = support_equipment
-				amount = 300
-				producer = JAP
-			}
-
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
 				amount = 400
 				producer = JAP
 			}
 
 			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = JAP
+			}
+
+			add_equipment_to_stockpile = {
 				type = anti_air_equipment
-				amount = 100
+				amount = 150
 				producer = JAP
 			}
 
 			add_equipment_to_stockpile = {
 				type = anti_tank_equipment
-				amount = 100
+				amount = 150
 				producer = JAP
 			}
 
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 
 	}
 	focus = {
 		id = rus_align_japan
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = RUS_entente_observe_committee
 		}
 		available = {
-      or = {
-        RUS = { is_ai = yes }
-        JAP = {
-          has_opinion = {
-            target = RUS
-            value > 0
-          }
-        }
-      }
+			or = {
+				RUS = { is_ai = yes }
+				JAP = {
+					has_opinion = {
+						target = RUS
+						value > 0
+					}
+				}
+			}
 			date > 1936.8.1			
 		}
 		x = 0
@@ -2754,6 +2878,14 @@ focus_tree = {
 					target = RUS
 					modifier = RUS_align_JAP_neg
 				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
 			}
 		}
 
@@ -2916,10 +3048,15 @@ focus_tree = {
 	focus = {
 		id = rus_russian_armor_corps
 		icon = GFX_goal_generic_army_tanks
-		cost = 5.00
+		cost = 4.00
 		prerequisite = {
 			focus = rus_siberian_cavalry
 		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
 		x = -1
 		y = 1
 		relative_position_id = rus_siberian_cavalry
@@ -3369,6 +3506,46 @@ focus_tree = {
 		relative_position_id = rus_siberian_headquarter
 		completion_reward = {
 			add_ideas = { rus_siberian_cavalry }
+
+			custom_effect_tooltip = SOV_restore_cossack_units_spawn_tt
+			hidden_effect = {
+				division_template = {
+					name = "Kazachya Kavaleryskaya Diviziya"
+					division_names_group = RUS_CAV_01
+					template_counter = 05
+
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+						mot_artillery_brigade = { x = 2 y = 0 }
+						light_armor = { x = 3 y = 0 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						light_tank_recon = { x = 0 y = 2 }
+					}
+				}
+
+				capital_scope = {
+					#Cossack Cavalry
+					create_unit = { 
+						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+					}
+					create_unit = { 
+						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0" owner = ROOT
+					}
+				}
+			}
+
 		}
 
 		ai_will_do = {
@@ -3395,6 +3572,13 @@ focus_tree = {
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Tsaritsyn
 
 			add_ideas = RUS_Ural_armor_production_idea
+
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
 
 			random_owned_controlled_state = {
 				limit = { 
@@ -3455,48 +3639,72 @@ focus_tree = {
 			show_ideas_tooltip = RUS_nyto_isomer
 		}
 
+		ai_will_do = {
+			factor = 300
+		}
+
 	}
 	focus = {
 		id = rus_fighter_production
 		icon = GFX_goal_generic_air_fighter2
-		cost = 5.00
+		cost = 2.00
 		prerequisite = {
 			focus = rus_siberian_air_forces_headquarter
 		}
 		available = {
 
 		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
 		x = 1
 		y = 1
 		relative_position_id = rus_siberian_air_forces_headquarter
 		completion_reward = {
-      add_equipment_to_stockpile = {
-        type = fighter_equipment_0
-        amount = 250
-        producer = JAP
-      }
+			add_equipment_to_stockpile = {
+				type = fighter_equipment_0
+				amount = 250
+				producer = JAP
+			}
 		}
+
+		ai_will_do = {
+			factor = 300
+		}
+
 	}
 	focus = {
 		id = rus_bomber_production
 		icon = GFX_focus_generic_wind_bomb
-		cost = 5.00
+		cost = 2.00
 		prerequisite = {
 			focus = rus_siberian_air_forces_headquarter
 		}
 		available = {
 
 		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
 		x = -1
 		y = 1
 		relative_position_id = rus_siberian_air_forces_headquarter
 		completion_reward = {
-      add_equipment_to_stockpile = {
-        type = tac_bomber_equipment_0
-        amount = 150
-        producer = JAP
-      }
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment_0
+				amount = 150
+				producer = JAP
+			}
 		}
+
+		ai_will_do = {
+			factor = 300
+		}
+
 	}
 	focus = {
 		id = rus_naval_doctrine
@@ -3747,7 +3955,7 @@ focus_tree = {
 			}
 
 			add_timed_idea = {
-				days = 400
+				days = 450
 				idea = rus_a_new_better_russia
 			}
 			#Volkhov-Murmansk
@@ -4090,12 +4298,12 @@ focus_tree = {
 	focus = {
 		id = rus_negotiation_with_army
 		icon = GFX_goal_tfv_can_compromise_with_quebec
-		cost = 2.00
+		cost = 1.00
 		prerequisite = {
 			focus = rus_internal_problem
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 1500
 		}
 		x = -1
 		y = 1
@@ -4114,12 +4322,12 @@ focus_tree = {
 	focus = {
 		id = rus_negotiation_with_navy
 		icon = GFX_goal_generic_navy_battleship
-		cost = 2.00
+		cost = 1.00
 		prerequisite = {
 			focus = rus_internal_problem
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 1500
 		}
 		x = 1
 		y = 1
@@ -4138,7 +4346,7 @@ focus_tree = {
 	focus = {
 		id = rus_negotiation_with_democrats
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = rus_negotiation_with_navy
 		}
@@ -4149,7 +4357,17 @@ focus_tree = {
 			focus = rus_prohibit_democratic_opponents
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 1500
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_MONARCH
+					}
+				}
+			}
 		}
 		x = 0
 		y = 1
@@ -4172,7 +4390,7 @@ focus_tree = {
 	focus = {
 		id = rus_prohibit_democratic_opponents
 		icon = GFX_goal_generic_more_territorial_claims
-		cost = 5.00
+		cost = 3.00
 		prerequisite = {
 			focus = rus_negotiation_with_army
 		}
@@ -4183,7 +4401,27 @@ focus_tree = {
 			focus = rus_negotiation_with_democrats
 		}
 		ai_will_do = {
-			factor = 1000
+			factor = 1500
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_DEMOCRATIC_MONARCH
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = DEMOCRATIC_MONARCH
+					}
+				}
+			}
 		}
 		x = 0
 		y = 1
@@ -4209,6 +4447,10 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 		available = {
 			is_subject = no
@@ -4271,6 +4513,10 @@ focus_tree = {
 		relative_position_id = rus_align_japan
 		completion_reward = {
 
+			add_political_power = 50
+
+			add_command_power = 50
+
 			swap_ideas = {
 				remove_idea = rus_japanese_advisory_group
 				add_idea = rus_japanese_advisory_group_2
@@ -4278,6 +4524,14 @@ focus_tree = {
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = RUS_tatenashi_sarashiki
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 
 	}
@@ -4830,6 +5084,10 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 1000
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
 		}
 
 	}
@@ -6290,6 +6548,7 @@ focus = {   ###土地分给农民
 		available = {
 			or = {
 				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = rus_great_patriotic_war
 				has_completed_focus = RUS_Japan_Research_Permit
 			}
 		}
@@ -6628,6 +6887,7 @@ focus = {   ###土地分给农民
 		available = {
 			or = {
 				has_completed_focus = rus_rise_of_russian_industry
+				has_completed_focus = rus_great_patriotic_war
 				has_completed_focus = RUS_Japan_Research_Permit
 			}
 		}
@@ -7722,25 +7982,25 @@ focus = {   ###土地分给农民
 			}
 			or = {
 				AND = {
-					has_war_with = UKR
-					202 = { #Kiev
-						NOT = { is_owned_by = ROOT }
+					or = {
+						AND = {
+							has_war_with = UKR
+							UKR = { is_in_faction = yes }
+						}
+						surrender_progress > 0
 					}
-					226 = { #
-						NOT = { is_owned_by = ROOT }
-					}
-					198 = { #
-						NOT = { is_owned_by = ROOT }
-					}
+					has_global_flag = UKR_still_on_earth_flag
 				}
 				surrender_progress > 0.10
 				casualties > 1000000
 			}
-			has_completed_focus = rus_fall_of_ussr
+			has_completed_focus = rus_a_new_better_russia
 		}
 		completion_reward = {
 
             set_country_flag = SOV_great_patriotic_war_start_flag
+
+			SOV_increase_industrialization = yes
 
 			if = {
 				limit = { has_idea = SOV_Focus_on_the_inside_idea }
@@ -7795,7 +8055,7 @@ focus = {   ###土地分给农民
 		cost = 1
 
 		ai_will_do = {
-			factor = 2700
+			factor = 2500
 		}
 
 		available = {
@@ -8017,7 +8277,7 @@ focus = {   ###土地分给农民
 		x = -2
 		y = 1
 		relative_position_id = RUS_move_industry_to_the_urals
-		cost = 10
+		cost = 7
 		ai_will_do = {
 			factor = 2500
 		}
@@ -8038,6 +8298,8 @@ focus = {   ###土地分给农民
 		search_filters = {}
 
 		completion_reward = {
+
+			SOV_increase_industrialization = yes
 
 			if = {
 				limit = {
@@ -8082,10 +8344,10 @@ focus = {   ###土地分给农民
 			}
 
 			249 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				} 
 			}
@@ -8127,10 +8389,10 @@ focus = {   ###土地分给农民
 			}
 
 			251 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				} 
 			}
@@ -8183,7 +8445,7 @@ focus = {   ###土地分给农民
 				add_extra_state_shared_building_slots = 8
 				add_building_construction = {
 					type = arms_factory
-					level = 8
+					level = 4
 					instant_build = yes
 				}
 				set_state_category = city

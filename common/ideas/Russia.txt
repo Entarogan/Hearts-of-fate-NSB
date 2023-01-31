@@ -163,10 +163,6 @@ ideas = {
 
 		RUS_Ural_armor_production_idea = {
 
-      available = {
-
-      }
-
 			allowed = {
 				original_tag = RUS
 				always = no
@@ -182,44 +178,23 @@ ideas = {
 
 			equipment_bonus = {
 
-        armor = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
+				mechanized_equipment = {
+					build_cost_ic = -0.1 
 
-      }
+					instant = yes
+				}
+				armored_car_equipment = {
+					build_cost_ic = -0.10
+					
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.10
 
-		}
+					instant = yes
+				}
 
-		RUS_Ural_armor_production_idea = {
-
-      available = {
-
-      }
-
-			allowed = {
-				original_tag = RUS
-				always = no
 			}
-
-			allowed_civil_war = {
-				has_government = communism
-			}
-			
-			removal_cost = -1
-
-			picture = generic_license_production
-
-			equipment_bonus = {
-
-        armor = {
-          build_cost_ic = -0.10
-          
-          instant = yes
-        }
-
-      }
 
 		}
 
@@ -731,10 +706,10 @@ ideas = {
 				army_attack_factor = 0.05
 				army_defence_factor = 0.05
 				acclimatization_cold_climate_gain_factor = 0.25
-				consumer_goods_factor = -0.025
-				attrition = -0.20
-				supply_consumption_factor = -0.20
-		    research_speed_factor = -0.07
+				consumer_goods_factor = -0.03
+				attrition = -0.10
+				supply_consumption_factor = -0.10
+				research_speed_factor = -0.05
 			}
 		}
 
@@ -887,7 +862,12 @@ ideas = {
 
 			targeted_modifier = {
 				tag = SOV
-				attack_bonus_against = 0.25
+				attack_bonus_against = 0.3
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				breakthrough_bonus_against = 0.15
 			}
 
 		}
@@ -1353,7 +1333,13 @@ ideas = {
 			}
       
 			available = {
-				SOV = { exists = yes NOT = { is_subject_of = ROOT } }
+				SOV = { 
+					exists = yes 
+					controls_state = 219
+					NOT = { 
+					    is_subject_of = ROOT 
+					} 
+				}
 			}
 			
 			removal_cost = -1
@@ -1361,10 +1347,11 @@ ideas = {
 			picture = generic_war_preparation
 			
 			modifier = {
-				consumer_goods_factor = -0.025
-				production_speed_bunker_factor = 0.40
-				repair_speed_arms_factory_factor = 0.40
-				repair_speed_infrastructure_factor = 0.40
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.15
+				production_speed_rail_way_factor = 0.3
+				repair_speed_arms_factory_factor = 0.50
+				repair_speed_infrastructure_factor = 0.50
 			}
 		}
 
@@ -1525,8 +1512,8 @@ ideas = {
 			picture = received_attache
 			
 			modifier = {
-				opinion_gain_monthly_factor = 0.15
-				opinion_gain_monthly_same_ideology_factor = 0.25
+				opinion_gain_monthly_factor = 0.2
+				opinion_gain_monthly_same_ideology_factor = 0.4
 			}
 
 		}
@@ -1982,7 +1969,7 @@ ideas = {
 			picture = CZE_planning_bonus
 
 			modifier = {
-				planning_speed = 0.25
+				planning_speed = 0.15
 			}
 
 		}
@@ -2009,8 +1996,8 @@ ideas = {
 			picture = CZE_planning_bonus
 
 			modifier = {
-				planning_speed = 0.25
-				training_time_factor = -0.20
+				planning_speed = 0.15
+				training_time_factor = -0.10
 			}
 
 		}

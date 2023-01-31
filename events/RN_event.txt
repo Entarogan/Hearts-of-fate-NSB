@@ -11,6 +11,8 @@ country_event = { #海务会议
 	trigger = {
 		TAG = ENG
 		date > 1937.1.8
+		always = no 
+		#### This part of mod will be moved to submod
 	}
 	
 	mean_time_to_happen = {

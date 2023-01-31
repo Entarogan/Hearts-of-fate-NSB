@@ -702,12 +702,12 @@ SWE_we_anti_communist = {
 	abort = {
 		NOT = { SWE = { has_war_with = SOV } }
 	}
-	add_ai_strategy = {
+	ai_strategy = {
 		type = send_volunteers_desire
 		id = "SWE"
 		value = 200
 	}
-	add_ai_strategy = {
+	ai_strategy = {
 		type = support
 		id = "SWE"
 		value = 200

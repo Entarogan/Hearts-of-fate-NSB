@@ -198,7 +198,7 @@ units = {
 		division_template = "Purple Shirt Armor"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.98
-		force_equipment_variants = { light_tank_chassis_2 = { owner = "CZE" version_name = "Mathilda I" } }
+		force_equipment_variants = { light_tank_chassis_2 = { owner = "EGY" creator = "CZE" version_name = "TNH" } }
 	}
   
   division= {	
@@ -210,7 +210,7 @@ units = {
 		division_template = "Purple Shirt Armor"
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.98
-		force_equipment_variants = { light_tank_chassis_2 = { owner = "CZE" version_name = "Mathilda I" } }
+		force_equipment_variants = { light_tank_chassis_2 = { owner = "EGY" creator = "CZE" version_name = "TNH" } }
 	}
 
 }
@@ -229,15 +229,6 @@ instant_effect = {
   add_equipment_production = {
 		equipment = {
 			type = support_equipment_1
-			creator = "EGY"
-		}
-		requested_factories = 4
-		progress = 0.75
-		efficiency = 100
-	}
-  add_equipment_production = {
-		equipment = {
-			type = motorized_equipment
 			creator = "EGY"
 		}
 		requested_factories = 4

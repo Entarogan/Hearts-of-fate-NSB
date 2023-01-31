@@ -488,7 +488,7 @@ country_event = {     # Referendum
 	}
     add_popularity = {
       ideology = democratic
-      popularity = 25
+      popularity = 0.25
     }  
     set_party_name = {
         ideology = democratic
@@ -1042,11 +1042,11 @@ country_event = {     # France: Status of the Church
 	trigger = {
 		original_tag = FRA
 		OR = {
-      has_country_flag = Monarchy_Settled
-      has_country_flag = Autocracy_Settled
-      has_country_flag = Republic_Settled
-    }
-    NOT = { has_completed_focus = FRA_the_path_of_avenger }
+			has_country_flag = Monarchy_Settled
+			has_country_flag = Autocracy_Settled
+			has_country_flag = Republic_Settled
+		}
+		NOT = { has_completed_focus = FRA_the_path_of_avenger }
 	}
 	
 	mean_time_to_happen = {
@@ -1059,10 +1059,6 @@ country_event = {     # France: Status of the Church
 		ai_chance = {
 			base = 30
 			modifier = {
-				NOT = { FRA_Jeanne_Darc = { is_country_leader = yes } } 
-				factor = 2
-			}
-			modifier = {
 				NOT = { FRA_napoléon_bonaparte = { is_country_leader = yes } } 
 				factor = 0
 			}
@@ -1071,23 +1067,32 @@ country_event = {     # France: Status of the Church
 				factor = 5
 			}
 		}
-    add_stability = 0.05
-    set_country_flag = FRA_Catholic
+		add_stability = 0.05
+		set_country_flag = FRA_Catholic
 	}
   
   # Secular
   
-  option = {
+	option = {
 		name = lr_france.8.b
 		ai_chance = {
 			base = 70
 			modifier = {
-				FRA_Marie_Antoinette = { is_country_leader = yes }
+				or = {
+					has_country_leader = {
+						character = FRA_Marie_Antoinette
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = FRA_Jeanne_Darc
+						ruling_only = yes
+					}
+				}
 				factor = 0
 			}
 		}
-    add_political_power = 50
-    set_country_flag = FRA_Secular
+		add_political_power = 50
+		set_country_flag = FRA_Secular
     
 	}
 

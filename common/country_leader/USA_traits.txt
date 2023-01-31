@@ -16,8 +16,8 @@ leader_traits = {
 
 		consumer_goods_factor = 0.025
 		stability_factor = 0.10
-		industrial_capacity_factory = 0.075
-		army_defence_factor = 0.10
+		industrial_capacity_factory = 0.125
+		army_defence_factor = 0.15
 		ai_focus_war_production_factor = 0.20
 		
 	}
@@ -33,6 +33,7 @@ leader_traits = {
 
 		army_morale_factor = 0.10
 		war_support_factor = 0.10
+		conscription_factor = 0.15
 		mobilization_laws_cost_factor = -0.20
 		economy_cost_factor = -0.15
 		trade_laws_cost_factor = -0.10 	
@@ -45,7 +46,9 @@ leader_traits = {
 
 		stability_factor = -0.05
 		production_speed_infrastructure_factor = 0.10
-		army_attack_factor = 0.075
+		consumer_goods_factor = -0.02
+		army_speed_factor = 0.10
+		army_attack_factor = 0.10
 	}
 
 	Clown_of_star_spangled_banner = {
@@ -53,7 +56,8 @@ leader_traits = {
 		random = no
 		drift_defence_factor = 0.50
 		war_support_factor = 0.05
-		production_factory_efficiency_gain_factor = 0.10
+		production_factory_efficiency_gain_factor = 0.15
+		production_factory_max_efficiency_factor = 0.05
 		political_power_cost = -0.15
 	}
 
@@ -61,6 +65,7 @@ leader_traits = {
 
 		random = no
 		drift_defence_factor = 0.50
+		consumer_goods_factor = -0.055
 		political_power_gain = 0.05
 		stability_factor = -0.10
 		communism_drift = -0.02
@@ -69,7 +74,7 @@ leader_traits = {
 
 	Stellar_scholar = {
 		random = no
-		research_speed_factor = 0.05
+		research_speed_factor = 0.125
 		stability_factor = 0.05
 		production_speed_rocket_site_factor = 0.40
 	}
@@ -91,7 +96,7 @@ leader_traits = {
 		random = no
 		political_power_cost = 0.25
 		stability_factor = 0.10
-		production_speed_industrial_complex_factor = 0.03
+		production_speed_industrial_complex_factor = 0.15
 		production_speed_infrastructure_factor = 0.075
 	}
 	

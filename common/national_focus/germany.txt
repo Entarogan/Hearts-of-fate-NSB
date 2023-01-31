@@ -25,27 +25,27 @@ focus_tree = {
 			factor = 100
 		}
 
-    select_effect = {
+		select_effect = {
 
-      hidden_effect = { 
-        country_event = { id = more_ger.15 hours = 12 }
-      }
+			hidden_effect = { 
+			    country_event = { id = more_ger.15 hours = 12 }
+			}
 
-    }
+		}
 		
 		completion_reward = {
 
 			custom_effect_tooltip = GER_Determine_the_party_program_tooltip
 
-      set_country_flag = {
-        flag = ger_left
-        value = 0
-      }
+			set_country_flag = {
+				flag = ger_left
+				value = 0
+			}
 
-      set_country_flag = {
-        flag = ger_right
-        value = 0
-      }
+			set_country_flag = {
+				flag = ger_right
+				value = 0
+			}
 
 			country_event = more_ger.14
 
@@ -1018,15 +1018,25 @@ focus_tree = {
 			any_enemy_country = {
 				is_major = yes
 			}
-      or = {
-        date > 1942.1.1
-        casualties > 500000
-        surrender_progress > 0.20
-      }
+			or = {
+				date > 1942.1.1
+				casualties > 500000
+				surrender_progress > 0.10
+				AND = {
+					has_global_flag = UKR_still_on_earth_flag
+					is_in_faction_with = UKR
+					UKR = { is_subject = no }
+					has_war_with = FRA
+					FRA = { is_subject = no }
+					FRA = { surrender_progress < 0.5 }
+					var:219.owner = { has_war_with = GER }
+					var:219.owner = { is_subject = no }
+				}
+			}
 		}
 
-    cancel_if_invalid = no
-    continue_if_invalid = yes
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -1035,7 +1045,7 @@ focus_tree = {
 		
 		completion_reward = {
 
-		  add_political_power = 50
+			add_political_power = 50
 
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = speer
@@ -1052,24 +1062,24 @@ focus_tree = {
 		relative_position_id = GER_Authorize_the_new_armaments_minister
 		cost = 5
 
-    available = {
-      custom_trigger_tooltip = {
-        tooltip = GER_Bring_in_foreign_workers_tt
-        any_state = {
-          NOT = { is_core_of = ROOT }
-          or = {
-            is_controlled_by = ROOT
-            any_country = {
-              is_subject_of = ROOT
-              controls_state = PREV
-            }
-          }
-        }
-      }
-    }
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = GER_Bring_in_foreign_workers_tt
+				any_state = {
+					NOT = { is_core_of = ROOT }
+					or = {
+						is_controlled_by = ROOT
+						any_country = {
+							is_subject_of = ROOT
+							controls_state = PREV
+						}
+					}
+				}
+			}
+		}
 
-    cancel_if_invalid = no
-    continue_if_invalid = yes
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -1729,9 +1739,15 @@ focus_tree = {
 
 			remove_ideas = GER_autarky_idea
 
-      add_ideas = GER_grosraumwirtschaft
+			add_ideas = GER_grosraumwirtschaft
 
-      add_ideas = export_focus
+			add_tech_bonus = {
+				name = GER_Continental_Power_Circle
+				bonus = 1
+				uses = 1
+				ahead_reduction = 1.0
+				category = construction_tech
+			}
 
 		}
 	}
@@ -2579,12 +2595,22 @@ focus_tree = {
 			or = {
 				date > 1942.1.1
 				casualties > 500000
-				surrender_progress > 0.20
+				surrender_progress > 0.10
+				AND = {
+					has_global_flag = UKR_still_on_earth_flag
+					is_in_faction_with = UKR
+					UKR = { is_subject = no }
+					has_war_with = FRA
+					FRA = { is_subject = no }
+					FRA = { surrender_progress < 0.5 }
+					var:219.owner = { has_war_with = GER }
+					var:219.owner = { is_subject = no }
+				}
 			}
 		}
 
-    cancel_if_invalid = no
-    continue_if_invalid = yes
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = yes
 
 		ai_will_do = {
@@ -2593,27 +2619,17 @@ focus_tree = {
 		
 		completion_reward = {
 
-			add_ideas = tot_economic_mobilisation
-
 			if = {
 				limit = {
-					has_idea = limited_conscription
+					NOT = { has_idea = tot_economic_mobilisation }
 				}
-				swap_ideas = {
-					remove_idea = limited_conscription
-					add_idea = service_by_requirement
-				}
+				add_ideas = tot_economic_mobilisation
+			}
+			else = {
+				add_political_power = 100
 			}
 
-			if = {
-				limit = {
-					has_idea = extensive_conscription
-				}
-				swap_ideas = {
-					remove_idea = extensive_conscription
-					add_idea = service_by_requirement
-				}
-			}
+			add_political_power = 200
 
 		}
 	}
@@ -5352,7 +5368,7 @@ focus_tree = {
         name = GER_Test_carrier_aircraft
         bonus = 1.0
         uses = 1
-        technology = cv_naval_bomber1
+        technology = # cv_naval_bomber1
         technology = cv_naval_bomber2
         technology = cv_naval_bomber3
       }
@@ -8756,16 +8772,16 @@ focus_tree = {
 			is_puppet = no
 			NOT = { has_war_with = YUG }
 			NOT = { is_in_faction_with = YUG }
-      or = {
-				threat > 0.35
-				date > 1938.6.1
-        YUG = {
-          has_war = yes
-          any_enemy_country = {
-            is_major = yes
-          }
-        } 
-      }
+			or = {
+				threat > 0.5
+				date > 1939.6.1
+				YUG = {
+					has_war = yes
+					any_enemy_country = {
+					    is_major = yes
+					}
+				} 
+			}
 			or = {
 				is_neighbor_of = YUG
 

@@ -8,7 +8,7 @@ JAP_intervene_in_china = {
 		available = {	
 
 			NOT = { has_idea = JAP_nichi_go }
-
+			NOT = { has_idea = JAP_intervene_in_china_1 }
 			event_target:WTT_current_china_leader = {
 				has_capitulated = no
 				exists = yes
@@ -16,13 +16,14 @@ JAP_intervene_in_china = {
 		}
 
 		visible = {
-		or = {
-			has_completed_focus = JAP_secure_china
-		AND = {
-				has_war_with = CHI
-				has_war_with = BEY
-		}
-		}
+			or = {
+				has_completed_focus = JAP_secure_china
+				any_enemy_country = {
+					NOT = { original_tag = BEY }
+					is_literally_china = no
+					is_major = yes
+				}
+			}
 			any_country = {
 				is_literally_china = yes
 				has_war_with = ROOT
@@ -508,7 +509,7 @@ JAP_pacific_guardian = {
 
 		available = {
 			FRA = {
-				#has_capitulated = yes
+				has_capitulated = yes
 			}
 			FIC = {
 				is_puppet_of = FRA
@@ -599,7 +600,7 @@ operations = {
 
 		available = {
 			OR = {
-				has_war_with = HOL
+				has_war_with = AST
 				has_war_with = ENG
 				has_war_with = USA
 				has_war_with = FRA
@@ -613,11 +614,21 @@ operations = {
 		days_mission_timeout = 180
 	
 		activation = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
+			OR = {
+				has_war_with = AST
+				has_war_with = ENG
+				has_war_with = USA
+				has_war_with = FRA
+			}
 		}
 		
 		visible = {
-			has_completed_focus = JAP_strike_on_the_southern_resource_area
+			OR = {
+				has_war_with = AST
+				has_war_with = ENG
+				has_war_with = USA
+				has_war_with = FRA
+			}
 		}
 	
 		complete_effect = {

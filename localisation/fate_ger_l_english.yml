@@ -1886,3 +1886,5 @@
  JAP_Backstab_France_For_Ger_decisions:0 "Backstab [FRA.GetName]"
  
  GER_Backstab_France_For_Jap_decisions:0 "Backstab [FRA.GetName]"
+ 
+ GER_two_line_battle_decisions:0 "Two Line Battle"

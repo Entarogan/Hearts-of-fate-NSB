@@ -337,6 +337,10 @@ country_event = {
 	option = {
 		name = ukr_nationalism.7.e
 
+		trigger = {
+			has_idea = UKR_ban_extremism_idea
+		}
+
 		# OUN
 
 		add_political_power = -150

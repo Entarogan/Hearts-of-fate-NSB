@@ -225,8 +225,8 @@ characters={
 			skill=3
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=3
+			coordination_skill=3
 			legacy_id=3399
 		}
 		advisor={
@@ -257,8 +257,8 @@ characters={
 			skill=3
 			attack_skill=3
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=2
+			coordination_skill=3
 			legacy_id=4000
 		}
 	}
@@ -275,8 +275,8 @@ characters={
 			skill=3
 			attack_skill=2
 			defense_skill=2
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=4
+			coordination_skill=2
 			legacy_id=4001
 		}
 	}
@@ -294,7 +294,7 @@ characters={
 			attack_skill=3
 			defense_skill=1
 			maneuvering_skill=1
-			coordination_skill=1
+			coordination_skill=2
 			legacy_id=4002
 		}
 	}
@@ -311,8 +311,8 @@ characters={
 			skill=2
 			attack_skill=2
 			defense_skill=1
-			maneuvering_skill=1
-			coordination_skill=1
+			maneuvering_skill=2
+			coordination_skill=2
 			legacy_id=4003
 		}
 		advisor={

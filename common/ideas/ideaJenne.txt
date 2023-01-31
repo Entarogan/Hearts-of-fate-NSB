@@ -2059,7 +2059,6 @@ ideas = {
 
 		FRA_national_revitalization = { #重建国家
 			allowed = {
-				original_tag = FRA
 				always = no
 			}
 

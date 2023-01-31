@@ -86,7 +86,7 @@ allow_release_nations = {
 	name = "RULE_ALLOW_RELEASE_NATIONS"
 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
 	icon = "GFX_release_nations"
-	default = {
+	option = {
 		name = "FREE"
 		text = RULE_OPTION_FREE
 		desc = "RULE_ALLOW_RELEASE_NATIONS_FREE_DESC"
@@ -96,7 +96,7 @@ allow_release_nations = {
 		text = "RULE_OPTION_PEACE_ONLY"
 		desc = "RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_DESC"
 	}
-	option = {
+	default = {
 		name = "BLOCKED"
 		text = RULE_OPTION_BLOCKED
 		desc = "RULE_ALLOW_RELEASE_NATIONS_BLOCKED_DESC"
@@ -554,6 +554,45 @@ GER_ai_behavior = {
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
 	}
 }
+RUS_ai_behavior = {
+	name = "RUS_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = AUTOCRATIC_MONARCH
+		text = "RULE_OPTION_AUTOCRATIC_MONARCH"
+		desc = "RULE_OPTION_AUTOCRATIC_MONARCH_RUS_AI_DESC"
+	}
+	option = {
+		name = AUTOCRATIC_DEMOCRATIC_MONARCH
+		text = "RULE_OPTION_AUTOCRATIC_DEMOCRATIC_MONARCH"
+		desc = "RULE_OPTION_AUTOCRATIC_DEMOCRATIC_MONARCH_RUS_AI_DESC"
+	}
+	option = {
+		name = DEMOCRATIC_MONARCH
+		text = "RULE_OPTION_DEMOCRATIC_MONARCH"
+		desc = "RULE_OPTION_DEMOCRATIC_MONARCH_RUS_AI_DESC"
+	}
+	option = {
+		name = KADOC_ZEMIUPUS
+		text = "RULE_OPTION_KADOC_ZEMIUPUS"
+		desc = "RULE_OPTION_KADOC_ZEMIUPUS_RUS_AI_DESC"
+	}
+	option = {
+		name = NO_ANNA_NO_KADOC
+		text = "RULE_OPTION_NO_ANNA_NO_KADOC"
+		desc = "RULE_OPTION_NO_ANNA_NO_KADOC_RUS_AI_DESC"
+	}
+	option = {
+		name = RANDOM
+		text = "RULE_OPTION_RANDOM"
+		desc = "RULE_OPTION_RANDOM_AI_DESC"
+	}
+}
 SOV_ai_behavior = {
 	name = "SOV_AI_BEHAVIOR"
 	group = "RULE_GROUP_AI_BEHAVIOR"
@@ -966,20 +1005,10 @@ RAJ_ai_behavior = {
 		desc = "RULE_OPTION_DEFAULT_AI_DESC"
 	}
 	option = {
-		name = COMMUNIST
-		text = "RULE_OPTION_COMMUNIST"
-		desc = "RULE_OPTION_COMMUNIST_RAJ_AI_DESC"
-	}
-	option = {
 		name = DEMOCRATIC_HISTORICAL
 		text = "RULE_OPTION_HISTORICAL"
 		desc = "RULE_OPTION_DEMOCRATIC_HISTORICAL_RAJ_AI_DESC"
 		allow_achievements = yes
-	}
-	option = {
-		name = FASCIST
-		text = "RULE_OPTION_FASCIST"
-		desc = "RULE_FASCIST_RAJ_AI_DESC"
 	}
 	option = {
 		name = RANDOM
@@ -1162,37 +1191,6 @@ CHI_ai_behavior = {
 		allow_achievements = yes
 	}
 	option = {
-		name = ALTERNATE
-		text = "RULE_OPTION_ALTERNATE"
-		desc = "RULE_OPTION_ALTERNATE_CHI_AI_DESC"
-	}
-	option = {
-		name = RANDOM
-		text = "RULE_OPTION_RANDOM"
-		desc = "RULE_OPTION_RANDOM_AI_DESC"
-	}
-}
-PRC_ai_behavior = {
-	name = "PRC_AI_BEHAVIOR"
-	required_dlc = "Waking the Tiger"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = DEFAULT
-		text = "RULE_OPTION_DEFAULT"
-		desc = "RULE_OPTION_DEFAULT_AI_DESC"
-	}
-	option = {
-		name = HISTORICAL
-		text = "RULE_OPTION_HISTORICAL"
-		desc = "RULE_OPTION_HISTORICAL_PRC_AI_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = ALTERNATE
-		text = "RULE_OPTION_ALTERNATE"
-		desc = "RULE_OPTION_ALTERNATE_PRC_AI_DESC"
-	}
-	option = {
 		name = RANDOM
 		text = "RULE_OPTION_RANDOM"
 		desc = "RULE_OPTION_RANDOM_AI_DESC"
@@ -1212,11 +1210,6 @@ MAN_ai_behavior = {
 		text = "RULE_OPTION_OBEDIENCE"
 		desc = "RULE_OPTION_OBEDIENCE_MAN_AI_DESC"
 		allow_achievements = yes
-	}
-	option = {
-		name = INDEPENDENCE
-		text = "RULE_OPTION_INDEPENDENCE"
-		desc = "RULE_OPTION_INDEPENDENCE_MAN_AI_DESC"
 	}
 	option = {
 		name = RANDOM

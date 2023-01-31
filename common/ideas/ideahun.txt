@@ -1587,8 +1587,8 @@ ideas = {
 				research_speed_factor = -0.05
 				industry_air_damage_factor = -0.2
 				org_loss_when_moving = -0.10
-				army_attack_factor = 0.05
-				army_defence_factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
 				out_of_supply_factor = -0.2
 				pocket_penalty = -0.1
 				no_supply_grace = 24
@@ -2402,7 +2402,7 @@ ideas = {
 
 		HUN_Preparing_Great_War_idea = {
 			allowed = {
-				original_tag = HUN
+				always = no
 			}
 
 			allowed_civil_war = {

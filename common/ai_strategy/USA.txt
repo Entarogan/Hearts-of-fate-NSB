@@ -1,3 +1,25 @@
+USA_never_ally_Japan = {
+
+	allowed = {
+		original_tag = USA
+	}
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -500
+	}
+}
+
+
+
 USA_unit_production = {
 
 	allowed = {

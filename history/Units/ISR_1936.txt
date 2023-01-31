@@ -122,11 +122,3 @@ units = {
 	}
 	
 }
-air_wings = {
-	454 = {														
-		fighter_equipment_1 = { owner = "ISR" amount = 25 }
-		fighter_equipment_2 = { owner = "ISR" amount = 60 }
-		CAS_equipment_1 = { owner = "ISR" amount = 50 creator = ENG }
-		heavy_fighter_equipment_1 = { owner = "ISR" amount = 13 creator = ENG }
-	}
-  }

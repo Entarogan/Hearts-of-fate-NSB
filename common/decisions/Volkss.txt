@@ -32,9 +32,6 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.1
-      army_core_defence_factor = 0.20
-			resistance_growth_on_our_occupied_states = 0.30
       mobilization_speed = 0.20
       training_time_factor = -0.20
 		  surrender_limit = 0.10
@@ -209,8 +206,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -280,8 +276,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -351,8 +346,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -422,8 +416,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.08
-      army_core_defence_factor = 0.15
+
     }
     
     complete_effect = {
@@ -493,8 +486,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -564,8 +556,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -635,8 +626,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -706,8 +696,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -777,8 +766,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -848,8 +836,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -919,8 +906,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -990,8 +976,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -1061,8 +1046,7 @@ ENG_Knight_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -1126,9 +1110,6 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.1
-      army_core_defence_factor = 0.20
-			resistance_growth_on_our_occupied_states = 0.30
       mobilization_speed = 0.20
       training_time_factor = -0.20
 		  surrender_limit = 0.10
@@ -1211,8 +1192,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -1290,8 +1270,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -1361,8 +1340,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.10
-      army_core_defence_factor = 0.20
+
     }
     
     complete_effect = {
@@ -1432,8 +1410,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -1503,8 +1480,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -1574,8 +1550,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -1645,8 +1620,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.10
-      army_core_defence_factor = 0.20
+
     }
     
     complete_effect = {
@@ -1716,8 +1690,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -1787,8 +1760,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -1858,8 +1830,7 @@ JAP_Kessen_shidan_deci = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.1
-      army_core_defence_factor = 0.20
+
     }
     
     complete_effect = {
@@ -1925,9 +1896,6 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
-			resistance_growth_on_our_occupied_states = 0.15
       mobilization_speed = 0.10
       training_time_factor = -0.10
 		  surrender_limit = 0.05
@@ -2010,8 +1978,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.05
-      army_core_defence_factor = 0.10
+
     }
     
     complete_effect = {
@@ -2081,8 +2048,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.04
-      army_core_defence_factor = 0.07
+
     }
     
     complete_effect = {
@@ -2152,8 +2118,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.05
+
     }
     
     complete_effect = {
@@ -2223,8 +2188,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.04
+
     }
     
     complete_effect = {
@@ -2294,8 +2258,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.04
-      army_core_defence_factor = 0.07
+
     }
     
     complete_effect = {
@@ -2365,8 +2328,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.04
-      army_core_defence_factor = 0.07
+
     }
     
     complete_effect = {
@@ -2436,8 +2398,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.03
+
     }
     
     complete_effect = {
@@ -2507,8 +2468,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.06
+
     }
     
     complete_effect = {
@@ -2578,8 +2538,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.03
-      army_core_defence_factor = 0.06
+
     }
     
     complete_effect = {
@@ -2649,8 +2608,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.04
+
     }
     
     complete_effect = {
@@ -2720,8 +2678,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.04
+
     }
     
     complete_effect = {
@@ -2791,8 +2748,7 @@ GER_volkss_category = {
     fire_only_once = yes
 
     modifier = {
-      army_core_attack_factor = 0.02
-      army_core_defence_factor = 0.04
+
     }
     
     complete_effect = {

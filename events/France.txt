@@ -2429,13 +2429,56 @@ country_event = { #让巴尔号设计图
 	desc = fn.17.d
 	picture = GFX_Jean_Bart_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Jean_Bart_Antiaircraft_gun_Enable
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
 	
 	option = {
 		name = fn.17.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Jean_Bart_complete
 		}
+
+		create_equipment_variant = {
+			name = "Jean Bart"
+			type = ship_hull_heavy_3
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_2
+				fixed_ship_radar_slot = ship_radar_2
+				fixed_ship_engine_slot = heavy_ship_engine_3
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				fixed_ship_armor_slot = ship_armor_bb_3
+				front_1_custom_slot = ship_heavy_battery_2
+				mid_1_custom_slot = dp_ship_secondaries
+				mid_2_custom_slot = ship_secondaries_2
+				mid_3_custom_slot = ship_secondaries_2
+				rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+
+		add_equipment_production = {
+			equipment = {
+				type = ship_hull_heavy_3
+				creator = "FRA"
+				version_name = "Jean Bart"
+			}
+			requested_factories = 1
+			progress = 0.50
+			amount = 1
+		}
+
 	}
 }
 
@@ -2490,13 +2533,45 @@ country_event = { #克里蒙梭号设计图
 	desc = fn.10.d
 	picture = GFX_Clemenceau_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Clemenceau_Gascogne_Enable
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 80
+	}
 	
 	option = {
 		name = fn.10.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Clemenceau_complete
 		}
+
+		create_equipment_variant = {
+			name = "Clemenceau"
+			type = ship_hull_heavy_3
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_3
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+				fixed_ship_radar_slot = ship_radar_3
+				fixed_ship_engine_slot = heavy_ship_engine_3
+				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_armor_slot = ship_armor_bb_3
+				front_1_custom_slot = ship_heavy_battery_2
+				mid_1_custom_slot = dp_ship_secondaries
+				mid_2_custom_slot = ship_secondaries_2
+				mid_3_custom_slot = ship_secondaries_2
+				rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+
 	}
 }
 
@@ -2506,13 +2581,45 @@ country_event = { #加斯科涅号设计图
 	desc = fn.11.d
 	picture = GFX_Gascogne_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Clemenceau_Gascogne_Enable
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 80
+	}
 	
 	option = {
 		name = fn.11.a 
 		hidden_effect = { 
 			set_country_flag = FRA_Gascogne_complete
 		}
+
+		create_equipment_variant = {
+			name = "Gascogne"
+			type = ship_hull_heavy_3
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_3
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+				fixed_ship_radar_slot = ship_radar_3
+				fixed_ship_engine_slot = heavy_ship_engine_3
+				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_armor_slot = ship_armor_bb_3
+				front_1_custom_slot = ship_heavy_battery_2
+				mid_1_custom_slot = dp_ship_secondaries
+				mid_2_custom_slot = dp_ship_secondaries
+				mid_3_custom_slot = dp_ship_secondaries
+				rear_1_custom_slot = ship_airplane_launcher_2
+			}
+		}
+
 	}
 }
 
@@ -2525,6 +2632,8 @@ country_event = { #条约破灭
 	fire_only_once = yes
 	
 	trigger = {
+		always = no
+
 		tag = FRA
 		FRA = {
 			has_country_flag = FRA_Richelieu_I_complete
@@ -2929,13 +3038,13 @@ country_event = { #重型航母扩建计划
 	trigger = {
 		tag = FRA
 		FRA = {
-			has_country_flag = FRA_Joffre_launched
+			has_country_flag = FRA_Joffre_programme_complete
 		}
-		date > 1939.6.1
+		date > 1939.1.1
 	}
 	
 	mean_time_to_happen = {
-		days = 90
+		days = 30
 	}
 	
 	option = {
@@ -2986,13 +3095,48 @@ country_event = { #福煦方案——完成
 	desc = fn.33.d
 	picture = GFX_foch_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Foch_Antiair
+		}
+		date > 1940.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
 	
 	option = {
 		name = fn.33.a
 		hidden_effect = { 
 			set_country_flag = FRA_Foch_programme_complete
 		}
+
+		enable_equipments = {
+			ship_hull_carrier_3
+		}
+
+		create_equipment_variant = {
+			name = "Foch Class"
+			type = ship_hull_carrier_3
+			parent_version = 0
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_3
+				fixed_ship_radar_slot = ship_radar_3
+				fixed_ship_engine_slot = carrier_ship_engine_3
+				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_armor_slot = ship_armor_cruiser_3
+				front_1_custom_slot = ship_armor_carrier_deck
+				mid_1_custom_slot = ship_deck_space
+				mid_2_custom_slot = ship_deck_space
+			}
+		}
+
 	}
 }
 
@@ -3010,7 +3154,7 @@ country_event = { #航母紧急扩建计划
 			has_country_flag = FRA_Bayard_Enable
 			has_country_flag = FRA_Joffre_Enable
 		}
-		date > 1938.9.1
+		date > 1938.6.1
 	}
 	
 	mean_time_to_happen = {
@@ -3065,13 +3209,41 @@ country_event = { #宪法方案——完成
 	desc = fn.37.d
 	picture = GFX_constitution_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Bayard_Enable
+			has_country_flag = FRA_Joffre_Enable
+		}
+		date > 1939.6.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
 	
 	option = {
 		name = fn.37.a
 		hidden_effect = { 
 			set_country_flag = FRA_Constitution_programme_complete
 		}
+
+		create_equipment_variant = {
+			name = "Constitution Class"
+			type = ship_hull_carrier_conversion_ca
+			parent_version = 0
+			modules = {
+				fixed_ship_deck_slot_1 = ship_deck_space
+				fixed_ship_deck_slot_2 = ship_deck_space
+				fixed_ship_anti_air_slot = ship_anti_air_2
+				fixed_ship_radar_slot = ship_radar_2
+				fixed_ship_engine_slot = cruiser_ship_engine_2
+				fixed_ship_anti_air_slot = ship_anti_air_2
+			}
+		}
+
 	}
 }
 
@@ -3224,7 +3396,7 @@ country_event = { #轻巡洋舰
 		FRA = {
 			has_country_flag = FRA_De_Grasse_Enable
 		}
-		date > 1938.1.1
+		date > 1939.1.1
 	}
 	
 	mean_time_to_happen = {
@@ -3279,13 +3451,50 @@ country_event = { #贝亚得级方案完成
 	desc = fn.54.d
 	picture = GFX_Bayard_blueprint
 	
-	is_triggered_only = yes
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		FRA = {
+			has_country_flag = FRA_Bayard_armor
+		}
+		date > 1940.1.1
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
 	
 	option = { 
 		name = fn.54.a
 		hidden_effect = { 
 			set_country_flag = FRA_Bayard_complete
 		}
+
+		enable_equipments = {
+			ship_hull_cruiser_3
+		}
+
+		create_equipment_variant = {
+			name = "Bayard Class"
+			type = ship_hull_cruiser_3
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_medium_battery_3
+				fixed_ship_anti_air_slot = ship_anti_air_3
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+				fixed_ship_radar_slot = ship_radar_3
+				fixed_ship_engine_slot = cruiser_ship_engine_3
+				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_armor_slot = ship_armor_cruiser_3
+				front_1_custom_slot = ship_anti_air_3
+				mid_1_custom_slot = ship_torpedo_3
+				mid_2_custom_slot = ship_anti_air_3
+				rear_1_custom_slot = ship_light_medium_battery_3
+				rear_2_custom_slot = ship_airplane_launcher_2
+			}
+		}
+
 	}
 }
 
@@ -3295,19 +3504,7 @@ country_event = { #C6方案
 	desc = fn.55.d
 	picture = GFX_Henry_IV_program_ignition
 	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = FRA
-		FRA = {
-			has_country_flag = FRA_Saint_Louis_part_I_launched
-		}
-		date > 1942.3.1
-	}
-	
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = fn.55.a 
@@ -3461,19 +3658,7 @@ country_event = { #新的希望
 	desc = fn.66.d
 	picture = GFX_Mogador_program_ignition
 	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = FRA
-		FRA = {
-			has_country_flag = FRA_Fantasme_complete
-		}
-		date > 1938.1.1
-	}
-	
-	mean_time_to_happen = {
-		days = 60
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = fn.66.a 

@@ -748,7 +748,6 @@ CZE_is_idiot = {
 	}
 
 	enable = {
-		has_global_flag = CZE_refused_sudetenland
 		country_exists = CZE
 	}
 	abort = {

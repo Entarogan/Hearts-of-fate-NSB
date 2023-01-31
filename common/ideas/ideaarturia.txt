@@ -21,75 +21,77 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = -0.05
 				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
+				industrial_capacity_dockyard = 0.1
 				global_building_slots_factor = 0.1
 				conscription = 0.02
 		        conscription_factor = 0.05
 			}
 		}
 
-      ENG_Empire_Mobilization_idea = {
+		ENG_Empire_Mobilization_idea = {
 
-        allowed = {
-          always = no
-        }
+			allowed = {
+			    always = no
+			}
 
-        allowed_civil_war = {
+			allowed_civil_war = {
 
-        }
+			}
 
-        available = {
-          has_war = yes
-        }
-        
-        removal_cost = -1
+			available = {
+			    has_war = yes
+			}
 
-        picture = FRA_army_of_aggression_focus
+			removal_cost = -1
 
-        modifier = {
-          political_power_gain = -0.30
-				  production_speed_arms_factory_factor = 0.1
-          production_factory_efficiency_gain_factor = 0.10
-          production_factory_start_efficiency_factor = 0.10
-          production_factory_max_efficiency_factor = 0.15
-          consumer_goods_factor = -0.05
-          conscription_factor = 0.15
-				  conscription = 0.025
-        }
+			picture = FRA_army_of_aggression_focus
 
-      }
+			modifier = {
+				political_power_gain = -0.30
 
-      ENG_Empire_Mobilization_Dominion_idea = {
+				production_speed_arms_factory_factor = 0.1
 
-        allowed = {
-          always = no
-        }
+				production_factory_efficiency_gain_factor = 0.10
+				production_factory_start_efficiency_factor = 0.10
+				production_factory_max_efficiency_factor = 0.15
 
-        allowed_civil_war = {
+				consumer_goods_factor = -0.05
 
-        }
+				conscription_factor = 0.15
+				conscription = 0.025
+			}
 
-        available = {
-          has_war = yes
-        }
-        
-        removal_cost = -1
+		}
 
-        picture = SPR_seize_the_gold_reserves
+		ENG_Empire_Mobilization_Dominion_idea = {
 
-        modifier = {
-          stability_factor = -0.10
-          autonomy_gain = 0.5
-          consumer_goods_factor = 0.05
-          conscription_factor = -0.10
-        }
+			allowed = {
+			    always = no
+			}
 
-        targeted_modifier = { 
-          tag = ENG
-          cic_to_target_factor = 0.25
-        }
+			allowed_civil_war = {
 
-      }
+			}
+
+			available = {
+			    has_war = yes
+			}
+
+			removal_cost = -1
+
+			picture = SPR_seize_the_gold_reserves
+
+			modifier = {
+				autonomy_gain = 0.5
+				conscription_factor = -0.10
+			}
+
+			targeted_modifier = { 
+				tag = ENG
+				cic_to_target_factor = 0.25
+			}
+
+		}
 
 	    El_Dorado_idea = {
 
@@ -622,7 +624,7 @@ ideas = {
 			picture = invincible
 
 			modifier = {
-			    stability_weekly = 0.005
+			    stability_weekly = 0.002
 				neutrality_drift = 0.10
 				send_volunteer_divisions_required = -0.50
 				send_volunteer_size = 5
@@ -671,16 +673,16 @@ ideas = {
 			}
 			equipment_bonus = {
 
-        motorized_equipment = {
-          build_cost_ic = 0.05 
-          hardness = 0.4
-          maximum_speed = 0.1
-          reliability = 0.15
+				motorized_equipment = {
+					build_cost_ic = 0.05 
+					hardness = 0.4
+					maximum_speed = 0.1
+					reliability = 0.15
 
-          instant = yes
-        }
+					instant = yes
+				}
 
-      }
+			}
 		}
 		
 		ARTURIA_royal_naval_idea = {
@@ -1161,7 +1163,7 @@ ideas = {
 			picture = jap_supremacy_of_technology
             
             modifier = {
-			    research_speed_factor = 0.10				
+			    research_speed_factor = 0.06				
 			}
         }
         
@@ -1208,8 +1210,8 @@ ideas = {
 			picture = eng_preparing_the_second_front
             
             modifier = {
-			    invasion_preparation = -0.40
-                amphibious_invasion = 0.25
+			    invasion_preparation = -0.20
+                amphibious_invasion = 0.20
 			}
         }
         
@@ -1249,24 +1251,22 @@ ideas = {
 			picture = eng_guided_by_britain
             
             modifier = {
-			    production_speed_bunker_factor = 0.20
-                production_speed_coastal_bunker_factor = 0.20
-                production_speed_air_base_factor = 0.20
-                production_speed_rocket_site_factor = 0.20
-                production_speed_radar_station_factor = 0.20
-                production_speed_anti_air_building_factor = 0.20
-                production_speed_naval_base_factor = 0.20
+			    army_core_defence_factor = 0.15
+                army_core_attack_factor = 0.15
+				supply_combat_penalties_on_core_factor = -0.15
+				resistance_growth_on_our_occupied_states = 0.15
+
+				air_home_defence_factor = 0.20
+
+				naval_strike_attack_factor = 0.1
+				naval_strike_targetting_factor = 0.1
+				naval_strike_agility_factor = 0.1	
 			}
             
             equipment_bonus = {
-				tac_bomber_equipment = {
-					build_cost_ic = -0.15 instant = yes
-				}
-                jet_tac_bomber_equipment = {
-					build_cost_ic = -0.15 instant = yes
-				}
-                heavy_fighter_equipment = {
-					build_cost_ic = -0.15 instant = yes
+				nav_bomber_equipment = {
+					build_cost_ic = -0.1 
+					instant = yes
 				}
 			}
         }

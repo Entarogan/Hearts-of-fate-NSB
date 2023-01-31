@@ -2400,6 +2400,9 @@ characters={
 			army={
 				small="GFX_idea_aozaki_touko"
 			}
+			army={
+				large="gfx/leaders/JAP/Portrait_Aozaki_Touko.dds"
+			}
 		}
 		advisor={
 			slot = theorist
@@ -2571,7 +2574,7 @@ characters={
 		}
 		advisor={
 			slot = high_command
-			idea_token = JAP_shimada_alice_high_command
+			idea_token = JAP_mitsurugi_meiya
 			ledger = air
 			ledger = army
 			allowed = {

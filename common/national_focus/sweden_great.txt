@@ -377,6 +377,36 @@ focus_tree = {
             NOT = { has_global_flag = form_scandinavia_flag }
         }
         completion_reward = {
+
+			add_ai_strategy = {
+				type = force_build_armies
+				value = 100
+			}
+
+			add_ai_strategy = {
+				type = build_army
+				id = infantry
+				value = 55
+			}
+
+			add_ai_strategy = {
+				type = build_army
+				id = marines
+				value = 10
+			}
+
+			add_ai_strategy = {
+				type = build_army
+				id = armor
+				value = 30
+			}
+
+			add_ai_strategy = {
+				type = build_army
+				id = mechanized
+				value = 5
+			}
+
             hidden_effect = {
 				news_event = { id = wtt_news.53 hours = 6 }
 				set_global_flag = form_scandinavia_flag

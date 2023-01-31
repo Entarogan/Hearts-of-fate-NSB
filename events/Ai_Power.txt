@@ -2383,8 +2383,8 @@ country_event = {
 
 	trigger = {
 		tag = HUN
-    is_ai = yes
-    is_subject = no
+		is_ai = yes
+		is_subject = no
 		date > 1938.6.1
 	}
 
@@ -2394,16 +2394,39 @@ country_event = {
 			base = 100
 		}
 
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 40
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = motorized
+			value = 3
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = mountaineers
+			value = 6
+		}
+
 		if = {
 			limit = { NOT = { has_tech = radio_detection } }
 
 			if = {
-					limit = { is_researching_technology =  radio_detection }
-					add_timed_idea = { idea = zuodehao days = 90 }
-				}
-				else = {
-					set_technology = {  radio_detection = 1 }
-				}
+				limit = { is_researching_technology =  radio_detection }
+				add_timed_idea = { idea = zuodehao days = 90 }
+			}
+			else = {
+				set_technology = {  radio_detection = 1 }
+			}
 		}
 
 
@@ -2420,15 +2443,27 @@ country_event = {
 
 	trigger = {
 		tag = HUN
-    is_ai = yes
-    is_subject = no
-		date > 1939.6.1
+		is_ai = yes
+		is_subject = no
+		date > 1939.1.1
 	}
 
 	option = { 
 		name = Ai_Power.1023.a
 		ai_chance = {
 			base = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = armor
+			value = 22
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = mechanized
+			value = 15
 		}
 
 		if = {
@@ -3369,8 +3404,8 @@ country_event = {
 
 	trigger = {
 		tag = ROM
-    is_ai = yes
-    is_subject = no
+		is_ai = yes
+		is_subject = no
 		date > 1938.6.1
 	}
 
@@ -3378,6 +3413,23 @@ country_event = {
 		name = Ai_Power.1032.a
 		ai_chance = {
 			base = 100
+		}
+
+		add_ai_strategy = {
+			type = force_build_armies
+			value = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = infantry
+			value = 90
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = mountaineers
+			value = 10
 		}
 
 		if = {
@@ -3440,6 +3492,18 @@ country_event = {
 		name = Ai_Power.1034.a
 		ai_chance = {
 			base = 100
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = mechanized
+			value = 5
+		}
+
+		add_ai_strategy = {
+			type = build_army
+			id = armor
+			value = 20
 		}
 
 		if = {

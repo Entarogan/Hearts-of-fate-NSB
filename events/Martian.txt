@@ -310,6 +310,22 @@ country_event = {
 						402 = { is_controlled_by = RUS }
 					}
 				}
+				modifier = {
+					factor = 0
+					SOV = {
+						NOT = {
+							has_country_leader  = {
+								ruling_only  = yes 
+								character = SOV_nikolay_yezhov
+							}
+						}
+					}
+					NOT = {
+						573 = { is_controlled_by = RUS }
+						582 = { is_controlled_by = RUS }
+						402 = { is_controlled_by = RUS }
+					}
+				}
 			}
 			90 = { ### ai SOV win
 				add_timed_idea = {
@@ -1682,6 +1698,145 @@ country_event = { # 马奇诺防线差不多得了！
 					limit_to_border = no
 					level > 2
 				}
+			}
+		}
+
+	}
+		
+}
+
+country_event = { # 我想要部分动员！
+	id = martian.51
+	title = martian.51.t
+	desc = martian.51.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { tag = USA }
+		is_ai = yes	
+		NOT = { has_country_flag = partial_economic_mobilisation_flag }
+		NOT = { has_idea = partial_economic_mobilisation }
+		date > 1937.3.1
+		NOT = { date > 1938.1.1 }
+		has_war_support > 0.25
+	}	
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+
+	option = {
+		name = martian.51.a
+		ai_chance = {
+			factor = 100
+		}
+
+		set_country_flag = partial_economic_mobilisation_flag
+		if = {
+			limit = {
+				NOT = { has_idea = partial_economic_mobilisation }
+				NOT = { has_idea = war_economy }
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+			add_ideas = partial_economic_mobilisation
+		}
+
+	}
+		
+}
+
+country_event = { # 我想总动员！！！
+	id = martian.52
+	title = martian.52.t
+	desc = martian.52.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = no
+	
+	trigger = {
+		NOT = { tag = GER }
+		NOT = { tag = TUR }
+		is_ai = yes	
+		NOT = { has_country_flag = tot_economic_mobilisation_flag }
+		NOT = { has_idea = tot_economic_mobilisation }
+		threat > 0.6
+		has_war = yes
+		OR = {
+			has_war_support > 0.8
+			surrender_progress > 0.1
+		}
+		any_enemy_country = {
+			ic_ratio = { 
+				tag = ROOT 
+				ratio > 0.5
+			}
+		}
+	}	
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+
+	option = {
+		name = martian.52.a
+		ai_chance = {
+			factor = 100
+		}
+
+		set_country_flag = tot_economic_mobilisation_flag
+		if = {
+			limit = {
+				NOT = { has_idea = tot_economic_mobilisation }
+			}
+			add_ideas = tot_economic_mobilisation
+		}
+
+	}
+		
+}
+
+country_event = { # 我想要破车！！！！
+	id = martian.53
+	title = martian.53.t
+	desc = martian.53.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = no
+	
+	trigger = {
+		is_ai = yes	
+		NOT = { has_country_flag = poche_flag }
+		threat > 0.6
+		has_war = yes
+		has_tech = mechanised_infantry
+		is_major = yes
+	}	
+
+	mean_time_to_happen = {
+		days = 10
+	}
+
+
+	option = {
+		name = martian.53.a
+		ai_chance = {
+			factor = 100
+		}
+
+		set_country_flag = poche_flag
+
+		create_equipment_variant = {
+			name = "Half Mechanized"
+			type = mechanized_equipment_1
+			upgrades = {
+				tank_armor_upgrade = 0
+				ac_engine_upgrade = 0
+				tank_reliability_upgrade = 0
+				mech_cost_upgrade = 5
 			}
 		}
 

@@ -54,12 +54,6 @@ characters={
 			logistics_skill=3
 			legacy_id=2004
 		}
-		country_leader={
-			desc="POLITICS_WLADYSLAW_SIKORSKI_DESC"
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 	POL_sanacja={
 		name="Sanacja"
@@ -97,20 +91,7 @@ characters={
 			id=-1
 		}
 	}
-	POL_natalia_kamiński={
-		name="Natalia Kamiński"
-		portraits={
-			civilian={
-				large="gfx/leaders/POL/Portrait_Natalia_Kaminski.dds"
-			}
-		}
-		country_leader={
-			desc="POLITICS_WINCENTY_WITOS_DESC"
-			ideology=socialism
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
+
 	POL_firewatcher={
 		name="Firewatcher"
 		portraits={
@@ -134,7 +115,7 @@ characters={
 			id=-1
 		}
 	}
-	POL_edward_rydzŚmigły={
+	POL_edward_rydzSmigly={
 		name="Edward Rydz-Śmigły"
 		portraits={
 			army={
@@ -330,27 +311,19 @@ characters={
 			slot = political_advisor
 			idea_token = POL_ignacy_moscicki
 			available = {
-				OR = {
-					has_completed_focus = POL_ozon 
-					has_completed_focus = POL_dissolve_the_bbwr 
-				}
+				has_completed_focus = POL_promote_chemical_industry_hof
 			}
 			allowed = {
 				original_tag = POL
-				OR = {
-					has_dlc = "No Step Back"
-					has_dlc = "Poland: United and Ready"
-				}
 			}
 			traits = {
-				the_king_of_the_castle 
+				# the_king_of_the_castle 
+				chemical_industry_specialist
 			}
-		}
-		
-		country_leader = {
-			ideology=oligarchism
-			expire="1965.1.1.1"
-			id=-1
+			research_bonus = {
+				synth_resources = 0.15
+				industry = 0.05
+			}
 		}
 	}
 
@@ -369,20 +342,13 @@ characters={
 			slot = political_advisor
 			idea_token = POL_walery_slawek
 			available = {
-				has_completed_focus = POL_the_sanation_left 
-				NOT = {
-					has_country_flag = walery_slawek_is_dead 
-				}
+				has_completed_focus = POL_the_left_chairman_hof
 			}
 			visible = {
 			
 			}
 			allowed = {
 				original_tag = POL
-				OR = {
-					has_dlc = "No Step Back"
-					has_dlc = "Poland: United and Ready"
-				}
 			}
 			traits = {
 				left_sanationist_minister 
@@ -401,12 +367,6 @@ characters={
 			}
 		}
 		gender = female 
-		country_leader = {
-			ideology=marxism
-			traits = { leftist_independent }
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 
 	POL_wladyslaw_gomulka = {
@@ -415,12 +375,6 @@ characters={
 			civilian = {
 				large=GFX_portrait_POL_wladyslaw_gomulka
 			}
-		}
-		country_leader = {
-			ideology=leninism
-			traits = { soviet_thaw }
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 
@@ -431,28 +385,8 @@ characters={
 				large="GFX_portrait_POL_wladyslaw_raczkiewicz"
 			}
 		}
-		country_leader = {
-			ideology=liberalism
-			traits = { democratic_restorationist }
-			expire="1965.1.1.1"
-			id=-1
-		}
 	}
 
-	POL_wincenty_witos = {
-		name=POL_wincenty_witos
-		portraits = {
-			civilian = {
-				large="GFX_POL_wincenty_witos"
-			}
-		}
-		country_leader = {
-			ideology=socialism
-			traits = { morges_champion }
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
 
 	POL_stanislaw_mikolajczyk = {
 		name=POL_stanislaw_mikolajczyk
@@ -460,12 +394,6 @@ characters={
 			civilian = {
 				large="GFX_portrait_POL_stanislaw_mikolajczyk"
 			}
-		}
-		country_leader = {
-			ideology=socialism
-			traits = { polish_peasant_champion }
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 
@@ -479,94 +407,13 @@ characters={
 				large="GFX_portrait_POL_pavel_bermondt_avlov"
 			}
 		}
-		country_leader = {
-			ideology=gen_nazism
-			expire="1965.1.1.1"
-			traits = { POL_cossack_king }
-			id=-1
-		}
 	}
-
-	POL_roman_dmowski = {
-		name=POL_roman_dmowski
-		portraits={
-			civilian = {
-				large="GFX_portrait_POL_roman_dmowski"
-			}
-			army={
-				small=GFX_portrait_POL_roman_dmowski_small
-			}
-		}
-		advisor={
-			cost = 100
-			slot = political_advisor
-			idea_token = POL_roman_dmowski
-			allowed = {
-				original_tag = POL
-			}
-			available = {
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					NOT = {
-						has_autonomy_state = autonomy_supervised_state
-					}
-				}
-				if = {
-					limit = {
-						has_dlc = "Poland: United and Ready"
-						NOT = {
-							has_dlc = "No Step Back"
-						}
-					}
-					has_completed_focus = POL_restore_the_sejm 
-				}
-				if = {
-					limit = {
-						has_dlc = "No Step Back"
-					}
-					has_completed_focus = POL_nationalist_constitution 
-				}
-			}
-			traits = {
-				fascist_demagogue 
-			}
-			ai_will_do = {
-				factor = 0.000
-				modifier = {
-					add = 100.000
-					OR = {
-						has_country_flag = POL_AI_RANDOM_FASCIST 
-						has_game_rule = {
-							rule = POL_ai_behavior 
-							option = FASCIST 
-						}
-					}
-				}
-			}
-		}
-		
-		country_leader = {
-			ideology=fascism_ideology
-			expire="1965.1.1.1"
-			id=-1
-			traits = { father_of_polish_nationalism }
-		}
-	}
-
 	POL_boleslaw_piasecki = {
 		name=POL_boleslaw_piasecki
 		portraits = {
 			civilian = {
 				large="GFX_POL_boleslaw_piasecki"
 			}
-		}
-		country_leader = {
-			ideology=falangism
-			expire="1965.1.1.1"
-			id=-1
-			traits = { unruly_falangist }
 		}
 	}
 
@@ -1167,14 +1014,10 @@ characters={
 			slot = political_advisor
 			idea_token = POL_jan_mosdorf
 			available = {
-				OR = {
-					has_completed_focus = POL_modus_vivendi
-					has_completed_focus = POL_integrate_the_falanga 
-				}
+				has_completed_focus = POL_Nationalist_Unity_Wielkiej_Polski
 			}
 			allowed = {
 				original_tag = POL
-				has_dlc = "No Step Back"
 			}
 			traits = {
 				national_propagandist 
@@ -1195,6 +1038,9 @@ characters={
 			idea_token = POL_irena_anders
 			allowed = {
 				original_tag = POL
+			}
+			visible = {
+				has_capitulated = yes 
 			}
 			available = {
 				has_capitulated = yes 
@@ -1224,10 +1070,9 @@ characters={
 				idea_token = POL_mieczyslaw_michalowicz
 				allowed = {
 					original_tag = POL
-					has_dlc = "No Step Back"
 				}
 				available = {
-					has_completed_focus = POL_reassemble_the_sejm 
+					has_completed_focus = POL_Centrolew
 				}
 				traits = {
 					socdem_reformist 
@@ -1236,54 +1081,6 @@ characters={
 					factor = 0.000
 				}
 			}			
-		}
-		instance = {
-			allowed = {
-				NOT = {
-					has_dlc = "No Step Back"
-				}
-			}
-			name=POL_mieczyslaw_michalowicz
-			portraits={
-				army={
-					small="GFX_idea_POL_mieczyslaw_michalowicz"
-				}
-			}
-			advisor={
-				slot = political_advisor
-				idea_token = POL_mieczyslaw_michalowicz
-				allowed = {
-					original_tag = POL
-					NOT = {
-						has_dlc = "No Step Back"
-					}
-				}
-				available = {
-					if = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						NOT = {
-							has_autonomy_state = autonomy_supervised_state
-						}
-					}
-					if = {
-						limit = {
-							has_dlc = "Poland: United and Ready"
-							NOT = {
-								has_dlc = "No Step Back"
-							}
-						}
-						has_completed_focus = POL_restore_the_sejm 
-					}
-				}
-				traits = {
-					democratic_reformer 
-				}
-				ai_will_do = {
-					factor = 0.000
-				}
-			}
 		}
 	}
 
@@ -1298,11 +1095,13 @@ characters={
 			slot = political_advisor
 			idea_token = POL_henryk_floyar_rajchman
 			available = {
-				has_completed_focus = POL_the_sanation_right 
+				OR = {
+					has_completed_focus = POL_Mieszko_Currency 
+					has_completed_focus = POL_Marszalek_Smigly
+				}
 			}
 			allowed = {
 				original_tag = POL
-				has_dlc = "No Step Back"
 			}
 			traits = {
 				right_industrialist 
@@ -1322,6 +1121,9 @@ characters={
 			idea_token = POL_boleslaw_bierut
 			allowed = {
 				original_tag = POL
+			}
+			visible = {
+				has_government = communism
 			}
 			available = {
 				if = {
@@ -1360,6 +1162,9 @@ characters={
 			idea_token = POL_edward_osobka_morawski
 			allowed = {
 				original_tag = POL
+			}
+			visible = {
+				has_government = communism
 			}
 			available = {
 				if = {
@@ -1476,11 +1281,14 @@ characters={
 				large = "GFX_portrait_POL_tadeusz_bielecki"
 			}
 		}
+		visible = {
+			has_completed_focus = POL_Endecja_Politics_Rationalisation
+		}
 		advisor={
 			slot = political_advisor
 			idea_token = POL_tadeusz_bielecki
 			available = {
-				has_completed_focus = POL_integrate_the_endecja 
+				has_completed_focus = POL_Endecja_Politics_Rationalisation
 			}
 			allowed = {
 				original_tag = POL
@@ -1505,7 +1313,7 @@ characters={
 			available = {
 				OR = {
 					has_completed_focus = POL_modus_vivendi 
-					has_completed_focus = POL_reassemble_the_sejm 
+					has_completed_focus = POL_reassemble_the_sejm_hof 
 					has_completed_focus = POL_integrate_the_endecja 
 				}
 			}
@@ -1569,6 +1377,9 @@ characters={
 			idea_token = POL_stanislaw_radkiewicz
 			allowed = {
 				original_tag = POL
+			}
+			visible = {
+				has_government = communism
 			}
 			available = {
 				if = {
@@ -1636,7 +1447,7 @@ characters={
 			available = {
 				OR = {
 					has_completed_focus = POL_modus_vivendi 
-					has_completed_focus = POL_reassemble_the_sejm 
+					has_completed_focus = POL_reassemble_the_sejm_hof 
 					has_completed_focus = POL_assemble_the_regency_council 
 				}
 			}
@@ -1740,5 +1551,7 @@ characters={
 			}
 		}
 	}
+
+	
 
 }

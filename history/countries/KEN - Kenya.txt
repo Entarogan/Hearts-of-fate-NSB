@@ -51,16 +51,16 @@ MAL_Colonization
 
 # A colony of Italy in 1939.  However, if independent it would have the same politics as in 1936
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality 
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 55
+	democratic = 15
 	fascism = 5
 	communism = 5
-	neutrality = 35
+	neutrality = 75
 }
 
 add_state_core = 548
@@ -73,9 +73,9 @@ add_state_core = 709
 add_state_core = 707
 
 set_cosmetic_tag = KEN_EAP
-
-recruit_character = KEN_dedan_ngwale
 recruit_character = KEN_rukuriri
+recruit_character = KEN_dedan_ngwale
+
 
 
 

@@ -74,30 +74,47 @@ ideas = {
 				#同时有轻型和中型飞机制造商加成
 				fighter_equipment = {
 					air_agility = 0.1 
-          maximum_speed = 0.1
+					maximum_speed = 0.1
 
-				  instant = yes
+					instant = yes
 				}
 				cv_fighter_equipment = {
 					air_agility = 0.1 
-          maximum_speed = 0.1
+					maximum_speed = 0.1
 
-				  instant = yes
+					instant = yes
 				}	
+				CAS_equipment = {
+					air_ground_attack = 0.1 
+					reliability = 0.1
+
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					air_ground_attack = 0.1 
+					reliability = 0.1
+
+					instant = yes
+				}
 				heavy_fighter_equipment = {
 					reliability = 0.2
 
-				  instant = yes
+					instant = yes
 				}
 				tac_bomber_equipment = {
 					reliability = 0.2
 
-				  instant = yes
+					instant = yes
+				}
+				strat_bomber_equipment = {
+					air_bombing = 0.1
+
+					instant = yes
 				}
 				scout_plane_equipment = {
 					reliability = 0.2
 
-				  instant = yes
+					instant = yes
 				}				
 			}
 			traits = { united_aircraft_manufacturer }
@@ -106,6 +123,11 @@ ideas = {
 				#消费品3%
 				consumer_goods_factor = 0.03
 			}
+
+			ai_will_do = {
+				factor = 1
+			}
+
 		}	
 	}
 	
@@ -125,13 +147,22 @@ ideas = {
 			research_bonus = {
 				#资源类15%
 				synth_resources = 0.25
+				industry = 0.05
 			}
 			
 			traits = { industrial_concern }
 			modifier = {
 				#消费品1%
 				consumer_goods_factor = 0.01
+
+				fuel_gain_factor = 0.2
+				local_resources_factor = 0.1
 			}
+
+			ai_will_do = {
+				factor = 1
+			}
+
 		}
 		
 		RUS_shvabe  = {
@@ -146,13 +177,18 @@ ideas = {
 			
 			research_bonus = {
 				#电子+15%
-				electronics = 0.15
+				electronics = 0.20
 			}
 			
 			traits = { electronics_concern }
 			modifier = {
 				
 			}
+
+			ai_will_do = {
+				factor = 0
+			}
+
 		}
 
 		RUS_stroygazmontazh = {
@@ -173,7 +209,14 @@ ideas = {
 			traits = { infrastructure_manufacturer }
 			modifier = {
 				#基础设施+10%建造速度
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
 			}
+
+			ai_will_do = {
+				factor = 0
+			}
+
 		}		
 
     
@@ -198,17 +241,22 @@ ideas = {
 			equipment_bonus = {
 				infantry_equipment = {
 					soft_attack = 0.1
-				  reliability = 0.1
-					build_cost_ic = -0.15
+					reliability = 0.1
+					build_cost_ic = -0.2
 
 				  instant = yes
 				}
-				#步兵装备软攻+10%，造价-15%
+				#步兵装备软攻+10%，造价-20%
 			}
 			modifier = {
 				consumer_goods_factor = 0.01
 			}
 			traits = { infantry_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+
 		}
 		RUS_kamaz = {
 			picture = RUS_kamaz
@@ -224,15 +272,41 @@ ideas = {
 			}
 			equipment_bonus = {
 				motorized_equipment = {
-					build_cost_ic = -0.20
+					build_cost_ic = -0.15
 
-				  reliability = 0.1
+					reliability = 0.1
 
-				  instant = yes
+					instant = yes
 				}
-				#摩托化装备-15%造价
+
+				mechanized_equipment = {
+					build_cost_ic = -0.10
+
+					reliability = 0.05
+
+					instant = yes
+				}
+
+				armored_car_equipment = {
+					build_cost_ic = -0.10
+
+					reliability = 0.05
+
+					instant = yes
+				}
+
+				#破车来啦！
 			}
 			traits = { motorized_equipment_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 10
+					has_country_leader = { character = RUS_anastasia_i ruling_only = yes }
+				}
+			}
+
 		}
  
 	}

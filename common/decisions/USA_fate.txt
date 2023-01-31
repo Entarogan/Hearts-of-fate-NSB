@@ -49,7 +49,6 @@ USA_Interference_in_the_World_War_desicsions = {
 			modifier = {
 				factor = 0
 				FRA = { is_ai = no }
-				FRA = { has_added_tension_amount > 15 }
 			}
 		}
 

@@ -256,7 +256,7 @@ FRA_Commies_like_makono = {
 		}
 	}
 
-	add_ai_strategy = {
+	ai_strategy = {
 		type = support
 		id = "UKR"
 		value = 200
@@ -801,7 +801,7 @@ FRA_Dying_german = {
 	}
 
   enable = {
-		date < 1940.1.1
+		date < 1939.6.1
 		original_tag = FRA
 		has_war_with = GER
 		NOT = { GER = { casualties > 999999 } }
@@ -851,20 +851,19 @@ FRA_why_the_Maginot_line_was_repaired = {
 	}
 
 	ai_strategy = {
-		type = put_unit_buffers
+		type = front_unit_request
 
-		states = {
-			29
-			785
-			18
-			16
-		}
+		tag = GER
 
-		ratio = 0.40
+		value = 150 # lets put more units, should be safe
+	}
 
-		area = europe
+	ai_strategy = {
+		type = front_unit_request
 
-		subtract_invasions_from_need = no
+		tag = HOL
+
+		value = 200 # lets put more units, should be safe
 	}
 
 }

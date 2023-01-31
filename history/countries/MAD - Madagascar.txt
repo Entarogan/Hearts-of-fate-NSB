@@ -49,16 +49,16 @@ MAL_Colonization
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality 
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 50
+	democratic = 10
 	fascism = 8
 	communism = 15
-	neutrality = 27
+	neutrality = 67
 }
 
 add_state_core = 708

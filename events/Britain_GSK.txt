@@ -551,9 +551,12 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-				  rule = ENG_ai_behavior
-				  option = DEMOCRATIC_ANIMUSPHERE
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ANIMUSPHERE
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DEMOCRATIC_ANIMUSPHERE
+					}
 				}
 			}
 		}
@@ -578,9 +581,12 @@ country_event = {
 			base = 50
 			modifier = {
 				factor = 0
-				has_game_rule = {
-				  rule = ENG_ai_behavior
-				  option = DEMOCRATIC_EL_MELLOI
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_EL_MELLOI
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DEMOCRATIC_EL_MELLOI
+					}
 				}
 			}
 		}

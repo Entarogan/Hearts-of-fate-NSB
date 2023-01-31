@@ -320,7 +320,7 @@ Western_relationship = {
 			}
 		}
 		days_remove = 60
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			factor = 1000
 		}
@@ -395,6 +395,7 @@ Western_relationship = {
 		}
 		visible = {
 			is_subject = no
+			NOT = { has_completed_focus = rus_fall_of_ussr }
 			USA_can_sell_weapons_trigger_general = yes
 			NOT = { has_government = fascism }
 		}
@@ -436,13 +437,14 @@ Western_relationship = {
 		}
 		visible = {
 			is_subject = no
+			NOT = { has_completed_focus = rus_fall_of_ussr }
 			USA_can_sell_weapons_trigger_general = yes
 			NOT = { has_government = fascism }
 		}
 		days_remove = 60
 		cost = 75
 		ai_will_do = {
-			factor = 5
+			factor = 0
 			modifier = {
 				has_equipment = {
 					artillery_equipment < 1
@@ -469,76 +471,7 @@ Western_relationship = {
 			}
 		}
 	}
-	RUS_order_tanks_in_USA = {
-		icon = generic_air
-		name = FRA_order_tanks_in_USA
-		available = {
-			has_completed_focus = rus_seek_american_support
-		}
-		visible = {
-			is_subject = no
-			USA_can_sell_weapons_trigger_general = yes
-			NOT = { has_government = fascism }
-		}
-		days_remove = 60
-		cost = 100
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				has_equipment = {
-					light_tank_equipment < 1
-				}
-				factor = 5
-			}
-			modifier = {
-				has_manpower < 10000 
-				factor = 0 #need to up conscription laws
-			}
-		}
-		modifier = {
-		}
-		complete_effect = {
-			USA = {
-				add_offsite_building = { type = industrial_complex level = 5 }
-			}
-		}
-		remove_effect = {
-			if = {
-				limit = {
-					USA = { 
-						has_tech = basic_light_tank 
-						NOT = { 
-							OR = {
-								has_tech = basic_medium_tank 
-								has_tech = improved_medium_tank #needed because basic can be bypassed
-							}
-						}
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = light_tank_equipment
-					amount = 50
-				}
-			}
-			else_if = {
-				limit = {
-					USA = {
-						OR = {
-							has_tech = basic_medium_tank 
-							has_tech = improved_medium_tank #needed because basic can be bypassed
-						}
-					}
-				}
-				add_equipment_to_stockpile = {
-					type = medium_tank_equipment
-					amount = 50
-				}
-			}
-			USA = {
-				add_offsite_building = { type = industrial_complex level = -5 }
-			}
-		}
-	}
+
 	RUS_order_fighters_in_USA = {
 		icon = generic_air
 		name = FRA_order_fighters_in_USA
@@ -547,13 +480,14 @@ Western_relationship = {
 		}
 		visible = {
 			is_subject = no
+			NOT = { has_completed_focus = rus_fall_of_ussr }
 			USA_can_sell_weapons_trigger_general = yes
 			NOT = { has_government = fascism }
 		}
 		days_remove = 60
 		cost = 100
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
 				has_equipment = {
 					fighter_equipment < 1
@@ -590,13 +524,14 @@ Western_relationship = {
 		}
 		visible = {
 			is_subject = no
+			NOT = { has_completed_focus = rus_fall_of_ussr }
 			USA_can_sell_weapons_trigger_general = yes
 			NOT = { has_government = fascism }
 		}
 		days_remove = 60
 		cost = 100
 		ai_will_do = {
-			factor = 1
+			factor = 0
 			modifier = {
 				has_equipment = {
 					tac_bomber_equipment < 1
@@ -638,15 +573,15 @@ Western_relationship = {
 			is_subject = no
 			NOT = { has_completed_focus = rus_fall_of_ussr }
 			USA = { 
-        NOT = { has_war_with = ROOT } 
-        has_government = democratic  
-      }
+				NOT = { has_war_with = ROOT } 
+				has_government = democratic  
+			}
 			NOT = { has_government = fascism }
 		}
 		days_remove = 100
 		cost = 75
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 		}
 		modifier = {
 			
@@ -674,10 +609,10 @@ Western_relationship = {
 			is_subject = no
 			NOT = { has_completed_focus = rus_fall_of_ussr }
 			GER = { 
-        NOT = { has_war_with = ROOT } 
-        has_government = fascism 
-        is_subject = no  
-      }
+				NOT = { has_war_with = ROOT } 
+				has_government = fascism 
+				is_subject = no  
+			}
 		}
 		days_remove = 100
 		cost = 75

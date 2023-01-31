@@ -150,7 +150,7 @@ leader_traits = {
 		stability_factor = 0.30
     army_core_attack_factor = 0.10
     army_core_defence_factor = 0.10
-		surrender_limit = 0.10
+		surrender_limit = 0.05
   }
 
   Military_dictatorship = {

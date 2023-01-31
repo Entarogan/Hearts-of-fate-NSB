@@ -149,7 +149,7 @@ country_event = {
 		complete_national_focus = rus_continue_the_civil_war
 
 		add_timed_idea = {
-		  days = 180
+		  days = 240
 		  idea = RUS_Kick_open_the_door
 		}
 
@@ -183,7 +183,39 @@ country_event = {   ### Talk with army
 	is_triggered_only = yes
 	option = {	
 		name = russian.2.a
-		ai_chance = { base = 35 }
+		ai_chance = { 
+			base = 35 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_MONARCH
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_DEMOCRATIC_MONARCH
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = DEMOCRATIC_MONARCH
+					}
+				}
+			}
+		}
 		add_political_power = -50
 
 		hidden_effect = {
@@ -210,7 +242,9 @@ country_event = {   ### Talk with army
   
 	option = {	
 		name = russian.2.c
-		ai_chance = { base = 25 }
+		ai_chance = { 
+		    base = 25
+		}
 
 		hidden_effect = {
 			set_variable = {
@@ -218,8 +252,8 @@ country_event = {   ### Talk with army
 				value = 1
 			}
 			set_country_flag = RUS_army_talk_end
-			}
 		}
+	}
 	
 }
 
@@ -243,7 +277,39 @@ country_event = {   ### Talk with Navy
 	is_triggered_only = yes
 	option = {	
 		name = russian.3.a
-		ai_chance = { base = 35 }
+		ai_chance = {
+			base = 35 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_MONARCH
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_AUTOCRATIC_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = AUTOCRATIC_DEMOCRATIC_MONARCH
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_DEMOCRATIC_MONARCH
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = DEMOCRATIC_MONARCH
+					}
+				}
+			}
+		}
 		add_political_power = -50
 
 		hidden_effect = {
@@ -257,7 +323,19 @@ country_event = {   ### Talk with Navy
   
 	option = {	
 		name = russian.3.b
-		ai_chance = { base = 40 }
+		ai_chance = { 
+		    base = 40 
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = RUS_AI_RANDOM_KADOC_ZEMIUPUS
+					has_game_rule = {
+						rule = RUS_ai_behavior
+						option = KADOC_ZEMIUPUS
+					}
+				}
+			}
+		}
 
     hidden_effect = {
       set_variable = {
@@ -270,7 +348,9 @@ country_event = {   ### Talk with Navy
   
   option = {	
 		name = russian.3.c
-		ai_chance = { base = 25 }
+		ai_chance = { 
+		    base = 25
+		}
 
 		hidden_effect = {
 		  set_variable = {
@@ -770,7 +850,7 @@ country_event = {   ### Kornilov's Death
 	fire_only_once = yes
   
     trigger = {
-		has_country_leader = { name = "Lavr Kornilov" ruling_only = yes }
+		has_country_leader = { character = RUS_lavr_kornilov ruling_only = yes }
 		date > 1937.10.2
     }
 	
@@ -1973,17 +2053,60 @@ country_event = {
 
 		add_political_power = 50
 
-		SOV = {
-		    transfer_navy = { target = RUS }
-			transfer_units_fraction= {
-				target = RUS
-				size = 0
-				stockpile_ratio = 0
-				army_ratio = 0.5
-				navy_ratio = 0
-				air_ratio = 0
-				keep_unit_leaders_trigger = {
-					always = yes 
+		if = {
+			limit = {
+				tag = UKR
+				UKR = { exists = yes }
+				UKR = { is_puppet = no } 
+				UKR = { has_war_with = SOV } 
+			}
+
+			set_global_flag = UKR_still_on_earth_flag
+			every_state = {
+				limit = {
+				    is_core_of = UKR				
+				    is_core_of = SOV
+				}
+				UKR = { transfer_state = PREV }
+			}
+		}	
+
+		if = {
+			limit = {
+				RUS = { is_ai = yes }
+			}
+			SOV = {
+				transfer_navy = { target = RUS }
+				transfer_units_fraction= {
+					target = RUS
+					size = 0
+					stockpile_ratio = 0
+					army_ratio = 0.5
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes 
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				RUS = { is_ai = no }
+			}
+			SOV = {
+				transfer_navy = { target = RUS }
+				transfer_units_fraction= {
+					target = RUS
+					size = 0
+					stockpile_ratio = 0
+					army_ratio = 0.7
+					navy_ratio = 0
+					air_ratio = 0
+					keep_unit_leaders_trigger = {
+						always = yes 
+					}
 				}
 			}
 		}
@@ -1991,20 +2114,6 @@ country_event = {
 		annex_country = { target = SOV }
 
 		SIK = { remove_ideas = SOV_Focus_on_the_inside_idea }
-
-		if = {
-			limit = {
-				tag = UKR
-				UKR = { exists = yes }
-				UKR = { is_puppet = no } 
-			}
-			every_state = {
-				limit = {
-				    is_core_of = UKR				
-				}
-				UKR = { transfer_state = PREV }
-			}
-		}	
 
 		if = {
 			limit = {
@@ -4274,7 +4383,7 @@ country_event = {   ###  Kornilov's Death normal
 	fire_only_once = yes
 	trigger = {
 		tag = RUS
-		NOT = { has_country_leader = { name = "Lavr Kornilov" ruling_only = yes } }
+		NOT = { has_country_leader = { character = RUS_lavr_kornilov ruling_only = yes } }
 		date > 1937.12.2
 	}
 
@@ -4287,7 +4396,7 @@ country_event = {   ###  Kornilov's Death normal
 	
 	option = {	
 		name = russian_flavour.3.a    
-		remove_unit_leader = 462
+		retire_character = RUS_lavr_kornilov
 		add_stability = -0.03
     }
 }
@@ -4300,7 +4409,7 @@ country_event = {   ###  Kolchak's Death normal
 	fire_only_once = yes
 	trigger = {
 		tag = RUS
-		NOT = { has_country_leader = { name = "Alexander Kolchak" ruling_only = yes } }
+		NOT = { has_country_leader = { character = RUS_aleksandr_kolchak ruling_only = yes } }
 		date > 1938.3.2
 	}
 	mean_time_to_happen = { days = 1  }
@@ -5022,7 +5131,8 @@ country_event = {   ### 胜利？
 
 	trigger = {
 		tag = RUS
-    RUS = { is_puppet = yes }
+		NOT = { has_completed_focus = rus_fall_of_ussr }
+		RUS = { is_puppet = yes }
 		OR = {
 			SOV = { exists = no }
 			SOV = { is_puppet = yes }

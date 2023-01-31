@@ -275,7 +275,7 @@ country_event = {     # 61岁老同志
 	desc = more_hun.6.d
 	picture = GFX_report_event_hungary_refused
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.6.a
@@ -283,48 +283,58 @@ country_event = {     # 61岁老同志
 			base = 50
 		}
 
-    set_country_flag = HUN_pal_Restore_rank_flag 
+		set_country_flag = HUN_pal_Restore_rank_flag 
 
-    add_popularity = {
-      ideology = fascism
-      popularity = 0.05
-    }
-    add_popularity = {
-      ideology = communism
-      popularity = -0.10
-    }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = -0.10
+		}
 
-    HUN_increase_right_wing = yes
+		HUN_increase_right_wing = yes
 
-    HUN_decrease_left_wing = yes
+		HUN_decrease_left_wing = yes
 
-	add_corps_commander_role = {
-		Character = HUN_pal_pronay
-		traits = { harsh_leader war_hero }
-		skill = 3
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 2
-		logistics_skill = 1
-		legacy_id = 4029
-	}
+		add_corps_commander_role = {
+			Character = HUN_pal_pronay
+			traits = { harsh_leader war_hero }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = 4029
+			visible = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+				has_country_flag = HUN_pal_Restore_rank_flag 
+			}
+		}
 
-	add_corps_commander_role = {
-		Character = HUN_imre_kemeri_nagy
+		add_corps_commander_role = {
+			Character = HUN_imre_kemeri_nagy
 
-		traits = { winter_specialist infantry_officer }
+			traits = { winter_specialist infantry_officer }
 
-		skill = 3
-		attack_skill = 3
-		defense_skill = 4
-		planning_skill = 1
-		logistics_skill = 2
-		legacy_id = 4027
-	}
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 2
+			legacy_id = 4027
+			visible = {
+				NOT = { has_government = communism }
+				NOT = { has_country_flag = HUN_Ban_the_far_right_wing_completely_flag }
+				has_country_flag = HUN_pal_Restore_rank_flag 
+			}
+		}
 
-    hidden_effect = {
-      country_event = { id = more_hun.7 days = 15 }
-    }
+		hidden_effect = {
+		    country_event = { id = more_hun.7 days = 15 }
+		}
 
 	}
 	
@@ -1170,24 +1180,19 @@ country_event = {     # 进军成功
 
 		set_country_flag = HUN_political_situation_has_stabilized_flag
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-    set_country_flag = HUN_Lakatos_Arrested_flag
-    set_country_flag = HUN_Horty_Arrested_flag
+		set_country_flag = HUN_Bartoli_Arrested_flag
+		set_country_flag = HUN_Lakatos_Arrested_flag
+		set_country_flag = HUN_Horty_Arrested_flag
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
-
-    remove_unit_leader = 888
-    remove_unit_leader = 4015
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
 		hidden_effect = {
 			news_event = { id = more_News.48 days = 1 }
@@ -1415,7 +1420,7 @@ country_event = {     # 共产主义的胜利
 	desc = more_hun.44.d
 	picture = GFX_report_event_communists_cheer
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.44.a
@@ -1426,60 +1431,45 @@ country_event = {     # 共产主义的胜利
 
 		set_country_flag = HUN_political_situation_has_stabilized_flag
 
-    add_stability = -0.10
+		add_stability = -0.10
 
-    set_politics = {
-      ruling_party = communism
-      elections_allowed = no
-    }  
+		set_politics = {
+		ruling_party = communism
+		elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = communism
-      popularity = 0.15
-    }
+		add_popularity = {
+		ideology = communism
+		popularity = 0.15
+		}
 
-    set_country_flag = HUN_Horty_Arrested_flag
-    set_country_flag = HUN_Lakatos_Arrested_flag
+		set_country_flag = HUN_Horty_Arrested_flag
+		set_country_flag = HUN_Lakatos_Arrested_flag
 
-    remove_unit_leader = 4015
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
 
-    set_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+		set_country_flag = HUN_Ban_the_far_right_wing_completely_flag
 
-    remove_unit_leader = 4032
-    remove_unit_leader = 4017
-    remove_unit_leader = 4020
+		if = {
+		limit = {
+		    has_idea = HUN_GER_economic_control_idea
+		}
 
-    if = {
-      limit = {
-        has_country_flag = HUN_pal_Restore_rank_flag 
-      }
-      remove_unit_leader = 4029
-      remove_unit_leader = 4027
-    }
+		add_political_power = -100
 
-    if = {
-      limit = {
-        has_idea = HUN_GER_economic_control_idea
-      }
+		remove_ideas = HUN_GER_economic_control_idea
+		}
 
-		  add_political_power = -100
+		if = {
+			limit = {
+			    has_idea = HUN_German_Advisory_Group_idea
+			}
+			remove_ideas = HUN_German_Advisory_Group_idea
 
-      remove_ideas = HUN_GER_economic_control_idea
-    }
+			GER = {
+			    country_event = { id = more_hun.94 days = 3 }
+			}
 
-    if = {
-      limit = {
-        has_idea = HUN_German_Advisory_Group_idea
-      }
-      remove_ideas = HUN_German_Advisory_Group_idea
-
-      GER = {
-        country_event = { id = more_hun.94 days = 3 }
-      }
-
-    }
+		}
 
 		hidden_effect = {
 
@@ -1636,7 +1626,7 @@ country_event = {     # 第二天
 	desc = more_hun.48.d
 	picture = GFX_report_event_mussolini_hotel
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.48.a
@@ -1647,31 +1637,26 @@ country_event = {     # 第二天
 
 		set_country_flag = HUN_political_situation_has_stabilized_flag
 
-    if = {
-      limit = {
-        has_idea = HUN_disjointed_government_3_idea
-      }
-      remove_ideas = HUN_disjointed_government_3_idea
-    }
+		if = {
+			limit = {
+			    has_idea = HUN_disjointed_government_3_idea
+			}
+			remove_ideas = HUN_disjointed_government_3_idea
+		}
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-    set_country_flag = HUN_Lakatos_Arrested_flag
-    set_country_flag = HUN_Horty_Arrested_flag
-
-    remove_unit_leader = 888
-    remove_unit_leader = 4015
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
+		set_country_flag = HUN_Bartoli_Arrested_flag
+		set_country_flag = HUN_Lakatos_Arrested_flag
+		set_country_flag = HUN_Horty_Arrested_flag
 
 
 		hidden_effect = {
@@ -1694,7 +1679,7 @@ country_event = {     # 强攻城堡山
 	desc = more_hun.49.d
 	picture = GFX_report_event_bunker_01
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.49.a
@@ -1705,34 +1690,45 @@ country_event = {     # 强攻城堡山
 
 		set_country_flag = HUN_political_situation_has_stabilized_flag
 
-    set_country_flag = HUN_Bartoli_died_flag
+		set_country_flag = HUN_Bartoli_died_flag
 
-    set_country_flag = HUN_Horty_died_flag
+		set_country_flag = HUN_Horty_died_flag
 
-    add_political_power = -50
+		retire_character = HUN_elizabeth_bathory
+		retire_character = HUN_miklos_horthy
 
-    add_stability = -0.05
+		add_country_leader_role = {
+			character = HUN_geza_lakatos
+			country_leader = {
+				expire="1965.1.1.1"
+				ideology = stratocracy
+				traits = {
 
-    if = {
-      limit = {
-        has_idea = HUN_disjointed_government_3_idea
-      }
-      remove_ideas = HUN_disjointed_government_3_idea
-    }
+				}
+			}
+			promote_leader = yes
+		}
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		add_political_power = -50
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
+		add_stability = -0.05
 
-    remove_unit_leader = 888
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
+		if = {
+			limit = {
+			    has_idea = HUN_disjointed_government_3_idea
+			}
+			remove_ideas = HUN_disjointed_government_3_idea
+		}
+
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
+
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
 		hidden_effect = {
 			news_event = { id = more_News.49 hours = 3 }
@@ -1862,15 +1858,15 @@ country_event = {     # 革命
 	desc = more_hun.52.d
 	picture = GFX_report_event_generic_communist_congress
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.52.a
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_government_idea_5 }
-      NOT = { has_idea = HUN_influence_of_the_government_idea_4 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_government_idea_5 }
+			NOT = { has_idea = HUN_influence_of_the_government_idea_4 }
+		}
 
 		ai_chance = {
 			base = 40
@@ -1878,64 +1874,46 @@ country_event = {     # 革命
 
 		set_country_flag = HUN_political_situation_has_stabilized_flag
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    set_politics = {
-      ruling_party = communism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = communism
-      popularity = 0.15
-    }
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-    set_country_flag = HUN_Lakatos_Arrested_flag
-    set_country_flag = HUN_Horty_Arrested_flag
+		set_country_flag = HUN_Bartoli_Arrested_flag
+		set_country_flag = HUN_Lakatos_Arrested_flag
+		set_country_flag = HUN_Horty_Arrested_flag
 
-    remove_unit_leader = 888
-    remove_unit_leader = 4015
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
+		set_country_flag = HUN_Ban_the_far_right_wing_completely_flag
 
-    set_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+		if = {
+			limit = {
+				has_idea = HUN_GER_economic_control_idea
+			}
 
-    remove_unit_leader = 4032
-    remove_unit_leader = 4017
-    remove_unit_leader = 4020
+			add_political_power = -100
 
-    if = {
-      limit = {
-        has_country_flag = HUN_pal_Restore_rank_flag 
-      }
-      remove_unit_leader = 4029
-      remove_unit_leader = 4027
-    }
+			remove_ideas = HUN_GER_economic_control_idea
+		}
 
-    if = {
-      limit = {
-        has_idea = HUN_GER_economic_control_idea
-      }
+		if = {
+			limit = {
+				has_idea = HUN_German_Advisory_Group_idea
+			}
+			remove_ideas = HUN_German_Advisory_Group_idea
 
-		  add_political_power = -100
-
-      remove_ideas = HUN_GER_economic_control_idea
-    }
-
-    if = {
-      limit = {
-        has_idea = HUN_German_Advisory_Group_idea
-      }
-      remove_ideas = HUN_German_Advisory_Group_idea
-
-      GER = {
-        country_event = { id = more_hun.94 days = 3 }
-      }
-
-    }
+			GER = {
+				country_event = { id = more_hun.94 days = 3 }
+			}
+		}
 
 		hidden_effect = {
 			news_event = { id = more_News.54 days = 1 }
@@ -1953,9 +1931,9 @@ country_event = {     # 革命
 		name = more_hun.52.b
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_government_idea_2 }
-      NOT = { has_idea = HUN_influence_of_the_government_idea_1 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_government_idea_2 }
+			NOT = { has_idea = HUN_influence_of_the_government_idea_1 }
+		}
 
 		ai_chance = {
 			base = 40
@@ -1963,9 +1941,9 @@ country_event = {     # 革命
 
 		add_political_power = -50
 
-    hidden_effect = {
-      country_event = { id = more_hun.53 days = 3 }
-    }
+		hidden_effect = {
+		    country_event = { id = more_hun.53 days = 3 }
+		}
 
 	}
 
@@ -1976,9 +1954,9 @@ country_event = {     # 革命
 			base = 20
 		}
 
-    hidden_effect = {
-      country_event = { id = more_hun.55 days = 3 }
-    }
+		hidden_effect = {
+		    country_event = { id = more_hun.55 days = 3 }
+		}
 
 	}
 
@@ -2013,16 +1991,16 @@ country_event = {     # 一锤定音
 	desc = more_hun.54.d
 	picture = GFX_report_event_german_inspect_troops
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.54.a
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
+		}
 
 		ai_chance = {
 			base = 50
@@ -2032,23 +2010,11 @@ country_event = {     # 一锤定音
 
 		add_political_power = -50
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
-
-    remove_unit_leader = 4032
-    remove_unit_leader = 4017
-    remove_unit_leader = 4020
-
-    if = {
-      limit = {
-        has_country_flag = HUN_pal_Restore_rank_flag 
-      }
-      remove_unit_leader = 4029
-      remove_unit_leader = 4027
-    }
+		set_country_flag = HUN_Ban_the_far_right_wing_completely_flag
 
 		hidden_effect = {
 			news_event = { id = more_News.56 days = 1 }
@@ -2066,9 +2032,9 @@ country_event = {     # 一锤定音
 		name = more_hun.54.b
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
+		}
 
 		ai_chance = {
 			base = 50
@@ -2078,28 +2044,23 @@ country_event = {     # 一锤定音
 
 		add_political_power = -100
 
-    add_stability = -0.10
+		add_stability = -0.10
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-    set_country_flag = HUN_Lakatos_Arrested_flag
-    set_country_flag = HUN_Horty_Arrested_flag
-
-    remove_unit_leader = 888
-    remove_unit_leader = 4015
-    remove_unit_leader = 4030
-    remove_unit_leader = 556
+		set_country_flag = HUN_Bartoli_Arrested_flag
+		set_country_flag = HUN_Lakatos_Arrested_flag
+		set_country_flag = HUN_Horty_Arrested_flag
 
 		hidden_effect = {
 			news_event = { id = more_News.53 days = 1 }
@@ -2127,10 +2088,10 @@ country_event = {     # 只有一个
 		name = more_hun.55.a
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
+		}
 
 		ai_chance = {
 			base = 40
@@ -2140,27 +2101,15 @@ country_event = {     # 只有一个
 
 		add_political_power = -50
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+		set_country_flag = HUN_Ban_the_far_right_wing_completely_flag
 
-    remove_unit_leader = 4032
-    remove_unit_leader = 4017
-    remove_unit_leader = 4020
-
-    if = {
-      limit = {
-        has_country_flag = HUN_pal_Restore_rank_flag 
-      }
-      remove_unit_leader = 4029
-      remove_unit_leader = 4027
-    }
-
-    hidden_effect = {
-      country_event = { id = more_hun.66 days = 7 }
-    }
+		hidden_effect = {
+		    country_event = { id = more_hun.66 days = 7 }
+		}
 
 		hidden_effect = {
 			news_event = { id = more_News.56 days = 1 }
@@ -2178,9 +2127,9 @@ country_event = {     # 只有一个
 		name = more_hun.55.b
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
+		}
 
 		ai_chance = {
 			base = 40
@@ -2190,22 +2139,19 @@ country_event = {     # 只有一个
 
 		add_political_power = -100
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-
-    remove_unit_leader = 888
-    remove_unit_leader = 4030
+		set_country_flag = HUN_Bartoli_Arrested_flag
 
 		hidden_effect = {
 			news_event = { id = more_News.53 days = 1 }
@@ -2223,16 +2169,16 @@ country_event = {     # 只有一个
 		name = more_hun.55.c
 
 		trigger = { 
-      has_idea = HUN_German_Advisory_Group_idea
-    }
+		    has_idea = HUN_German_Advisory_Group_idea
+		}
 
 		ai_chance = {
 			base = 20
 		}
 
-    GER = {
-      country_event = { id = more_hun.45 days = 1 }
-    }
+		GER = {
+		    country_event = { id = more_hun.45 days = 1 }
+		}
 
 	}
 
@@ -2329,7 +2275,7 @@ country_event = {     # 加入阵营
 	desc = more_hun.56.d
 	picture = GFX_report_event_generic_read_write
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.56.a
@@ -2338,22 +2284,22 @@ country_event = {     # 加入阵营
 			base = 100
 		}
 
-    add_ai_strategy = {
-      type = befriend
-      id = FROM			
-      value = 200
-    }
-    add_ai_strategy = {
-      type = alliance
-      id = FROM			
-      value = 200
-    }	
-    add_ai_strategy = {
-      type = support
-      id = FROM
-      value = 20
-    }
-    add_to_faction = FROM 
+		add_ai_strategy = {
+			type = befriend
+			id = FROM			
+			value = 200
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM			
+			value = 200
+		}	
+		add_ai_strategy = {
+			type = support
+			id = FROM
+			value = 20
+		}
+		add_to_faction = FROM 
 
 		FROM = {
 			country_event = more_hun.57
@@ -2849,61 +2795,6 @@ country_event = {
   		clr_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
 
 		add_stability = -0.10
-		add_corps_commander_role = {
-			Character = HUN_karoly_beregfy
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-			legacy_id = 4017
-		}
-		add_corps_commander_role = {
-			Character = HUN_döme_sztójay
-			traits = { politically_connected }
-
-			skill = 1
-			attack_skill = 1
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 1
-	  
-			legacy_id = 4020
-		}
-
-		add_field_marshal_role = {
-			Character = HUN_attila
-			traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
-			skill = 5
-			attack_skill = 6
-			defense_skill = 2
-			planning_skill = 4
-			logistics_skill = 4
-			legacy_id = 4032
-		}
-
-		add_corps_commander_role = {
-			Character = HUN_pal_pronay
-			traits = { harsh_leader war_hero }
-			skill = 3
-			attack_skill = 4
-			defense_skill = 3
-			planning_skill = 2
-			logistics_skill = 1
-			legacy_id = 4029
-		}
-		add_corps_commander_role = {
-			Character = HUN_imre_kemeri_nagy
-	
-			traits = { winter_specialist infantry_officer }
-	
-			skill = 3
-			attack_skill = 3
-			defense_skill = 4
-			planning_skill = 1
-			logistics_skill = 2
-			legacy_id = 4027
-		}
 
 	}
 	option = { 
@@ -2922,16 +2813,16 @@ country_event = {     # 只有一个(GER拒绝
 	desc = more_hun.67.d
 	picture = GFX_report_event_hungary_parliament
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.55.a
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_5 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_4 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_3 }
+		}
 
 		ai_chance = {
 			base = 50
@@ -2941,27 +2832,15 @@ country_event = {     # 只有一个(GER拒绝
 
 		add_political_power = -50
 
-    add_stability = -0.05
+		add_stability = -0.05
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+		set_country_flag = HUN_Ban_the_far_right_wing_completely_flag
 
-    remove_unit_leader = 4032
-    remove_unit_leader = 4017
-    remove_unit_leader = 4020
-
-    if = {
-      limit = {
-        has_country_flag = HUN_pal_Restore_rank_flag 
-      }
-      remove_unit_leader = 4029
-      remove_unit_leader = 4027
-    }
-
-    hidden_effect = {
-      country_event = { id = more_hun.66 days = 7 }
-    }
+		hidden_effect = {
+		    country_event = { id = more_hun.66 days = 7 }
+		}
 
 		hidden_effect = {
 			news_event = { id = more_News.56 days = 1 }
@@ -2979,9 +2858,9 @@ country_event = {     # 只有一个(GER拒绝
 		name = more_hun.55.b
 
 		trigger = { 
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
-      NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
-    }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_2 }
+			NOT = { has_idea = HUN_influence_of_the_right_wing_group_idea_1 }
+		}
 
 		ai_chance = {
 			base = 50
@@ -2991,22 +2870,19 @@ country_event = {     # 只有一个(GER拒绝
 
 		add_political_power = -100
 
-    remove_ideas = HUN_disjointed_government_3_idea
+		remove_ideas = HUN_disjointed_government_3_idea
 
-    set_politics = {
-      ruling_party = Fascism
-      elections_allowed = no
-    }  
+		set_politics = {
+			ruling_party = Fascism
+			elections_allowed = no
+		}  
 
-    add_popularity = {
-      ideology = Fascism
-      popularity = 0.15
-    }
+		add_popularity = {
+			ideology = Fascism
+			popularity = 0.15
+		}
 
-    set_country_flag = HUN_Bartoli_Arrested_flag
-
-    remove_unit_leader = 888
-    remove_unit_leader = 4030
+		set_country_flag = HUN_Bartoli_Arrested_flag
 
 		hidden_effect = {
 			news_event = { id = more_News.53 days = 1 }
@@ -3577,7 +3453,7 @@ country_event = {     # 加入阵营
 	desc = more_hun.81.d
 	picture = GFX_report_event_pierre_laval
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.81.a
@@ -3586,22 +3462,22 @@ country_event = {     # 加入阵营
 			base = 100
 		}
 
-    add_ai_strategy = {
-      type = befriend
-      id = FROM			
-      value = 200
-    }
-    add_ai_strategy = {
-      type = alliance
-      id = FROM			
-      value = 200
-    }	
-    add_ai_strategy = {
-      type = support
-      id = FROM
-      value = 20
-    }
-    add_to_faction = FROM 
+		add_ai_strategy = {
+			type = befriend
+			id = FROM			
+			value = 200
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM			
+			value = 200
+		}	
+		add_ai_strategy = {
+			type = support
+			id = FROM
+			value = 20
+		}
+		add_to_faction = FROM 
 
 		FROM = {
 			country_event = more_hun.82
@@ -3610,7 +3486,6 @@ country_event = {     # 加入阵营
 		hidden_effect = {
 			set_country_flag = alliance_inviter@ROOT
 			FROM = { set_country_flag = alliance_applicant@ROOT }
-			news_event = { id = news.289 hours = 12 }
 		}
 
 	}
@@ -3637,7 +3512,7 @@ country_event = {     # 加了阵营
 	desc = more_hun.82.d
 	picture = GFX_report_event_soviet_finnish_pact
 
-  is_triggered_only = yes
+	is_triggered_only = yes
 
 	option = {
 		name = more_hun.82.a
@@ -3646,18 +3521,24 @@ country_event = {     # 加了阵营
 			base = 100
 		}
 
-    set_country_flag = HUN_decided_direction_of_diplomacy_flag
+		set_country_flag = HUN_decided_direction_of_diplomacy_flag
 
-    add_ai_strategy = {
-      type = befriend
-      id = FROM		
-      value = 200
-    }
-    add_ai_strategy = {
-      type = alliance
-      id = FROM			
-      value = 200
-    }	
+		add_ai_strategy = {
+			type = befriend
+			id = FROM		
+			value = 200
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM			
+			value = 200
+		}	
+
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
 
 	}
 
@@ -4099,32 +3980,10 @@ country_event = {     # 处置反革命
 			base = 50
 		}
 
-    clr_country_flag = HUN_Horty_Arrested_flag
-    clr_country_flag = HUN_Lakatos_Arrested_flag
+		clr_country_flag = HUN_Horty_Arrested_flag
+		clr_country_flag = HUN_Lakatos_Arrested_flag
 
 		add_political_power = -50
-
-	add_corps_commander_role = {
-		Character = HUN_géza_lakatos
-		traits = { brilliant_strategist }
-		skill = 3
-		attack_skill = 3
-		defense_skill = 2
-		planning_skill = 3
-		logistics_skill = 2
-		legacy_id = 4015
-	}
-    create_navy_leader = {
-      name = "Miklós Horthy"
-      gfx = GFX_Portrait_hungary_miklos_horthy_admiral
-      traits = { gunnery_expert  navy_media_personality  superior_tactician }
-      skill = 4
-      id = 556
-      attack_skill = 5
-      defense_skill = 2
-      maneuvering_skill = 2
-      coordination_skill = 4
-    }
 		
 	}
 
@@ -4132,105 +3991,30 @@ country_event = {     # 处置反革命
 		name = more_hun.93.b
 
 		trigger = { 
-      has_country_flag = HUN_Native_triumph_flag 
-    }
+		    has_country_flag = HUN_Native_triumph_flag 
+		}
 
 		ai_chance = {
 			base = 50
 		}
 
-    clr_country_flag = HUN_Horty_Arrested_flag
-    clr_country_flag = HUN_Lakatos_Arrested_flag
-    clr_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
+		clr_country_flag = HUN_Horty_Arrested_flag
+		clr_country_flag = HUN_Lakatos_Arrested_flag
+		clr_country_flag = HUN_Ban_the_far_right_wing_completely_flag 
 
 		add_political_power = -150
 
-    add_stability = -0.10
+		add_stability = -0.10
 
-    add_popularity = {
-      ideology = fascism
-      popularity = 0.05
-    }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.05
+		}
 
-    add_popularity = {
-      ideology = neutrality
-      popularity = 0.05
-    }
-	add_corps_commander_role = {
-		Character = HUN_géza_lakatos
-		traits = { brilliant_strategist }
-		skill = 3
-		attack_skill = 3
-		defense_skill = 2
-		planning_skill = 3
-		logistics_skill = 2
-		legacy_id = 4015
-	}
-	add_naval_commander_role = {
-		Character = HUN_miklós_horthy
-		traits = { gunnery_expert  navy_media_personality  superior_tactician }
-		skill = 4
-		attack_skill = 5
-		defense_skill = 2
-		maneuvering_skill = 2
-		coordination_skill = 4
-		legacy_id = 556
-	}
-
-	add_field_marshal_role = {
-		Character = HUN_attila
-		traits = { war_hero trickster brilliant_strategist cavalry_leader skilled_staffer hill_fighter }
-		skill = 5
-		attack_skill = 6
-		defense_skill = 2
-		planning_skill = 4
-		logistics_skill = 4
-		legacy_id = 4032
-	}
-	add_corps_commander_role = {
-		Character = HUN_karoly_beregfy
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-		legacy_id = 4017
-	}
-
-	add_corps_commander_role = {
-		Character = HUN_döme_sztójay
-		traits = { politically_connected }
-
-		skill = 1
-		attack_skill = 1
-		defense_skill = 1
-		planning_skill = 1
-		logistics_skill = 1
-  
-		legacy_id = 4020
-	}
-	add_corps_commander_role = {
-		Character = HUN_pal_pronay
-		traits = { harsh_leader war_hero }
-		skill = 3
-		attack_skill = 4
-		defense_skill = 3
-		planning_skill = 2
-		logistics_skill = 1
-		legacy_id = 4029
-	}
-	add_corps_commander_role = {
-		Character = HUN_imre_kemeri_nagy
-
-		traits = { winter_specialist infantry_officer }
-
-		skill = 3
-		attack_skill = 3
-		defense_skill = 4
-		planning_skill = 1
-		logistics_skill = 2
-		legacy_id = 4027
-	}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
 	
 	}
 

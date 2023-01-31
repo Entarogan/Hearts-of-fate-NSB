@@ -45,16 +45,27 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 500
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_tech_bonus = {
-				name = codebreaking_bonus
-				bonus = 1
-				uses = 3
-				category = decryption_tech
-				category = computing_tech
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				}
+				add_tech_bonus = {
+					name = codebreaking_bonus
+					bonus = 1.0
+					uses = 3
+					category = decryption_tech
+					category = computing_tech
+				}
+			}
+			else = {
+				hidden_effect = {
+					set_technology = { lar_decryption_bonus_tech = 1 }
+				}
+				custom_effect_tooltip = lar_decryption_bonus_tt
 			}
 		}
 	}
@@ -177,19 +188,25 @@ focus_tree = {
 		}
 		continue_if_invalid = yes
 		ai_will_do = {
-			factor = 10
+			factor = 1000
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = DARKENED_FOCUS
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DARKENED_FOCUS
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DARKENED_FOCUS
+					}
 				}
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = GOD_BLESS_THE_KING
+				OR = {
+					has_country_flag = ENG_AI_DEMOCRATIC_GOD_BLESS_THE_KING
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = GOD_BLESS_THE_KING
+					}
 				}
 			}
 		}
@@ -252,19 +269,25 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		ai_will_do = {
-			factor = 11
+			factor = 1100
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = DEMOCRATIC_EL_MELLOI
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_EL_MELLOI
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DEMOCRATIC_EL_MELLOI
+					}
 				}
 			}
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = DEMOCRATIC_ANIMUSPHERE
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DEMOCRATIC_ANIMUSPHERE
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DEMOCRATIC_ANIMUSPHERE
+					}
 				}
 			}
 		}
@@ -365,8 +388,14 @@ focus_tree = {
 				ENG_motorized_focus
 			}
 			add_tech_bonus = {
-				name = armor_bonus
+				name = ENG_motorized_focus
 				bonus = 1.5
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+			add_tech_bonus = {
+				name = ENG_motorized_focus
+				bonus = 1.0
 				uses = 1
 				category = motorized_equipment
 			}
@@ -686,30 +715,10 @@ focus_tree = {
 		y = 1
 		relative_position_id = crypto_bomb_focus
 		available = {
-			has_government = democratic
-			any_other_country = {
-				has_war_with = ROOT
-				NOT = {
-					has_government = democratic
-				}
-				num_of_factories > 30
-			}
-			NOt = {
-				has_war_with = USA
-			}
-			USA = {
-				has_government = ROOT
-				has_war = no
-				NOT = {
-					OR = {
-						has_idea = undisturbed_isolation
-						has_idea = isolation
-					}
-				}
-			}
+			is_in_faction_with = USA
 		}
 		ai_will_do = {
-			factor = 1
+			factor = 500
 		}
 		completion_reward = {
 			USA = {
@@ -755,7 +764,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = tizard_mission_focus
 		ai_will_do = {
-			factor = 3
+			factor = 30
 		}
 		available_if_capitulated = yes
 		completion_reward = {
@@ -916,6 +925,14 @@ focus_tree = {
 					}
 				}
 			}
+			452 = {
+				CONTROLLER = {
+					OR = {
+						tag = ENG
+						is_subject_of = ENG
+					}
+				}
+			}
 		}
 		completion_reward = {
 			if = {
@@ -957,6 +974,31 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			452 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9989
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9989
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					province = 9989
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -970,7 +1012,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
 		ai_will_do = {
-			factor = 4
+			factor = 400
 		}
 		available = {
 			has_country_leader  = {
@@ -1010,7 +1052,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ENG_steady_as_she_goes
 		ai_will_do = {
-			factor = 4
+			factor = 400
 		}
 		available = {
 			OR = {
@@ -1062,7 +1104,7 @@ focus_tree = {
 			factor = 2
 		}
 		completion_reward = {
-			add_stability = -0.15
+			add_stability = -0.1
 			custom_effect_tooltip = ENG_no_further_appeasement_tt
 			hidden_effect = {
 				set_rule = {
@@ -2543,7 +2585,12 @@ focus_tree = {
 		relative_position_id = uk_mediterranean_focus
 		available = {
 			116 = {
-				is_owned_and_controlled_by = ENG
+				CONTROLLER = {
+					OR = {
+						tag = ENG
+						is_subject_of = ENG
+					}
+				}
 			}
 		}
 		available_if_capitulated = yes
@@ -4498,6 +4545,7 @@ focus_tree = {
 			has_dlc = "Man the Guns"
 		}
 		available = {
+			always = no
 			CAN = {
 				is_subject_of = ENG
 				has_government = ROOT
@@ -4893,9 +4941,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_enforce_animusphere
 		available = {
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		continue_if_invalid = yes
@@ -4987,13 +5035,22 @@ focus_tree = {
 		}
 		will_lead_to_war_with = IRQ
 		will_lead_to_war_with = PER
-		will_lead_to_war_with = HOL
-		will_lead_to_war_with = VEN
+
 		continue_if_invalid = yes
 		ai_will_do = {
 			factor = 1
 		}
 		completion_reward = {
+
+			if = {
+				limit = { has_guaranteed = PER }
+				diplomatic_relation = {
+					country = PER
+					relation = guarantee
+					active = no
+				}
+			}
+
 			create_wargoal = {
 				target = IRQ
 				type = puppet_wargoal_focus
@@ -5531,9 +5588,9 @@ focus_tree = {
 			GER = {
 				ENG_focus_available_war = yes
 			}
-			has_country_leader = {
-				name = "Olga Marie Animusphere"
-				ruling_only = yes
+			has_country_leader  = {
+				ruling_only  = yes 
+				character = ENG_Olga_Marie_Animusphere
 			}
 		}
 		bypass = {
@@ -5957,9 +6014,12 @@ focus_tree = {
 			factor = 15
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = DARKENED_FOCUS
+				OR = {
+					has_country_flag = ENG_AI_RANDOM_DARKENED_FOCUS
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = DARKENED_FOCUS
+					}
 				}
 			}
 		}
@@ -6161,7 +6221,19 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			neutrality > 0.8
-			has_stability > 0.75
+			or = {
+				has_stability > 0.75
+				AND = {
+					has_war = yes
+					any_enemy_country = {
+						is_major = yes
+						has_government = fascism
+						capital_scope = {
+							is_on_continent = europe
+						}
+					}
+				}
+			}
 			date > 1939.6.1
 		}
 		ai_will_do = {
@@ -6576,9 +6648,12 @@ focus_tree = {
 			factor = 0
 			modifier = {
 				factor = 0
-				has_game_rule = {
-					rule = ENG_ai_behavior
-					option = GOD_BLESS_THE_KING
+				OR = {
+					has_country_flag = ENG_AI_DEMOCRATIC_GOD_BLESS_THE_KING
+					has_game_rule = {
+						rule = ENG_ai_behavior
+						option = GOD_BLESS_THE_KING
+					}
 				}
 			}
 		}
@@ -6774,13 +6849,14 @@ focus_tree = {
 		y = 1
 		relative_position_id = uk_arturia_production_focus
 		available = {
+            has_war = yes
 		}
 		ai_will_do = {
 			factor = 3
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_stability = -0.15
+			add_stability = -0.1
 			add_ideas = ARTURIA_hard_idea
 			hidden_effect = {
 				if = {
@@ -7921,7 +7997,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = industrial_bonus
-				bonus = 0.5
+				bonus = 1.5
 				uses = 3
 				category = synth_resources
 			}
@@ -8697,12 +8773,11 @@ focus_tree = {
 		y = 2
 		relative_position_id = uk_carrier_focus
 		completion_reward = {
-			add_tech_bonus = {
-				name = uk_wild_hunt
-				bonus = 1
+			add_doctrine_cost_reduction = {
+				name = uk_waves_focus
+				cost_reduction = 0.5
 				uses = 4
-				category = cat_trade_interdiction
-				category = trade_interdiction_tree
+				category = naval_doctrine
 			}
 		}
 	}
@@ -10544,7 +10619,7 @@ focus_tree = {
 			126 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
@@ -10555,7 +10630,7 @@ focus_tree = {
 			127 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
@@ -10566,34 +10641,22 @@ focus_tree = {
 			123 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					province = 540
 					instant_build = yes
 				}
 			}
 			125 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					province = 271
 					instant_build = yes
 				}
 			}
@@ -10628,7 +10691,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = coastal_bunker
-					level = 3
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
@@ -10657,12 +10720,6 @@ focus_tree = {
 					type = bunker
 					level = 4
 					province = 3242
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 6
-					province = 3379
 					instant_build = yes
 				}
 			}
@@ -10903,7 +10960,7 @@ focus_tree = {
 	focus = {
 		id = uk_defend_eastern_shore
 		icon = GFX_goal_generic_construct_military
-		cost = 5
+		cost = 3
 		prerequisite = {
 			focus = uk_defend_channel
 		}
@@ -10925,7 +10982,7 @@ focus_tree = {
 			129 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
@@ -10936,34 +10993,22 @@ focus_tree = {
 			130 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					province = 11297
 					instant_build = yes
 				}
 			}
 			131 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 4
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 4
-					province = 351
 					instant_build = yes
 				}
 			}
@@ -11372,7 +11417,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = infrastructure
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -11443,7 +11488,7 @@ focus_tree = {
 	focus = {
 		id = uk_landing_preparation
 		icon = GFX_goal_generic_amphibious_assault
-		cost = 5
+		cost = 3
 		prerequisite = {
 			focus = uk_local_airport
 		}
@@ -11467,8 +11512,8 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = uk_landing_preparation
-				bonus = 1
-				uses = 2
+				bonus = 1.0
+				uses = 1
 				category = tp_tech
 				category = marine_tech
 			}
@@ -11545,68 +11590,44 @@ focus_tree = {
 			122 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 3
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 337
 					instant_build = yes
 				}
 			}
 			132 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 3
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 6384
 					instant_build = yes
 				}
 			}
 			133 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 3
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 6395
 					instant_build = yes
 				}
 			}
 			338 = {
 				add_building_construction = {
 					type = coastal_bunker
-					level = 3
+					level = 6
 					province = {
 						all_provinces = yes
 						limit_to_coastal = yes
 					}
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 3
-					province = 3369
 					instant_build = yes
 				}
 			}
@@ -11615,7 +11636,7 @@ focus_tree = {
 	focus = {
 		id = uk_unsinkable_air_craft_carrier
 		icon = GFX_focus_defend_britain
-		cost = 7
+		cost = 5
 		ai_will_do = {
 			factor = 1.5
 			modifier = {
@@ -12184,6 +12205,13 @@ focus_tree = {
 		y = 0
 		ai_will_do = {
 			factor = 3
+			modifier = {
+				factor = 300
+				has_war = yes
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
 		}
 		available = {
 			NOT = {

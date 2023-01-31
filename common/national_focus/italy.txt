@@ -353,12 +353,16 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_tech_bonus = {
-        name = ITA_Next_generation_tank
-        bonus = 2.0
-        uses = 1
-        category = armor
-      }
+			add_tech_bonus = {
+				name = ITA_Next_generation_tank
+				bonus = 1.5
+				uses = 1
+				category = armor
+			}
+
+			set_technology = {
+			    ira_desert_tank = 1
+			}
 
 		}
 	}
@@ -392,6 +396,13 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = recon_tech
+			}
+
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				name = ITA_fund_military_excercises
+				category = cat_mechanized_equipment
 			}
 
 			add_tech_bonus = {
@@ -633,6 +644,13 @@ focus_tree = {
 		completion_reward = {
 
 			add_ideas = ITA_Eight_million_bayonet_idea
+
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
 
 		}
 	}
@@ -1592,7 +1610,7 @@ focus_tree = {
         name = GER_Test_carrier_aircraft
         bonus = 1.0
         uses = 1
-        technology = cv_naval_bomber1
+        technology = # cv_naval_bomber1
         technology = cv_naval_bomber2
         technology = cv_naval_bomber3
       }
@@ -2245,7 +2263,7 @@ focus_tree = {
 							550 = {
 									add_building_construction = {
 											type = infrastructure
-											level = 2
+											level = 1
 											instant_build = yes
 										}
 								}
@@ -2267,7 +2285,7 @@ focus_tree = {
 							559 = {
 									add_building_construction = {
 											type = infrastructure
-											level = 3
+											level = 2
 											instant_build = yes
 										}
 								}
@@ -3365,7 +3383,7 @@ focus_tree = {
 										}
 									add_building_construction = {
 											type = infrastructure
-											level = 3
+											level = 2
 											instant_build = yes
 										}
 								}
@@ -3377,7 +3395,7 @@ focus_tree = {
 										}
 									add_building_construction = {
 											type = infrastructure
-											level = 2
+											level = 1
 											instant_build = yes
 										}
 								}
@@ -3492,90 +3510,92 @@ focus_tree = {
 		x = 1
 		y = 2
 		relative_position_id = ita_rebrith_of_roma
-			available = {
-        NOT = {
-          has_war_with = GER
-        }
+		available = {
+			is_in_faction = no
+			NOT = {
+			    has_war_with = GER
+			}
+			has_government = fascism
+			GER = {
+				is_faction_leader = yes
 				has_government = fascism
-				GER = {
-					has_government = fascism
-					country_exists = GER
+				country_exists = GER
+			}
+			NOT = {
+			    has_country_flag = ENG_ditched_by_the_germans_flag
+			}
+			NOT = {
+				ITA = { controls_state = 4 }
+				any_other_country = {
+					NOT = { TAG = ITA }
+					or = {
+						is_in_faction_with = ITA
+						is_subject_of = ITA
+					}
+					controls_state = 4
 				}
-        NOT = {
-          has_country_flag = ENG_ditched_by_the_germans_flag
-        }
-        NOT = {
-          ITA = { controls_state = 4 }
-          any_other_country = {
-            NOT = { TAG = ITA }
-            or = {
-              is_in_faction_with = ITA
-              is_subject_of = ITA
-            }
-            controls_state = 4
-          }
-        }
-        NOT = {
-          ITA = { controls_state = 152 }
-          any_other_country = {
-            NOT = { TAG = ITA }
-            or = {
-              is_in_faction_with = ITA
-              is_subject_of = ITA
-            }
-            controls_state = 152
-          }
-        }
-        NOT = {
-          ITA = { controls_state = 153 }
-          any_other_country = {
-            NOT = { TAG = ITA }
-            or = {
-              is_in_faction_with = ITA
-              is_subject_of = ITA
-            }
-            controls_state = 153
-          }
-        }
-      }
-			ai_will_do = {
-					factor = 10
-					modifier = {
-							factor = 2
-							has_idea = GER_rom_non_aggression_idea
-						}
-					modifier = {
-							factor = 0.5
-							ai_irrationality > 20
-						}
-					modifier = {
-							factor = 0.5
-							ai_irrationality > 25
-						}
-					modifier = {
-							factor = 0.1
-							ai_irrationality > 30
-						}
+			}
+			NOT = {
+				ITA = { controls_state = 152 }
+				any_other_country = {
+					NOT = { TAG = ITA }
+					or = {
+						is_in_faction_with = ITA
+						is_subject_of = ITA
+					}
+					controls_state = 152
 				}
-			completion_reward = {
+			}
+			NOT = {
+				ITA = { controls_state = 153 }
+				any_other_country = {
+					NOT = { TAG = ITA }
+					or = {
+						is_in_faction_with = ITA
+						is_subject_of = ITA
+					}
+					controls_state = 153
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+					factor = 2
+					has_idea = GER_rom_non_aggression_idea
+				}
+			modifier = {
+					factor = 0.5
+					ai_irrationality > 20
+				}
+			modifier = {
+					factor = 0.5
+					ai_irrationality > 25
+				}
+			modifier = {
+					factor = 0.1
+					ai_irrationality > 30
+				}
+		}
+		completion_reward = {
 
-					GER = {
-							country_event = generic.2
-						}
+			GER = {
+					country_event = generic.2
+				}
 
-					GER = {
-							add_opinion_modifier = {
-									target = ITA
-									modifier = pact_of_steel_opinion
-								}
-						}
-					hidden_effect = {
-							news_event = {
-									hours = 6
-									id = news.184
-								}
+			GER = {
+					add_opinion_modifier = {
+							target = ITA
+							modifier = pact_of_steel_opinion
 						}
 				}
+			hidden_effect = {
+					news_event = {
+							hours = 6
+							id = news.184
+						}
+				}
+		}
 
 	}
 	focus = {
@@ -4129,18 +4149,18 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 5
+					level = 2
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 8
+					level = 4
 					province = 10074
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 5
+					level = 3
 					province = 7059
 					instant_build = yes
 				}
@@ -4284,24 +4304,31 @@ focus_tree = {
 
 		will_lead_to_war_with = YUG
 
-    ai_will_do = {
+		ai_will_do = {
 			factor = 3
-      modifier = {
-        factor = 0
-        has_war_with = SWI
-      }
-      modifier = {
-        factor = 0
-        has_country_flag = ITA_zhunbeijingong_flag
-      }
-      modifier = {
-        factor = 4
-        has_completed_focus = ita_secure_alps
-      }
+			modifier = {
+				factor = 0
+				has_war_with = SWI
+			}
+			modifier = {
+				factor = 50
+				OR = {
+					ALB = { exists = no	}
+					ALB = { has_capitulated = yes }
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ITA_zhunbeijingong_flag
+			}
+			modifier = {
+				factor = 4
+				has_completed_focus = ita_secure_alps
+			}
 			modifier = {
 				factor = 0
 				OR = {
-			        has_army_manpower = { size < 349999 } 
+					has_army_manpower = { size < 349999 } 
 					any_neighbor_country = {
 						has_war_with = ITA
 						NOT = { has_capitulated = yes }
@@ -4318,7 +4345,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = ITA_albania_war_goal
 
-    available = {
+		available = {
 			or = {
 				AND = {
 					or = {
@@ -4346,13 +4373,13 @@ focus_tree = {
 					}
 				}
 			}
-    }
+		}
 
 		bypass = {
 			or = {
-        YUG = { exists = no	}
-        has_war_with = YUG
-        YUG = { is_in_faction_with = ROOT }
+				YUG = { exists = no	}
+				has_war_with = YUG
+				YUG = { is_in_faction_with = ROOT }
 			}
 		}
 
@@ -4479,7 +4506,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 7
+					level = 5
 					province = 7003
 					instant_build = yes
 				}
@@ -4497,7 +4524,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 7
+					level = 5
 					province = 10007
 					instant_build = yes
 				}
@@ -4508,7 +4535,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 7
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4864,7 +4891,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4918,7 +4945,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -4958,7 +4985,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 5
+						level = 3
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -4993,7 +5020,7 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = infrastructure
-						level = 5
+						level = 3
 						instant_build = yes
 					}
 					add_building_construction = {
@@ -5097,7 +5124,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = infrastructure
-					level = 5
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -5109,7 +5136,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -5808,7 +5835,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 7
+					level = 4
 					province = 4135
 					instant_build = yes
 				}
@@ -5819,7 +5846,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 7
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -5849,7 +5876,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 7
+					level = 4
 					province = 9945
 					instant_build = yes
 				}
@@ -5860,7 +5887,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 7
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -5953,7 +5980,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = naval_base
-					level = 7
+					level = 4
 					province = 10070
 					instant_build = yes
 				}
@@ -5964,7 +5991,7 @@ focus_tree = {
 				}
 				add_building_construction = {
 					type = infrastructure
-					level = 7
+					level = 3
 					instant_build = yes
 				}
 				add_building_construction = {
@@ -6926,7 +6953,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6938,7 +6965,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6950,7 +6977,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6962,7 +6989,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6974,7 +7001,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6986,7 +7013,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -6998,7 +7025,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -7010,7 +7037,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -7022,7 +7049,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -7034,7 +7061,7 @@ focus_tree = {
 						}
 					add_building_construction = {
 							type = infrastructure
-							level = 4
+							level = 2
 							instant_build = yes
 						}
 					}
@@ -8002,6 +8029,11 @@ focus_tree = {
             factor = 5
 			modifier = {
 				factor = 0
+				GER = { has_war = no }
+				HUN = { is_in_faction_with = GER }
+			}
+			modifier = {
+				factor = 0
 				OR = {
 			        has_army_manpower = { size < 549999 } 
 					any_neighbor_country = {
@@ -8019,12 +8051,12 @@ focus_tree = {
 		y = 1
 		relative_position_id = ita_preempt_occupy_austria
 
-    available = {
-      or = {
-        threat > 0.35
-        date > 1938.3.1
-      }
-    }
+		available = {
+			or = {
+				threat > 0.35
+				date > 1938.3.1
+			}
+		}
 
 		bypass = {
 			or = {

@@ -1337,13 +1337,13 @@
  
  HUN_repulo_mernoki_intezet:0 "Repulo Mernoki Intezet"
  
- HUN_zoltan_bay:0 "Bay Zoltan"
+ #HUN_zoltan_bay:0 "Bay Zoltan"
  
- HUN_gyorgy_jendrassik:0 "Gyorgy Jendrassik"
+ #HUN_gyorgy_jendrassik:0 "Gyorgy Jendrassik"
  
- HUN_vattay_theory:0 "Vattay"
+ #HUN_vattay_theory:0 "Vattay"
  
- HUN_vilmos_nagy:0 "Nagy Vilmos"
+ #HUN_vilmos_nagy:0 "Nagy Vilmos"
  
  HUN_wm_tank:0 "Manfried Wiess"
  
@@ -1353,24 +1353,24 @@
  
  Head_of_the_Ministry_of_National_Security:0 "Head of ÁVH"
  
- HUN_Ferenc_Szalasi:0 "Szálasi Ferenc"
+ #HUN_Ferenc_Szalasi:0 "Szálasi Ferenc"
  
  Head_of_arrow_cross:0 "Head of Arrow Cross"
  
- HUN_Dome_Sztojay:0 "Sztojay Dome"
+ #HUN_Dome_Sztojay:0 "Sztojay Dome"
  
- HUN_Sepp_Janko:0 "Sepp Janko"
+ #HUN_Sepp_Janko:0 "Sepp Janko"
  German_leader:0 "German Leader"
  
- HUN_Bela_Imredy:0 "Imredy Béla"
+ #HUN_Bela_Imredy:0 "Imredy Béla"
  
- HUN_Bela_Kun:0 "Kun Béla"
+ #HUN_Bela_Kun:0 "Kun Béla"
  
- HUN_Gyorgy_Lukacs:0 "György Lukács"
+ #HUN_Gyorgy_Lukacs:0 "György Lukács"
  
- HUN_Janos_Kadar:0 "Kádár János"
+ #HUN_Janos_Kadar:0 "Kádár János"
  
- HUN_Attila_army_chief:0 "Attila"
+ #HUN_Attila_army_chief:0 "Attila"
  
  HUN_Ban_the_far_right_wing_completely_flag:0 "Ban Far-right completely"
  
@@ -1398,7 +1398,7 @@
  
  HUN_bathory_T:0 "Soldier Idol?!"
  
- HUN_Horthy_Miklos:0 "Horthy Miklos"
+ #HUN_Horthy_Miklos:0 "Horthy Miklos"
  
  HUN_Joint_Army_Staff_exchange:0 "Joint Army Staff"
  HUN_Joint_Army_Staff_exchange_desc:0 "Joint Army Staff"

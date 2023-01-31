@@ -21,6 +21,8 @@ shared_focus = {
 
 		army_experience = 25
 
+		add_timed_idea = { idea = HUN_Preparing_Great_War_idea days = 120 }
+
 		add_tech_bonus = {
 			name = UKR_modernization_of_the_armed_forces
 			bonus = 1.0
@@ -617,6 +619,23 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			has_war = yes
+		}
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+
 }
 
 shared_focus = {
@@ -648,6 +667,19 @@ shared_focus = {
 			bonus = 0.5
 			uses = 1
 			category = infantry_weapons
+		}
+	}
+
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
 		}
 	}
 
@@ -687,6 +719,19 @@ shared_focus = {
 			category = artillery
 		}
 
+	}
+
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
 	}
 
 }
@@ -734,6 +779,19 @@ shared_focus = {
 
 	}
 
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+
 }
 
 shared_focus = {
@@ -764,6 +822,19 @@ shared_focus = {
 		}
 	}
 
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+
 }
 
 shared_focus = {
@@ -791,6 +862,19 @@ shared_focus = {
 		swap_ideas = {
 			remove_idea = UKR_Western_Ukrainian_Doctrine_2_idea
 			add_idea = UKR_Western_Ukrainian_Doctrine_3_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
 		}
 	}
 
@@ -825,6 +909,19 @@ shared_focus = {
 		swap_ideas = {
 			remove_idea = UKR_Western_Ukrainian_Doctrine_3_idea
 			add_idea = UKR_Western_Ukrainian_Doctrine_4_idea
+		}
+	}
+
+	ai_will_do = {
+		factor = 20
+		modifier = {
+			factor = 10
+			GER = { 
+				has_war = yes 
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
 		}
 	}
 

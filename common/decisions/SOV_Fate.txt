@@ -481,7 +481,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -719,7 +719,22 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
+			modifier = {
+				factor = 2
+				has_global_flag = UKR_still_on_earth_flag
+				or = {
+					NOT = { POL = { has_war_with = GER } }
+					POL = { is_in_faction_with = GER }
+					AND = {
+						POL = { has_war_with = GER }
+						or = {
+							POL = { surrender_progress > 0.3 }
+							POL = { casualties > 500000 }
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -730,9 +745,9 @@ SOV_Export_revolution_decisions = {
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 			modifier = {
 				factor = 0
@@ -951,7 +966,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -1153,7 +1168,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -1298,7 +1313,7 @@ SOV_Export_revolution_decisions = {
 			FROM = {
 					original_tag = GER
 			}
-    }
+		}
 
 		available = {
 			country_exists = GER
@@ -1322,11 +1337,11 @@ SOV_Export_revolution_decisions = {
 		}
 
 		visible = {
-      is_subject = no 
-      has_completed_focus = SOV_Export_revolution
+			is_subject = no 
+			has_completed_focus = SOV_Export_revolution
 			NOT = { has_war_with = GER }
-      NOT = { GER = { is_in_faction_with  = ROOT } }
-      NOT = { GER = { is_subject_of  = ROOT } }
+			NOT = { GER = { is_in_faction_with  = ROOT } }
+			NOT = { GER = { is_subject_of  = ROOT } }
 		}
 
 		cost = 50
@@ -1338,6 +1353,13 @@ SOV_Export_revolution_decisions = {
 		ai_will_do = {
 			factor = 1000
 			modifier = {
+				factor = 2
+				or = {
+					has_global_flag = UKR_still_on_earth_flag
+					GER = { surrender_progress > 0.3 }
+				}
+			}
+			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
 			}
@@ -1347,12 +1369,13 @@ SOV_Export_revolution_decisions = {
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 			modifier = {
 				factor = 0
+				NOT = { has_global_flag = UKR_still_on_earth_flag }
 				strength_ratio = { tag = GER ratio < 0.8 }
 			}
 			modifier = {
@@ -1371,32 +1394,32 @@ SOV_Export_revolution_decisions = {
 				factor = 0
 				GER = {
 					is_in_faction = yes
-          is_faction_leader = no 
-          any_other_country = {
-            is_faction_leader = yes
-            is_in_faction_with = GER
+					is_faction_leader = no 
+					any_other_country = {
+						is_faction_leader = yes
+						is_in_faction_with = GER
 						strength_ratio = {
 							tag = ROOT
 							ratio > 0.7
 						}
-				  }
+					}
 				}
 			}
 		}
 
 		complete_effect = {
 
-      set_country_flag = {
-        flag = SOV_war_preparation_flag
-        days = 75
-        value = 1
-      }
+			set_country_flag = {
+				flag = SOV_war_preparation_flag
+				days = 75
+				value = 1
+			}
 
-      set_country_flag = {
-        flag = SOV_prepare_for_war_ger_flag
-        days = 90
-        value = 1
-      }
+			set_country_flag = {
+				flag = SOV_prepare_for_war_ger_flag
+				days = 90
+				value = 1
+			}
 
 			if = {
 				limit = { 
@@ -1498,7 +1521,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -1660,7 +1683,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -1822,7 +1845,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -1967,7 +1990,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -2143,7 +2166,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -2452,7 +2475,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -2778,7 +2801,7 @@ SOV_Export_revolution_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -2922,7 +2945,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 750
 			modifier = {
 				factor = 0
 				surrender_progress > 0
@@ -2951,7 +2974,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -3306,7 +3329,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 750
 			modifier = {
 				factor = 0
 				surrender_progress > 0
@@ -3336,7 +3359,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -3584,8 +3607,8 @@ SOV_War_plan_decisions = {
 		}
 
 		visible = {
-      is_subject = no 
-      		OR = {
+			is_subject = no 
+			OR = {
 				  has_completed_focus = SOV_Expansionism
 				  has_completed_focus = rus_redeem_glory_of_past
 			}
@@ -3596,16 +3619,31 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 750
+			modifier = {
+				factor = 2
+				has_global_flag = UKR_still_on_earth_flag
+				or = {
+					NOT = { POL = { has_war_with = GER } }
+					POL = { is_in_faction_with = GER }
+					AND = {
+						POL = { has_war_with = GER }
+						or = {
+							POL = { surrender_progress > 0.3 }
+							POL = { casualties > 500000 }
+						}
+					}
+				}
+			}
 			modifier = {
 				factor = 0
 				surrender_progress > 0
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 		}
 
@@ -3631,7 +3669,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -4227,7 +4265,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 750
 			modifier = {
 				factor = 0
 				surrender_progress > 0
@@ -4256,7 +4294,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -4332,6 +4370,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 		is_good = yes 
 		activation = {
+			always = no
 			OR = {
 				TAG = SOV
 				TAG = RUS
@@ -4561,15 +4600,15 @@ SOV_War_plan_decisions = {
 		}
 
 		visible = {
-      is_subject = no 
-	  		OR = {
+			is_subject = no 
+			OR = {
 				has_completed_focus = SOV_Expansionism
 				has_completed_focus = rus_European_gendarme
 			}
       
 			NOT = { has_war_with = GER }
-      NOT = { GER = { is_in_faction_with  = ROOT } }
-      NOT = { GER = { is_subject_of  = ROOT } }
+			NOT = { GER = { is_in_faction_with  = ROOT } }
+			NOT = { GER = { is_subject_of  = ROOT } }
 		}
 
 		cost = 50
@@ -4590,64 +4629,68 @@ SOV_War_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 			modifier = {
 				factor = 0
-        date < 1942.1.1
+				NOT = { has_global_flag = UKR_still_on_earth_flag }
+				date < 1942.1.1
 				or = {
 					GER = { surrender_progress < 0.3 }
 					GER = { casualties < 1000000 }
 					GER = { has_war = no }
 				}
 			}
-      modifier = {
-        GER = { surrender_progress > 0.3 }
-        factor = 2
-      }
+			modifier = {
+				factor = 2
+				or = {
+					has_global_flag = UKR_still_on_earth_flag
+					GER = { surrender_progress > 0.3 }
+				}
+			}
 		}
 
 		complete_effect = {
 
-      set_country_flag = {
-        flag = SOV_war_preparation_flag
-        days = 75
-        value = 1
-      }
+			set_country_flag = {
+				flag = SOV_war_preparation_flag
+				days = 75
+				value = 1
+			}
 
-      set_country_flag = {
-        flag = SOV_prepare_for_war_ger_flag
-        days = 90
-        value = 1
-      }
+			set_country_flag = {
+				flag = SOV_prepare_for_war_ger_flag
+				days = 90
+				value = 1
+			}
 
 			if = {
 				limit = { 
-			    country_exists = GER
-			    NOT = { has_war_with = GER }
-          NOT = { GER = { is_subject_of  = ROOT } }
+					country_exists = GER
+					NOT = { has_war_with = GER }
+					NOT = { GER = { is_subject_of  = ROOT } }
 				}			
-			  GER = {
-		      country_event = { id = more_soviet.201 days = 1 }
-			  } 
+				GER = {
+				    country_event = { id = more_soviet.201 days = 1 }
+				} 
 			}
 
 			every_other_country = {
 				limit = {
-          is_neighbor_of = ROOT
-          NOT = { TAG = GER }
+					is_neighbor_of = ROOT
+					NOT = { TAG = GER }
 					is_in_faction_with = GER
 				}
-		     country_event = { id = more_soviet.201 days = 1 }
-        ROOT = {
-          add_ai_strategy = {
-            type = prepare_for_war
-            id = PREV
-            value = 1000
-          }
-        }
+				country_event = { id = more_soviet.201 days = 1 }
+				ROOT = {
+					add_ai_strategy = {
+						type = prepare_for_war
+						id = PREV
+						value = 1000
+					}
+				}
 			}
 
 		}
@@ -4662,8 +4705,8 @@ SOV_War_plan_decisions = {
 
 			every_other_country = {
 				limit = {
-          is_neighbor_of = ROOT
-          NOT = { TAG = GER }
+					is_neighbor_of = ROOT
+					NOT = { TAG = GER }
 					is_in_faction_with = GER
 				}
 				ROOT = {
@@ -4727,7 +4770,7 @@ SOV_War_plan_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -5054,7 +5097,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 750
 			modifier = {
 				factor = 0
         date < 1943.1.1
@@ -5094,7 +5137,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -5157,7 +5200,7 @@ SOV_War_plan_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
         date < 1943.1.1
@@ -5291,12 +5334,11 @@ SOV_War_plan_decisions = {
 		}
 
 		visible = {
-      is_subject = no 
-	  		OR = {
-				  has_completed_focus = SOV_Expansionism
-				  has_completed_focus = rus_Euroasianism
-			  }
-      
+			is_subject = no 
+			OR = {
+				has_completed_focus = SOV_Expansionism
+				has_completed_focus = rus_Euroasianism
+			}
 		}
 
 		cost = 25
@@ -5304,10 +5346,14 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
+			modifier = {
+				factor = 2
+				country_exists = SIK
+			}
 			modifier = {
 				factor = 0
-        date < 1944.1.1
+				date < 1944.1.1
 				or = {
 					CHI = { surrender_progress < 0.3 }
 					CHI = { has_war_with = JAP }
@@ -5319,33 +5365,33 @@ SOV_War_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
-        any_home_area_neighbor_country = {
-          has_war_with = ROOT
-        }
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
 			}
 		}
 
 		complete_effect = {
 
-      every_other_country = {
-        limit = {
-          or = {
-            controls_state = 618
-            controls_state = 617
-            controls_state = 287
-            controls_state = 619
-            controls_state = 759
-            controls_state = 760
-          }
-        }
-        ROOT = {
-          add_ai_strategy = {
-            type = antagonize
-            id = PREV
-            value = 5000
-          }
-        }
-      }
+			every_other_country = {
+				limit = {
+				  or = {
+					controls_state = 618
+					controls_state = 617
+					controls_state = 287
+					controls_state = 619
+					controls_state = 759
+					controls_state = 760
+				  }
+				}
+				ROOT = {
+					add_ai_strategy = {
+						type = antagonize
+						id = PREV
+						value = 200
+					}
+				}
+			}
 
 			add_state_claim = 618
 			add_state_claim = 617
@@ -5444,7 +5490,7 @@ SOV_War_plan_decisions = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
         date < 1944.1.1
@@ -5484,7 +5530,7 @@ SOV_War_plan_decisions = {
           add_ai_strategy = {
             type = antagonize
             id = PREV
-            value = 5000
+            value = 200
           }
         }
       }
@@ -5630,7 +5676,7 @@ SOV_War_plan_decisions = {
 		war_with_target_on_remove = yes
 
 		ai_will_do = {
-			factor = 1000
+			factor = 500
 			modifier = {
 				factor = 0
 				has_country_flag = SOV_war_preparation_flag
@@ -5756,6 +5802,12 @@ SOV_Industrial_Expansion_decisions = {
 			has_completed_focus = SOV_finish_five_year_plan
 		}
 
+		visible = {
+			NOT = { has_completed_focus = SOV_great_patriotic_war }
+		}
+
+		cancel_if_not_visible = yes
+
 		days_mission_timeout = 730
 		fire_only_once = yes
 
@@ -5763,8 +5815,8 @@ SOV_Industrial_Expansion_decisions = {
 
 		complete_effect = {
 			add_political_power = 100
-			add_stability = 0.10
-			add_war_support = 0.2
+			add_stability = 0.20
+			add_war_support = 0.1
 		}
 
 		timeout_effect = {

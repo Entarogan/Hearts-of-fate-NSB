@@ -563,7 +563,7 @@ ideas = {
 			}
 
 			available = {
-				is_faction_leader = yes 
+				CZE = { has_capitulated = no }
 			}
 
 			allowed_civil_war = {

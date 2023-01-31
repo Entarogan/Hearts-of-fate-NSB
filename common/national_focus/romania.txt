@@ -276,7 +276,7 @@ focus_tree = {
 				idea = ROM_Scarlet_Fog
 				days = 180
 			}
-			remove_unit_leader = 5604
+			retire_character = ROM_ion_antonescu
 			if = {
 				limit = {
 					NOT = {
@@ -1355,6 +1355,15 @@ focus_tree = {
 				}
 				POL = {
 					country_event = generic.2
+				}
+				if = { 
+					limit = { 
+						POL = { is_ai = yes } 
+						ROM = { is_ai = yes } 
+					}
+					POL = { 
+						add_to_faction = ROM 
+					}
 				}
 			}
 			hidden_effect = {
@@ -3121,6 +3130,15 @@ focus_tree = {
 						id = generic.2
 					}
 				}
+				if = { 
+					limit = { 
+						ENG = { is_ai = yes } 
+						ROM = { is_ai = yes } 
+					}
+					ENG = { 
+						add_to_faction = ROM 
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -3131,6 +3149,15 @@ focus_tree = {
 				FRA = {
 					country_event = {
 						id = generic.2
+					}
+				}
+				if = { 
+					limit = { 
+						FRA = { is_ai = yes } 
+						ROM = { is_ai = yes } 
+					}
+					FRA = { 
+						add_to_faction = ROM 
 					}
 				}
 			}
@@ -3911,9 +3938,9 @@ focus_tree = {
 			add_ideas = {
 				ROM_darnicism
 			}
-			remove_unit_leader = 5604
-			remove_unit_leader = 5605
-			remove_unit_leader = 5606
+			retire_character = ROM_ion_antonescu
+			retire_character = ROM_ion_mota
+			retire_character = ROM_vasile_marin
 		}
 		ai_will_do = {
 			factor = 500
@@ -4743,7 +4770,7 @@ focus_tree = {
 			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = ROM_collect_experience
-				cost_reduction = 1.5
+				cost_reduction = 0.7
 				uses = 1
 				category = land_doctrine
 			} 
@@ -4950,8 +4977,8 @@ focus_tree = {
 				}
 				remove_ideas = ROM_iron_guard_purged
 			}
-			remove_unit_leader = 5605
-			remove_unit_leader = 5606
+			retire_character = ROM_ion_mota
+			retire_character = ROM_vasile_marin
 		}
 		ai_will_do = {
 			factor = 1000
@@ -6013,7 +6040,7 @@ focus_tree = {
 					ROM_Green_shirt_knight
 				}
 			}
-			remove_unit_leader = 5604
+			retire_character = ROM_ion_antonescu
 		}
 	}
 	focus = {
@@ -6623,6 +6650,15 @@ focus_tree = {
 					days = 1
 				}
 			}
+			if = { 
+				limit = { 
+					GER = { is_ai = yes } 
+					ROM = { is_ai = yes } 
+				}
+				GER = { 
+					add_to_faction = ROM 
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -6645,7 +6681,7 @@ focus_tree = {
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				name = ROM_air_doctrine
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 3
 				category = air_doctrine
 			}
@@ -7309,6 +7345,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		available = {
+			date > 1939.1.1
 			any_state = {
 				BUL_state_is_in_the_black_sea = yes
 				controller = {

@@ -31,6 +31,27 @@ GER_war_plan = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_in_faction_with = UKR
+				UKR = { has_capitulated = no }
+				has_war_with = FRA
+				FRA = { has_capitulated = no }
+				OR = {
+					AND = {
+						SOV = { is_subject = no }
+						SOV = { has_capitulated = no }
+						SOV = { controls_state = 219 }
+						SOV = { has_war_with = GER }
+					}
+					AND = {
+						RUS = { is_subject = no }
+						RUS = { has_capitulated = no }
+						RUS = { controls_state = 219 }
+						RUS = { has_war_with = GER }
+					}
+				}
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -83,6 +104,27 @@ GER_war_plan = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_in_faction_with = UKR
+				UKR = { has_capitulated = no }
+				has_war_with = FRA
+				FRA = { has_capitulated = no }
+				OR = {
+					AND = {
+						SOV = { is_subject = no }
+						SOV = { has_capitulated = no }
+						SOV = { controls_state = 219 }
+						SOV = { has_war_with = GER }
+					}
+					AND = {
+						RUS = { is_subject = no }
+						RUS = { has_capitulated = no }
+						RUS = { controls_state = 219 }
+						RUS = { has_war_with = GER }
+					}
+				}
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -140,6 +182,27 @@ GER_war_plan = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_in_faction_with = UKR
+				UKR = { has_capitulated = no }
+				has_war_with = FRA
+				FRA = { has_capitulated = no }
+				OR = {
+					AND = {
+						SOV = { is_subject = no }
+						SOV = { has_capitulated = no }
+						SOV = { controls_state = 219 }
+						SOV = { has_war_with = GER }
+					}
+					AND = {
+						RUS = { is_subject = no }
+						RUS = { has_capitulated = no }
+						RUS = { controls_state = 219 }
+						RUS = { has_war_with = GER }
+					}
+				}
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -195,6 +258,27 @@ GER_war_plan = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
+			modifier = {
+				factor = 0
+				is_in_faction_with = UKR
+				UKR = { has_capitulated = no }
+				has_war_with = FRA
+				FRA = { has_capitulated = no }
+				OR = {
+					AND = {
+						SOV = { is_subject = no }
+						SOV = { has_capitulated = no }
+						SOV = { controls_state = 219 }
+						SOV = { has_war_with = GER }
+					}
+					AND = {
+						RUS = { is_subject = no }
+						RUS = { has_capitulated = no }
+						RUS = { controls_state = 219 }
+						RUS = { has_war_with = GER }
+					}
+				}
+			}
 		}
 		complete_effect = {
 			hidden_effect = {
@@ -222,6 +306,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -242,6 +327,11 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_war_plan_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -265,6 +355,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -297,6 +388,11 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_war_plan_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -320,6 +416,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -352,6 +449,11 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_war_plan_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -375,6 +477,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -404,12 +507,17 @@ GER_war_plan = {
 		days_remove = 60
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 100
+			factor = 200
 		}
 		complete_effect = {
 			set_country_flag = {
 				value = 1
-				days = 150
+				days = 60
+				flag = GER_war_plan_flag
+			}
+			set_country_flag = {
+				value = 1
+				days = 60
 				flag = GER_Start_the_CZE_campaign_flag
 			}
 			hidden_effect = {
@@ -435,6 +543,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -467,6 +576,11 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_war_plan_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -490,6 +604,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -504,9 +619,19 @@ GER_war_plan = {
 		days_remove = 60
 		fire_only_once = yes
 		ai_will_do = {
-			factor = 100
+			factor = 150
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_war_plan_flag
+			}
+			set_country_flag = {
+				value = 1
+				days = 60
+				flag = GER_Start_the_POL_campaign_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -530,6 +655,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -548,17 +674,16 @@ GER_war_plan = {
 		fire_only_once = yes
 		ai_will_do = {
 			factor = 100
-			modifier = {
-				factor = 0
-				NOT = {
-					has_idea = GER_yellow_Manstein
-				}
-			}
 		}
 		complete_effect = {
 			set_country_flag = {
 				value = 1
-				days = 150
+				days = 90
+				flag = GER_war_plan_flag
+			}
+			set_country_flag = {
+				value = 1
+				days = 90
 				flag = GER_Start_the_French_campaign_flag
 			}
 			hidden_effect = {
@@ -570,6 +695,11 @@ GER_war_plan = {
 			attack_bonus_against = 0.15
 			breakthrough_bonus_against = 0.15
 		}
+		targeted_modifier = {
+			tag = RHI
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.15
+		}
 		modifier = {
 			army_core_attack_factor = 0.05
 			army_core_defence_factor = 0.05
@@ -577,6 +707,68 @@ GER_war_plan = {
 		remove_effect = {
 		}
 	}
+
+	GER_two_line_battle_decisions = {
+		icon = hol_draw_up_staff_plans
+		target_trigger = {
+			FROM = {
+				original_tag = FRA
+			}
+		}
+		available = {
+
+		}
+		visible = {
+			tag = GER
+			is_subject = no
+
+			has_global_flag = UKR_still_on_earth_flag
+			is_in_faction_with = UKR
+			UKR = { is_subject = no }
+			has_war_with = FRA
+			FRA = { is_subject = no }
+			FRA = { surrender_progress < 0.5 }
+			var:219.owner = { has_war_with = GER }
+			var:219.owner = { is_subject = no }
+
+		}
+		cost = 0
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+		days_remove = 180
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 500
+		}
+		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
+		}
+		targeted_modifier = {
+			tag = FRA
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = SOV
+			defense_bonus_against = 0.1
+		}
+		targeted_modifier = {
+			tag = RUS
+			defense_bonus_against = 0.1
+		}
+		modifier = {
+			max_dig_in = 5
+			dig_in_speed_factor = 0.25
+
+			army_core_defence_factor = 0.10
+		}
+		remove_effect = {
+		}
+	}
+
 	GER_Start_the_Alaric_operations_again_decisions = {
 		icon = hol_draw_up_staff_plans
 		target_trigger = {
@@ -585,6 +777,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -602,7 +795,16 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
-		  set_country_flag = GER_Begin_the_battle_of_Apennines_flag
+			set_country_flag = {
+				value = 1
+				days = 90
+				flag = GER_war_plan_flag
+			}
+			set_country_flag = {
+				value = 1
+				days = 90
+				flag = GER_Start_the_ITA_campaign_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -638,6 +840,7 @@ GER_war_plan = {
 			}
 		}
 		available = {
+            NOT = { has_country_flag = GER_war_plan_flag }
 		}
 		visible = {
 			tag = GER
@@ -655,6 +858,16 @@ GER_war_plan = {
 			factor = 100
 		}
 		complete_effect = {
+			set_country_flag = {
+				value = 1
+				days = 90
+				flag = GER_war_plan_flag
+			}
+			set_country_flag = {
+				value = 1
+				days = 90
+				flag = GER_Start_the_SWE_campaign_flag
+			}
 			hidden_effect = {
 				add_command_power = -15
 			}
@@ -1192,21 +1405,33 @@ GER_war_plan = {
 
 			set_country_flag = {
 				value = 1
-				days = 120
+				days = 60
 				flag = GER_Manstein_Plan_flag
 			}
 
-			if = {
-				limit = {
-					GER = {
-						is_ai = yes
-					}
+			hidden_effect = {
+				29 = {
+					damage_building = { type = bunker damage = 4.1 province = 575 }
+					damage_building = { type = bunker damage = 7.3 province = 11483 }
+					damage_building = { type = bunker damage = 5.2 province = 11606 }
+					damage_building = { type = bunker damage = 4.7 province = 11548 }
+					damage_building = { type = bunker damage = 4.7 province = 3536 }
 				}
-				add_political_power = 150
-				add_timed_idea = {
-					idea = GER_yellow_Manstein
-					days = 60
+				785 = {
+					damage_building = { type = bunker damage = 6.4 province = 3447 }
 				}
+				18 = {
+					damage_building = { type = bunker damage = 5.8 province = 9472 }
+					damage_building = { type = bunker damage = 7.8 province = 3560 }
+					damage_building = { type = bunker damage = 4.8 province = 3546 }
+				}
+			}
+
+			add_political_power = 75
+			add_command_power = 50
+			add_timed_idea = {
+				idea = GER_yellow_Manstein
+				days = 60
 			}
 
 			if = {
