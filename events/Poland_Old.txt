@@ -1170,7 +1170,7 @@ country_event = {
 		tag = POL
 		date > 1936.2.1
 		has_war = no
-
+		always = no
 	}
 
 	mean_time_to_happen = {

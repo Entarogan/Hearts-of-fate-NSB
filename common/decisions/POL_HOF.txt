@@ -378,3 +378,490 @@ POL_Polish_Unity = {
 	}
 
 }
+
+
+POL_Prometeizm = {
+	POL_Prometeizm_mission = {
+		allowed = { tag = POL }
+		activation = {
+			# date > 1936.1.1
+			# date < 1937.1.1
+            # triggered by event
+			always = no
+		}
+		fire_only_once = yes
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+				count_triggers = {
+					amount = 4
+					NOT = { 94 = { is_controlled_by = POL } }
+					NOT = { 95 = { is_controlled_by = POL } }
+					NOT = { 96 = { is_controlled_by = POL } }
+					NOT = { 784 = { is_controlled_by = POL } }
+					surrender_progress > 0.45
+				}
+				surrender_progress > 0.7
+			}
+		}
+		ai_will_do = {
+			factor = 800
+		}
+		available = {
+			OR = {
+				count_triggers = {
+					amount = 5
+					AND = {
+						NOT = { 207 = { is_controlled_by = SOV } }
+						NOT = { 207 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 206 = { is_controlled_by = SOV } }
+						NOT = { 206 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 241 = { is_controlled_by = SOV } }
+						NOT = { 241 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 204 = { is_controlled_by = SOV } }
+						NOT = { 204 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 194 = { is_controlled_by = SOV } }
+						NOT = { 194 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						SOV = { exists = yes }
+						SOV = { is_subject = no } 
+						SOV = { surrender_progress > 0.45 }
+						surrender_limit < 0.5
+					}
+				}
+				AND = {
+					SOV = { exists = yes }
+					SOV = { is_subject = no } 
+					SOV = { surrender_progress > 0.7 }
+					surrender_limit < 0.5
+				}
+			}
+		}
+		is_good = no
+		days_mission_timeout = 220
+		timeout_effect = { 
+			if = {
+				limit = {
+					has_war_with = SOV
+				}
+				white_peace = SOV
+				else = { effect_tooltip = { white_peace = SOV } }
+			}
+			if = {
+				limit = {
+					has_war_with = RUS
+				}
+				white_peace = RUS
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = POL_intervening_Russian_Civil_War_2_flag }
+					clr_country_flag = POL_intervening_Russian_Civil_War_2_flag
+				}
+			}
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					has_war_with = SOV
+				}
+				white_peace = SOV
+				else = { effect_tooltip = { white_peace = SOV } }
+			}
+			if = {
+				limit = {
+					has_war_with = RUS
+				}
+				white_peace = RUS
+			}
+			BLR = {
+				transfer_state = 207
+				transfer_state = 241
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 194
+			}
+			set_autonomy = {
+				target = BLR
+				autonomy_state = autonomy_dominion
+				end_wars = no
+				end_civil_wars = no
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = POL_intervening_Russian_Civil_War_2_flag }
+					clr_country_flag = POL_intervening_Russian_Civil_War_2_flag
+				}
+			}
+		}
+		cancel_effect = { 
+			if = {
+				limit = {
+					has_war_with = SOV
+				}
+				white_peace = SOV
+				else = { effect_tooltip = { white_peace = SOV } }
+			}
+			if = {
+				limit = {
+					has_war_with = RUS
+				}
+				white_peace = RUS
+			}
+			if = {
+				limit = {
+					SOV = { exists = yes }
+				}
+				SOV = { 
+					transfer_state = 94
+					transfer_state = 95
+					transfer_state = 96
+					transfer_state = 784
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = POL_intervening_Russian_Civil_War_2_flag }
+					clr_country_flag = POL_intervening_Russian_Civil_War_2_flag
+				}
+			}
+		}
+	}
+
+	POL_Prometeizm_mission_SOV = {
+		allowed = { tag = SOV }
+		activation = {
+			# date > 1936.1.1
+			# date < 1937.1.1
+            # triggered by event
+			always = no
+		}
+		fire_only_once = yes
+		cancel_trigger = {
+			OR = {
+				count_triggers = {
+					amount = 5
+					AND = {
+						NOT = { 207 = { is_controlled_by = SOV } }
+						NOT = { 207 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 206 = { is_controlled_by = SOV } }
+						NOT = { 206 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 241 = { is_controlled_by = SOV } }
+						NOT = { 241 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 204 = { is_controlled_by = SOV } }
+						NOT = { 204 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						NOT = { 194 = { is_controlled_by = SOV } }
+						NOT = { 194 = { is_controlled_by = RUS } }
+					}
+					AND = {
+						SOV = { exists = yes }
+						SOV = { is_subject = no } 
+						SOV = { surrender_progress > 0.45 }
+						surrender_limit < 0.5
+					}
+				}
+				AND = {
+					SOV = { exists = yes }
+					SOV = { is_subject = no } 
+					SOV = { surrender_progress > 0.7 }
+					surrender_limit < 0.5
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 800
+		}
+		available = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+				count_triggers = {
+					amount = 4
+					NOT = { 94 = { is_controlled_by = POL } }
+					NOT = { 95 = { is_controlled_by = POL } }
+					NOT = { 96 = { is_controlled_by = POL } }
+					NOT = { 784 = { is_controlled_by = POL } }
+					POL = { surrender_progress > 0.45 }
+				}
+				POL = { surrender_progress > 0.7 }
+			}
+			
+		}
+		is_good = no
+		days_mission_timeout = 220
+		timeout_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+			if = {
+				limit = {
+					SOV = { exists = yes }
+				}
+				SOV = { 
+					transfer_state = 94
+					transfer_state = 95
+					transfer_state = 96
+					transfer_state = 784
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = POL_intervening_Russian_Civil_War_2_flag }
+					clr_country_flag = POL_intervening_Russian_Civil_War_2_flag
+				}
+			}
+		}
+		cancel_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+			BLR = {
+				transfer_state = 207
+				transfer_state = 241
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 194
+			}
+			POL = {
+				set_autonomy = {
+					target = BLR
+					autonomy_state = autonomy_dominion
+					end_wars = no
+					end_civil_wars = no
+				}
+			}
+			hidden_effect = {
+				if = {
+					limit = { has_country_flag = POL_intervening_Russian_Civil_War_2_flag }
+					clr_country_flag = POL_intervening_Russian_Civil_War_2_flag
+				}
+			}
+		}
+	}
+
+	POL_attack_OUN_decision = {
+		allowed = { tag = POL }
+		available = {
+			has_country_flag = POL_intervening_Russian_Civil_War_2_flag
+			UKR = { has_government = fascism }
+			NOT = { has_war_with = UKR }
+			is_in_faction = no
+			UKR = { is_in_faction = no }
+		}
+		
+		visible = {
+			has_country_flag = POL_intervening_Russian_Civil_War_2_flag
+			UKR = { has_government = fascism }
+			NOT = { has_war_with = UKR }
+		}
+		
+		fire_only_once = yes
+		days_remove = 25
+
+		cost = 5
+
+		complete_effect = {
+			hidden_effect = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = UKR
+					value = 100
+				}
+				UKR = {
+					country_event = { id = poland_hof.34 hours = 4 }
+				}
+			}
+		}
+
+		remove_effect = {
+			declare_war_on = {
+				target = UKR
+				type = puppet_wargoal_focus
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = UKR
+				value = -100
+			}
+			activate_mission = POL_attack_OUN_mission
+			hidden_effect = { UKR = { activate_mission = UKR_war_with_POL_mission } }
+		}
+
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+
+	POL_attack_OUN_mission = {
+		allowed = { tag = POL }
+		activation = {
+			# date > 1936.1.1
+			# date < 1937.1.1
+            # triggered by event
+			always = no
+		}
+		fire_only_once = yes
+		cancel_trigger = {
+			OR = {
+				has_capitulated = yes
+				is_subject = yes
+				count_triggers = {
+					amount = 3
+					NOT = { 93 = { is_controlled_by = POL } }
+					NOT = { 91 = { is_controlled_by = POL } }
+					NOT = { 89 = { is_controlled_by = POL } }
+					POL = { surrender_progress > 0.45 }
+				}
+				POL = { surrender_progress > 0.7 }
+			}
+		}
+		ai_will_do = {
+			factor = 800
+		}
+		available = {
+			NOT = { has_war_with = UKR }
+		}
+		is_good = no
+		days_mission_timeout = 90
+		timeout_effect = { 
+			if = {
+				limit = {
+					has_war_with = UKR
+				}
+				white_peace = UKR
+				else = { effect_tooltip = { white_peace = UKR } }
+			}
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					has_war_with = UKR
+				}
+				white_peace = UKR
+				else = { effect_tooltip = { white_peace = UKR } }
+			}
+		}
+		cancel_effect = { 
+			if = {
+				limit = {
+					has_war_with = UKR
+				}
+				white_peace = UKR
+				else = { effect_tooltip = { white_peace = UKR } }
+			}
+			if = {
+				limit = {
+					UKR = { exists = yes }
+					UKR = { is_subject = no }
+				}
+				UKR = { 
+					transfer_state = 93
+					transfer_state = 91
+					transfer_state = 89
+				}
+			}
+		}
+	}
+
+	UKR_war_with_POL_mission = {
+		allowed = { tag = UKR }
+		activation = {
+			# date > 1936.1.1
+			# date < 1937.1.1
+            # triggered by event
+			always = no
+		}
+		fire_only_once = yes
+		cancel_trigger = {
+			NOT = { has_war_with = POL }
+		}
+		ai_will_do = {
+			factor = 800
+		}
+		available = {
+			count_triggers = {
+				amount = 3
+				NOT = { 93 = { is_controlled_by = POL } }
+				NOT = { 91 = { is_controlled_by = POL } }
+				NOT = { 89 = { is_controlled_by = POL } }
+				POL = { surrender_progress > 0.45 }
+			}
+			POL = { surrender_progress > 0.7 }
+		}
+		is_good = no
+		days_mission_timeout = 90
+		timeout_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+			if = {
+				limit = {
+					UKR = { exists = yes }
+					UKR = { is_subject = no }
+				}
+				UKR = { 
+					transfer_state = 93
+					transfer_state = 91
+					transfer_state = 89
+				}
+			}
+		}
+		cancel_effect = { 
+			if = {
+				limit = {
+					has_war_with = POL
+				}
+				white_peace = POL
+				else = { effect_tooltip = { white_peace = POL } }
+			}
+		}
+	}
+}

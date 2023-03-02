@@ -1138,6 +1138,52 @@ country_event = {   ### Warsaw Riot
 	}
 }
 
+country_event = {   ### SOV/UKR: POL is preparing to attack
+	id = poland_hof.34
+	title = poland_hof.34.t
+	desc = poland_hof.34.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	is_triggered_only = yes
+	
+	option = {    ### OK
+		name = poland_hof.34.a
+		add_ai_strategy = {
+			type = prepare_for_war
+			id = POL
+			value = 100
+		}
+	}
+}
+
+country_event = {   ### POL: Conduct Prometeizm
+	id = poland_hof.35
+	title = poland_hof.35.t
+	desc = poland_hof.35.d
+	picture = GFX_report_event_polish_tanks_01
+	
+	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
+	trigger = {
+		has_completed_focus = POL_conduct_Prometeizm
+		date > 1937.1.1
+		has_civil_war = no
+		is_subject = no
+		has_capitulated = no
+	}
+	
+	option = {    ### OK
+		name = poland_hof.35.a
+		declare_war_on = {
+			target = SOV
+			type = take_state_focus
+			generator = { 207 241 206 204 194 }
+		}
+		activate_mission = POL_Prometeizm_mission
+		SOV = { activate_mission = POL_Prometeizm_mission_SOV }
+	}
+}
+
 country_event = {
 	id = poland_ai_cheating.1001
 	title = poland_ai_cheating.1001.t

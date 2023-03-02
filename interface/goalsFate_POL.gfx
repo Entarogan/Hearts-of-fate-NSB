@@ -144,6 +144,97 @@ spriteTypes = {
 		name = "GFX_focus_POL_Warsaw_Industries"
 		texturefile = "gfx/interface/goals/focus_POL_Warsaw_Industries.png"
 	}
-
- 
+	
+	spriteType = {
+		name = "GFX_focus_POL_annex_Ukrainian_cooperatives"
+		texturefile = "gfx/interface/goals/focus_POL_annex_Ukrainian_cooperatives.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Befriend_Japan"
+		texturefile = "gfx/interface/goals/focus_POL_Befriend_Japan.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_call_for_western_aid"
+		texturefile = "gfx/interface/goals/focus_POL_call_for_western_aid.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_destroy_endecja"
+		texturefile = "gfx/interface/goals/focus_POL_destroy_endecja.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_dissolve_the_sejm_hof"
+		texturefile = "gfx/interface/goals/focus_POL_dissolve_the_sejm_hof.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Akcja_Wisla"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Akcja_Wisla.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Austrian_School_Economics"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Austrian_School_Economics.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Destroy_Sanacja"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Destroy_Sanacja.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Dominant_Party_Democracy"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Dominant_Party_Democracy.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_end_of_Sanacja"
+		texturefile = "gfx/interface/goals/focus_POL_end_of_Sanacja.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Front_Morges_triumph"
+		texturefile = "gfx/interface/goals/focus_POL_Front_Morges_triumph.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_keep_on_Osadnik"
+		texturefile = "gfx/interface/goals/focus_POL_keep_on_Osadnik.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_maintain_sanacja"
+		texturefile = "gfx/interface/goals/focus_POL_maintain_sanacja.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Marszalek_Smigly"
+		texturefile = "gfx/interface/goals/focus_POL_Marszalek_Smigly.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_Morges_marginalize_Endecja"
+		texturefile = "gfx/interface/goals/focus_POL_Morges_marginalize_Endecja.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_polish_national_community"
+		texturefile = "gfx/interface/goals/focus_POL_polish_national_community.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_reassemble_the_sejm_hof"
+		texturefile = "gfx/interface/goals/focus_POL_reassemble_the_sejm_hof.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_reconcile_with_RUSK"
+		texturefile = "gfx/interface/goals/focus_POL_reconcile_with_RUSK.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_revive_Sarmatyzm"
+		texturefile = "gfx/interface/goals/focus_POL_revive_Sarmatyzm.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_the_castle_nearl"
+		texturefile = "gfx/interface/goals/focus_POL_the_castle_nearl.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_the_left_chairman"
+		texturefile = "gfx/interface/goals/focus_POL_the_left_chairman.png"
+	}
+    spriteType = {
+		name = "GFX_focus_POL_befriend_Czech"
+		texturefile = "gfx/interface/goals/focus_POL_befriend_Czech.png"
+	}
+	spriteType = {
+		name = "GFX_focus_POL_demand_Cieszyn"
+		texturefile = "gfx/interface/goals/focus_POL_demand_Cieszyn.png"
+	}
 }

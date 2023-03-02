@@ -1151,6 +1151,741 @@ spriteTypes = {
 	  }
 		legacy_lazy_load = no
 	}
+	
+	spriteType = {
+		name = "GFX_focus_POL_annex_Ukrainian_cooperatives_shine"
+		texturefile = "gfx/interface/goals/focus_POL_annex_Ukrainian_cooperatives.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_annex_Ukrainian_cooperatives.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
 
- 
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_annex_Ukrainian_cooperatives.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Befriend_Japan_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Befriend_Japan.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Befriend_Japan.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Befriend_Japan.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_call_for_western_aid_shine"
+		texturefile = "gfx/interface/goals/focus_POL_call_for_western_aid.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_call_for_western_aid.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_call_for_western_aid.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_destroy_endecja_shine"
+		texturefile = "gfx/interface/goals/focus_POL_destroy_endecja.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_destroy_endecja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_destroy_endecja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_dissolve_the_sejm_hof_shine"
+		texturefile = "gfx/interface/goals/focus_POL_dissolve_the_sejm_hof.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_dissolve_the_sejm_hof.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_dissolve_the_sejm_hof.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Akcja_Wisla_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Akcja_Wisla.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Akcja_Wisla.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Akcja_Wisla.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Austrian_School_Economics_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Austrian_School_Economics.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Austrian_School_Economics.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Austrian_School_Economics.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Destroy_Sanacja_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Destroy_Sanacja.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Destroy_Sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Destroy_Sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Endecja_Dominant_Party_Democracy_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Endecja_Dominant_Party_Democracy.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Dominant_Party_Democracy.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Endecja_Dominant_Party_Democracy.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_end_of_Sanacja_shine"
+		texturefile = "gfx/interface/goals/focus_POL_end_of_Sanacja.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_end_of_Sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_end_of_Sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Front_Morges_triumph_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Front_Morges_triumph.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Front_Morges_triumph.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Front_Morges_triumph.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_keep_on_Osadnik_shine"
+		texturefile = "gfx/interface/goals/focus_POL_keep_on_Osadnik.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_keep_on_Osadnik.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_keep_on_Osadnik.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_maintain_sanacja_shine"
+		texturefile = "gfx/interface/goals/focus_POL_maintain_sanacja.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_maintain_sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_maintain_sanacja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Marszalek_Smigly_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Marszalek_Smigly.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Marszalek_Smigly.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Marszalek_Smigly.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_Morges_marginalize_Endecja_shine"
+		texturefile = "gfx/interface/goals/focus_POL_Morges_marginalize_Endecja.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Morges_marginalize_Endecja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_Morges_marginalize_Endecja.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_polish_national_community_shine"
+		texturefile = "gfx/interface/goals/focus_POL_polish_national_community.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_polish_national_community.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_polish_national_community.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_reassemble_the_sejm_hof_shine"
+		texturefile = "gfx/interface/goals/focus_POL_reassemble_the_sejm_hof.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_reassemble_the_sejm_hof.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_reassemble_the_sejm_hof.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_reconcile_with_RUSK_shine"
+		texturefile = "gfx/interface/goals/focus_POL_reconcile_with_RUSK.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_reconcile_with_RUSK.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_reconcile_with_RUSK.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_revive_Sarmatyzm_shine"
+		texturefile = "gfx/interface/goals/focus_POL_revive_Sarmatyzm.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_revive_Sarmatyzm.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_revive_Sarmatyzm.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_the_castle_nearl_shine"
+		texturefile = "gfx/interface/goals/focus_POL_the_castle_nearl.png"
+	  effectFile = "gfx/FX/buttonstate.lua"
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_the_castle_nearl.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_the_castle_nearl.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_focus_POL_the_left_chairman_shine"
+		texturefile = "gfx/interface/goals/focus_POL_the_left_chairman.png"
+	    effectFile = "gfx/FX/buttonstate.lua"
+	    animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_the_left_chairman.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_the_left_chairman.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+
+
+	spriteType = {
+		name = "GFX_focus_POL_demand_Cieszyn_shine"
+		texturefile = "gfx/interface/goals/focus_POL_demand_Cieszyn.png"
+	    effectFile = "gfx/FX/buttonstate.lua"
+	    animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_demand_Cieszyn.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_demand_Cieszyn.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_focus_POL_befriend_Czech_shine"
+		texturefile = "gfx/interface/goals/focus_POL_befriend_Czech.png"
+	    effectFile = "gfx/FX/buttonstate.lua"
+	    animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_befriend_Czech.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = -90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+
+	  animation = {
+		animationmaskfile = "gfx/interface/goals/focus_POL_befriend_Czech.png"
+		animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+		animationrotation = 90.0
+		animationlooping = no
+		animationtime = 0.75
+		animationdelay = 0
+		animationblendmode = "add"
+		animationtype = "scrolling"
+		animationrotationoffset = { x = 0.0 y = 0.0 }
+		animationtexturescale = { x = 1.0 y = 1.0 }
+	  }
+		legacy_lazy_load = no
+	}
 }

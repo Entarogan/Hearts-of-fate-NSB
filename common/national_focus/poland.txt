@@ -79,7 +79,7 @@ focus_tree = {
 			completion_reward = {
 					army_experience = 20
 					add_ideas = POL_militarism_focus
-					POL_april_constitution_up = yes
+					# POL_april_constitution_up = yes
 				}
 
 	}
@@ -446,7 +446,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_Great_Separation
 		icon = GFX_goal_unknown
-		cost = 10.00
+		cost = 5.00
 		available = {
 			has_civil_war = yes
 		}
@@ -1423,7 +1423,7 @@ focus_tree = {
 	focus = {
 		id = POL_invest_in_eastern_poland
 		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = POL_the_second_lwow_trial
 		}
@@ -2071,7 +2071,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_the_castle_nearl
-		icon = GFX_focus_POL_the_castle
+		icon = GFX_focus_POL_the_castle_nearl
 		cost = 5.00
 		prerequisite = {
 			focus = POL_maintain_sanacja
@@ -2116,7 +2116,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_dissolve_the_sejm_hof
-		icon = GFX_focus_generic_strike_at_democracy2
+		icon = GFX_focus_POL_dissolve_the_sejm_hof
 		cost = 5.00
 		prerequisite = {
 			focus = POL_delay_the_election
@@ -2307,7 +2307,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_the_left_chairman_hof
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_focus_POL_the_left_chairman
 		cost = 5.00
 		prerequisite = {
 			focus = POL_destroy_endecja
@@ -2594,24 +2594,27 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = POL_unarmoured_alliance
-			ai_will_do = {
-					factor = 10
-				}
-			available = {
+		ai_will_do = {
+				factor = 10
+			}
+		available = {
 
-}
-			search_filters = { FOCUS_FILTER_ANNEXATION  FOCUS_FILTER_WAR_SUPPORT  FOCUS_FILTER_POLITICAL }
-			completion_reward = {
-					add_ideas = POL_polish_revanchism_focus
-				}
-
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION  FOCUS_FILTER_WAR_SUPPORT  FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+				add_ideas = POL_polish_revanchism_focus
+			}
 	}
+
 	focus = {
 		id = POL_protect_czechozlovakia
-		icon = GFX_goal_generic_major_alliance
-		cost = 10.00
+		icon = GFX_focus_POL_befriend_Czech
+		cost = 5.00
 		prerequisite = {
 			focus = POL_AT_group
+		}
+		mutually_exclusive = {
+			focus = POL_Demand_Cieszyn
 		}
 		x = 0
 		y = 1
@@ -2687,6 +2690,56 @@ focus_tree = {
 				}
 
 	}
+
+	focus = {
+		id = POL_Demand_Cieszyn
+		icon = GFX_focus_POL_demand_Cieszyn
+		cost = 5.00
+		prerequisite = {
+			focus = POL_prepare_german_line
+		}
+		x = 0
+		y = 2
+		relative_position_id = POL_prepare_german_line
+		mutually_exclusive = {
+			focus = POL_protect_czechozlovakia
+		}
+			ai_will_do = {
+					factor = 10
+				}
+			available = {
+					CZE = {
+							exists = yes
+							NOT = {
+									has_war_with = ROOT
+									is_in_faction_with = ROOT
+								}
+						}
+					is_subject = no
+				}
+			bypass = {
+					CZE = {
+							OR = {
+									exists = no
+									has_war_with = ROOT
+									is_in_faction_with = ROOT
+								}
+						}
+				}
+			search_filters = { FOCUS_FILTER_POLITICAL }
+			completion_reward = {
+				# attack CZE
+				CZE = {
+					country_event = {
+						id = poland_old.21
+						days = 1
+					}
+				}
+			}
+
+	}
+
+
 	focus = {
 		id = POL_romanian_alliance
 		icon = GFX_focus_invite_romania
@@ -5347,7 +5400,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_reassemble_the_sejm_hof
-		icon = GFX_focus_generic_self_management
+		icon = GFX_focus_POL_reassemble_the_sejm_hof
 		cost = 4.00
 		prerequisite = {
 			focus = POL_Commanders_Funeral
@@ -6914,7 +6967,7 @@ focus_tree = {
 	focus = {
 		id = POL_Eastern_Arsenal
 		icon = GFX_goal_generic_construct_mil_factory
-		cost = 7.00
+		cost = 5.00
 		prerequisite = {
 			focus = POL_Eastern_Poland_Industry
 		}
@@ -7140,7 +7193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_reconcile_with_RUSK
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_reconcile_with_RUSK
 		cost = 6.00
 		prerequisite = {
 			focus = POL_invest_in_eastern_poland
@@ -7161,7 +7214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_annex_Ukrainian_cooperatives
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_annex_Ukrainian_cooperatives
 		cost = 6.00
 		prerequisite = {
 			focus = POL_invest_in_eastern_poland
@@ -7182,7 +7235,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_keep_on_Osadnik
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_keep_on_Osadnik
 		cost = 10.00
 		prerequisite = {
 			focus = POL_ban_UNDO
@@ -7201,7 +7254,7 @@ focus_tree = {
 	focus = {
 		id = POL_end_Lex_Grabski
 		icon = GFX_focus_POL_end_Lex_Grabski_2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = POL_deal_with_UNDO
 		}
@@ -7234,7 +7287,7 @@ focus_tree = {
 	focus = {
 		id = POL_Galicia_Oil
 		icon = GFX_focus_POL_Galicia_Oil
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = POL_Eastern_Poland_Industry
 		}
@@ -7309,7 +7362,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_call_for_western_aid
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_call_for_western_aid
 		cost = 5.00
 		prerequisite = {
 			focus = POL_lower_class_education
@@ -7324,7 +7377,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_polish_national_community
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_polish_national_community
 		cost = 10.00
 		prerequisite = {
 			focus = POL_integrate_Galicia
@@ -7457,7 +7510,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_maintain_sanacja
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_maintain_sanacja
 		cost = 6.00
 		prerequisite = {
 			focus = POL_delay_the_election
@@ -7495,7 +7548,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Front_Morges_triumph
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Front_Morges_triumph
 		cost = 6.00
 		prerequisite = {
 			focus = POL_open_the_election
@@ -7529,7 +7582,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_destroy_endecja
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_destroy_endecja
 		cost = 5.00
 		prerequisite = {
 			focus = POL_dissolve_the_sejm_hof
@@ -7565,7 +7618,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_end_of_Sanacja
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_end_of_Sanacja
 		cost = 5.00
 		prerequisite = {
 			focus = POL_legion_of_merit
@@ -7592,7 +7645,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Marszalek_Smigly
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Marszalek_Smigly
 		cost = 6.00
 		prerequisite = {
 			focus = POL_dissolve_the_sejm_hof
@@ -8224,7 +8277,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_the_modern_Jadwiga
-		icon = GFX_focus_research
+		icon = GFX_focus_POL_end_the_regency
 		cost = 10.00
 		prerequisite = {
 			focus = POL_KUL
@@ -8255,7 +8308,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Morges_marginalize_Endecja
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Morges_marginalize_Endecja
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Catholic_Trade_Unions
@@ -8315,7 +8368,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Befriend_Japan
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Befriend_Japan
 		cost = 10.00
 		prerequisite = {
 			focus = POL_modernising_the_cavalry
@@ -8394,7 +8447,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Endecja_destroy_Sarmatyzm
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Endecja_Dominant_Party_Democracy
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Endecja_Politics_Rationalisation
@@ -8406,7 +8459,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Endecja_Dominant_Party_Democracy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Endecja_Dominant_Party_Democracy
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Endecja_destroy_Sarmatyzm
@@ -8457,7 +8510,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Endecja_Destroy_Sanacja
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Endecja_Destroy_Sanacja
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Mieszko_Currency
@@ -8469,7 +8522,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Endecja_Akcja_Wisla
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Endecja_Akcja_Wisla
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Endecja_Land_Reform_but_for_Poles
@@ -8487,7 +8540,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Endecja_Austrian_School_Economics
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_Endecja_Austrian_School_Economics
 		cost = 10.00
 		prerequisite = {
 			focus = POL_Endecja_Cult_of_Ration
@@ -8499,7 +8552,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_revive_Sarmatyzm
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_revive_Sarmatyzm
 		cost = 10.00
 		prerequisite = {
 			focus = POL_empower_the_morges

@@ -23,3 +23,15 @@ POL_Polish_Unity = {
 		original_tag = POL
 	}
 }
+
+POL_Prometeizm = {
+	icon = power_struggle
+
+	priority = 100
+
+	allowed = {
+		original_tag = POL
+		original_tag = SOV
+		original_tag = UKR
+	}
+}
