@@ -1817,31 +1817,7 @@ focus_tree = {
 			add_to_faction = PHI
 		}
 	}
-	focus = {
-		id = JAP_legalization
-		icon = GFX_focus_generic_treaty
-		cost = 5
-		prerequisite = {
-			focus = JAP_showdown
-			focus = JAP_government_reformation
-		}
-		x = 2
-		y = 1
-		relative_position_id = JAP_showdown
-		available = {
-			has_government = democratic
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = {
-				JAP_legalization_idea
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
+
 	focus = {
 		id = JAP_national_tech_association
 		icon = GFX_focus_research2
@@ -3757,9 +3733,9 @@ focus_tree = {
 			focus = JAP_showa_resotration
 			focus = JAP_tenka_fubu_focus
 		}
-		x = -4
-		y = 1
-		relative_position_id = JAP_showa_resotration
+		x = 3
+		y = 2
+		relative_position_id = JAP_tenka_fubu_focus
 		available = {
 		}
 		bypass = {
@@ -8447,29 +8423,7 @@ focus_tree = {
 			add_stability = 0.03
 		}
 	}
-	focus = {
-		id = JAP_electoral_reformation
-		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 7
-		prerequisite = {
-			focus = JAP_conservatives_win
-		}
-		x = 0
-		y = 1
-		relative_position_id = JAP_conservatives_win
-		available = {
-			has_idea = idea_jap_conservatives
-		}
-		completion_reward = {
-			swap_ideas = {
-				add_idea = idea_jap_corrupt_democracy2
-				remove_idea = idea_jap_corrupt_democracy
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-	}
+
 	focus = {
 		id = JAP_rapprochement_with_army
 		icon = GFX_goal_generic_military_deal
@@ -9965,6 +9919,54 @@ focus_tree = {
 				days = 180
 			}
 			JAP_civil_war_start = yes
+		}
+	}
+	focus = {
+		id = JAP_legalization
+		icon = GFX_focus_generic_treaty
+		cost = 5
+		prerequisite = {
+			focus = JAP_showdown
+			focus = JAP_government_reformation
+		}
+		x = 2
+		y = 1
+		relative_position_id = JAP_showdown
+		available = {
+			has_government = democratic
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = {
+				JAP_legalization_idea
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = JAP_electoral_reformation
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 7
+		prerequisite = {
+			focus = JAP_conservatives_win
+		}
+		x = 0
+		y = 1
+		relative_position_id = JAP_conservatives_win
+		available = {
+			has_idea = idea_jap_conservatives
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = idea_jap_corrupt_democracy2
+				remove_idea = idea_jap_corrupt_democracy
+			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 	}
 	focus = {

@@ -1001,26 +1001,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = rus_attract_russian_in_exile
-		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 5.00
-		prerequisite = {
-			focus = rus_orthodox_enthusiastic
-			focus = rus_secularization
-		}
-		bypass = {
-			has_completed_focus = rus_fall_of_ussr
-		}
-		x = -1
-		y = 1
-		relative_position_id = rus_orthodox_enthusiastic
-		completion_reward = {
-			add_ideas = { rus_attract_russian_in_exile }
-			custom_effect_tooltip = rus_attract_russian_in_exile_tt
-		}
 
-	}
 	focus = {
 		id = rus_confront_racism
 		icon = GFX_goal_generic_major_war
@@ -1041,38 +1022,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = rus_seek_american_support
-		icon = GFX_focus_chi_mission_to_the_us
-		cost = 5.00
-		prerequisite = {
-			focus = rus_strengthen_tie_with_the_west
-		}
-		available = {
-			is_subject = no
-			NOT = { has_government = fascism }
-		}
 
-		bypass = {
-            has_completed_focus = rus_fall_of_ussr
-		}
-
-		x = -1
-		y = 1
-		relative_position_id = rus_strengthen_tie_with_the_west
-		completion_reward = {
-			custom_effect_tooltip = RUS_seek_usa_support_tt
-		}
-
-		ai_will_do = {
-			factor = 300
-			modifier = {
-				factor = 2
-				has_war_with = SOV
-			}
-		}
-
-	}
 	focus = {
 		id = rus_handle_the_army
 		icon = GFX_goal_generic_allies_build_infantry
@@ -1165,6 +1115,27 @@ focus_tree = {
 		}
 
 	}
+
+	focus = {
+		id = rus_attract_russian_in_exile
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_orthodox_enthusiastic
+			focus = rus_secularization
+		}
+		bypass = {
+			has_completed_focus = rus_fall_of_ussr
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_orthodox_enthusiastic
+		completion_reward = {
+			add_ideas = { rus_attract_russian_in_exile }
+			custom_effect_tooltip = rus_attract_russian_in_exile_tt
+		}
+
+	}
 	focus = {
 		id = rus_Tsarina_Batiushka
 		icon = GFX_focus_Anastasia_Romanov_with_Flags
@@ -1243,6 +1214,76 @@ focus_tree = {
 
 	}
 	focus = {
+		id = rus_western_economy_aid
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 5.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		available = {
+			is_subject = no
+			OR = {
+				ENG_will_support = yes
+				FRA_will_support = yes
+				USA_will_support = yes
+			}
+			NOT = { has_government = fascism }
+		}
+		x = 1
+		y = 1
+		relative_position_id = rus_strengthen_tie_with_the_west
+		completion_reward = {
+			add_timed_idea = {
+				days = 800
+				idea = rus_western_economy_aid
+			}
+
+			SOV_increase_industrialization = yes
+			
+		}
+
+		ai_will_do = {
+			factor = 1000
+			modifier = {
+				factor = 0
+				has_war_with = SOV
+			}
+		}
+
+	}
+	focus = {
+		id = rus_seek_american_support
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 5.00
+		prerequisite = {
+			focus = rus_strengthen_tie_with_the_west
+		}
+		available = {
+			is_subject = no
+			NOT = { has_government = fascism }
+		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
+		x = -1
+		y = 1
+		relative_position_id = rus_strengthen_tie_with_the_west
+		completion_reward = {
+			custom_effect_tooltip = RUS_seek_usa_support_tt
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
+		}
+
+	}
+	focus = {
 		id = rus_rekindle_old_alliance
 		icon = GFX_focus_chi_reach_out_to_france
 		cost = 5.00
@@ -1275,8 +1316,8 @@ focus_tree = {
 			}
 		}
 		x = -2
-		y = 1
-		relative_position_id = rus_align_japan
+		y = 2
+		relative_position_id = RUS_entente_observe_committee
 		completion_reward = {
 			FRA = { country_event = { id = rus_diplo.1 days = 3 } }
 		}
@@ -1464,27 +1505,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = rus_western_pilot_training
-		icon = GFX_focus_usa_escort_fighters
-		cost = 5.00
-		prerequisite = {
-			focus = rus_resurrect_the_entente
-		}
-		available = {
-			OR = {
-				is_in_faction_with = ENG
-				is_in_faction_with = FRA
-				is_in_faction_with = USA
-			}
-		}
-		x = 41
-		y = 6
-		completion_reward = {
-			add_ideas = { ira_british_pilot_training }
-		}
 
-	}
 	focus = {
 		id = rua_modernized_military_school
 		icon = GFX_focus_generic_military_academy
@@ -1566,6 +1587,79 @@ focus_tree = {
 				NOT = { has_idea = SOV_lacking_industrialization_7 }			
 				NOT = { has_idea = SOV_lacking_industrialization_8 }	
 			}	
+		}
+
+	}
+	focus = {
+		id = rus_western_pilot_training
+		icon = GFX_focus_usa_escort_fighters
+		cost = 5.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		available = {
+			OR = {
+				is_in_faction_with = ENG
+				is_in_faction_with = FRA
+				is_in_faction_with = USA
+			}
+		}
+		x = 41
+		y = 6
+		completion_reward = {
+			add_ideas = { ira_british_pilot_training }
+		}
+
+	}
+	focus = {
+		id = rus_lesson_from_the_great_war
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5.00
+		prerequisite = {
+			focus = rus_local_militia_training
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_local_militia_training
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = rus_lesson_from_the_great_war
+				cost_reduction = 0.33
+				uses = 2
+				category = land_doctrine
+			} 
+		}
+
+	}
+	focus = {
+		id = rus_admit_current_state_in_midasia
+		icon = GFX_focus_generic_treaty
+		cost = 5.00
+		prerequisite = {
+			focus = rus_resurrect_the_entente
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_resurrect_the_entente
+		completion_reward = {
+			AFG = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
+			PER = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
+			SIK = { 
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = RUS_admit_status_quo_od_midasia
+				}
+			}
 		}
 
 	}
@@ -1802,58 +1896,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = rus_lesson_from_the_great_war
-		icon = GFX_goal_generic_army_doctrines
-		cost = 5.00
-		prerequisite = {
-			focus = rus_local_militia_training
-		}
-		x = 0
-		y = 1
-		relative_position_id = rus_local_militia_training
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = rus_lesson_from_the_great_war
-				cost_reduction = 0.33
-				uses = 2
-				category = land_doctrine
-			} 
-		}
-
-	}
-	focus = {
-		id = rus_admit_current_state_in_midasia
-		icon = GFX_focus_generic_treaty
-		cost = 5.00
-		prerequisite = {
-			focus = rus_resurrect_the_entente
-		}
-		x = -1
-		y = 1
-		relative_position_id = rus_resurrect_the_entente
-		completion_reward = {
-			AFG = { 
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = RUS_admit_status_quo_od_midasia
-				}
-			}
-			PER = { 
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = RUS_admit_status_quo_od_midasia
-				}
-			}
-			SIK = { 
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = RUS_admit_status_quo_od_midasia
-				}
-			}
-		}
-
-	}
-	focus = {
 		id = rus_break_tie_with_jap
 		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 5.00
@@ -1989,44 +2031,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = rus_western_economy_aid
-		icon = GFX_focus_generic_the_giant_wakes
-		cost = 5.00
-		prerequisite = {
-			focus = rus_strengthen_tie_with_the_west
-		}
-		available = {
-			is_subject = no
-			OR = {
-				ENG_will_support = yes
-				FRA_will_support = yes
-				USA_will_support = yes
-			}
-			NOT = { has_government = fascism }
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_strengthen_tie_with_the_west
-		completion_reward = {
-			add_timed_idea = {
-				days = 800
-				idea = rus_western_economy_aid
-			}
 
-			SOV_increase_industrialization = yes
-			
-		}
-
-		ai_will_do = {
-			factor = 1000
-			modifier = {
-				factor = 0
-				has_war_with = SOV
-			}
-		}
-
-	}
 	focus = {  ###集体农庄私有化
 		id = rus_farm_privatization
 		icon = GFX_goal_generic_trade
@@ -2750,100 +2755,7 @@ focus_tree = {
 		}
 
 	}
-	focus = {
-		id = rus_japanese_equipments
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 5.00
-		prerequisite = {
-			focus = rus_expand_japanese_advisory_group
-		}
-		available = {
-			JAP_will_support = yes
-		}
 
-		bypass = {
-            has_completed_focus = rus_fall_of_ussr
-		}
-
-		x = 0
-		y = 2
-		relative_position_id = rus_expand_japanese_advisory_group
-		completion_reward = {
-
-			if = {
-				limit = {
-					has_idea = RUS_sour_loser
-					has_idea = RUS_Japanese_economic_control_3_idea
-				}
-				swap_ideas = {
-					remove_idea = RUS_Japanese_economic_control_3_idea
-					add_idea = RUS_Japanese_economic_control_4_idea
-				}
-			}
-
-			if = {
-				limit = {
-					has_idea = RUS_sour_loser
-					has_idea = RUS_Japanese_economic_control_2_idea
-				}
-				swap_ideas = {
-					remove_idea = RUS_Japanese_economic_control_2_idea
-					add_idea = RUS_Japanese_economic_control_3_idea
-				}
-			}
-
-			if = {
-				limit = {
-					has_idea = RUS_sour_loser
-					has_idea = RUS_Japanese_economic_control_1_idea
-				}
-				swap_ideas = {
-					remove_idea = RUS_Japanese_economic_control_1_idea
-					add_idea = RUS_Japanese_economic_control_2_idea
-				}
-			}
-
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = 5000
-				producer = JAP
-			}
-
-			add_equipment_to_stockpile = {
-				type = support_equipment
-				amount = 400
-				producer = JAP
-			}
-
-			add_equipment_to_stockpile = {
-				type = artillery_equipment
-				amount = 500
-				producer = JAP
-			}
-
-			add_equipment_to_stockpile = {
-				type = anti_air_equipment
-				amount = 150
-				producer = JAP
-			}
-
-			add_equipment_to_stockpile = {
-				type = anti_tank_equipment
-				amount = 150
-				producer = JAP
-			}
-
-		}
-
-		ai_will_do = {
-			factor = 300
-			modifier = {
-				factor = 2
-				has_war_with = SOV
-			}
-		}
-
-	}
 	focus = {
 		id = rus_align_japan
 		icon = GFX_focus_chi_collaboration_with_the_japanese
@@ -4524,6 +4436,100 @@ focus_tree = {
 
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = RUS_tatenashi_sarashiki
+		}
+
+		ai_will_do = {
+			factor = 300
+			modifier = {
+				factor = 2
+				has_war_with = SOV
+			}
+		}
+
+	}
+	focus = {
+		id = rus_japanese_equipments
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = rus_expand_japanese_advisory_group
+		}
+		available = {
+			JAP_will_support = yes
+		}
+
+		bypass = {
+            has_completed_focus = rus_fall_of_ussr
+		}
+
+		x = 0
+		y = 2
+		relative_position_id = rus_expand_japanese_advisory_group
+		completion_reward = {
+
+			if = {
+				limit = {
+					has_idea = RUS_sour_loser
+					has_idea = RUS_Japanese_economic_control_3_idea
+				}
+				swap_ideas = {
+					remove_idea = RUS_Japanese_economic_control_3_idea
+					add_idea = RUS_Japanese_economic_control_4_idea
+				}
+			}
+
+			if = {
+				limit = {
+					has_idea = RUS_sour_loser
+					has_idea = RUS_Japanese_economic_control_2_idea
+				}
+				swap_ideas = {
+					remove_idea = RUS_Japanese_economic_control_2_idea
+					add_idea = RUS_Japanese_economic_control_3_idea
+				}
+			}
+
+			if = {
+				limit = {
+					has_idea = RUS_sour_loser
+					has_idea = RUS_Japanese_economic_control_1_idea
+				}
+				swap_ideas = {
+					remove_idea = RUS_Japanese_economic_control_1_idea
+					add_idea = RUS_Japanese_economic_control_2_idea
+				}
+			}
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+				producer = JAP
+			}
+
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 400
+				producer = JAP
+			}
+
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+				producer = JAP
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 150
+				producer = JAP
+			}
+
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 150
+				producer = JAP
+			}
+
 		}
 
 		ai_will_do = {

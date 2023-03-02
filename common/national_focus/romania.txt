@@ -451,13 +451,275 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ROM_connect_railway
+		icon = GFX_focus_ROM_connect_railway
+		cost = 7
+		prerequisite = {
+			focus = ROM_the_unification
+		}
+		available = {
+			84 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			76 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			83 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			82 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_the_unification
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ROM_CFR
+			82 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			76 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			83 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	focus = {
+		id = ROM_Trifas_experimental_city
+		icon = GFX_focus_ROM_Trifas_experimental_city
+		cost = 5
+		prerequisite = {
+			focus = ROM_connect_railway
+		}
+		available = {
+			76 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = ROM_connect_railway
+		completion_reward = {
+			add_ideas = {
+				ROM_Trifas_experimental_city
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = ROM_Miranda_Chemstry
+		}
+	}
+
+	focus = {
+		id = ROM_Sighisoara_expansion
+		icon = GFX_focus_ROM_Sighisoara_expansion
+		cost = 6
+		prerequisite = {
+			focus = ROM_connect_railway
+		}
+		available = {
+			76 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = ROM_connect_railway
+		completion_reward = {
+			76 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = bunker
+					level = 6
+					province = 9672
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 9670
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 5
+					province = 6711
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = ROM_Rosia_Montana_Gold
+		icon = GFX_focus_ROM_Rosia_Montana_Gold
+		cost = 5
+		prerequisite = {
+			focus = ROM_Sighisoara_expansion
+		}
+		available = {
+      is_subject = no
+			83 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			84 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_Sighisoara_expansion
+		completion_reward = {
+			83 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			84 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = {
+				ROM_Rosia_Montana_Gold
+			}
+		}
+	}
+	focus = {
+		id = ROM_transyvanian_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5
+		prerequisite = {
+			focus = ROM_connect_railway
+		}
+		available = {
+     	is_subject = no
+			76 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+			83 = {
+				CONTROLLER = {
+					OR = {
+						tag = ROOT
+						is_subject_of = ROOT
+					}
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = ROM_connect_railway
+		completion_reward = {
+			76 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			83 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
 		id = ROM_internal_development
 		icon = GFX_focus_ROM_reorganize_the_production
 		cost = 5
 		x = 40
 		y = 5
 		available = {
-      is_subject = no
+      		is_subject = no
 			has_full_control_of_state = 46
 			has_full_control_of_state = 79
 			or = {
@@ -691,8 +953,8 @@ focus_tree = {
 			focus = ROM_german_romanian_oil_exploitation_company
 		}
 		x = 2
-		y = 0
-		relative_position_id = ROM_expand_ploiesti_oil_production
+		y = 3
+		relative_position_id = ROM_danubian_transport_network
 		bypass = {
 			is_faction_leader = yes
 		}
@@ -1015,84 +1277,7 @@ focus_tree = {
 			add_ideas = ROM_acquire_licenses
 		}
 	}
-	focus = {
-		id = ROM_expand_the_air_force
-		icon = GFX_goal_generic_build_airforce
-		cost = 5
-		prerequisite = {
-			focus = ROM_invest_in_the_iar
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_invest_in_the_iar
-		ai_will_do = {
-			factor = 5
-		}
-		available = {
-		}
-		bypass = {
-		}
-		complete_tooltip = {
-			air_experience = 25
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-			random_state = {
-				limit = {
-					has_state_flag = ROM_expand_the_air_force_AB_2
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-		completion_reward = {
-			air_experience = 25
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = {
-						has_full_control_of_state = PREV
-					}
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB
-			}
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = {
-						has_full_control_of_state = PREV
-					}
-					free_building_slots = {
-						building = air_base
-						size > 2
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = ROM_expand_the_air_force_AB_2
-			}
-		}
-	}
+
 	focus = {
 		id = ROM_preserve_greater_romania
 		icon = GFX_focus_rom_preserve_romania
@@ -1142,58 +1327,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = ROM_german_romanian_oil_exploitation_company
-		icon = GFX_goal_generic_oil_refinery
-		cost = 7
-		prerequisite = {
-			focus = ROM_join_stalhpact
-		}
-		mutually_exclusive = {
-			focus = ROM_balkan_pact
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_join_stalhpact
-		ai_will_do = {
-			factor = 5
-		}
-		available = {
-			is_in_faction_with = GER
-			GER = {
-				exists = yes
-				is_puppet = no
-			}
-		}
-		bypass = {
-		}
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					ROOT = {
-						has_full_control_of_state = PREV
-					}
-				}
-				add_resource = {
-					type = oil
-					amount = 12
-				}
-			}
-			GER = {
-				random_owned_controlled_state = {
-					limit = {
-						GER = {
-							has_full_control_of_state = PREV
-						}
-					}
-					add_resource = {
-						type = oil
-						amount = 6
-					}
-				}
-			}
-		}
-	}
+
 	focus = {
 		id = ROM_demand_transnistria
 		icon = GFX_goal_generic_occupy_states_ongoing_war
@@ -1286,106 +1420,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = ROM_the_cordon_sanitaire
-		icon = GFX_goal_generic_alliance
-		cost = 7
-		prerequisite = {
-			focus = ROM_romania_bridgehead
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_romania_bridgehead
-		available = {
-			owns_state = 76
-			is_in_faction = no
-			is_subject = no
-			OR = {
-				country_exists = POL
-				country_exists = CZE
-			}
-			num_of_factories > 40
-		}
-		bypass = {
-		}
-		completion_reward = {
-			set_rule = {
-				can_create_factions = yes
-			}
-			create_faction = ROM_CORDON_SANITAIRE_FACTION
-			add_ideas = {
-				Powerful_influence_idea
-			}
-			set_major = yes
-			if = {
-				limit = {
-					CZE = {
-						exists = yes
-						has_capitulated = no
-						is_subject = no
-						is_in_faction = no
-						NOT = {
-							has_government = communism
-						}
-					}
-				}
-				CZE = {
-					country_event = DOD_romania.10
-				}
-			}
-			if = {
-				limit = {
-					POL = {
-						exists = yes
-						has_capitulated = no
-						is_subject = no
-						is_in_faction = no
-					}
-				}
-				POL = {
-					country_event = DOD_romania.10
-				}
-			}
-			if = {
-				limit = {
-					POL = {
-						is_faction_leader = yes
-						has_capitulated = no
-					}
-				}
-				POL = {
-					country_event = generic.2
-				}
-				if = { 
-					limit = { 
-						POL = { is_ai = yes } 
-						ROM = { is_ai = yes } 
-					}
-					POL = { 
-						add_to_faction = ROM 
-					}
-				}
-			}
-			hidden_effect = {
-				news_event = {
-					id = news.317
-					days = 1
-				}
-			}
-		}
 
-    cancel_if_invalid = no
-    continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1000
-				date > 1938.1.1
-			}
-		}
-	}
 	focus = {
 		id = ROM_civil_works
 		icon = GFX_goal_generic_construction
@@ -1426,7 +1461,7 @@ focus_tree = {
 			factor = 20
 		}
 		available = {
-      is_subject = no
+     		is_subject = no
 		}
 		bypass = {
 		}
@@ -1522,8 +1557,8 @@ focus_tree = {
 			focus = ROM_danubian_transport_network
 		}
 		x = -2
-		y = 0
-		relative_position_id = ROM_expand_ploiesti_oil_production
+		y = 3
+		relative_position_id = ROM_danubian_transport_network
 		ai_will_do = {
 			factor = 9
 		}
@@ -1732,6 +1767,85 @@ focus_tree = {
 			show_ideas_tooltip = ROM_iar
 		}
 	}
+
+	focus = {
+		id = ROM_expand_the_air_force
+		icon = GFX_goal_generic_build_airforce
+		cost = 5
+		prerequisite = {
+			focus = ROM_invest_in_the_iar
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_invest_in_the_iar
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+		}
+		bypass = {
+		}
+		complete_tooltip = {
+			air_experience = 25
+			random_state = {
+				limit = {
+					has_state_flag = ROM_expand_the_air_force_AB
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_flag = ROM_expand_the_air_force_AB_2
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = {
+						has_full_control_of_state = PREV
+					}
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB
+			}
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = {
+						has_full_control_of_state = PREV
+					}
+					free_building_slots = {
+						building = air_base
+						size > 2
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = ROM_expand_the_air_force_AB_2
+			}
+		}
+	}
 	focus = {
 		id = ROM_expand_ploiesti_oil_production
 		icon = GFX_focus_ROM_expand_ploiesti_oil_production
@@ -1931,35 +2045,7 @@ focus_tree = {
 			factor = 1000
 		}
 	}
-	focus = {
-		id = ROM_medium_bombers
-		icon = GFX_goal_generic_air_bomber
-		cost = 5
-		prerequisite = {
-			focus = ROM_relic_of_atlas
-		}
-		prerequisite = {
-			focus = ROM_expand_the_air_force
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_relic_of_atlas
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_medium_bombers
-				bonus = 1
-				uses = 1
-				category = tactical_bomber
-			}
-		}
-	}
+
 	focus = {
 		id = ROM_acquire_fighters
 		icon = GFX_goal_generic_air_fighter2
@@ -2032,120 +2118,8 @@ focus_tree = {
 			country_event = DOD_romania.150
 		}
 	}
-	focus = {
-		id = ROM_local_development
-		icon = GFX_goal_generic_air_production
-		cost = 5
-		prerequisite = {
-			focus = ROM_expand_the_air_force
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_expand_the_air_force
-		ai_will_do = {
-			factor = 9
-		}
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = ROM_local_development
-		}
-	}
-	focus = {
-		id = ROM_cas
-		icon = GFX_goal_generic_CAS
-		cost = 5
-		prerequisite = {
-			focus = ROM_local_development
-		}
-		x = 1
-		y = 1
-		relative_position_id = ROM_local_development
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_cas
-				bonus = 1.5
-				ahead_reduction = 1
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-	focus = {
-		id = ROM_iar_80
-		icon = GFX_goal_generic_air_fighter
-		cost = 5
-		prerequisite = {
-			focus = ROM_local_development
-		}
-		x = -1
-		y = 1
-		relative_position_id = ROM_local_development
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			if = {
-				limit = {
-					has_tech = fighter2
-				}
-				add_tech_bonus = {
-					name = ROM_iar_80
-					bonus = 1
-					uses = 1
-					category = light_fighter
-				}
-				else = {
-					add_tech_bonus = {
-						name = ROM_iar_80
-						bonus = 1
-						ahead_reduction = 2
-						uses = 1
-						technology = fighter2
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = ROM_heavy_bombers
-		icon = GFX_goal_generic_air_bomber
-		cost = 5
-		prerequisite = {
-			focus = ROM_medium_bombers
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_medium_bombers
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_tech_bonus = {
-				name = ROM_heavy_bombers
-				bonus = 1
-				uses = 1
-				category = cat_strategic_bomber
-			}
-		}
-	}
+
+
 	focus = {
 		id = ROM_nuclear_bomb_project
 		icon = GFX_focus_wonderweapons
@@ -3055,6 +3029,36 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = ROM_French_advisor
+		icon = GFX_goal_generic_allies_build_infantry
+		cost = 5
+		prerequisite = {
+			focus = ROM_invite_foreign_motor_companies
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_invite_foreign_motor_companies
+		available = {
+			FRA_will_support = yes
+			date > 1938.1.1
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = {
+				ROM_French_advisor
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				date > 1938.1.1
+			}
+		}
+	}
 	focus = {
 		id = ROM_strengthen_tie_with_france
 		icon = GFX_focus_chi_reach_out_to_france
@@ -3190,35 +3194,6 @@ focus_tree = {
 						id = bd_hun.35
 					}
 				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 1000
-				date > 1938.1.1
-			}
-		}
-	}
-	focus = {
-		id = ROM_French_advisor
-		icon = GFX_goal_generic_allies_build_infantry
-		cost = 5
-		prerequisite = {
-			focus = ROM_invite_foreign_motor_companies
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_invite_foreign_motor_companies
-		available = {
-			FRA_will_support = yes
-			date > 1938.1.1
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = {
-				ROM_French_advisor
 			}
 		}
 		ai_will_do = {
@@ -3734,6 +3709,106 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = ROM_the_cordon_sanitaire
+		icon = GFX_goal_generic_alliance
+		cost = 7
+		prerequisite = {
+			focus = ROM_romania_bridgehead
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_romania_bridgehead
+		available = {
+			owns_state = 76
+			is_in_faction = no
+			is_subject = no
+			OR = {
+				country_exists = POL
+				country_exists = CZE
+			}
+			num_of_factories > 40
+		}
+		bypass = {
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			create_faction = ROM_CORDON_SANITAIRE_FACTION
+			add_ideas = {
+				Powerful_influence_idea
+			}
+			set_major = yes
+			if = {
+				limit = {
+					CZE = {
+						exists = yes
+						has_capitulated = no
+						is_subject = no
+						is_in_faction = no
+						NOT = {
+							has_government = communism
+						}
+					}
+				}
+				CZE = {
+					country_event = DOD_romania.10
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						exists = yes
+						has_capitulated = no
+						is_subject = no
+						is_in_faction = no
+					}
+				}
+				POL = {
+					country_event = DOD_romania.10
+				}
+			}
+			if = {
+				limit = {
+					POL = {
+						is_faction_leader = yes
+						has_capitulated = no
+					}
+				}
+				POL = {
+					country_event = generic.2
+				}
+				if = { 
+					limit = { 
+						POL = { is_ai = yes } 
+						ROM = { is_ai = yes } 
+					}
+					POL = { 
+						add_to_faction = ROM 
+					}
+				}
+			}
+			hidden_effect = {
+				news_event = {
+					id = news.317
+					days = 1
+				}
+			}
+		}
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1000
+				date > 1938.1.1
+			}
+		}
+	}
+	focus = {
 		id = ROM_national_regenerate
 		icon = GFX_goal_generic_propaganda
 		cost = 7
@@ -4016,68 +4091,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = ROM_eastern_air_hq
-		icon = GFX_goal_generic_air_doctrine
-		cost = 5
-		prerequisite = {
-			focus = ROM_galati_industrial_zone
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_galati_industrial_zone
-		ai_will_do = {
-			factor = 5
-		}
-		available = {
-			78 = {
-				is_controlled_by = ROOT
-			}
-			766 = {
-				is_controlled_by = ROOT
-			}
-		}
-		bypass = {
-			OR = {
-				NOT = {
-					78 = {
-						is_controlled_by = ROOT
-					}
-				}
-				NOT = {
-					766 = {
-						is_controlled_by = ROOT
-					}
-				}
-			}
-		}
-		completion_reward = {
-			78 = {
-				add_building_construction = {
-					type = air_base
-					level = 7
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 6
-					instant_build = yes
-				}
-			}
-			766 = {
-				add_building_construction = {
-					type = air_base
-					level = 7
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = anti_air_building
-					level = 6
-					instant_build = yes
-				}
-			}
-		}
-	}
+
 	focus = {
 		id = ROM_spritual_nationalism
 		icon = GFX_focus_ROM_spritual_nationalism
@@ -4123,6 +4137,149 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = ROM_Trifas_experimental_city
 				add_idea = ROM_Trifas_experimental_city_2
+			}
+		}
+	}
+	focus = {
+		id = ROM_medium_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		prerequisite = {
+			focus = ROM_relic_of_atlas
+		}
+		prerequisite = {
+			focus = ROM_expand_the_air_force
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_relic_of_atlas
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_medium_bombers
+				bonus = 1
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+	focus = {
+		id = ROM_heavy_bombers
+		icon = GFX_goal_generic_air_bomber
+		cost = 5
+		prerequisite = {
+			focus = ROM_medium_bombers
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_medium_bombers
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_heavy_bombers
+				bonus = 1
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+	focus = {
+		id = ROM_local_development
+		icon = GFX_goal_generic_air_production
+		cost = 5
+		prerequisite = {
+			focus = ROM_expand_the_air_force
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_expand_the_air_force
+		ai_will_do = {
+			factor = 9
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_ideas = ROM_local_development
+		}
+	}
+	focus = {
+		id = ROM_cas
+		icon = GFX_goal_generic_CAS
+		cost = 5
+		prerequisite = {
+			focus = ROM_local_development
+		}
+		x = 1
+		y = 1
+		relative_position_id = ROM_local_development
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ROM_cas
+				bonus = 1.5
+				ahead_reduction = 1
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	focus = {
+		id = ROM_iar_80
+		icon = GFX_goal_generic_air_fighter
+		cost = 5
+		prerequisite = {
+			focus = ROM_local_development
+		}
+		x = -1
+		y = 1
+		relative_position_id = ROM_local_development
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		bypass = {
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_tech = fighter2
+				}
+				add_tech_bonus = {
+					name = ROM_iar_80
+					bonus = 1
+					uses = 1
+					category = light_fighter
+				}
+				else = {
+					add_tech_bonus = {
+						name = ROM_iar_80
+						bonus = 1
+						ahead_reduction = 2
+						uses = 1
+						technology = fighter2
+					}
+				}
 			}
 		}
 	}
@@ -6322,86 +6479,7 @@ focus_tree = {
 			}
 		}
 	}
-	focus = {
-		id = ROM_connect_railway
-		icon = GFX_focus_ROM_connect_railway
-		cost = 7
-		prerequisite = {
-			focus = ROM_the_unification
-		}
-		available = {
-			84 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			76 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			83 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			82 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		x = 0
-		y = 1
-		relative_position_id = ROM_the_unification
-		completion_reward = {
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_CFR
-			82 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			76 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			83 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-			84 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 500
-		}
-	}
+
 	focus = {
 		id = ROM_galati_industrial_zone
 		icon = GFX_focus_ROM_galati_industrial_zone
@@ -6439,187 +6517,72 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = ROM_transyvanian_arms_factory
-		icon = GFX_goal_generic_construct_mil_factory
+		id = ROM_eastern_air_hq
+		icon = GFX_goal_generic_air_doctrine
 		cost = 5
 		prerequisite = {
-			focus = ROM_connect_railway
-		}
-		available = {
-      is_subject = no
-			76 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			83 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		x = 1
-		y = 1
-		relative_position_id = ROM_connect_railway
-		completion_reward = {
-			76 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			83 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = ROM_Rosia_Montana_Gold
-		icon = GFX_focus_ROM_Rosia_Montana_Gold
-		cost = 5
-		prerequisite = {
-			focus = ROM_Sighisoara_expansion
-		}
-		available = {
-      is_subject = no
-			83 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			84 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
+			focus = ROM_galati_industrial_zone
 		}
 		x = 0
 		y = 1
-		relative_position_id = ROM_Sighisoara_expansion
-		completion_reward = {
-			83 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-			84 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			add_ideas = {
-				ROM_Rosia_Montana_Gold
-			}
-		}
-	}
-	focus = {
-		id = ROM_Trifas_experimental_city
-		icon = GFX_focus_ROM_Trifas_experimental_city
-		cost = 5
-		prerequisite = {
-			focus = ROM_connect_railway
+		relative_position_id = ROM_galati_industrial_zone
+		ai_will_do = {
+			factor = 5
 		}
 		available = {
-			76 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
+			78 = {
+				is_controlled_by = ROOT
+			}
+			766 = {
+				is_controlled_by = ROOT
+			}
+		}
+		bypass = {
+			OR = {
+				NOT = {
+					78 = {
+						is_controlled_by = ROOT
+					}
+				}
+				NOT = {
+					766 = {
+						is_controlled_by = ROOT
 					}
 				}
 			}
 		}
-		x = 0
-		y = 2
-		relative_position_id = ROM_connect_railway
 		completion_reward = {
-			add_ideas = {
-				ROM_Trifas_experimental_city
-			}
-			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = ROM_Miranda_Chemstry
-		}
-	}
-	focus = {
-		id = ROM_Sighisoara_expansion
-		icon = GFX_focus_ROM_Sighisoara_expansion
-		cost = 6
-		prerequisite = {
-			focus = ROM_connect_railway
-		}
-		available = {
-			76 = {
-				CONTROLLER = {
-					OR = {
-						tag = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-		x = -2
-		y = 1
-		relative_position_id = ROM_connect_railway
-		completion_reward = {
-			76 = {
-				add_extra_state_shared_building_slots = 3
+			78 = {
 				add_building_construction = {
-					type = bunker
+					type = air_base
+					level = 7
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
 					level = 6
-					province = 9672
+					instant_build = yes
+				}
+			}
+			766 = {
+				add_building_construction = {
+					type = air_base
+					level = 7
 					instant_build = yes
 				}
 				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 9670
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = bunker
-					level = 5
-					province = 6711
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = arms_factory
-					level = 1
+					type = anti_air_building
+					level = 6
 					instant_build = yes
 				}
 			}
 		}
 	}
+
+
+
 	focus = {
 		id = ROM_join_stalhpact
 		icon = GFX_focus_chi_mission_to_germany
@@ -6665,6 +6628,58 @@ focus_tree = {
 			modifier = {
 				factor = 1000
 				date > 1938.1.1
+			}
+		}
+	}
+	focus = {
+		id = ROM_german_romanian_oil_exploitation_company
+		icon = GFX_goal_generic_oil_refinery
+		cost = 7
+		prerequisite = {
+			focus = ROM_join_stalhpact
+		}
+		mutually_exclusive = {
+			focus = ROM_balkan_pact
+		}
+		x = 0
+		y = 1
+		relative_position_id = ROM_join_stalhpact
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			is_in_faction_with = GER
+			GER = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		bypass = {
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					ROOT = {
+						has_full_control_of_state = PREV
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 12
+				}
+			}
+			GER = {
+				random_owned_controlled_state = {
+					limit = {
+						GER = {
+							has_full_control_of_state = PREV
+						}
+					}
+					add_resource = {
+						type = oil
+						amount = 6
+					}
+				}
 			}
 		}
 	}
@@ -6746,9 +6761,9 @@ focus_tree = {
 			}
 			has_tech = synth_oil_experiments
 		}
-		x = 1
+		x = -1
 		y = 1
-		relative_position_id = ROM_balkan_pact
+		relative_position_id = ROM_german_romanian_oil_exploitation_company
 		completion_reward = {
 			79 = {
 				add_extra_state_shared_building_slots = 4
