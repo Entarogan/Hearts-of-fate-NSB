@@ -107,84 +107,84 @@ division_template = {
 units = {
 	division = {
 		name = "1. Deutsch-Balt. Kampfbrigade"
-		location = 9340
+		location = 3288
 		division_template = "Deutsch-Balt. Kampfbrigade"
 		start_experience_factor = 0.5
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "litauisch Kampf-Brigade"
-		location = 3388
+		location = 3288
 		division_template = "Deutsch-Balt. Kampfbrigade"
 		start_experience_factor = 0.6
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "2. Deutsch-Balt. Kampfbrigade"
-		location = 3152
+		location = 3288
 		division_template = "Deutsch-Balt. Kampfbrigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "3. Deutsch-Balt. Kampfbrigade"
-		location = 4640
+		location = 3288
 		division_template = "Deutsch-Balt. Kampfbrigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "4. Deutsch-Balt. Kampfbrigade"
-		location = 4640
+		location = 3288
 		division_template = "Deutsch-Balt. Kampfbrigade"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "1. Freiwilligen-Regiment"
-		location = 9340
+		location = 3288
 		division_template = "Freiwilligen-Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "2. Freiwilligen-Regiment"
-		location = 3152
+		location = 3288
 		division_template = "Freiwilligen-Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "3. Freiwilligen-Regiment"
-		location = 4640
+		location = 3288
 		division_template = "Freiwilligen-Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "4. Freiwilligen-Regiment"
-		location = 4640
+		location = 3288
 		division_template = "Freiwilligen-Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "Calamity Raven"
-		location = 4640
+		location = 3288
 		division_template = "Commando-Kampfbrigade"
 		start_experience_factor = 1.0
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "1. Panzer-Kampfbrigade"
-		location = 9340
+		location = 3288
 		division_template = "Panzer-Kampfbrigade"
 		start_experience_factor = 0.7
 		start_equipment_factor = 0.7
 	}
 	division = {
 		name = "litauisch Panzer-Kampfbrigade"
-		location = 3388
+		location = 3288
 		division_template = "Panzer-Kampfbrigade"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.7
