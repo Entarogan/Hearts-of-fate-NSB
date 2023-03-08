@@ -5709,6 +5709,7 @@ country_event = {
 			transfer_state = 876
 			transfer_state = 877
 			transfer_state = 878
+			transfer_state = 875
 			white_peace = RUS
 			puppet = MON
 			every_state = {
