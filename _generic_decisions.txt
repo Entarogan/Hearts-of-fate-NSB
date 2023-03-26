@@ -200,7 +200,7 @@ economy_decisions = {
 	}
 
 	restructure_supply_system = { #one time boost to get a few cheap supply hubs
-		
+
 		icon = GFX_decision_generic_construction
 
 		visible = { 
@@ -272,14 +272,14 @@ economy_decisions = {
 }
 
 propaganda_efforts = {
-	war_propaganda = {
+	war_propaganda = { 
 
 		icon = generic_prepare_civil_war
 
 		available = {
 			NOT = { has_country_flag = war_propaganda_campaign_running }
 			has_war_support < 0.5
-
+			
 			if = {
 				limit = {
 					tag = SPR
@@ -338,7 +338,7 @@ propaganda_efforts = {
 			}
 		}
 	}
-
+	
 	war_propaganda_casualties = { 
 
 		icon = generic_prepare_civil_war
@@ -642,7 +642,7 @@ propaganda_efforts = {
 			}
 		}
 	}
-
+	
 }
 
 operations = {
@@ -675,8 +675,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_EARLY_BLUE"
 	#		add_ideas = {
@@ -692,8 +692,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_EARLY_RED"
 	#			add_fuel = 10000000
@@ -737,8 +737,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_EARLY_BLUE"
 	#		add_ideas = {
@@ -754,8 +754,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_CV_MIXED_VS_CV_MIXED_EARLY_RED"
 	#			add_fuel = 10000000
@@ -801,8 +801,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_SUBS_EARLY_BLUE"
 	#		add_ideas = {
@@ -818,8 +818,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_SUBS_EARLY_RED"
 	#			add_fuel = 10000000
@@ -864,8 +864,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_SCREENS_EARLY_BLUE"
 	#		add_ideas = {
@@ -882,8 +882,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_EARLY_RED"
 	#			add_fuel = 10000000
@@ -928,8 +928,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_SCREENS_EARLY_BLUE"
 	#		add_ideas = {
@@ -946,8 +946,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_CV_MIXED_VS_CV_MIXED_EARLY_RED"
 	#			add_fuel = 10000000
@@ -991,8 +991,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_SCREENS_EARLY_BLUE"
 	#		add_ideas = {
@@ -1009,8 +1009,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_CAPITAL_EARLY_RED"
 	#			add_ideas = {
@@ -1054,8 +1054,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_CAPITAL_EARLY_BLUE"
 	#		add_ideas = {
@@ -1072,8 +1072,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_MIXED_VS_MIXED_EARLY_RED"
 	#			add_ideas = {
@@ -1118,8 +1118,8 @@ operations = {
 	#			early_carrier = 1
 	#			early_submarine = 1
 	#			cv_fighter1 = 1
-	#			# cv_# CAS1 = 1
-	#			# cv_# naval_bomber1 = 1
+	#			cv_CAS1 = 1
+	#			cv_naval_bomber1 = 1
 	#		}
 	#		load_oob = "MTG_NAVAL_TEST_OOB_CAPITAL_EARLY_BLUE"
 	#		add_ideas = {
@@ -1136,8 +1136,8 @@ operations = {
 	#				early_carrier = 1
 	#				early_submarine = 1
 	#				cv_fighter1 = 1
-	#				# cv_# CAS1 = 1
-	#				# cv_# naval_bomber1 = 1
+	#				cv_CAS1 = 1
+	#				cv_naval_bomber1 = 1
 	#			}
 	#			load_oob = "MTG_NAVAL_TEST_OOB_CV_MIXED_VS_CV_MIXED_EARLY_RED"
 	#			add_ideas = {
@@ -1247,48 +1247,9 @@ operations = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
+			base = 0
 			modifier = {
-				factor = 0
-				NOT = {
-					any_enemy_country = {
-						OR = {
-							controls_state = 452
-							controls_state = 447
-							controls_state = 456
-							controls_state = 457
-							controls_state = 454
-							controls_state = 455
-							OR = {
-								divisions_in_state = { state = 454 size > 2 }
-								divisions_in_state = { state = 447 size > 2 }
-								divisions_in_state = { state = 457 size > 2 }
-								divisions_in_state = { state = 456 size > 2 }
-							}
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0 # Don't blow the canal when you've got troops needing supplies in the Horn of Africa, and no land route has been established there
-				any_allied_country = {
-					NOT = {
-						OR = {
-							has_full_control_of_state = 457
-							has_full_control_of_state = 456
-						}
-					}
-					NOT = { has_full_control_of_state = 551 }
-					OR = {
-						divisions_in_state = { state = 550 size > 0 }
-						divisions_in_state = { state = 268 size > 0 }
-						divisions_in_state = { state = 269 size > 0 }
-						divisions_in_state = { state = 559 size > 0 }
-					}
-				}
-			}
-			modifier = {
-				factor = 200 # Try to cut the enemy off from the mediterranean if you also occupy Gibraltar
+				add = 200 # Try to cut the enemy off from the mediterranean if you also occupy Gibraltar
 				OR = {
 					has_full_control_of_state = 118
 					any_allied_country = {
@@ -1297,6 +1258,33 @@ operations = {
 				}
 				has_war = yes
 				NOT = { tag = ENG }
+			}
+			modifier = {
+				add = 51 # Somewhat important if the baddies are coming
+				446 = {
+					OWNER = {
+						OR = {
+							tag = ROOT
+							is_in_faction_with = ROOT
+						}
+					}
+				}
+				OR = {
+					454 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+					907 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+					447 = {
+						NOT = { controller = { tag = ROOT } }
+						controller = { has_war_with = ROOT }
+					}
+				}
+				has_war = yes
+				is_in_faction_with = ENG
 			}
 		}
 	}
@@ -1654,25 +1642,25 @@ war_measures = {
             has_war = yes
             has_idea = tot_economic_mobilisation
             OR = {
-				tag = RUS
-				has_government = democratic
-				has_government = communism
+                AND = {
+                    has_government = democratic
+                    has_war_support > 0.79
+                }
+                AND = {
+                    has_government = communism
+                    has_war_support > 0.79
+                }
                 AND = {
                     has_government = fascism
                     OR = {
-						has_country_leader_ideology = valkist
-						has_war_support > 0.79
+                        has_war_support > 0.89
                         surrender_progress > 0
                     }
                 }
                 AND = {
                     has_government = neutrality
-                    OR = {
-						AND = {
-							has_war_support > 0.74
-							has_stability > 0.7
-						}
-                    }
+                    has_war_support > 0.84
+                    has_stability > 0.7
                 }
             }
         }
@@ -1688,14 +1676,16 @@ war_measures = {
             }
         }
         modifier = {
-			war_support_factor = 0.1
-			industrial_capacity_factory = 0.1
-			industrial_capacity_dockyard = 0.1
-            production_speed_buildings_factor = 0.05
-			MONTHLY_POPULATION = -0.05
+            conscription = 0.03
+            stability_factor = -0.05
         }
         ai_will_do = {
-			factor = 100
+			factor = 1
+
+			modifier = {
+				factor = 3
+				has_manpower < 100000
+			}
 		}
 		complete_effect = {
 			if = {
@@ -1963,7 +1953,7 @@ economy_decisions = {
         fire_only_once = no
 
         available = {
- 			IF = { 
+			IF = { 
 				limit = { 
 					OR = { 
 						has_dlc = "Man the Guns" 	
@@ -1979,7 +1969,7 @@ economy_decisions = {
 				NOT = { has_state_flag = war_building_slot_flag }
 				is_fully_controlled_by = ROOT
 			}
-        }
+		}
 
         visible = {
 			has_war = yes
