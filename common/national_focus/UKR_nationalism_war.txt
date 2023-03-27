@@ -74,7 +74,7 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_Mobilize_the_Cossacks
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_goal_generic_army_doctrines
 	cost = 5.00
 	x = -2
 	y = 1
@@ -160,7 +160,7 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_Regroup_the_Army_Armored_Cavalry_Regiment
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_focus_SOV_restore_cossack_units
 	cost = 5.00
 	x = 0
 	y = 1
@@ -284,9 +284,9 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_Flexible_tactical_organization
-	icon = GFX_focus_SOV_restore_cossack_units
+	icon = GFX_focus_POL_ukrainian_army
 	cost = 5.00
-	x = -1
+	x = -2
 	y = 1
 
 	prerequisite = {
@@ -315,7 +315,7 @@ shared_focus = {
 	id = UKR_besiege_and_annihilate
 	icon = GFX_focus_offensive_army
 	cost = 5.00
-	x = 0
+	x = 1
 	y = 1
 
 	prerequisite = {
@@ -356,7 +356,7 @@ shared_focus = {
 	id = UKR_modern_cavalry
 	icon = GFX_goal_generic_army_motorized
 	cost = 5.00
-	x = 1
+	x = 0
 	y = 1
 
 	prerequisite = {
@@ -392,7 +392,7 @@ shared_focus = {
 	id = UKR_dismantling_soviet_tanks
 	icon = GFX_focus_generic_heavy_armour_russian
 	cost = 5.00
-	x = 0
+	x = 1
 	y = 1
 
 	prerequisite = {
@@ -780,7 +780,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = UKR_Mobilization_of_the_militia
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_focus_generic_little_entente
 	cost = 5.00
 	x = 2
 	y = 1
@@ -884,7 +884,7 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_Modernized_militia_forces
-	icon = GFX_goal_generic_military_sphere
+	icon = GFX_focus_generic_infiltration
 	cost = 5.00
 	x = 0
 	y = 1
@@ -1022,7 +1022,7 @@ shared_focus = {
 	id = UKR_Standardization_of_firearms
 	icon = GFX_focus_generic_military_equipment
 	cost = 5.00
-	x = -1
+	x = 0
 	y = 1
 
 	prerequisite = {
@@ -1069,7 +1069,7 @@ shared_focus = {
 	id = UKR_imitation_soviet_artillery
 	icon = GFX_focus_generic_artillery_factories
 	cost = 5.00
-	x = 0
+	x = -1
 	y = 1
 
 	prerequisite = {
@@ -1178,7 +1178,7 @@ shared_focus = {
 	id = UKR_trench_warfare_thinking
 	icon = GFX_goal_generic_defence
 	cost = 5.00
-	x = 1
+	x = 2
 	y = 1
 
 	prerequisite = {
@@ -1221,7 +1221,7 @@ shared_focus = {
 	id = UKR_Infiltration_Assault
 	icon = GFX_focus_prc_infiltration
 	cost = 5.00
-	x = 0
+	x = -1
 	y = 1
 
 	prerequisite = {
