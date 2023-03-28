@@ -103,9 +103,7 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-
 		add_stability = -0.05
-
 		add_autonomy_ratio = {
 			value = -0.05
 			localization = UKR_Suppresses_Bandits
@@ -133,9 +131,7 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-
 		add_political_power = -30
-
 		add_autonomy_ratio = {
 			value = -0.03
 			localization = UKR_Landlord_re_education
@@ -166,14 +162,11 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-
 		add_political_power = -50
-
 		add_autonomy_ratio = {
 			value = -0.05
 			localization = UKR_Labor_reform_camp
 		}
-
 		random_owned_controlled_state = {
 			limit = {
 				is_core_of = UKR
@@ -183,7 +176,7 @@ shared_focus = {
 					include_locked = yes
 				}
 			}
-		    add_extra_state_shared_building_slots = 1
+			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
@@ -216,14 +209,11 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		UKR_Legacy_of_the_Great_Famine = yes
-
 		add_political_power = -50
-
-		add_popularity = { 
-			ideology = communism 
-			popularity = 0.1 
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
 		}
-
 		add_timed_idea = {
 			idea = UKR_Loyalty_test_idea
 			days = 730
@@ -276,14 +266,11 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-
 		add_stability = 0.05
-
-		add_popularity = { 
-			ideology = communism 
+		add_popularity = {
+			ideology = communism
 			popularity = 0.05
 		}
-
 		add_timed_idea = {
 			idea = UKR_Resume_agricultural_production_idea
 			days = 180
@@ -628,22 +615,21 @@ shared_focus = {
 	available_if_capitulated = yes
 	completion_reward = {
 		add_political_power = 100
-
 		add_command_power = 50
-
 		if = {
 			limit = {
-				NOT = { has_idea = partial_economic_mobilisation }
+				NOT = {
+					has_idea = partial_economic_mobilisation
+				}
 			}
 			add_ideas = partial_economic_mobilisation
 		}
-
 		add_doctrine_cost_reduction = {
 			name = land_doc_bonus
 			cost_reduction = 0.33
 			uses = 1
 			category = land_doctrine
-		} 
+		}
 	}
 }
 
@@ -666,9 +652,7 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-
 		set_country_flag = UKR_Call_for_civilians_flag
-
 		custom_effect_tooltip = UKR_Call_for_civilians_tt
 		division_template = {
 			name = "militia"
@@ -747,6 +731,8 @@ shared_focus = {
 				load_oob = "UKR_civ_203"
 			}
 		}
+		##add young guys as general temp
+		UKR_young_guy_show = yes
 	}
 }
 
@@ -770,9 +756,7 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-
 		set_country_flag = UKR_Extremist_forces_flag
-
 		custom_effect_tooltip = UKR_Extremist_forces_tt
 		division_template = {
 			name = "OUN"
@@ -797,18 +781,17 @@ shared_focus = {
 					x = 0
 					y = 4
 				}
-				
 			}
-      support = {
-					artillery = {
-						x = 0
-						y = 0
-					}
-					anti_air = {
-						x = 0
-						y = 1
-					}
+			support = {
+				artillery = {
+					x = 0
+					y = 0
 				}
+				anti_air = {
+					x = 0
+					y = 1
+				}
+			}
 			priority = 1
 			is_locked = yes
 		}
@@ -837,9 +820,7 @@ shared_focus = {
 	}
 	available_if_capitulated = yes
 	completion_reward = {
-
 		set_country_flag = UKR_Assemble_the_Cossacks_flag
-
 		custom_effect_tooltip = UKR_Assemble_the_Cossacks_tt
 		division_template = {
 			name = "Cossacks"
@@ -897,7 +878,6 @@ shared_focus = {
 		hidden_effect = {
 			set_country_flag = UKR_Unite_anarchists_flag
 		}
-		
 		custom_effect_tooltip = UKR_Unite_anarchists_tt
 		division_template = {
 			name = "anarchists"
@@ -921,6 +901,7 @@ shared_focus = {
 		hidden_effect = {
 			load_oob = "UKR_ana_200"
 		}
+
 	}
 }
 
