@@ -732,7 +732,7 @@ shared_focus = {
 			}
 		}
 		##add young guys as general temp
-		UKR_young_guy_show = yes
+		
 	}
 }
 

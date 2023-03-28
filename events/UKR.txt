@@ -1050,9 +1050,11 @@ country_event = { # 为了乌克兰！
 			load_oob = "UKR_Otaman_Sich"
 			load_oob = "UKR_rebel_1936"
 			load_focus_tree = { 
-					tree = ukr_focus_2
+				tree = ukr_focus_2
 			}
 			country_event = { id = ukr.10  days = 3 }
+
+			UKR_young_guy_show = yes
 		}
 
 	}
