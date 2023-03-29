@@ -697,7 +697,12 @@ country_event = {
 		add_political_power = -30
 
 		#UKR_nikita_khrushchev = { set_nationality = SOV }
-		retire_character = UKR_nikita_khrushchev
+		hidden_effect = {
+			retire_character = UKR_nikita_khrushchev
+		}
+		effect_tooltip = {
+			UKR_nikita_khrushchev = { set_nationality = SOV }
+		}
 		add_country_leader_role = {
 			character = "SOV_leonid_brezhnev"
 			country_leader = {
