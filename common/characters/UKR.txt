@@ -1892,11 +1892,19 @@ characters={
 			ledger  = air 
 			
 			visible = {
-				# NOT = { has_idea = UKR_no_army_idea }
-				# always = no
+				SOV = {
+					NOT = {
+						has_character = SOV_nikita_khrushchev
+					}
+				}
 			}
 			available  = {
-				always = no
+				# always = no
+				SOV = {
+					NOT = {
+						has_character = SOV_nikita_khrushchev
+					}
+				}
 			}
 			traits  = {
 				air_tactical_bombing_2 
