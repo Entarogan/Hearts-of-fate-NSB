@@ -59,7 +59,7 @@ set_technology = {
 	basic_train = 1
 	mass_assault = 1
 
-	fleet_in_being
+	fleet_in_being = 1
 
 	armored_car1 = 1
 
@@ -136,7 +136,7 @@ if = {
 		basic_light_battery = 1
 		basic_torpedo = 1
 		basic_depth_charges = 1
-		basic_secondary_battery = 1
+		# basic_secondary_battery = 1
 		mtg_transport = 1
 	}
 }
@@ -205,21 +205,16 @@ recruit_character = RUS_alexandra_nikonova
 recruit_character = RUS_avtomat_kalashnikova
 recruit_character = RUS_antona_kalashnikova
 recruit_character = RUS_ruchnoy_kalashnikova
-recruit_character = RUS_sergey_baranovsky
-recruit_character = RUS_dmitry_semenov
-recruit_character = RUS_vladimir_tolstov
-recruit_character = RUS_vasiliy_boldyrev
+
 recruit_character = RUS_vladimir_kappel
 recruit_character = RUS_mikhaïl_drozdovsky
 recruit_character = RUS_mikhaïl_diterikhs
 recruit_character = RUS_anton_turkul
-recruit_character = RUS_mitrofan_nezhentsev
+
 recruit_character = RUS_ivan_romanovsky
 recruit_character = RUS_vladimir_manshteyn
 recruit_character = RUS_sergei_markov
-recruit_character = RUS_vasili_chernetsov
 recruit_character = RUS_roman_von_ungernsternberg
-
 recruit_character = RUS_aleksandr_kolchak
 
 recruit_character = RUS_boris_vilkitsky
@@ -261,6 +256,15 @@ recruit_character = RUS_Provisional_Government
 recruit_character = RUS_Provisional_Military_Government
 
 recruit_character = RUS_carl_mannerheim
+
+
+# trm GUYS #temp
+# recruit_character = RUS_vladimir_tolstov
+# recruit_character = RUS_sergey_baranovsky
+# recruit_character = RUS_dmitry_semenov
+# recruit_character = RUS_vasiliy_boldyrev
+# recruit_character = RUS_mitrofan_nezhentsev
+# recruit_character = RUS_vasili_chernetsov
 
 #INDUSTRIAL RELOCATION
 set_variable = { RUS_industrial_relocation_max_factories = 4 } #Max amount of factories that will be relocated by a decision
