@@ -1876,6 +1876,41 @@ characters={
 		}
 	}
 
+	UKR_leonid_khrushchev={
+		name = UKR_leonid_khrushchev
+		portraits={
+			army = {
+				small="GFX_idea_UKR_andrew_pokrovskii"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_leonid_khrushchev
+			allowed  = {
+				original_tag  = UKR
+			}
+			ledger  = air 
+			
+			visible = {
+				# NOT = { has_idea = UKR_no_army_idea }
+				# always = no
+			}
+			available  = {
+				always = no
+			}
+			traits  = {
+				air_tactical_bombing_2 
+			}
+			cost = 100
+
+			modifier = {
+
+			}
+			ai_will_do  = {
+				factor  = 1
+			}
+		}
+	}
 	#####
 
 }
