@@ -627,22 +627,19 @@ focus_tree = {
 
 		    retire_character = SOV_ivan_konev
 		    retire_character = SOV_arseniy_golovko
-		    retire_character = pavel_zhigarev
+		    retire_character = SOV_pavel_zhigarev
 			retire_character = SOV_stepan_krasovsky
-			custom_effect_tooltip = remove_high_command
-			show_ideas_tooltip = ivan_konev
-			show_ideas_tooltip = arseniy_golovko
-			show_ideas_tooltip = pavel_zhigarev
-			show_ideas_tooltip = stepan_krasovsky
+
 
 			retire_character = SOV_sergey_gorshkov
 			retire_character = SOV_sergey_rudenko
-			custom_effect_tooltip = remove_theorist
-			show_ideas_tooltip = sergey_gorshkov
-			show_ideas_tooltip = sergei_rudenko
 
+			retire_character = SOV_semyon_timoshenko
+			retire_character = SOV_kliment_voroshilov
+			retire_character = SOV_semyon_budyonny
+			retire_character = SOV_grigory_kulik
 
-
+			retire_character = SOV_pyotr_smirnov
 
 			if = {
 				limit = {
@@ -699,6 +696,19 @@ focus_tree = {
 
 			custom_effect_tooltip = SOV_Stationed_in_the_government_tt
 
+		    retire_character = SOV_alexander_shliapnikov
+		    retire_character = SOV_nikolay_krestinsky
+		    retire_character = SOV_alexei_rykov
+			retire_character = SOV_alexandra_kollontai
+
+
+			retire_character = SOV_yevgeni_preobrazhensky
+			retire_character = SOV_mikhail_kalinin
+
+			retire_character = SOV_grigory_zinovyev
+			retire_character = SOV_karl_radek
+			retire_character = SOV_lev_kamenev
+			retire_character = SOV_nikola_bukharin
 
 			if = {
 				limit = {
@@ -799,9 +809,21 @@ focus_tree = {
 
 			add_political_power = 50
 
-			set_division_template_lock = {
-				division_template = "NKVD Pogranichnaya Diviziya"
-				is_locked = no
+			custom_effect_tooltip = SOV_expend_NKVD_tt
+
+			hidden_effect = {
+				add_units_to_division_template = {
+					template_name = "NKVD Pogranichnaya Diviziya"
+					regiments = {
+						infantry = 0
+						infantry = 1
+
+					}
+					support = {
+						armored_car_recon = 0
+						artillery = 0
+					}
+				}
 			}
 
       if = {
@@ -1550,12 +1572,9 @@ focus_tree = {
 
 		completion_reward = {
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_org_factor = 0.1 }
 
-			swap_ideas = {
-        remove_idea = SOV_red_army_idea
-        add_idea = SOV_red_army_idea_1
-      }
+			custom_effect_tooltip = SOV_Soldier_worship_tt
 
 			swap_ideas = {
         remove_idea = SOV_Military_dictatorship_idea_1
@@ -1670,12 +1689,10 @@ focus_tree = {
 
 		completion_reward = {
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
-
-      swap_ideas = {
-        remove_idea = SOV_red_army_idea_1
-        add_idea = SOV_red_army_idea_2
-      }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_planning = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_gain_army_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_doctrine_cost_factor = -0.15 }
+			custom_effect_tooltip = SOV_Military_education_is_supreme_tt
 
       add_ideas = SOV_Military_education_is_supreme_idea
 
@@ -1855,12 +1872,9 @@ focus_tree = {
 
 		  add_political_power = 50
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+		  add_to_variable = { HOF_SOV_the_red_army_dynamic_army_org_factor = 0.15 }
 
-			swap_ideas = {
-        remove_idea = SOV_red_army_idea
-        add_idea = SOV_red_army_idea_1
-      }
+		  custom_effect_tooltip = SOV_Cut_bureaucracy_tt
 
 			swap_ideas = {
         remove_idea = SOV_Revolutionary_vanguard_idea_1
@@ -2057,6 +2071,11 @@ focus_tree = {
 
 			army_experience = 25
 
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_org_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_loss_factor = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_resistance_damage_to_garrison = 0.1 }
+			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt_2
+
 			add_doctrine_cost_reduction = {
 				name = SOV_Reorganizing_the_Red_Army
 				cost_reduction = 0.5
@@ -2097,39 +2116,11 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
-
 			add_war_support = 0.05
 
-			if = {
-				limit = {
-				  has_idea = SOV_red_army_idea
-				}
-				swap_ideas = {
-				  remove_idea = SOV_red_army_idea
-				  add_idea = SOV_Strengthen_discipline_idea
-				}
-			}
-
-			if = {
-				limit = {
-				  has_idea = SOV_red_army_idea_1
-				}
-				swap_ideas = {
-				  remove_idea = SOV_red_army_idea_1
-				  add_idea = SOV_Strengthen_discipline_idea_1
-				}
-			}
-
-			if = {
-				limit = {
-				  has_idea = SOV_red_army_idea_2
-				}
-				swap_ideas = {
-				  remove_idea = SOV_red_army_idea_2
-				  add_idea = SOV_Strengthen_discipline_idea_2
-				}
-			}
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_org_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_loss_factor = -0.15 }
+			custom_effect_tooltip = SOV_Strengthen_discipline_tt
 
 		}
 	}
@@ -2159,41 +2150,15 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
-
 			add_political_power = 100
 
 			add_command_power = 50
 
-			if = {
-				limit = {
-				  has_idea = SOV_Strengthen_discipline_idea
-				}
-				swap_ideas = {
-				  remove_idea = SOV_Strengthen_discipline_idea
-				  add_idea = SOV_Filling_staff_idea
-				}
-			}
-
-			if = {
-				limit = {
-				  has_idea = SOV_Strengthen_discipline_idea_1
-				}
-				swap_ideas = {
-				  remove_idea = SOV_Strengthen_discipline_idea_1
-				  add_idea = SOV_Filling_staff_idea_1
-				}
-			}
-
-			if = {
-				limit = {
-				  has_idea = SOV_Strengthen_discipline_idea_2
-				}
-				swap_ideas = {
-				  remove_idea = SOV_Strengthen_discipline_idea_2
-				  add_idea = SOV_Filling_staff_idea_2
-				}
-			}
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_gain_army_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_planning_speed = 0.25 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_planning = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_doctrine_cost_factor = -0.1 }
+			custom_effect_tooltip = SOV_Filling_staff_tt
 
 		}
 	}
@@ -2228,7 +2193,9 @@ focus_tree = {
 
 		completion_reward = {
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_morale_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_reinforce_rate = 0.03 }
+			custom_effect_tooltip = SOV_NKVD_div_tt
 
       if = {
         limit = {
@@ -2249,37 +2216,7 @@ focus_tree = {
           add_idea = nkvd_4
         }
       }
-
-      if = {
-        limit = {
-          has_idea = SOV_Filling_staff_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea
-          add_idea = SOV_Supervising_team_idea
-        }
-      }
-
-      if = {
-        limit = {
-            has_idea = SOV_Filling_staff_idea_1
-          }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea_1
-          add_idea = SOV_Supervising_team_idea_1
-        }
-      }
-
-      if = {
-        limit = {
-          has_idea = SOV_Filling_staff_idea_2
-        }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea_2
-          add_idea = SOV_Supervising_team_idea_2
-        }
-      }
-
+ 
 		}
 	}
 
@@ -2313,38 +2250,9 @@ focus_tree = {
 
 		completion_reward = {
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
-
-      if = {
-        limit = {
-          has_idea = SOV_Filling_staff_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea
-          add_idea = SOV_Supervising_team_idea
-        }
-      }
-
-      if = {
-        limit = {
-          has_idea = SOV_Filling_staff_idea_1
-        }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea_1
-          add_idea = SOV_Supervising_team_idea_1
-        }
-      }
-
-      if = {
-        limit = {
-          has_idea = SOV_Filling_staff_idea_2
-        }
-        swap_ideas = {
-          remove_idea = SOV_Filling_staff_idea_2
-          add_idea = SOV_Supervising_team_idea_2
-        }
-      }
-
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_morale_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_reinforce_rate = 0.03 }
+			custom_effect_tooltip = SOV_NKVD_div_tt
 		}
 	}
 
@@ -2373,7 +2281,11 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_speed_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_planning = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_doctrine_cost_factor = -0.15 }
+			custom_effect_tooltip = SOV_Concentrated_operations_tt
 
 			add_doctrine_cost_reduction = {
 				name = SOV_Concentrated_operations
@@ -2381,36 +2293,6 @@ focus_tree = {
 				uses = 1
 				category = cat_mass_assault
 			} 
-
-			if = {
-				limit = {
-				    has_idea = SOV_Supervising_team_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Supervising_team_idea
-					add_idea = SOV_Concentrated_operations_idea
-				}
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Supervising_team_idea_1
-				}
-				swap_ideas = {
-					remove_idea = SOV_Supervising_team_idea_1
-					add_idea = SOV_Concentrated_operations_idea_1
-				}
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Supervising_team_idea_2
-				}
-				swap_ideas = {
-					remove_idea = SOV_Supervising_team_idea_2
-					add_idea = SOV_Concentrated_operations_idea_2
-				}
-			}
 
 		}
 	}
@@ -2507,23 +2389,16 @@ focus_tree = {
 
 		completion_reward = {
 
-		  add_political_power = -50
+			add_political_power = -50
 
-      add_war_support = -0.05
+			add_war_support = -0.05
 
-      custom_effect_tooltip = SOV_Decentralization_tt
+			custom_effect_tooltip = SOV_Decentralization_tt
 
-      custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
-
-      if = {
-        limit = {
-          has_idea = SOV_red_army_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_red_army_idea
-          add_idea = SOV_Decentralization_idea
-        }
-      }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_morale_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_gain_army_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_planning_speed = 0.25 }
+			custom_effect_tooltip = SOV_Decentralization_tt_2
 
 		}
 	}
@@ -2553,7 +2428,11 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_ideas = SOV_Simplify_weapons_production_idea
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_mobilization_speed = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_conscription_factor = 0.05 }
+			custom_effect_tooltip = SOV_Simplify_weapons_production_tt
+
+            add_ideas = SOV_Simplify_weapons_production_idea
 
 		}
 	}
@@ -2583,12 +2462,15 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_ideas = SOV_New_structure_of_artillery_idea
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_artillery_attack_factor = 0.1 }
+			custom_effect_tooltip = SOV_New_structure_of_artillery_tt
+
+            add_ideas = SOV_New_structure_of_artillery_idea
 
 			add_tech_bonus = {
 				name = SOV_New_structure_of_artillery
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = artillery
 			}
 
@@ -2620,23 +2502,17 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_planning_speed = 0.2 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_gain_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_supply_consumption_factor = -0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_doctrine_cost_factor = -0.1 }
+			custom_effect_tooltip = SOV_Mission_command_tt
 
 			add_doctrine_cost_reduction = {
 				name = SOV_Mission_command
 				cost_reduction = 0.5
 				uses = 1
 				category = cat_mass_assault
-			}
-
-			if = {
-			limit = {
-			    has_idea = SOV_Decentralization_idea
-			}
-				swap_ideas = {
-					remove_idea = SOV_Decentralization_idea
-					add_idea = SOV_Mission_command_idea
-				}
 			}
 
 		}
@@ -2667,7 +2543,14 @@ focus_tree = {
 
 		completion_reward = {
 
-      add_ideas = SOV_tachanka_idea
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_modifier_army_sub_unit_cavalry_speed_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_modifier_army_sub_unit_cavalry_attack_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_out_of_supply_factor = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_pocket_penalty = -0.2 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_no_supply_grace = 48 }
+			custom_effect_tooltip = SOV_tachanka_tt
+
+			#add_ideas = SOV_tachanka_idea
 
 		}
 	}
@@ -2697,23 +2580,24 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_recon_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_experience_loss_factor = -0.15 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_land_doctrine_cost_factor = -0.1 }
+			custom_effect_tooltip = SOV_Officer_initiative_tt
+
+			add_tech_bonus = {
+				name = SOV_Officer_initiative
+				bonus = 1.0
+				uses = 1
+				category = recon_tech
+			}
 
 			add_doctrine_cost_reduction = {
 				name = SOV_Officer_initiative
 				cost_reduction = 0.5
 				uses = 1
 				category = cat_mass_assault
-			}
-
-			if = {
-			limit = {
-			    has_idea = SOV_Mission_command_idea
-			}
-				swap_ideas = {
-					remove_idea = SOV_Mission_command_idea
-					add_idea = SOV_Officer_initiative_idea
-				}
 			}
 
 		}
@@ -2744,6 +2628,12 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_speed_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_attack_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_defence_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_speed_factor = 0.05 }
+			custom_effect_tooltip = SOV_Practice_new_tactics_tt
+
 			add_doctrine_cost_reduction = {
 				name = SOV_Practice_new_tactics
 				cost_reduction = 0.5
@@ -2751,7 +2641,7 @@ focus_tree = {
 				category = cat_mass_assault
 			}
 
-			add_ideas = SOV_Practice_new_tactics_idea
+			#add_ideas = SOV_Practice_new_tactics_idea
 
 		}
 	}
@@ -2784,23 +2674,16 @@ focus_tree = {
 
 		completion_reward = {
 
-			custom_effect_tooltip = SOV_Reorganizing_the_Red_Army_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_org_loss_when_moving = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_speed_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_infantry_attack_factor = 0.05 }
+			custom_effect_tooltip = SOV_Squad_assault_tt
 
 			add_doctrine_cost_reduction = {
 				name = SOV_Squad_assault
 				cost_reduction = 0.5
 				uses = 1
 				category = cat_mass_assault
-			}
-
-			if = {
-			limit = {
-			    has_idea = SOV_Officer_initiative_idea
-			}
-				swap_ideas = {
-					remove_idea = SOV_Officer_initiative_idea
-					add_idea = SOV_Squad_assault_idea
-				}
 			}
 
 		}
@@ -2810,9 +2693,6 @@ focus_tree = {
 		id = SOV_Infantry_tradition
 		#icon = GFX_focus_YUG_pan_slavic_congress
 		icon = GFX_focus_SOV_builder_of_the_red_army
-		mutually_exclusive = {
-			focus = SOV_New_thought
-		}
 
 		prerequisite = { focus = SOV_Concentrated_operations }
 
@@ -2827,7 +2707,7 @@ focus_tree = {
 		}
 
     available = {
-      NOT = { has_completed_focus = SOV_Decentralization }
+
     }
     bypass = {
 
@@ -2837,21 +2717,19 @@ focus_tree = {
 
 		completion_reward = {
 
+			army_experience = 25
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_training_time_factor = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_conscription_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_infantry_defence_factor = 0.1 }
+			custom_effect_tooltip = SOV_Infantry_tradition_tt
+
 			add_tech_bonus = {
 				name = SOV_Infantry_tradition
 				bonus = 1.0
 				uses = 1
 				category = infantry_weapons
 			}
-
-			add_tech_bonus = {
-				name = SOV_Infantry_tradition
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}	
-
-		  add_ideas = SOV_Infantry_tradition_idea
 
 		}
 	}
@@ -2880,18 +2758,38 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_attrition = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_supply_consumption_factor = -0.1 }
+			custom_effect_tooltip = SOV_Training_grassroots_non_commissioned_officers_tt
+
+			random_army_leader = {
+				limit = { 
+					skill > 5			
+				}
+				add_logistics = 1				
+			}
+
+			random_army_leader = {
+				limit = { 
+					skill < 5			
+				}
+				add_logistics = 1				
+			}
+
+			random_army_leader = {
+				limit = { 
+					skill < 5			
+				}
+				add_logistics = 1				
+			}
 
 			add_tech_bonus = {
 				name = SOV_Training_grassroots_non_commissioned_officers
-				bonus = 1.0
+				bonus = 0.75
 				uses = 2
 				category = support_tech	
 			}
-
-      swap_ideas = {
-        remove_idea = SOV_Infantry_tradition_idea
-        add_idea = SOV_Training_grassroots_non_commissioned_officers_idea
-      }
 
 		}
 	}
@@ -2921,7 +2819,8 @@ focus_tree = {
 
 		completion_reward = {
 
-			add_ideas = SOV_Special_Forces_idea
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_special_forces_cap = 0.1 }
+			custom_effect_tooltip = SOV_Expansion_of_special_forces_tt
 
 			add_tech_bonus = {
 				name = SOV_Expansion_of_special_forces
@@ -2938,10 +2837,6 @@ focus_tree = {
 	focus = {
 		id = SOV_New_thought
 		icon = GFX_goal_generic_army_tanks
-
-		mutually_exclusive = {
-			focus = SOV_Infantry_tradition
-		}
 
 		prerequisite = { focus = SOV_Squad_assault focus = SOV_Concentrated_operations }
 
@@ -2966,9 +2861,21 @@ focus_tree = {
 
 		completion_reward = {
 
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_recon_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_attack_factor = 0.15 }
+			custom_effect_tooltip = SOV_New_thought_tt
+
 			custom_effect_tooltip = GER_Armored_Scout_tooltip
 
 			set_technology = { GER_Armored_Scout_tech = 1 }
+
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				name = SOV_Mass_Breakthroughs
+				technology = armored_car2
+				technology = armored_car3
+			}
 
 			add_tech_bonus = {
 				name = SOV_New_thought
@@ -2976,23 +2883,6 @@ focus_tree = {
 				uses = 1
 				category = recon_tech
 			}
-
-      if = {
-        limit = {
-          NOT = { has_idea = SOV_Practice_new_tactics_idea }
-        }
-        add_ideas = SOV_New_thought_idea
-      }
-
-      if = {
-        limit = {
-          has_idea = SOV_Practice_new_tactics_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_Practice_new_tactics_idea
-          add_idea = SOV_New_thought_idea_1
-        }
-      }
 
 		}
 	}
@@ -3040,50 +2930,48 @@ focus_tree = {
 			factor = 100
 		}
 
-    available = {
+		available = {
 
-    }
-    bypass = {
+		}
+		bypass = {
 
-    }
+		}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_org_loss_when_moving = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_speed_factor = 0.15 }
+			custom_effect_tooltip = SOV_Mass_Breakthroughs_tt
+
+			random_army_leader = {
+				limit = { 
+					skill > 5			
+				}
+				add_attack = 1				
+			}
+
+			random_army_leader = {
+				limit = { 
+					skill < 5			
+				}
+				add_attack = 1				
+			}
+
+			random_army_leader = {
+				limit = { 
+					skill < 5			
+				}
+				add_attack = 1				
+			}
+
 			add_doctrine_cost_reduction = {
 				name = SOV_Mass_Breakthroughs
 				cost_reduction = 0.75
 				uses = 1
 				category = cat_mass_assault
 			} 
-
-			add_tech_bonus = {
-				bonus = 1.0
-				uses = 1
-				name = SOV_Mass_Breakthroughs
-				technology = armored_car2
-				technology = armored_car3
-			}
-
-      if = {
-        limit = {
-          has_idea = SOV_New_thought_idea
-        }
-        swap_ideas = {
-          remove_idea = SOV_New_thought_idea
-          add_idea = SOV_Mass_Breakthroughs_idea
-        }
-      }
-
-      if = {
-        limit = {
-          has_idea = SOV_New_thought_idea_1
-        }
-        swap_ideas = {
-          remove_idea = SOV_New_thought_idea_1
-          add_idea = SOV_Mass_Breakthroughs_idea_1
-        }
-      }
 
 		}
 	}
@@ -3152,6 +3040,11 @@ focus_tree = {
 		completion_reward = {
 
 			air_experience = 25
+
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_fuel_consumption_factor = -0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_range_factor = 0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_agility_factor = 0.05 }
+			custom_effect_tooltip = SOV_transpolar_flights_tt
 
 			add_doctrine_cost_reduction = {
 				name = SOV_transpolar_flights
@@ -3223,8 +3116,11 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-
-		  add_ideas = SOV_Expand_flight_school_idea
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_accidents_factor = -0.25 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_weather_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_training_xp_gain_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_wing_xp_loss_when_killed_factor = -0.15 }
+			custom_effect_tooltip = SOV_Expand_flight_school_tt
 
 		}
 	}
@@ -3255,6 +3151,14 @@ focus_tree = {
 		completion_reward = {
 
 			air_experience = 25
+
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_ace_generation_chance_factor = 0.25 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_weather_penalty = -0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_mission_xp_gain_factor = 0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_training_xp_gain_factor = 0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_night_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_strategic_bomber_night_penalty = -0.1 }
+			custom_effect_tooltip = SOV_women_pilots_ns_tt
 
 			set_rule = {
 				can_generate_female_aces = yes
@@ -3299,10 +3203,10 @@ focus_tree = {
 
 		completion_reward = {
 
-      swap_ideas = {
-        remove_idea = SOV_Expand_flight_school_idea
-        add_idea = SOV_Rule_the_sky_idea
-      }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_agility_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_doctrine_cost_factor = -0.5 }
+			custom_effect_tooltip = SOV_Rule_the_sky_tt
 
 		}
 	}
@@ -3331,6 +3235,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_night_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_wing_xp_loss_when_killed_factor = -0.1 }
+			custom_effect_tooltip = SOV_new_soviet_man_tt
 
 			hidden_effect = {
 				set_rule = {
@@ -3366,6 +3273,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_accidents_factor = -0.25 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_ace_generation_chance_factor = 0.25 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_weather_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_training_xp_gain_factor = 0.1 }
+			custom_effect_tooltip = SOV_aviation_cult_tt
 
 			add_tech_bonus = {
 				name = SOV_aviation_cult
@@ -3404,7 +3317,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = CAS_bonus
-        bonus = 1
+        bonus = 2
         uses = 1
 				category = cas_bomber
 			}
@@ -3441,7 +3354,10 @@ focus_tree = {
 
 		completion_reward = {
 
-		  add_ideas = SOV_Tactical_Air_Force_idea
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_attack_factor = 0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_cas_present_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_doctrine_cost_factor = -0.5 }
+			custom_effect_tooltip = SOV_Tactical_Air_Force_tt
 
 		}
 	}
@@ -3473,7 +3389,7 @@ focus_tree = {
 
 			add_tech_bonus = {
 				name = CAS_bonus
-        bonus = 1
+        bonus = 2
         uses = 1
 				category = tactical_bomber
 			}
@@ -3510,7 +3426,10 @@ focus_tree = {
 
 		completion_reward = {
 
-		  add_ideas = SOV_Tend_to_Strategic_Air_Force_idea
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_range_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_strategic_bomb_visibility = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_doctrine_cost_factor = -0.5 }
+			custom_effect_tooltip = SOV_Tend_to_Strategic_Air_Force_tt
 
 		}
 	}
@@ -4242,7 +4161,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = SOV_Infantry_tradition
 				bonus = 1.0
-				uses = 2
+				uses = 1
 				category = infantry_weapons
 			}
 
@@ -6638,6 +6557,7 @@ focus_tree = {
 			focus = SOV_Chances_of_the_Europa_War 
 			focus = SOV_found_the_pcdi 
 		}
+		
 		x = -1
 		y = 1
 		relative_position_id = SOV_Chances_of_the_Europa_War
@@ -6729,7 +6649,10 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY}
 
 		completion_reward = {
-			add_ideas = SOV_defense_industry_1_idea
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = HOF_SOV_defense_industry_dynamic_modifier }
+			}
+			custom_effect_tooltip = SOV_found_the_pcdi_ns_tt
 
 			add_tech_bonus = {
 				name = SOV_Improve_industrialization
@@ -6878,10 +6801,13 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SOV_defense_industry_1_idea
-				add_idea = SOV_defense_industry_2_idea
-			}
+			add_to_variable = { HOF_SOV_defense_industry_dynamic_production_speed_coastal_bunker_factor = 0.05 }
+			add_to_variable = { HOF_SOV_defense_industry_dynamic_production_speed_bunker_factor = 0.05 }
+			add_to_variable = { HOF_SOV_defense_industry_dynamic_max_dig_in_factor = 0.05 }
+
+			custom_effect_tooltip = SOV_military_engineering_university_ns_tt
+
+
 			custom_effect_tooltip = SOV_military_engineering_university_bunk_tt
 
 			unlock_decision_tooltip = SOV_Eastern_Front_bunk_LIT_decision
@@ -7280,6 +7206,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1500
 		}
+
+		allow_branch = {
+			has_government = communism
+		}
+
 		available = {
 			num_subjects > 0
 			64 = {
@@ -7872,13 +7803,383 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-			add_ideas = SOV_Simplify_production_1_idea
+			set_country_flag = SOV_Simplify_production_flag
 
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_artillery_dec
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_armor_dec
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_air_dec
+			add_ideas = SOV_Army_equipment_simplifies_production_idea
+
+			add_ideas = SOV_Armor_quality_declines_idea
 		}
 
+	}
+	focus = {
+		id = SOV_pc_of_mechanical_engineering
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = SOV_Simplify_production }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Simplify_production
+		cost = 5
+
+		ai_will_do = {
+			factor = 2000
+		}
+
+		available = {
+
+		}
+		search_filters = {}
+
+		completion_reward = {
+			add_to_variable = { HOF_SOV_defense_industry_dynamic_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { HOF_SOV_defense_industry_dynamic_production_factory_efficiency_gain_factor = -0.05 }
+
+			custom_effect_tooltip = SOV_pc_of_mechanical_engineering_ns_tt
+
+
+			add_tech_bonus = {
+				name = SOV_pc_of_mechanical_engineering_name_default
+				bonus = 1
+				uses = 2
+				category = industry
+				category = motorized_equipment
+				category = infantry_weapons
+			}
+
+			if = { #DEFAULT COMMIE
+				limit = {
+					has_full_control_of_state = 219
+				}
+				219 = {
+					if = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+
+	focus = {
+		id = SOV_pc_of_mortar_armament
+
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SOV_pc_of_mechanical_engineering }
+		x = 0
+		y = 1
+		relative_position_id = SOV_pc_of_mechanical_engineering
+		cost = 5
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_attack_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_artillery_attack_factor = 0.1 }
+			custom_effect_tooltip = SOV_pc_of_mortar_armament_1_tt
+
+			add_tech_bonus = {
+				name = SOV_pc_of_mortar_armament
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+
+			add_tech_bonus = {
+				name = SOV_pc_of_mortar_armament
+				bonus = 0.75
+				uses = 2
+				category = artillery
+			}
+
+			if = { #DEFAULT COMMIE
+				limit = {
+					has_full_control_of_state = 219
+				}
+				219 = {
+					if = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SOV_superior_war_machines
+
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = SOV_pc_of_mortar_armament }
+		x = 0
+		y = 1
+		relative_position_id = SOV_pc_of_mortar_armament
+		cost = 10
+
+		available = {
+			has_country_flag = {
+				flag = SOV_Simplify_production_flag
+				days > 180
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_Simplify_production_flag_tt
+				has_country_flag = {
+					flag = SOV_Simplify_production_flag
+					days > 180
+				}
+			}
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+
+			if = {
+				limit = {
+					has_idea = SOV_Armor_quality_declines_idea
+				}
+				remove_ideas = SOV_Armor_quality_declines_idea
+			}
+
+			add_tech_bonus = {
+				name = SOV_superior_war_machines
+				bonus = 0.75
+				uses = 2
+				category = armor
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_Tank_Group_Army
+
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SOV_superior_war_machines }
+		x = 0
+		y = 1
+		relative_position_id = SOV_superior_war_machines
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_defence_factor = 0.1 }
+			custom_effect_tooltip = SOV_Tank_Group_Army_tt
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = panzer_leader }	 			
+				}
+				add_unit_leader_trait = panzer_leader								
+			}
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = panzer_leader }	 			
+				}
+				add_unit_leader_trait = panzer_leader								
+			}
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = panzer_leader }	
+				}
+				add_unit_leader_trait = panzer_leader				
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_increase_aircraft_production
+
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = { focus = SOV_pc_of_mechanical_engineering }
+		x = 2
+		y = 1
+		relative_position_id = SOV_pc_of_mechanical_engineering
+		cost = 10
+
+		available = {
+			has_war = yes
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_ideas = SOV_Simplified_production_of_Air_Force_equipment_idea
+
+			add_ideas = SOV_plane_losing_mass_idea
+
+			add_tech_bonus = {
+				name = SOV_increase_aircraft_production
+				bonus = 1.0
+				uses = 2
+				category = light_air
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_intensify_pilot_training_program
+
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = SOV_increase_aircraft_production }
+		x = 0
+		y = 1
+		relative_position_id = SOV_increase_aircraft_production
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			air_experience = 50
+
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_accidents_factor = -0.25 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_ace_generation_chance_factor = 0.15 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_night_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_weather_penalty = -0.15 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_wing_xp_loss_when_killed_factor = -0.15 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_fuel_consumption_factor = 0.1 }
+			custom_effect_tooltip = SOV_intensify_pilot_training_program_1_tt
+		}
+	}
+
+	focus = {
+		id = SOV_Aviation_Group_Army
+
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SOV_intensify_pilot_training_program }
+		x = 0
+		y = 1
+		relative_position_id = SOV_intensify_pilot_training_program
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_night_penalty = -0.1 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_mission_efficiency = 0.1 } 
+			custom_effect_tooltip = SOV_Aviation_Group_Army_tt
+		}
+	}
+
+	focus = {
+		id = SOV_Assault_Group_Army
+
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = SOV_Tank_Group_Army }
+
+		prerequisite = { focus = SOV_Aviation_Group_Army }
+
+		prerequisite = { focus = SOV_Infantry_Corps }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Aviation_Group_Army
+		cost = 10
+
+		available = {
+
+		}
+		
+		search_filters = {}
+
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_command_power = 25 }
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_speed_factor = 0.1 } 
+			add_to_variable = { HOF_RUS_the_white_army_dynamic_coordination_bonus = 0.1 } 
+
+			custom_effect_tooltip = SOV_Assault_Group_Army_tt
+
+            custom_effect_tooltip = SOV_create_unit_vdv_tt
+            hidden_effect = {
+                division_template = {
+                    name = "Vozdushno-Desantnaya Diviziya"			# Airborne Brigade
+                    division_names_group = SOV_PAR_01
+
+                    regiments = {
+                        paratrooper = { x = 0 y = 0 }
+                        paratrooper = { x = 0 y = 1 }
+                        paratrooper = { x = 0 y = 2 }
+                        
+                        paratrooper = { x = 1 y = 0 }
+                        paratrooper = { x = 1 y = 1 }
+                        paratrooper = { x = 1 y = 2 }
+                        
+                        paratrooper = { x = 2 y = 0 }
+                        paratrooper = { x = 2 y = 1 }
+                        paratrooper = { x = 2 y = 2 }
+                        
+                        paratrooper = { x = 3 y = 0 }
+                    }
+                    support = {
+						engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+						anti_tank = { x = 0 y = 3 }
+						anti_air = { x = 0 y = 4 }
+                    }
+                }
+            }
+
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Vozdushno-Desantnaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
+
+		}
 	}
 
 	focus = {
@@ -8109,8 +8410,8 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_PROPAGANDA}
 
 		completion_reward = {
-			#add_to_variable = { SOV_the_red_army_operative_slot  = 1 }
-			#custom_effect_tooltip = SOV_organization_of_the_partisans_ns_tt
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_operative_slot = 1 }
+			custom_effect_tooltip = SOV_organization_of_the_partisans_1_ns_tt
 
 			#if = {
 				#limit = {
@@ -8199,180 +8500,342 @@ focus_tree = {
 				}
 				surrender_progress > 0.20
 			}
-			or = {
-				has_completed_focus = SOV_Training_grassroots_non_commissioned_officers
-				has_completed_focus = SOV_Mass_Breakthroughs
-			}
-			or = {
-				has_completed_focus = SOV_Tactical_Air_Force
-				has_completed_focus = SOV_Tend_to_Strategic_Air_Force
-			}
 		}
 		
 		search_filters = {FOCUS_FILTER_ARMY_XP}
 
 		completion_reward = {
 
-			unlock_decision_tooltip = SOV_order_227
-			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
+			set_country_flag = SOV_lessons_of_war_flag
 
 			army_experience = 100
-			air_experience = 100
 
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 1
-				category = light_fighter		
+			add_to_variable = {
+				HOF_SOV_the_red_army_dynamic_heat_attrition_factor = -0.1
+			}
+			add_to_variable = {
+				HOF_SOV_the_red_army_dynamic_winter_attrition_factor = -0.1
+			}
+			add_to_variable = {
+				HOF_SOV_the_red_army_dynamic_acclimatization_cold_climate_gain_factor = 0.5
+			}
+			add_to_variable = {
+				HOF_SOV_the_red_army_dynamic_acclimatization_hot_climate_gain_factor = 0.1
 			}
 
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 1
-				category = cas_bomber			
-				category = tactical_bomber	
-			}
 
-			add_tech_bonus = {
-				name = GER_Joint_air_to_ground_operations
-				bonus = 1.0
-				uses = 1
-				category = radar_tech
-			}
+			custom_effect_tooltip = SOV_lessons_of_war_2_tt
 
-			add_tech_bonus = {
-				name = SOV_Expansion_of_special_forces
-				bonus = 2.0
-				uses = 1
-				category = mountaineers_tech
-				category = para_tech
-				category = marine_tech
-			}	
-
-			add_doctrine_cost_reduction = {
-				name = GER_Joint_air_to_ground_operations
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
-
-			add_tech_bonus = {
-				name = SOV_Lessons_from_War_Infantry_Tactics
-				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-			}
-
-			add_doctrine_cost_reduction = {
-				name = SOV_Lessons_from_War_Infantry_Tactics
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_mass_assault
-			} 
-
-            custom_effect_tooltip = SOV_create_unit_vdv_tt
-            hidden_effect = {
-                division_template = {
-                    name = "Vozdushno-Desantnaya Diviziya"			# Airborne Brigade
-                    division_names_group = SOV_PAR_01
-
-                    regiments = {
-                        paratrooper = { x = 0 y = 0 }
-                        paratrooper = { x = 0 y = 1 }
-                        paratrooper = { x = 0 y = 2 }
-                        
-                        paratrooper = { x = 1 y = 0 }
-                        paratrooper = { x = 1 y = 1 }
-                        paratrooper = { x = 1 y = 2 }
-                        
-                        paratrooper = { x = 2 y = 0 }
-                        paratrooper = { x = 2 y = 1 }
-                        paratrooper = { x = 2 y = 2 }
-                        
-                        paratrooper = { x = 3 y = 0 }
-                    }
-                    support = {
-						engineer = { x = 0 y = 0 }
-						recon = { x = 0 y = 1 }
-						artillery = { x = 0 y = 2 }
-						anti_tank = { x = 0 y = 3 }
-						anti_air = { x = 0 y = 4 }
-                    }
-                }
-            }
-
-			hidden_effect = {
-				capital_scope = {
-					create_unit = {
-						division = "division_template = \"Vozdushno-Desantnaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
-						owner = ROOT
-						count = 3
-					}
-				}
-			}
-
-			if = {
-				limit = {
-					has_idea = SOV_Training_grassroots_non_commissioned_officers_idea
-				}
-				  swap_ideas = {
-					remove_idea = SOV_Training_grassroots_non_commissioned_officers_idea
-					add_idea = SOV_Training_grassroots_non_commissioned_officers_2_idea
-				  }
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Mass_Breakthroughs_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Mass_Breakthroughs_idea
-					add_idea = SOV_Mass_Breakthroughs_1_idea
-				}
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Mass_Breakthroughs_idea_1
-				}
-				swap_ideas = {
-					remove_idea = SOV_Mass_Breakthroughs_idea_1
-					add_idea = SOV_Mass_Breakthroughs_1_idea_1
-				}
-			}
-
-			if = {
-				limit = {
-				    has_idea = SOV_Tactical_Air_Force_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Tactical_Air_Force_idea
-					add_idea = SOV_Tactical_Air_Force_lesson_idea
-				}
-			}	
-
-			if = {
-				limit = {
-				    has_idea = SOV_Tend_to_Strategic_Air_Force_idea
-				}
-				swap_ideas = {
-					remove_idea = SOV_Tend_to_Strategic_Air_Force_idea
-					add_idea = SOV_Tend_to_Strategic_Air_Force_lesson_idea
-				}
-			}
+			unlock_decision_tooltip = SOV_order_227
+			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
 
 		}
 
 	}
 
 	focus = {
-		id = SOV_the_glory_of_the_red_army
-		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		id = SOV_form_the_stavka
+		icon = GFX_goal_support_communism
 		prerequisite = { focus = SOV_lessons_of_war }
 		x = 0
 		y = 1
 		relative_position_id = SOV_lessons_of_war
+		cost = 10
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			OR = {
+				date > 1942.1.1
+				AND = {
+					has_country_flag = {
+						flag = SOV_lessons_of_war_flag
+						days > 180
+					}
+					custom_trigger_tooltip = {
+						tooltip = SOV_lessons_of_war_flag_tt
+						has_country_flag = {
+							flag = SOV_lessons_of_war_flag
+							days > 180
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_planning = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_supply_consumption_factor = -0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_training_time_factor = -0.1 }
+			custom_effect_tooltip = SOV_form_the_stavka_tt
+
+			if = {
+				limit = {
+					has_idea = officers_purged
+				}
+				remove_ideas = officers_purged
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_2
+				}
+				remove_ideas = officers_purged_2
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_3
+				}
+				remove_ideas = officers_purged_3
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_4
+				}
+				remove_ideas = officers_purged_4
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_5
+				}
+				remove_ideas = officers_purged_5
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_6
+				}
+				remove_ideas = officers_purged_6
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_7
+				}
+				remove_ideas = officers_purged_7
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_8
+				}
+				remove_ideas = officers_purged_8
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_9
+				}
+				remove_ideas = officers_purged_9
+			}
+			else_if = {
+				limit = {
+					has_idea = officers_purged_10
+				}
+				remove_ideas = officers_purged_10
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_Modernization_of_the_Red_Army
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = SOV_form_the_stavka }
+		x = 0
+		y = 1
+		relative_position_id = SOV_form_the_stavka
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+            NOT = { has_idea = SOV_desperate_measures_ns }
+		}
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_attack_factor = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_armor_defence_factor = 0.1 }
+			custom_effect_tooltip = SOV_Modernization_of_the_Red_Army_tt
+
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_agility_factor = 0.05 }
+			add_to_variable = { HOF_SOV_soviet_airforce_dynamic_air_defence_factor = 0.1 }
+			custom_effect_tooltip = SOV_Modernization_of_the_Red_Army_2_tt
+
+			add_doctrine_cost_reduction = {
+				name = SOV_Modernization_of_the_Red_Army
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+
+			add_doctrine_cost_reduction = {
+				name = SOV_Modernization_of_the_Red_Army
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_commissars_organization_question
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_Modernization_of_the_Red_Army }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Modernization_of_the_Red_Army
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+            NOT = { has_idea = SOV_desperate_measures_ns }
+		}
+		completion_reward = {
+
+			if = {
+				limit = { 
+					has_completed_focus = SOV_bloody_dwarf_is_in_power
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military
+					add_idea = SOV_politicized_military_keep
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = SOV_Humane_communism
+				}
+				swap_ideas = {
+					remove_idea = SOV_politicized_military_humanism
+					add_idea = SOV_politicized_military_keep_humanism
+				}
+			}
+			else_if = {
+				remove_ideas = SOV_politicized_military_humanism
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_experts_in_camouflage
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = SOV_Modernization_of_the_Red_Army }
+		x = 2
+		y = 1
+		relative_position_id = SOV_Modernization_of_the_Red_Army
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_cas_damage_reduction = 0.05 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_max_dig_in = 5 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_dig_in_speed_factor = 0.05 }
+			custom_effect_tooltip = SOV_experts_in_camouflage_1_tt
+		}
+	}
+
+	focus = {
+		id = SOV_Fieldrunners
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_commissars_organization_question }
+
+		prerequisite = { focus = SOV_experts_in_camouflage }
+		x = 1
+		y = 1
+		relative_position_id = SOV_commissars_organization_question
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+
+		}
+		completion_reward = {
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_org_loss_at_low_org_factor = -0.2 }
+			custom_effect_tooltip = SOV_Fieldrunners_tt
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+
+	focus = {
+		id = SOV_Infantry_Corps
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_Fieldrunners }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Fieldrunners
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+
+		}
+		completion_reward = {
+
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_infantry_attack_factor = 0.1 }
+			add_to_variable = { HOF_SOV_the_red_army_dynamic_army_infantry_defence_factor = 0.05 }
+			custom_effect_tooltip = SOV_Infantry_Corps_tt
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = infantry_leader }	 			
+				}
+				add_unit_leader_trait = infantry_leader								
+			}
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = infantry_leader }	 			
+				}
+				add_unit_leader_trait = infantry_leader								
+			}
+
+			random_army_leader = {
+				limit = { 
+					NOT = { has_trait = infantry_leader }	
+				}
+				add_unit_leader_trait = infantry_leader				
+			}
+
+		}
+	}
+
+	focus = {
+		id = SOV_For_the_motherland
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = SOV_form_the_stavka }
+
+		prerequisite = { focus = SOV_organization_of_the_partisans }
+		x = 0
+		y = 2
+		relative_position_id = SOV_organization_of_the_partisans
+		cost = 10
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+
+		}
+		completion_reward = {
+
+
+		}
+	}
+	focus = {
+		id = SOV_the_glory_of_the_red_army
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		prerequisite = { focus = SOV_Assault_Group_Army }
+		x = 0
+		y = 1
+		relative_position_id = SOV_Assault_Group_Army
 		cost = 5
 
 		ai_will_do = {
@@ -8389,20 +8852,6 @@ focus_tree = {
 		search_filters = {}
 
 		completion_reward = {
-
-			add_tech_bonus = {
-				name = SOV_Lessons_from_War_Infantry_Tactics
-				bonus = 1.0
-				uses = 1
-				category = artillery
-			}	
-
-			add_tech_bonus = {
-				name = SOV_Lessons_from_War_tank_Tactics
-				bonus = 2.0
-				uses = 1
-				category = armor
-			}
 
 			#New
 			hidden_effect = {

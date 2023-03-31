@@ -3101,7 +3101,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = GER_rocketry_focus
-		cost = 5
+		cost = 10
 		ai_will_do = {
 			factor = 150
 			modifier = {
@@ -3115,20 +3115,21 @@ focus_tree = {
 			}
 		}
 		available = {
-			has_tech = rocket_engines
+			OR = {
+				AND = {
+					has_completed_focus = GER_messerschmitt_1
+					date > 1943.1.1
+				}
+				has_tech = rocket_engines
+			}
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			if = {
-				limit = {
-					has_tech = jet_fighter1
-				}
-				add_tech_bonus = {
-					name = GER_Jet_prototype
-					bonus = 1
-					uses = 1
-					category = jet_technology
-				}
+			add_tech_bonus = {
+				name = GER_Jet_prototype
+				bonus = 3
+				uses = 1
+				category = air_equipment
 			}
 			if = {
 				limit = {
@@ -3142,19 +3143,133 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						has_tech = jet_fighter1
-					}
+					has_completed_focus = GER_messerschmitt_1
 				}
-				set_technology = {
-					jet_fighter1 = 1
+				create_equipment_variant = {
+					name = "Me 262 A-1a"
+					type = small_plane_airframe_3
+					parent_version = 1
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_2x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
+						fixed_auxiliary_weapon_slot_2 = aircraft_cannon_2_1x
+						fixed_auxiliary_weapon_slot_3 = empty
+						engine_type_slot = jet_engine_2x
+						special_type_slot_1 = radio_navigation_2
+						special_type_slot_2 = armor_plate_small
+						special_type_slot_3 = self_sealing_fuel_tanks_small
+					}
+					icon = "GFX_GER_jet_plane_1_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_4
+					amount = 100
+					variant_name = "Me 262 A-1a"
 				}
 			}
-			add_tech_bonus = {
-				name = GER_Jet_prototype
-				bonus = 1
-				uses = 1
-				category = jet_technology
+			if = {
+				limit = {
+					has_completed_focus = GER_messerschmitt_1
+					has_war_with = USA
+				}
+				create_equipment_variant = {
+					name = "Me 264 Amerikabomber"
+					type = large_plane_airframe_4
+					parent_version = 1
+					modules = {
+						fixed_main_weapon_slot = large_bomb_bay
+						fixed_auxiliary_weapon_slot_1 = large_bomb_bay
+						fixed_auxiliary_weapon_slot_2 = large_bomb_bay
+						fixed_auxiliary_weapon_slot_3 = large_bomb_bay
+						fixed_auxiliary_weapon_slot_4 = large_bomb_bay
+						engine_type_slot = engine_4_6x
+						special_type_slot_1 = cannon_defense_turret_2x
+						special_type_slot_2 = fuel_tanks_large
+						special_type_slot_3 = fuel_tanks_large
+						special_type_slot_4 = self_sealing_fuel_tanks_large
+						special_type_slot_5 = air_ground_radar_2
+					}
+					icon = "GFX_GER_strategic_bomber3_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = large_plane_airframe_4
+					amount = 1
+					variant_name = "Me 264 Amerikabomber"
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_Offshore_defense
+				}
+				add_ideas = GER_FX
+				create_equipment_variant = {
+					name = "Fw190 F-8/U3"
+					type = small_plane_naval_bomber_airframe_2
+					parent_version = 1
+					modules = {
+						fixed_main_weapon_slot = guided_anti_ship_missile
+						fixed_auxiliary_weapon_slot_1 = recon_camera
+						fixed_auxiliary_weapon_slot_2 = heavy_mg_2x
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = air_ground_radar_2
+						special_type_slot_3 = self_sealing_fuel_tanks_small
+					}
+					icon = "GFX_GER_fighter2_medium"
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_naval_bomber_airframe_2
+					amount = 100
+					variant_name = "Fw190 F-8/U3"
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_More_people_weapons
+				}
+				create_equipment_variant = {
+					name = "He162 A-2"
+					type = small_plane_airframe_2
+					parent_version = 1
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_1x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
+						engine_type_slot = jet_engine_1x
+						special_type_slot_1 = non_strategic_materials_small
+						special_type_slot_2 = armor_plate_small
+					}
+					icon = "GFX_GER_jet_plane_1_medium"
+					obsolete = yes
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_2
+					amount = 200
+					variant_name = "He162 A-2"
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = GER_More_people_weapons
+				}
+				create_equipment_variant = {
+					name = "Me163 Walkure"
+					type = small_plane_airframe_2
+					parent_version = 1
+					modules = {
+						fixed_main_weapon_slot = aircraft_cannon_2_1x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
+						engine_type_slot = rocket_engine_3
+						special_type_slot_1 = non_strategic_materials_small
+						special_type_slot_2 = armor_plate_small
+					}
+					icon = "GFX_GER_rocket_plane_1_medium"
+					obsolete = yes
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_2
+					amount = 200
+					variant_name = "Me163 Walkure"
+				}
 			}
 		}
 	}
@@ -3626,20 +3741,18 @@ focus_tree = {
 		completion_reward = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = messerschmitt_2
-			add_equipment_to_stockpile = {
-				type = fighter_equipment
-				amount = 350
-				producer = GER
-			}
 			create_equipment_variant = {
-				name = "Bf 109 G"
-				type = fighter_equipment_1
-				upgrades = {
-					plane_gun_upgrade = 4
-					plane_range_upgrade = 1
-					plane_engine_upgrade = 4
-					plane_reliability_upgrade = 1
+				name = "BF 109 F"
+				type = small_plane_airframe_1
+				parent_version = 1
+				modules = {
+					fixed_main_weapon_slot = light_mg_2x
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_2_1x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = armor_plate_small
+					special_type_slot_2 = self_sealing_fuel_tanks_small
 				}
+				icon = "GFX_GER_fighter1_medium"
 			}
 		}
 	}
@@ -4894,7 +5007,6 @@ focus_tree = {
 			factor = 100
 		}
 		completion_reward = {
-			add_ideas = GER_FX
 			add_tech_bonus = {
 				name = GER_Offshore_defense
 				bonus = 1.5
@@ -4922,20 +5034,9 @@ focus_tree = {
 			show_ideas_tooltip = GER_graf_zeppelin
 			add_tech_bonus = {
 				name = GER_Test_carrier_aircraft
-				bonus = 1
-				uses = 1
-				technology = cv_early_fighter
-				technology = cv_fighter1
-				technology = cv_fighter2
-				technology = cv_fighter3
-			}
-			add_tech_bonus = {
-				name = GER_Test_carrier_aircraft
-				bonus = 1
-				uses = 1
-				# technology = # cv_naval_bomber1
-				technology = cv_naval_bomber2
-				technology = cv_naval_bomber3
+				bonus = 0.75
+				uses = 2
+				category = air_equipment
 			}
 		}
 	}
@@ -8110,31 +8211,6 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = armored_car_equipment
 				amount = 100
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = light_tank_equipment
-				amount = 50
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = fighter_equipment
-				amount = 200
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = CAS_equipment
-				amount = 100
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = nav_bomber_equipment
-				amount = 50
-				producer = GER
-			}
-			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
-				amount = 50
 				producer = GER
 			}
 		}

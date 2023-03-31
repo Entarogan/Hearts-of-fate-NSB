@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	continuous_focus_position = {
 		x = 20
-		y = 1600
+		y = 2400
 	}
 	focus = {
 		id = rus_unite_white_movement
@@ -21,7 +21,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 75
 			add_stability = 0.05
-		}
+		}		
 	}
 	focus = {
 		id = rus_the_royal_marriage
@@ -64,9 +64,9 @@ focus_tree = {
 		id = rus_expand_pacific_fleet
 		icon = GFX_goal_RUS_navy
 		cost = 7
-		x = 6
-		y = 3
-		relative_position_id = rus_New_Russian_Army
+		x = 0
+		y = 5
+		relative_position_id = rus_Formally_established_the_Air_Force
 		available = {
 			or = {
 				has_completed_focus = rus_rise_of_russian_industry
@@ -583,9 +583,10 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 150
 			add_command_power = 50
-			add_ideas = {
-				rus_siberian_headquarter
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_planning_speed = 0.15
 			}
+			custom_effect_tooltip = rus_siberian_headquarter_tt
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = RUS_berezovich_kryuger
 		}
@@ -601,9 +602,44 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_headquarter
 		completion_reward = {
-			swap_ideas = {
-				add_idea = rus_local_militia_training
-				remove_idea = rus_siberian_headquarter
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_training_time_factor = -0.1
+			}
+			custom_effect_tooltip = rus_local_militia_training_tt
+			hidden_effect = {
+				division_template = {
+					name = "Siberia Strelkovaya Diviziya"
+					division_names_group = RUS_GAR_01
+					is_locked = yes
+					regiments = {
+						irregular_infantry = {
+							x = 0
+							y = 0
+						}
+						irregular_infantry = {
+							x = 0
+							y = 1
+						}
+						irregular_infantry = {
+							x = 1
+							y = 0
+						}
+						irregular_infantry = {
+							x = 1
+							y = 1
+						}
+					}
+					priority = 0
+				}
+			}
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Siberia Strelkovaya Diviziya\" start_experience_factor = 0.1 start_equipment_factor = 0.5"
+						owner = ROOT
+						count = 8
+					}
+				}
 			}
 		}
 	}
@@ -1662,8 +1698,9 @@ focus_tree = {
 			RUS_Orthodox_enhance = yes
 		}
 	}
+
 	focus = {
-		id = rua_modernized_military_school
+		id = rua_Integrating_mercenaries
 		icon = GFX_focus_generic_military_academy
 		cost = 5
 		prerequisite = {
@@ -1673,8 +1710,27 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberia_logistics
 		completion_reward = {
-			add_ideas = {
-				rua_modernized_military_school
+			add_manpower = 2022
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_recon_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_special_forces_cap = 0.05
+			}
+			custom_effect_tooltip = rua_Integrating_mercenaries_tt
+			add_tech_bonus = {
+				name = rua_Integrating_mercenaries
+				bonus = 1
+				uses = 1
+				category = recon_tech
+			}
+			add_tech_bonus = {
+				name = SOV_Expansion_of_special_forces
+				bonus = 1
+				uses = 1
+				category = mountaineers_tech
+				category = para_tech
+				category = marine_tech
 			}
 			custom_effect_tooltip = available_military_high_command
 			show_ideas_tooltip = RUS_anna_viktorovna
@@ -1815,6 +1871,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_local_militia_training
 		completion_reward = {
+						add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_experience_gain_army_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_land_doctrine_cost_factor = -0.15
+			}
+			custom_effect_tooltip = rus_lesson_from_the_great_war_tt
 			add_doctrine_cost_reduction = {
 				name = rus_lesson_from_the_great_war
 				cost_reduction = 0.33
@@ -2098,6 +2161,8 @@ focus_tree = {
 			}
 		}
 	}
+
+
 	focus = {
 		id = rus_break_tie_with_jap
 		icon = GFX_focus_generic_strike_at_democracy2
@@ -2268,6 +2333,7 @@ focus_tree = {
 			factor = 1000
 		}
 	}
+
 	focus = {
 		###集体农庄私有化
 		id = rus_farm_privatization
@@ -3358,6 +3424,18 @@ focus_tree = {
 				amount = 200
 				producer = USA
 			}
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Mekhanizirovaniy Korpus\" start_experience_factor = 0.3 start_equipment_factor = 0"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "division_template = \"Mekhanizirovaniy Korpus\" start_experience_factor = 0.4 start_equipment_factor = 0"
+						owner = ROOT
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3856,9 +3934,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_headquarter
 		completion_reward = {
-			add_ideas = {
-				rus_siberian_cavalry
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_modifier_army_sub_unit_cavalry_attack_factor = 0.1
 			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_modifier_army_sub_unit_cavalry_speed_factor = 0.1
+			}
+			custom_effect_tooltip = rus_siberian_cavalry_tt
 			custom_effect_tooltip = SOV_restore_cossack_units_spawn_tt
 			hidden_effect = {
 				division_template = {
@@ -3909,19 +3991,19 @@ focus_tree = {
 				capital_scope = {
 					#Cossack Cavalry
 					create_unit = {
-						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						division = "name = \"4ya Donskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						division = "name = \"6ya Kubansko-Terskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						division = "name = \"10ya Tersko-Stavropolskaya Kazachya Kav. Div\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
+						division = "name = \"12ya Kubanskaya Kazachya Kav. Div.\" division_template = \"Kazachya Kavaleryskaya Diviziya\" start_experience_factor = 0.5 start_equipment_factor = 0.8"
 						owner = ROOT
 					}
 				}
@@ -3999,9 +4081,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_headquarter
 		completion_reward = {
-			add_ideas = {
-				rus_siberian_air_forces_headquarter
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_range_factor = 0.1
 			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_fuel_consumption_factor = -0.1
+			}
+			custom_effect_tooltip = rus_siberian_air_forces_headquarter_tt
 			custom_effect_tooltip = available_chief_of_airforce
 			show_ideas_tooltip = RUS_aleksandra_ivanovna_pokryshkin
 			custom_effect_tooltip = available_military_high_command
@@ -4027,10 +4113,20 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_air_forces_headquarter
 		completion_reward = {
+			create_equipment_variant = {
+				name = "Ki-10（R）"
+				type = small_plane_airframe_0
+				modules = {
+					fixed_main_weapon_slot = light_mg_2x
+					engine_type_slot = engine_1_1x
+					special_type_slot_1 = empty
+				}
+				icon = "GFX_JAP_early_fighter_medium"
+			}
 			add_equipment_to_stockpile = {
-				type = fighter_equipment_0
+				type = small_plane_airframe_0
 				amount = 250
-				producer = JAP
+				variant_name = "Ki-10（R）"
 			}
 		}
 		ai_will_do = {
@@ -4053,10 +4149,36 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_air_forces_headquarter
 		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = basic_medium_airframe
+					}
+				}
+				set_technology = {
+					basic_medium_airframe = 1
+				}
+			}
+			create_equipment_variant = {
+				name = "He 111（R）"
+				type = medium_plane_airframe_1
+				modules = {
+					fixed_main_weapon_slot = medium_bomb_bay
+					fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+					fixed_auxiliary_weapon_slot_2 = empty
+					fixed_auxiliary_weapon_slot_3 = empty
+					engine_type_slot = engine_2_2x
+					special_type_slot_1 = lmg_defense_turret_2x
+					special_type_slot_2 = lmg_defense_turret_2x
+					special_type_slot_3 = empty
+					special_type_slot_4 = empty
+				}
+				icon = "GFX_GER_tactical_bomber1_medium"
+			}
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment_0
-				amount = 150
-				producer = JAP
+				type = medium_plane_airframe_1
+				amount = 100
+				variant_name = "He 111（R）"
 			}
 		}
 		ai_will_do = {
@@ -4251,9 +4373,48 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberia_logistics
 		completion_reward = {
-			add_ideas = {
-				swe_winter_equipment
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_winter_attrition_factor = -0.15
 			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_acclimatization_cold_climate_gain_factor = 0.75
+			}
+			custom_effect_tooltip = rus_winter_equipment_tt
+			add_tech_bonus = {
+				name = rus_winter_equipment
+				bonus = 1
+				uses = 1
+				category = support_tech
+			}
+		}
+	}
+	focus = {
+		id = rus_GK_PMC
+		icon = GFX_goal_generic_military_sphere
+		cost = 5
+		prerequisite = {
+			focus = rus_winter_equipment
+		}
+		prerequisite = {
+			focus = rua_Integrating_mercenaries
+		}
+		x = -1
+		y = 1
+		relative_position_id = rus_winter_equipment
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_attack_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_defence_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_research_speed_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_consumer_goods_factor = 0.01
+			}
+			custom_effect_tooltip = rus_GK_PMC_tt
 		}
 	}
 	focus = {
@@ -5109,6 +5270,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = rus_PSR_comes_back
 		icon = GFX_focus_generic_PSR_2
@@ -5827,9 +5989,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = rus_siberian_cavalry
 		completion_reward = {
-			add_ideas = {
-				JAP_logistic_innovation_idea
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_supply_consumption_factor = -0.1
 			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_out_of_supply_factor = -0.1
+			}
+			custom_effect_tooltip = rus_siberia_logistics_tt
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = RUS_kalina
 		}
@@ -7145,10 +7311,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = rus_New_Russian_Army
-		icon = GFX_goal_RUS_army
+		id = rus_Formally_established_the_Air_Force
+		icon = GFX_goal_RUS_airforce
 		cost = 5
-		x = 6
+		x = 8
 		y = -2
 		relative_position_id = rus_a_new_better_russia
 		available = {
@@ -7159,292 +7325,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = rus_New_Russian_Army
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Summing_up_the_world_war
-		icon = GFX_goal_generic_defence
-		cost = 5
-		prerequisite = {
-			focus = rus_New_Russian_Army
-		}
-		x = -1
-		y = 1
-		relative_position_id = rus_New_Russian_Army
-		completion_reward = {
-			army_experience = 25
-			custom_effect_tooltip = GER_Combat_Engineer_tooltip
-			set_technology = {
-				GER_Combat_Engineer_tech = 1
-			}
-			add_tech_bonus = {
-				name = rus_Summing_up_the_world_war
-				bonus = 1
-				uses = 1
-				category = engineers_tech
-			}
-			add_tech_bonus = {
-				name = rus_Summing_up_the_world_war
-				bonus = 1
-				uses = 1
-				category = support_tech
-			}
-			add_ideas = {
-				RUS_Trench_warfare_idea
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Summary_of_the_Russian_Civil_War
-		icon = GFX_focus_prc_infiltration
-		cost = 5
-		prerequisite = {
-			focus = rus_New_Russian_Army
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_New_Russian_Army
-		completion_reward = {
-			add_tech_bonus = {
-				name = rus_Summary_of_the_Russian_Civil_War
-				bonus = 1
-				uses = 1
-				category = recon_tech
-			}
-			add_tech_bonus = {
-				bonus = 1
-				ahead_reduction = 1
-				uses = 1
-				name = rus_Summary_of_the_Russian_Civil_War
-				technology = armored_car2
-				technology = armored_car3
-			}
-			add_ideas = {
-				RUS_Mobile_warfare_idea
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_In_the_trenches
-		icon = GFX_goal_generic_army_artillery
-		cost = 5
-		prerequisite = {
-			focus = rus_Summing_up_the_world_war
-		}
-		x = -1
-		y = 1
-		relative_position_id = rus_Summing_up_the_world_war
-		completion_reward = {
-			add_tech_bonus = {
-				name = rus_In_the_trenches
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-			add_tech_bonus = {
-				name = rus_In_the_trenches
-				bonus = 1
-				uses = 1
-				category = artillery
-			}
-			add_tech_bonus = {
-				name = rus_In_the_trenches
-				bonus = 1
-				uses = 1
-				category = cat_anti_tank
-			}
-			add_tech_bonus = {
-				name = rus_In_the_trenches
-				bonus = 1
-				uses = 1
-				category = cat_anti_air
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Support_team
-		icon = GFX_goal_generic_army_motorized
-		cost = 5
-		prerequisite = {
-			focus = rus_Summing_up_the_world_war
-		}
-		prerequisite = {
-			focus = rus_Summary_of_the_Russian_Civil_War
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_Summing_up_the_world_war
-		completion_reward = {
-			add_tech_bonus = {
-				name = rus_Support_team
-				bonus = 1
-				uses = 2
-				category = support_tech
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Armor_breakthrough
-		icon = GFX_goal_generic_army_tanks
-		cost = 5
-		prerequisite = {
-			focus = rus_Summary_of_the_Russian_Civil_War
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_Summary_of_the_Russian_Civil_War
-		completion_reward = {
-			add_tech_bonus = {
-				name = SOV_Ural_armor_production
-				bonus = 1
-				uses = 1
-				category = cat_heavy_armor
-			}
-			add_tech_bonus = {
-				name = SOV_Ural_armor_production
-				bonus = 1
-				uses = 1
-				category = cat_medium_armor
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Brusilov_legacy
-		icon = GFX_rus_brushilov_legacy
-		cost = 5
-		prerequisite = {
-			focus = rus_In_the_trenches
-		}
-		prerequisite = {
-			focus = rus_Support_team
-		}
-		mutually_exclusive = {
-			focus = rus_Tukhachevski_legacy
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_In_the_trenches
-		completion_reward = {
-			remove_ideas = RUS_Trench_warfare_idea
-			remove_ideas = RUS_Mobile_warfare_idea
-			add_tech_bonus = {
-				name = GER_Brandenburger
-				bonus = 1
-				uses = 2
-				category = mountaineers_tech
-				category = para_tech
-				category = marine_tech
-			}
-			add_ideas = RUS_Brusilov_legacy_idea
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 100
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Tukhachevski_legacy
-		icon = GFX_rus_tukhachevsky_legacy
-		cost = 5
-		prerequisite = {
-			focus = rus_Support_team
-		}
-		prerequisite = {
-			focus = rus_Armor_breakthrough
-		}
-		mutually_exclusive = {
-			focus = rus_Brusilov_legacy
-		}
-		available = {
-			has_completed_focus = rus_fall_of_ussr
-		}
-		x = 1
-		y = 1
-		relative_position_id = rus_Support_team
-		completion_reward = {
-			remove_ideas = RUS_Trench_warfare_idea
-			remove_ideas = RUS_Mobile_warfare_idea
-			add_tech_bonus = {
-				name = rus_Tukhachevski_legacy
-				bonus = 1
-				uses = 1
-				category = armor
-			}
-			add_ideas = RUS_Tukhachevski_legacy_idea
-		}
-		ai_will_do = {
-			factor = 0
-		}
-	}
-	focus = {
-		id = rus_Formally_established_the_Air_Force
-		icon = GFX_goal_RUS_airforce
-		x = 1
-		y = 2
-		relative_position_id = rus_Brusilov_legacy
-		cost = 5
-		available = {
-			or = {
-				has_completed_focus = rus_rise_of_russian_industry
-				has_completed_focus = rus_great_patriotic_war
-				has_completed_focus = RUS_Japan_Research_Permit
-			}
-		}
-		completion_reward = {
 			air_experience = 25
 			add_doctrine_cost_reduction = {
-				name = SOV_transpolar_flights
+				name = rus_Formally_established_the_Air_Force
 				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
@@ -7459,15 +7342,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = RUS_indigenous_designs
+		id = RUS_Reviving_the_airline_industry
 		icon = GFX_goal_generic_air_production
 		prerequisite = {
 			focus = rus_Formally_established_the_Air_Force
 		}
-		mutually_exclusive = {
-			focus = RUS_license_foreign_designs
-		}
-		x = -1
+		x = 2
 		y = 1
 		relative_position_id = rus_Formally_established_the_Air_Force
 		cost = 5
@@ -7480,6 +7360,36 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = HUN_indigenous_designs
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -7490,42 +7400,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = RUS_license_foreign_designs
-		icon = GFX_focus_generic_license_production
+		id = rus_Renovating_Soviet_aircraft
+		icon = GFX_goal_generic_air_fighter2
 		prerequisite = {
 			focus = rus_Formally_established_the_Air_Force
 		}
-		mutually_exclusive = {
-			focus = RUS_indigenous_designs
-		}
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = rus_Formally_established_the_Air_Force
-		cost = 5
-		available = {
-		}
-		bypass = {
-		}
-		completion_reward = {
-			add_ideas = HUN_license_foreign
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 50
-				has_war = yes
-			}
-		}
-	}
-	focus = {
-		id = rus_Take_over_the_fighter_drawing
-		icon = GFX_goal_generic_air_fighter2
-		prerequisite = {
-			focus = RUS_indigenous_designs
-		}
-		x = -1
-		y = 1
-		relative_position_id = RUS_indigenous_designs
 		cost = 5
 		available = {
 		}
@@ -7535,17 +7417,136 @@ focus_tree = {
 			FOCUS_FILTER_RESEARCH
 		}
 		completion_reward = {
-			add_tech_bonus = {
-				name = rus_Take_over_the_fighter_drawing
-				bonus = 1
-				uses = 1
-				category = light_fighter
+			create_equipment_variant = {
+				name = "I-153 P"				#
+				type = small_plane_airframe_0
+				modules = {
+					fixed_main_weapon_slot = aircraft_cannon_1_1x
+					fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_1x
+					engine_type_slot = engine_2_1x
+					special_type_slot_1 = empty
+				}
+				obsolete = yes
 			}
-			add_tech_bonus = {
-				name = rus_Take_over_the_fighter_drawing
-				bonus = 1
-				uses = 1
-				category = cas_bomber
+			add_equipment_to_stockpile = {
+				type = small_plane_airframe_0
+				amount = 500
+				variant_name = "I-153 P"
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = rus_Integrate_the_paratroopers
+		icon = GFX_goal_DOM_Air_Fuel
+		prerequisite = {
+			focus = rus_Formally_established_the_Air_Force
+		}
+		x = -3
+		y = 1
+		relative_position_id = rus_Formally_established_the_Air_Force
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers
+					}
+				}
+				set_technology = {
+					paratroopers = 1
+				}
+			}
+			custom_effect_tooltip = SOV_create_unit_vdv_tt
+			hidden_effect = {
+				division_template = {
+					name = "Vozdushno-Desantnaya Diviziya"					# Airborne Brigade
+					division_names_group = SOV_PAR_01
+					regiments = {
+						paratrooper = {
+							x = 0
+							y = 0
+						}
+						paratrooper = {
+							x = 0
+							y = 1
+						}
+						paratrooper = {
+							x = 0
+							y = 2
+						}
+						paratrooper = {
+							x = 1
+							y = 0
+						}
+						paratrooper = {
+							x = 1
+							y = 1
+						}
+						paratrooper = {
+							x = 1
+							y = 2
+						}
+						paratrooper = {
+							x = 2
+							y = 0
+						}
+						paratrooper = {
+							x = 2
+							y = 1
+						}
+						paratrooper = {
+							x = 2
+							y = 2
+						}
+						paratrooper = {
+							x = 3
+							y = 0
+						}
+					}
+					support = {
+						engineer = {
+							x = 0
+							y = 0
+						}
+						recon = {
+							x = 0
+							y = 1
+						}
+						artillery = {
+							x = 0
+							y = 2
+						}
+						anti_tank = {
+							x = 0
+							y = 3
+						}
+						anti_air = {
+							x = 0
+							y = 4
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				capital_scope = {
+					create_unit = {
+						division = "division_template = \"Vozdushno-Desantnaya Diviziya\" start_experience_factor = 0.7 start_equipment_factor = 1.0"
+						owner = ROOT
+						count = 3
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -7560,12 +7561,11 @@ focus_tree = {
 		id = rus_Expand_flight_school
 		icon = GFX_goal_DOM_Air_Fuel
 		prerequisite = {
-			focus = RUS_indigenous_designs
-			focus = RUS_license_foreign_designs
+			focus = rus_Renovating_Soviet_aircraft
 		}
-		x = 1
+		x = -2
 		y = 1
-		relative_position_id = RUS_indigenous_designs
+		relative_position_id = rus_Renovating_Soviet_aircraft
 		cost = 5
 		available = {
 		}
@@ -7573,7 +7573,26 @@ focus_tree = {
 		}
 		available_if_capitulated = yes
 		completion_reward = {
-			add_ideas = RUS_Expand_flight_school_idea
+			air_experience = 50
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_mission_efficiency = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_ace_generation_chance_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_training_xp_gain_factor = 0.2
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_fuel_consumption_factor = 0.1
+			}
+			custom_effect_tooltip = rus_Expand_flight_school_tt
+			add_doctrine_cost_reduction = {
+				name = rus_Expand_flight_school
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -7584,92 +7603,216 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = RUS_fighter_competition
-		icon = GFX_goal_generic_air_fighter
+		id = rus_Women_in_Air_Force
+		icon = GFX_goal_DOM_Air_Fuel
 		prerequisite = {
-			focus = RUS_license_foreign_designs
+			focus = rus_Expand_flight_school
 		}
-		x = 1
+		x = 0
 		y = 1
-		relative_position_id = RUS_license_foreign_designs
+		relative_position_id = rus_Expand_flight_school
 		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
 		available = {
-			NOT = {
-				has_tech = fighter3
-				has_tech = heavy_fighter3
-			}
-			OR = {
-				GER = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_RUS = yes
-							is_available_heavy_fighter_RUS = yes
-						}
-					}
-				}
-				FRA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_RUS = yes
-							is_available_heavy_fighter_RUS = yes
-						}
-					}
-				}
-				ITA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_RUS = yes
-							is_available_heavy_fighter_RUS = yes
-						}
-					}
-				}
-				ENG = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_RUS = yes
-							is_available_heavy_fighter_RUS = yes
-						}
-					}
-				}
-				USA = {
-					custom_trigger_tooltip = {
-						tooltip = fighter_tt
-						OR = {
-							is_available_fighter_RUS = yes
-							is_available_heavy_fighter_RUS = yes
-						}
-					}
-				}
-			}
 		}
 		bypass = {
 		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
+		available_if_capitulated = yes
 		completion_reward = {
-			country_event = russian.150
+			air_experience = 25
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_ace_generation_chance_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_weather_penalty = -0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_night_penalty = -0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_accidents_factor = -0.1
+			}
+			custom_effect_tooltip = rus_Women_in_Air_Force_tt
+			set_rule = {
+				can_generate_female_aces = yes
+			}
+			add_doctrine_cost_reduction = {
+				name = rus_Women_in_Air_Force
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
 		}
 	}
 	focus = {
-		id = rus_Design_large_aircraft
-		icon = GFX_GER_strategic_bombing_doctrine
+		id = rus_Independent_airborne_command
+		icon = GFX_goal_DOM_Air_Fuel
 		prerequisite = {
-			focus = rus_Take_over_the_fighter_drawing
+			focus = rus_Integrate_the_paratroopers
 		}
 		prerequisite = {
 			focus = rus_Expand_flight_school
 		}
-		x = 1
+		x = -2
 		y = 1
-		relative_position_id = rus_Take_over_the_fighter_drawing
+		relative_position_id = rus_Expand_flight_school
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_modifier_army_sub_unit_paratrooper_attack_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_modifier_army_sub_unit_paratrooper_defence_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_modifier_army_sub_unit_paratrooper_max_org_factor = 0.1
+			}
+			custom_effect_tooltip = rus_Independent_airborne_command_tt
+			add_tech_bonus = {
+				name = rus_Independent_airborne_command
+				bonus = 1
+				uses = 1
+				category = para_tech
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = rus_Flying_tank
+		icon = GFX_goal_DOM_Air_Fuel
+		prerequisite = {
+			focus = rus_Renovating_Soviet_aircraft
+		}
+		prerequisite = {
+			focus = RUS_Reviving_the_airline_industry
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Renovating_Soviet_aircraft
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = rus_Flying_tank_idea
+			add_tech_bonus = {
+				name = rus_Flying_tank
+				bonus = 1
+				uses = 2
+				category = light_air
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = rus_Air_to_ground_coordination
+		icon = GFX_goal_DOM_Air_Fuel
+		prerequisite = {
+			focus = rus_Expand_flight_school
+		}
+		prerequisite = {
+			focus = rus_Flying_tank
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_Flying_tank
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_superiority_detect_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_interception_detect_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_cas_present_factor = 0.1
+			}
+			custom_effect_tooltip = rus_Air_to_ground_coordination_tt
+			add_tech_bonus = {
+				name = rus_Air_to_ground_coordination
+				bonus = 1
+				uses = 2
+				category = radar_tech
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = rus_support_Sikorsky_research
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = {
+			focus = RUS_Reviving_the_airline_industry
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Reviving_the_airline_industry
+		cost = 5
+		available = {
+		}
+		bypass = {
+		}
+		available_if_capitulated = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = rus_support_Sikorsky_research
+				bonus = 1
+				uses = 2
+				category = tactical_bomber
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 50
+				has_war = yes
+			}
+		}
+	}
+	focus = {
+		id = rus_Alexandre_Nevskiy
+		icon = GFX_GER_strategic_bombing_doctrine
+		prerequisite = {
+			focus = rus_support_Sikorsky_research
+		}
+		x = 0
+		y = 1
+		relative_position_id = rus_support_Sikorsky_research
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -7683,88 +7826,30 @@ focus_tree = {
 			add_tech_bonus = {
 				name = bomber_bonus
 				bonus = 3
-				uses = 1
-				category = tactical_bomber
+				uses = 2
 				category = cat_strategic_bomber
 			}
 		}
 	}
 	focus = {
-		id = RUS_bomber_competition
-		icon = GFX_goal_generic_air_bomber
+		id = rus_Helicopter_Experiment
+		icon = GFX_GER_strategic_bombing_doctrine
 		prerequisite = {
-			focus = rus_Expand_flight_school
+			focus = rus_support_Sikorsky_research
 		}
-		prerequisite = {
-			focus = RUS_fighter_competition
-		}
-		x = 1
+		x = 2
 		y = 1
-		relative_position_id = rus_Expand_flight_school
+		relative_position_id = rus_support_Sikorsky_research
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
 		available = {
-			NOT = {
-				has_tech = CAS3
-				has_tech = tactical_bomber3
-			}
-			OR = {
-				GER = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_RUS = yes
-							is_available_tac_RUS = yes
-						}
-					}
-				}
-				FRA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_RUS = yes
-							is_available_tac_RUS = yes
-						}
-					}
-				}
-				ITA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_RUS = yes
-							is_available_tac_RUS = yes
-						}
-					}
-				}
-				ENG = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_RUS = yes
-							is_available_tac_RUS = yes
-						}
-					}
-				}
-				USA = {
-					custom_trigger_tooltip = {
-						tooltip = bomber_tt
-						OR = {
-							is_available_cas_RUS = yes
-							is_available_tac_RUS = yes
-						}
-					}
-				}
-			}
 		}
 		bypass = {
 		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
+		available_if_capitulated = yes
 		completion_reward = {
-			country_event = russian.160
 		}
 	}
 	focus = {
@@ -8948,10 +9033,373 @@ focus_tree = {
 		search_filters = {
 		}
 		completion_reward = {
-			add_ideas = SOV_Simplify_production_1_idea
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_artillery_dec
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_armor_dec
-			unlock_decision_tooltip = SOV_Simplification_of_technical_weapons_air_dec
+			set_country_flag = SOV_Simplify_production_flag
+			add_ideas = RUS_Army_equipment_simplifies_production_idea
+		}
+	}
+	focus = {
+		id = RUS_Military_Industrial_Commission
+		icon = GFX_goal_generic_production2
+		prerequisite = {
+			focus = RUS_Simplify_production
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Simplify_production
+		cost = 5
+		ai_will_do = {
+			factor = 2000
+		}
+		available = {
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_Military_Industrial_Commission
+				bonus = 1
+				uses = 2
+				category = industry
+				category = motorized_equipment
+				category = infantry_weapons
+			}
+			if = {
+				#DEFAULT COMMIE
+				limit = {
+					has_full_control_of_state = 219
+				}
+				219 = {
+					if = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_Soviet_artillery_drawings
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = {
+			focus = RUS_Military_Industrial_Commission
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Military_Industrial_Commission
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_Soviet_artillery_drawings
+				bonus = 0.75
+				uses = 3
+				category = artillery
+			}
+			add_ideas = SOV_New_structure_of_artillery_idea
+			if = {
+				#DEFAULT COMMIE
+				limit = {
+					has_full_control_of_state = 219
+				}
+				219 = {
+					if = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = RUS_Armored_Infantry
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = {
+			focus = RUS_Soviet_artillery_drawings
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Soviet_artillery_drawings
+		cost = 10
+		available = {
+			has_country_flag = {
+				flag = SOV_Simplify_production_flag
+				days > 180
+			}
+			custom_trigger_tooltip = {
+				tooltip = SOV_Simplify_production_flag_tt
+				has_country_flag = {
+					flag = SOV_Simplify_production_flag
+					days > 180
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_mechanized_attack_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_mechanized_defence_factor = 0.05
+			}
+			custom_effect_tooltip = RUS_Armored_Infantry_tt
+			swap_ideas = {
+				remove_idea = RUS_Army_equipment_simplifies_production_idea
+				add_idea = RUS_Army_equipment_simplifies_production_mech_idea
+			}
+			add_tech_bonus = {
+				name = SOV_superior_war_machines
+				bonus = 0.75
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+	focus = {
+		id = RUS_the_iron_wall_of_russian_resolve
+		icon = GFX_focus_generic_tank_production
+		prerequisite = {
+			focus = RUS_Armored_Infantry
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Armored_Infantry
+		cost = 5
+		available = {
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+			FOCUS_FILTER_RESEARCH
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = SOV_the_iron_wall_of_russian_resolve
+				ahead_reduction = 2
+				bonus = 1
+				uses = 1
+				technology = super_heavy_tank_chassis
+			}
+			add_ideas = SOV_the_iron_wall_of_russian_resolve
+			if = {
+				limit = {
+					has_idea = SOV_Armor_quality_declines_idea
+				}
+				remove_ideas = SOV_Armor_quality_declines_idea
+			}
+		}
+	}
+	focus = {
+		id = RUS_increase_aircraft_production
+		icon = GFX_focus_generic_aircraft_production
+		prerequisite = {
+			focus = RUS_Military_Industrial_Commission
+		}
+		x = 2
+		y = 1
+		relative_position_id = RUS_Military_Industrial_Commission
+		cost = 10
+		available = {
+			has_war = yes
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			add_ideas = RUS_Simplified_production_of_Air_Force_equipment_idea
+			add_tech_bonus = {
+				name = SOV_increase_aircraft_production
+				bonus = 1
+				uses = 2
+				category = light_air
+			}
+		}
+	}
+	focus = {
+		id = RUS_intensify_pilot_training_program
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = {
+			focus = RUS_increase_aircraft_production
+		}
+		prerequisite = {
+			focus = RUS_Authorize_the_PMC
+		}
+		x = 1
+		y = 1
+		relative_position_id = RUS_increase_aircraft_production
+		cost = 5
+		available = {
+			has_war = yes
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			air_experience = 50
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_accidents_factor = -0.1
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_ace_generation_chance_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_night_penalty = -0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_weather_penalty = -0.05
+			}
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_wing_xp_loss_when_killed_factor = -0.1
+			}
+			custom_effect_tooltip = RUS_intensify_pilot_training_program_tt
+		}
+	}
+	focus = {
+		id = RUS_Russian_Air_Force_morden
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = {
+			focus = RUS_increase_aircraft_production
+		}
+		x = 0
+		y = 2
+		relative_position_id = RUS_increase_aircraft_production
+		cost = 10
+		available = {
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			air_experience = 50
+			add_to_variable = {
+				HOF_RUS_russia_airforce_dynamic_air_strategic_bomber_bombing_factor = 0.1
+			}
+			custom_effect_tooltip = RUS_Russian_Air_Force_morden_tt
+			swap_ideas = {
+				remove_idea = RUS_Simplified_production_of_Air_Force_equipment_idea
+				add_idea = RUS_Simplified_production_of_Air_Force_equipment_large_idea
+			}
+		}
+	}
+	focus = {
+		id = RUS_Commando_group
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = {
+			focus = RUS_the_iron_wall_of_russian_resolve
+		}
+		prerequisite = {
+			focus = RUS_Russian_Air_Force_morden
+		}
+		prerequisite = {
+			focus = RUS_Battalion_formation
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Russian_Air_Force_morden
+		cost = 10
+		available = {
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_morale_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_speed_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_coordination_bonus = 0.1
+			}
+			custom_effect_tooltip = RUS_Commando_group_tt
+		}
+	}
+	focus = {
+		id = RUS_the_glory_of_the_russia_army
+		icon = GFX_focus_Battle_on_the_ice
+		prerequisite = {
+			focus = RUS_Commando_group
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Commando_group
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+			any_enemy_country = {
+				SOV_is_major_not_original_sov = yes
+			}
+			surrender_progress < 0.1
+		}
+		search_filters = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = RUS_the_glory_of_the_russia_army
+				bonus = 1
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = RUS_the_glory_of_the_russia_army
+				bonus = 2
+				uses = 1
+				category = armor
+			}
+			#New
+			hidden_effect = {
+				set_technology = {
+					masterful_blitz = 1
+					popup = no
+				}
+				set_technology = {
+					masterful_deep_battle = 1
+					popup = no
+				}
+			}
+			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
 		}
 	}
 	focus = {
@@ -9281,111 +9729,241 @@ focus_tree = {
 			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
 			army_experience = 100
 			air_experience = 100
-			add_tech_bonus = {
-				name = RUS_lessons_of_war
-				bonus = 1
-				uses = 1
-				category = light_fighter
-			}
-			add_tech_bonus = {
-				name = RUS_lessons_of_war
-				bonus = 1
-				uses = 1
-				category = cas_bomber
-				category = tactical_bomber
-			}
-			add_tech_bonus = {
-				name = RUS_lessons_of_war
-				bonus = 1
-				uses = 1
-				category = radar_tech
-			}
-			add_tech_bonus = {
-				name = RUS_lessons_of_war
-				bonus = 2
-				uses = 1
-				category = mountaineers_tech
-				category = para_tech
-				category = marine_tech
-			}
-			add_tech_bonus = {
-				name = RUS_lessons_of_war
-				bonus = 1
-				uses = 1
-				category = infantry_weapons
-			}
-			add_doctrine_cost_reduction = {
-				name = RUS_lessons_of_war
-				cost_reduction = 0.5
-				uses = 2
-				category = cat_mass_assault
-			}
-			if = {
-				limit = {
-					has_idea = RUS_Brusilov_legacy_idea
-				}
-				swap_ideas = {
-					remove_idea = RUS_Brusilov_legacy_idea
-					add_idea = RUS_Brusilov_legacy_1_idea
-				}
-			}
-			if = {
-				limit = {
-					has_idea = RUS_Tukhachevski_legacy_idea
-				}
-				swap_ideas = {
-					remove_idea = RUS_Tukhachevski_legacy_idea
-					add_idea = RUS_Tukhachevski_legacy_1_idea
-				}
-			}
 		}
 	}
 	focus = {
-		id = RUS_the_glory_of_the_russia_army
-		icon = GFX_focus_Battle_on_the_ice
+		id = RUS_form_the_stavka
+		icon = GFX_goal_support_communism
 		prerequisite = {
 			focus = RUS_lessons_of_war
 		}
 		x = 0
 		y = 1
 		relative_position_id = RUS_lessons_of_war
+		cost = 10
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+			has_war = yes
+			any_enemy_country = {
+				is_major = yes
+			}
+			OR = {
+				date > 1942.1.1
+				AND = {
+					has_country_flag = {
+						flag = SOV_lessons_of_war_flag
+						days > 180
+					}
+					custom_trigger_tooltip = {
+						tooltip = SOV_lessons_of_war_flag_tt
+						has_country_flag = {
+							flag = SOV_lessons_of_war_flag
+							days > 180
+						}
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_planning_speed = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_max_planning = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_supply_consumption_factor = -0.05
+			}
+			custom_effect_tooltip = RUS_form_the_stavka_tt
+		}
+	}
+	focus = {
+		id = RUS_Modernization_of_the_Russia_Army
+		icon = GFX_goal_generic_major_war
+		prerequisite = {
+			focus = RUS_form_the_stavka
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_form_the_stavka
 		cost = 5
 		ai_will_do = {
 			factor = 2500
 		}
 		available = {
-			any_enemy_country = {
-				SOV_is_major_not_original_sov = yes
+			NOT = {
+				has_idea = SOV_desperate_measures_ns
 			}
-			surrender_progress < 0.1
-		}
-		search_filters = {
 		}
 		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = SOV_Modernization_of_the_Red_Army
+				cost_reduction = 0.5
+				uses = 2
+				category = cat_mass_assault
+			}
+			add_doctrine_cost_reduction = {
+				name = SOV_Modernization_of_the_Red_Army
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = RUS_Authorize_the_PMC
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = {
+			focus = RUS_Modernization_of_the_Russia_Army
+		}
+		x = 0
+		y = 1
+		relative_position_id = RUS_Modernization_of_the_Russia_Army
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+			NOT = {
+				has_idea = SOV_desperate_measures_ns
+			}
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_recon_factor = 0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_special_forces_out_of_supply_factor = -0.1
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_special_forces_attack_factor = 0.1
+			}
+			custom_effect_tooltip = RUS_Authorize_the_PMC_tt
 			add_tech_bonus = {
-				name = RUS_the_glory_of_the_russia_army
+				name = RUS_Authorize_the_PMC
 				bonus = 1
 				uses = 1
-				category = artillery
+				category = recon_tech
 			}
 			add_tech_bonus = {
-				name = RUS_the_glory_of_the_russia_army
-				bonus = 2
+				name = RUS_Authorize_the_PMC
+				bonus = 1
 				uses = 1
-				category = armor
+				category = mountaineers_tech
+				category = para_tech
+				category = marine_tech
 			}
-			#New
-			hidden_effect = {
-				set_technology = {
-					masterful_blitz = 1
-					popup = no
-				}
-				set_technology = {
-					masterful_deep_battle = 1
-					popup = no
-				}
+		}
+	}
+	focus = {
+		id = RUS_experts_in_camouflage
+		icon = GFX_goal_generic_position_armies
+		prerequisite = {
+			focus = RUS_Modernization_of_the_Russia_Army
+		}
+		x = 2
+		y = 1
+		relative_position_id = RUS_Modernization_of_the_Russia_Army
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_cas_damage_reduction = 0.05
 			}
-			custom_effect_tooltip = SOV_the_glory_of_the_red_army_masterful_blitz_tactic_tt
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_max_dig_in = 5
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_dig_in_speed_factor = 0.05
+			}
+			custom_effect_tooltip = RUS_experts_in_camouflage_tt
+		}
+	}
+	focus = {
+		id = RUS_Whatever_it_takes
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = {
+			focus = RUS_Authorize_the_PMC
+		}
+		prerequisite = {
+			focus = RUS_experts_in_camouflage
+		}
+		x = 1
+		y = 1
+		relative_position_id = RUS_Authorize_the_PMC
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_org_loss_at_low_org_factor = -0.2
+			}
+			custom_effect_tooltip = RUS_Whatever_it_takes_tt
+			custom_effect_tooltip = kamikaze_focus_tooltip
+		}
+	}
+	focus = {
+		id = RUS_Battalion_formation
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = {
+			focus = RUS_intensify_pilot_training_program
+		}
+		prerequisite = {
+			focus = RUS_Whatever_it_takes
+		}
+		x = 1
+		y = 1
+		relative_position_id = RUS_intensify_pilot_training_program
+		cost = 5
+		ai_will_do = {
+			factor = 2500
+		}
+		available = {
+		}
+		completion_reward = {
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_attack_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_army_defence_factor = 0.05
+			}
+			add_to_variable = {
+				HOF_RUS_the_white_army_dynamic_pocket_penalty = 0.1
+			}
+			custom_effect_tooltip = RUS_Battalion_formation_tt
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = trickster
+					}
+				}
+				add_unit_leader_trait = trickster
+			}
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = trickster
+					}
+				}
+				add_unit_leader_trait = trickster
+			}
+			random_army_leader = {
+				limit = {
+					NOT = {
+						has_trait = trickster
+					}
+				}
+				add_unit_leader_trait = trickster
+			}
 		}
 	}
 }
