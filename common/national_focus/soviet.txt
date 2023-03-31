@@ -8712,7 +8712,7 @@ focus_tree = {
 					add_idea = SOV_politicized_military_keep_humanism
 				}
 			}
-			else_if = {
+			else = {
 				remove_ideas = SOV_politicized_military_humanism
 			}
 
