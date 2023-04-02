@@ -98,7 +98,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_stable_government
-		icon = GFX_COS_Ferrer_Coup
+		icon = GFX_focus_generic_ban_the_radicals
 		cost = 5.00
 		prerequisite = {
 			focus = swe_beginning_of_myth
@@ -472,7 +472,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_budget
-		icon = GFX_focus_FRA_royal_bonds
+		icon = GFX_focus_generic_royal_bonds
 		cost = 5.00
 		prerequisite = {
 			focus = swe_domestic_need
@@ -514,7 +514,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_pan_german_league
-		icon = GFX_focus_pan_nordic_nationalism
+		icon = GFX_focus_SWE_pan_nordic_nationalism
 		cost = 5.00
 		prerequisite = {
 			focus = swe_Kalmarunionen 
@@ -1705,7 +1705,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_Hallberg_Rassy
-		icon = GFX_focus_FRA_cross_the_channel
+		icon = GFX_focus_generic_cross_the_channel
 		cost = 7.00
 		prerequisite = {
 			focus = swe_Oskarshamn
@@ -2480,7 +2480,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_king_of_norway_britain
-		icon = GFX_focus_nordic_kingship
+		icon = GFX_focus_SWE_nordic_kingship
 		cost = 5.00
 		prerequisite = {
 			focus = swe_coastal_headquarter
@@ -2915,7 +2915,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_four_year_plan
-		icon = GFX_focus_FRA_advanced_assembly_line
+		icon = GFX_focus_generic_advanced_assembly_line
 		cost = 5.00
 		prerequisite = {
 			focus = swe_industrial_effort
@@ -3119,7 +3119,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_advanced_manufacture
-		icon = GFX_goal_GBR_fate_of_unions
+		icon = GFX_focus_generic_introduce_german_workers
 		cost = 5.00
 		prerequisite = {
 			focus = swe_wondering_sea
@@ -3350,7 +3350,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_nazification_of_north
-		icon = GFX_focus_nazification_nordic
+		icon = GFX_focus_SWE_nazification_nordic
 		cost = 5.00
 		prerequisite = {
 			focus = swe_german_myth
@@ -3673,7 +3673,7 @@ focus_tree = {
 	}
 	focus = {
 		id = swe_encourage_innovation
-		icon = GFX_focus_SWE_social_reforms
+		icon = GFX_focus_generic_social_reforms
 		cost = 5.00
 		prerequisite = {
 			focus = swe_freedom_of_trade

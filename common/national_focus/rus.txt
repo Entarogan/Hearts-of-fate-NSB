@@ -3331,7 +3331,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_forced_labor
-		icon = GFX_goal_GBR_fate_of_unions
+		icon = GFX_focus_generic_introduce_german_workers
 		cost = 5
 		prerequisite = {
 			focus = rus_land_for_party
@@ -6234,7 +6234,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_encourage_entrepreneurship
-		icon = GFX_VIN_Rights_of_Corporation
+		icon = GFX_focus_generic_promote_entrepeneurship
 		cost = 5
 		prerequisite = {
 			focus = rus_protect_civil_liberty
@@ -9092,7 +9092,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_Soviet_artillery_drawings
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_RUS_Soviet_artillery_drawings
 		prerequisite = {
 			focus = RUS_Military_Industrial_Commission
 		}

@@ -547,7 +547,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Befriend_the_industrial_giants
-		icon = GFX_focus_GER_krupp_in_charge
+		icon = GFX_focus_GER_alliance_of_steel_and_blood
 		prerequisite = {
 			focus = GER_Goring_Project
 		}
@@ -898,7 +898,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Armaments_payment_promissory_note
-		icon = GFX_focus_GER_swiss_cash
+		icon = GFX_focus_GER_swiss_money_laundry
 		prerequisite = {
 			focus = GER_Befriend_the_industrial_giants
 		}
@@ -989,7 +989,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Bring_in_foreign_workers
-		icon = GFX_focus_GER_arbeitseinsatz
+		icon = GFX_focus_GER_arbeitsinsatz
 		prerequisite = {
 			focus = GER_Authorize_the_new_armaments_minister
 		}
@@ -1053,7 +1053,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_General_Mobilization_Act
-		icon = GFX_goal_state_economy
+		icon = GFX_focus_generic_state_economy
 		prerequisite = {
 			focus = GER_Bring_in_foreign_workers
 		}
@@ -2508,7 +2508,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Fight_at_the_factory
-		icon = GFX_goal_conscription
+		icon = GFX_focus_generic_conscription
 		prerequisite = {
 			focus = GER_Power_of_the_people
 		}
@@ -2979,7 +2979,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Ensure_air_superiority
-		icon = GFX_focus_GER_ace_fighter_pilot
+		icon = GFX_focus_GER_luftwaffe_expansion
 		prerequisite = {
 			focus = GER_Lessons_from_the_war
 		}
@@ -3277,7 +3277,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_New_bomber
-		icon = GFX_focus_GER_strategic_bombing_doctrine
+		icon = GFX_focus_GER_strategic_bombing
 		prerequisite = {
 			focus = GER_Ensure_air_superiority
 		}
@@ -3310,7 +3310,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Offense_is_the_best_defense
-		icon = GFX_focus_GER_offense_is_the_best_defense
+		icon = GFX_focus_GER_offense_best_defense
 		prerequisite = {
 			focus = GER_Lessons_from_the_war
 		}
@@ -3434,7 +3434,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Modern_infantry
-		icon = GFX_focus_GER_modern_grenadiers
+		icon = GFX_focus_GER_modern_infantry
 		prerequisite = {
 			focus = GER_Offense_is_the_best_defense
 		}
@@ -3477,7 +3477,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Strengthen_the_support_system
-		icon = GFX_focus_GER_division_support_structure
+		icon = GFX_focus_GER_modern_support_structure
 		prerequisite = {
 			focus = GER_Modern_infantry
 		}
@@ -3800,7 +3800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Stuka
-		icon = GFX_focus_GER_junkers_CAS
+		icon = GFX_focus_GER_junkers_company
 		prerequisite = {
 			focus = GER_messerschmitt_1
 			focus = GER_focke
@@ -3825,7 +3825,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_High_speed_bomber
-		icon = GFX_focus_GER_Fast_Bomber
+		icon = GFX_focus_GER_sonic_planes
 		prerequisite = {
 			focus = GER_messerschmitt_1
 			focus = GER_focke
@@ -4433,7 +4433,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Anti_armor_unit
-		icon = GFX_focus_GER_ambush_tactics
+		icon = GFX_focus_GER_pakfront
 		prerequisite = {
 			focus = GER_Fortified_position
 		}
@@ -5265,7 +5265,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_Complete_integration_of_intelligence_services
-		icon = GFX_goal_purges
+		icon = GFX_focus_GER_Purges
 		x = 0
 		y = 1
 		relative_position_id = GER_Integrating_the_wartime_economy

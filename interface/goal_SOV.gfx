@@ -12,6 +12,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_anti_nationalist_propaganda.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_SOV_Assault_Group_Army"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Assault_Group_Army.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_Aviation_Group_Army"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Aviation_Group_Army.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SOV_batt_supp"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_batt_supp.png"
 	}
@@ -68,6 +76,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_Filling_staff.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_SOV_For_the_motherland"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_For_the_motherland.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SOV_For_the_world_revolution"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_For_the_world_revolution.png"
 	}
@@ -90,6 +102,14 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_SOV_increase_il2_production"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_increase_il2_production.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_Infantry_Corps"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Infantry_Corps.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_intensify_pilot_training_program"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_intensify_pilot_training_program.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_SOV_katyusha"
@@ -116,8 +136,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_Mass_Breakthroughs.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_SOV_Modernization_of_the_Red_Army"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Modernization_of_the_Red_Army.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SOV_navy"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_navy.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_New_structure_of_artillery"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_New_structure_of_artillery.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_SOV_New_worker_culture"
@@ -142,6 +170,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_SOV_op_dist"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_op_dist.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_organization_of_the_partisans"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_organization_of_the_partisans.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_SOV_pe2"
@@ -188,6 +220,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_rockets_2.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_SOV_Simplify_weapons_production"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Simplify_weapons_production.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SOV_Soviet_Bear_Awaken"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_Soviet_Bear_Awaken.png"
 	}
@@ -196,8 +232,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_Strengthen_discipline.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_SOV_superior_war_machines"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_superior_war_machines.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_SOV_Sweep_the_underground_church"
 		texturefile = "gfx/interface/goals/SOV/focus_SOV_Sweep_the_underground_church.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_SOV_Tank_Group_Army"
+		texturefile = "gfx/interface/goals/SOV/focus_SOV_Tank_Group_Army.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_SOV_The_fate_of_the_Stalinists"

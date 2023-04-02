@@ -2407,7 +2407,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Simplify_weapons_production
-		icon = GFX_focus_focus_fra_maquis
+		icon = GFX_focus_SOV_Simplify_weapons_production
 
 		prerequisite = { focus = SOV_Decentralization focus = SOV_Strengthen_discipline  }
 
@@ -2441,7 +2441,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_New_structure_of_artillery
-		icon = GFX_goal_generic_army_artillery2
+		icon = GFX_focus_SOV_New_structure_of_artillery
 
 		prerequisite = { focus = SOV_Simplify_weapons_production }
 
@@ -4027,7 +4027,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Conquer_the_East
-		icon = GFX_focus_FRA_cross_the_channel
+		icon = GFX_focus_generic_cross_the_channel
 
 		prerequisite = { focus = SOV_Put_into_the_Black_Sea_Fleet }
 
@@ -7209,9 +7209,9 @@ focus_tree = {
 			factor = 1500
 		}
 
-		allow_branch = {
-			has_government = communism
-		}
+		# allow_branch = {
+		# 	has_government = communism
+		# }
 
 		available = {
 			num_subjects > 0
@@ -7938,7 +7938,7 @@ focus_tree = {
 	focus = {
 		id = SOV_superior_war_machines
 
-		icon = GFX_focus_generic_tank_production
+		icon = GFX_focus_SOV_superior_war_machines
 		prerequisite = { focus = SOV_pc_of_mortar_armament }
 		x = 0
 		y = 1
@@ -7983,7 +7983,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Tank_Group_Army
 
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_SOV_Tank_Group_Army
 		prerequisite = { focus = SOV_superior_war_machines }
 		x = 0
 		y = 1
@@ -8059,8 +8059,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_intensify_pilot_training_program
-
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_focus_SOV_intensify_pilot_training_program
 		prerequisite = { focus = SOV_increase_aircraft_production }
 		x = 0
 		y = 1
@@ -8090,7 +8089,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Aviation_Group_Army
 
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_SOV_Aviation_Group_Army
 		prerequisite = { focus = SOV_intensify_pilot_training_program }
 		x = 0
 		y = 1
@@ -8113,7 +8112,7 @@ focus_tree = {
 	focus = {
 		id = SOV_Assault_Group_Army
 
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_SOV_Assault_Group_Army
 		prerequisite = { focus = SOV_Tank_Group_Army }
 
 		prerequisite = { focus = SOV_Aviation_Group_Army }
@@ -8390,7 +8389,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_organization_of_the_partisans
-		icon = GFX_focus_focus_fra_maquis
+		icon = GFX_focus_SOV_organization_of_the_partisans
 		prerequisite = { focus = SOV_great_patriotic_war }
 		x = 2
 		y = 1
@@ -8641,7 +8640,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Modernization_of_the_Red_Army
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_SOV_Modernization_of_the_Red_Army
 		prerequisite = { focus = SOV_form_the_stavka }
 		x = 0
 		y = 1
@@ -8768,7 +8767,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Infantry_Corps
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SOV_Infantry_Corps
 		prerequisite = { focus = SOV_Fieldrunners }
 		x = 0
 		y = 1
@@ -8812,7 +8811,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_For_the_motherland
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SOV_For_the_motherland
 		prerequisite = { focus = SOV_form_the_stavka }
 
 		prerequisite = { focus = SOV_organization_of_the_partisans }

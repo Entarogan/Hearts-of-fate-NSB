@@ -1,3 +1,5 @@
+#!gfx:interface\goal_UKR.gfx
+#!gfx:interface\goal_generic.gfx
 shared_focus = {
 	id = UKR_Khrushchev_goes_to_Moscow
 	icon = GFX_focus_ger_strike_at_the_source
@@ -223,7 +225,7 @@ shared_focus = {
 
 shared_focus = {
 	id = UKR_carrot
-	icon = GFX_goal_SOV_Carrot_and_Stick
+	icon = GFX_focus_UKR_Carrot_and_Stick
 	prerequisite = {
 		focus = UKR_Labor_reform_camp
 	}

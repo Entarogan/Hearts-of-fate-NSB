@@ -1,4 +1,5 @@
 #!gfx:interface\goal_JAP.gfx
+#!gfx:interface\goal_RUS.gfx
 #!gfx:interface\goal_generic.gfx
 focus_tree = {
 	id = japan_wtt_focus
@@ -152,7 +153,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_lessons_from_the_crisis
-		icon = GFX_Maritime_Silkroad_2
+		icon = GFX_focus_JAP_Maritime_Silkroad_2
 		cost = 5
 		x = 58
 		y = 0
@@ -1028,7 +1029,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_army_expansion_law
-		icon = GFX_goal_japanese_officer
+		icon = GFX_focus_RUS_japanese_officer
 		cost = 5
 		prerequisite = {
 			focus = JAP_lessons_from_the_crisis
@@ -8352,7 +8353,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_conservatives_win
-		icon = GFX_COS_Ferrer_Coup
+		icon = GFX_focus_generic_ban_the_radicals
 		cost = 7
 		prerequisite = {
 			focus = JAP_showa_democracy

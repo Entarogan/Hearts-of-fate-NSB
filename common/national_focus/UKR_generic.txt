@@ -1,4 +1,5 @@
-#!gfx:interface\ukr_nationalism_focus.gfx
+#!gfx:interface\goal_UKR.gfx
+#!gfx:interface\goal_generic.gfx
 shared_focus  = {
 	id = UKR_generic_Zaporizhzhia_industrial_complex
 	icon = GFX_focus_UKR_generic_Zaporizhzhia_industrial_complex
