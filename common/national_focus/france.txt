@@ -42,7 +42,7 @@ focus_tree = {
 					ruling_only = yes
 				}
 				has_country_leader = {
-					character = FRA_napoléon_bonaparte
+					character = FRA_napoleon_bonaparte
 					ruling_only = yes
 				}
 			}
@@ -304,7 +304,7 @@ focus_tree = {
 					ruling_only = yes
 				}
 				has_country_leader = {
-					character = FRA_napoléon_bonaparte
+					character = FRA_napoleon_bonaparte
 					ruling_only = yes
 				}
 				has_country_leader = {
@@ -437,7 +437,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -488,7 +488,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -5981,7 +5981,7 @@ focus_tree = {
 		available = {
 			NOT = {
 				has_country_leader = {
-					character = FRA_napoléon_bonaparte
+					character = FRA_napoleon_bonaparte
 					ruling_only = yes
 				}
 			}
@@ -6007,7 +6007,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6054,7 +6054,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6169,7 +6169,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6231,7 +6231,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6419,7 +6419,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6478,7 +6478,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6529,7 +6529,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6574,7 +6574,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6630,7 +6630,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6672,7 +6672,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6721,7 +6721,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -6853,7 +6853,7 @@ focus_tree = {
 				limit = {
 					or = {
 						has_country_leader = {
-							character = FRA_napoléon_bonaparte
+							character = FRA_napoleon_bonaparte
 							ruling_only = yes
 						}
 						has_country_leader = {
@@ -10384,7 +10384,7 @@ focus_tree = {
 		available = {
 			has_country_flag = Autocracy_Settled
 			has_country_leader = {
-				character = FRA_napoléon_bonaparte
+				character = FRA_napoleon_bonaparte
 				ruling_only = yes
 			}
 			is_subject = no

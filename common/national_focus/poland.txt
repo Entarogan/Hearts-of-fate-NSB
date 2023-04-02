@@ -1,6 +1,5 @@
-#!gfx:interface\goalsFate_rom.gfx
-#!gfx:interface\goalsFate_POL.gfx
-#!gfx:interface\goalsFate.gfx
+#!gfx:interface\goal_POL.gfx
+#!gfx:interface\goal_generic.gfx
 focus_tree = {
 	id = polish_focus_new
 	country = {
@@ -6944,7 +6943,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_firewatch
-		icon = GFX_focus_poland_firewatch
+		icon = GFX_focus_POL_firewatch
 		cost = 5
 		prerequisite = {
 			focus = POL_eastern_conscripts
@@ -7289,7 +7288,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Glory_of_Kazimierz
-		icon = GFX_focus_Kazimierz
+		icon = GFX_focus_POL_Kazimierz
 		cost = 7
 		prerequisite = {
 			focus = POL_plan_west

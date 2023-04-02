@@ -1,3 +1,5 @@
+#!gfx:interface\goal_RUS.gfx
+#!gfx:interface\goal_generic.gfx
 focus_tree = {
 	id = rus
 	country = {
@@ -25,7 +27,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_the_royal_marriage
-		icon = GFX_focus_Royal_Marriage
+		icon = GFX_focus_RUS_Royal_Marriage
 		cost = 3
 		x = 13
 		y = 6
@@ -62,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_expand_pacific_fleet
-		icon = GFX_goal_RUS_navy
+		icon = GFX_focus_RUS_navy
 		cost = 7
 		x = 0
 		y = 5
@@ -348,7 +350,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_redeem_glory_of_past
-		icon = GFX_focus_Russian_Imperialism
+		icon = GFX_focus_RUS_Imperialism
 		cost = 5
 		prerequisite = {
 			focus = rus_no_compromise_on_united_russia
@@ -566,7 +568,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_siberian_headquarter
-		icon = GFX_goal_RUS_army
+		icon = GFX_focus_RUS_army
 		cost = 5
 		prerequisite = {
 			focus = rus_unite_white_movement
@@ -753,7 +755,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_black_league_coup
-		icon = GFX_focus_Black_Hundred_Coup
+		icon = GFX_focus_RUS_Black_Hundred_Coup
 		cost = 10
 		prerequisite = {
 			focus = rus_power_politics
@@ -840,7 +842,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Kadoc_the_vozhd
-		icon = GFX_focus_Kadoc_focus
+		icon = GFX_focus_RUS_Kadoc_focus
 		cost = 10
 		prerequisite = {
 			focus = rus_power_politics
@@ -941,7 +943,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_support_from_Gosudarstvennaya_duma
-		icon = GFX_focus_Imperial_Duma
+		icon = GFX_focus_RUS_Imperial_Duma
 		cost = 7
 		prerequisite = {
 			focus = rus_negotiation_with_democrats
@@ -1026,7 +1028,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_restore_the_democracy
-		icon = GFX_focus_Russian_Democracy
+		icon = GFX_focus_RUS_Democracy
 		cost = 5
 		prerequisite = {
 			focus = rus_support_from_Gosudarstvennaya_duma
@@ -1306,7 +1308,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Tsarina_Batiushka
-		icon = GFX_focus_Anastasia_Romanov_with_Flags
+		icon = GFX_focus_RUS_Anastasia_Romanov_with_Flags
 		cost = 5
 		prerequisite = {
 			focus = rus_all_russian_supreme_government
@@ -2446,7 +2448,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_expand_siberian_railway
-		icon = GFX_focus_generic_optimize_production_progress
+		icon = GFX_focus_RUS_optimize_production_progress
 		cost = 14
 		prerequisite = {
 			focus = rus_national_investment_bank
@@ -2821,7 +2823,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_befriend_finland
-		icon = GFX_focus_befriend_finland
+		icon = GFX_focus_RUS_befriend_finland
 		cost = 5
 		prerequisite = {
 			focus = rus_federal_russia
@@ -3214,7 +3216,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Yunarmia
-		icon = GFX_RUS_Yunarmiya
+		icon = GFX_focus_RUS_Yunarmiya
 		cost = 5
 		prerequisite = {
 			focus = rus_Kadoc_the_vozhd
@@ -3574,7 +3576,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_rise_of_russian_industry
-		icon = GFX_focus_MEL_Central_Refuse_Disposal
+		icon = GFX_focus_RUS_Central_Refuse_Disposal
 		cost = 7
 		prerequisite = {
 			focus = rus_expand_siberian_railway
@@ -4072,7 +4074,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_siberian_air_forces_headquarter
-		icon = GFX_goal_RUS_airforce
+		icon = GFX_focus_RUS_airforce
 		cost = 5
 		prerequisite = {
 			focus = rus_siberian_headquarter
@@ -4135,7 +4137,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_bomber_production
-		icon = GFX_focus_generic_wind_bomb
+		icon = GFX_focus_RUS_wind_bomb
 		cost = 2
 		prerequisite = {
 			focus = rus_siberian_air_forces_headquarter
@@ -4345,7 +4347,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_modern_artillery
-		icon = GFX_focus_generic_Anti_Armor_Weapons
+		icon = GFX_focus_RUS_Anti_Armor_Weapons
 		cost = 5
 		prerequisite = {
 			focus = rus_lesson_from_the_great_war
@@ -4419,7 +4421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_fall_of_ussr
-		icon = GFX_focus_Kremlin
+		icon = GFX_focus_RUS_Kremlin
 		cost = 10
 		prerequisite = {
 			focus = rus_continue_the_civil_war
@@ -4523,7 +4525,7 @@ focus_tree = {
 	focus = {
 		###农业复苏
 		id = rus_agricultural_revival
-		icon = GFX_focus_generic_japanese_farm_subsidies
+		icon = GFX_focus_RUS_japanese_farm_subsidies
 		cost = 5
 		prerequisite = {
 			focus = rus_fall_of_ussr
@@ -4991,7 +4993,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_all_russian_supreme_government
-		icon = GFX_goal_RUS_flag
+		icon = GFX_focus_RUS_flag
 		cost = 7
 		prerequisite = {
 			focus = rus_prohibit_democratic_opponents
@@ -5273,7 +5275,7 @@ focus_tree = {
 
 	focus = {
 		id = rus_PSR_comes_back
-		icon = GFX_focus_generic_PSR_2
+		icon = GFX_focus_RUS_PSR_2
 		cost = 10
 		prerequisite = {
 			focus = rus_restore_the_democracy
@@ -5297,7 +5299,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Menshviks_win
-		icon = GFX_focus_generic_Mensheviks
+		icon = GFX_focus_RUS_Mensheviks
 		cost = 10
 		prerequisite = {
 			focus = rus_restore_the_democracy
@@ -5318,7 +5320,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Octobrists_win
-		icon = GFX_focus_generic_Oktyabrya
+		icon = GFX_focus_RUS_Oktyabrya
 		cost = 10
 		prerequisite = {
 			focus = rus_restore_the_democracy
@@ -5339,7 +5341,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_kadet_wins
-		icon = GFX_focus_Kadet
+		icon = GFX_focus_RUS_Kadet
 		cost = 10
 		prerequisite = {
 			focus = rus_restore_the_democracy
@@ -5358,7 +5360,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_reestablish_authority
-		icon = GFX_focus_russian_militarism
+		icon = GFX_focus_RUS_militarism
 		cost = 5
 		prerequisite = {
 			focus = rus_Tsarina_Batiushka
@@ -5517,7 +5519,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_restore_trade_unions
-		icon = GFX_goal_syndicalist_workers
+		icon = GFX_focus_generic_syndicalist_workers
 		cost = 5
 		prerequisite = {
 			focus = rus_confront_racism
@@ -5586,7 +5588,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_social_charity
-		icon = GFX_goal_workers_rights
+		icon = GFX_focus_generic_workers_rights
 		cost = 7
 		prerequisite = {
 			focus = rus_regulate_aristocrats
@@ -5717,7 +5719,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_revere_the_heroes
-		icon = GFX_focus_rus_revere_the_heroes
+		icon = GFX_focus_RUS_revere_the_heroes
 		cost = 3
 		prerequisite = {
 			focus = rus_the_Empire_strikes_back
@@ -5744,7 +5746,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Church_of_All_Saints
-		icon = GFX_focus_rus_Church_of_All_Saints
+		icon = GFX_focus_RUS_Church_of_All_Saints
 		cost = 3
 		prerequisite = {
 			focus = rus_the_Empire_strikes_back
@@ -5771,7 +5773,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_fix_winter_palace
-		icon = GFX_focus_rus_fix_winter_palace
+		icon = GFX_focus_RUS_fix_winter_palace
 		cost = 3
 		prerequisite = {
 			focus = rus_the_Empire_strikes_back
@@ -5798,7 +5800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Order_back_to_Russia
-		icon = GFX_focus_Preserve_Russia
+		icon = GFX_focus_RUS_Preserve_Russia
 		cost = 5
 		available = {
 			is_subject = no
@@ -5859,7 +5861,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_voice_of_tsarina
-		icon = GFX_goal_RUS_monarchy
+		icon = GFX_focus_RUS_monarchy
 		cost = 5
 		prerequisite = {
 			focus = rus_Romanov_cruise
@@ -6076,7 +6078,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_secure_peasants
-		icon = GFX_focus_NUE_support_from_grassroot_youkais
+		icon = GFX_focus_RUS_support_from_grassroot_youkais
 		cost = 5
 		prerequisite = {
 			focus = rus_PSR_comes_back
@@ -6135,7 +6137,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_reform_bureaucrats
-		icon = GFX_focus_generic_interest_exchange
+		icon = GFX_focus_RUS_interest_exchange
 		cost = 5
 		prerequisite = {
 			focus = rus_kadet_wins
@@ -6153,7 +6155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_protect_civil_liberty
-		icon = GFX_focus_KYK_true_equality_between_Youkai_and_Human
+		icon = GFX_focus_RUS_true_equality_between_Youkai_and_Human
 		cost = 5
 		prerequisite = {
 			focus = rus_kadet_wins
@@ -6321,7 +6323,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_europe_political_refugee
-		icon = GFX_goal_generic_microphone_diplomacy
+		icon = GFX_focus_RUS_generic_microphone_diplomacy
 		cost = 5
 		prerequisite = {
 			focus = rus_kadet_wins
@@ -6523,7 +6525,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_privatize_soviet_industry
-		icon = GFX_focus_generic_open_up
+		icon = GFX_focus_RUS_open_up
 		cost = 6
 		prerequisite = {
 			focus = rus_a_new_better_russia
@@ -6641,7 +6643,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Euroasianism
-		icon = GFX_focus_euroasianism
+		icon = GFX_focus_RUS_euroasianism
 		cost = 5
 		prerequisite = {
 			focus = rus_redeem_glory_of_past
@@ -6741,7 +6743,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_European_gendarme
-		icon = GFX_focus_to_the_west
+		icon = GFX_focus_RUS_to_the_west
 		cost = 5
 		prerequisite = {
 			focus = rus_redeem_glory_of_past
@@ -6910,7 +6912,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_legacy_of_the_whites
-		icon = GFX_goal_RUS_white_legacy
+		icon = GFX_focus_RUS_white_legacy
 		cost = 5
 		prerequisite = {
 			focus = rus_keep_military_supervision
@@ -7153,7 +7155,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_inner_circle
-		icon = GFX_focus_inner_circle
+		icon = GFX_focus_RUS_inner_circle
 		cost = 5
 		prerequisite = {
 			focus = rus_black_league_coup
@@ -7212,7 +7214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_pravoslavie_samoderzhavie_narodnost
-		icon = GFX_focus_russian_trinity
+		icon = GFX_focus_RUS_trinity
 		cost = 5
 		prerequisite = {
 			focus = rus_Cultivate_fanaticism
@@ -7270,7 +7272,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_spirit_of_kazan
-		icon = GFX_focus_Spirit_of_Kazan
+		icon = GFX_focus_RUS_Spirit_of_Kazan
 		cost = 5
 		prerequisite = {
 			focus = rus_siberian_headquarter
@@ -7312,7 +7314,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Formally_established_the_Air_Force
-		icon = GFX_goal_RUS_airforce
+		icon = GFX_focus_RUS_airforce
 		cost = 5
 		x = 8
 		y = -2
@@ -7444,7 +7446,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Integrate_the_paratroopers
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Formally_established_the_Air_Force
 		}
@@ -7559,7 +7561,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Expand_flight_school
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Renovating_Soviet_aircraft
 		}
@@ -7604,7 +7606,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Women_in_Air_Force
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Expand_flight_school
 		}
@@ -7652,7 +7654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Independent_airborne_command
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Integrate_the_paratroopers
 		}
@@ -7696,7 +7698,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Flying_tank
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Renovating_Soviet_aircraft
 		}
@@ -7731,7 +7733,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Air_to_ground_coordination
-		icon = GFX_goal_DOM_Air_Fuel
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_Expand_flight_school
 		}
@@ -7806,7 +7808,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Alexandre_Nevskiy
-		icon = GFX_GER_strategic_bombing_doctrine
+		icon = GFX_focus_RUS_airforce
 		prerequisite = {
 			focus = rus_support_Sikorsky_research
 		}
@@ -7833,7 +7835,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Helicopter_Experiment
-		icon = GFX_GER_strategic_bombing_doctrine
+		icon = GFX_focus_generic_Air_Fuel
 		prerequisite = {
 			focus = rus_support_Sikorsky_research
 		}
@@ -8285,7 +8287,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_New_command_level
-		icon = GFX_goal_japanese_officer
+		icon = GFX_focus_RUS_japanese_officer
 		cost = 5
 		available = {
 			is_subject_of = JAP
@@ -8344,7 +8346,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_Japan_economic_development
-		icon = GFX_goal_JAP_yen
+		icon = GFX_focus_RUS_Japanese_yen
 		cost = 15
 		available = {
 			is_subject_of = JAP
@@ -8519,7 +8521,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_great_patriotic_war
-		icon = GFX_goal_liberty
+		icon = GFX_focus_generic_liberty
 		cost = 3
 		x = 5
 		y = 8
@@ -9356,7 +9358,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_the_glory_of_the_russia_army
-		icon = GFX_focus_Battle_on_the_ice
+		icon = GFX_focus_RUS_Battle_on_the_ice
 		prerequisite = {
 			focus = RUS_Commando_group
 		}
@@ -9637,7 +9639,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_organization_of_the_partisans
-		icon = GFX_focus_Black_League
+		icon = GFX_focus_RUS_Black_League
 		prerequisite = {
 			focus = rus_great_patriotic_war
 		}

@@ -1,5 +1,5 @@
-#!gfx:interface\goalsFate_rom.gfx
-#!gfx:interface\goalsFate_sov.gfx
+#!gfx:interface\goal_ROM.gfx
+#!gfx:interface\goal_generic.gfx
 focus_tree = {
 	id = romanian_focus
 	country = {
@@ -295,7 +295,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROM_end_of_tyranny
-		icon = GFX_focus_NMS_war_against_peace_breaker
+		icon = GFX_focus_ROM_war_against_peace_breaker
 		cost = 5
 		x = 25
 		y = 10
@@ -3317,7 +3317,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROM_fortify_bessarabia
-		icon = GFX_goal_nested_fortifications
+		icon = GFX_focus_generic_nested_fortifications
 		cost = 5
 		prerequisite = {
 			focus = ROM_secret_deal_with_uranian_soviets
@@ -5467,7 +5467,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ROM_a_new_dictator
-		icon = GFX_focus_NMS_pacify_internal_disorder
+		icon = GFX_focus_ROM_pacify_internal_disorder
 		cost = 6
 		prerequisite = {
 			focus = ROM_Doll_Judgement

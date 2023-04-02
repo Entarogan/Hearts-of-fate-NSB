@@ -1,14 +1,15 @@
 spriteTypes = {
 	SpriteType = {
-		name = "GFX_focus_GER_attack_Russia_shine"
-		texturefile = "gfx/interface/goals/focus_GER_attack_Russia.png"
+		name = "GFX_focus_ENG_befriend_finland_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_befriend_finland.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_attack_Russia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_befriend_finland.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -16,11 +17,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_attack_Russia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_befriend_finland.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -29,318 +31,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
-	SpriteType = {
-		name = "GFX_focus_GER_Determine_the_party_program_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Determine_the_party_program.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Determine_the_party_program.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Determine_the_party_program.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Entering_the_school_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Entering_the_school.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Entering_the_school.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Entering_the_school.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Goring_Project_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Goring_Project.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Goring_Project.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Goring_Project.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_improve_national_spirit_shine"
-		texturefile = "gfx/interface/goals/focus_GER_improve_national_spirit.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_improve_national_spirit.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_improve_national_spirit.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Obligations_of_Youth_League_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Obligations_of_Youth_League.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Obligations_of_Youth_League.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Obligations_of_Youth_League.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Preventive_arrest_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Preventive_arrest.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Preventive_arrest.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Preventive_arrest.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Reconstruction_of_faith_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Reconstruction_of_faith.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Reconstruction_of_faith.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Reconstruction_of_faith.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_Strasser_Project_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Strasser_Project.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Strasser_Project.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Strasser_Project.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_TST_position_shine"
-		texturefile = "gfx/interface/goals/focus_GER_TST_position.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_TST_position.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_TST_position.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	SpriteType = {
-		name = "GFX_focus_GER_welthauptstadt_germania_shine"
-		texturefile = "gfx/interface/goals/focus_GER_welthauptstadt_germania.png"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_welthauptstadt_germania.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_welthauptstadt_germania.png"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-		legacy_lazy_load = no
-	}
-	####2
 
 	SpriteType = {
-		name = "GFX_focus_GER_anschluss_shine"
-		texturefile = "gfx/interface/goals/focus_GER_anschluss.png"
+		name = "GFX_focus_ENG_british_armed_convoy_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_british_armed_convoy.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_anschluss.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_british_armed_convoy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -348,11 +50,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_anschluss.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_british_armed_convoy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -361,16 +64,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_demand_sudetenland_shine"
-		texturefile = "gfx/interface/goals/focus_GER_demand_sudetenland.png"
+		name = "GFX_focus_ENG_build_the_holy_city_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_build_the_holy_city.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_demand_sudetenland.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_build_the_holy_city.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -378,11 +83,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_demand_sudetenland.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_build_the_holy_city.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -391,16 +97,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_end_of_czechoslovakia_shine"
-		texturefile = "gfx/interface/goals/focus_GER_end_of_czechoslovakia.png"
+		name = "GFX_focus_ENG_CBI_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_CBI.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_end_of_czechoslovakia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_CBI.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -408,11 +116,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_end_of_czechoslovakia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_CBI.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -421,16 +130,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_fate_of_greece_shine"
-		texturefile = "gfx/interface/goals/focus_GER_fate_of_greece.png"
+		name = "GFX_focus_ENG_chaledeas_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_chaledeas.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_fate_of_greece.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_chaledeas.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -438,11 +149,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_fate_of_greece.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_chaledeas.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -451,16 +163,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_fate_of_yugoslavia_shine"
-		texturefile = "gfx/interface/goals/focus_GER_fate_of_yugoslavia.png"
+		name = "GFX_focus_ENG_controlled_reaction_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_controlled_reaction.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_fate_of_yugoslavia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_controlled_reaction.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -468,11 +182,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_fate_of_yugoslavia.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_controlled_reaction.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -481,16 +196,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_first_vienna_award_shine"
-		texturefile = "gfx/interface/goals/focus_GER_first_vienna_award.png"
+		name = "GFX_focus_ENG_defend_britain_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_defend_britain.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_first_vienna_award.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_defend_britain.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -498,11 +215,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_first_vienna_award.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_defend_britain.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -511,16 +229,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_HUN_Ultimatum_shine"
-		texturefile = "gfx/interface/goals/focus_GER_HUN_Ultimatum.png"
+		name = "GFX_focus_ENG_england_navy_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_england_navy.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_HUN_Ultimatum.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_england_navy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -528,11 +248,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_HUN_Ultimatum.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_england_navy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -541,16 +262,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_osttruppen_shine"
-		texturefile = "gfx/interface/goals/focus_GER_osttruppen.png"
+		name = "GFX_focus_ENG_francis_drake_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_francis_drake.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_osttruppen.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_francis_drake.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -558,11 +281,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_osttruppen.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_francis_drake.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -571,16 +295,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Reiterate_Greater_Germany_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Reiterate_Greater_Germany.png"
+		name = "GFX_focus_ENG_god_save_the_king_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_god_save_the_king.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Reiterate_Greater_Germany.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_god_save_the_king.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -588,11 +314,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Reiterate_Greater_Germany.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_god_save_the_king.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -601,16 +328,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Attack_from_the_bottom_of_the_sea_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Attack_from_the_bottom_of_the_sea.png"
+		name = "GFX_focus_ENG_IRE_sanctuary_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_IRE_sanctuary.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Attack_from_the_bottom_of_the_sea.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_IRE_sanctuary.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -618,11 +347,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Attack_from_the_bottom_of_the_sea.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_IRE_sanctuary.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -631,16 +361,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Authorize_the_new_armaments_minister_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Authorize_the_new_armaments_minister.png"
+		name = "GFX_focus_ENG_new_camelot_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_new_camelot.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Authorize_the_new_armaments_minister.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_new_camelot.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -648,11 +380,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Authorize_the_new_armaments_minister.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_new_camelot.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -661,16 +394,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Clean_up_Juncker_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Clean_up_Juncker.png"
+		name = "GFX_focus_ENG_nightingale_act_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_nightingale_act.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Clean_up_Juncker.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_nightingale_act.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -678,11 +413,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Clean_up_Juncker.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_nightingale_act.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -691,16 +427,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_DAF_shine"
-		texturefile = "gfx/interface/goals/focus_GER_DAF.png"
+		name = "GFX_focus_ENG_radiant_path_true_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_radiant_path_true.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_DAF.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_radiant_path_true.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -708,11 +446,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_DAF.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_radiant_path_true.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -721,16 +460,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Fallschirmjager_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Fallschirmjager.png"
+		name = "GFX_focus_ENG_scotland_industry_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_scotland_industry.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Fallschirmjager.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_scotland_industry.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -738,11 +479,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Fallschirmjager.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_scotland_industry.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -751,16 +493,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_Old_glory_shine"
-		texturefile = "gfx/interface/goals/focus_GER_Old_glory.png"
+		name = "GFX_focus_ENG_scotland_navy_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_scotland_navy.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Old_glory.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_scotland_navy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -768,11 +512,12 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_Old_glory.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_scotland_navy.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -781,16 +526,18 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_focus_GER_RAD_shine"
-		texturefile = "gfx/interface/goals/focus_GER_RAD.png"
+		name = "GFX_focus_ENG_strengthen_the_king_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_strengthen_the_king.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_RAD.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_strengthen_the_king.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
@@ -798,11 +545,111 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/focus_GER_RAD.png"
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_strengthen_the_king.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
 			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_triple_hermes_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_triple_hermes.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_triple_hermes.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_triple_hermes.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_wales_industry_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_wales_industry.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_wales_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_wales_industry.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_ENG_wales_navy_shine"
+		texturefile = "gfx/interface/goals/ENG/focus_ENG_wales_navy.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_wales_navy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/ENG/focus_ENG_wales_navy.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
 			animationdelay = 0
 			animationblendmode = "add"
 			animationtype = "scrolling"
