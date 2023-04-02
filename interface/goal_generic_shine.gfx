@@ -1353,6 +1353,39 @@ spriteTypes = {
 	}
 
 	SpriteType = {
+		name = "GFX_focus_generic_eduction_1_shine"
+		texturefile = "gfx/interface/goals/generic/focus_generic_eduction_1.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_eduction_1.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_eduction_1.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
 		name = "GFX_focus_generic_elections_shine"
 		texturefile = "gfx/interface/goals/generic/focus_generic_elections.png"
 		effectFile = "gfx/FX/buttonstate.lua"
@@ -1683,11 +1716,11 @@ spriteTypes = {
 	}
 
 	SpriteType = {
-		name = "GFX_focus_generic_foreign_investments._shine"
-		texturefile = "gfx/interface/goals/generic/focus_generic_foreign_investments..png"
+		name = "GFX_focus_generic_foreign_investments_shine"
+		texturefile = "gfx/interface/goals/generic/focus_generic_foreign_investments.png"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/focus_generic_foreign_investments..png"
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_foreign_investments.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -1700,7 +1733,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/generic/focus_generic_foreign_investments..png"
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_foreign_investments.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -1833,6 +1866,39 @@ spriteTypes = {
 		}
 		animation = {
 			animationmaskfile = "gfx/interface/goals/generic/focus_generic_graveyard.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+	SpriteType = {
+		name = "GFX_focus_generic_happy_new_life_shine"
+		texturefile = "gfx/interface/goals/generic/focus_generic_happy_new_life.png"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_happy_new_life.png"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationlooping = no
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/generic/focus_generic_happy_new_life.png"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

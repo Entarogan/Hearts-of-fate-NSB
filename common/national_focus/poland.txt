@@ -5334,7 +5334,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_raise_the_black_madonna
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_focus_POL_raise_the_black_madonna
 		cost = 5
 		prerequisite = {
 			focus = POL_the_Great_Separation

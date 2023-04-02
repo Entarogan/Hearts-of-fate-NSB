@@ -220,6 +220,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/JAP/focus_JAP_New_Age_Technology.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_JAP_nobody_suffers_damage"
+		texturefile = "gfx/interface/goals/JAP/focus_JAP_nobody_suffers_damage.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_JAP_old_zaibatsus"
 		texturefile = "gfx/interface/goals/JAP/focus_JAP_old_zaibatsus.png"
 	}
@@ -246,6 +250,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_JAP_Political_Think_Tank_policy_Groups"
 		texturefile = "gfx/interface/goals/JAP/focus_JAP_Political_Think_Tank_policy_Groups.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_proclaim_reformation"
+		texturefile = "gfx/interface/goals/JAP/focus_JAP_proclaim_reformation.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_JAP_purge_bureaucrat"
@@ -370,6 +378,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_JAP_the_empire"
 		texturefile = "gfx/interface/goals/JAP/focus_JAP_the_empire.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_JAP_the_longest_day"
+		texturefile = "gfx/interface/goals/JAP/focus_JAP_the_longest_day.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_JAP_The_Matsuoka_Plan"

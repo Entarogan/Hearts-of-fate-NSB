@@ -7654,7 +7654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_Independent_airborne_command
-		icon = GFX_focus_generic_Air_Fuel
+		icon = GFX_focus_RUS_bear_from_air
 		prerequisite = {
 			focus = rus_Integrate_the_paratroopers
 		}

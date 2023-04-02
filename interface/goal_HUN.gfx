@@ -132,6 +132,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/HUN/focus_HUN_german_control.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_HUN_globally_hunting"
+		texturefile = "gfx/interface/goals/HUN/focus_HUN_globally_hunting.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_HUN_global_industry"
 		texturefile = "gfx/interface/goals/HUN/focus_HUN_global_industry.png"
 	}

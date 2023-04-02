@@ -20,6 +20,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/RUS/focus_RUS_Battle_on_the_ice.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_RUS_bear_from_air"
+		texturefile = "gfx/interface/goals/RUS/focus_RUS_bear_from_air.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_RUS_befriend_finland"
 		texturefile = "gfx/interface/goals/RUS/focus_RUS_befriend_finland.png"
 	}

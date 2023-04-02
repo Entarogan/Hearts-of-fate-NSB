@@ -741,7 +741,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Public_execution
-		icon = GFX_focus_SOV_Public_execution
+		icon = GFX_focus_SOV_Public_execution_true
 		prerequisite = { focus = SOV_Preemptive_force }
 
 		prerequisite = { focus = SOV_Stationed_in_the_government }
@@ -892,7 +892,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_No_population_movement
-		icon = GFX_focus_SOV_End_Freedom_of_Movement
+		icon = GFX_focus_SOV_No_population_movement
 		prerequisite = { focus = SOV_expend_NKVD }
 		x = 1
 		y = 1
@@ -1081,7 +1081,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Tukhachevsky_coup
-		icon = GFX_focus_focus_fra_fascist_threat
+		icon = GFX_focus_SOV_Tukhachevsky_coup
 		prerequisite = { focus = SOV_Great_Purge_will_fail }
 		x = 4
 		y = 1
@@ -1110,7 +1110,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_End_the_cleaning
-		icon = GFX_focus_spr_crush_the_revolution
+		icon = GFX_focus_SOV_Tank_Group_Army
 		prerequisite = { focus = SOV_Tukhachevsky_coup }
 		x = 0
 		y = 1
@@ -1374,7 +1374,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Voluntary_collectivization
-		icon = GFX_goal_generic_consumer_goods
+		icon = GFX_focus_SOV_Voluntary_collectivization
 		prerequisite = { focus = SOV_Return_power_to_the_union }
 
 		prerequisite = { focus = SOV_Ensure_the_worker_peasant_alliance }
@@ -4082,7 +4082,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_finish_five_year_plan
-		icon = GFX_focus_generic_state_economy_2
+		icon = GFX_focus_SOV_finish_five_year_plan
 
 		x = 14
 		y = 0
@@ -5065,7 +5065,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Maintain_the_Trans_Siberian_Railway
-		icon = GFX_focus_generic_railroad
+		icon = GFX_focus_SOV_train_1
 
 		prerequisite = { focus = SOV_finish_five_year_plan }
 
@@ -7282,7 +7282,7 @@ focus_tree = {
 	focus = {
 		id = SOV_great_patriotic_war
 
-		icon = GFX_focus_generic_join_comintern
+		icon = GFX_focus_SOV_protect_our_fatherland
 
 		x = 0
 		y = 2
@@ -8250,7 +8250,8 @@ focus_tree = {
 
 	focus = {
 		id = SOV_the_defense_of_moscow
-		icon = GFX_focus_SOV_the_defense_of_moscow
+		# icon = GFX_focus_SOV_the_defense_of_moscow
+		icon = GFX_focus_SOV_defense_of_moscow
 		prerequisite = { focus = SOV_the_road_of_life }
 		x = 0
 		y = 1
@@ -8681,7 +8682,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_commissars_organization_question
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_SOV_political_commissar
 		prerequisite = { focus = SOV_Modernization_of_the_Red_Army }
 		x = 0
 		y = 1

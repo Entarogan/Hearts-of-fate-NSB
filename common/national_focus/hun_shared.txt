@@ -6790,7 +6790,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Our_journey_is_the_sea_of_stars
-	icon = GFX_focus_HUN_global_industry
+	icon = GFX_focus_HUN_globally_hunting
 	prerequisite = {
 		focus = HUN_Nomadism_is_a_good_civilization
 	}
