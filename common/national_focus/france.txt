@@ -1,3 +1,5 @@
+#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goal_FRA.gfx
 focus_tree = {
 	id = french_focus
 	country = {
