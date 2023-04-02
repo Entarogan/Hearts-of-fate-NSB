@@ -561,7 +561,9 @@ focus_tree = {
 
 	focus = {
 		id = ITA_arditi_spirit
-		icon = GFX_focus_ITA_arditi_spirit
+		# icon = GFX_focus_ITA_arditi_spirit
+		icon = GFX_focus_ITA_moschettieri_del_duce
+
 		prerequisite = { focus = ITA_Army_modernization }
 
 		mutually_exclusive = {

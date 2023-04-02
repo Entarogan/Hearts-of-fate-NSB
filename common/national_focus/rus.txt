@@ -9141,7 +9141,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_Armored_Infantry
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_generic_armoured_truck
 		prerequisite = {
 			focus = RUS_Soviet_artillery_drawings
 		}
@@ -9325,7 +9325,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_Commando_group
-		icon = GFX_goal_generic_occupy_start_war
+		icon = GFX_focus_generic_army_grand_battleplan
 		prerequisite = {
 			focus = RUS_the_iron_wall_of_russian_resolve
 		}
@@ -9674,7 +9674,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_lessons_of_war
-		icon = GFX_goal_generic_military_sphere
+		icon = GFX_focus_generic_war_in_the_plate
 		prerequisite = {
 			focus = rus_great_patriotic_war
 		}
@@ -9816,7 +9816,7 @@ focus_tree = {
 	}
 	focus = {
 		id = RUS_Authorize_the_PMC
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_generic_foreign_investments
 		prerequisite = {
 			focus = RUS_Modernization_of_the_Russia_Army
 		}

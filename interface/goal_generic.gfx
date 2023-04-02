@@ -24,8 +24,32 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic/focus_generic_An_International_New_Deal.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_generic_arctic_warfare"
+		texturefile = "gfx/interface/goals/generic/focus_generic_arctic_warfare.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_armoured_truck"
+		texturefile = "gfx/interface/goals/generic/focus_generic_armoured_truck.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_army_command_power"
+		texturefile = "gfx/interface/goals/generic/focus_generic_army_command_power.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_army_grand_battleplan"
+		texturefile = "gfx/interface/goals/generic/focus_generic_army_grand_battleplan.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_generic_army_guy_2"
 		texturefile = "gfx/interface/goals/generic/focus_generic_army_guy_2.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_army_superior_firepower"
+		texturefile = "gfx/interface/goals/generic/focus_generic_army_superior_firepower.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_army_tanks3"
+		texturefile = "gfx/interface/goals/generic/focus_generic_army_tanks3.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_generic_artillery_factories"
@@ -34,6 +58,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_generic_attract_investment"
 		texturefile = "gfx/interface/goals/generic/focus_generic_attract_investment.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_automobile_Production"
+		texturefile = "gfx/interface/goals/generic/focus_generic_automobile_Production.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_generic_bag_of_money"
@@ -176,6 +204,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic/focus_generic_foreign_diplomacy.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_generic_foreign_investments."
+		texturefile = "gfx/interface/goals/generic/focus_generic_foreign_investments..png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_freedom_of_the_press"
+		texturefile = "gfx/interface/goals/generic/focus_generic_freedom_of_the_press.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_generic_government_centralised_icon"
 		texturefile = "gfx/interface/goals/generic/focus_generic_government_centralised_icon.png"
 	}
@@ -232,6 +268,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic/focus_generic_join_faction.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_generic_jungletraining"
+		texturefile = "gfx/interface/goals/generic/focus_generic_jungletraining.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_generic_LEP_selective_enforcement"
 		texturefile = "gfx/interface/goals/generic/focus_generic_LEP_selective_enforcement.png"
 	}
@@ -268,6 +308,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/generic/focus_generic_mountainous_artillery.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_generic_mountain_artillery"
+		texturefile = "gfx/interface/goals/generic/focus_generic_mountain_artillery.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_generic_navy_decision"
 		texturefile = "gfx/interface/goals/generic/focus_generic_navy_decision.png"
 	}
@@ -298,6 +342,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_generic_planned_economies"
 		texturefile = "gfx/interface/goals/generic/focus_generic_planned_economies.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_Poppys"
+		texturefile = "gfx/interface/goals/generic/focus_generic_Poppys.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_generic_promote_entrepeneurship"
@@ -378,6 +426,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_generic_unified_franco_iberia"
 		texturefile = "gfx/interface/goals/generic/focus_generic_unified_franco_iberia.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_generic_war_in_the_plate"
+		texturefile = "gfx/interface/goals/generic/focus_generic_war_in_the_plate.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_generic_workers_rights"
