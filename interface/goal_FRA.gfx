@@ -4,6 +4,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/FRA/focus_FRA_dassault_aircraft_company.png"
 	}
 	SpriteType = {
+		name = "GFX_focus_FRA_democrazy_start"
+		texturefile = "gfx/interface/goals/FRA/focus_FRA_democrazy_start.png"
+	}
+	SpriteType = {
 		name = "GFX_focus_FRA_disband_unions_by_force"
 		texturefile = "gfx/interface/goals/FRA/focus_FRA_disband_unions_by_force.png"
 	}
@@ -62,6 +66,10 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_focus_FRA_princess_of_loveliness"
 		texturefile = "gfx/interface/goals/FRA/focus_FRA_princess_of_loveliness.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_FRA_puppet_austria"
+		texturefile = "gfx/interface/goals/FRA/focus_FRA_puppet_austria.png"
 	}
 	SpriteType = {
 		name = "GFX_focus_FRA_rebuild_carolingian_empire"

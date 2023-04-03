@@ -81,7 +81,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_expand_the_agitprop
-		icon = GFX_focus_generic_soviet_politics
+		icon = GFX_focus_SOV_Democratic_alliance_3
 		prerequisite = { focus = SOV_Great_Purge_will_fail }
 		x = 0
 		y = 1
@@ -1549,7 +1549,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Soldier_worship
-		icon = GFX_focus_generic_army_guy_2
+		icon = GFX_focus_SOV_Soldier_worship
 		prerequisite = { focus = SOV_Continue_military_control }
 
 		x = -1
@@ -1591,7 +1591,7 @@ focus_tree = {
 
 	focus = {
 		id = SOV_Start_war_mobilization
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_focus_SOV_Start_war_mobilization
 		prerequisite = { focus = SOV_Continue_military_control }
 
 		x = 1

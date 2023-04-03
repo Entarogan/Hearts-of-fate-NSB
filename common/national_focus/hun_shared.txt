@@ -1,5 +1,6 @@
 #!gfx:interface\goal_HUN.gfx
 #!gfx:interface\goal_SOV.gfx
+#!gfx:interface\goal_GER.gfx
 #!gfx:interface\goal_generic.gfx
 shared_focus = {
 	id = HUN_revenge
@@ -1722,7 +1723,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Wartime_communism
-	icon = GFX_goal_Focus_Military_Mobilisation
+	icon = GFX_focus_SOV_Wartime_communism
 	prerequisite = {
 		focus = HUN_the_hungarian_red_army
 	}
@@ -2219,7 +2220,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_revolution_will_win
-	icon = GFX_SOV_For_the_world_revolution
+	icon = GFX_focus_SOV_For_the_world_revolution
 	prerequisite = {
 		focus = HUN_Revenge_on_the_Allies
 		focus = HUN_Eradicate_fascism
@@ -2358,7 +2359,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Forcibly_claim_the_Polish_throne
-	icon = GFX_Conquer_Poland
+	icon = GFX_focus_GER_Conquer_Poland
 	prerequisite = {
 		focus = HUN_Concluded_the_Treaty_of_St_Stephen
 	}
@@ -2379,7 +2380,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Rule_Bohemia
-	icon = GFX_Conquer_Zapdslavia
+	icon = GFX_focus_HUN_Conquer_Zapdslavia
 	prerequisite = {
 		focus = HUN_Take_over_the_crown_of_Poland
 	}
@@ -3143,7 +3144,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_microphone_diplomacy
-	icon = GFX_goal_generic_microphone_diplomacy
+	icon = GFX_focus_generic_microphone_diplomacy
 	x = 11
 	y = 2
 	relative_position_id = HUN_Hungary_stands_tall_in_the_Balkans
@@ -4930,13 +4931,14 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Advance_into_the_Baltic_Sea
-	icon = GFX_Conquer_Poland
+	icon = GFX_focus_GER_Conquer_Poland
 	prerequisite = {
 		focus = HUN_Honor_Warrior
 	}
 	prerequisite = {
 		focus = HUN_Immortality
 	}
+
 	x = -1
 	y = 1
 	relative_position_id = HUN_Honor_Warrior
@@ -9808,7 +9810,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Huba
-	icon = GFX_deploy_reserve_division_big
+	icon = GFX_focus_HUN_deploy_reserve_divisions
 	prerequisite = {
 		focus = HUN_Military_reform
 	}
@@ -10290,7 +10292,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Danuvia_43
-	icon = GFX_GER_volksgewehr
+	icon = GFX_focus_GER_volksgewehr
 	prerequisite = {
 		focus = HUN_arpad
 	}
@@ -10337,7 +10339,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Individual_anti_tank_weapons
-	icon = GFX_GER_consolidate_production_lines
+	icon = GFX_focus_HUN_consolidation_of_production_lines
 	prerequisite = {
 		focus = HUN_Danuvia_43
 	}
@@ -10422,7 +10424,7 @@ shared_focus = {
 
 shared_focus = {
 	id = HUN_Fekete_sereg
-	icon = GFX_focus_HUN_grenadier_training_forgun
+	icon = GFX_focus_HUN_grenadier_training
 	prerequisite = {
 		focus = HUN_Zrinyi
 	}

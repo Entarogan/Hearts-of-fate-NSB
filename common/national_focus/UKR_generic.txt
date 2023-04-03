@@ -1,4 +1,5 @@
 #!gfx:interface\goal_UKR.gfx
+#!gfx:interface\goal_HUN.gfx
 #!gfx:interface\goal_generic.gfx
 shared_focus  = {
 	id = UKR_generic_Zaporizhzhia_industrial_complex
@@ -96,7 +97,7 @@ shared_focus  = {
 }
 shared_focus  = {
 	id = UKR_generic_legacy_of_muelsyse
-	icon = GFX_focus_dam
+	icon = GFX_focus_generic_dam
 	cost = 7.00
 	prerequisite = {
 		focus = UKR_generic_Zaporizhzhia_industrial_complex
@@ -255,7 +256,7 @@ shared_focus  = {
 }
 shared_focus  = {
 	id = UKR_generic_Donbass_line
-	icon = GFX_goal_nested_fortifications
+	icon = GFX_focus_generic_nested_fortifications
 	cost = 7.00
 	prerequisite = {
 		focus = UKR_generic_investment_in_Donbas

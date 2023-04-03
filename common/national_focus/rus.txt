@@ -6323,7 +6323,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rus_europe_political_refugee
-		icon = GFX_focus_RUS_generic_microphone_diplomacy
+		icon = GFX_focus_generic_microphone_diplomacy
 		cost = 5
 		prerequisite = {
 			focus = rus_kadet_wins

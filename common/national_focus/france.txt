@@ -1194,7 +1194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_republican_struggle
-		icon = GFX_focus_FRA_republican_struggle
+		icon = GFX_focus_FRA_democrazy_start
 		cost = 10
 		prerequisite = {
 			focus = FRA_overthrow_bourbon
@@ -2091,7 +2091,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_puppet_austria
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_focus_FRA_puppet_austria
 		cost = 5
 		prerequisite = {
 			focus = FRA_princess_of_loveliness
@@ -2668,7 +2668,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_letat_cest_moi
-		icon = GFX_Sword_Through_Crown
+		icon = GFX_focus_generic_letat_cest_moi
 		cost = 5
 		prerequisite = {
 			focus = FRA_guillotine_breaker

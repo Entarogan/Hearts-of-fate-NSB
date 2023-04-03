@@ -64,10 +64,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/RUS/focus_RUS_flag.png"
 	}
 	SpriteType = {
-		name = "GFX_focus_RUS_generic_microphone_diplomacy"
-		texturefile = "gfx/interface/goals/RUS/focus_RUS_generic_microphone_diplomacy.png"
-	}
-	SpriteType = {
 		name = "GFX_focus_RUS_Hegemony"
 		texturefile = "gfx/interface/goals/RUS/focus_RUS_Hegemony.png"
 	}
