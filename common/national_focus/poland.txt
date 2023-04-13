@@ -3638,24 +3638,24 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = POL_Firewatch_Reverse_German_Policy
-		allow_branch = {
-			has_dlc = "No Step Back"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					OR = {
-						has_completed_focus = POL_complete_april_constitution
-						has_completed_focus = POL_organize_the_peasants_strike
-						has_completed_focus = POL_restore_the_sejm
-					}
-				}
-			}
-		}
+		# allow_branch = {
+		# 	has_dlc = "No Step Back"
+		# 	if = {
+		# 		limit = {
+		# 			has_game_rule = {
+		# 				rule = obsolete_focus_branches_visibility
+		# 				option = HIDE
+		# 			}
+		# 		}
+		# 		NOT = {
+		# 			OR = {
+		# 				has_completed_focus = POL_complete_april_constitution
+		# 				has_completed_focus = POL_organize_the_peasants_strike
+		# 				has_completed_focus = POL_restore_the_sejm
+		# 			}
+		# 		}
+		# 	}
+		# }
 		offset = {
 			x = 2
 			y = 0
@@ -8133,7 +8133,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_PSL_Populist_Country
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_ideology_national_populist
 		cost = 10
 		prerequisite = {
 			focus = POL_PSL_Nationalization
@@ -8264,7 +8264,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Centrolew_Secularism
-		icon = GFX_focus_generic_Federalism
+		icon = GFX_focus_mex_triumph_over_the_cristeros
 		cost = 10
 		prerequisite = {
 			focus = POL_Socialist_consolidate_Farmer_Labour_alliance
@@ -8595,7 +8595,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Morges_Befriend_France
-		icon = GFX_goal_unknown
+		icon = GFX_focus_chi_reach_out_to_france
 		cost = 10
 		prerequisite = {
 			focus = POL_Catholic_Trade_Unions
@@ -8868,7 +8868,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Firewatch_Reverse_German_Policy
-		icon = GFX_goal_unknown
+		icon = GFX_focus_POL_beck_ribbentrop
 		cost = 10
 		prerequisite = {
 			focus = POL_Firewatch_Road_to_Revenge
@@ -8901,7 +8901,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Firewatch_contact_Finland
-		icon = GFX_goal_unknown
+		icon = GFX_focus_invite_finland
 		cost = 10
 		prerequisite = {
 			focus = POL_Firewatch_Expand_Firewatch_Organization
@@ -8978,7 +8978,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_Firewatch_final_resolution
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ger_strike_at_the_source
 		cost = 10
 		prerequisite = {
 			focus = POL_FIrewatch_keep_alert
