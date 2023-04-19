@@ -1,5 +1,5 @@
-#!gfx:interface\ukr_anarchist_focus.gfx
-#!gfx:interface\ukr_nationalism_focus.gfx
+#!gfx:interface\goal_UKR.gfx
+#!gfx:interface\goal_generic.gfx
 shared_focus = {
 	id = UKR_Anarchist_Anarchy_Mama_loves_her_sons
 	icon = GFX_goal_generic_war_with_comintern
@@ -201,24 +201,9 @@ shared_focus = {
 	y = 1
 	relative_position_id = UKR_Anarchist_New_Batko
 	completion_reward = {
-		if = {
-			limit = {
-				has_idea = UKR_Black_army_idea
-			}
-			swap_ideas = {
-				remove_idea = UKR_Black_army_idea
-				add_idea = UKR_Black_army_05_idea
-			}
-		}
-		if = {
-			limit = {
-				has_idea = UKR_Black_army_1_idea
-			}
-			swap_ideas = {
-				remove_idea = UKR_Black_army_1_idea
-				add_idea = UKR_Black_army_15_idea
-			}
-		}
+		add_to_variable = { HOF_UKR_army_dynamic_army_org_factor = 0.15 }
+
+		custom_effect_tooltip = UKR_Anarchist_Strengthen_discipline_tt
 	}
 
 }

@@ -4,7 +4,6 @@
 add_namespace = more_soviet
 add_namespace = soviet_flavour
 add_namespace = more_soviet_dlc
-add_namespace = more_soviet_news_dlc
 
 country_event = {
 	id = soviet_flavour.1
@@ -52,7 +51,7 @@ country_event = {
 	id = soviet_flavour.3
 	title = soviet_flavour.3.t
 	desc = soviet_flavour.3.d
-	picture = GFX_report_event_RUS_labor2
+	picture = GFX_report_event_rus_labor2
 
 	is_triggered_only = yes
 
@@ -72,7 +71,7 @@ country_event = {
 	id = soviet_flavour.4
 	title = soviet_flavour.4.t
 	desc = soviet_flavour.4.d
-	picture = GFX_report_event_RUS_labor2
+	picture = GFX_report_event_rus_labor2
 
 	trigger = {
 		OR = {
@@ -107,7 +106,7 @@ country_event = {
 	id = soviet_flavour.5
 	title = soviet_flavour.5.t
 	desc = soviet_flavour.5.d
-	picture = GFX_report_event_RUS_labor2
+	picture = GFX_report_event_rus_labor2
 
 	trigger = {
 		OR = {
@@ -142,7 +141,7 @@ country_event = {
 	id = soviet_flavour.6
 	title = soviet_flavour.6.t
 	desc = soviet_flavour.6.d
-	picture = GFX_report_event_RUS_labor2
+	picture = GFX_report_event_rus_labor2
 
 	trigger = {
 		OR = {
@@ -466,7 +465,7 @@ country_event = {
 	id = more_soviet_dlc.1
 	title = more_soviet_dlc.1.t
 	desc = more_soviet_dlc.1.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -489,7 +488,7 @@ country_event = {
 	id = more_soviet_dlc.2
 	title = more_soviet_dlc.2.t
 	desc = more_soviet_dlc.2.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -510,7 +509,7 @@ country_event = {
 	id = more_soviet_dlc.3
 	title = more_soviet_dlc.3.t
 	desc = more_soviet_dlc.3.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -653,20 +652,12 @@ country_event = {     #
 		set_country_flag = SOV_Purged_by_Stalin_flag
 
 		retire_character = SOV_mikhail_tukhachevsky
-		custom_effect_tooltip = remove_theorist
-		show_ideas_tooltip = mikhail_tukhachevsky
 
 		retire_character = SOV_aleksandr_yegorov
 		retire_character = SOV_vasily_blyukher
-		custom_effect_tooltip = remove_chief_of_army
-		show_ideas_tooltip = alexander_yegorov
-		show_ideas_tooltip = vasily_blucher
 
 		retire_character = SOV_pyotr_smirnov
 		retire_character = SOV_mikhail_frinovsky
-		custom_effect_tooltip = remove_chief_of_navy
-		show_ideas_tooltip = pyotr_smirnov
-		show_ideas_tooltip = mikhail_frinovsky
 
 		custom_effect_tooltip = soviet.27_tt
 		hidden_effect = {
@@ -718,69 +709,11 @@ country_event = { # 没抓到亚基尔
 	}
 }
 
-news_event = { # 亚基尔爆料
-	id = more_soviet_news_dlc.1
-	title = more_soviet_news_dlc.1.t
-	desc = more_soviet_news_dlc.1.d
-	picture = GFX_news_event_journalists_speech
-
-	major = yes
-
-	is_triggered_only = yes
-
-	fire_for_sender = yes
-
-	option = {
-		name = more_soviet_news_dlc.1.a
-		trigger = {
-			tag = SOV
-		}
-
-		add_political_power = -50
-
-	}
-
-	option = {
-		name = more_soviet_news_dlc.1.b
-		trigger = {
-			tag = UKR
-		}
-	}
-
-	option ={
-		name = more_soviet_news_dlc.1.c
-		trigger = {
-			OR = {
-				tag = GER
-				tag = JAP
-				tag = POL
-				tag = RUS
-			}
-		}
-	}
-
-	option ={
-		name = more_soviet_news_dlc.1.f
-		trigger = {
-			NOT = {
-				OR = {
-					tag = SOV
-					tag = UKR
-					tag = GER
-					tag = JAP
-					tag = POL
-					tag = RUS
-				}
-			}
-		}
-	}
-}
-
 country_event = { # 密谋
 	id = more_soviet_dlc.5
 	title = more_soviet_dlc.5.t
 	desc = more_soviet_dlc.5.d
-	picture = GFX_report_event_RUS_savinkov2
+	picture = GFX_report_event_rus_savinkov2
 
 	is_triggered_only = yes
 
@@ -810,7 +743,7 @@ country_event = {
 	id = more_soviet.5
 	title = more_soviet.5.t
 	desc = more_soviet.5.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 
@@ -831,7 +764,7 @@ country_event = { # 刺杀朱加什维利
 	id = more_soviet_dlc.6
 	title = more_soviet_dlc.6.t
 	desc = more_soviet_dlc.6.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -859,7 +792,7 @@ country_event = { # 代理总书记叶若夫
 	id = more_soviet_dlc.7
 	title = more_soviet_dlc.7.t
 	desc = more_soviet_dlc.7.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -940,7 +873,7 @@ country_event = { # 乌克兰的麻烦
 			}
 		}
 	}
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -991,7 +924,7 @@ country_event = { # 捷尔任斯基的计中计
 	id = more_soviet_dlc.14
 	title = more_soviet_dlc.14.t
 	desc = more_soviet_dlc.14.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -1009,7 +942,7 @@ country_event = { # 审查乌克兰军区
 	id = more_soviet_dlc.15
 	title = more_soviet_dlc.15.t
 	desc = more_soviet_dlc.15.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -1042,7 +975,7 @@ country_event = { # 贝利亚的请求
 	id = more_soviet_dlc.16
 	title = more_soviet_dlc.16.t
 	desc = more_soviet_dlc.16.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -1064,7 +997,7 @@ country_event = { # 亚基尔的回电
 	id = more_soviet_dlc.17
 	title = more_soviet_dlc.17.t
 	desc = more_soviet_dlc.17.d
-	picture = GFX_report_event_RUS_moscow
+	picture = GFX_report_event_rus_moscow
 
 	is_triggered_only = yes
 
@@ -1638,7 +1571,7 @@ country_event = {     #
 	id = more_soviet.7
 	title = more_soviet.7.t
 	desc = more_soviet.7.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 
@@ -1896,23 +1829,23 @@ country_event = {     #
 
 		retire_character = SOV_ivan_konev
 		retire_character = SOV_arseniy_golovko
-		retire_character = pavel_zhigarev
+		retire_character = SOV_pavel_zhigarev
 		retire_character = SOV_stepan_krasovsky
-		custom_effect_tooltip = remove_high_command
-		show_ideas_tooltip = ivan_konev
-		show_ideas_tooltip = arseniy_golovko
-		show_ideas_tooltip = pavel_zhigarev
-		show_ideas_tooltip = stepan_krasovsky
+
 
 		retire_character = SOV_sergey_gorshkov
 		retire_character = SOV_sergey_rudenko
-		custom_effect_tooltip = remove_theorist
-		show_ideas_tooltip = sergey_gorshkov
-		show_ideas_tooltip = sergei_rudenko
+
+		retire_character = SOV_semyon_timoshenko
+		retire_character = SOV_kliment_voroshilov
+		retire_character = SOV_semyon_budyonny
+		retire_character = SOV_grigory_kulik
+
+		retire_character = SOV_aleksandr_yegorov
 
 		add_timed_idea = {
-		  idea = officers_purged_5
-		  days = 730
+			idea = officers_purged_7
+			days = 730
 		}
 
 		hidden_effect = {
@@ -2237,10 +2170,15 @@ country_event = {     #乌克兰叛乱
 			}
 		}
 
-    UKR = {
-      add_ideas = UKR_German_consultant_idea
-      add_ideas = UKR_independent_Army_idea
-    }
+		UKR = {
+			add_ideas = UKR_German_consultant_idea
+		}
+
+		hidden_effect = {
+			UKR = {
+				add_dynamic_modifier = { modifier = HOF_UKR_army_dynamic_modifier }
+			}
+		}
 
 	    # 忠诚步骑
 		division_template = {
@@ -2832,7 +2770,7 @@ country_event = {     #打电话
 	id = more_soviet.20
 	title = more_soviet.20.t
 	desc = more_soviet.20.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 	
@@ -2912,7 +2850,7 @@ country_event = {     #行动结束
 	id = more_soviet.21
 	title = more_soviet.21.t
 	desc = more_soviet.21.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 	
@@ -2939,7 +2877,7 @@ country_event = {     #苏多普拉托夫的反击
 	id = more_soviet.22
 	title = more_soviet.22.t
 	desc = more_soviet.22.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 	
@@ -3013,7 +2951,7 @@ country_event = {     #激情杀人？
 	id = more_soviet.23
 	title = more_soviet.23.t
 	desc = more_soviet.23.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 
@@ -3051,7 +2989,7 @@ country_event = {     #回归
 	id = more_soviet.24
 	title = more_soviet.24.t
 	desc = more_soviet.24.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 	
@@ -3120,7 +3058,7 @@ country_event = {     #真相
 	id = more_soviet.25
 	title = more_soviet.25.t
 	desc = more_soviet.25.d
-	picture = GFX_report_event_RUS_kremlin4
+	picture = GFX_report_event_rus_kremlin4
 
 	is_triggered_only = yes
 
@@ -3248,7 +3186,7 @@ country_event = {     #行动结束
 	id = more_soviet.28
 	title = more_soviet.28.t
 	desc = more_soviet.28.d
-	picture = GFX_report_event_RUS_kremlin_1
+	picture = GFX_report_event_rus_kremlin_1
 
 	is_triggered_only = yes
 	
@@ -3278,7 +3216,7 @@ country_event = {     #鲍里斯·萨文科夫
 	id = more_soviet.29
 	title = more_soviet.29.t
 	desc = more_soviet.29.d
-	picture = GFX_report_event_RUS_Savinkov_rally
+	picture = GFX_report_event_rus_savinkov_rally
 
 	is_triggered_only = yes
 	
