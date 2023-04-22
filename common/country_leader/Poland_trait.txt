@@ -164,6 +164,22 @@ leader_traits = {
 		}
 	}
 
+	Coercive_Charge = {
+		sprite = 5
+		random = no
+		army_attack_factor = 0.10
+		cavalry_attack_factor = 0.10
+		motorized_attack_factor = 0.10
+		mechanized_attack_factor = 0.10
+		equipment_bonus = {
+			mechanized_equipment = {
+				breakthrough = 0.10
+				
+				instant = yes
+			}
+		}
+	}
+
 	Marshall_of_Poland = {
 		random = no
 		training_time_factor = -0.10
@@ -185,4 +201,28 @@ leader_traits = {
 		production_speed_synthetic_refinery_factor = 0.40
 	}
 
+	PSL_sympathizer = {
+		political_power_factor = 0.05
+		democratic_drift = 0.015
+	}
+
+	Cynic = {
+		political_power_factor = -0.05
+	}
+
+	national_hero_pol = {
+		stability = 0.075
+		training_time_factor = -0.10
+	}
+	
+	Business_spokesperson = {
+		consumer_goods_factor = -0.05
+		production_factory_efficiency_gain_factor = 0.10
+	}
+
+	Cold_Blooded_agent = {
+		army_infantry_attack_factor = 0.10
+		intel_network_gain_factor = 0.10
+		operative_slot = 1
+	}
 }
