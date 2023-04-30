@@ -79,7 +79,314 @@ country = {
 		}
 
 		modifier = {
+			stability_factor = -0.10
+			consumer_goods_factor = 0.05
+		}
+	}
+
+	POL_PSL_land_reform = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.10
+			consumer_goods_factor = 0.015
+		}
+	}
+
+	POL_Sanation_land_reform = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.03
+		}
+	}
+
+	POL_Sanacja_rent_tax = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
 			stability_factor = -0.05
+			consumer_goods_factor = 0.03
+		}
+	}
+
+	POL_PPS_limited_collectivism = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			political_power_cost = 0.15
+			production_factory_efficiency_gain_factor = 0.10
+			consumer_goods_factor = -0.025
+		}
+	}
+
+	POL_Endecja_land_reform = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			political_power_cost = -0.15
+			stability = -0.085
+			consumer_goods_factor = 0.01
+		}
+	}
+
+	POL_Bataliony_Chlopskie = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			conscription = 0.02
+			training_time_factor = -0.10
+		}
+	}
+
+	POL_PSL_Power_of_Peasant = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			production_factory_start_efficiency_factor = 0.10
+			global_building_slots_factor = 0.20
+		}
+	}
+
+	POL_PSL_Power_of_Peasant_radicalized = {
+		name = POL_PSL_Power_of_Peasant
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			stability_factor = -0.075
+			production_factory_start_efficiency_factor = 0.15
+			global_building_slots_factor = 0.20
+			production_speed_arms_factory_factor = 0.10
+		}
+	}
+
+	POL_PSL_Power_of_Peasant_old_program = {
+		name = POL_PSL_Power_of_Peasant
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			stability_factor = 0.025
+			production_factory_start_efficiency_factor = 0.10
+			global_building_slots_factor = 0.25
+			production_speed_buildings_factor = 0.05
+		}
+	}
+
+	POL_PSL_Power_of_Peasant_radicalized_populist = {
+		name = POL_PSL_Power_of_Peasant
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			stability_factor = -0.075
+			production_factory_start_efficiency_factor = 0.20
+			global_building_slots_factor = 0.20
+			production_speed_arms_factory_factor = 0.10
+			industrial_capacity_factory = 0.10
+		}
+	}
+
+	POL_PSL_Power_of_Peasant_old_program_populist = {
+		name = POL_PSL_Power_of_Peasant
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			stability_factor = 0.025
+			production_factory_start_efficiency_factor = 0.15
+			global_building_slots_factor = 0.25
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.10
+		}
+	}
+
+	POL_national_industries = {
+		name = POL_national_industries
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			production_factory_max_efficiency_factor = 0.10
+		}
+	}
+
+	POL_national_railways = {
+		name = POL_national_railways
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			production_speed_rail_way_factor = 0.15
+			production_speed_infrastructure_factor = 0.10
+		}
+	}
+
+	POL_Centrolew_Secularism = {
+		name = POL_Centrolew_Secularism
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			research_speed_factor = 0.05
+		}
+	}
+
+	POL_Socialist_joint_infrastructure_investment = {
+		name = POL_Socialist_joint_infrastructure_investments
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.15
+			production_speed_industrial_complex_factor = 0.10
+		}
+	}
+
+	POL_Socialist_Worker_Voluntary_Forces = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			conscription = 0.02
+			training_time_factor = -0.05
+		}
+	}
+
+	POL_Centrolew_Economic_Stimulus = {
+		allowed = {
+			original_tag = POL
+		}
+
+		picture = generic_fortify_the_borders
+		
+		allowed_civil_war = {
+			always = yes
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.065
+			industrial_capacity_factory = 0.075
 		}
 	}
 
@@ -325,10 +632,10 @@ country = {
 			removal_cost = -1
 			
 			equipment_bonus = {
-        anti_tank_equipment = {
-          reliability = 0.05 instant = yes
+					anti_tank_equipment = {
+					reliability = 0.05 instant = yes
 					build_cost_ic = -0.15 instant = yes
-        }
+        	}
       }
     
     }
@@ -536,8 +843,8 @@ country = {
 			
 			modifier = {
                 experience_gain_army = 0.03
-		        army_infantry_attack_factor = 0.05
-		        army_infantry_defence_factor = 0.05
+				army_infantry_attack_factor = 0.05
+				army_infantry_defence_factor = 0.05
 				land_doctrine_cost_factor = -0.1
 			}
 
@@ -586,7 +893,7 @@ country = {
 			}
 
 			allowed = {
-			    original_tag = FRA
+				original_tag = FRA
 				always = no
 			}
 
@@ -612,7 +919,7 @@ country = {
 
 		POL_french_Investment = {
 			allowed = {
-			    original_tag = POL
+				original_tag = POL
 				always = no
 			}
 
@@ -632,7 +939,7 @@ country = {
 
 		POL_Special_Forces_I1 = {
 			allowed = {
-			    original_tag = POL
+				original_tag = POL
 				always = no
 			}
 
@@ -653,7 +960,7 @@ country = {
 
 		POL_Special_Forces_I2 = {
 			allowed = {
-			    original_tag = POL
+				original_tag = POL
 				always = no
 			}
 
@@ -667,7 +974,7 @@ country = {
 			
 			modifier = {
 				special_forces_cap = 0.05
-		        operative_slot = 2
+				operative_slot = 2
                 terrain_penalty_reduction = 0.10
 				special_forces_attack_factor = 0.10
                 special_forces_defence_factor = 0.10
@@ -696,7 +1003,7 @@ country = {
 		
 		modifier = {
 			stability_factor = 0.10
-		    drift_defence_factor = 0.5
+			drift_defence_factor = 0.5
 			army_org_Factor = 0.05
 		}
 	}	
@@ -732,8 +1039,8 @@ country = {
 			army_org_Factor = 0.05
 		}
 	}	
-  
-  POL_militarism_focus2 = {
+
+	POL_militarism_focus2 = {
 			
 		allowed = {
 			original_tag = POL
@@ -756,16 +1063,506 @@ country = {
 		}
 	}
 		
+	POL_PSL_dissolve_old_bureaucrats = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			political_power_gain = 0.15
+			political_advisor_cost_factor = -0.25
+			theorist_cost_factor = -0.25
+		}
+	}
+
+	POL_PSL_invite_foreign_investors = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_arms_factory_factor = 0.05
+		}
+	}
+
+	POL_Sanacja_command_economy = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			production_lack_of_resource_penalty_factor = -0.10
+		}
+	}
+	
+
+	POL_Sanacja_command_economy_technocrats = {
+		name = POL_Sanacja_command_economy
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.10
+			production_lack_of_resource_penalty_factor = -0.20
+		}
+	}
+
+	POL_Sanacja_command_economy_destory_degenerate = {
+		name = POL_Sanacja_command_economy
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.05
+			production_lack_of_resource_penalty_factor = -0.10
+			consumer_goods_factor = -0.03
+		}
+	}
+
+	POL_Sanacja_command_economy_technocrats_destory_degenerate = {
+		name = POL_Sanacja_command_economy
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.10
+			production_lack_of_resource_penalty_factor = -0.20
+			consumer_goods_factor = -0.03
+		}
+	}
+
+
+	POL_Sanacja_command_economy_final = {
+		name = POL_Sanacja_command_economy
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_max_efficiency_factor = 0.10
+			production_lack_of_resource_penalty_factor = -0.20
+			consumer_goods_factor = -0.035
+			political_power_gain = 0.15
+		}
+	}
+
+	POL_Social_Security_PPS = {
+		name = POL_Social_Security
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			stability_factor = 0.12
+			training_time_army_factor = -0.05
+			political_power_cost = 0.12
+		}
+	}
+
+	POL_Social_Security_Sanation = {
+		name = POL_Social_Security
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			stability_factor = 0.075
+			political_power_cost = 0.075
+		}
+	}
+
+	POL_Nearl_Military_training_for_Citizens = {
+		name = POL_Nearl_Military_training_for_Citizens
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			training_time_army_factor = -0.10
+			experience_gain_army = 0.15
+		}
+	}
+
+	POL_Catholic_Trade_Unions = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			industrial_capacity_factory = 0.075
+		}
+	}
+
+	POL_Organic_Works = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.10
+			line_change_production_efficiency_factor = 0.20
+		}
+
+		research_bonus = {
+			industry = 0.10
+			synth_resources = 0.10
+			support_tech = 0.10
+		}
+	}
+
+	POL_Organic_Works_2 = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+		
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.10
+			line_change_production_efficiency_factor = 0.25
+			consumer_goods_factor = -0.03
+		}
+
+		research_bonus = {
+			industry = 0.10
+			synth_resources = 0.10
+			support_tech = 0.10
+		}
+	}
+
+	POL_Sanacja_Spirit_of_Knights = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			army_org_Factor = 0.15
+		}
+		
+		equipment_bonus = {
+			motorized_equipment = {
+				build_cost_ic = -0.15 instant = yes
+			}
+			mechanized_equipment = {
+				build_cost_ic = -0.15 instant = yes
+			}
+		}
+		
+	}
+
+	POL_fragile_democracy = {
+		### 脆弱的波兰民主
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			democratic_drift = 0.015
+			political_power_factor = -0.125
+		}
+	}
+
+	POL_revive_Sarmatyzm = {
+		### 复兴萨尔玛提亚主义
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			democratic_drift = 0.025
+			political_power_factor = 0.075
+			stability_factor = 0.085
+		}
+	}
+
+	POL_Endecja_destroy_Sarmatyzm = {
+		### 摧毁萨尔玛提亚主义
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			fascism_drift = 0.015
+			political_power_factor = 0.025
+			stability_factor = -0.05
+		}
+	}
+
+	POL_Endecja_destroy_Sarmatyzm = {
+		### 摧毁萨尔玛提亚主义
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			fascism_drift = 0.015
+			political_power_factor = 0.025
+			stability_factor = -0.05
+		}
+	}
+
+	POL_Endecja_realist_chauvinism = {
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			war_support_factor = 0.125
+			justify_war_goal_time = -0.25
+		}
+	}
+
+	POL_Endecja_Dominant_Party_Democracy = {
+		### 一党独大式民主
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			fascism_drift = 0.015
+			political_power_factor = 0.10
+			political_advisor_cost_factor = -0.40
+			industrial_capacity_factory = 0.05
+		}
+	}
+
+	POL_Endecja_Dominant_Party_Democracy_2 = {
+		### 一党独大式民主
+		allowed = {
+			original_tag = POL
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+			
+		removal_cost = -1
+
+		picture = generic_manpower_bonus
+		### Todo: change icons
+
+		modifier = {
+			fascism_drift = 0.015
+			political_power_factor = 0.15
+			political_advisor_cost_factor = -0.40
+			industrial_capacity_factory = 0.085
+			production_speed_buildings_factor = 0.05
+		}
+	}
 }
 
 
-political_advisor = {
+	political_advisor = {
 
-}
+	}
 
-theorist = {
+	theorist = {
 
-}
+	}
 
 	# MILITARY
 	army_chief = {
@@ -794,10 +1591,6 @@ theorist = {
 		
 		POL_fb = {
 			
-			allowed = {
-				has_dlc = "Poland: United and Ready"
-				original_TAG = POL
-			}
 			
 			picture = generic_infantry_equipment_manufacturer_2
 			

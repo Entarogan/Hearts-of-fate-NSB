@@ -71,5 +71,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/advisors/POL/POL_wojciech_korfanty_small.png"
 	}	
 
+	spriteType = {
+		name = "GFX_POL_Czarny_small"
+		texturefile = "gfx/interface/advisors/POL/POL_Czarny_small.png"
+	}	
+	spriteType = {
+		name = "GFX_POL_Ioleta_Russell_small"
+		texturefile = "gfx/interface/advisors/POL/POL_Ioleta_Russell_small.png"
+	}	
+	spriteType = {
+		name = "GFX_POL_Malkiewicz_small"
+		texturefile = "gfx/interface/advisors/POL/POL_Malkiewicz_small.png"
+	}	
+	spriteType = {
+		name = "GFX_POL_McKee_small"
+		texturefile = "gfx/interface/advisors/POL/POL_McKee_small.png"
+	}	
+	spriteType = {
+		name = "GFX_POL_Viviana_small"
+		texturefile = "gfx/interface/advisors/POL/POL_Viviana_small.png"
+	}	
 
 }
