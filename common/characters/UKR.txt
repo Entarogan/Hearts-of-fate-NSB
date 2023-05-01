@@ -36,7 +36,7 @@ characters={
 				large="gfx/leaders/UKR/Portrait_UKR_Symon_Petlura.png"
 			}
 			army = {
-				small="GFX_idea_UKR_symon_petlura"
+				small="GFX_idea_ukr_symon_petlura"
 			}
 		}
 		country_leader={
@@ -103,7 +103,7 @@ characters={
 				large="gfx/leaders/UKR/yevhen_konovalets.png"
 			}
 			army = {
-				small="GFX_idea_UKR_yevhen_konovalets"
+				small="GFX_idea_ukr_yevhen_konovalets"
 			}
 		}
 		country_leader={
@@ -182,7 +182,7 @@ characters={
 		name="UKR_pavlo_skoropadskyi"
 		portraits={
 			army={
-				small="GFX_idea_UKR_pavlo_skoropadskyi"
+				small="GFX_idea_ukr_pavlo_skoropadskyi"
 			}
 			army={
 				large="gfx/leaders/UKR/Skoropadsky.png"
@@ -276,7 +276,7 @@ characters={
 		name="UKR_andriy_melnyk"
 		portraits={
 			army={
-				small="GFX_idea_UKR_andriy_melnyk"
+				small="GFX_idea_ukr_andriy_melnyk"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Andriy_Melnyk.png"
@@ -470,7 +470,7 @@ characters={
 		name = UKR_alina
 		portraits={
 			army={
-				small="GFX_idea_UKR_alina"
+				small="GFX_idea_ukr_alina"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Alina.dds"
@@ -509,7 +509,7 @@ characters={
 		name = UKR_yelena_frostnova
 		portraits={
 			army={
-				small="GFX_idea_UKR_yelena_frostnova"
+				small="GFX_idea_ukr_yelena_frostnova"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Yelena_Frostnova.dds"
@@ -578,7 +578,7 @@ characters={
 		name = UKR_buldrokkastee
 		portraits={
 			army={
-				small="GFX_idea_UKR_buldrokkastee"
+				small="GFX_idea_ukr_buldrokkastee"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Buldrokkastee.dds"
@@ -644,7 +644,7 @@ characters={
 		name = UKR_W
 		portraits={
 			army={
-				small="GFX_idea_UKR_W"
+				small="GFX_idea_ukr_W"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_W.png"
@@ -713,7 +713,7 @@ characters={
 		name = UKR_eno_mephisto
 		portraits={
 			army={
-				small="GFX_idea_UKR_eno_mephisto"
+				small="GFX_idea_ukr_eno_mephisto"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Mephisto.png"
@@ -783,7 +783,7 @@ characters={
 		name = UKR_lyudmila_crownslayer
 		portraits={
 			army={
-				small="GFX_idea_UKR_lyudmila_crownslayer"
+				small="GFX_idea_ukr_lyudmila_crownslayer"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Crownslayer.png"
@@ -809,7 +809,7 @@ characters={
 		name = UKR_sasha_faust
 		portraits={
 			army={
-				small="GFX_idea_UKR_sasha_faust"
+				small="GFX_idea_ukr_sasha_faust"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Faust.png"
@@ -900,7 +900,7 @@ characters={
 		name = "UKR_Stepan_Petrichenko"
 		portraits={
 			army={
-				small="GFX_idea_UKR_stepan_petrichenko"
+				small="GFX_idea_ukr_stepan_petrichenko"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_Stepan_Petrichenko.png"
@@ -1077,7 +1077,7 @@ characters={
 		name="UKR_Oleksandr_Udovychenko"
 		portraits={
 			army={
-				small="GFX_idea_UKR_Oleksandr_Udovychenko"
+				small="GFX_idea_ukr_oleksandr_udovychenko"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Oleksandr_Udovychenko.png"
@@ -1216,7 +1216,7 @@ characters={
 		name="UKR_Roman_Shukhevych"
 		portraits={
 			army={
-				small="GFX_idea_UKR_Roman_Shukhevych"
+				small="GFX_idea_ukr_roman_shukhevych"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Roman_Shukhevych.png"
@@ -1305,7 +1305,7 @@ characters={
 		name="UKR_Philip_Kyva"
 		portraits={
 			army={
-				small="GFX_idea_UKR_Philip_Kyva"
+				small="GFX_idea_ukr_philip_kyva"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Philip_Kyva.png"
@@ -1356,7 +1356,7 @@ characters={
 		name="UKR_Seymon_Zelensky"
 		portraits={
 			army={
-				small="GFX_idea_UKR_semyon_zelensky"
+				small="GFX_idea_ukr_semyon_zelensky"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Seymon_Zelensky.png"
@@ -1409,7 +1409,7 @@ characters={
 		name = UKR_vladimir_vernadsky
 		portraits={
 			army = {
-				small="GFX_idea_UKR_vladimir_vernadsky"
+				small="GFX_idea_ukr_vladimir_vernadsky"
 			}
 		}
 		advisor={
@@ -1445,7 +1445,7 @@ characters={
 		name = UKR_mykhailo_hrushevsky
 		portraits={
 			army = {
-				small="GFX_idea_UKR_mykhailo_hrushevsky"
+				small="GFX_idea_ukr_mykhailo_hrushevsky"
 			}
 		}
 		advisor={
@@ -1482,7 +1482,7 @@ characters={
 		name = UKR_isaac_babel
 		portraits={
 			army = {
-				small="GFX_idea_UKR_isaac_babel"
+				small="GFX_idea_ukr_isaac_babel"
 			}
 		}
 		advisor={
@@ -1521,7 +1521,7 @@ characters={
 		name = UKR_volodymyr_kubijovych
 		portraits={
 			army = {
-				small="GFX_idea_UKR_volodymyr_kubijovych"
+				small="GFX_idea_ukr_volodymyr_kubijovych"
 			}
 		}
 		advisor={
@@ -1557,7 +1557,7 @@ characters={
 		name = UKR_dmytro_dontsov
 		portraits={
 			army = {
-				small="GFX_idea_UKR_dmytro_dontsov"
+				small="GFX_idea_ukr_dmytro_dontsov"
 			}
 		}
 		advisor={
@@ -1593,7 +1593,7 @@ characters={
 		name = UKR_andriy_livytskyi
 		portraits={
 			army = {
-				small="GFX_idea_UKR_andriy_livytskyi"
+				small="GFX_idea_ukr_andriy_livytskyi"
 			}
 		}
 		advisor={
@@ -1636,7 +1636,7 @@ characters={
 		name = UKR_sviatoslav_shramchenko
 		portraits={
 			army = {
-				small="GFX_idea_UKR_sviatoslav_shramchenko"
+				small="GFX_idea_ukr_sviatoslav_shramchenko"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Sviatoslav_Shramchenko.png"
@@ -1682,7 +1682,7 @@ characters={
 		name = UKR_nikolai_pavlovich_sablin
 		portraits={
 			army = {
-				small="GFX_idea_UKR_nikolai_pavlovich_sablin"
+				small="GFX_idea_ukr_nikolai_pavlovich_sablin"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Nikolai_Sablin.png"
@@ -1734,7 +1734,7 @@ characters={
 		name = UKR_petro_franko
 		portraits={
 			army = {
-				small="GFX_idea_UKR_petro_franko"
+				small="GFX_idea_ukr_petro_franko"
 			}
 		}
 		advisor={
@@ -1764,7 +1764,7 @@ characters={
 		name = UKR_viktor_pavlenko
 		portraits={
 			army = {
-				small="GFX_idea_UKR_viktor_pavlenko"
+				small="GFX_idea_ukr_viktor_pavlenko"
 			}
 		}
 		advisor={
@@ -1796,7 +1796,7 @@ characters={
 		name = UKR_vladimir_vernadsky
 		portraits={
 			army = {
-				small="GFX_idea_UKR_vladimir_savchenko_belskii"
+				small="GFX_idea_ukr_vladimir_savchenko_belskii"
 			}
 		}
 		advisor={
@@ -1833,7 +1833,7 @@ characters={
 		name = UKR_andrew_pokrovskii
 		portraits={
 			army = {
-				small="GFX_idea_UKR_andrew_pokrovskii"
+				small="GFX_idea_ukr_andrew_pokrovskii"
 			}
 			army={
 				large="gfx/leaders/UKR/Portrait_UKR_Andrew_Pokrovskii.png"
@@ -1880,7 +1880,7 @@ characters={
 		name = UKR_leonid_khrushchev
 		portraits={
 			army = {
-				small="GFX_idea_UKR_andrew_pokrovskii"
+				small="GFX_idea_ukr_andrew_pokrovskii"
 			}
 		}
 		advisor={

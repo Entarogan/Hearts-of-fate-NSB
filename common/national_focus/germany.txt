@@ -1,5 +1,5 @@
-#!gfx:interface\goal_GER.gfx
-#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goals\goal_GER.gfx
+#!gfx:interface\goals\goal_generic.gfx
 focus_tree = {
 	id = german_focus
 	country = {

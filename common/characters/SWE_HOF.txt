@@ -30,7 +30,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_ortlinde"
+				small="GFX_idea_swe_ortlinde"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Ortlinde.dds"
@@ -63,7 +63,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_hildr"
+				small="GFX_idea_swe_hildr"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Hildr.dds"
@@ -96,7 +96,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_sigurd"
+				small="GFX_idea_swe_sigurd"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Sigurd.dds"
@@ -149,7 +149,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_ophelia"
+				small="GFX_idea_swe_ophelia"
 			}
 			civilian={
 				large="gfx/leaders/SWE/Portrait_Ophelia_Phamrsolone.dds"
@@ -225,7 +225,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_skadi"
+				small="GFX_idea_swe_skadi"
 			}
 			civilian={
 				large="gfx/leaders/SWE/Portrait_purple.dds"
@@ -265,7 +265,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_thudr"
+				small="GFX_idea_swe_thudr"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Trudr.dds"
@@ -285,7 +285,7 @@ characters={
 		name="Tryka"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_swe_tyrka"
 			}
 			army={
 				large="gfx/leaders/SWE/Portrait_Tyrka.dds"
@@ -347,7 +347,7 @@ characters={
 		name="rovio"
 		portraits={
 			army={
-				small="GFX_idea_rovio"
+				small="GFX_idea_swe_rovio"
 			}
 		}
 	}
@@ -371,7 +371,7 @@ characters={
 		name="SWE_eric"
 		portraits={
 			army={
-				small="GFX_idea_eric"
+				small="GFX_idea_swe_eric"
 			}
 		}
 	}
@@ -389,7 +389,7 @@ characters={
 		name="SWE_gelda"
 		portraits={
 			army={
-				small="GFX_idea_gelda"
+				small="GFX_idea_swe_gelda"
 			}
 		}
 	}
@@ -414,7 +414,7 @@ characters={
 		name="paradox"
 		portraits={
 			army={
-				small="GFX_idea_paradox"
+				small="GFX_idea_swe_paradox"
 			}
 		}
 	}
@@ -438,7 +438,7 @@ characters={
 		name="SWE_andersen"
 		portraits={
 			army={
-				small="GFX_idea_andersen"
+				small="GFX_idea_swe_andersen"
 			}
 		}
 	}
@@ -483,7 +483,7 @@ characters={
 		name="SWE_sitonai"
 		portraits={
 			army={
-				small="GFX_idea_sitonai"
+				small="GFX_idea_swe_sitonai"
 			}
 		}
 	}
@@ -504,7 +504,7 @@ characters={
 		name="SWE_beowulf"
 		portraits={
 			army={
-				small="GFX_idea_beowulf"
+				small="GFX_idea_swe_beowulf"
 			}
 		}
 	}

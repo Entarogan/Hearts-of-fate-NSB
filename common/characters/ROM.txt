@@ -275,7 +275,7 @@ characters={
 				large="gfx/leaders/ROM/portrait_corneliu_zelea_codreanu.dds"
 			}
 			army = {
-				small = "GFX_idea_Corneliu_codreanu"
+				small = "GFX_idea_rom_corneliu_zelea_codreanu"
 			}
 		}
 		country_leader={
@@ -735,7 +735,7 @@ characters={
 		name = ROM_Alexandru_Cantacuzino
 		portraits = {
 			army = {
-				small = "GFX_idea_Alexandru_Cantacuzino"
+				small = "GFX_idea_rom_alexandru_cantacuzino"
 				large="gfx/leaders/ROM/Portrait_Alexandru_Cantacuzino.dds"
 			}
 
@@ -765,7 +765,7 @@ characters={
 		name = ROM_horia_sima
 		portraits = {
 			army = {
-				small = "GFX_idea_horia_sima"
+				small = "GFX_idea_rom_horia_sima"
 				large="gfx/leaders/ROM/Portrait_Romania_Horia_Sima.tga"
 			}
 			
@@ -804,7 +804,7 @@ characters={
 		name = ROM_mitita_constantinescu
 		portraits = {
 			army = {
-				small = "GFX_idea_ROM_mitita_constantinescu"
+				small = "GFX_idea_rom_mitita_constantinescu"
 			}
 		}
 		advisor = {
@@ -824,7 +824,7 @@ characters={
 		name = ROM_ion_gigurtu
 		portraits = {
 			army = {
-				small = "GFX_idea_ROM_ion_gigurtu"
+				small = "GFX_idea_rom_ion_gigurtu"
 			}
 		}
 		advisor = {
@@ -954,7 +954,7 @@ characters={
 		name = ROM_iuliu_maniu
 		portraits = {
 			army = {
-				small = "GFX_idea_ROM_iuliu_maniu"
+				small = "GFX_idea_rom_iuliu_maniu"
 			}
 		}
 		advisor = {
@@ -977,7 +977,7 @@ characters={
 		name = ROM_gheorghe_argeseanu
 		portraits = {
 			army = {
-				small = "GFX_idea_ROM_gheorghe_argeseanu"
+				small = "GFX_idea_rom_gheorghe_argeseanu"
 				large = "gfx/leaders/ROM/Portrait_ROM_Gheorghe_Argeseanu.png"
 			}
 		}
@@ -1107,7 +1107,7 @@ characters={
 		name=alice_margatroid
 		portraits={
 			army={
-				small="GFX_idea_alice_margatroid"
+				small="GFX_idea_rom_alice_margatroid"
 				large ="gfx/leaders/ROM/Portrait_Alice_Margatroid.dds"
 			}
 
@@ -1221,7 +1221,7 @@ characters={
 		name=ROM_izayoi_sakuya
 		portraits={
 			army={
-				small="GFX_idea_izayoi_sakuya"
+				small="GFX_idea_rom_izayoi_sakuya"
 				large="gfx/leaders/ROM/Portrait_Izayoi_Sakuya_Agent.dds"
 			}
 		}

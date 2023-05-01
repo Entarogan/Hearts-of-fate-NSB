@@ -779,7 +779,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Nonna.dds"
-				small="gfx/interface/ideas/SOV_nonna.dds"
+				small="GFX_idea_sov_nonna"
 			}
 		}
 		field_marshal={
@@ -834,7 +834,7 @@ characters={
 
 			army={
 				large="gfx/leaders/SOV/Portrait_Trista_Sestina.dds"
-				small="gfx/interface/ideas/SOV_trista_sestina.dds"
+				small="GFX_idea_sov_trista_sestina"
 			}
 		}
 		corps_commander={
@@ -866,7 +866,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Alina.dds"
-				small="gfx/interface/ideas/SOV_alina.dds"
+				small="GFX_idea_sov_alina"
 			}
 		}
 		corps_commander={
@@ -898,7 +898,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Klara.dds"
-				small="gfx/interface/ideas/SOV_klara.dds"
+				small="GFX_idea_sov_klara"
 			}
 		}
 		corps_commander={
@@ -936,7 +936,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Inia_Sestina.dds"
-				small="gfx/interface/ideas/SOV_inia_sestina.dds"
+				small="GFX_idea_sov_inia_sestina"
 			}
 		}
 		corps_commander={
@@ -974,7 +974,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_katyusha.tga"
-				small="gfx/interface/ideas/SOV_katyusha.dds"
+				small="GFX_idea_sov_katyusha"
 			}
 		}
 		corps_commander={
@@ -1009,7 +1009,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Sovetskaya_Rossiya.dds"
-				small="gfx/interface/ideas/SOV_sovetskaya_rossiya.dds"
+				small="GFX_idea_sov_sovetskaya_rossiya"
 			}
 		}
 		navy_leader={
@@ -1060,7 +1060,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Cryska_Barchenowa.dds"
-				small="gfx/interface/ideas/SOV_cryska_barchenowa.dds"
+				small="GFX_idea_sov_cryska_barchenowa"
 			}
 		}
 		corps_commander={
@@ -1089,7 +1089,7 @@ characters={
 		name="Skyph Izhevska"
 		portraits={
 			army={
-				small="GFX_idea_advisor_unknown"
+				small="GFX_idea_sov_skyph_izhevska"
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Skyph_Izhevska.dds"
@@ -1109,7 +1109,7 @@ characters={
 		name=SOV_joseph_dzhugashvili
 		portraits={
 			civilian={
-				large="gfx/leaders/SOV/Portrait_Soviet_Joseph_Dzhugashvili.dds"
+				large="gfx/leaders/SOV/Portrait_Soviet_Joseph_Dzhugashvili_new.png"
 			}
 		}
 		country_leader={
@@ -1186,7 +1186,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Anna_Morozova.dds"
-				small="gfx/interface/ideas/SOV_anna_morozov.dds"
+				small="GFX_idea_sov_anna_morozov"
 			}
 		}
 		field_marshal={
@@ -1281,7 +1281,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/SOV/Portrait_Sonia.dds"
-				small="gfx/interface/ideas/SOV_sonia.dds"
+				small="GFX_idea_sov_sonia"
 			}
 		}
 		corps_commander={
@@ -1457,7 +1457,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/SOV/Portrait_Vasily_Chapayeva.dds"
-				small="gfx/interface/ideas/SOV_vasily_chapayev.dds"
+				small="GFX_idea_sov_vasily_chapayev"
 			}
 		}
 		navy_leader={
@@ -1492,7 +1492,7 @@ characters={
 		name=SOV_Alexander_Shliapnikov
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_Alexander_Shliapnikov.dds"
+				small="GFX_idea_sov_alexander_shliapnikov"
 			}
 		}
 		advisor={
@@ -1527,7 +1527,7 @@ characters={
 		name=SOV_Nikolay_Krestinsky
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_Nikolay_Krestinsky.dds"
+				small="GFX_idea_sov_nikolay_krestinsky"
 			}
 		}
 		advisor={
@@ -1547,7 +1547,7 @@ characters={
 		name=SOV_Alexei_Rykov
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_Alexei_Rykov.dds"
+				small="GFX_idea_sov_alexei_rykov"
 			}
 		}
 		advisor={
@@ -1576,7 +1576,7 @@ characters={
 		name=SOV_Alexandra_Kollontai
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_Alexandra_Kollontai.dds"
+				small="GFX_idea_sov_alexandra_kollontai"
 			}
 		}
 		advisor={
@@ -1600,7 +1600,7 @@ characters={
 		name=SOV_Yevgeni_Preobrazhensky
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_Yevgeni_Preobrazhensky.dds"
+				small="GFX_idea_sov_yevgeni_preobrazhensky"
 			}
 		}
 		advisor={
@@ -1629,7 +1629,7 @@ characters={
 		name=SOV_sanya_litvyak
 		portraits={
 			army={
-				small="gfx/interface/ideas/SOV_sanya_litvyak.dds"
+				small="GFX_idea_sov_sanya_litvyak"
 			}
 		}
 		advisor={
@@ -1657,7 +1657,7 @@ characters={
 				large = "gfx/leaders/SOV/Portrait_Makiri_Zolgen.dds"
 			}
 			army={
-				small="gfx/interface/ideas/sov_makiri_zolgen.dds"
+				small="GFX_idea_sov_makiri_zolgen"
 			}
 		}
 
@@ -1714,7 +1714,7 @@ characters={
 			}
 			army = {
 				#small = "GFX_idea_SOV_lavrenty_beriya"
-				small="gfx/interface/ideas/sov_lavrenti_beria.dds"
+				small="GFX_idea_sov_lavrenti_beria"
 			}
 		}
 
@@ -1743,7 +1743,7 @@ characters={
 		name = SOV_vyacheslav_molotov
 		portraits = {
 			army = {
-				small = "GFX_idea_SOV_vyacheslav_molotov"
+				small = "GFX_idea_sov_molotov"
 			}
 		}
 
@@ -1766,7 +1766,7 @@ characters={
 
 		portraits = {
 			army = {
-				small = "GFX_idea_SOV_nikolay_voznesensky"
+				small = "GFX_idea_sov_voznesensky"
 			}
 		}
 		advisor = {
@@ -1799,7 +1799,7 @@ characters={
 				large = "gfx/leaders/SOV/Portraits_Soviet_pavel_anatolevich_sudoplatov.png"
 			}
 			army={
-				small="gfx/interface/ideas/SOV_pavel_sudoplatov.png"
+				small="GFX_idea_sov_pavel_sudoplatov"
 			}
 		}
 		advisor = {
@@ -1826,7 +1826,7 @@ characters={
 				large = "gfx/leaders/SOV/Portrait_Pistolet_Makarova.dds"
 			}
 			army={
-				small="gfx/interface/ideas/idea_SOV_pistolet_Makarova.png"
+				small="GFX_idea_sov_pistolet_makarova"
 			}
 		}
 
@@ -1854,7 +1854,7 @@ characters={
 				large = "gfx/leaders/SOV/Portraits_Soviet_Savinkov_NKVD.png"
 			}
 			army={
-				small="gfx/interface/ideas/SOV_Boris_Savinkov.png"
+				small="GFX_idea_sov_boris_savinkov"
 			}
 		}
 
@@ -1885,7 +1885,7 @@ characters={
 				large = "GFX_portrait_SOV_grigory_zinovyev"
 			}
 			army={
-				small="gfx/interface/ideas/sov_grigori_zinovyev.dds"
+				small="GFX_idea_sov_grigori_zinovyev"
 			}
 		}
 		advisor = {
@@ -1908,7 +1908,7 @@ characters={
 		portraits = {
 
 			army={
-				small="gfx/interface/ideas/sov_karl_radic.dds"
+				small="GFX_idea_sov_karl_radic"
 			}
 		}
 		advisor = {
@@ -1941,7 +1941,7 @@ characters={
 		name = SOV_lev_kamenev
 		portraits = {
 			army={
-				small="gfx/interface/ideas/sov_lev_kamenev.dds"
+				small="GFX_idea_sov_lev_kamenev"
 			}
 		}
 		advisor = {
@@ -1969,7 +1969,7 @@ characters={
 				large = "gfx/leaders/SOV/Portrait_Soviet_Nikolai_Bukharin_2.dds"
 			}
 			army={
-				small="gfx/interface/ideas/sov_nikola_bukharin.dds"
+				small="GFX_idea_sov_nikola_bukharin"
 			}
 		}
 		advisor = {

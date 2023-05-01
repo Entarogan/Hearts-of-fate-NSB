@@ -20,7 +20,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Siduri.dds"
-				small="GFX_idea_siduri"
+				small="GFX_idea_irq_siduri"
 			}
 		}
 		country_leader={
@@ -47,7 +47,7 @@ characters={
 
 			army={
 				large="gfx/leaders/IRQ/Portrait_Enkidu.dds"
-				small="GFX_idea_enkidu"
+				small="GFX_idea_irq_enkidu"
 			}
 		}
 		corps_commander={
@@ -84,7 +84,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/IRQ/Portrait_Ishtar.dds"
-				small="GFX_idea_ishtar"
+				small="GFX_idea_irq_ishtar"
 			}
 		}
 		corps_commander={
@@ -124,7 +124,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Gilgamesh.dds"
-				small="GFX_idea_gilgamesh"
+				small="GFX_idea_irq_gilgamesh"
 			}
 		}
 		field_marshal={
@@ -169,7 +169,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/IRQ/Portrait_Semiramis.dds"
-				small="GFX_idea_semiramis"
+				small="GFX_idea_irq_semirammis"
 			}
 		}
 		field_marshal={
@@ -210,7 +210,7 @@ characters={
 			}
 			army={
 				large="gfx/leaders/IRQ/Portrait_Ereshkigal.dds"
-				small="GFX_idea_ereshkigal"
+				small="GFX_idea_irq_ereshkigal"
 			}
 		}
 		corps_commander={
@@ -262,7 +262,7 @@ characters={
 			}
 			army={
 				large = "gfx/leaders/IRQ/Portrait_Barzan.dds"
-				small="GFX_idea_barzan"
+				small="GFX_idea_irq_barzan"
 			}
 		}
 		advisor = {
@@ -289,7 +289,7 @@ characters={
 				large = "gfx/leaders/IRQ/Portrait_Flueger.dds"
 			}
 			army={
-				small="GFX_idea_flueger"
+				small="GFX_idea_irq_flueger"
 				large = "gfx/leaders/IRQ/Portrait_Flueger.dds"
 			}
 		}
@@ -316,7 +316,7 @@ characters={
 				large = "gfx/leaders/IRQ/Portrait_Atrum_Galliasta.dds"
 			}
 			army={
-				small="GFX_idea_atrum_galliasta"
+				small="GFX_idea_irq_atrum_galliasta"
 			}
 		}
 		advisor = {
@@ -342,7 +342,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/IRQ/Portrait_Ishtar.dds"
-				small="GFX_idea_hassan_i_sabbah"
+				small="GFX_idea_per_hassan_i_sabbah"
 			}
 		}
 		advisor = {
@@ -370,11 +370,11 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/IRQ/Portrait_Tiamat.dds"
-				small="GFX_idea_tiamat"
+				small="GFX_idea_irq_tiamat"
 			}
 			navy={
 				large="gfx/leaders/IRQ/Portrait_Tiamat.dds"
-				small="GFX_idea_tiamat"
+				small="GFX_idea_irq_tiamat"
 			}
 		}
 		advisor = {

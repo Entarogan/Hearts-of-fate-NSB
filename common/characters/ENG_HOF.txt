@@ -5,7 +5,7 @@ characters={
 		portraits={
 			army = {
 				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.png"
-				small="GFX_idea_inorai"
+				small="GFX_idea_eng_inorai"
 			}
 			civilian={
 				large="gfx/leaders/ENG/Portrait_Arturia_Pendragon.png"
@@ -33,7 +33,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Reines_El_Melloi_Archisorte.dds"
-				small = "GFX_idea_reines_theorists"
+				small = "GFX_idea_eng_reines_theorist"
 			}
 			civilian={
 				large="gfx/leaders/ENG/Portrait_Reines_El_Melloi_Archisorte.dds"
@@ -106,7 +106,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Waver.dds"
-				small = "GFX_idea_advisor_elmelloi"
+				small = "GFX_idea_eng_political_advisor_elmelloi"
 			}
 		}
 		country_leader={
@@ -150,7 +150,7 @@ characters={
 				large="gfx/leaders/ENG/Portrait_Olga_Marie_Animusphere.dds"
 			}
 			army = {
-				small = "GFX_idea_animusphere"
+				small = "GFX_idea_eng_animusphere_theorist"
 			}
 		}
 		advisor={
@@ -182,7 +182,7 @@ characters={
 		name = ENG_lev
 		portraits={
 			army={
-				small="GFX_idea_lev"
+				small="GFX_idea_eng_lev"
 			}
 		}
 		advisor={
@@ -211,7 +211,7 @@ characters={
 		name =eng_inorai
 		portraits={
 			army={
-				small="GFX_idea_inorai"
+				small="GFX_idea_eng_inorai"
 				large="gfx/leaders/ENG/Portrait_agravain.dds"
 			}
 		}
@@ -259,7 +259,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_gawain.dds"
-				small="GFX_idea_command_gawain"
+				small="GFX_idea_eng_high_command_gawain"
 			}
 		}
 		corps_commander = {
@@ -292,7 +292,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_lancelot.dds"
-				small="gfx/interface/ideas/eng_high_command_lancelot.dds"
+				small="GFX_idea_eng_high_command_lancelot"
 			}
 		}
 		corps_commander = {
@@ -325,7 +325,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_agravain.dds"
-				small="GFX_idea_command_agravain"
+				small="GFX_idea_eng_high_command_agravain"
 			}
 		}
 		field_marshal = {
@@ -366,7 +366,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_tristan.dds"
-				small="GFX_idea_chief_tristan"
+				small="GFX_idea_eng_army_chief_tristan"
 			}
 		}
 		corps_commander = {
@@ -397,7 +397,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_mash.dds"
-				small="GFX_idea_chief_mash"
+				small="GFX_idea_eng_army_chief_mash"
 			}
 		}
 		corps_commander = {
@@ -435,10 +435,10 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_mordred.dds"
-				small="GFX_idea_chief_mordred"
+				small="GFX_idea_eng_army_chief_mordred"
 			}
 			navy={
-				small="GFX_idea_mordred_admiral"
+				small="GFX_idea_eng_army_chief_mordred"
 			}
 		}
 		corps_commander = {
@@ -575,7 +575,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Gray.dds"
-				small = "GFX_idea_gray"
+				small = "GFX_idea_eng_gray"
 			}
 		}
 		corps_commander = {
@@ -642,7 +642,7 @@ characters={
 		portraits={
 			army={
 				large="gfx/leaders/ENG/Portrait_Frankenstein.dds"
-				small="GFX_idea_frankenstein"
+				small="GFX_idea_eng_frankenstein_admiral"
 			}
 		}
 		navy_leader = {
@@ -693,10 +693,10 @@ characters={
 				large = "gfx//leaders//ENG//Portrait_drake.dds"
 			}
 			army = {
-				small = "GFX_idea_drake"
+				small = "GFX_idea_eng_drake"
 			}
 			navy = {
-				small = "GFX_idea_drake"
+				small = "GFX_idea_eng_drake"
 			}
 		}
 		advisor={
@@ -720,7 +720,7 @@ characters={
 		name = "ENG_merlin"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_merlin"
+				small = "GFX_idea_eng_political_advisor_merlin"
 			}
 		}
 		advisor={
@@ -749,7 +749,7 @@ characters={
 		name = "ENG_charles_babbage"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_babbage"
+				small = "GFX_idea_eng_political_advisor_babbage"
 			}
 		}
 		advisor={
@@ -782,7 +782,7 @@ characters={
 		name = "ENG_holmes"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_holmes"
+				small = "GFX_idea_eng_political_advisor_holmes"
 			}
 		}
 		advisor={
@@ -813,7 +813,7 @@ characters={
 		name = "ENG_moriarty"
 		portraits = {
 			army = {
-				small = "GFX_idea_advisor_moriarty"
+				small = "GFX_idea_eng_political_advisor_moriarty"
 			}
 		}
 		advisor={
@@ -843,7 +843,7 @@ characters={
 		name = "ENG_kay"
 		portraits = {
 			army = {
-				small = "GFX_idea_command_kay"
+				small = "GFX_idea_eng_high_command_kay"
 			}
 		}
 		advisor={
@@ -869,7 +869,7 @@ characters={
 		name = "ENG_Sion"
 		portraits = {
 			army = {
-				small = "GFX_idea_sion_eltnam_atlasia"
+				small = "GFX_idea_jap_sion_eltnam_atlasia"
 			}
 		}
 		advisor={

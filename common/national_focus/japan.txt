@@ -1,6 +1,6 @@
-#!gfx:interface\goal_JAP.gfx
-#!gfx:interface\goal_RUS.gfx
-#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goals\goal_JAP.gfx
+#!gfx:interface\goals\goal_RUS.gfx
+#!gfx:interface\goals\goal_generic.gfx
 focus_tree = {
 	id = japan_wtt_focus
 	country = {
@@ -76,7 +76,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_the_rising_sun
-		icon = GFX_focus_JAP_japanese_imperialism
+		icon = GFX_focus_ETH_an_empire_in_the_shade_of_the_sun
 		cost = 3
 		x = 32
 		y = 8
@@ -115,7 +115,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_eliminate_traitors
-		icon = GFX_focus_AST_war_japan
+		icon = GFX_focus_JAP_eliminate_traitors
 		cost = 7
 		x = 38
 		y = 0
@@ -405,7 +405,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_new_naval_estimates
-		icon = GFX_goal_generic_construct_naval_dockyard
+		icon = GFX_focus_JAP_Navy_generic
 		cost = 5
 		prerequisite = {
 			focus = JAP_active_finance
@@ -582,7 +582,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_fighter_modernization
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_focus_JAP_Airforce_generic
 		cost = 5
 		prerequisite = {
 			focus = JAP_active_finance
@@ -812,7 +812,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_youkusan_cabinet
-		icon = GFX_focus_JAP_PAR
+		icon = GFX_focus_JAP_youkusan_cabinet
 		cost = 3
 		prerequisite = {
 			focus = JAP_the_longest_day
@@ -908,7 +908,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_transitional_cabinet
-		icon = GFX_focus_jap_pacific_guardian
+		icon = GFX_focus_JAP_transitional_cabinet
 		cost = 5
 		prerequisite = {
 			focus = JAP_the_longest_day
@@ -1029,7 +1029,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_army_expansion_law
-		icon = GFX_focus_RUS_japanese_officer
+		icon = GFX_focus_JAP_Army_generic
 		cost = 5
 		prerequisite = {
 			focus = JAP_lessons_from_the_crisis
@@ -5469,7 +5469,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_exploit_the_southern_resource_area
-		icon = GFX_goal_generic_construction2
+		icon = GFX_focus_JAP_south_seas_mandate
 		cost = 5
 		prerequisite = {
 			focus = JAP_strike_on_the_southern_resource_area
@@ -8456,7 +8456,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_purge_kodoha_fate
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_generic_court
 		cost = 5
 		prerequisite = {
 			focus = JAP_youkusan_cabinet
@@ -9341,7 +9341,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_rebuild_Japan
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_goal_generic_construction
 		cost = 5
 		prerequisite = {
 			focus = JAP_Japanese_revolution
@@ -9844,7 +9844,7 @@ focus_tree = {
 	}
 	focus = {
 		id = JAP_showdown
-		icon = GFX_focus_hol_the_foundations_of_defense
+		icon = GFX_focus_jap_cast_the_die
 		cost = 5
 		prerequisite = {
 			focus = JAP_seek_support_from_navy

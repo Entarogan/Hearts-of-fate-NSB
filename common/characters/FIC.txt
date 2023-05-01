@@ -6,7 +6,7 @@ characters={
 				large="gfx/leaders/FIC/Portrait_France_Francois_de_la_Rocque.dds"
 			}
 			army={
-				small="GFX_idea_Francois_de_la_Rocque"
+				small="GFX_idea_fic_Francois_de_la_Rocque"
 			}
 		}
 		country_leader={
@@ -85,7 +85,7 @@ characters={
 		}
 		portraits={
 			army={
-				small="GFX_idea_Marcel_Deat"
+				small="GFX_idea_fic_Marcel_Deat"
 			}
 			civilian={
 				large="gfx/leaders/FIC/Portrait_France_Marcel_Deat.dds"
