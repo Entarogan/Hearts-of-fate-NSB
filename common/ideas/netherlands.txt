@@ -3,7 +3,7 @@ ideas = {
 	country = {
 
         HOL_Valkist_idea = {
-			picture = valkist_nut
+			picture = ger_valkist_nut
 
 			allowed = {
 				original_tag = HOL

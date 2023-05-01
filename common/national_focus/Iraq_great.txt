@@ -1,6 +1,6 @@
-#!gfx:interface\goal_IRQ.gfx
-#!gfx:interface\goal_MEX.gfx
-#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goals\goal_IRQ.gfx
+#!gfx:interface\goals\goal_MEX.gfx
+#!gfx:interface\goals\goal_generic.gfx
 focus_tree = {
 	id = Iraq_great
 	country = {

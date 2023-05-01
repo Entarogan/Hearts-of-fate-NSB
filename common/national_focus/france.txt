@@ -1,7 +1,7 @@
-#!gfx:interface\goal_FRA.gfx
-#!gfx:interface\goal_GER.gfx
-#!gfx:interface\goal_ENG.gfx
-#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goals\goal_FRA.gfx
+#!gfx:interface\goals\goal_GER.gfx
+#!gfx:interface\goals\goal_ENG.gfx
+#!gfx:interface\goals\goal_generic.gfx
 focus_tree = {
 	id = french_focus
 	country = {
@@ -421,7 +421,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_army_command_focus
-		icon = GFX_goal_rhineland
+		icon = GFX_focus_FRA_army_generic
 		cost = 5
 		prerequisite = {
 			focus = FRA_Royal_military_parade
@@ -769,7 +769,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_Return_to_World_Stage
-		icon = GFX_goal_generic_occupy_states_coastal
+		icon = GFX_focus_FRA_navy_generic
 		cost = 5
 		prerequisite = {
 			focus = FRA_Royal_military_parade
@@ -1407,7 +1407,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_military_coup
-		icon = GFX_focus_generic_military_coup
+		icon = GFX_focus_FRA_Marechal_Cap
 		cost = 4
 		prerequisite = {
 			focus = FRA_overthrow_bourbon
@@ -2067,7 +2067,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_unite_royalist
-		icon = GFX_focus_FRA_unite_royalist
+		icon = GFX_focus_FRA_action_francaise_alter
 		cost = 3
 		prerequisite = {
 			focus = FRA_land_versailles
@@ -2668,7 +2668,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_letat_cest_moi
-		icon = GFX_focus_generic_letat_cest_moi
+		icon = GFX_focus_FRA_restauration
 		cost = 5
 		prerequisite = {
 			focus = FRA_guillotine_breaker
@@ -4290,7 +4290,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_Invite_Heidrich
-		icon = GFX_focus_GER_racial_valkist
+		icon = GFX_focus_FRA_invite_heidrich
 		cost = 5
 		prerequisite = {
 			focus = FRA_Introduce_the_German_police
@@ -8059,7 +8059,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_European_Air_Force_Command
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_focus_FRA_airforce_generic
 		cost = 5
 		prerequisite = {
 			focus = FRA_Royal_military_parade
@@ -9322,7 +9322,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_Expand_citizenship
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_FRA_french_colonial
 		cost = 5
 		prerequisite = {
 			focus = FRA_Blum_Proposal
@@ -10110,7 +10110,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FRA_egalite_liberte_solidarite
-		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
+		icon = GFX_focus_fra_liberte_egalite_solidarite
 		cost = 7
 		prerequisite = {
 			focus = FRA_carry_the_revolution_south

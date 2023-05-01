@@ -1,7 +1,7 @@
-#!gfx:interface\goal_HUN.gfx
-#!gfx:interface\goal_SOV.gfx
-#!gfx:interface\goal_GER.gfx
-#!gfx:interface\goal_generic.gfx
+#!gfx:interface\goals\goal_HUN.gfx
+#!gfx:interface\goals\goal_SOV.gfx
+#!gfx:interface\goals\goal_GER.gfx
+#!gfx:interface\goals\goal_generic.gfx
 shared_focus = {
 	id = HUN_revenge
 	icon = GFX_focus_HUN_war
