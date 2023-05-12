@@ -264,7 +264,7 @@ characters = {
 			}
 		}
 	}
-
+####
 ####社会党
 	POL_tomasz_arciszewski = {
 		name = POL_tomasz_arciszewski
@@ -314,7 +314,7 @@ characters = {
 			}
 		}
 	}
-
+####
 
 
 ####民族民主党
@@ -343,7 +343,7 @@ characters = {
 				large = "gfx/leaders/POL/Portrait_POL_Roman_Rybarski.png"
 			}
 			army = {
-				small = "GFX_POL_roman_rybarski_small"
+				small = "GFX_idea_pol_roman_rybarski_small"
 			}
 		}
 		# country_leader = {
@@ -592,7 +592,7 @@ characters = {
 			}
 		}
 	}
-
+####
 ####萨纳齐
 	POL_Loleta_Russell = {
 		#Adeptus Sprawiedliwi Kazimierz
@@ -802,7 +802,7 @@ characters = {
 		name= POL_natalia_kaminska
 		portraits={
 			civilian={
-				large="gfx/leaders/POL/Portrait_Natalia_Kaminski.dds"
+				large="gfx/leaders/POL/Portrait_Natalia_Kaminski.png"
 			}
 			army = {
 				small = "GFX_idea_pol_natalia_kaminska_small"
