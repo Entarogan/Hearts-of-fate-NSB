@@ -65,49 +65,21 @@ bookmarks = {
 				ita_rebrith_of_roma
 			}
 		}
-		"ITA" = {
-			history = "ITA_GATHERING_STORM_COVER"
-			ideology = neutrality
+		"POL" = {
+			history = "POL_GATHERING_STORM_COVER"
+			ideology = democratic
 			ideas = {
-				ITA_tyrant_1
-				ita_unaccepted_rome
-				Questione_romana
+				POL_cud_nad_wisla
+				POL_fragile_democracy
+				UKR_OUN_subversion_POL
 			}
 			focuses = {
-				ita_emperor_priviege
-				ita_red_blue_alliance
-				ita_rebrith_of_roma
+				POL_Adeptus_Sprawiedliwi
+				POL_the_second_lwow_trial
+				POL_conduct_Prometeizm
 			}
 		}
-		"ITA" = {
-			history = "ITA_GATHERING_STORM_COVER"
-			ideology = neutrality
-			ideas = {
-				ITA_tyrant_1
-				ita_unaccepted_rome
-				Questione_romana
-			}
-			focuses = {
-				ita_emperor_priviege
-				ita_red_blue_alliance
-				ita_rebrith_of_roma
-			}
-		}
-		"RUS" = {
-			# minor = yes
-			history = "RUS_GATHERING_STORM_COVER"
-			ideology = neutrality
-			ideas = {
-				RUS_rebirth_of_the_tsar_0
-				RUS_sour_loser
-				rus_japanese_advisory_group
-			}
-			focuses = {
-				rus_redeem_glory_of_past
-				rus_pravoslavie_samoderzhavie_narodnost
-				rus_PSR_comes_back
-			}
-		}
+		
 		"JAP" = {
 			history = "JAP_GATHERING_STORM_COVER"
 			ideology = neutrality
@@ -166,6 +138,21 @@ bookmarks = {
 				SOV_expend_NKVD
 				SOV_For_the_world_revolution
 				SOV_Democratic_alliance
+			}
+		}
+		"RUS" = {
+			minor = yes
+			history = "RUS_GATHERING_STORM_COVER"
+			ideology = neutrality
+			ideas = {
+				RUS_rebirth_of_the_tsar_0
+				RUS_sour_loser
+				rus_japanese_advisory_group
+			}
+			focuses = {
+				rus_redeem_glory_of_past
+				rus_pravoslavie_samoderzhavie_narodnost
+				rus_PSR_comes_back
 			}
 		}
 		"UKR" = {
