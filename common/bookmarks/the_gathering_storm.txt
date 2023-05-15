@@ -65,6 +65,34 @@ bookmarks = {
 				ita_rebrith_of_roma
 			}
 		}
+		"ITA" = {
+			history = "ITA_GATHERING_STORM_COVER"
+			ideology = neutrality
+			ideas = {
+				ITA_tyrant_1
+				ita_unaccepted_rome
+				Questione_romana
+			}
+			focuses = {
+				ita_emperor_priviege
+				ita_red_blue_alliance
+				ita_rebrith_of_roma
+			}
+		}
+		"ITA" = {
+			history = "ITA_GATHERING_STORM_COVER"
+			ideology = neutrality
+			ideas = {
+				ITA_tyrant_1
+				ita_unaccepted_rome
+				Questione_romana
+			}
+			focuses = {
+				ita_emperor_priviege
+				ita_red_blue_alliance
+				ita_rebrith_of_roma
+			}
+		}
 		"POL" = {
 			history = "POL_GATHERING_STORM_COVER"
 			ideology = democratic
@@ -215,21 +243,6 @@ bookmarks = {
 				MEX_focus_Lucha_libre
 				MEX_focus_proclaim_aztec
 				MEX_focus_sunset_invasion
-			}
-		}
-		"POL" = {
-			minor = yes
-			history = "POL_GATHERING_STORM_COVER"
-			ideology = democratic
-			ideas = {
-				POL_cud_nad_wisla
-				POL_militarism_focus
-				POL_UNDO_opposition
-			}
-			focuses = {
-				POL_Commanders_Funeral
-				POL_the_second_lwow_trial
-				POL_the_four_year_plan
 			}
 		}
 		"FIC" = {
