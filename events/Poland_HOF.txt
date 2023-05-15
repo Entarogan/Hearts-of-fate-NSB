@@ -2639,6 +2639,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = poland_diplo.5.b
+		unlock_decision_tooltip = POL_join_germany_faction_hof
 		#好的
 	}
 }
@@ -2684,6 +2685,19 @@ country_event = {##日本：波兰人来要饭了
 					category = land_doctrine
 				}
 			}
+		}
+		add_tech_bonus = {
+			name = JAP_support_to_POL
+			bonus = 0.5
+			uses = 1
+			category = cat_mechanized_equipment
+		}
+		add_tech_bonus = {
+			name = JAP_support_to_POL
+			bonus = 0.75
+			ahead_reduction = 0.5
+			uses = 1
+			category = synth_resources
 		}
 	}	
 	option = {

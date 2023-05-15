@@ -359,4 +359,43 @@ leader_traits = {
 			factor = 20
 		}
 	}
+
+	Lazurite = {
+		sprite = 5
+		random = no
+		stability = 0.05
+		intel_network_gain = 0.15
+		intel_from_operatives_factor = 0.15
+		special_forces_attack_factor = 0.10
+		special_forces_min = 20
+		ai_will_do = {
+			factor = 20
+		}
+	}
+
+	Lazurite_army = {
+		sprite = 5
+		random = no
+		stability = 0.05
+		
+		equipment_bonus = {
+			infantry_equipment = {
+				lg_attack = 0.10
+				hg_armor_piercing = 0.10
+				lg_armor_piercing = 0.10
+				instant = yes
+			}
+
+			anti_tank_equipment = {
+				hg_attack = 0.10
+				hg_armor_piercing = 0.10
+				lg_armor_piercing = 0.10
+				instant = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
 }
