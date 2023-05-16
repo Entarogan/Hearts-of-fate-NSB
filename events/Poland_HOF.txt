@@ -245,6 +245,7 @@ country_event = {
 		}
 		hidden_effect = {
 			set_country_flag = POL_Sanacja_Government_democratized_flag
+			set_country_flag = POL_no_need_to_elect_flag
 			country_event = { id = poland_hof.6 days = 7 }
 		}
 	}
@@ -452,6 +453,10 @@ country_event = {
 				else = {
 					set_country_flag = POL_Nearl_Sanacja_flag
 				}
+				if = {
+					limit = { has_country_flag = POL_Sanacja_show_initial_flag  }
+					clr_country_flag = POL_Sanacja_show_initial_flag
+				}
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
@@ -481,7 +486,7 @@ country_event = {
 		add_stability = 0.05
 		set_politics = {
 			ruling_party = democratic
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		hidden_effect = {
 			set_country_flag = POL_PSL_government_flag
@@ -512,10 +517,10 @@ country_event = {
 		add_stability = 0.05
 		set_politics = {
 			ruling_party = democratic
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		hidden_effect = {
-			set_country_flag = POL_PSL_government_flag
+			# set_country_flag = POL_PSL_government_flag
 			set_country_flag = POL_peasant_strike_halted_election_flag
 			if = {
 				limit = {
@@ -628,7 +633,7 @@ country_event = {
 		### TODO: Remove ideas
 		set_politics = {
 			ruling_party = fascism
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		hidden_effect = {
 			set_country_flag = POL_peasant_strike_halted_election_flag
@@ -679,7 +684,7 @@ country_event = {
 		### TODO: Remove ideas
 		set_politics = {
 			ruling_party = neutrality
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		add_country_leader_role = {
 			character = POL_natalia_kaminska
@@ -695,6 +700,7 @@ country_event = {
 			set_country_flag = POL_Sanacja_government_flag
 			set_country_flag = POL_Leftist_Sanacja_flag
 			set_country_flag = POL_Sanacja_overthrow_the_election_flag
+			set_country_flag = POL_no_need_to_elect_flag
 			if = {
 				limit = { has_country_flag = POL_Sanacja_show_initial_flag  }
 				clr_country_flag = POL_Sanacja_show_initial_flag
@@ -724,7 +730,7 @@ country_event = {
 		### TODO: Remove ideas
 		set_politics = {
 			ruling_party = fascism
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		hidden_effect = {
 			set_country_flag = POL_Endecja_government_flag
@@ -807,7 +813,7 @@ country_event = {
 		### TODO: Remove ideas
 		set_politics = {
 			ruling_party = neutrality
-			elections_allowed = yes
+			elections_allowed = no
 		}
 		hidden_effect = {
 			remove_country_leader_role = {
@@ -851,6 +857,7 @@ country_event = {
 			set_country_flag = POL_Sanacja_government_flag
 			set_country_flag = POL_Nationalist_Sanacja_flag
 			set_country_flag = POL_Sanacja_overthrow_the_election_flag
+			set_country_flag = POL_no_need_to_elect_flag
 			if = {
 				limit = { has_country_flag = POL_Sanacja_show_initial_flag  }
 				clr_country_flag = POL_Sanacja_show_initial_flag
@@ -881,7 +888,7 @@ country_event = {
 			}
 			set_politics = {
 				ruling_party = democratic
-				elections_allowed = yes
+				elections_allowed = no
 			}
 		}
 		

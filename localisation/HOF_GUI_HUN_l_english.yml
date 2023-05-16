@@ -70,3 +70,24 @@
  HOF_gui_tokyo_effect_0:0 "[282.GetCapitalVictoryPointName]"
  HOF_gui_washington_effect_0:0 "[361.GetCapitalVictoryPointName]"
 
+ ENG_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_ENG"
+ FRA_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_FRA "
+ GER_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_GER "
+ USA_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_USA "
+ ITA_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_ITA "
+ JAP_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_JAP "
+
+ SOV_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_SOV "
+ RUS_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_RUS "
+ POL_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_POL "
+ UKR_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_UKR "
+
+ ROM_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_ROM "
+ HUN_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_HUN "
+
+ FIC_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_FIC "
+
+ SWE_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_SWE "
+ MEX_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_MEX "
+ IRQ_GATHERING_STORM_COVER: "£GFX_selected_country_map_cover_IRQ "
+

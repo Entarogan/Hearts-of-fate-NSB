@@ -187,7 +187,7 @@ leader_traits = {
 		# 有经验的单位损失-15%，科研速度+5%，步兵武器可靠性+15%
 		experience_loss_factor = -0.15
 		research_speed_factor = 0.05
-		industrial_capacity_factory = 0.5
+		industrial_capacity_factory = 0.075
 		ai_will_do = {
 			factor = 20
 		}
