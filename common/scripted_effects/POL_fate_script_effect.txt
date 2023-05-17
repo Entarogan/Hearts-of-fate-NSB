@@ -231,42 +231,45 @@ POL_Peasant_Strike_Civil_War_milita = {
 			
 		}
 	}
-	random_owned_controlled_state = {
-		hidden_effect = {
-			create_unit = { 
-				division = "name = \"1. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
+	hidden_effect = {
+		random_owned_controlled_state = {
+			hidden_effect = {
+				create_unit = { 
+					division = "name = \"1. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"2. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
 			}
-			create_unit = { 
-				division = "name = \"2. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
+		}
+		random_owned_controlled_state = {
+			hidden_effect = {
+				create_unit = { 
+					division = "name = \"3. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"4. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			hidden_effect = {
+				create_unit = { 
+					division = "name = \"5. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
+				create_unit = { 
+					division = "name = \"6. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
+					owner = ROOT
+				}
 			}
 		}
 	}
-	random_owned_controlled_state = {
-		hidden_effect = {
-			create_unit = { 
-				division = "name = \"3. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-			create_unit = { 
-				division = "name = \"4. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-		}
-	}
-	random_owned_controlled_state = {
-		hidden_effect = {
-			create_unit = { 
-				division = "name = \"5. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-			create_unit = { 
-				division = "name = \"6. Peasant Militia\" division_template = \"Peasant Militia\" start_experience_factor = 0.5" 
-				owner = ROOT
-			}
-		}
-	}
+	
 }
 
 POL_Peasant_Strike_Civil_War_PSL = {
