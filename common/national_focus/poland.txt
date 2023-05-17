@@ -103,7 +103,7 @@ focus_tree = {
 		x = 44
 		y = 0
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -470,6 +470,9 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = wait_for_unlock_by_events_tt
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		x = 49
 		y = 5
@@ -1399,7 +1402,7 @@ focus_tree = {
 			}
 		}
 		ai_will_do = {
-			factor = 2.5
+			factor = 100
 		}
 		available_if_capitulated = no
 		search_filters = {
@@ -2545,7 +2548,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_reassemble_the_sejm_hof
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		bypass = {
 			has_country_flag = POL_election_triggered_flag
@@ -2580,7 +2583,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = POL_maintain_sanacja
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available = {
 			has_country_leader = {
@@ -2635,10 +2638,13 @@ focus_tree = {
 		y = 0
 		relative_position_id = POL_maintain_sanacja
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		bypass = {
 			has_country_flag = POL_Nationalist_Sanacja_flag
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -2762,7 +2768,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_reassemble_the_sejm_hof
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available = {
 			is_subject = no
@@ -2830,7 +2836,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = POL_dissolve_the_sejm_hof
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -2852,7 +2858,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_modus_vivendi
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -2891,7 +2897,7 @@ focus_tree = {
 		available = {
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -2917,7 +2923,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_dissolve_the_sejm_hof
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available = {
 		}
@@ -2949,7 +2955,7 @@ focus_tree = {
 		x = 0
 		y = 4
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -3076,7 +3082,7 @@ focus_tree = {
 		available = {
 		}
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -4932,7 +4938,7 @@ focus_tree = {
 			is_subject = no
 		}
 		ai_will_do = {
-			factor = 2.5
+			factor = 100
 		}
 		bypass = {
 			has_country_flag = POL_election_triggered_flag
@@ -5556,7 +5562,7 @@ focus_tree = {
 			has_country_flag = POL_election_triggered_flag
 		}
 		ai_will_do = {
-			factor = 2.5
+			factor = 100
 		}
 		available_if_capitulated = yes
 		search_filters = {
@@ -7942,6 +7948,9 @@ focus_tree = {
 		bypass = {
 			has_country_flag = POL_election_triggered_flag
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = -1
 		y = 1
 		relative_position_id = POL_consolidate_bbwr
@@ -7971,6 +7980,9 @@ focus_tree = {
 		bypass = {
 			has_country_flag = POL_election_triggered_flag
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = 0
 		y = 1
 		relative_position_id = POL_draft_a_new_constitution_hof
@@ -7998,6 +8010,9 @@ focus_tree = {
 		bypass = {
 			has_country_flag = POL_election_triggered_flag
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = -1
 		y = 1
 		relative_position_id = POL_Adeptus_Sprawiedliwi
@@ -8015,6 +8030,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = POL_open_the_election
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		x = 1
 		y = 1
@@ -8044,6 +8062,9 @@ focus_tree = {
 			NOT = {
 				has_country_flag = POL_Sanacja_overthrow_the_election_flag
 			}
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		x = -1
 		y = 1
@@ -8079,6 +8100,9 @@ focus_tree = {
 		available = {
 			has_country_flag = POL_Morges_Sanacja_flag
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = -3
 		y = 0
 		relative_position_id = POL_maintain_sanacja
@@ -8111,7 +8135,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = POL_Front_Morges_triumph
 		ai_will_do = {
-			factor = 10
+			factor = 100
 		}
 		available = {
 		}
@@ -8132,7 +8156,8 @@ focus_tree = {
 			focus = POL_dissolve_the_sejm_hof
 			focus = POL_maintain_sanacja
 		}
-		available = {
+		ai_will_do = {
+			factor = 100
 		}
 		x = -2
 		y = 1
@@ -8169,6 +8194,9 @@ focus_tree = {
 		}
 		x = 0
 		y = 2
+		ai_will_do = {
+			factor = 100
+		}
 		relative_position_id = POL_legion_of_merit
 		completion_reward = {
 			set_politics = {
@@ -8210,6 +8238,9 @@ focus_tree = {
 			}
 			has_government = neutrality
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = 1
 		y = 2
 		relative_position_id = POL_dissolve_the_sejm_hof
@@ -8227,6 +8258,9 @@ focus_tree = {
 			focus = POL_the_left_chairman_hof
 			focus = POL_the_castle_nearl
 		}
+		ai_will_do = {
+			factor = 100
+		}
 		x = -1
 		y = 1
 		relative_position_id = POL_the_left_chairman_hof
@@ -8240,6 +8274,9 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = POL_the_Great_Separation
+		}
+		ai_will_do = {
+			factor = 100
 		}
 		x = 0
 		y = 1
@@ -9275,6 +9312,7 @@ focus_tree = {
 				swap_country_leader_traits = {
 					remove = Blemishine_leader
 					add = modern_Jadwiga
+					ideology = conservatism
 				}
 			}
 		}
