@@ -281,6 +281,11 @@ recruit_character = POL_Szewczyk
 recruit_character = POL_Olmer_Ingra
 recruit_character = POL_Roy
 recruit_character = POL_Monique
+recruit_character = POL_Czarny
+recruit_character = POL_jan_mosdorf
+recruit_character = POL_tadeusz_bielecki
+recruit_character = POL_henryk_floyar_rajchman
+recruit_character = POL_joachim_stefan_bartoszewicz
 
 
 create_equipment_variant = {

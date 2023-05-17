@@ -576,8 +576,8 @@ country_event = {
 				subtract_from_temp_variable = { Sanacja_PSL_Compare = POL_PSL_Power }
 				check_variable = {
 					var = Sanacja_PSL_Compare
-					value = -11
-					compare = greater_than
+					value = 10
+					compare = less_than
 				}
 				NOT = { has_completed_focus = POL_woo_morges_staff_hof }
 			}
@@ -1205,6 +1205,7 @@ country_event = {   ### POL: Conduct Prometeizm
 	trigger = {
 		has_completed_focus = POL_conduct_Prometeizm
 		date > 1937.1.1
+		UKR = { is_subject = no }
 		has_civil_war = no
 		is_subject = no
 		has_capitulated = no
@@ -1217,6 +1218,10 @@ country_event = {   ### POL: Conduct Prometeizm
 			type = take_state_focus
 			generator = { 207 241 206 204 194 }
 		}
+		hidden_effect = {
+			set_global_flag = POL_Prometeizm_started_flag
+		}
+		add_ideas = { POL_Prometeizm }
 		activate_mission = POL_Prometeizm_mission
 		SOV = { activate_mission = POL_Prometeizm_mission_SOV }
 	}

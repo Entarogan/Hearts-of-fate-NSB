@@ -9769,6 +9769,8 @@ focus_tree = {
 			FOCUS_FILTER_ARMY_XP
 		}
 		completion_reward = {
+			set_country_flag = RUS_lessons_of_war_flag
+
 			unlock_decision_tooltip = SOV_order_227
 			custom_effect_tooltip = SOV_lessons_of_war_unlock_military_operations_tt
 			army_experience = 100
@@ -9797,13 +9799,13 @@ focus_tree = {
 				date > 1942.1.1
 				AND = {
 					has_country_flag = {
-						flag = SOV_lessons_of_war_flag
+						flag = RUS_lessons_of_war_flag
 						days > 180
 					}
 					custom_trigger_tooltip = {
 						tooltip = SOV_lessons_of_war_flag_tt
 						has_country_flag = {
-							flag = SOV_lessons_of_war_flag
+							flag = RUS_lessons_of_war_flag
 							days > 180
 						}
 					}

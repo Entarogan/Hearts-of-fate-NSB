@@ -585,7 +585,7 @@ characters = {
 			logistics_skill = 2
 		}
 		advisor = {
-			slot = political_advisor
+			slot = army_chief
 			idea_token = POL_Monique
 			allowed = {
 				original_tag = POL
