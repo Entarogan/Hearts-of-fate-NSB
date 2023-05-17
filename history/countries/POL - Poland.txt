@@ -119,12 +119,12 @@ country_event = { id = poland_hof.24 days = 110 }
 country_event = { id = poland_hof.36 days = 50 }
 country_event = { id = poland_hof.39 days = 72 }
 
-set_variable = { var = POL_PSL_Power value = 40 }
+set_variable = { var = POL_PSL_Power value = 35 }
 set_variable = { var = POL_PPS_Power value = 10 }
-set_variable = { var = POL_Sanacja_Power value = 40 }
+set_variable = { var = POL_Sanacja_Power value = 35 }
 set_variable = { var = POL_Endecja_Power value = 25 }
 
-set_variable = { var = POL_Sanacja_repression value = 25 } 
+set_variable = { var = POL_Sanacja_repression value = 30 } 
 
 set_country_flag = POL_Sanacja_show_initial_flag
 set_cosmetic_tag = POL_Republic
