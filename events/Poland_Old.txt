@@ -30,21 +30,21 @@ country_event = {
 	option = {
 		name = poland_old.13.a
 
-		add_political_power = 50
+      add_political_power = 50
 
 		set_country_flag = {
-			flag = POL_support_democratic
-			value = 0
-		}
+          flag = POL_support_democratic
+          value = 0
+        }
 
 		set_country_flag = {
-			flag = POL_support_Sanacja
-			value = 0
-		}
+          flag = POL_support_Sanacja
+          value = 0
+        }
 
-		hidden_effect = {
+			hidden_effect = {
             country_event = { id = poland_old.14 hours = 1 } 
-		}
+			}
 
 	}
 
@@ -62,7 +62,7 @@ country_event = { #少民问题
 	option = {
 		name = poland_old.14.a
 
-		add_political_power = 25
+      add_political_power = 25
 
 		add_popularity = {
 			ideology = democratic
@@ -83,7 +83,7 @@ country_event = { #少民问题
 	option = {
 		name = poland_old.14.b
 
-		add_political_power = -25
+      add_political_power = -25
 
 		add_popularity = {
 			ideology = neutrality
