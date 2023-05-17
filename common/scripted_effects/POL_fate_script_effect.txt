@@ -330,6 +330,10 @@ POL_Peasant_Strike_Civil_War_Sanacja = {
 		states = { 
 			88 89 91 93 94 95 96
 		}
+		keep_unit_leaders_trigger = {
+			has_trait = POL_sanation_right_leader
+			# NOT = { has_trait = POL_sanation_right_leader }
+		}
 	}
 	if = { #AI needs some equipment so that it does not die miserably
 		limit = {
