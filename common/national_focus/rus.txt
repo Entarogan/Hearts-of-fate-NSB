@@ -4030,6 +4030,19 @@ focus_tree = {
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Kursk
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Yaroslavl
 			unlock_decision_tooltip = RUS_Develop_Industry_In_Tsaritsyn
+			add_tech_bonus = {
+				name = rus_russian_armor
+				bonus = 1.0
+				uses = 1
+				category = cat_heavy_armor
+			}
+
+			add_tech_bonus = {
+				name = rus_russian_armor
+				bonus = 1.0
+				uses = 2
+				category = cat_medium_armor
+			}
 			add_ideas = RUS_Ural_armor_production_idea
 			add_tech_bonus = {
 				name = armor_bonus

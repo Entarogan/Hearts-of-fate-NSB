@@ -340,6 +340,11 @@
  Bandera_Defender_of_Liberty:0 "Defender of Liberty"
  
  Bandera_real_soldier:0 "A true warrior"
+
+ geologist:0 "Geologist"
+ realist_writer:0 "Realist Writer"
+ nationalist_geographer:0 "Nationalist Geographer"
+ nationalist_theologist:0 "Nationalist Theorist"
  
  Bandera_architect_of_Ukrainian_nation:0 "Nation builder"
  Bandera_father_of_nations:0 "leader of the Ukrainian nation, savior, messiah and liberator"
@@ -354,7 +359,7 @@
  UKR_anarchist_independence_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_ARMY_ORG_FACTOR$: §G+10%§!\n$MODIFIER_MAX_PLANNING$: §G+10%§!\n$democratic_drift$: §G-0.03§!\n$fascism_drift$: §G-0.03§!\n$neutrality_drift$: §G-0.03§!\n$communism_drift$: §G+0.07§!"
  UKR_anarchist_independence_2_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$communism_drift$: §G+0.10§!"
  UKR_anarchist_alina_join_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$communism_drift$: §R-0.10§!"
- UKR_modernization_of_the_armed_forces:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_EXPERIENCE_LOSS_FACTOR$: §G-25%§!\n$modifier_army_sub_unit_militia_defence_factor$: §R-5%§!\n$modifier_army_sub_unit_militia_max_org_factor$: §R-5%§!\n$modifier_army_sub_unit_irregular_infantry_defence_factor$: §R-5%§!\n$modifier_army_sub_unit_irregular_infantry_max_org_factor$: §R-5%§!"
+ UKR_modernization_of_the_armed_forces_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_EXPERIENCE_LOSS_FACTOR$: §G-25%§!\n$modifier_army_sub_unit_militia_defence_factor$: §R-5%§!\n$modifier_army_sub_unit_militia_max_org_factor$: §R-5%§!\n$modifier_army_sub_unit_irregular_infantry_defence_factor$: §R-5%§!\n$modifier_army_sub_unit_irregular_infantry_max_org_factor$: §R-5%§!"
  UKR_Eastern_Ukrainian_Doctrine_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_ARMY_SPEED_FACTOR$: §G+5%§!"
  UKR_Flexible_tactical_organization_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_PLANNING_SPEED$: §G+10%§!\n$MODIFIER_ARMY_MORALE_FACTOR$: §G+10%§!"
  UKR_besiege_and_annihilate_tt:0 "Modify §Y$HOF_UKR_army_dynamic_modifier$§! by: \n$MODIFIER_ARMY_SPEED_FACTOR$: §G+5%§!\n$MODIFIER_ARMY_ARMOR_ATTACK_FACTOR$: §G+10%§!\n$MODIFIER_MOTORIZED_ATTACK_FACTOR$: §G+10%§!"
