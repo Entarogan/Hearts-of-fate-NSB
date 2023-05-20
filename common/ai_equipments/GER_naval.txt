@@ -25,10 +25,6 @@ GER_destroyers = {
 	
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = improved_ship_hull_light
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 1
 			}
@@ -38,7 +34,7 @@ GER_destroyers = {
 		target_variant = {
 			match_value = 2000.0
 			
-			type = ship_hull_light_2
+			type = ship_hull_light
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air
@@ -67,17 +63,13 @@ GER_destroyers = {
 	
 		priority = {
 			factor = 50
-			modifier = { 
-				has_tech = improved_ship_hull_light
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 2
 		
 		target_variant = {
 			match_value = 2500.0
 			
-			type = ship_hull_light_2
+			type = ship_hull_light
 			modules = {
 				fixed_ship_battery_slot = ship_light_battery_2
 				fixed_ship_anti_air_slot = ship_anti_air
@@ -106,10 +98,6 @@ GER_destroyers = {
 	
 		priority = {
 			factor = 5
-			modifier = { 
-				has_tech = advanced_ship_hull_light
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 1
 			}
@@ -211,10 +199,6 @@ GER_naval_light_cruiser = {
 		
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = basic_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 1
 			}
@@ -257,10 +241,6 @@ GER_naval_light_cruiser = {
 		
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 2
 		
@@ -300,10 +280,6 @@ GER_naval_light_cruiser = {
 		
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = advanced_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 20
 				GER_naval_interest_trigger = yes
@@ -560,7 +536,7 @@ GER_naval_cruiser_panzerschiff = {
 		}
 		role_icon_index = 1
 		enable = {
-			has_tech = dp_secondary_battery
+			has_tech = improved_dp_light_battery
 		}
 		
 		target_variant = {
@@ -569,14 +545,14 @@ GER_naval_cruiser_panzerschiff = {
 			type = ship_hull_cruiser_panzerschiff
 			modules = {
 				fixed_ship_battery_slot = ship_heavy_battery_2
-				fixed_ship_secondaries_slot = dp_ship_secondaries
+				fixed_ship_secondaries_slot = dp_ship_secondaries_2
 				fixed_ship_anti_air_slot = ship_anti_air
 				fixed_ship_armor_slot = ship_armor_cruiser_1
 				fixed_ship_fire_control_system_slot = ship_fire_control_system
 				fixed_ship_engine_slot = cruiser_ship_engine_1
 				front_1_custom_slot = ship_anti_air
 				mid_1_custom_slot = ship_airplane_launcher
-				mid_2_custom_slot = dp_ship_secondaries
+				mid_2_custom_slot = dp_ship_secondaries_2
 				rear_1_custom_slot = ship_torpedo
 			}
 		}
@@ -617,10 +593,6 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = improved_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 1
 			}
@@ -660,10 +632,7 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}			
+			
 		}
 		role_icon_index = 1
 		
@@ -700,10 +669,6 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 1
 		
@@ -741,10 +706,6 @@ GER_naval_cruiser_heavy = {
 	
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = advanced_ship_hull_cruiser
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 10
 				GER_naval_interest_trigger = yes
@@ -853,10 +814,6 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = basic_ship_hull_heavy
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 1
 			}
@@ -896,10 +853,6 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = basic_ship_hull_heavy
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 50
 				has_war = yes
@@ -941,10 +894,6 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 1
-			modifier = { 
-				has_tech = improved_ship_hull_heavy
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 10
 				GER_naval_interest_trigger = yes
@@ -987,10 +936,6 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = improved_ship_hull_heavy
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 100
 				has_war = yes
@@ -1031,10 +976,6 @@ GER_naval_capital_battleship = {
 	
 		priority = {
 			factor = 20
-			modifier = { 
-				has_tech = improved_ship_hull_heavy
-				factor = 0 #let's not waste XP here
-			}
 			modifier = {
 				factor = 10
 				GER_naval_interest_trigger = yes
@@ -1454,10 +1395,6 @@ GER_naval_submarine = {
 	
 		priority = {
 			factor = 10
-			modifier = { 
-				has_tech = basic_ship_hull_submarine
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 6
 		
@@ -1484,10 +1421,6 @@ GER_naval_submarine = {
 	
 		priority = {
 			factor = 20
-			modifier = { 
-				has_tech = improved_ship_hull_submarine
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 6
 		
@@ -1514,10 +1447,6 @@ GER_naval_submarine = {
 	
 		priority = {
 			factor = 20
-			modifier = { 
-				has_tech = advanced_ship_hull_submarine
-				factor = 0 #let's not waste XP here
-			}
 		}
 		role_icon_index = 6
 		
@@ -1648,7 +1577,7 @@ GER_naval_mine_sweeper = {
 		role_icon_index = 5
 
 		enable = {
-			has_tech = dp_secondary_battery
+			has_tech = basic_dp_light_battery
 		}
 		
 		target_variant = {
@@ -1659,7 +1588,7 @@ GER_naval_mine_sweeper = {
 				rear_1_custom_slot = ship_mine_sweeper_1
 				mid_1_custom_slot = ship_mine_sweeper_1
 				fixed_ship_battery_slot = {
-					any_of = { dp_light_battery ship_light_battery_1 }
+					any_of = { dp_light_battery_1 ship_light_battery_1 }
 					upgrade > current
 				}
 				fixed_ship_engine_slot = light_ship_engine_1
