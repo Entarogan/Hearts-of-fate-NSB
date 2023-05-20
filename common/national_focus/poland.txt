@@ -9614,27 +9614,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = POL_state_catholicism
-		icon = GFX_focus_POL_state_catholicism
-		cost = 5
-		prerequisite = {
-			focus = POL_Endecja_non_agression_pact_with_Russia
-		}
-		x = 2
-		y = 1
-		relative_position_id = POL_Endecja_non_agression_pact_with_Russia
-		ai_will_do = {
-			factor = 2.5
-		}
-		available_if_capitulated = yes
-		search_filters = {
-			FOCUS_FILTER_STABILITY
-		}
-		completion_reward = {
-			add_ideas = POL_state_catholicism
-		}
-	}
-	focus = {
 		id = POL_Endecja_Enforce_Polish_Languages
 		icon = GFX_focus_POL_Endecja_Enforce_Polish_Languages
 		cost = 5
