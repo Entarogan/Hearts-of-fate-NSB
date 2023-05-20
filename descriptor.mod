@@ -1,5 +1,6 @@
-name="Hearts of Fate: dev"
+name="Hearts of Fate"
 version="1.8"
+replace_path="common/ai_equipment"
 tags={
 	"Alternative History"
 	"Gameplay"
