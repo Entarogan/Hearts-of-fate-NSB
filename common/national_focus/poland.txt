@@ -4265,11 +4265,11 @@ focus_tree = {
 		icon = GFX_focus_POL_state_catholicism
 		cost = 5
 		prerequisite = {
-			focus = POL_Endecja_non_agression_pact_with_Russia
+			focus = POL_Endecja_foundation_of_modern_poland
 		}
 		x = 2
 		y = 1
-		relative_position_id = POL_Endecja_non_agression_pact_with_Russia
+		relative_position_id = POL_Endecja_foundation_of_modern_poland
 		ai_will_do = {
 			factor = 2.5
 		}
@@ -9551,7 +9551,7 @@ focus_tree = {
 		icon = GFX_focus_POL_Endecja_non_agression_pact_with_Russia
 		cost = 5
 		prerequisite = {
-			focus = POL_Endecja_realist_chauvinism
+			focus = POL_Endecja_destroy_Sarmatyzm
 		}
 		available = {
 			OR = {
@@ -9577,9 +9577,9 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = -1
 		y = 1
-		relative_position_id = POL_Endecja_realist_chauvinism
+		relative_position_id = POL_Endecja_destroy_Sarmatyzm
 		completion_reward = {
 			if = {
 				limit = {
@@ -9618,14 +9618,14 @@ focus_tree = {
 		icon = GFX_focus_POL_Endecja_Enforce_Polish_Languages
 		cost = 5
 		prerequisite = {
-			focus = POL_Endecja_non_agression_pact_with_Russia
+			focus = POL_Endecja_foundation_of_modern_poland
 		}
 		bypass = {
 			NOT = { has_idea = POL_Lex_Grabski }
 		}
 		x = -2
 		y = 1
-		relative_position_id = POL_Endecja_non_agression_pact_with_Russia
+		relative_position_id = POL_Endecja_foundation_of_modern_poland
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = POL_Lex_Grabski_enhanced
@@ -9640,11 +9640,11 @@ focus_tree = {
 		icon = GFX_focus_POL_Endecja_Land_Reform_but_for_Poles
 		cost = 6
 		prerequisite = {
-			focus = POL_Endecja_non_agression_pact_with_Russia
+			focus = POL_Endecja_foundation_of_modern_poland
 		}
 		x = 0
 		y = 1
-		relative_position_id = POL_Endecja_non_agression_pact_with_Russia
+		relative_position_id = POL_Endecja_foundation_of_modern_poland
 		completion_reward = {
 			add_popularity = {
 				ideology = fascism
@@ -9704,11 +9704,11 @@ focus_tree = {
 		icon = GFX_focus_POL_Endecja_foundation_of_modern_poland
 		cost = 5
 		prerequisite = {
-			focus = POL_Endecja_destroy_Sarmatyzm
+			focus = POL_Endecja_realist_chauvinism
 		}
-		x = -1
+		x = 0
 		y = 1
-		relative_position_id = POL_Endecja_destroy_Sarmatyzm
+		relative_position_id = POL_Endecja_realist_chauvinism
 		completion_reward = {
 			custom_effect_tooltip = available_political_advisor
 			show_ideas_tooltip = POL_joachim_stefan_bartoszewicz
