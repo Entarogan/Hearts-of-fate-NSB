@@ -4845,6 +4845,16 @@ SOV_War_plan_decisions = {
 			}
 			modifier = {
 				factor = 0
+				surrender_progress > 0
+			}
+			modifier = {
+				factor = 0
+				any_home_area_neighbor_country = {
+				    has_war_with = ROOT
+				}
+			}
+			modifier = {
+				factor = 0
 				has_war_with = UKR
 				UKR = { surrender_progress < 0.7 }
 			}

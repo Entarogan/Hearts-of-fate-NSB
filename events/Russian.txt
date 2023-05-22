@@ -2462,7 +2462,7 @@ country_event = {
 				RUS = {
 					has_idea = RUS_SOV_For_victory_idea
 				}
-				date > 1937.11.1
+				date > 1938.1.1
 			}
 			AND = {
 				or = {
@@ -5690,7 +5690,7 @@ country_event = {
 				SOV = {
 					has_idea = RUS_SOV_For_victory_idea
 				}
-				date > 1938.1.1
+				date > 1938.3.1
 			}
 			AND = {
 				OR = {
