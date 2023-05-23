@@ -20,7 +20,7 @@ ideas = {
 
 		SOV_RUS_DniproHES_idea = {
 
-			name = UKR_splitted_country
+			name = UKR_DniproHES_idea
 
 			allowed = {
 				always = no
