@@ -1633,7 +1633,7 @@ characters = {
 				original_tag = RUS
 			}
 			available = {
-				has_completed_focus = rua_modernized_military_school
+				has_completed_focus = rua_Integrating_mercenaries
 			}
 			research_bonus = {
 				#	cat_mobile_warfare  = 0.150
